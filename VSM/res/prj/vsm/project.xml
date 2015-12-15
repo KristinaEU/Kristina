@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Project name="">
+  <Plugins>
+  </Plugins>
+  <Players>
+    <Player name="defaultsceneplayer" class="eu.kristina.KristinaScenePlayer">
+      <Feature key="vsm.agent.number" value="0"/>
+      <Feature key="vsm.agent.0.name" value="none"/>
+      <Feature key="vsm.agent.0.uaid" value="1"/>
+      <Feature key="vsm.agent.0.type" value="tcp"/>
+      <Feature key="vsm.agent.0.local.host" value="localhost"/>
+      <Feature key="vsm.agent.0.local.port" value="1100"/>
+      <Feature key="vsm.agent.0.remote.host" value="webglstudio.org"/>
+      <Feature key="vsm.agent.0.remote.port" value="9900"/>
+      <Feature key="vsm.agent.0.remote.flag" value="true"/>
+    </Player>
+  </Players>
+  <Agents>
+  </Agents>
+</Project>

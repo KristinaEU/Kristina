@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="KBM" default="build" basedir="..">
+    <!-- Define Binary Directory -->
+    <property name="bindir" value="${basedir}${file.separator}bin"/>
+    <!-- Define Build Directory -->
+    <property name="blddir" value="${basedir}${file.separator}bld"/>
+    <!-- Define Documentation Directory -->
+    <property name="docdir" value="${basedir}${file.separator}doc"/>
+    <!-- Define Library Directory -->
+    <property name="libdir" value="${basedir}${file.separator}lib"/>
+    <!-- Define Logger Directory -->
+    <property name="logdir" value="${basedir}${file.separator}log"/>
+    <!-- Define Project Directory -->
+    <property name="prjdir" value="${basedir}${file.separator}prj"/>
+    <!-- Define Resources Directory -->
+    <property name="resdir" value="${basedir}${file.separator}res"/>
+    <!-- Define Source Directory -->
+    <property name="srcdir" value="${basedir}${file.separator}src"/>
+    <!-- Define Temporary Directory -->
+    <property name="tmpdir" value="${basedir}${file.separator}tmp"/>    
+    <!-- Define Build Jar-File Name -->
+    <property name="jarfile" value="${blddir}${file.separator}${ant.project.name}.jar"/>
+    <!-- Define Build Properties-File -->
+    <property name="prpfile" value="${prjdir}${file.separator}build.properties"/>    
+    <!-- Define Library Path -->
+    <path id="libpath">
+        <fileset dir="${libdir}">
+            <include name="*.jar"/>
+        </fileset>
+    </path> 
+    <!-- Define Build Path -->
+    <path id="bldpath">
+        <fileset dir="${blddir}">
+            <include name="*.jar"/>
+        </fileset>
+    </path> 	
+    <!-- Define Classpath -->
+    <path id="clspath">
+        <path refid="libpath"/>
+        <path refid="bldpath"/>
+    </path>  	
+    <!-- Info Target -->
+    <target name="infos">
+        <echo message="================= System Info ===================================="/>
+        <echo message="OS Name              '${os.name}'"/>
+        <echo message="OS Vendor            '${os.arch}'"/>
+        <echo message="OS Version           '${os.version}'"/>
+        <echo message="================== User Info ====================================="/>
+        <echo message="User Name            '${user.name}'"/>
+        <echo message="User Home Directory  '${user.home}'"/>
+        <echo message="User Work Directory  '${user.dir}'"/>
+        <echo message="=================== Ant Info ====================================="/>
+        <echo message="Ant Version          '${ant.version}'"/>
+        <echo message="Ant Home Directoy    '${ant.home}'"/>
+        <echo message="Ant Project File     '${ant.file}'"/>
+        <echo message="Ant Project Name     '${ant.project.name}'"/>
+        <echo message="Ant Java Version     '${ant.java.version}'"/>
+        <echo message="================== Java Info ====================================="/>
+        <echo message="Java Directory       '${java.home}'"/>
+        <echo message="================= Project Info ==================================="/>
+        <echo message="Project Base Directory      '${basedir}'"/>
+        <echo message="Project Build Directory     '${blddir}'"/>
+        <echo message="Project Library Directory   '${libdir}'"/>
+        <echo message="Project Source Directory    '${srcdir}'"/>
+        <echo message="Project Binary Directory    '${bindir}'"/>
+        <echo message="Project Temporary Directory '${tmpdir}'"/>
+        <echo message="Project Build Jar           '${jarfile}'"/>
+        <echo message="================= Classpath Info ================================="/>
+        <pathconvert property="clspath" refid="clspath" pathsep="${line.separator}" targetos="windows"/>
+        <echo message="${clspath}"/>
+    </target> 
+    <!-- Build Project -->
+    <target name="build" depends="clean,infos">
+        <!-- Compile Project -->
+        <javac srcdir="${srcdir}" destdir="${tmpdir}" debug="on" includes="**/*.java" encoding="utf-8" includeantruntime="false" fork="true">
+            <classpath refid="clspath"/>
+        </javac>
+        <!-- Copy JavaDocs -->
+        <copy todir="${tmpdir}/doc">
+            <fileset dir="doc">
+                <include name="**/*"/>
+            </fileset>
+        </copy>
+        <!-- Copy Resources -->
+        <copy todir="${tmpdir}/res">
+            <fileset dir="res">
+                <include name="**/*"/>
+            </fileset>
+        </copy>
+        <!-- Build JAR File -->
+        <jar jarfile="${jarfile}" basedir="${tmpdir}" destfile="${jarfile}" includes="de/**/*.class,**/*.*">
+            <zipgroupfileset dir="${libdir}" includes="*.jar"/>
+            <manifest>
+                <attribute name="Built-By" value="Human Centered Multimedia Augsburg"/>
+                <attribute name="Main-Class" value="eu.kristina.ECABehaviorManager"/>
+            </manifest>
+        </jar>
+    </target>    
+    <!-- Clean Project -->
+    <target name="clean">
+        <echo message="Cleaning '${tmpdir}'"/>
+        <delete>
+            <fileset dir="${tmpdir}">
+                <include name="**/*"/>
+            </fileset>
+            <dirset dir="${tmpdir}">
+                <include name="**/*"/>
+            </dirset>
+        </delete>
+        <echo message="Cleaning '${blddir}'"/>
+        <delete>
+            <fileset dir="${blddir}">
+                <include name="**/*"/>
+            </fileset>
+            <dirset dir="${blddir}">
+                <include name="**/*"/>
+            </dirset>
+        </delete>
+        <echo message="Cleaning '${docdir}'"/>
+        <delete>
+            <fileset dir="${docdir}">
+                <include name="**/*"/>
+            </fileset>
+            <dirset dir="${docdir}">
+                <include name="**/*"/>
+            </dirset>
+        </delete>
+        <echo message="Cleaning '${logdir}'"/>
+        <delete>
+            <fileset dir="${logdir}">
+                <exclude name="*.log"/>
+                <include name="**/*"/>
+            </fileset>            
+        </delete>      
+    </target>	
+    <!-- Generate JavaDoc -->
+    <target name="jdocs">
+        <javadoc
+            classpathref="clspath"
+            packagenames="de"
+            access="private"
+            destdir="${docdir}"
+            author="true"
+            version="true"
+            use="true"
+            windowtitle="Documentation"
+            doctitle="Documentation"
+            bottom="Documentation"
+            header="Documentation"
+            footer="Documentation">
+            <fileset dir="${srcdir}" defaultexcludes="yes">
+                <include name="**/*.java"/>
+            </fileset>
+        </javadoc>
+    </target>
+    <!-- Profile Project -->
+    <target name="profile" depends="build" description="Profile">
+        <fail unless="netbeans.home">
+            This target can only run inside the NetBeans IDE.
+        </fail>
+        <java classname="eu.kristina.eca.ECABehaviorManager" fork="true">
+            <jvmarg value="${profiler.info.jvmargs.agent}"/>
+            <classpath refid="clspath"/>
+        </java>
+    </target>  
+    <!-- Execute Project -->
+    <target name="test">
+        <java classname="eu.kristina.eca.ECABehaviorManager" fork="true">
+            <classpath refid="clspath"/>
+            <arg line="webglstudio.org 9900"/>
+        </java>
+    </target>  
+    <!-- Execute Project -->
+    <target name="exec">
+        <java classname="de.dfki.vsm.SceneMaker3" fork="true">
+            <arg line="editor res/prj/vsm"/>
+            <classpath refid="clspath"/>
+        </java>
+    </target> 
+</project>
