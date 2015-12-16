@@ -100,6 +100,12 @@ public final class KristinaScenePlayer implements RunTimePlayer {
             final float evaluation) {
         mClient.send(clientid + " " + "face" + " " + activation + " " + evaluation);
     }
+    
+     public final void text(
+            final String clientid,
+            final String ttstext) {
+        mClient.send(clientid + " " + "text" + " " + ttstext);
+    }
 
     public final float rand() {
         return mRandom.nextFloat();
