@@ -6,8 +6,10 @@ import de.dfki.vsm.runtime.project.RunTimeProject;
 import de.dfki.vsm.runtime.values.AbstractValue;
 import de.dfki.vsm.runtime.players.RunTimePlayer;
 import de.dfki.vsm.util.log.LOGConsoleLogger;
+import eu.kristina.eca.ECACommandClient;
 import java.util.HashMap;
 import java.util.LinkedList;
+import java.util.Random;
 
 /**
  * @author Gregor Mehlmann
@@ -17,14 +19,18 @@ public final class KristinaScenePlayer implements RunTimePlayer {
     // The singelton player instance
     public static KristinaScenePlayer sInstance = null;
     // The runtime environment
-    protected final RunTimeInstance mRunTime
+    private final RunTimeInstance mRunTime
             = RunTimeInstance.getInstance();
     // The defaut system logger
-    protected final LOGConsoleLogger mLogger
+    private final LOGConsoleLogger mLogger
             = LOGConsoleLogger.getInstance();
     // The quue of waiting tasks
-    protected final HashMap<String, Thread> mTaskQueue
+    private final HashMap<String, Thread> mTaskQueue
             = new HashMap<>();
+    // The ECA command client
+    private ECACommandClient mClient;
+    //
+    private final Random mRandom = new Random();
     // The player's runtime project 
     private RunTimeProject mProject;
     // The project specific config
@@ -50,6 +56,12 @@ public final class KristinaScenePlayer implements RunTimePlayer {
         mPlayerName = project.getPlayerName(this);
         // Initialize the config
         mPlayerConfig = project.getPlayerConfig(mPlayerName);
+        // Initialize the client
+        mClient = new ECACommandClient("webglstudio.org", 9900);
+        //
+        mClient.start();
+        //
+        mClient.init();
         // Print some information
         mLogger.message("Launching scene player '" + this + "' with configuration:\n" + mPlayerConfig);
         // Return true at success
@@ -60,6 +72,15 @@ public final class KristinaScenePlayer implements RunTimePlayer {
     public final boolean unload() {
         // Print some information
         mLogger.message("Unloading scene player '" + this + "' with configuration:\n" + mPlayerConfig);
+        //
+        mClient.abort();
+        //
+        try {
+            mClient.join();
+
+        } catch (final InterruptedException exc) {
+            mLogger.failure(exc.toString());
+        }
         // Return true at success
         return true;
     }
@@ -67,5 +88,20 @@ public final class KristinaScenePlayer implements RunTimePlayer {
     @Override
     public final void play(final String name, final LinkedList<AbstractValue> args) {
 
+    }
+
+    public final void blink() {
+        mClient.send("blink");
+    }
+
+    public final void face(
+            final String clientid,
+            final float activation,
+            final float evaluation) {
+        mClient.send(clientid + " " + "face" + " " + activation + " " + evaluation);
+    }
+
+    public final float rand() {
+        return mRandom.nextFloat();
     }
 }

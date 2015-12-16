@@ -17,6 +17,8 @@ public final class ECABehaviorManager {
                 args[0], Integer.parseInt(args[1]));
         // Start client
         client.start();
+        //
+        client.init();
 
         // Build terminal
         final ECAControlTerminal control = new ECAControlTerminal(client);

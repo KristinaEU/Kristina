@@ -8,7 +8,7 @@ import java.io.InputStreamReader;
  *
  * @author Gregor Mehlmann
  */
-public class ECAControlTerminal extends Thread {
+public final class ECAControlTerminal extends Thread {
 
     // The request client
     private final ECACommandClient mClient;

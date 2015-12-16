@@ -28,7 +28,7 @@ public final class ECACommandClient extends Thread {
     private volatile boolean mDone = false;
 
     public ECACommandClient(
-            final String host, 
+            final String host,
             final int port) {
         mHost = host;
         mPort = port;
@@ -47,6 +47,10 @@ public final class ECACommandClient extends Thread {
         }
         // Start thread
         super.start();
+    }
+
+    public final void init() {
+        send("12345");
     }
 
     public final void abort() {
