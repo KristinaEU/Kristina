@@ -1,4 +1,4 @@
-/* 
+/*
  * The MIT License
  *
  * Copyright 2015 gmeditsk.
@@ -23,33 +23,51 @@
  */
 package gr.iti.kristina.api;
 
-import java.util.Set;
-import javax.ws.rs.core.Application;
+import javax.ws.rs.core.Context;
+import javax.ws.rs.core.UriInfo;
+import javax.ws.rs.Produces;
+import javax.ws.rs.Consumes;
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.PUT;
+import javax.ws.rs.QueryParam;
+import javax.ws.rs.core.MediaType;
 
 /**
+ * REST Web Service
  *
  * @author gmeditsk
  */
-@javax.ws.rs.ApplicationPath("/")
-public class ApplicationConfig extends Application {
+@Path("context/query")
+public class ContextQueryResource {
 
-    @Override
-    public Set<Class<?>> getClasses() {
-        Set<Class<?>> resources = new java.util.HashSet<>();
-        addRestResourceClasses(resources);
-        return resources;
+    @Context
+    private UriInfo context;
+
+    /**
+     * Creates a new instance of ContextQueryResource
+     */
+    public ContextQueryResource() {
     }
 
     /**
-     * Do not modify addRestResourceClasses() method.
-     * It is automatically populated with
-     * all resources defined in the project.
-     * If required, comment out calling this method in getClasses().
+     * Retrieves representation of an instance of gr.iti.kristina.api.ContextQueryResource
+     * @param query
+     * @return RDF/OWL
      */
-    private void addRestResourceClasses(Set<Class<?>> resources) {
-        resources.add(gr.iti.kristina.api.ContextQueryResource.class);
-        resources.add(gr.iti.kristina.api.ContextResource.class);
-        resources.add(gr.iti.kristina.api.FormatResource.class);
+    @GET
+    @Produces(MediaType.TEXT_PLAIN)
+    public String getText(@QueryParam("query") String query) {
+        //TODO return proper representation object
+        return "ok";
     }
-    
+
+    /**
+     * PUT method for updating or creating an instance of ContextQueryResource
+     * @param content representation for the resource
+     */
+//    @PUT
+//    @Consumes(MediaType.TEXT_PLAIN)
+//    public void putText(String content) {
+//    }
 }
