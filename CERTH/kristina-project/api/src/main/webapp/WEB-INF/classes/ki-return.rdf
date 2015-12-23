@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:core="http://kristina-project.eu/ontologies/framesituation/core#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:dul="http://www.loa-cnr.it/ontologies/DUL.owl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns="http://kristina-project.eu/ontologies/ms2/ki/return#"
+    xmlns:ent="http://kristina-project.eu/ontologies/entities#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xml:base="http://kristina-project.eu/ontologies/ms2/ki/return">
+    <owl:Ontology rdf:about="">
+        <owl:imports rdf:resource="http://kristina-project.eu/ontologies/framesituation/core"/>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >ms2</owl:versionInfo>
+    </owl:Ontology>
+    <core:FrameSituation rdf:ID="FrameSituation_1">
+        <dul:satisfies>
+            <core:FrameDescription rdf:ID="FrameDescription_1">
+                <dul:defines>
+                    <ent:Status rdf:ID="Status_1">
+                        <dul:classifies rdf:resource="http://kristina-project.eu/ontologies/entities#status_true"/>
+                    </ent:Status>
+                </dul:defines>
+            </core:FrameDescription>
+        </dul:satisfies>
+    </core:FrameSituation>
+</rdf:RDF>
+
