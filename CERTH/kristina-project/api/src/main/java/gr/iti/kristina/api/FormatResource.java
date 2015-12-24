@@ -25,8 +25,6 @@ package gr.iti.kristina.api;
 
 import gr.iti.kristina.api.helpers.FileHelper;
 import java.io.IOException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.UriInfo;
 import javax.ws.rs.Produces;
@@ -43,10 +41,10 @@ import org.slf4j.LoggerFactory;
  */
 @Path("format/framenet")
 public class FormatResource {
-    
+
     @Context
     private UriInfo context;
-    
+
     org.slf4j.Logger logger = LoggerFactory.getLogger(FormatResource.class);
 
     /**
@@ -61,14 +59,14 @@ public class FormatResource {
      *
      * @param speect_act
      * @param info
-     * @return RDF/OWL
+     * @return FrameNet
      */
     @GET
     @Produces(MediaType.TEXT_PLAIN)
     public String getText(@QueryParam("speech_act") String speect_act, @QueryParam("info") String info) {
         try {
             //TODO return proper representation object
-            return FileHelper.readFile("/ki-return.rdf");
+            return FileHelper.readFile("/framenet_example.xml");
         } catch (IOException ex) {
             logger.error("", ex);
         }
