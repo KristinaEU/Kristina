@@ -39,7 +39,7 @@ import org.slf4j.LoggerFactory;
  */
 public class KristinaRepository {
 
-    public static String SERVER_URL = "http://localhost:10035";
+    public static String SERVER_URL = "http://160.40.51.155:10035";
     public static String CATALOG_ID = "Kristina";
     public static String REPOSITORY_ID = "MS2-Repository";
     public static String USERNAME = "admin";
@@ -52,7 +52,7 @@ public class KristinaRepository {
     Logger logger = LoggerFactory.getLogger(KristinaRepository.class);
 
     public KristinaRepository() throws AGHttpException, RepositoryException {
-        logger.debug("Connecting to Kristina Repository...");
+        logger.debug(String.format("Connecting to Kristina Repository [%s]...", SERVER_URL));
         AGServer server = new AGServer(SERVER_URL, USERNAME, PASSWORD);
         AGCatalog catalog = server.getCatalog(CATALOG_ID);
         myRepository = catalog.createRepository(REPOSITORY_ID);

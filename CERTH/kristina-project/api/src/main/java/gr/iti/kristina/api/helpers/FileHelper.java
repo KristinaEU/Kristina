@@ -23,7 +23,7 @@
  */
 package gr.iti.kristina.api.helpers;
 
-import gr.iti.kristina.api.ContextResource;
+import gr.iti.kristina.api.ContextUpdateResource;
 import java.io.IOException;
 import java.io.InputStream;
 import org.apache.commons.io.IOUtils;
@@ -39,7 +39,7 @@ public class FileHelper {
     Logger logger = LoggerFactory.getLogger(FileHelper.class);
 
     public static String readFile(String path) throws IOException {
-        InputStream file = ContextResource.class.getResourceAsStream(path);
+        InputStream file = ContextUpdateResource.class.getResourceAsStream(path);
         return IOUtils.toString(file);
     }
 

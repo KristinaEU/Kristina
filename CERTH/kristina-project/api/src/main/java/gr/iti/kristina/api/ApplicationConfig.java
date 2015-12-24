@@ -48,7 +48,7 @@ public class ApplicationConfig extends Application {
      */
     private void addRestResourceClasses(Set<Class<?>> resources) {
         resources.add(gr.iti.kristina.api.ContextQueryResource.class);
-        resources.add(gr.iti.kristina.api.ContextResource.class);
+        resources.add(gr.iti.kristina.api.ContextUpdateResource.class);
         resources.add(gr.iti.kristina.api.FormatResource.class);
     }
     
