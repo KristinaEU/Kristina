@@ -23,15 +23,18 @@
  */
 package gr.iti.kristina.api;
 
+import gr.iti.kristina.api.helpers.FileHelper;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.UriInfo;
 import javax.ws.rs.Produces;
-import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
-import javax.ws.rs.PUT;
 import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
+import org.slf4j.LoggerFactory;
 
 /**
  * REST Web Service
@@ -43,6 +46,8 @@ public class ContextQueryResource {
 
     @Context
     private UriInfo context;
+    
+    org.slf4j.Logger logger = LoggerFactory.getLogger(ContextQueryResource.class);
 
     /**
      * Creates a new instance of ContextQueryResource
@@ -51,19 +56,27 @@ public class ContextQueryResource {
     }
 
     /**
-     * Retrieves representation of an instance of gr.iti.kristina.api.ContextQueryResource
+     * Retrieves representation of an instance of
+     * gr.iti.kristina.api.ContextQueryResource
+     *
      * @param query
      * @return RDF/OWL
      */
     @GET
     @Produces(MediaType.TEXT_PLAIN)
     public String getText(@QueryParam("query") String query) {
-        //TODO return proper representation object
-        return "ok";
+        try {
+            //TODO return proper representation object
+            return FileHelper.readFile("/query_example.rdf");
+        } catch (IOException ex) {
+            logger.error("", ex);
+        }
+        return "";
     }
 
     /**
      * PUT method for updating or creating an instance of ContextQueryResource
+     *
      * @param content representation for the resource
      */
 //    @PUT
