@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kmodule xmlns="http://jboss.org/kie/6.0.0/kmodule">   
+    
+    <kbase name="symptomsMapping" eventProcessingMode="cloud" packages="drl.symptomsMapping">
+        <ksession name="symptomsMappingKSession" type="stateful" />
+    </kbase>
+    
+    
+    
+    
+  
+</kmodule>

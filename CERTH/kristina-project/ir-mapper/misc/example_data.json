@@ -1,0 +1,206 @@
+[{
+        "Subject": [{
+                "term": " pneumonia",
+                "concept": "disease or syndrome",
+                "BabelNet": "http://babelnet.org/rdf/s00063143n",
+                "DBPedia": "http://dbpedia.org/resource/Pneumonia"
+            }],
+        "Predicate": {
+            "term": "have",
+            "concept": " ",
+            "BabelNet": "",
+            "DBPedia": ""
+        },
+        "Object": [{
+                "term": " productive cough",
+                "concept": "sign or symptom",
+                "BabelNet": "http://babelnet.org/rdf/s00023108n",
+                "DBPedia": "http://dbpedia.org/resource/Cough"
+            }],
+        "ObjectSentence": [{
+                "Subject": [{
+                        "term": " fever",
+                        "concept": "finding",
+                        "BabelNet": "http://babelnet.org/rdf/s00033883n",
+                        "DBPedia": "http://dbpedia.org/resource/Fever"
+                    }],
+                "Predicate": {
+                    "term": "accompanied",
+                    "concept": " ",
+                    "BabelNet": "http://babelnet.org/rdf/s00082222v",
+                    "DBPedia": ""
+                },
+                "Object": [],
+                "ObjectSentence": [{
+                        "Subject": [{
+                                "term": " of breath shortness chills",
+                                "concept": "sign or symptom",
+                                "BabelNet": "http://babelnet.org/rdf/s00012965n",
+                                "DBPedia": ""
+                            }],
+                        "Predicate": {
+                            "term": "shaking",
+                            "concept": "sign or symptom",
+                            "BabelNet": "http://babelnet.org/rdf/s00082470v",
+                            "DBPedia": ""
+                        },
+                        "Object": [{
+                                "term": " sharp",
+                                "concept": "finding",
+                                "BabelNet": "http://babelnet.org/rdf/s00096404a",
+                                "DBPedia": ""
+                            }],
+                        "ObjectSentence": []
+                    }, {
+                        "Subject": [],
+                        "Predicate": {
+                            "term": "stabbing",
+                            "concept": " ",
+                            "BabelNet": "http://babelnet.org/rdf/s00090126v",
+                            "DBPedia": ""
+                        },
+                        "Object": [{
+                                "term": " chest pain",
+                                "concept": "sign or symptom",
+                                "BabelNet": "http://babelnet.org/rdf/s00018210n",
+                                "DBPedia": "http://dbpedia.org/resource/Chest_pain"
+                            }, {
+                                "term": " breaths",
+                                "concept": "sign or symptom",
+                                "BabelNet": "http://babelnet.org/rdf/s00012965n",
+                                "DBPedia": ""
+                            }],
+                        "ObjectSentence": []
+                    }]
+            }]
+    }, {
+        "Subject": [{
+                "term": " in children signs",
+                "concept": "finding",
+                "BabelNet": "http://babelnet.org/rdf/s00018346n",
+                "DBPedia": "http://dbpedia.org/resource/Child"
+            }, {
+                "term": " symptoms",
+                "concept": "sign or symptom",
+                "BabelNet": "http://babelnet.org/rdf/s00075683n",
+                "DBPedia": "http://dbpedia.org/resource/Symptom"
+            }],
+        "Predicate": {
+            "term": "are",
+            "concept": " ",
+            "BabelNet": "",
+            "DBPedia": ""
+        },
+        "Object": [{
+                "term": " fever",
+                "concept": "finding",
+                "BabelNet": "http://babelnet.org/rdf/s00033883n",
+                "DBPedia": "http://dbpedia.org/resource/Fever"
+            }, {
+                "term": " difficult fast breathing",
+                "concept": "sign or symptom",
+                "BabelNet": "http://babelnet.org/rdf/s00101358a",
+                "DBPedia": ""
+            }, {
+                "term": " cough",
+                "concept": "finding",
+                "BabelNet": "http://babelnet.org/rdf/s00023108n",
+                "DBPedia": "http://dbpedia.org/resource/Cough"
+            }],
+        "ObjectSentence": []
+    }, {
+        "Subject": [],
+        "Predicate": {
+            "term": "be",
+            "concept": " ",
+            "BabelNet": "",
+            "DBPedia": ""
+        },
+        "Object": [{
+                "term": " difficult",
+                "concept": "finding",
+                "BabelNet": "http://babelnet.org/rdf/s00101358a",
+                "DBPedia": ""
+            }],
+        "ObjectSentence": [{
+                "Subject": [],
+                "Predicate": {
+                    "term": "tell",
+                    "concept": " ",
+                    "BabelNet": "http://babelnet.org/rdf/s00094862v",
+                    "DBPedia": ""
+                },
+                "Object": [],
+                "ObjectSentence": [{
+                        "Subject": [],
+                        "Predicate": {
+                            "term": "have",
+                            "concept": " ",
+                            "BabelNet": "",
+                            "DBPedia": ""
+                        },
+                        "Object": [{
+                                "term": " flu",
+                                "concept": "disease or syndrome",
+                                "BabelNet": "http://babelnet.org/rdf/s00035412n",
+                                "DBPedia": "http://dbpedia.org/resource/Influenza"
+                            }, {
+                                "term": " cold",
+                                "concept": "disease or syndrome",
+                                "BabelNet": "http://babelnet.org/rdf/s00099981a",
+                                "DBPedia": ""
+                            }],
+                        "ObjectSentence": []
+                    }]
+            }]
+    }, {
+        "Subject": [{
+                "term": " General signs",
+                "concept": "finding",
+                "BabelNet": "http://babelnet.org/rdf/s00036772n",
+                "DBPedia": ""
+            }, {
+                "term": " symptoms",
+                "concept": "sign or symptom",
+                "BabelNet": "http://babelnet.org/rdf/s00075683n",
+                "DBPedia": "http://dbpedia.org/resource/Symptom"
+            }],
+        "Predicate": {
+            "term": "include",
+            "concept": " ",
+            "BabelNet": "http://babelnet.org/rdf/s00089660v",
+            "DBPedia": ""
+        },
+        "Object": [{
+                "term": " fever",
+                "concept": "finding",
+                "BabelNet": "http://babelnet.org/rdf/s00033883n",
+                "DBPedia": "http://dbpedia.org/resource/Fever"
+            }, {
+                "term": " night sweats",
+                "concept": "sign or symptom",
+                "BabelNet": "http://babelnet.org/rdf/s00441110n",
+                "DBPedia": "http://dbpedia.org/resource/Night_sweats"
+            }, {
+                "term": " weight loss",
+                "concept": "finding",
+                "BabelNet": "http://babelnet.org/rdf/s03126634n",
+                "DBPedia": "http://dbpedia.org/resource/Weight_loss"
+            }, {
+                "term": " chills",
+                "concept": "sign or symptom",
+                "BabelNet": "http://babelnet.org/rdf/s00018387n",
+                "DBPedia": ""
+            }, {
+                "term": " of appetite loss",
+                "concept": "disease or syndrome",
+                "BabelNet": "http://babelnet.org/rdf/s00004425n",
+                "DBPedia": "http://dbpedia.org/resource/Anorexia_(symptom)"
+            }, {
+                "term": " fatigue",
+                "concept": "sign or symptom",
+                "BabelNet": "http://babelnet.org/rdf/s00033794n",
+                "DBPedia": "http://dbpedia.org/resource/Fatigue_(medical)"
+            }],
+        "ObjectSentence": []
+    }]

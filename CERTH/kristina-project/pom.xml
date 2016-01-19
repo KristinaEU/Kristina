@@ -10,6 +10,7 @@
     </properties>
     <modules>
         <module>api</module>
+        <module>ir-mapper</module>
     </modules>
   
     <dependencies>

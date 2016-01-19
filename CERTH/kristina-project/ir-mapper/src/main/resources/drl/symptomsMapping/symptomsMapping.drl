@@ -1,0 +1,35 @@
+package gr.iti.kristina.irmapper.rules.symptoms
+
+import gr.iti.kristina.irmapper.parser.model.ETriple;
+import gr.iti.kristina.irmapper.parser.model.Triple;
+import gr.iti.kristina.irmapper.parser.model.Resource;
+
+global org.slf4j.Logger logger
+
+
+
+rule "direct" 
+when
+    $m: ETriple($subjects: subject, $objects: object, !$subjects.isEmpty() && !$objects.isEmpty())
+    $r1: Resource() from $subjects
+    $r2: Resource() from $objects
+    not Triple(subject == $r1, predicate == "relatesTo", object == $r2)
+then
+    Triple t = new Triple($r1, "relatesTo", $r2);
+    insert(t);
+    logger.debug(t.toString());    
+end
+
+
+rule "indirect" 
+when
+    $m: ETriple($subjects1: subject, $objects1: objectSentence, !$subjects1.isEmpty() && !$objects1.isEmpty())
+    $r1: Resource() from $subjects1
+    $et: ETriple($subjects2: subject, !$subjects2.isEmpty()) from $objects1
+    $r2: Resource() from $subjects2
+    //not Triple(subject == $r1, predicate == "relatesTo", object == $r2)
+then
+    Triple t = new Triple($r1, "relatesTo", $r2);
+    insert(t);
+    logger.debug(t.toString());    
+end
