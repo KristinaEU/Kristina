@@ -46,7 +46,7 @@ public class ContextQueryResource {
 
     @Context
     private UriInfo context;
-    
+
     org.slf4j.Logger logger = LoggerFactory.getLogger(ContextQueryResource.class);
 
     /**
@@ -65,9 +65,15 @@ public class ContextQueryResource {
     @GET
     @Produces(MediaType.TEXT_PLAIN)
     public String getText(@QueryParam("query") String query) {
+        if (query == null) {
+            query = "";
+        }
         try {
-            //TODO return proper representation object
-            return FileHelper.readFile("/query_example.rdf");
+            if (query.equals("BiographicalAspect")) {
+                return FileHelper.readFile("/profile-dto-example_ms2.rdf");
+            } else {
+                return FileHelper.readFile("/query_example.rdf");
+            }
         } catch (IOException ex) {
             logger.error("", ex);
         }

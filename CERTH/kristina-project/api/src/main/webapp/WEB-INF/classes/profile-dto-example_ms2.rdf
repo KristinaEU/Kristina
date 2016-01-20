@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:example="http://kristina-project.eu/ontologies/profile/dto/example#"
+    xmlns:dto="http://kristina-project.eu/ontologies/profile/dto#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+  xml:base="http://kristina-project.eu/ontologies/profile/dto/example">
+  <owl:Ontology rdf:about="">
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Created with TopBraid Composer</owl:versionInfo>
+    <owl:imports rdf:resource="http://kristina-project.eu/ontologies/profile/dto"/>
+    <owl:imports rdf:resource="http://kristina-project.eu/ontologies/profile"/>
+  </owl:Ontology>
+  <dto:BiographicalAspect rdf:ID="birthplace_aspect">
+    <dto:ref rdf:resource="http://kristina-project.eu/ontologies/profile#birthPlace"/>
+    <dto:label rdf:resource="http://kristina-project.eu/ontologies/profile/dto#RF"/>
+  </dto:BiographicalAspect>
+  <dto:BiographicalAspect rdf:ID="religion_aspect">
+    <dto:ref rdf:resource="http://kristina-project.eu/ontologies/profile#religion"/>
+    <dto:label rdf:resource="http://kristina-project.eu/ontologies/profile/dto#RAQ"/>
+  </dto:BiographicalAspect>
+  <dto:BiographicalAspect rdf:ID="number_of_children_aspect">
+    <dto:ref rdf:resource="http://kristina-project.eu/ontologies/profile#child"/>
+    <dto:label rdf:resource="http://kristina-project.eu/ontologies/profile/dto#RAQ"/>
+    <dto:function rdf:resource="http://kristina-project.eu/ontologies/profile/dto#count"/>
+  </dto:BiographicalAspect>
+  <dto:BiographicalAspect rdf:ID="spouse_aspect">
+    <dto:ref rdf:resource="http://kristina-project.eu/ontologies/profile#spouse"/>
+    <dto:link>
+      <dto:BiographicalAspect rdf:ID="spouse_name_aspect">
+        <dto:ref rdf:resource="http://kristina-project.eu/ontologies/profile#name"/>
+        <dto:label rdf:resource="http://kristina-project.eu/ontologies/profile/dto#SR"/>
+      </dto:BiographicalAspect>
+    </dto:link>
+  </dto:BiographicalAspect>
+  <dto:BiographicalAspect rdf:ID="age_aspect">
+    <dto:ref rdf:resource="http://kristina-project.eu/ontologies/profile#age"/>
+    <dto:label rdf:resource="http://kristina-project.eu/ontologies/profile/dto#RF"/>
+  </dto:BiographicalAspect>
+  <dto:BiographicalAspect rdf:ID="name_aspect">
+    <dto:ref rdf:resource="http://kristina-project.eu/ontologies/profile#name"/>
+    <dto:label rdf:resource="http://kristina-project.eu/ontologies/profile/dto#RF"/>
+  </dto:BiographicalAspect>
+  <dto:BiographicalAspect rdf:ID="marital_status_aspect">
+    <dto:ref rdf:resource="http://kristina-project.eu/ontologies/profile#maritalStatus"/>
+    <dto:label rdf:resource="http://kristina-project.eu/ontologies/profile/dto#RAQ"/>
+  </dto:BiographicalAspect>
+</rdf:RDF>
+
+<!-- Created with TopBraid -->
