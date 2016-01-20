@@ -1,0 +1,55 @@
+[{
+        "Subject": [{
+                "term": " Symptoms",
+                "concept": "sign or symptom",
+                "BabelNet": "http://babelnet.org/rdf/s00075683n",
+                "DBPedia": "http://dbpedia.org/resource/Symptom"
+            }],
+        "Predicate": {
+            "term": "include",
+            "concept": " ",
+            "BabelNet": "http://babelnet.org/rdf/s00089660v",
+            "DBPedia": ""
+        },
+        "Object": [{
+                "term": " difficulty breathing",
+                "concept": "sign or symptom",
+                "BabelNet": "http://babelnet.org/rdf/s03686129n",
+                "DBPedia": "http://dbpedia.org/resource/Respiratory_distress"
+            },
+            {
+                "term": " rapid breathing",
+                "concept": "finding",
+                "BabelNet": "http://babelnet.org/rdf/s00109437a",
+                "DBPedia": ""
+            },
+            {
+                "term": " nasal discharge",
+                "concept": "sign or symptom",
+                "BabelNet": "http://babelnet.org/rdf/s00056200n",
+                "DBPedia": "http://dbpedia.org/resource/Mucus"
+            },
+            {
+                "term": " lymphadenopathy",
+                "concept": "finding",
+                "BabelNet": "http://babelnet.org/rdf/s00052436n",
+                "DBPedia": "http://dbpedia.org/resource/Lymphadenopathy"
+            }],
+        "ObjectSentence": [{
+                "Subject": [{
+                        "term": " fatigue fever sore throat cough difficulty chills hoarseness headache",
+                        "concept": "sign or symptom",
+                        "BabelNet": "http://babelnet.org/rdf/s00061896n",
+                        "DBPedia": "http://dbpedia.org/resource/Pharyngitis"
+                    }],
+                "Predicate": {
+                    "term": "swallowing",
+                    "concept": "disease or syndrome",
+                    "BabelNet": "http://babelnet.org/rdf/s00088759v",
+                    "DBPedia": ""
+                },
+                "Object": [],
+                "ObjectSentence": []
+            }]
+    }
+]

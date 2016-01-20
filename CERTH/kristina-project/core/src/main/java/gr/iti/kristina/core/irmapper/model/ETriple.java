@@ -21,7 +21,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package gr.iti.kristina.irmapper.parser.model;
+package gr.iti.kristina.core.irmapper.model;
 
 import com.google.gson.annotations.SerializedName;
 import java.util.List;
@@ -33,37 +33,37 @@ import java.util.List;
 public class ETriple {
 
     @SerializedName("Subject")
-    private List<Resource> subject;
+    private List<ExResource> subject;
     @SerializedName("Predicate")
-    private Resource predicate;
+    private ExResource predicate;
     @SerializedName("Object")
-    private List<Resource> object;
+    private List<ExResource> object;
     @SerializedName("ObjectSentence")
     private List<ETriple> ObjectSentence;
 
-    private transient Resource parent;
+    private transient ExResource parent;
 
-    public List<Resource> getSubject() {
+    public List<ExResource> getSubject() {
         return subject;
     }
 
-    public void setSubject(List<Resource> subject) {
+    public void setSubject(List<ExResource> subject) {
         this.subject = subject;
     }
 
-    public Resource getPredicate() {
+    public ExResource getPredicate() {
         return predicate;
     }
 
-    public void setPredicate(Resource predicate) {
+    public void setPredicate(ExResource predicate) {
         this.predicate = predicate;
     }
 
-    public List<Resource> getObject() {
+    public List<ExResource> getObject() {
         return object;
     }
 
-    public void setObject(List<Resource> object) {
+    public void setObject(List<ExResource> object) {
         this.object = object;
     }
 
@@ -75,11 +75,11 @@ public class ETriple {
         this.ObjectSentence = ObjectSentence;
     }
 
-    public Resource getParent() {
+    public ExResource getParent() {
         return parent;
     }
 
-    public void setParent(Resource parent) {
+    public void setParent(ExResource parent) {
         this.parent = parent;
     }
 

@@ -1,7 +1,7 @@
-/* 
+/*
  * The MIT License
  *
- * Copyright 2015 gmeditsk.
+ * Copyright 2016 gmeditsk.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -21,37 +21,28 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package gr.iti.kristina.irmapper.parser;
+package gr.iti.kristina.core.irmapper.repository;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.reflect.TypeToken;
-import gr.iti.kristina.irmapper.parser.model.ETriple;
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
-import java.io.Reader;
-import java.lang.reflect.Type;
-import java.util.Collection;
+import com.hp.hpl.jena.rdf.model.Model;
+import com.hp.hpl.jena.rdf.model.ModelFactory;
+import com.ontotext.jena.SesameDataset;
+import gr.iti.kristina.core.repository.OWLIMRepositoryFactory;
+import org.openrdf.repository.Repository;
+import org.openrdf.repository.RepositoryException;
+import org.openrdf.repository.config.RepositoryConfigException;
 
 /**
  *
  * @author gmeditsk
  */
-public class JSONParser {
-    
-    public static void main(String[] args) throws IOException {
-        try(Reader reader = new BufferedReader(new FileReader("misc/example_data.json"))){
-            Gson gson = new GsonBuilder().create();
-            Type collectionType = new TypeToken<Collection<ETriple>>(){}.getType();
-            Collection<ETriple> tripleContainer = gson.fromJson(reader, collectionType);
-            
-            for (ETriple t : tripleContainer) {
-                System.out.println(t);
-            }
-            
-        }
+public class Test {
+
+    public static void main(String[] args) throws RepositoryException, RepositoryConfigException {
+        Repository repository = OWLIMRepositoryFactory.newIstance("http://localhost:8080", "Symptoms-Repository", "admin", "Paran01@!#10");
+        SesameDataset dataset = new SesameDataset(repository.getConnection());
+        Model model = ModelFactory.createModelForGraph(dataset.getDefaultGraph());
+        System.out.println(model.listStatements().toList().size());
+        repository.shutDown();
     }
-    
 
 }

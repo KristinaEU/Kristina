@@ -21,7 +21,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package gr.iti.kristina.irmapper.parser.model;
+package gr.iti.kristina.core.irmapper.model;
 
 import java.io.Serializable;
 import java.util.Objects;
@@ -30,33 +30,33 @@ import java.util.Objects;
  *
  * @author gmeditsk
  */
-public class Triple implements Serializable, Comparable<Triple> {
+public class Triple implements Serializable {
 
-    private Resource subject, object;
+    private ExResource subject, object;
     private String predicate;
 
     public Triple() {
     }
 
-    public Triple(Resource subject, String predicate, Resource object) {
+    public Triple(ExResource subject, String predicate, ExResource object) {
         this.subject = subject;
         this.object = object;
         this.predicate = predicate;
     }
 
-    public Resource getSubject() {
+    public ExResource getSubject() {
         return subject;
     }
 
-    public void setSubject(Resource subject) {
+    public void setSubject(ExResource subject) {
         this.subject = subject;
     }
 
-    public Resource getObject() {
+    public ExResource getObject() {
         return object;
     }
 
-    public void setObject(Resource object) {
+    public void setObject(ExResource object) {
         this.object = object;
     }
 
@@ -69,11 +69,6 @@ public class Triple implements Serializable, Comparable<Triple> {
     }
 
    
-    @Override
-    public int compareTo(Triple o) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
     @Override
     public int hashCode() {
         int hash = 5;
@@ -111,7 +106,5 @@ public class Triple implements Serializable, Comparable<Triple> {
     public String toString() {
         return "Triple{" + "subject=" + subject + ", predicate=" + predicate + ", object=" + object + '}';
     }
-
-    
 
 }

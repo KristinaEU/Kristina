@@ -1,0 +1,71 @@
+[{
+        "Subject": [],
+        "Predicate": {
+            "term": "cause",
+            "concept": " ",
+            "BabelNet": "",
+            "DBPedia": ""
+        },
+        "Object": [{
+                "term": " mild infection",
+                "concept": "disease or syndrome",
+                "BabelNet": "http://babelnet.org/rdf/s00106719a",
+                "DBPedia": ""
+            },
+            {
+                "term": " headache",
+                "concept": "sign or symptom",
+                "BabelNet": "http://babelnet.org/rdf/s00017236n",
+                "DBPedia": "http://dbpedia.org/resource/Headache"
+            },
+            {
+                "term": " back pain",
+                "concept": "sign or symptom",
+                "BabelNet": "http://babelnet.org/rdf/s00756144n",
+                "DBPedia": "http://dbpedia.org/resource/Back_pain"
+            },
+            {
+                "term": " of appetite loss",
+                "concept": "disease or syndrome",
+                "BabelNet": "http://babelnet.org/rdf/s00004425n",
+                "DBPedia": "http://dbpedia.org/resource/Anorexia_(symptom)"
+            },
+            {
+                "term": " muscle pain",
+                "concept": "finding",
+                "BabelNet": "http://babelnet.org/rdf/s00056563n",
+                "DBPedia": "http://dbpedia.org/resource/Myalgia"
+            },
+            {
+                "term": " vomiting",
+                "concept": "sign or symptom",
+                "BabelNet": "http://babelnet.org/rdf/s00083115v",
+                "DBPedia": ""
+            },
+            {
+                "term": " chills",
+                "concept": "sign or symptom",
+                "BabelNet": "http://babelnet.org/rdf/s00018387n",
+                "DBPedia": ""
+            },
+            {
+                "term": " fatigue",
+                "concept": "sign or symptom",
+                "BabelNet": "http://babelnet.org/rdf/s00033794n",
+                "DBPedia": "http://dbpedia.org/resource/Fatigue_(medical)"
+            },
+            {
+                "term": " fever",
+                "concept": "finding",
+                "BabelNet": "http://babelnet.org/rdf/s00033883n",
+                "DBPedia": "http://dbpedia.org/resource/Fever"
+            },
+            {
+                "term": " nausea",
+                "concept": "sign or symptom",
+                "BabelNet": "http://babelnet.org/rdf/s00057034n",
+                "DBPedia": "http://dbpedia.org/resource/Nausea"
+            }],
+        "ObjectSentence": []
+    }
+]

@@ -21,7 +21,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package gr.iti.kristina.irmapper.parser.model;
+package gr.iti.kristina.core.irmapper.model;
 
 import com.google.gson.annotations.SerializedName;
 import java.io.Serializable;
@@ -31,7 +31,8 @@ import java.util.Objects;
  *
  * @author gmeditsk
  */
-public class Resource implements Serializable, Comparable<Resource>  {
+public class ExResource implements Serializable, Comparable<ExResource> {
+
     @SerializedName("term")
     private String term;
     @SerializedName("concept")
@@ -40,6 +41,7 @@ public class Resource implements Serializable, Comparable<Resource>  {
     private String babelNet;
     @SerializedName("DBPedia")
     private String dbPedia;
+    private transient String localId;
 
     public String getTerm() {
         return term;
@@ -73,30 +75,17 @@ public class Resource implements Serializable, Comparable<Resource>  {
         this.dbPedia = dbPedia;
     }
 
-    @Override
-    public String toString() {
-        return "Resource{" + "term=" + term + ", concept=" + concept + '}';
+    public String getLocalId() {
+        return localId;
     }
-    
-    
 
-//    @Override
-//    public String toString() {
-//        return "Resource{" + "term=" + term + ", concept=" + concept + ", babelNet=" + babelNet + ", dbPedia=" + dbPedia + '}';
-//    }
-
-    @Override
-    public int compareTo(Resource o) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void setLocalId(String localId) {
+        this.localId = localId;
     }
 
     @Override
     public int hashCode() {
-        int hash = 3;
-        hash = 67 * hash + Objects.hashCode(this.term);
-        hash = 67 * hash + Objects.hashCode(this.concept);
-        hash = 67 * hash + Objects.hashCode(this.babelNet);
-        hash = 67 * hash + Objects.hashCode(this.dbPedia);
+        int hash = 7;
         return hash;
     }
 
@@ -111,7 +100,7 @@ public class Resource implements Serializable, Comparable<Resource>  {
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final Resource other = (Resource) obj;
+        final ExResource other = (ExResource) obj;
         if (!Objects.equals(this.term, other.term)) {
             return false;
         }
@@ -124,11 +113,20 @@ public class Resource implements Serializable, Comparable<Resource>  {
         if (!Objects.equals(this.dbPedia, other.dbPedia)) {
             return false;
         }
+        if (!Objects.equals(this.localId, other.localId)) {
+            return false;
+        }
         return true;
     }
-    
-    
-    
-    
-    
+
+    @Override
+    public String toString() {
+        return "ExResource{" + "term=" + term + ", concept=" + concept + ", babelNet=" + babelNet + ", dbPedia=" + dbPedia + ", localId=" + localId + '}';
+    }
+
+    @Override
+    public int compareTo(ExResource o) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
 }

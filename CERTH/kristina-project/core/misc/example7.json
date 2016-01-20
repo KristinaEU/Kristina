@@ -1,0 +1,60 @@
+[{
+    "Subject": [{
+            "term": " typhus Symptoms",
+            "concept": "sign or symptom",
+            "BabelNet": "http://babelnet.org/rdf/s00078818n",
+            "DBPedia": "http://dbpedia.org/resource/Typhus"
+        }],
+    "Predicate": {
+        "term": "include",
+        "concept": " ",
+        "BabelNet": "http://babelnet.org/rdf/s00089660v",
+        "DBPedia": ""
+    },
+    "Object": [],
+    "ObjectSentence": [{
+            "Subject": [{
+                    "term": " sustained pain headache severe severe fever chills",
+                    "concept": "sign or symptom",
+                    "BabelNet": "http://babelnet.org/rdf/s00111531a",
+                    "DBPedia": ""
+                },
+                {
+                    "term": " cough",
+                    "concept": "finding",
+                    "BabelNet": "http://babelnet.org/rdf/s00023108n",
+                    "DBPedia": "http://dbpedia.org/resource/Cough"
+                },
+                {
+                    "term": " rash",
+                    "concept": "sign or symptom",
+                    "BabelNet": "http://babelnet.org/rdf/s00029895n",
+                    "DBPedia": "http://dbpedia.org/resource/Rash"
+                }],
+            "Predicate": {
+                "term": "falling",
+                "concept": "finding",
+                "BabelNet": "http://babelnet.org/rdf/s00087976v",
+                "DBPedia": ""
+            },
+            "Object": [{
+                    "term": " blood pressure",
+                    "concept": "finding",
+                    "BabelNet": "http://babelnet.org/rdf/s00011386n",
+                    "DBPedia": "http://dbpedia.org/resource/Blood_pressure"
+                },
+                {
+                    "term": " to light",
+                    "concept": "sign or symptom",
+                    "BabelNet": "http://babelnet.org/rdf/s00051108n",
+                    "DBPedia": "http://dbpedia.org/resource/Light"
+                },
+                {
+                    "term": " death",
+                    "concept": "finding",
+                    "BabelNet": "http://babelnet.org/rdf/s00025582n",
+                    "DBPedia": "http://dbpedia.org/resource/Death"
+                }],
+            "ObjectSentence": []
+        }]
+}]

@@ -10,16 +10,23 @@
     </properties>
     <modules>
         <module>api</module>
-        <module>ir-mapper</module>
+        <module>core</module>
+        <module>helpers</module>
     </modules>
   
     <dependencies>
         <dependency>
             <groupId>org.apache.jena</groupId>
-            <artifactId>apache-jena-libs</artifactId>
-            <type>pom</type>
-            <version>2.11.0</version>
+            <artifactId>jena-core</artifactId>
+            <version>2.7.3</version>
         </dependency>
+        
+        <dependency>
+            <groupId>org.apache.jena</groupId>
+            <artifactId>jena-arq</artifactId>
+            <version>2.9.3</version>
+        </dependency>
+
         
         <dependency>
             <groupId>commons-io</groupId>
@@ -48,11 +55,14 @@
         <dependency>
             <groupId>org.openrdf.sesame</groupId>
             <artifactId>sesame-runtime</artifactId>
-            <version>2.7.11</version>
+            <version>2.7.8</version>
         </dependency>
-
-
- 
+        
+        <dependency>
+            <groupId>com.ontotext</groupId>
+            <artifactId>graphdb-jena</artifactId>
+            <version>6.2.7</version>
+        </dependency>
     </dependencies>
     
     <build>
@@ -75,6 +85,20 @@
                             <groupId>com.franz</groupId>
                             <artifactId>agraph-java-client</artifactId>
                             <version>5.1.1</version>
+                            <packaging>jar</packaging>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>install2</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>install-file</goal>
+                        </goals>
+                        <configuration>
+                            <file>lib/graphdb-jena-6.2.7.jar</file>
+                            <groupId>com.ontotext</groupId>
+                            <artifactId>graphdb-jena</artifactId>
+                            <version>6.2.7</version>
                             <packaging>jar</packaging>
                         </configuration>
                     </execution>
