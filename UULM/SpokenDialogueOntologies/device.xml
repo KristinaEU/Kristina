@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<!DOCTYPE name SYSTEM "http://localhost:8080/device.dtd">
+<root xmlns="urn:schemas-upnp-org:device-1-0">
+	<specVersion>
+		<major>1</major> 
+		<minor>0</minor> 
+	</specVersion>
+	 
+	<device>
+		<deviceType>urn:uulm:device:sdm:1</deviceType> 
+		<friendlyName>Spoken Dialogue Manager</friendlyName> 
+		<manufacturer>UULM</manufacturer> 
+		<manufacturerURL>http://www.uni-ulm.de/in/it/ds.html</manufacturerURL> 
+		<modelDescription></modelDescription> 
+		<modelName></modelName> 
+		<modelNumber>1.0</modelNumber> 
+		<modelURL>http://www.uni-ulm.de/in/it/ds.html</modelURL> 
+		<serialNumber>666333222</serialNumber> 
+		<UDN>uuid:sdm</UDN> 
+		<UPC>132547698012</UPC> 
+		
+		<serviceList>
+			<service>
+				<serviceType>urn:uulm:service:sdm:1</serviceType> 
+				<serviceId>urn:uulm:serviceId:sdm:1</serviceId> 
+				<SCPDURL>http://localhost:8080/service.xml</SCPDURL> 
+				<controlURL>/service/control</controlURL> 
+				<eventSubURL>/service/eventSub</eventSubURL> 
+			</service>
+		</serviceList>
+	</device>
+</root>
