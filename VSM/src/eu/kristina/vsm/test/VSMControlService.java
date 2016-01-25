@@ -2,10 +2,14 @@ package eu.kristina.vsm.test;
 
 import com.sun.jersey.api.container.httpserver.HttpServerFactory;
 import com.sun.net.httpserver.HttpServer;
+import de.dfki.vsm.Preferences;
 import de.dfki.vsm.runtime.RunTimeInstance;
 import de.dfki.vsm.runtime.project.RunTimeProject;
 import de.dfki.vsm.util.log.LOGDefaultLogger;
 import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
@@ -29,9 +33,15 @@ public class VSMControlService {
             = new RunTimeProject(new File("res/prj/vsm"));
 
     @GET
+    @Produces(MediaType.TEXT_PLAIN)
+    public synchronized String vsm() {
+        return String.valueOf(sRunTime.isRunning(sProject));
+    }
+    
+    @GET
     @Path("{key}")
     @Produces(MediaType.TEXT_PLAIN)
-    public synchronized String vsm(@PathParam("key") final String key) {
+    public synchronized String run(@PathParam("key") final String key) {
         if (key.equals("play")) {
             return play();
         } else if (key.equals("stop")) {
@@ -60,6 +70,13 @@ public class VSMControlService {
         //
         return String.valueOf(sRunTime.setVariable(sProject, key, val));
 
+    }
+
+    @GET
+    @Path("log")
+    @Produces(MediaType.TEXT_PLAIN)
+    public synchronized String log() throws IOException {
+        return new String(Files.readAllBytes(Paths.get(Preferences.sLOGFILE_FILE_NAME)));
     }
 
     private String play() {
@@ -92,7 +109,7 @@ public class VSMControlService {
         // Start the HTTP server
         try {
             // Create the server
-            final HttpServer server = HttpServerFactory.create("http://localhost:8080/");
+            final HttpServer server = HttpServerFactory.create(args[0]);
             // Start the server
             server.start();
             //

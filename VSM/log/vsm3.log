@@ -495,3 +495,261 @@ Updating recent projects with 'D:\GitHubOrg\KristinaRepository\VSM\res\prj\vsm' 
 INFO to LOGFILE on Mon Jan 25 17:04:11 CET 2016 by de.dfki.vsm.util.log.LOGDefaultLogger in Thread[AWT-EventQueue-0,6,main] at de.dfki.vsm.editor.project.sceneflow.elements.ElementTree.refresh(SceneFlowElementPanel.java:313)
 Refreshing 'de.dfki.vsm.editor.project.sceneflow.elements.ElementTree[,0,0,226x393,alignmentX=0.0,alignmentY=0.0,border=javax.swing.border.EmptyBorder@40e4db00,flags=16777576,maximumSize=,minimumSize=,preferredSize=,editable=false,invokesStopCellEditing=false,largeModel=false,rootVisible=false,rowHeight=16,scrollsOnExpand=true,showsRootHandles=false,toggleClickCount=2,visibleRowCount=20]'
 
+INFO to LOGFILE on Mon Jan 25 17:15:01 CET 2016 by de.dfki.vsm.util.log.LOGDefaultLogger in Thread[main,5,main] at de.dfki.vsm.runtime.project.RunTimeProject.parseProjectConfig(RunTimeProject.java:306)
+Loaded project configuration file in path'res\prj\vsm':
+<?xml version="1.0" encoding="UTF-8"?>
+<Project name="">
+  <Plugins>
+  </Plugins>
+  <Players>
+    <Player name="defaultsceneplayer" class="eu.kristina.vsm.KristinaScenePlayer">
+      <Feature key="vsm.agent.number" value="0"/>
+      <Feature key="vsm.agent.0.name" value="none"/>
+      <Feature key="vsm.agent.0.uaid" value="1"/>
+      <Feature key="vsm.agent.0.type" value="tcp"/>
+      <Feature key="vsm.agent.0.local.host" value="localhost"/>
+      <Feature key="vsm.agent.0.local.port" value="1100"/>
+      <Feature key="vsm.agent.0.remote.host" value="webglstudio.org"/>
+      <Feature key="vsm.agent.0.remote.port" value="9900"/>
+      <Feature key="vsm.agent.0.remote.flag" value="true"/>
+      <Feature key="ssi.service.url" value="http://137.250.171.230:11193/fusion/Service.svc/getCurrent"/>
+    </Player>
+  </Players>
+  <Agents>
+  </Agents>
+</Project>
+
+INFO to LOGFILE on Mon Jan 25 17:15:02 CET 2016 by de.dfki.vsm.util.log.LOGDefaultLogger in Thread[main,5,main] at de.dfki.vsm.runtime.project.RunTimeProject.parseSceneFlow(RunTimeProject.java:378)
+Loaded sceneflow configuration file in path 'res\prj\vsm':
+KBM
+
+INFO to LOGFILE on Mon Jan 25 17:15:02 CET 2016 by de.dfki.vsm.util.log.LOGDefaultLogger in Thread[main,5,main] at de.dfki.vsm.runtime.project.RunTimeProject.parseSceneScript(RunTimeProject.java:447)
+Loaded scenescript configuration file in path'res\prj\vsm':
+<SceneScript lower="0" upper="0">
+</SceneScript>
+
+INFO to LOGFILE on Mon Jan 25 17:15:02 CET 2016 by de.dfki.vsm.util.log.LOGDefaultLogger in Thread[main,5,main] at de.dfki.vsm.runtime.project.RunTimeProject.parseActiconConfig(RunTimeProject.java:518)
+Loaded acticon configuration file in path'res\prj\vsm':
+<Acticon>
+</Acticon>
+
+INFO to LOGFILE on Mon Jan 25 17:15:02 CET 2016 by de.dfki.vsm.util.log.LOGDefaultLogger in Thread[main,5,main] at de.dfki.vsm.runtime.project.RunTimeProject.parseVisiconConfig(RunTimeProject.java:658)
+Loaded visicon configuration file in path'res\prj\vsm':
+<Visicon>
+</Visicon>
+
+INFO to LOGFILE on Mon Jan 25 17:15:02 CET 2016 by de.dfki.vsm.util.log.LOGDefaultLogger in Thread[main,5,main] at de.dfki.vsm.runtime.project.RunTimeProject.parseGesticonConfig(RunTimeProject.java:589)
+Loaded gesticon configuration file in path'res\prj\vsm':
+<Gesticon>
+</Gesticon>
+
+INFO to LOGFILE on Mon Jan 25 17:18:06 CET 2016 by de.dfki.vsm.util.log.LOGDefaultLogger in Thread[main,5,main] at de.dfki.vsm.runtime.project.RunTimeProject.parseProjectConfig(RunTimeProject.java:306)
+Loaded project configuration file in path'res\prj\vsm':
+<?xml version="1.0" encoding="UTF-8"?>
+<Project name="">
+  <Plugins>
+  </Plugins>
+  <Players>
+    <Player name="defaultsceneplayer" class="eu.kristina.vsm.KristinaScenePlayer">
+      <Feature key="vsm.agent.number" value="0"/>
+      <Feature key="vsm.agent.0.name" value="none"/>
+      <Feature key="vsm.agent.0.uaid" value="1"/>
+      <Feature key="vsm.agent.0.type" value="tcp"/>
+      <Feature key="vsm.agent.0.local.host" value="localhost"/>
+      <Feature key="vsm.agent.0.local.port" value="1100"/>
+      <Feature key="vsm.agent.0.remote.host" value="webglstudio.org"/>
+      <Feature key="vsm.agent.0.remote.port" value="9900"/>
+      <Feature key="vsm.agent.0.remote.flag" value="true"/>
+      <Feature key="ssi.service.url" value="http://137.250.171.230:11193/fusion/Service.svc/getCurrent"/>
+    </Player>
+  </Players>
+  <Agents>
+  </Agents>
+</Project>
+
+INFO to LOGFILE on Mon Jan 25 17:18:07 CET 2016 by de.dfki.vsm.util.log.LOGDefaultLogger in Thread[main,5,main] at de.dfki.vsm.runtime.project.RunTimeProject.parseSceneFlow(RunTimeProject.java:378)
+Loaded sceneflow configuration file in path 'res\prj\vsm':
+KBM
+
+INFO to LOGFILE on Mon Jan 25 17:18:07 CET 2016 by de.dfki.vsm.util.log.LOGDefaultLogger in Thread[main,5,main] at de.dfki.vsm.runtime.project.RunTimeProject.parseSceneScript(RunTimeProject.java:447)
+Loaded scenescript configuration file in path'res\prj\vsm':
+<SceneScript lower="0" upper="0">
+</SceneScript>
+
+INFO to LOGFILE on Mon Jan 25 17:18:07 CET 2016 by de.dfki.vsm.util.log.LOGDefaultLogger in Thread[main,5,main] at de.dfki.vsm.runtime.project.RunTimeProject.parseActiconConfig(RunTimeProject.java:518)
+Loaded acticon configuration file in path'res\prj\vsm':
+<Acticon>
+</Acticon>
+
+INFO to LOGFILE on Mon Jan 25 17:18:07 CET 2016 by de.dfki.vsm.util.log.LOGDefaultLogger in Thread[main,5,main] at de.dfki.vsm.runtime.project.RunTimeProject.parseVisiconConfig(RunTimeProject.java:658)
+Loaded visicon configuration file in path'res\prj\vsm':
+<Visicon>
+</Visicon>
+
+INFO to LOGFILE on Mon Jan 25 17:18:07 CET 2016 by de.dfki.vsm.util.log.LOGDefaultLogger in Thread[main,5,main] at de.dfki.vsm.runtime.project.RunTimeProject.parseGesticonConfig(RunTimeProject.java:589)
+Loaded gesticon configuration file in path'res\prj\vsm':
+<Gesticon>
+</Gesticon>
+
+INFO to LOGFILE on Mon Jan 25 17:18:55 CET 2016 by de.dfki.vsm.util.log.LOGDefaultLogger in Thread[pool-1-thread-2,5,main] at de.dfki.vsm.runtime.project.RunTimeProject.loadPlayers(RunTimeProject.java:758)
+Loading player 'eu.kristina.vsm.KristinaScenePlayer@488abac2' with plugin config:
+<Player name="defaultsceneplayer" class="eu.kristina.vsm.KristinaScenePlayer">
+  <Feature key="vsm.agent.number" value="0"/>
+  <Feature key="vsm.agent.0.name" value="none"/>
+  <Feature key="vsm.agent.0.uaid" value="1"/>
+  <Feature key="vsm.agent.0.type" value="tcp"/>
+  <Feature key="vsm.agent.0.local.host" value="localhost"/>
+  <Feature key="vsm.agent.0.local.port" value="1100"/>
+  <Feature key="vsm.agent.0.remote.host" value="webglstudio.org"/>
+  <Feature key="vsm.agent.0.remote.port" value="9900"/>
+  <Feature key="vsm.agent.0.remote.flag" value="true"/>
+  <Feature key="ssi.service.url" value="http://137.250.171.230:11193/fusion/Service.svc/getCurrent"/>
+</Player>
+
+INFO to LOGFILE on Mon Jan 25 17:18:55 CET 2016 by de.dfki.vsm.util.log.LOGDefaultLogger in Thread[pool-1-thread-2,5,main] at eu.kristina.vsm.KristinaScenePlayer.launch(KristinaScenePlayer.java:77)
+Launching scene player 'eu.kristina.vsm.KristinaScenePlayer@488abac2' with configuration:
+<Player name="defaultsceneplayer" class="eu.kristina.vsm.KristinaScenePlayer">
+  <Feature key="vsm.agent.number" value="0"/>
+  <Feature key="vsm.agent.0.name" value="none"/>
+  <Feature key="vsm.agent.0.uaid" value="1"/>
+  <Feature key="vsm.agent.0.type" value="tcp"/>
+  <Feature key="vsm.agent.0.local.host" value="localhost"/>
+  <Feature key="vsm.agent.0.local.port" value="1100"/>
+  <Feature key="vsm.agent.0.remote.host" value="webglstudio.org"/>
+  <Feature key="vsm.agent.0.remote.port" value="9900"/>
+  <Feature key="vsm.agent.0.remote.flag" value="true"/>
+  <Feature key="ssi.service.url" value="http://137.250.171.230:11193/fusion/Service.svc/getCurrent"/>
+</Player>
+
+INFO to LOGFILE on Mon Jan 25 17:18:55 CET 2016 by de.dfki.vsm.util.log.LOGDefaultLogger in Thread[Thread-4,5,main] at eu.kristina.eca.ECACommandClient.run(ECACommandClient.java:75)
+Reading Message'1453738622492'
+
+INFO to LOGFILE on Mon Jan 25 17:18:55 CET 2016 by de.dfki.vsm.util.log.LOGDefaultLogger in Thread[Thread-4,5,main] at eu.kristina.eca.ECACommandClient.run(ECACommandClient.java:75)
+Reading Message'ClientID: 0'
+
+INFO to LOGFILE on Mon Jan 25 17:18:55 CET 2016 by de.dfki.vsm.util.log.LOGDefaultLogger in Thread[Thread-4,5,main] at eu.kristina.eca.ECACommandClient.run(ECACommandClient.java:75)
+Reading Message'ClientID: hcm'
+
+INFO to LOGFILE on Mon Jan 25 17:19:37 CET 2016 by de.dfki.vsm.util.log.LOGDefaultLogger in Thread[pool-1-thread-2,5,main] at eu.kristina.vsm.KristinaScenePlayer.unload(KristinaScenePlayer.java:85)
+Unloading scene player 'eu.kristina.vsm.KristinaScenePlayer@488abac2' with configuration:
+<Player name="defaultsceneplayer" class="eu.kristina.vsm.KristinaScenePlayer">
+  <Feature key="vsm.agent.number" value="0"/>
+  <Feature key="vsm.agent.0.name" value="none"/>
+  <Feature key="vsm.agent.0.uaid" value="1"/>
+  <Feature key="vsm.agent.0.type" value="tcp"/>
+  <Feature key="vsm.agent.0.local.host" value="localhost"/>
+  <Feature key="vsm.agent.0.local.port" value="1100"/>
+  <Feature key="vsm.agent.0.remote.host" value="webglstudio.org"/>
+  <Feature key="vsm.agent.0.remote.port" value="9900"/>
+  <Feature key="vsm.agent.0.remote.flag" value="true"/>
+  <Feature key="ssi.service.url" value="http://137.250.171.230:11193/fusion/Service.svc/getCurrent"/>
+</Player>
+
+SEVERE to LOGFILE on Mon Jan 25 17:19:37 CET 2016 by de.dfki.vsm.util.log.LOGDefaultLogger in Thread[Thread-4,5,main] at eu.kristina.eca.ECACommandClient.recv(ECACommandClient.java:111)
+java.net.SocketException: Socket closed
+
+INFO to LOGFILE on Mon Jan 25 17:21:47 CET 2016 by de.dfki.vsm.util.log.LOGDefaultLogger in Thread[main,5,main] at de.dfki.vsm.runtime.project.RunTimeProject.parseProjectConfig(RunTimeProject.java:306)
+Loaded project configuration file in path'res\prj\vsm':
+<?xml version="1.0" encoding="UTF-8"?>
+<Project name="">
+  <Plugins>
+  </Plugins>
+  <Players>
+    <Player name="defaultsceneplayer" class="eu.kristina.vsm.KristinaScenePlayer">
+      <Feature key="vsm.agent.number" value="0"/>
+      <Feature key="vsm.agent.0.name" value="none"/>
+      <Feature key="vsm.agent.0.uaid" value="1"/>
+      <Feature key="vsm.agent.0.type" value="tcp"/>
+      <Feature key="vsm.agent.0.local.host" value="localhost"/>
+      <Feature key="vsm.agent.0.local.port" value="1100"/>
+      <Feature key="vsm.agent.0.remote.host" value="webglstudio.org"/>
+      <Feature key="vsm.agent.0.remote.port" value="9900"/>
+      <Feature key="vsm.agent.0.remote.flag" value="true"/>
+      <Feature key="ssi.service.url" value="http://137.250.171.230:11193/fusion/Service.svc/getCurrent"/>
+    </Player>
+  </Players>
+  <Agents>
+  </Agents>
+</Project>
+
+INFO to LOGFILE on Mon Jan 25 17:21:47 CET 2016 by de.dfki.vsm.util.log.LOGDefaultLogger in Thread[main,5,main] at de.dfki.vsm.runtime.project.RunTimeProject.parseSceneFlow(RunTimeProject.java:378)
+Loaded sceneflow configuration file in path 'res\prj\vsm':
+KBM
+
+INFO to LOGFILE on Mon Jan 25 17:21:47 CET 2016 by de.dfki.vsm.util.log.LOGDefaultLogger in Thread[main,5,main] at de.dfki.vsm.runtime.project.RunTimeProject.parseSceneScript(RunTimeProject.java:447)
+Loaded scenescript configuration file in path'res\prj\vsm':
+<SceneScript lower="0" upper="0">
+</SceneScript>
+
+INFO to LOGFILE on Mon Jan 25 17:21:47 CET 2016 by de.dfki.vsm.util.log.LOGDefaultLogger in Thread[main,5,main] at de.dfki.vsm.runtime.project.RunTimeProject.parseActiconConfig(RunTimeProject.java:518)
+Loaded acticon configuration file in path'res\prj\vsm':
+<Acticon>
+</Acticon>
+
+INFO to LOGFILE on Mon Jan 25 17:21:47 CET 2016 by de.dfki.vsm.util.log.LOGDefaultLogger in Thread[main,5,main] at de.dfki.vsm.runtime.project.RunTimeProject.parseVisiconConfig(RunTimeProject.java:658)
+Loaded visicon configuration file in path'res\prj\vsm':
+<Visicon>
+</Visicon>
+
+INFO to LOGFILE on Mon Jan 25 17:21:47 CET 2016 by de.dfki.vsm.util.log.LOGDefaultLogger in Thread[main,5,main] at de.dfki.vsm.runtime.project.RunTimeProject.parseGesticonConfig(RunTimeProject.java:589)
+Loaded gesticon configuration file in path'res\prj\vsm':
+<Gesticon>
+</Gesticon>
+
+INFO to LOGFILE on Mon Jan 25 17:22:03 CET 2016 by de.dfki.vsm.util.log.LOGDefaultLogger in Thread[pool-1-thread-1,5,main] at de.dfki.vsm.runtime.project.RunTimeProject.loadPlayers(RunTimeProject.java:758)
+Loading player 'eu.kristina.vsm.KristinaScenePlayer@7ec4acea' with plugin config:
+<Player name="defaultsceneplayer" class="eu.kristina.vsm.KristinaScenePlayer">
+  <Feature key="vsm.agent.number" value="0"/>
+  <Feature key="vsm.agent.0.name" value="none"/>
+  <Feature key="vsm.agent.0.uaid" value="1"/>
+  <Feature key="vsm.agent.0.type" value="tcp"/>
+  <Feature key="vsm.agent.0.local.host" value="localhost"/>
+  <Feature key="vsm.agent.0.local.port" value="1100"/>
+  <Feature key="vsm.agent.0.remote.host" value="webglstudio.org"/>
+  <Feature key="vsm.agent.0.remote.port" value="9900"/>
+  <Feature key="vsm.agent.0.remote.flag" value="true"/>
+  <Feature key="ssi.service.url" value="http://137.250.171.230:11193/fusion/Service.svc/getCurrent"/>
+</Player>
+
+INFO to LOGFILE on Mon Jan 25 17:22:03 CET 2016 by de.dfki.vsm.util.log.LOGDefaultLogger in Thread[pool-1-thread-1,5,main] at eu.kristina.vsm.KristinaScenePlayer.launch(KristinaScenePlayer.java:77)
+Launching scene player 'eu.kristina.vsm.KristinaScenePlayer@7ec4acea' with configuration:
+<Player name="defaultsceneplayer" class="eu.kristina.vsm.KristinaScenePlayer">
+  <Feature key="vsm.agent.number" value="0"/>
+  <Feature key="vsm.agent.0.name" value="none"/>
+  <Feature key="vsm.agent.0.uaid" value="1"/>
+  <Feature key="vsm.agent.0.type" value="tcp"/>
+  <Feature key="vsm.agent.0.local.host" value="localhost"/>
+  <Feature key="vsm.agent.0.local.port" value="1100"/>
+  <Feature key="vsm.agent.0.remote.host" value="webglstudio.org"/>
+  <Feature key="vsm.agent.0.remote.port" value="9900"/>
+  <Feature key="vsm.agent.0.remote.flag" value="true"/>
+  <Feature key="ssi.service.url" value="http://137.250.171.230:11193/fusion/Service.svc/getCurrent"/>
+</Player>
+
+INFO to LOGFILE on Mon Jan 25 17:22:03 CET 2016 by de.dfki.vsm.util.log.LOGDefaultLogger in Thread[Thread-4,5,main] at eu.kristina.eca.ECACommandClient.run(ECACommandClient.java:75)
+Reading Message'1453738810659'
+
+INFO to LOGFILE on Mon Jan 25 17:22:03 CET 2016 by de.dfki.vsm.util.log.LOGDefaultLogger in Thread[Thread-4,5,main] at eu.kristina.eca.ECACommandClient.run(ECACommandClient.java:75)
+Reading Message'ClientID: 0'
+
+INFO to LOGFILE on Mon Jan 25 17:22:03 CET 2016 by de.dfki.vsm.util.log.LOGDefaultLogger in Thread[Thread-4,5,main] at eu.kristina.eca.ECACommandClient.run(ECACommandClient.java:75)
+Reading Message'ClientID: hcm'
+
+INFO to LOGFILE on Mon Jan 25 17:22:11 CET 2016 by de.dfki.vsm.util.log.LOGDefaultLogger in Thread[pool-1-thread-1,5,main] at eu.kristina.vsm.KristinaScenePlayer.unload(KristinaScenePlayer.java:85)
+Unloading scene player 'eu.kristina.vsm.KristinaScenePlayer@7ec4acea' with configuration:
+<Player name="defaultsceneplayer" class="eu.kristina.vsm.KristinaScenePlayer">
+  <Feature key="vsm.agent.number" value="0"/>
+  <Feature key="vsm.agent.0.name" value="none"/>
+  <Feature key="vsm.agent.0.uaid" value="1"/>
+  <Feature key="vsm.agent.0.type" value="tcp"/>
+  <Feature key="vsm.agent.0.local.host" value="localhost"/>
+  <Feature key="vsm.agent.0.local.port" value="1100"/>
+  <Feature key="vsm.agent.0.remote.host" value="webglstudio.org"/>
+  <Feature key="vsm.agent.0.remote.port" value="9900"/>
+  <Feature key="vsm.agent.0.remote.flag" value="true"/>
+  <Feature key="ssi.service.url" value="http://137.250.171.230:11193/fusion/Service.svc/getCurrent"/>
+</Player>
+
+SEVERE to LOGFILE on Mon Jan 25 17:22:11 CET 2016 by de.dfki.vsm.util.log.LOGDefaultLogger in Thread[Thread-4,5,main] at eu.kristina.eca.ECACommandClient.recv(ECACommandClient.java:111)
+java.net.SocketException: Socket closed
+
