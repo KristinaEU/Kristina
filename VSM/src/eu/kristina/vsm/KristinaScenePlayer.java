@@ -103,8 +103,6 @@ public final class KristinaScenePlayer implements RunTimePlayer {
     }
 
     public final void blink(final String clientid) {
-        //
-        mLogger.message("sending blink command");
         mClient.send(clientid + " " + "blink");
     }
 
@@ -146,7 +144,7 @@ public final class KristinaScenePlayer implements RunTimePlayer {
             final float valence = jsonValence.bigDecimalValue().floatValue();
             final String error = jsonError.getString();
             // Print some information
-            mLogger.message("Valence:" + valence + " Arousal:" + arousal + " Error:" + error);
+            //mLogger.message("Valence:" + valence + " Arousal:" + arousal + " Error:" + error);
             // Set according variables
             mRunTime.setVariable(mProject, "Valence", valence);
             mRunTime.setVariable(mProject, "Arousal", arousal);

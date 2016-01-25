@@ -91,7 +91,7 @@ auxiliary.show.customizer.message=<message>
             <compilation-unit>
                 <package-root>../res</package-root>
                 <package-root>../src</package-root>
-                <classpath mode="compile">../lib/VisualSceneMaker.jar;../lib/javax.json-1.0.4.jar</classpath>
+                <classpath mode="compile">../lib/VisualSceneMaker.jar;../lib/javax.json-1.0.4.jar;../lib/jersey-bundle-1.19.jar</classpath>
                 <source-level>1.8</source-level>
             </compilation-unit>
         </java-data>

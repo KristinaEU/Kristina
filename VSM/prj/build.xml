@@ -171,6 +171,12 @@
         </java>
     </target>  
     <!-- Execute Project -->
+    <target name="service">
+        <java classname="eu.kristina.vsm.test.VSMControlService" fork="true">
+            <classpath refid="clspath"/>
+        </java>
+    </target>  
+    <!-- Execute Project -->
     <target name="test-ssi">
         <java classname="eu.kristina.vsm.test.SSIServiceTerminal" fork="true">
             <classpath refid="clspath"/>

@@ -71,7 +71,11 @@ public final class ECACommandClient extends Thread {
         try {
             while (!mDone) {
                 final String line = recv();
-                mLogger.message("Reading Message'" + line + "'");
+                if (line != null) {
+                    mLogger.message("Reading Message'" + line + "'");
+                } else {
+                    abort();
+                }
             }
         } catch (final Exception exc) {
             // Debug Some Information
