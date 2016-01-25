@@ -1,0 +1,2074 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/lpragst/ontologies/2015/6/untitled-ontology-25"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/lpragst/ontologies/2015/6/untitled-ontology-25">
+    <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Import>http://localhost:8080/OwlSpeakOnto.owl</Import>
+    <Declaration>
+        <NamedIndividual IRI="#agenda_goodbye"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#agenda_greet"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#agenda_master"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#agenda_proposeCPRTraining"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#agenda_proposeCaretakerHelp"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#agenda_proposeDone"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#agenda_proposeRecoveryPosTraining"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#agenda_requestAnotherTask"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#agenda_requestBreathing"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#agenda_requestEmergency"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#agenda_requestProblemFluid"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#agenda_requestTask"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#agenda_tellCPR"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#agenda_tellCaretakerHelp"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#agenda_tellComplimentAndGoodbye"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#agenda_tellConversation"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#agenda_tellEmergencyBreathingNormal"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#agenda_tellEmergencyBreathingNotNormal"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#agenda_tellEmergencyCPR"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#agenda_tellEmergencyRecoveryPos1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#agenda_tellEmergencyRecoveryPos2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#agenda_tellEmergencyRecoveryPos3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#agenda_tellEmergencyRecoveryPos4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#agenda_tellEmergencyRecoveryPos5"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#agenda_tellEmergencyRecoveryPos6"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#agenda_tellEmergencyRecoveryPos7"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#agenda_tellEmergencyRecoveryPos8"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#agenda_tellFirstAid"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#agenda_tellFluidAll"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#agenda_tellFluidBenefit"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#agenda_tellFluidMemory"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#agenda_tellFluidPerDay"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#agenda_tellFluidTaste"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#agenda_tellMedicineIntake"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#agenda_tellNoComprehensionAndRequestTask"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#agenda_tellNoKnowledgeAndTellTopics"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#agenda_tellRecentEncounters"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#agenda_tellRecoveryPos1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#agenda_tellRecoveryPos2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#agenda_tellRecoveryPos3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#agenda_tellRecoveryPos4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#agenda_tellRecoveryPos5"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#agenda_tellRecoveryPos6"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#agenda_tellRecoveryPos7"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#agenda_tellRecoveryPos8"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#agenda_tellReliefAndRequestTask"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#agenda_tellTopics"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#agenda_tellWellbeing"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#grammar_greet"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#sem_emoNegative"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#sem_emoPositive"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#semgroup_emo"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#sumAgenda_announcement"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#sumAgenda_goodbye"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#sumAgenda_greet"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#sumAgenda_master"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#sumAgenda_request"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#sysmov_goodbye"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#sysmov_greet"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#sysmov_proposeCPRTraining"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#sysmov_proposeCaretakerHelp"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#sysmov_proposeDone"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#sysmov_proposeRecoveryPosTraining"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#sysmov_requestAnotherTask"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#sysmov_requestBreathing"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#sysmov_requestEmergency"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#sysmov_requestProblemFluid"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#sysmov_requestTask"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#sysmov_tellBenefitFluid"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#sysmov_tellCPR"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#sysmov_tellCaretakerHelp"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#sysmov_tellComplimentAndGoodbye"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#sysmov_tellConversation"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#sysmov_tellEmergencyBreathingNormal"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#sysmov_tellEmergencyBreathingNotNormal"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#sysmov_tellEmergencyCPR"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#sysmov_tellEmergencyRecoveryPos1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#sysmov_tellEmergencyRecoveryPos2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#sysmov_tellEmergencyRecoveryPos3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#sysmov_tellEmergencyRecoveryPos4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#sysmov_tellEmergencyRecoveryPos5"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#sysmov_tellEmergencyRecoveryPos6"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#sysmov_tellEmergencyRecoveryPos7"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#sysmov_tellEmergencyRecoveryPos8"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#sysmov_tellFirstAid"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#sysmov_tellFluidPerDay"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#sysmov_tellIncreaseFluidAll"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#sysmov_tellIncreaseFluidMemory"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#sysmov_tellIncreaseFluidTaste"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#sysmov_tellMedicineIntake"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#sysmov_tellNoComprehensionAndRequestTask"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#sysmov_tellNoKnowledgeAndTellTopics"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#sysmov_tellRecentEncounters"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#sysmov_tellRecoveryPos1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#sysmov_tellRecoveryPos2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#sysmov_tellRecoveryPos3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#sysmov_tellRecoveryPos4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#sysmov_tellRecoveryPos5"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#sysmov_tellRecoveryPos6"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#sysmov_tellRecoveryPos7"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#sysmov_tellRecoveryPos8"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#sysmov_tellReliefAndRequestTask"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#sysmov_tellTopics"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#sysmov_tellWellbeing"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#usrmov_confirmCPRTraining"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#usrmov_confirmCaretakerHelp"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#usrmov_confirmEmergency"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#usrmov_confirmRecoveryPosTraining"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#usrmov_continue"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#usrmov_done"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#usrmov_greet"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#usrmov_rejectEmergency"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#usrmov_rejectTask"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#usrmov_reqestCaretakerHelp"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#usrmov_requestBenefitFluid"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#usrmov_requestCPR"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#usrmov_requestConversation"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#usrmov_requestFirstAid"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#usrmov_requestFluidPerDay"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#usrmov_requestHelp"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#usrmov_requestMedicineIntake"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#usrmov_requestRecentEncounters"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#usrmov_requestRecoveryPos"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#usrmov_requestUnknown"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#usrmov_requestWellbeing"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#usrmov_tellBreathingNormal"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#usrmov_tellBreathingNotNormal"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#usrmov_tellProblemFluid"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#usrmov_tellReasonFluidMemory"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#usrmov_tellReasonFluidTaste"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#usrmov_tellReasonFluidUnknown"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#utterance_dummy"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Belief"/>
+        <NamedIndividual IRI="#Belief_-513172124"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#History"/>
+        <NamedIndividual IRI="#History-1511375065"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Variable"/>
+        <NamedIndividual IRI="#InteractionQuality"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <NamedIndividual IRI="#agenda_goodbye"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <NamedIndividual IRI="#agenda_greet"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <NamedIndividual IRI="#agenda_master"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <NamedIndividual IRI="#agenda_proposeCPRTraining"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <NamedIndividual IRI="#agenda_proposeCaretakerHelp"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <NamedIndividual IRI="#agenda_proposeDone"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <NamedIndividual IRI="#agenda_proposeRecoveryPosTraining"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <NamedIndividual IRI="#agenda_requestAnotherTask"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <NamedIndividual IRI="#agenda_requestBreathing"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <NamedIndividual IRI="#agenda_requestEmergency"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <NamedIndividual IRI="#agenda_requestProblemFluid"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <NamedIndividual IRI="#agenda_requestTask"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <NamedIndividual IRI="#agenda_tellCPR"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <NamedIndividual IRI="#agenda_tellCaretakerHelp"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <NamedIndividual IRI="#agenda_tellComplimentAndGoodbye"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <NamedIndividual IRI="#agenda_tellConversation"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <NamedIndividual IRI="#agenda_tellEmergencyBreathingNormal"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <NamedIndividual IRI="#agenda_tellEmergencyBreathingNotNormal"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <NamedIndividual IRI="#agenda_tellEmergencyCPR"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <NamedIndividual IRI="#agenda_tellEmergencyRecoveryPos1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <NamedIndividual IRI="#agenda_tellEmergencyRecoveryPos2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <NamedIndividual IRI="#agenda_tellEmergencyRecoveryPos3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <NamedIndividual IRI="#agenda_tellEmergencyRecoveryPos4"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <NamedIndividual IRI="#agenda_tellEmergencyRecoveryPos5"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <NamedIndividual IRI="#agenda_tellEmergencyRecoveryPos6"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <NamedIndividual IRI="#agenda_tellEmergencyRecoveryPos7"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <NamedIndividual IRI="#agenda_tellEmergencyRecoveryPos8"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <NamedIndividual IRI="#agenda_tellFirstAid"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <NamedIndividual IRI="#agenda_tellFluidAll"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <NamedIndividual IRI="#agenda_tellFluidBenefit"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <NamedIndividual IRI="#agenda_tellFluidMemory"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <NamedIndividual IRI="#agenda_tellFluidPerDay"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <NamedIndividual IRI="#agenda_tellFluidTaste"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <NamedIndividual IRI="#agenda_tellMedicineIntake"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <NamedIndividual IRI="#agenda_tellNoComprehensionAndRequestTask"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <NamedIndividual IRI="#agenda_tellNoKnowledgeAndTellTopics"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <NamedIndividual IRI="#agenda_tellRecentEncounters"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <NamedIndividual IRI="#agenda_tellRecoveryPos1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <NamedIndividual IRI="#agenda_tellRecoveryPos2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <NamedIndividual IRI="#agenda_tellRecoveryPos3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <NamedIndividual IRI="#agenda_tellRecoveryPos4"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <NamedIndividual IRI="#agenda_tellRecoveryPos5"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <NamedIndividual IRI="#agenda_tellRecoveryPos6"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <NamedIndividual IRI="#agenda_tellRecoveryPos7"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <NamedIndividual IRI="#agenda_tellRecoveryPos8"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <NamedIndividual IRI="#agenda_tellReliefAndRequestTask"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <NamedIndividual IRI="#agenda_tellTopics"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <NamedIndividual IRI="#agenda_tellWellbeing"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Grammar"/>
+        <NamedIndividual IRI="#grammar_greet"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Semantic"/>
+        <NamedIndividual IRI="#sem_emoNegative"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Semantic"/>
+        <NamedIndividual IRI="#sem_emoPositive"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#SemanticGroup"/>
+        <NamedIndividual IRI="#semgroup_emo"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#SummaryAgenda"/>
+        <NamedIndividual IRI="#sumAgenda_announcement"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#SummaryAgenda"/>
+        <NamedIndividual IRI="#sumAgenda_goodbye"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#SummaryAgenda"/>
+        <NamedIndividual IRI="#sumAgenda_greet"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#SummaryAgenda"/>
+        <NamedIndividual IRI="#sumAgenda_master"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#SummaryAgenda"/>
+        <NamedIndividual IRI="#sumAgenda_request"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <NamedIndividual IRI="#sysmov_goodbye"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <NamedIndividual IRI="#sysmov_greet"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <NamedIndividual IRI="#sysmov_proposeCPRTraining"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <NamedIndividual IRI="#sysmov_proposeCaretakerHelp"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <NamedIndividual IRI="#sysmov_proposeDone"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <NamedIndividual IRI="#sysmov_proposeRecoveryPosTraining"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <NamedIndividual IRI="#sysmov_requestAnotherTask"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <NamedIndividual IRI="#sysmov_requestBreathing"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <NamedIndividual IRI="#sysmov_requestEmergency"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <NamedIndividual IRI="#sysmov_requestProblemFluid"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <NamedIndividual IRI="#sysmov_requestTask"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <NamedIndividual IRI="#sysmov_tellBenefitFluid"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <NamedIndividual IRI="#sysmov_tellCPR"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <NamedIndividual IRI="#sysmov_tellCaretakerHelp"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <NamedIndividual IRI="#sysmov_tellComplimentAndGoodbye"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <NamedIndividual IRI="#sysmov_tellConversation"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <NamedIndividual IRI="#sysmov_tellEmergencyBreathingNormal"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <NamedIndividual IRI="#sysmov_tellEmergencyBreathingNotNormal"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <NamedIndividual IRI="#sysmov_tellEmergencyCPR"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <NamedIndividual IRI="#sysmov_tellEmergencyRecoveryPos1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <NamedIndividual IRI="#sysmov_tellEmergencyRecoveryPos2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <NamedIndividual IRI="#sysmov_tellEmergencyRecoveryPos3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <NamedIndividual IRI="#sysmov_tellEmergencyRecoveryPos4"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <NamedIndividual IRI="#sysmov_tellEmergencyRecoveryPos5"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <NamedIndividual IRI="#sysmov_tellEmergencyRecoveryPos6"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <NamedIndividual IRI="#sysmov_tellEmergencyRecoveryPos7"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <NamedIndividual IRI="#sysmov_tellEmergencyRecoveryPos8"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <NamedIndividual IRI="#sysmov_tellFirstAid"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <NamedIndividual IRI="#sysmov_tellFluidPerDay"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <NamedIndividual IRI="#sysmov_tellIncreaseFluidAll"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <NamedIndividual IRI="#sysmov_tellIncreaseFluidMemory"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <NamedIndividual IRI="#sysmov_tellIncreaseFluidTaste"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <NamedIndividual IRI="#sysmov_tellMedicineIntake"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <NamedIndividual IRI="#sysmov_tellNoComprehensionAndRequestTask"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <NamedIndividual IRI="#sysmov_tellNoKnowledgeAndTellTopics"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <NamedIndividual IRI="#sysmov_tellRecentEncounters"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <NamedIndividual IRI="#sysmov_tellRecoveryPos1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <NamedIndividual IRI="#sysmov_tellRecoveryPos2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <NamedIndividual IRI="#sysmov_tellRecoveryPos3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <NamedIndividual IRI="#sysmov_tellRecoveryPos4"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <NamedIndividual IRI="#sysmov_tellRecoveryPos5"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <NamedIndividual IRI="#sysmov_tellRecoveryPos6"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <NamedIndividual IRI="#sysmov_tellRecoveryPos7"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <NamedIndividual IRI="#sysmov_tellRecoveryPos8"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <NamedIndividual IRI="#sysmov_tellReliefAndRequestTask"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <NamedIndividual IRI="#sysmov_tellTopics"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <NamedIndividual IRI="#sysmov_tellWellbeing"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#BeliefSpace"/>
+        <NamedIndividual IRI="#userBeliefspace"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#WorkSpace"/>
+        <NamedIndividual IRI="#userWorkspace"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <NamedIndividual IRI="#usrmov_confirmCPRTraining"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <NamedIndividual IRI="#usrmov_confirmCaretakerHelp"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <NamedIndividual IRI="#usrmov_confirmEmergency"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <NamedIndividual IRI="#usrmov_confirmRecoveryPosTraining"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <NamedIndividual IRI="#usrmov_continue"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <NamedIndividual IRI="#usrmov_done"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <NamedIndividual IRI="#usrmov_greet"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <NamedIndividual IRI="#usrmov_rejectEmergency"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <NamedIndividual IRI="#usrmov_rejectTask"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <NamedIndividual IRI="#usrmov_reqestCaretakerHelp"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <NamedIndividual IRI="#usrmov_requestBenefitFluid"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <NamedIndividual IRI="#usrmov_requestCPR"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <NamedIndividual IRI="#usrmov_requestConversation"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <NamedIndividual IRI="#usrmov_requestFirstAid"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <NamedIndividual IRI="#usrmov_requestFluidPerDay"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <NamedIndividual IRI="#usrmov_requestHelp"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <NamedIndividual IRI="#usrmov_requestMedicineIntake"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <NamedIndividual IRI="#usrmov_requestRecentEncounters"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <NamedIndividual IRI="#usrmov_requestRecoveryPos"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <NamedIndividual IRI="#usrmov_requestUnknown"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <NamedIndividual IRI="#usrmov_requestWellbeing"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <NamedIndividual IRI="#usrmov_tellBreathingNormal"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <NamedIndividual IRI="#usrmov_tellBreathingNotNormal"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <NamedIndividual IRI="#usrmov_tellProblemFluid"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <NamedIndividual IRI="#usrmov_tellReasonFluidMemory"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <NamedIndividual IRI="#usrmov_tellReasonFluidTaste"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <NamedIndividual IRI="#usrmov_tellReasonFluidUnknown"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://localhost:8080/OwlSpeakOnto.owl#Utterance"/>
+        <NamedIndividual IRI="#utterance_dummy"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#variabledefault"/>
+        <NamedIndividual IRI="#Belief_-513172124"/>
+        <NamedIndividual IRI="#InteractionQuality"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#forAgenda"/>
+        <NamedIndividual IRI="#History-1511375065"/>
+        <NamedIndividual IRI="#agenda_greet"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#inWorkspace"/>
+        <NamedIndividual IRI="#History-1511375065"/>
+        <NamedIndividual IRI="#userWorkspace"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#has"/>
+        <NamedIndividual IRI="#agenda_goodbye"/>
+        <NamedIndividual IRI="#sysmov_goodbye"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#summaryAgenda"/>
+        <NamedIndividual IRI="#agenda_goodbye"/>
+        <NamedIndividual IRI="#sumAgenda_goodbye"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#has"/>
+        <NamedIndividual IRI="#agenda_greet"/>
+        <NamedIndividual IRI="#sysmov_greet"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#has"/>
+        <NamedIndividual IRI="#agenda_greet"/>
+        <NamedIndividual IRI="#usrmov_greet"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#summaryAgenda"/>
+        <NamedIndividual IRI="#agenda_greet"/>
+        <NamedIndividual IRI="#sumAgenda_greet"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#next"/>
+        <NamedIndividual IRI="#agenda_master"/>
+        <NamedIndividual IRI="#agenda_greet"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#summaryAgenda"/>
+        <NamedIndividual IRI="#agenda_master"/>
+        <NamedIndividual IRI="#sumAgenda_master"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#has"/>
+        <NamedIndividual IRI="#agenda_proposeCPRTraining"/>
+        <NamedIndividual IRI="#sysmov_proposeCPRTraining"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#summaryAgenda"/>
+        <NamedIndividual IRI="#agenda_proposeCPRTraining"/>
+        <NamedIndividual IRI="#sumAgenda_request"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#summaryAgenda"/>
+        <NamedIndividual IRI="#agenda_proposeCaretakerHelp"/>
+        <NamedIndividual IRI="#sumAgenda_request"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#has"/>
+        <NamedIndividual IRI="#agenda_proposeDone"/>
+        <NamedIndividual IRI="#sysmov_proposeDone"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#summaryAgenda"/>
+        <NamedIndividual IRI="#agenda_proposeDone"/>
+        <NamedIndividual IRI="#sumAgenda_request"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#has"/>
+        <NamedIndividual IRI="#agenda_proposeRecoveryPosTraining"/>
+        <NamedIndividual IRI="#sysmov_proposeRecoveryPosTraining"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#summaryAgenda"/>
+        <NamedIndividual IRI="#agenda_proposeRecoveryPosTraining"/>
+        <NamedIndividual IRI="#sumAgenda_request"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#has"/>
+        <NamedIndividual IRI="#agenda_requestAnotherTask"/>
+        <NamedIndividual IRI="#sysmov_requestAnotherTask"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#summaryAgenda"/>
+        <NamedIndividual IRI="#agenda_requestAnotherTask"/>
+        <NamedIndividual IRI="#sumAgenda_request"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#has"/>
+        <NamedIndividual IRI="#agenda_requestBreathing"/>
+        <NamedIndividual IRI="#sysmov_requestBreathing"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#has"/>
+        <NamedIndividual IRI="#agenda_requestBreathing"/>
+        <NamedIndividual IRI="#usrmov_tellBreathingNormal"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#has"/>
+        <NamedIndividual IRI="#agenda_requestBreathing"/>
+        <NamedIndividual IRI="#usrmov_tellBreathingNotNormal"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#next"/>
+        <NamedIndividual IRI="#agenda_requestBreathing"/>
+        <NamedIndividual IRI="#agenda_tellEmergencyBreathingNormal"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#next"/>
+        <NamedIndividual IRI="#agenda_requestBreathing"/>
+        <NamedIndividual IRI="#agenda_tellEmergencyBreathingNotNormal"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#summaryAgenda"/>
+        <NamedIndividual IRI="#agenda_requestBreathing"/>
+        <NamedIndividual IRI="#sumAgenda_request"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#has"/>
+        <NamedIndividual IRI="#agenda_requestEmergency"/>
+        <NamedIndividual IRI="#usrmov_confirmEmergency"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#has"/>
+        <NamedIndividual IRI="#agenda_requestEmergency"/>
+        <NamedIndividual IRI="#usrmov_rejectEmergency"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#has"/>
+        <NamedIndividual IRI="#agenda_requestEmergency"/>
+        <NamedIndividual IRI="#sysmov_requestEmergency"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#next"/>
+        <NamedIndividual IRI="#agenda_requestEmergency"/>
+        <NamedIndividual IRI="#agenda_requestBreathing"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#next"/>
+        <NamedIndividual IRI="#agenda_requestEmergency"/>
+        <NamedIndividual IRI="#agenda_tellReliefAndRequestTask"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#summaryAgenda"/>
+        <NamedIndividual IRI="#agenda_requestEmergency"/>
+        <NamedIndividual IRI="#sumAgenda_request"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#has"/>
+        <NamedIndividual IRI="#agenda_requestProblemFluid"/>
+        <NamedIndividual IRI="#sysmov_requestProblemFluid"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#summaryAgenda"/>
+        <NamedIndividual IRI="#agenda_requestProblemFluid"/>
+        <NamedIndividual IRI="#sumAgenda_request"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#has"/>
+        <NamedIndividual IRI="#agenda_requestTask"/>
+        <NamedIndividual IRI="#sysmov_requestTask"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#summaryAgenda"/>
+        <NamedIndividual IRI="#agenda_requestTask"/>
+        <NamedIndividual IRI="#sumAgenda_request"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#has"/>
+        <NamedIndividual IRI="#agenda_tellCPR"/>
+        <NamedIndividual IRI="#sysmov_tellCPR"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#summaryAgenda"/>
+        <NamedIndividual IRI="#agenda_tellCPR"/>
+        <NamedIndividual IRI="#sumAgenda_announcement"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#has"/>
+        <NamedIndividual IRI="#agenda_tellCaretakerHelp"/>
+        <NamedIndividual IRI="#sysmov_tellCaretakerHelp"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#summaryAgenda"/>
+        <NamedIndividual IRI="#agenda_tellCaretakerHelp"/>
+        <NamedIndividual IRI="#sumAgenda_announcement"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#has"/>
+        <NamedIndividual IRI="#agenda_tellComplimentAndGoodbye"/>
+        <NamedIndividual IRI="#sysmov_tellComplimentAndGoodbye"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#summaryAgenda"/>
+        <NamedIndividual IRI="#agenda_tellComplimentAndGoodbye"/>
+        <NamedIndividual IRI="#sumAgenda_goodbye"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#has"/>
+        <NamedIndividual IRI="#agenda_tellConversation"/>
+        <NamedIndividual IRI="#sysmov_tellConversation"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#summaryAgenda"/>
+        <NamedIndividual IRI="#agenda_tellConversation"/>
+        <NamedIndividual IRI="#sumAgenda_announcement"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#has"/>
+        <NamedIndividual IRI="#agenda_tellEmergencyBreathingNormal"/>
+        <NamedIndividual IRI="#sysmov_tellEmergencyBreathingNormal"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#has"/>
+        <NamedIndividual IRI="#agenda_tellEmergencyBreathingNormal"/>
+        <NamedIndividual IRI="#usrmov_requestRecoveryPos"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#summaryAgenda"/>
+        <NamedIndividual IRI="#agenda_tellEmergencyBreathingNormal"/>
+        <NamedIndividual IRI="#sumAgenda_announcement"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#has"/>
+        <NamedIndividual IRI="#agenda_tellEmergencyBreathingNotNormal"/>
+        <NamedIndividual IRI="#sysmov_tellEmergencyBreathingNotNormal"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#has"/>
+        <NamedIndividual IRI="#agenda_tellEmergencyBreathingNotNormal"/>
+        <NamedIndividual IRI="#usrmov_requestCPR"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#summaryAgenda"/>
+        <NamedIndividual IRI="#agenda_tellEmergencyBreathingNotNormal"/>
+        <NamedIndividual IRI="#sumAgenda_announcement"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#has"/>
+        <NamedIndividual IRI="#agenda_tellEmergencyCPR"/>
+        <NamedIndividual IRI="#sysmov_tellEmergencyCPR"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#summaryAgenda"/>
+        <NamedIndividual IRI="#agenda_tellEmergencyCPR"/>
+        <NamedIndividual IRI="#sumAgenda_announcement"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#has"/>
+        <NamedIndividual IRI="#agenda_tellEmergencyRecoveryPos1"/>
+        <NamedIndividual IRI="#sysmov_tellEmergencyRecoveryPos1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#summaryAgenda"/>
+        <NamedIndividual IRI="#agenda_tellEmergencyRecoveryPos1"/>
+        <NamedIndividual IRI="#sumAgenda_announcement"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#has"/>
+        <NamedIndividual IRI="#agenda_tellEmergencyRecoveryPos2"/>
+        <NamedIndividual IRI="#sysmov_tellEmergencyRecoveryPos2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#summaryAgenda"/>
+        <NamedIndividual IRI="#agenda_tellEmergencyRecoveryPos2"/>
+        <NamedIndividual IRI="#sumAgenda_announcement"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#has"/>
+        <NamedIndividual IRI="#agenda_tellEmergencyRecoveryPos3"/>
+        <NamedIndividual IRI="#sysmov_tellEmergencyRecoveryPos3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#summaryAgenda"/>
+        <NamedIndividual IRI="#agenda_tellEmergencyRecoveryPos3"/>
+        <NamedIndividual IRI="#sumAgenda_announcement"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#has"/>
+        <NamedIndividual IRI="#agenda_tellEmergencyRecoveryPos4"/>
+        <NamedIndividual IRI="#sysmov_tellEmergencyRecoveryPos4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#summaryAgenda"/>
+        <NamedIndividual IRI="#agenda_tellEmergencyRecoveryPos4"/>
+        <NamedIndividual IRI="#sumAgenda_announcement"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#has"/>
+        <NamedIndividual IRI="#agenda_tellEmergencyRecoveryPos5"/>
+        <NamedIndividual IRI="#sysmov_tellEmergencyRecoveryPos5"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#summaryAgenda"/>
+        <NamedIndividual IRI="#agenda_tellEmergencyRecoveryPos5"/>
+        <NamedIndividual IRI="#sumAgenda_announcement"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#has"/>
+        <NamedIndividual IRI="#agenda_tellEmergencyRecoveryPos6"/>
+        <NamedIndividual IRI="#sysmov_tellEmergencyRecoveryPos6"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#summaryAgenda"/>
+        <NamedIndividual IRI="#agenda_tellEmergencyRecoveryPos6"/>
+        <NamedIndividual IRI="#sumAgenda_announcement"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#has"/>
+        <NamedIndividual IRI="#agenda_tellEmergencyRecoveryPos7"/>
+        <NamedIndividual IRI="#sysmov_tellEmergencyRecoveryPos7"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#summaryAgenda"/>
+        <NamedIndividual IRI="#agenda_tellEmergencyRecoveryPos7"/>
+        <NamedIndividual IRI="#sumAgenda_announcement"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#has"/>
+        <NamedIndividual IRI="#agenda_tellEmergencyRecoveryPos8"/>
+        <NamedIndividual IRI="#sysmov_tellEmergencyRecoveryPos8"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#summaryAgenda"/>
+        <NamedIndividual IRI="#agenda_tellEmergencyRecoveryPos8"/>
+        <NamedIndividual IRI="#sumAgenda_announcement"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#has"/>
+        <NamedIndividual IRI="#agenda_tellFirstAid"/>
+        <NamedIndividual IRI="#sysmov_tellFirstAid"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#summaryAgenda"/>
+        <NamedIndividual IRI="#agenda_tellFirstAid"/>
+        <NamedIndividual IRI="#sumAgenda_announcement"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#has"/>
+        <NamedIndividual IRI="#agenda_tellFluidAll"/>
+        <NamedIndividual IRI="#sysmov_tellIncreaseFluidAll"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#summaryAgenda"/>
+        <NamedIndividual IRI="#agenda_tellFluidAll"/>
+        <NamedIndividual IRI="#sumAgenda_announcement"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#has"/>
+        <NamedIndividual IRI="#agenda_tellFluidBenefit"/>
+        <NamedIndividual IRI="#sysmov_tellBenefitFluid"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#summaryAgenda"/>
+        <NamedIndividual IRI="#agenda_tellFluidBenefit"/>
+        <NamedIndividual IRI="#sumAgenda_announcement"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#has"/>
+        <NamedIndividual IRI="#agenda_tellFluidMemory"/>
+        <NamedIndividual IRI="#sysmov_tellIncreaseFluidMemory"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#summaryAgenda"/>
+        <NamedIndividual IRI="#agenda_tellFluidMemory"/>
+        <NamedIndividual IRI="#sumAgenda_announcement"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#has"/>
+        <NamedIndividual IRI="#agenda_tellFluidPerDay"/>
+        <NamedIndividual IRI="#sysmov_tellFluidPerDay"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#summaryAgenda"/>
+        <NamedIndividual IRI="#agenda_tellFluidPerDay"/>
+        <NamedIndividual IRI="#sumAgenda_announcement"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#has"/>
+        <NamedIndividual IRI="#agenda_tellFluidTaste"/>
+        <NamedIndividual IRI="#sysmov_tellIncreaseFluidTaste"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#summaryAgenda"/>
+        <NamedIndividual IRI="#agenda_tellFluidTaste"/>
+        <NamedIndividual IRI="#sumAgenda_announcement"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#has"/>
+        <NamedIndividual IRI="#agenda_tellMedicineIntake"/>
+        <NamedIndividual IRI="#sysmov_tellMedicineIntake"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#summaryAgenda"/>
+        <NamedIndividual IRI="#agenda_tellMedicineIntake"/>
+        <NamedIndividual IRI="#sumAgenda_announcement"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#has"/>
+        <NamedIndividual IRI="#agenda_tellNoComprehensionAndRequestTask"/>
+        <NamedIndividual IRI="#sysmov_tellNoComprehensionAndRequestTask"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#summaryAgenda"/>
+        <NamedIndividual IRI="#agenda_tellNoComprehensionAndRequestTask"/>
+        <NamedIndividual IRI="#sumAgenda_request"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#has"/>
+        <NamedIndividual IRI="#agenda_tellNoKnowledgeAndTellTopics"/>
+        <NamedIndividual IRI="#sysmov_tellNoKnowledgeAndTellTopics"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#summaryAgenda"/>
+        <NamedIndividual IRI="#agenda_tellNoKnowledgeAndTellTopics"/>
+        <NamedIndividual IRI="#sumAgenda_request"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#has"/>
+        <NamedIndividual IRI="#agenda_tellRecentEncounters"/>
+        <NamedIndividual IRI="#sysmov_tellRecentEncounters"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#summaryAgenda"/>
+        <NamedIndividual IRI="#agenda_tellRecentEncounters"/>
+        <NamedIndividual IRI="#sumAgenda_announcement"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#has"/>
+        <NamedIndividual IRI="#agenda_tellRecoveryPos1"/>
+        <NamedIndividual IRI="#sysmov_tellRecoveryPos1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#summaryAgenda"/>
+        <NamedIndividual IRI="#agenda_tellRecoveryPos1"/>
+        <NamedIndividual IRI="#sumAgenda_announcement"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#has"/>
+        <NamedIndividual IRI="#agenda_tellRecoveryPos2"/>
+        <NamedIndividual IRI="#sysmov_tellRecoveryPos2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#summaryAgenda"/>
+        <NamedIndividual IRI="#agenda_tellRecoveryPos2"/>
+        <NamedIndividual IRI="#sumAgenda_announcement"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#has"/>
+        <NamedIndividual IRI="#agenda_tellRecoveryPos3"/>
+        <NamedIndividual IRI="#sysmov_tellRecoveryPos3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#summaryAgenda"/>
+        <NamedIndividual IRI="#agenda_tellRecoveryPos3"/>
+        <NamedIndividual IRI="#sumAgenda_announcement"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#has"/>
+        <NamedIndividual IRI="#agenda_tellRecoveryPos4"/>
+        <NamedIndividual IRI="#sysmov_tellRecoveryPos4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#summaryAgenda"/>
+        <NamedIndividual IRI="#agenda_tellRecoveryPos4"/>
+        <NamedIndividual IRI="#sumAgenda_announcement"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#has"/>
+        <NamedIndividual IRI="#agenda_tellRecoveryPos5"/>
+        <NamedIndividual IRI="#sysmov_tellRecoveryPos5"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#summaryAgenda"/>
+        <NamedIndividual IRI="#agenda_tellRecoveryPos5"/>
+        <NamedIndividual IRI="#sumAgenda_announcement"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#has"/>
+        <NamedIndividual IRI="#agenda_tellRecoveryPos6"/>
+        <NamedIndividual IRI="#sysmov_tellRecoveryPos6"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#summaryAgenda"/>
+        <NamedIndividual IRI="#agenda_tellRecoveryPos6"/>
+        <NamedIndividual IRI="#sumAgenda_announcement"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#has"/>
+        <NamedIndividual IRI="#agenda_tellRecoveryPos7"/>
+        <NamedIndividual IRI="#sysmov_tellRecoveryPos7"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#summaryAgenda"/>
+        <NamedIndividual IRI="#agenda_tellRecoveryPos7"/>
+        <NamedIndividual IRI="#sumAgenda_announcement"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#has"/>
+        <NamedIndividual IRI="#agenda_tellRecoveryPos8"/>
+        <NamedIndividual IRI="#sysmov_tellRecoveryPos8"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#summaryAgenda"/>
+        <NamedIndividual IRI="#agenda_tellRecoveryPos8"/>
+        <NamedIndividual IRI="#sumAgenda_announcement"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#has"/>
+        <NamedIndividual IRI="#agenda_tellReliefAndRequestTask"/>
+        <NamedIndividual IRI="#sysmov_tellReliefAndRequestTask"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#summaryAgenda"/>
+        <NamedIndividual IRI="#agenda_tellReliefAndRequestTask"/>
+        <NamedIndividual IRI="#sumAgenda_request"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#has"/>
+        <NamedIndividual IRI="#agenda_tellTopics"/>
+        <NamedIndividual IRI="#sysmov_tellTopics"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#summaryAgenda"/>
+        <NamedIndividual IRI="#agenda_tellTopics"/>
+        <NamedIndividual IRI="#sumAgenda_request"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#has"/>
+        <NamedIndividual IRI="#agenda_tellWellbeing"/>
+        <NamedIndividual IRI="#sysmov_tellWellbeing"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#summaryAgenda"/>
+        <NamedIndividual IRI="#agenda_tellWellbeing"/>
+        <NamedIndividual IRI="#sumAgenda_announcement"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#semanticGroup"/>
+        <NamedIndividual IRI="#sem_emoNegative"/>
+        <NamedIndividual IRI="#semgroup_emo"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#semanticGroup"/>
+        <NamedIndividual IRI="#sem_emoPositive"/>
+        <NamedIndividual IRI="#semgroup_emo"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#containsSemantics"/>
+        <NamedIndividual IRI="#semgroup_emo"/>
+        <NamedIndividual IRI="#sem_emoNegative"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#containsSemantics"/>
+        <NamedIndividual IRI="#semgroup_emo"/>
+        <NamedIndividual IRI="#sem_emoPositive"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#summarizesAgendas"/>
+        <NamedIndividual IRI="#sumAgenda_announcement"/>
+        <NamedIndividual IRI="#agenda_tellFluidTaste"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#summarizesAgendas"/>
+        <NamedIndividual IRI="#sumAgenda_announcement"/>
+        <NamedIndividual IRI="#agenda_tellRecoveryPos8"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#summarizesAgendas"/>
+        <NamedIndividual IRI="#sumAgenda_announcement"/>
+        <NamedIndividual IRI="#agenda_tellRecoveryPos5"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#summarizesAgendas"/>
+        <NamedIndividual IRI="#sumAgenda_announcement"/>
+        <NamedIndividual IRI="#agenda_tellFluidMemory"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#summarizesAgendas"/>
+        <NamedIndividual IRI="#sumAgenda_announcement"/>
+        <NamedIndividual IRI="#agenda_tellRecoveryPos4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#summarizesAgendas"/>
+        <NamedIndividual IRI="#sumAgenda_announcement"/>
+        <NamedIndividual IRI="#agenda_tellRecoveryPos7"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#summarizesAgendas"/>
+        <NamedIndividual IRI="#sumAgenda_announcement"/>
+        <NamedIndividual IRI="#agenda_tellEmergencyCPR"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#summarizesAgendas"/>
+        <NamedIndividual IRI="#sumAgenda_announcement"/>
+        <NamedIndividual IRI="#agenda_tellRecentEncounters"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#summarizesAgendas"/>
+        <NamedIndividual IRI="#sumAgenda_announcement"/>
+        <NamedIndividual IRI="#agenda_tellRecoveryPos2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#summarizesAgendas"/>
+        <NamedIndividual IRI="#sumAgenda_announcement"/>
+        <NamedIndividual IRI="#agenda_tellRecoveryPos6"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#summarizesAgendas"/>
+        <NamedIndividual IRI="#sumAgenda_announcement"/>
+        <NamedIndividual IRI="#agenda_tellRecoveryPos1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#summarizesAgendas"/>
+        <NamedIndividual IRI="#sumAgenda_announcement"/>
+        <NamedIndividual IRI="#agenda_tellFirstAid"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#summarizesAgendas"/>
+        <NamedIndividual IRI="#sumAgenda_announcement"/>
+        <NamedIndividual IRI="#agenda_tellRecoveryPos3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#summarizesAgendas"/>
+        <NamedIndividual IRI="#sumAgenda_announcement"/>
+        <NamedIndividual IRI="#agenda_tellCaretakerHelp"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#summarizesAgendas"/>
+        <NamedIndividual IRI="#sumAgenda_announcement"/>
+        <NamedIndividual IRI="#agenda_tellConversation"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#summarizesAgendas"/>
+        <NamedIndividual IRI="#sumAgenda_announcement"/>
+        <NamedIndividual IRI="#agenda_tellEmergencyRecoveryPos1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#summarizesAgendas"/>
+        <NamedIndividual IRI="#sumAgenda_announcement"/>
+        <NamedIndividual IRI="#agenda_tellEmergencyRecoveryPos2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#summarizesAgendas"/>
+        <NamedIndividual IRI="#sumAgenda_announcement"/>
+        <NamedIndividual IRI="#agenda_tellEmergencyBreathingNotNormal"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#summarizesAgendas"/>
+        <NamedIndividual IRI="#sumAgenda_announcement"/>
+        <NamedIndividual IRI="#agenda_tellFluidAll"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#summarizesAgendas"/>
+        <NamedIndividual IRI="#sumAgenda_announcement"/>
+        <NamedIndividual IRI="#agenda_tellEmergencyRecoveryPos5"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#summarizesAgendas"/>
+        <NamedIndividual IRI="#sumAgenda_announcement"/>
+        <NamedIndividual IRI="#agenda_tellEmergencyRecoveryPos6"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#summarizesAgendas"/>
+        <NamedIndividual IRI="#sumAgenda_announcement"/>
+        <NamedIndividual IRI="#agenda_tellCPR"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#summarizesAgendas"/>
+        <NamedIndividual IRI="#sumAgenda_announcement"/>
+        <NamedIndividual IRI="#agenda_tellEmergencyRecoveryPos3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#summarizesAgendas"/>
+        <NamedIndividual IRI="#sumAgenda_announcement"/>
+        <NamedIndividual IRI="#agenda_tellEmergencyRecoveryPos4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#summarizesAgendas"/>
+        <NamedIndividual IRI="#sumAgenda_announcement"/>
+        <NamedIndividual IRI="#agenda_tellEmergencyRecoveryPos8"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#summarizesAgendas"/>
+        <NamedIndividual IRI="#sumAgenda_announcement"/>
+        <NamedIndividual IRI="#agenda_tellFluidPerDay"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#summarizesAgendas"/>
+        <NamedIndividual IRI="#sumAgenda_announcement"/>
+        <NamedIndividual IRI="#agenda_tellEmergencyBreathingNormal"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#summarizesAgendas"/>
+        <NamedIndividual IRI="#sumAgenda_announcement"/>
+        <NamedIndividual IRI="#agenda_tellEmergencyRecoveryPos7"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#summarizesAgendas"/>
+        <NamedIndividual IRI="#sumAgenda_announcement"/>
+        <NamedIndividual IRI="#agenda_tellWellbeing"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#summarizesAgendas"/>
+        <NamedIndividual IRI="#sumAgenda_announcement"/>
+        <NamedIndividual IRI="#agenda_tellFluidBenefit"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#summarizesAgendas"/>
+        <NamedIndividual IRI="#sumAgenda_announcement"/>
+        <NamedIndividual IRI="#agenda_tellMedicineIntake"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#summarizesAgendas"/>
+        <NamedIndividual IRI="#sumAgenda_goodbye"/>
+        <NamedIndividual IRI="#agenda_goodbye"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#summarizesAgendas"/>
+        <NamedIndividual IRI="#sumAgenda_goodbye"/>
+        <NamedIndividual IRI="#agenda_tellComplimentAndGoodbye"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#summarizesAgendas"/>
+        <NamedIndividual IRI="#sumAgenda_greet"/>
+        <NamedIndividual IRI="#agenda_greet"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#summarizesAgendas"/>
+        <NamedIndividual IRI="#sumAgenda_master"/>
+        <NamedIndividual IRI="#agenda_master"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#has"/>
+        <NamedIndividual IRI="#sumAgenda_request"/>
+        <NamedIndividual IRI="#sysmov_proposeCaretakerHelp"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#summarizesAgendas"/>
+        <NamedIndividual IRI="#sumAgenda_request"/>
+        <NamedIndividual IRI="#agenda_requestEmergency"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#summarizesAgendas"/>
+        <NamedIndividual IRI="#sumAgenda_request"/>
+        <NamedIndividual IRI="#agenda_proposeRecoveryPosTraining"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#summarizesAgendas"/>
+        <NamedIndividual IRI="#sumAgenda_request"/>
+        <NamedIndividual IRI="#agenda_proposeCaretakerHelp"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#summarizesAgendas"/>
+        <NamedIndividual IRI="#sumAgenda_request"/>
+        <NamedIndividual IRI="#agenda_requestAnotherTask"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#summarizesAgendas"/>
+        <NamedIndividual IRI="#sumAgenda_request"/>
+        <NamedIndividual IRI="#agenda_requestTask"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#summarizesAgendas"/>
+        <NamedIndividual IRI="#sumAgenda_request"/>
+        <NamedIndividual IRI="#agenda_requestBreathing"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#summarizesAgendas"/>
+        <NamedIndividual IRI="#sumAgenda_request"/>
+        <NamedIndividual IRI="#agenda_tellTopics"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#summarizesAgendas"/>
+        <NamedIndividual IRI="#sumAgenda_request"/>
+        <NamedIndividual IRI="#agenda_tellNoKnowledgeAndTellTopics"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#summarizesAgendas"/>
+        <NamedIndividual IRI="#sumAgenda_request"/>
+        <NamedIndividual IRI="#agenda_proposeCPRTraining"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#summarizesAgendas"/>
+        <NamedIndividual IRI="#sumAgenda_request"/>
+        <NamedIndividual IRI="#agenda_tellReliefAndRequestTask"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#summarizesAgendas"/>
+        <NamedIndividual IRI="#sumAgenda_request"/>
+        <NamedIndividual IRI="#agenda_requestProblemFluid"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#summarizesAgendas"/>
+        <NamedIndividual IRI="#sumAgenda_request"/>
+        <NamedIndividual IRI="#agenda_proposeDone"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#summarizesAgendas"/>
+        <NamedIndividual IRI="#sumAgenda_request"/>
+        <NamedIndividual IRI="#agenda_tellNoComprehensionAndRequestTask"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#utterance"/>
+        <NamedIndividual IRI="#sysmov_goodbye"/>
+        <NamedIndividual IRI="#utterance_dummy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#utterance"/>
+        <NamedIndividual IRI="#sysmov_greet"/>
+        <NamedIndividual IRI="#utterance_dummy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#utterance"/>
+        <NamedIndividual IRI="#sysmov_proposeCPRTraining"/>
+        <NamedIndividual IRI="#utterance_dummy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#utterance"/>
+        <NamedIndividual IRI="#sysmov_proposeCaretakerHelp"/>
+        <NamedIndividual IRI="#utterance_dummy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#utterance"/>
+        <NamedIndividual IRI="#sysmov_proposeRecoveryPosTraining"/>
+        <NamedIndividual IRI="#utterance_dummy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#utterance"/>
+        <NamedIndividual IRI="#sysmov_requestAnotherTask"/>
+        <NamedIndividual IRI="#utterance_dummy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#utterance"/>
+        <NamedIndividual IRI="#sysmov_requestBreathing"/>
+        <NamedIndividual IRI="#utterance_dummy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#utterance"/>
+        <NamedIndividual IRI="#sysmov_requestEmergency"/>
+        <NamedIndividual IRI="#utterance_dummy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#utterance"/>
+        <NamedIndividual IRI="#sysmov_requestProblemFluid"/>
+        <NamedIndividual IRI="#utterance_dummy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#utterance"/>
+        <NamedIndividual IRI="#sysmov_requestTask"/>
+        <NamedIndividual IRI="#utterance_dummy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#utterance"/>
+        <NamedIndividual IRI="#sysmov_tellBenefitFluid"/>
+        <NamedIndividual IRI="#utterance_dummy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#utterance"/>
+        <NamedIndividual IRI="#sysmov_tellCPR"/>
+        <NamedIndividual IRI="#utterance_dummy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#utterance"/>
+        <NamedIndividual IRI="#sysmov_tellCaretakerHelp"/>
+        <NamedIndividual IRI="#utterance_dummy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#utterance"/>
+        <NamedIndividual IRI="#sysmov_tellComplimentAndGoodbye"/>
+        <NamedIndividual IRI="#utterance_dummy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#utterance"/>
+        <NamedIndividual IRI="#sysmov_tellConversation"/>
+        <NamedIndividual IRI="#utterance_dummy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#utterance"/>
+        <NamedIndividual IRI="#sysmov_tellEmergencyBreathingNormal"/>
+        <NamedIndividual IRI="#utterance_dummy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#utterance"/>
+        <NamedIndividual IRI="#sysmov_tellEmergencyBreathingNotNormal"/>
+        <NamedIndividual IRI="#utterance_dummy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#utterance"/>
+        <NamedIndividual IRI="#sysmov_tellEmergencyCPR"/>
+        <NamedIndividual IRI="#utterance_dummy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#utterance"/>
+        <NamedIndividual IRI="#sysmov_tellEmergencyRecoveryPos1"/>
+        <NamedIndividual IRI="#utterance_dummy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#utterance"/>
+        <NamedIndividual IRI="#sysmov_tellEmergencyRecoveryPos2"/>
+        <NamedIndividual IRI="#utterance_dummy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#utterance"/>
+        <NamedIndividual IRI="#sysmov_tellEmergencyRecoveryPos3"/>
+        <NamedIndividual IRI="#utterance_dummy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#utterance"/>
+        <NamedIndividual IRI="#sysmov_tellEmergencyRecoveryPos4"/>
+        <NamedIndividual IRI="#utterance_dummy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#utterance"/>
+        <NamedIndividual IRI="#sysmov_tellEmergencyRecoveryPos5"/>
+        <NamedIndividual IRI="#utterance_dummy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#utterance"/>
+        <NamedIndividual IRI="#sysmov_tellEmergencyRecoveryPos6"/>
+        <NamedIndividual IRI="#utterance_dummy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#utterance"/>
+        <NamedIndividual IRI="#sysmov_tellEmergencyRecoveryPos7"/>
+        <NamedIndividual IRI="#utterance_dummy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#utterance"/>
+        <NamedIndividual IRI="#sysmov_tellEmergencyRecoveryPos8"/>
+        <NamedIndividual IRI="#utterance_dummy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#utterance"/>
+        <NamedIndividual IRI="#sysmov_tellFirstAid"/>
+        <NamedIndividual IRI="#utterance_dummy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#utterance"/>
+        <NamedIndividual IRI="#sysmov_tellIncreaseFluidAll"/>
+        <NamedIndividual IRI="#utterance_dummy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#utterance"/>
+        <NamedIndividual IRI="#sysmov_tellIncreaseFluidMemory"/>
+        <NamedIndividual IRI="#utterance_dummy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#utterance"/>
+        <NamedIndividual IRI="#sysmov_tellIncreaseFluidTaste"/>
+        <NamedIndividual IRI="#utterance_dummy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#utterance"/>
+        <NamedIndividual IRI="#sysmov_tellMedicineIntake"/>
+        <NamedIndividual IRI="#utterance_dummy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#utterance"/>
+        <NamedIndividual IRI="#sysmov_tellNoComprehensionAndRequestTask"/>
+        <NamedIndividual IRI="#utterance_dummy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#utterance"/>
+        <NamedIndividual IRI="#sysmov_tellNoKnowledgeAndTellTopics"/>
+        <NamedIndividual IRI="#utterance_dummy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#utterance"/>
+        <NamedIndividual IRI="#sysmov_tellRecentEncounters"/>
+        <NamedIndividual IRI="#utterance_dummy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#utterance"/>
+        <NamedIndividual IRI="#sysmov_tellRecoveryPos1"/>
+        <NamedIndividual IRI="#utterance_dummy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#utterance"/>
+        <NamedIndividual IRI="#sysmov_tellRecoveryPos2"/>
+        <NamedIndividual IRI="#utterance_dummy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#utterance"/>
+        <NamedIndividual IRI="#sysmov_tellRecoveryPos3"/>
+        <NamedIndividual IRI="#utterance_dummy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#utterance"/>
+        <NamedIndividual IRI="#sysmov_tellRecoveryPos4"/>
+        <NamedIndividual IRI="#utterance_dummy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#utterance"/>
+        <NamedIndividual IRI="#sysmov_tellRecoveryPos5"/>
+        <NamedIndividual IRI="#utterance_dummy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#utterance"/>
+        <NamedIndividual IRI="#sysmov_tellRecoveryPos6"/>
+        <NamedIndividual IRI="#utterance_dummy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#utterance"/>
+        <NamedIndividual IRI="#sysmov_tellRecoveryPos7"/>
+        <NamedIndividual IRI="#utterance_dummy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#utterance"/>
+        <NamedIndividual IRI="#sysmov_tellRecoveryPos8"/>
+        <NamedIndividual IRI="#utterance_dummy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#utterance"/>
+        <NamedIndividual IRI="#sysmov_tellReliefAndRequestTask"/>
+        <NamedIndividual IRI="#utterance_dummy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#utterance"/>
+        <NamedIndividual IRI="#sysmov_tellTopics"/>
+        <NamedIndividual IRI="#utterance_dummy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#utterance"/>
+        <NamedIndividual IRI="#sysmov_tellWellbeing"/>
+        <NamedIndividual IRI="#utterance_dummy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#hasBelief"/>
+        <NamedIndividual IRI="#userBeliefspace"/>
+        <NamedIndividual IRI="#Belief_-513172124"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#grammar"/>
+        <NamedIndividual IRI="#usrmov_greet"/>
+        <NamedIndividual IRI="#grammar_greet"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#variableValue"/>
+        <NamedIndividual IRI="#Belief_-513172124"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#addTime"/>
+        <NamedIndividual IRI="#History-1511375065"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#agendaPriority"/>
+        <NamedIndividual IRI="#History-1511375065"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">42</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#procTime"/>
+        <NamedIndividual IRI="#History-1511375065"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">4</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#isMasterBool"/>
+        <NamedIndividual IRI="#agenda_master"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#grammarString"/>
+        <NamedIndividual IRI="#grammar_greet"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Hello</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#summaryAgendaType"/>
+        <NamedIndividual IRI="#sumAgenda_goodbye"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">announcement</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#summaryAgendaType"/>
+        <NamedIndividual IRI="#sumAgenda_greet"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">announcement</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#summaryAgendaType"/>
+        <NamedIndividual IRI="#sumAgenda_request"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">request</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#isExitMove"/>
+        <NamedIndividual IRI="#sysmov_goodbye"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#isExitMove"/>
+        <NamedIndividual IRI="#sysmov_tellComplimentAndGoodbye"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#isExitMove"/>
+        <NamedIndividual IRI="#sysmov_tellEmergencyCPR"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://localhost:8080/OwlSpeakOnto.owl#utteranceString"/>
+        <NamedIndividual IRI="#utterance_dummy"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">test</Literal>
+    </DataPropertyAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.5.1) http://owlapi.sourceforge.net -->
+

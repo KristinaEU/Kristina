@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE name SYSTEM "http://localhost:8080/service.dtd">
+<scpd xmlns="urn:schemas-upnp-org:service-1-0">
+   <specVersion>
+      <major>1</major>
+      <minor>0</minor>
+   </specVersion>
+   
+   <actionList>
+   
+      <action> 
+         <name>reloadSettings</name>
+      </action>
+   
+      <action> 
+         <name>resetAll</name>
+      </action>
+      
+      <action> 
+         <name>stopAllDialogue</name>
+      </action>
+      
+      <action> 
+         <name>loadSDOs</name>
+      </action>
+   
+      <action> 
+         <name>reset</name>
+         <argumentList>
+            <argument>
+               <name>dialogueName</name>
+               <direction>in</direction>
+               <relatedStateVariable>targetSV</relatedStateVariable>
+            </argument>
+         </argumentList>
+      </action>
+   
+      <action> 
+         <name>enableSDO</name>
+         <argumentList>
+            <argument>
+               <name>oioID</name>
+               <direction>in</direction>
+               <relatedStateVariable>targetSV</relatedStateVariable>
+            </argument>
+            <argument>
+               <name>dialogueName</name>
+               <direction>in</direction>
+               <relatedStateVariable>targetSV</relatedStateVariable>
+            </argument>
+            <argument>
+               <name>taskID</name>
+               <direction>in</direction>
+               <relatedStateVariable>taskIDSV</relatedStateVariable>
+            </argument>
+         </argumentList>
+      </action>
+      
+      <action> 
+         <name>disableSDO</name>
+         <argumentList>
+            <argument>
+               <name>oioID</name>
+               <direction>in</direction>
+               <relatedStateVariable>targetSV</relatedStateVariable>
+            </argument>
+            <argument>
+               <name>taskID</name>
+               <direction>in</direction>
+               <relatedStateVariable>taskIDSV</relatedStateVariable>
+            </argument>
+         </argumentList>
+      </action>
+      
+      <action> 
+         <name>setSleep</name>
+         <argumentList>
+            <argument>
+               <name>sleepState</name>
+               <direction>in</direction>
+               <relatedStateVariable>targetSV</relatedStateVariable>
+            </argument>
+         </argumentList>
+      </action>
+      
+      <action> 
+         <name>getSleep</name>
+         <argumentList>
+            <argument>
+               <name>sleepState</name>
+               <direction>out</direction>
+               <relatedStateVariable>targetSV</relatedStateVariable>
+            </argument>
+         </argumentList>
+      </action>
+      
+      <action> 
+         <name>setVariable</name>
+         <argumentList>
+            <argument>
+               <name>taskID</name>
+               <direction>in</direction>
+               <relatedStateVariable>taskIDSV</relatedStateVariable>
+            </argument>
+            <argument>
+               <name>varName</name>
+               <direction>in</direction>
+               <relatedStateVariable>targetSV</relatedStateVariable>
+            </argument>
+            <argument>
+               <name>value</name>
+               <direction>in</direction>
+               <relatedStateVariable>targetSV</relatedStateVariable>
+            </argument>
+         </argumentList>
+      </action>
+      
+      <action> 
+         <name>getVariable</name>
+         <argumentList>
+            <argument>
+               <name>taskID</name>
+               <direction>in</direction>
+               <relatedStateVariable>taskIDSV</relatedStateVariable>
+            </argument>
+            <argument>
+               <name>varName</name>
+               <direction>in</direction>
+               <relatedStateVariable>targetSV</relatedStateVariable>
+            </argument>
+            <argument>
+               <name>value</name>
+               <direction>out</direction>
+               <relatedStateVariable>targetSV</relatedStateVariable>
+            </argument>
+         </argumentList>
+      </action>
+      
+      <action> 
+         <name>setTtsMode</name>
+         <argumentList>
+            <argument>
+               <name>ttsMode</name>
+               <direction>in</direction>
+               <relatedStateVariable>targetSV</relatedStateVariable>
+            </argument>
+         </argumentList>
+      </action>
+   
+      <action> 
+         <name>setAsrMode</name>
+         <argumentList>
+            <argument>
+               <name>asrMode</name>
+               <direction>in</direction>
+               <relatedStateVariable>targetSV</relatedStateVariable>
+            </argument>
+         </argumentList>
+      </action>
+   
+      <action> 
+         <name>getActiveTaskIds</name>
+         <argumentList>
+            <argument>
+               <name>taskIDs</name>
+               <direction>out</direction>
+               <relatedStateVariable>targetSV</relatedStateVariable>
+            </argument>
+         </argumentList>
+      </action>
+      
+      <action> 
+         <name>getActiveOntos</name>
+         <argumentList>
+            <argument>
+               <name>ontologies</name>
+               <direction>out</direction>
+               <relatedStateVariable>targetSV</relatedStateVariable>
+            </argument>
+         </argumentList>
+      </action>
+   
+   </actionList>
+   
+   
+   
+    <serviceStateTable>
+    	<stateVariable>
+			 <name>targetSV</name>
+			 <dataType>string</dataType>
+		</stateVariable>
+		<stateVariable>
+			 <name>taskIDSV</name>
+			 <dataType>string</dataType>
+		</stateVariable>
+		<stateVariable sendEvents="true">
+			 <name>lastUserWill</name>
+			 <dataType>string</dataType>
+		</stateVariable>
+	</serviceStateTable>
+</scpd>

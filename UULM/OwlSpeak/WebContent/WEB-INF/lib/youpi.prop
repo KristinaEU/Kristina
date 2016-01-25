@@ -1,0 +1,14 @@
+# Use this property to blacklist some network interfaces from Youpi
+# Such a blacklist might be overriden programmatically 
+# by setting the appropriate NetworkFilter.
+# Enter blacklisted network interfaces names, separated by semicolon
+#youpi.blacklist = eth0;eth1
+
+# Use this property to change the level of verbosity of logs
+# Possible options are java log levels, namely: 
+# OFF, SEVERE, WARNING, INFO, FINE, FINER, FINEST, ALL
+#youpi.log.level = WARNING
+
+# Use this property to setup a log file
+#youpi.log.file = youpi.log
+

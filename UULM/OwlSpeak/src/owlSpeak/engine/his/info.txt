@@ -1,0 +1,9 @@
+SimpleHISOwl:
+- no respaws
+- all angedas in workspace from the beginning
+- no contrary semantics
+- only one semantic per grammar move => only one field addressed per grammar move
+- only one field adddressed per agenda
+- no confirmations
+- only one ontology
+- one move per UserAction
