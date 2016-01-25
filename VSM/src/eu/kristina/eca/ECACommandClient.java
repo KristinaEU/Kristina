@@ -1,6 +1,6 @@
 package eu.kristina.eca;
 
-import de.dfki.vsm.util.log.LOGConsoleLogger;
+import de.dfki.vsm.util.log.LOGDefaultLogger;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.IOException;
@@ -14,8 +14,8 @@ import java.net.Socket;
 public final class ECACommandClient extends Thread {
 
     // The singelton logger instance
-    private final LOGConsoleLogger mLogger
-            = LOGConsoleLogger.getInstance();
+    private final LOGDefaultLogger mLogger
+            = LOGDefaultLogger.getInstance();
     // The client socket
     private Socket mSocket;
     // The remote adress

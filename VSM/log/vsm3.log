@@ -1,0 +1,497 @@
+INFO to LOGFILE on Mon Jan 25 17:02:10 CET 2016 by de.dfki.vsm.util.log.LOGDefaultLogger in Thread[AWT-EventQueue-0,6,main] at de.dfki.vsm.SceneMaker3.editor(SceneMaker3.java:81)
+Starting VSM editor with file 'res\prj\vsm'
+
+INFO to LOGFILE on Mon Jan 25 17:02:11 CET 2016 by de.dfki.vsm.util.log.LOGDefaultLogger in Thread[AWT-EventQueue-0,6,main] at de.dfki.vsm.runtime.project.RunTimeProject.<init>(RunTimeProject.java:61)
+Creating a new empty runtime project
+
+SEVERE to LOGFILE on Mon Jan 25 17:02:11 CET 2016 by de.dfki.vsm.util.log.LOGDefaultLogger in Thread[AWT-EventQueue-0,6,main] at de.dfki.vsm.editor.project.EditorProject.parse(EditorProject.java:84)
+Error: Cannot find editor project directory 'D:\GitHubOrg\KristinaRepository\VSM\res\prj\sample1'
+
+SEVERE to LOGFILE on Mon Jan 25 17:02:11 CET 2016 by de.dfki.vsm.util.log.LOGDefaultLogger in Thread[AWT-EventQueue-0,6,main] at de.dfki.vsm.editor.project.EditorProject.parse(EditorProject.java:88)
+Error: Cannot find editor project directory 'D:\GitHubOrg\KristinaRepository\VSM\res\prj\sample1'
+
+INFO to LOGFILE on Mon Jan 25 17:02:11 CET 2016 by de.dfki.vsm.util.log.LOGDefaultLogger in Thread[AWT-EventQueue-0,6,main] at de.dfki.vsm.runtime.project.RunTimeProject.<init>(RunTimeProject.java:61)
+Creating a new empty runtime project
+
+SEVERE to LOGFILE on Mon Jan 25 17:02:11 CET 2016 by de.dfki.vsm.util.log.LOGDefaultLogger in Thread[AWT-EventQueue-0,6,main] at de.dfki.vsm.editor.project.EditorProject.parse(EditorProject.java:84)
+Error: Cannot find editor project directory 'D:\GitHubOrg\KristinaRepository\VSM\res\prj\sample1'
+
+SEVERE to LOGFILE on Mon Jan 25 17:02:11 CET 2016 by de.dfki.vsm.util.log.LOGDefaultLogger in Thread[AWT-EventQueue-0,6,main] at de.dfki.vsm.editor.project.EditorProject.parse(EditorProject.java:88)
+Error: Cannot find editor project directory 'D:\GitHubOrg\KristinaRepository\VSM\res\prj\sample1'
+
+INFO to LOGFILE on Mon Jan 25 17:02:11 CET 2016 by de.dfki.vsm.util.log.LOGDefaultLogger in Thread[AWT-EventQueue-0,6,main] at de.dfki.vsm.runtime.project.RunTimeProject.<init>(RunTimeProject.java:61)
+Creating a new empty runtime project
+
+SEVERE to LOGFILE on Mon Jan 25 17:02:11 CET 2016 by de.dfki.vsm.util.log.LOGDefaultLogger in Thread[AWT-EventQueue-0,6,main] at de.dfki.vsm.editor.project.EditorProject.parse(EditorProject.java:84)
+Error: Cannot find editor project directory 'D:\GitHubOrg\KristinaRepository\VSM\res\prj\stickmanworld'
+
+SEVERE to LOGFILE on Mon Jan 25 17:02:11 CET 2016 by de.dfki.vsm.util.log.LOGDefaultLogger in Thread[AWT-EventQueue-0,6,main] at de.dfki.vsm.editor.project.EditorProject.parse(EditorProject.java:88)
+Error: Cannot find editor project directory 'D:\GitHubOrg\KristinaRepository\VSM\res\prj\stickmanworld'
+
+INFO to LOGFILE on Mon Jan 25 17:02:11 CET 2016 by de.dfki.vsm.util.log.LOGDefaultLogger in Thread[AWT-EventQueue-0,6,main] at de.dfki.vsm.runtime.project.RunTimeProject.<init>(RunTimeProject.java:61)
+Creating a new empty runtime project
+
+SEVERE to LOGFILE on Mon Jan 25 17:02:11 CET 2016 by de.dfki.vsm.util.log.LOGDefaultLogger in Thread[AWT-EventQueue-0,6,main] at de.dfki.vsm.editor.project.EditorProject.parse(EditorProject.java:84)
+Error: Cannot find editor project directory 'D:\GitHubOrg\KristinaRepository\VSM\res\prj\test'
+
+SEVERE to LOGFILE on Mon Jan 25 17:02:11 CET 2016 by de.dfki.vsm.util.log.LOGDefaultLogger in Thread[AWT-EventQueue-0,6,main] at de.dfki.vsm.editor.project.EditorProject.parse(EditorProject.java:88)
+Error: Cannot find editor project directory 'D:\GitHubOrg\KristinaRepository\VSM\res\prj\test'
+
+INFO to LOGFILE on Mon Jan 25 17:02:11 CET 2016 by de.dfki.vsm.util.log.LOGDefaultLogger in Thread[AWT-EventQueue-0,6,main] at de.dfki.vsm.runtime.project.RunTimeProject.<init>(RunTimeProject.java:61)
+Creating a new empty runtime project
+
+INFO to LOGFILE on Mon Jan 25 17:02:11 CET 2016 by de.dfki.vsm.util.log.LOGDefaultLogger in Thread[AWT-EventQueue-0,6,main] at de.dfki.vsm.runtime.project.RunTimeProject.parseProjectConfig(RunTimeProject.java:306)
+Loaded project configuration file in path'D:\GitHubOrg\KristinaRepository\VSM\res\prj\vsm':
+<?xml version="1.0" encoding="UTF-8"?>
+<Project name="">
+  <Plugins>
+  </Plugins>
+  <Players>
+    <Player name="defaultsceneplayer" class="eu.kristina.vsm.KristinaScenePlayer">
+      <Feature key="vsm.agent.number" value="0"/>
+      <Feature key="vsm.agent.0.name" value="none"/>
+      <Feature key="vsm.agent.0.uaid" value="1"/>
+      <Feature key="vsm.agent.0.type" value="tcp"/>
+      <Feature key="vsm.agent.0.local.host" value="localhost"/>
+      <Feature key="vsm.agent.0.local.port" value="1100"/>
+      <Feature key="vsm.agent.0.remote.host" value="webglstudio.org"/>
+      <Feature key="vsm.agent.0.remote.port" value="9900"/>
+      <Feature key="vsm.agent.0.remote.flag" value="true"/>
+      <Feature key="ssi.service.url" value="http://137.250.171.230:11193/fusion/Service.svc/getCurrent"/>
+    </Player>
+  </Players>
+  <Agents>
+  </Agents>
+</Project>
+
+INFO to LOGFILE on Mon Jan 25 17:02:11 CET 2016 by de.dfki.vsm.util.log.LOGDefaultLogger in Thread[AWT-EventQueue-0,6,main] at de.dfki.vsm.runtime.project.RunTimeProject.parseSceneFlow(RunTimeProject.java:378)
+Loaded sceneflow configuration file in path 'D:\GitHubOrg\KristinaRepository\VSM\res\prj\vsm':
+KBM
+
+INFO to LOGFILE on Mon Jan 25 17:02:11 CET 2016 by de.dfki.vsm.util.log.LOGDefaultLogger in Thread[AWT-EventQueue-0,6,main] at de.dfki.vsm.runtime.project.RunTimeProject.parseSceneScript(RunTimeProject.java:447)
+Loaded scenescript configuration file in path'D:\GitHubOrg\KristinaRepository\VSM\res\prj\vsm':
+<SceneScript lower="0" upper="0">
+</SceneScript>
+
+INFO to LOGFILE on Mon Jan 25 17:02:11 CET 2016 by de.dfki.vsm.util.log.LOGDefaultLogger in Thread[AWT-EventQueue-0,6,main] at de.dfki.vsm.runtime.project.RunTimeProject.parseActiconConfig(RunTimeProject.java:518)
+Loaded acticon configuration file in path'D:\GitHubOrg\KristinaRepository\VSM\res\prj\vsm':
+<Acticon>
+</Acticon>
+
+INFO to LOGFILE on Mon Jan 25 17:02:11 CET 2016 by de.dfki.vsm.util.log.LOGDefaultLogger in Thread[AWT-EventQueue-0,6,main] at de.dfki.vsm.runtime.project.RunTimeProject.parseVisiconConfig(RunTimeProject.java:658)
+Loaded visicon configuration file in path'D:\GitHubOrg\KristinaRepository\VSM\res\prj\vsm':
+<Visicon>
+</Visicon>
+
+INFO to LOGFILE on Mon Jan 25 17:02:11 CET 2016 by de.dfki.vsm.util.log.LOGDefaultLogger in Thread[AWT-EventQueue-0,6,main] at de.dfki.vsm.runtime.project.RunTimeProject.parseGesticonConfig(RunTimeProject.java:589)
+Loaded gesticon configuration file in path'D:\GitHubOrg\KristinaRepository\VSM\res\prj\vsm':
+<Gesticon>
+</Gesticon>
+
+INFO to LOGFILE on Mon Jan 25 17:02:11 CET 2016 by de.dfki.vsm.util.log.LOGDefaultLogger in Thread[AWT-EventQueue-0,6,main] at de.dfki.vsm.model.project.EditorConfig.load(EditorConfig.java:435)
+Loaded project editor configuration file in path'D:\GitHubOrg\KristinaRepository\VSM\res\prj\vsm':
+
+
+INFO to LOGFILE on Mon Jan 25 17:02:11 CET 2016 by de.dfki.vsm.util.log.LOGDefaultLogger in Thread[AWT-EventQueue-0,6,main] at de.dfki.vsm.model.project.EditorConfig.load(EditorConfig.java:439)
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment/>
+<entry key="autohidebottombar">true</entry>
+<entry key="num_magnets">8</entry>
+<entry key="grid">false</entry>
+<entry key="node_width">90</entry>
+<entry key="showvariables">true</entry>
+<entry key="frame_posy">0</entry>
+<entry key="frame_posx">0</entry>
+<entry key="scriptfonttype">Monospaced</entry>
+<entry key="shownodeid">true</entry>
+<entry key="showsceneeditor">true</entry>
+<entry key="visualization">true</entry>
+<entry key="frame_height">600</entry>
+<entry key="showgestures">true</entry>
+<entry key="launchPlayer">false</entry>
+<entry key="frame_name">SceneFlowEditor</entry>
+<entry key="showelementproperties">true</entry>
+<entry key="sceneflow_sceneeditor_ratio">0.75</entry>
+<entry key="node_height">90</entry>
+<entry key="scriptfonsize">14</entry>
+<entry key="frame_width">800</entry>
+<entry key="defaultsupernodename">default</entry>
+<entry key="visualizationtrace">false</entry>
+<entry key="grid_y">1</entry>
+<entry key="propertiesdividerlocation">757</entry>
+<entry key="grid_x">1</entry>
+<entry key="icon_file">res/img/icon.png</entry>
+<entry key="showsmartpathcalculations">false</entry>
+<entry key="showelements">true</entry>
+<entry key="frame_title">Visual SceneMaker</entry>
+<entry key="workspace_fontsize">16</entry>
+<entry key="showsceneelements">true</entry>
+<entry key="showscenefloweditor">true</entry>
+</properties>
+
+
+INFO to LOGFILE on Mon Jan 25 17:02:11 CET 2016 by de.dfki.vsm.util.log.LOGDefaultLogger in Thread[AWT-EventQueue-0,6,main] at de.dfki.vsm.editor.EditorInstance.openProject(EditorInstance.java:411)
+Switching content pane to project editors
+
+INFO to LOGFILE on Mon Jan 25 17:02:11 CET 2016 by de.dfki.vsm.util.log.LOGDefaultLogger in Thread[AWT-EventQueue-0,6,main] at de.dfki.vsm.editor.project.sceneflow.elements.ElementTree.refresh(SceneFlowElementPanel.java:313)
+Refreshing 'de.dfki.vsm.editor.project.sceneflow.elements.ElementTree[,0,0,0x0,invalid,alignmentX=0.0,alignmentY=0.0,border=javax.swing.border.EmptyBorder@454f0f1,flags=16777576,maximumSize=,minimumSize=,preferredSize=,editable=false,invokesStopCellEditing=false,largeModel=false,rootVisible=false,rowHeight=16,scrollsOnExpand=true,showsRootHandles=false,toggleClickCount=2,visibleRowCount=20]'
+
+INFO to LOGFILE on Mon Jan 25 17:02:11 CET 2016 by de.dfki.vsm.util.log.LOGDefaultLogger in Thread[AWT-EventQueue-0,6,main] at de.dfki.vsm.util.syn.SyntaxStylePolicy.<init>(SyntaxStylePolicy.java:57)
+Success: Loading Style Policy URL:
+<?xml version="1.0" encoding="UTF-8"?>
+<StylePolicy>
+  <TokenStyle name="LANGUAGE" fcol="#1e14c8" bcol="#ffffff" bold="true" emph="true" undl="false"/>
+  <TokenStyle name="ERRORSTATE" fcol="#ff0000" bcol="#c8ff64" bold="false" emph="false" undl="false"/>
+  <TokenStyle name="ACTIONHEAD" fcol="#000000" bcol="#ffffff" bold="false" emph="false" undl="false"/>
+  <TokenStyle name="NEWLINE" fcol="#000000" bcol="#00ffff" bold="false" emph="false" undl="false"/>
+  <TokenStyle name="TURNHEADER" fcol="#1e14c8" bcol="#ffffff" bold="false" emph="false" undl="false"/>
+  <TokenStyle name="error" fcol="#000000" bcol="#ffffff" bold="false" emph="false" undl="false"/>
+  <TokenStyle name="UNDERLINE" fcol="#1e14c8" bcol="#ffffff" bold="true" emph="true" undl="false"/>
+  <TokenStyle name="COMMENT" fcol="#5e912f" bcol="#ffffff" bold="false" emph="true" undl="false"/>
+  <TokenStyle name="BOOLEAN" fcol="#22cc33" bcol="#ffffff" bold="false" emph="false" undl="false"/>
+  <TokenStyle name="PUNCTUATION" fcol="#000000" bcol="#ffffff" bold="false" emph="false" undl="false"/>
+  <TokenStyle name="ABBREVIATION" fcol="#000000" bcol="#ffffff" bold="false" emph="false" undl="false"/>
+  <TokenStyle name="PLACEHOLDER" fcol="#1e14c8" bcol="#ffffff" bold="false" emph="true" undl="false"/>
+  <TokenStyle name="COLONMARK" fcol="#000000" bcol="#ffffff" bold="false" emph="false" undl="false"/>
+  <TokenStyle name="FLOATING" fcol="#22cc33" bcol="#ffffff" bold="false" emph="false" undl="false"/>
+  <TokenStyle name="VARIABLE" fcol="#1e14c8" bcol="#ffffff" bold="false" emph="true" undl="false"/>
+  <TokenStyle name="WHITESPACE" fcol="#000000" bcol="#00ffff" bold="false" emph="false" undl="false"/>
+  <TokenStyle name="ACTIONFOOT" fcol="#000000" bcol="#ffffff" bold="false" emph="false" undl="false"/>
+  <TokenStyle name="SCENEHEADER" fcol="#1e14c8" bcol="#ffffff" bold="true" emph="true" undl="false"/>
+  <TokenStyle name="ASSIGNMENT" fcol="#000000" bcol="#ffffff" bold="false" emph="false" undl="false"/>
+  <TokenStyle name="SIMPLEWORD" fcol="#000000" bcol="#ffffff" bold="false" emph="false" undl="false"/>
+  <TokenStyle name="STRING" fcol="#22cc33" bcol="#ffffff" bold="false" emph="false" undl="false"/>
+  <TokenStyle name="IDENTIFIER" fcol="#645064" bcol="#ffffff" bold="false" emph="true" undl="false"/>
+  <TokenStyle name="EOF" fcol="#000000" bcol="#ffffff" bold="false" emph="false" undl="false"/>
+  <TokenStyle name="INTEGER" fcol="#22cc33" bcol="#ffffff" bold="false" emph="false" undl="false"/>
+</StylePolicy>
+
+INFO to LOGFILE on Mon Jan 25 17:02:11 CET 2016 by de.dfki.vsm.util.log.LOGDefaultLogger in Thread[AWT-EventQueue-0,6,main] at de.dfki.vsm.editor.EditorInstance.updateRecentProjects(EditorInstance.java:744)
+Updating recent projects with 'D:\GitHubOrg\KristinaRepository\VSM\res\prj\vsm' ''
+
+INFO to LOGFILE on Mon Jan 25 17:02:11 CET 2016 by de.dfki.vsm.util.log.LOGDefaultLogger in Thread[AWT-EventQueue-0,6,main] at de.dfki.vsm.editor.project.sceneflow.elements.ElementTree.refresh(SceneFlowElementPanel.java:313)
+Refreshing 'de.dfki.vsm.editor.project.sceneflow.elements.ElementTree[,0,0,0x0,invalid,alignmentX=0.0,alignmentY=0.0,border=javax.swing.border.EmptyBorder@454f0f1,flags=16777576,maximumSize=,minimumSize=,preferredSize=,editable=false,invokesStopCellEditing=false,largeModel=false,rootVisible=false,rowHeight=16,scrollsOnExpand=true,showsRootHandles=false,toggleClickCount=2,visibleRowCount=20]'
+
+SEVERE to LOGFILE on Mon Jan 25 17:02:13 CET 2016 by de.dfki.vsm.util.log.LOGDefaultLogger in Thread[AWT-EventQueue-0,6,main] at de.dfki.vsm.runtime.project.RunTimeProject.loadPlayers(RunTimeProject.java:762)
+Failure: Cannot load player of class 'eu.kristina.vsm.KristinaScenePlayer'
+
+SEVERE to LOGFILE on Mon Jan 25 17:02:13 CET 2016 by de.dfki.vsm.util.log.LOGDefaultLogger in Thread[AWT-EventQueue-0,6,main] at de.dfki.vsm.runtime.project.RunTimeProject.loadPlayers(RunTimeProject.java:764)
+java.lang.ClassNotFoundException: eu.kristina.vsm.KristinaScenePlayer
+
+WARNING to LOGFILE on Mon Jan 25 17:02:22 CET 2016 by de.dfki.vsm.util.log.LOGDefaultLogger in Thread[AWT-EventQueue-0,6,main] at de.dfki.vsm.runtime.interpreter.Interpreter.abort(Interpreter.java:222)
+Interpreter 'de.dfki.vsm.runtime.interpreter.Interpreter@6a4500f6' cannot abort the execution of 'KBM'
+
+INFO to LOGFILE on Mon Jan 25 17:02:22 CET 2016 by de.dfki.vsm.util.log.LOGDefaultLogger in Thread[AWT-EventQueue-0,6,main] at de.dfki.vsm.editor.project.sceneflow.elements.ElementTree.refresh(SceneFlowElementPanel.java:313)
+Refreshing 'de.dfki.vsm.editor.project.sceneflow.elements.ElementTree[,0,0,226x372,alignmentX=0.0,alignmentY=0.0,border=javax.swing.border.EmptyBorder@454f0f1,flags=16777576,maximumSize=,minimumSize=,preferredSize=,editable=false,invokesStopCellEditing=false,largeModel=false,rootVisible=false,rowHeight=16,scrollsOnExpand=true,showsRootHandles=false,toggleClickCount=2,visibleRowCount=20]'
+
+INFO to LOGFILE on Mon Jan 25 17:02:28 CET 2016 by de.dfki.vsm.util.log.LOGDefaultLogger in Thread[AWT-EventQueue-0,6,main] at de.dfki.vsm.editor.project.sceneflow.elements.ElementTree.refresh(SceneFlowElementPanel.java:313)
+Refreshing 'de.dfki.vsm.editor.project.sceneflow.elements.ElementTree[,0,0,226x372,alignmentX=0.0,alignmentY=0.0,border=javax.swing.border.EmptyBorder@454f0f1,flags=16777576,maximumSize=,minimumSize=,preferredSize=,editable=false,invokesStopCellEditing=false,largeModel=false,rootVisible=false,rowHeight=16,scrollsOnExpand=true,showsRootHandles=false,toggleClickCount=2,visibleRowCount=20]'
+
+SEVERE to LOGFILE on Mon Jan 25 17:02:29 CET 2016 by de.dfki.vsm.util.log.LOGDefaultLogger in Thread[AWT-EventQueue-0,6,main] at de.dfki.vsm.runtime.project.RunTimeProject.loadPlayers(RunTimeProject.java:762)
+Failure: Cannot load player of class 'eu.kristina.vsm.KristinaScenePlayer'
+
+SEVERE to LOGFILE on Mon Jan 25 17:02:29 CET 2016 by de.dfki.vsm.util.log.LOGDefaultLogger in Thread[AWT-EventQueue-0,6,main] at de.dfki.vsm.runtime.project.RunTimeProject.loadPlayers(RunTimeProject.java:764)
+java.lang.ClassNotFoundException: eu.kristina.vsm.KristinaScenePlayer
+
+WARNING to LOGFILE on Mon Jan 25 17:02:31 CET 2016 by de.dfki.vsm.util.log.LOGDefaultLogger in Thread[AWT-EventQueue-0,6,main] at de.dfki.vsm.runtime.interpreter.Interpreter.abort(Interpreter.java:222)
+Interpreter 'de.dfki.vsm.runtime.interpreter.Interpreter@492b9038' cannot abort the execution of 'KBM'
+
+INFO to LOGFILE on Mon Jan 25 17:02:31 CET 2016 by de.dfki.vsm.util.log.LOGDefaultLogger in Thread[AWT-EventQueue-0,6,main] at de.dfki.vsm.editor.project.sceneflow.elements.ElementTree.refresh(SceneFlowElementPanel.java:313)
+Refreshing 'de.dfki.vsm.editor.project.sceneflow.elements.ElementTree[,0,0,226x372,alignmentX=0.0,alignmentY=0.0,border=javax.swing.border.EmptyBorder@454f0f1,flags=16777576,maximumSize=,minimumSize=,preferredSize=,editable=false,invokesStopCellEditing=false,largeModel=false,rootVisible=false,rowHeight=16,scrollsOnExpand=true,showsRootHandles=false,toggleClickCount=2,visibleRowCount=20]'
+
+INFO to LOGFILE on Mon Jan 25 17:03:43 CET 2016 by de.dfki.vsm.util.log.LOGDefaultLogger in Thread[AWT-EventQueue-0,6,main] at de.dfki.vsm.SceneMaker3.editor(SceneMaker3.java:81)
+Starting VSM editor with file 'res\prj\vsm'
+
+INFO to LOGFILE on Mon Jan 25 17:03:43 CET 2016 by de.dfki.vsm.util.log.LOGDefaultLogger in Thread[AWT-EventQueue-0,6,main] at de.dfki.vsm.runtime.project.RunTimeProject.<init>(RunTimeProject.java:61)
+Creating a new empty runtime project
+
+SEVERE to LOGFILE on Mon Jan 25 17:03:43 CET 2016 by de.dfki.vsm.util.log.LOGDefaultLogger in Thread[AWT-EventQueue-0,6,main] at de.dfki.vsm.editor.project.EditorProject.parse(EditorProject.java:84)
+Error: Cannot find editor project directory 'D:\GitHubOrg\KristinaRepository\VSM\res\prj\sample1'
+
+SEVERE to LOGFILE on Mon Jan 25 17:03:43 CET 2016 by de.dfki.vsm.util.log.LOGDefaultLogger in Thread[AWT-EventQueue-0,6,main] at de.dfki.vsm.editor.project.EditorProject.parse(EditorProject.java:88)
+Error: Cannot find editor project directory 'D:\GitHubOrg\KristinaRepository\VSM\res\prj\sample1'
+
+INFO to LOGFILE on Mon Jan 25 17:03:43 CET 2016 by de.dfki.vsm.util.log.LOGDefaultLogger in Thread[AWT-EventQueue-0,6,main] at de.dfki.vsm.runtime.project.RunTimeProject.<init>(RunTimeProject.java:61)
+Creating a new empty runtime project
+
+SEVERE to LOGFILE on Mon Jan 25 17:03:43 CET 2016 by de.dfki.vsm.util.log.LOGDefaultLogger in Thread[AWT-EventQueue-0,6,main] at de.dfki.vsm.editor.project.EditorProject.parse(EditorProject.java:84)
+Error: Cannot find editor project directory 'D:\GitHubOrg\KristinaRepository\VSM\res\prj\sample1'
+
+SEVERE to LOGFILE on Mon Jan 25 17:03:43 CET 2016 by de.dfki.vsm.util.log.LOGDefaultLogger in Thread[AWT-EventQueue-0,6,main] at de.dfki.vsm.editor.project.EditorProject.parse(EditorProject.java:88)
+Error: Cannot find editor project directory 'D:\GitHubOrg\KristinaRepository\VSM\res\prj\sample1'
+
+INFO to LOGFILE on Mon Jan 25 17:03:43 CET 2016 by de.dfki.vsm.util.log.LOGDefaultLogger in Thread[AWT-EventQueue-0,6,main] at de.dfki.vsm.runtime.project.RunTimeProject.<init>(RunTimeProject.java:61)
+Creating a new empty runtime project
+
+SEVERE to LOGFILE on Mon Jan 25 17:03:43 CET 2016 by de.dfki.vsm.util.log.LOGDefaultLogger in Thread[AWT-EventQueue-0,6,main] at de.dfki.vsm.editor.project.EditorProject.parse(EditorProject.java:84)
+Error: Cannot find editor project directory 'D:\GitHubOrg\KristinaRepository\VSM\res\prj\stickmanworld'
+
+SEVERE to LOGFILE on Mon Jan 25 17:03:43 CET 2016 by de.dfki.vsm.util.log.LOGDefaultLogger in Thread[AWT-EventQueue-0,6,main] at de.dfki.vsm.editor.project.EditorProject.parse(EditorProject.java:88)
+Error: Cannot find editor project directory 'D:\GitHubOrg\KristinaRepository\VSM\res\prj\stickmanworld'
+
+INFO to LOGFILE on Mon Jan 25 17:03:43 CET 2016 by de.dfki.vsm.util.log.LOGDefaultLogger in Thread[AWT-EventQueue-0,6,main] at de.dfki.vsm.runtime.project.RunTimeProject.<init>(RunTimeProject.java:61)
+Creating a new empty runtime project
+
+SEVERE to LOGFILE on Mon Jan 25 17:03:43 CET 2016 by de.dfki.vsm.util.log.LOGDefaultLogger in Thread[AWT-EventQueue-0,6,main] at de.dfki.vsm.editor.project.EditorProject.parse(EditorProject.java:84)
+Error: Cannot find editor project directory 'D:\GitHubOrg\KristinaRepository\VSM\res\prj\test'
+
+SEVERE to LOGFILE on Mon Jan 25 17:03:43 CET 2016 by de.dfki.vsm.util.log.LOGDefaultLogger in Thread[AWT-EventQueue-0,6,main] at de.dfki.vsm.editor.project.EditorProject.parse(EditorProject.java:88)
+Error: Cannot find editor project directory 'D:\GitHubOrg\KristinaRepository\VSM\res\prj\test'
+
+INFO to LOGFILE on Mon Jan 25 17:03:43 CET 2016 by de.dfki.vsm.util.log.LOGDefaultLogger in Thread[AWT-EventQueue-0,6,main] at de.dfki.vsm.runtime.project.RunTimeProject.<init>(RunTimeProject.java:61)
+Creating a new empty runtime project
+
+INFO to LOGFILE on Mon Jan 25 17:03:44 CET 2016 by de.dfki.vsm.util.log.LOGDefaultLogger in Thread[AWT-EventQueue-0,6,main] at de.dfki.vsm.runtime.project.RunTimeProject.parseProjectConfig(RunTimeProject.java:306)
+Loaded project configuration file in path'D:\GitHubOrg\KristinaRepository\VSM\res\prj\vsm':
+<?xml version="1.0" encoding="UTF-8"?>
+<Project name="">
+  <Plugins>
+  </Plugins>
+  <Players>
+    <Player name="defaultsceneplayer" class="eu.kristina.vsm.KristinaScenePlayer">
+      <Feature key="vsm.agent.number" value="0"/>
+      <Feature key="vsm.agent.0.name" value="none"/>
+      <Feature key="vsm.agent.0.uaid" value="1"/>
+      <Feature key="vsm.agent.0.type" value="tcp"/>
+      <Feature key="vsm.agent.0.local.host" value="localhost"/>
+      <Feature key="vsm.agent.0.local.port" value="1100"/>
+      <Feature key="vsm.agent.0.remote.host" value="webglstudio.org"/>
+      <Feature key="vsm.agent.0.remote.port" value="9900"/>
+      <Feature key="vsm.agent.0.remote.flag" value="true"/>
+      <Feature key="ssi.service.url" value="http://137.250.171.230:11193/fusion/Service.svc/getCurrent"/>
+    </Player>
+  </Players>
+  <Agents>
+  </Agents>
+</Project>
+
+INFO to LOGFILE on Mon Jan 25 17:03:44 CET 2016 by de.dfki.vsm.util.log.LOGDefaultLogger in Thread[AWT-EventQueue-0,6,main] at de.dfki.vsm.runtime.project.RunTimeProject.parseSceneFlow(RunTimeProject.java:378)
+Loaded sceneflow configuration file in path 'D:\GitHubOrg\KristinaRepository\VSM\res\prj\vsm':
+KBM
+
+INFO to LOGFILE on Mon Jan 25 17:03:44 CET 2016 by de.dfki.vsm.util.log.LOGDefaultLogger in Thread[AWT-EventQueue-0,6,main] at de.dfki.vsm.runtime.project.RunTimeProject.parseSceneScript(RunTimeProject.java:447)
+Loaded scenescript configuration file in path'D:\GitHubOrg\KristinaRepository\VSM\res\prj\vsm':
+<SceneScript lower="0" upper="0">
+</SceneScript>
+
+INFO to LOGFILE on Mon Jan 25 17:03:44 CET 2016 by de.dfki.vsm.util.log.LOGDefaultLogger in Thread[AWT-EventQueue-0,6,main] at de.dfki.vsm.runtime.project.RunTimeProject.parseActiconConfig(RunTimeProject.java:518)
+Loaded acticon configuration file in path'D:\GitHubOrg\KristinaRepository\VSM\res\prj\vsm':
+<Acticon>
+</Acticon>
+
+INFO to LOGFILE on Mon Jan 25 17:03:44 CET 2016 by de.dfki.vsm.util.log.LOGDefaultLogger in Thread[AWT-EventQueue-0,6,main] at de.dfki.vsm.runtime.project.RunTimeProject.parseVisiconConfig(RunTimeProject.java:658)
+Loaded visicon configuration file in path'D:\GitHubOrg\KristinaRepository\VSM\res\prj\vsm':
+<Visicon>
+</Visicon>
+
+INFO to LOGFILE on Mon Jan 25 17:03:44 CET 2016 by de.dfki.vsm.util.log.LOGDefaultLogger in Thread[AWT-EventQueue-0,6,main] at de.dfki.vsm.runtime.project.RunTimeProject.parseGesticonConfig(RunTimeProject.java:589)
+Loaded gesticon configuration file in path'D:\GitHubOrg\KristinaRepository\VSM\res\prj\vsm':
+<Gesticon>
+</Gesticon>
+
+INFO to LOGFILE on Mon Jan 25 17:03:44 CET 2016 by de.dfki.vsm.util.log.LOGDefaultLogger in Thread[AWT-EventQueue-0,6,main] at de.dfki.vsm.model.project.EditorConfig.load(EditorConfig.java:435)
+Loaded project editor configuration file in path'D:\GitHubOrg\KristinaRepository\VSM\res\prj\vsm':
+
+
+INFO to LOGFILE on Mon Jan 25 17:03:44 CET 2016 by de.dfki.vsm.util.log.LOGDefaultLogger in Thread[AWT-EventQueue-0,6,main] at de.dfki.vsm.model.project.EditorConfig.load(EditorConfig.java:439)
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment/>
+<entry key="autohidebottombar">true</entry>
+<entry key="num_magnets">8</entry>
+<entry key="grid">false</entry>
+<entry key="node_width">90</entry>
+<entry key="showvariables">true</entry>
+<entry key="frame_posy">0</entry>
+<entry key="frame_posx">0</entry>
+<entry key="scriptfonttype">Monospaced</entry>
+<entry key="shownodeid">true</entry>
+<entry key="showsceneeditor">true</entry>
+<entry key="visualization">true</entry>
+<entry key="frame_height">600</entry>
+<entry key="showgestures">true</entry>
+<entry key="launchPlayer">false</entry>
+<entry key="frame_name">SceneFlowEditor</entry>
+<entry key="showelementproperties">true</entry>
+<entry key="sceneflow_sceneeditor_ratio">0.75</entry>
+<entry key="node_height">90</entry>
+<entry key="scriptfonsize">14</entry>
+<entry key="frame_width">800</entry>
+<entry key="defaultsupernodename">default</entry>
+<entry key="visualizationtrace">false</entry>
+<entry key="grid_y">1</entry>
+<entry key="propertiesdividerlocation">757</entry>
+<entry key="grid_x">1</entry>
+<entry key="icon_file">res/img/icon.png</entry>
+<entry key="showsmartpathcalculations">false</entry>
+<entry key="showelements">true</entry>
+<entry key="frame_title">Visual SceneMaker</entry>
+<entry key="workspace_fontsize">16</entry>
+<entry key="showsceneelements">true</entry>
+<entry key="showscenefloweditor">true</entry>
+</properties>
+
+
+INFO to LOGFILE on Mon Jan 25 17:03:44 CET 2016 by de.dfki.vsm.util.log.LOGDefaultLogger in Thread[AWT-EventQueue-0,6,main] at de.dfki.vsm.editor.EditorInstance.openProject(EditorInstance.java:411)
+Switching content pane to project editors
+
+INFO to LOGFILE on Mon Jan 25 17:03:44 CET 2016 by de.dfki.vsm.util.log.LOGDefaultLogger in Thread[AWT-EventQueue-0,6,main] at de.dfki.vsm.editor.project.sceneflow.elements.ElementTree.refresh(SceneFlowElementPanel.java:313)
+Refreshing 'de.dfki.vsm.editor.project.sceneflow.elements.ElementTree[,0,0,0x0,invalid,alignmentX=0.0,alignmentY=0.0,border=javax.swing.border.EmptyBorder@40e4db00,flags=16777576,maximumSize=,minimumSize=,preferredSize=,editable=false,invokesStopCellEditing=false,largeModel=false,rootVisible=false,rowHeight=16,scrollsOnExpand=true,showsRootHandles=false,toggleClickCount=2,visibleRowCount=20]'
+
+INFO to LOGFILE on Mon Jan 25 17:03:44 CET 2016 by de.dfki.vsm.util.log.LOGDefaultLogger in Thread[AWT-EventQueue-0,6,main] at de.dfki.vsm.util.syn.SyntaxStylePolicy.<init>(SyntaxStylePolicy.java:57)
+Success: Loading Style Policy URL:
+<?xml version="1.0" encoding="UTF-8"?>
+<StylePolicy>
+  <TokenStyle name="LANGUAGE" fcol="#1e14c8" bcol="#ffffff" bold="true" emph="true" undl="false"/>
+  <TokenStyle name="ERRORSTATE" fcol="#ff0000" bcol="#c8ff64" bold="false" emph="false" undl="false"/>
+  <TokenStyle name="ACTIONHEAD" fcol="#000000" bcol="#ffffff" bold="false" emph="false" undl="false"/>
+  <TokenStyle name="NEWLINE" fcol="#000000" bcol="#00ffff" bold="false" emph="false" undl="false"/>
+  <TokenStyle name="TURNHEADER" fcol="#1e14c8" bcol="#ffffff" bold="false" emph="false" undl="false"/>
+  <TokenStyle name="error" fcol="#000000" bcol="#ffffff" bold="false" emph="false" undl="false"/>
+  <TokenStyle name="UNDERLINE" fcol="#1e14c8" bcol="#ffffff" bold="true" emph="true" undl="false"/>
+  <TokenStyle name="COMMENT" fcol="#5e912f" bcol="#ffffff" bold="false" emph="true" undl="false"/>
+  <TokenStyle name="BOOLEAN" fcol="#22cc33" bcol="#ffffff" bold="false" emph="false" undl="false"/>
+  <TokenStyle name="PUNCTUATION" fcol="#000000" bcol="#ffffff" bold="false" emph="false" undl="false"/>
+  <TokenStyle name="ABBREVIATION" fcol="#000000" bcol="#ffffff" bold="false" emph="false" undl="false"/>
+  <TokenStyle name="PLACEHOLDER" fcol="#1e14c8" bcol="#ffffff" bold="false" emph="true" undl="false"/>
+  <TokenStyle name="COLONMARK" fcol="#000000" bcol="#ffffff" bold="false" emph="false" undl="false"/>
+  <TokenStyle name="FLOATING" fcol="#22cc33" bcol="#ffffff" bold="false" emph="false" undl="false"/>
+  <TokenStyle name="VARIABLE" fcol="#1e14c8" bcol="#ffffff" bold="false" emph="true" undl="false"/>
+  <TokenStyle name="WHITESPACE" fcol="#000000" bcol="#00ffff" bold="false" emph="false" undl="false"/>
+  <TokenStyle name="ACTIONFOOT" fcol="#000000" bcol="#ffffff" bold="false" emph="false" undl="false"/>
+  <TokenStyle name="SCENEHEADER" fcol="#1e14c8" bcol="#ffffff" bold="true" emph="true" undl="false"/>
+  <TokenStyle name="ASSIGNMENT" fcol="#000000" bcol="#ffffff" bold="false" emph="false" undl="false"/>
+  <TokenStyle name="SIMPLEWORD" fcol="#000000" bcol="#ffffff" bold="false" emph="false" undl="false"/>
+  <TokenStyle name="STRING" fcol="#22cc33" bcol="#ffffff" bold="false" emph="false" undl="false"/>
+  <TokenStyle name="IDENTIFIER" fcol="#645064" bcol="#ffffff" bold="false" emph="true" undl="false"/>
+  <TokenStyle name="EOF" fcol="#000000" bcol="#ffffff" bold="false" emph="false" undl="false"/>
+  <TokenStyle name="INTEGER" fcol="#22cc33" bcol="#ffffff" bold="false" emph="false" undl="false"/>
+</StylePolicy>
+
+INFO to LOGFILE on Mon Jan 25 17:03:44 CET 2016 by de.dfki.vsm.util.log.LOGDefaultLogger in Thread[AWT-EventQueue-0,6,main] at de.dfki.vsm.editor.EditorInstance.updateRecentProjects(EditorInstance.java:744)
+Updating recent projects with 'D:\GitHubOrg\KristinaRepository\VSM\res\prj\vsm' ''
+
+INFO to LOGFILE on Mon Jan 25 17:03:44 CET 2016 by de.dfki.vsm.util.log.LOGDefaultLogger in Thread[AWT-EventQueue-0,6,main] at de.dfki.vsm.editor.project.sceneflow.elements.ElementTree.refresh(SceneFlowElementPanel.java:313)
+Refreshing 'de.dfki.vsm.editor.project.sceneflow.elements.ElementTree[,0,0,0x0,invalid,alignmentX=0.0,alignmentY=0.0,border=javax.swing.border.EmptyBorder@40e4db00,flags=16777576,maximumSize=,minimumSize=,preferredSize=,editable=false,invokesStopCellEditing=false,largeModel=false,rootVisible=false,rowHeight=16,scrollsOnExpand=true,showsRootHandles=false,toggleClickCount=2,visibleRowCount=20]'
+
+INFO to LOGFILE on Mon Jan 25 17:04:02 CET 2016 by de.dfki.vsm.util.log.LOGDefaultLogger in Thread[AWT-EventQueue-0,6,main] at de.dfki.vsm.runtime.project.RunTimeProject.loadPlayers(RunTimeProject.java:758)
+Loading player 'eu.kristina.vsm.KristinaScenePlayer@5b13d5f0' with plugin config:
+<Player name="defaultsceneplayer" class="eu.kristina.vsm.KristinaScenePlayer">
+  <Feature key="vsm.agent.number" value="0"/>
+  <Feature key="vsm.agent.0.name" value="none"/>
+  <Feature key="vsm.agent.0.uaid" value="1"/>
+  <Feature key="vsm.agent.0.type" value="tcp"/>
+  <Feature key="vsm.agent.0.local.host" value="localhost"/>
+  <Feature key="vsm.agent.0.local.port" value="1100"/>
+  <Feature key="vsm.agent.0.remote.host" value="webglstudio.org"/>
+  <Feature key="vsm.agent.0.remote.port" value="9900"/>
+  <Feature key="vsm.agent.0.remote.flag" value="true"/>
+  <Feature key="ssi.service.url" value="http://137.250.171.230:11193/fusion/Service.svc/getCurrent"/>
+</Player>
+
+INFO to LOGFILE on Mon Jan 25 17:04:02 CET 2016 by de.dfki.vsm.util.log.LOGDefaultLogger in Thread[AWT-EventQueue-0,6,main] at eu.kristina.vsm.KristinaScenePlayer.launch(KristinaScenePlayer.java:77)
+Launching scene player 'eu.kristina.vsm.KristinaScenePlayer@5b13d5f0' with configuration:
+<Player name="defaultsceneplayer" class="eu.kristina.vsm.KristinaScenePlayer">
+  <Feature key="vsm.agent.number" value="0"/>
+  <Feature key="vsm.agent.0.name" value="none"/>
+  <Feature key="vsm.agent.0.uaid" value="1"/>
+  <Feature key="vsm.agent.0.type" value="tcp"/>
+  <Feature key="vsm.agent.0.local.host" value="localhost"/>
+  <Feature key="vsm.agent.0.local.port" value="1100"/>
+  <Feature key="vsm.agent.0.remote.host" value="webglstudio.org"/>
+  <Feature key="vsm.agent.0.remote.port" value="9900"/>
+  <Feature key="vsm.agent.0.remote.flag" value="true"/>
+  <Feature key="ssi.service.url" value="http://137.250.171.230:11193/fusion/Service.svc/getCurrent"/>
+</Player>
+
+INFO to LOGFILE on Mon Jan 25 17:04:02 CET 2016 by de.dfki.vsm.util.log.LOGDefaultLogger in Thread[Thread-269,6,main] at eu.kristina.eca.ECACommandClient.run(ECACommandClient.java:75)
+Reading Message'1453737729886'
+
+INFO to LOGFILE on Mon Jan 25 17:04:03 CET 2016 by de.dfki.vsm.util.log.LOGDefaultLogger in Thread[Thread-269,6,main] at eu.kristina.eca.ECACommandClient.run(ECACommandClient.java:75)
+Reading Message'ClientID: 0'
+
+INFO to LOGFILE on Mon Jan 25 17:04:03 CET 2016 by de.dfki.vsm.util.log.LOGDefaultLogger in Thread[Thread-269,6,main] at eu.kristina.eca.ECACommandClient.run(ECACommandClient.java:75)
+Reading Message'ClientID: hcm'
+
+INFO to LOGFILE on Mon Jan 25 17:04:09 CET 2016 by de.dfki.vsm.util.log.LOGDefaultLogger in Thread[AWT-EventQueue-0,6,main] at eu.kristina.vsm.KristinaScenePlayer.unload(KristinaScenePlayer.java:85)
+Unloading scene player 'eu.kristina.vsm.KristinaScenePlayer@5b13d5f0' with configuration:
+<Player name="defaultsceneplayer" class="eu.kristina.vsm.KristinaScenePlayer">
+  <Feature key="vsm.agent.number" value="0"/>
+  <Feature key="vsm.agent.0.name" value="none"/>
+  <Feature key="vsm.agent.0.uaid" value="1"/>
+  <Feature key="vsm.agent.0.type" value="tcp"/>
+  <Feature key="vsm.agent.0.local.host" value="localhost"/>
+  <Feature key="vsm.agent.0.local.port" value="1100"/>
+  <Feature key="vsm.agent.0.remote.host" value="webglstudio.org"/>
+  <Feature key="vsm.agent.0.remote.port" value="9900"/>
+  <Feature key="vsm.agent.0.remote.flag" value="true"/>
+  <Feature key="ssi.service.url" value="http://137.250.171.230:11193/fusion/Service.svc/getCurrent"/>
+</Player>
+
+SEVERE to LOGFILE on Mon Jan 25 17:04:09 CET 2016 by de.dfki.vsm.util.log.LOGDefaultLogger in Thread[Thread-269,6,main] at eu.kristina.eca.ECACommandClient.recv(ECACommandClient.java:111)
+java.net.SocketException: Socket closed
+
+INFO to LOGFILE on Mon Jan 25 17:04:09 CET 2016 by de.dfki.vsm.util.log.LOGDefaultLogger in Thread[AWT-EventQueue-0,6,main] at de.dfki.vsm.editor.project.sceneflow.elements.ElementTree.refresh(SceneFlowElementPanel.java:313)
+Refreshing 'de.dfki.vsm.editor.project.sceneflow.elements.ElementTree[,0,0,226x393,alignmentX=0.0,alignmentY=0.0,border=javax.swing.border.EmptyBorder@40e4db00,flags=16777576,maximumSize=,minimumSize=,preferredSize=,editable=false,invokesStopCellEditing=false,largeModel=false,rootVisible=false,rowHeight=16,scrollsOnExpand=true,showsRootHandles=false,toggleClickCount=2,visibleRowCount=20]'
+
+INFO to LOGFILE on Mon Jan 25 17:04:11 CET 2016 by de.dfki.vsm.util.log.LOGDefaultLogger in Thread[AWT-EventQueue-0,6,main] at de.dfki.vsm.runtime.project.RunTimeProject.writeProjectConfig(RunTimeProject.java:340)
+Saved project configuration file 'D:\GitHubOrg\KristinaRepository\VSM\res\prj\vsm\project.xml':
+<?xml version="1.0" encoding="UTF-8"?>
+<Project name="">
+  <Plugins>
+  </Plugins>
+  <Players>
+    <Player name="defaultsceneplayer" class="eu.kristina.vsm.KristinaScenePlayer">
+      <Feature key="vsm.agent.number" value="0"/>
+      <Feature key="vsm.agent.0.name" value="none"/>
+      <Feature key="vsm.agent.0.uaid" value="1"/>
+      <Feature key="vsm.agent.0.type" value="tcp"/>
+      <Feature key="vsm.agent.0.local.host" value="localhost"/>
+      <Feature key="vsm.agent.0.local.port" value="1100"/>
+      <Feature key="vsm.agent.0.remote.host" value="webglstudio.org"/>
+      <Feature key="vsm.agent.0.remote.port" value="9900"/>
+      <Feature key="vsm.agent.0.remote.flag" value="true"/>
+      <Feature key="ssi.service.url" value="http://137.250.171.230:11193/fusion/Service.svc/getCurrent"/>
+    </Player>
+  </Players>
+  <Agents>
+  </Agents>
+</Project>
+
+INFO to LOGFILE on Mon Jan 25 17:04:11 CET 2016 by de.dfki.vsm.util.log.LOGDefaultLogger in Thread[AWT-EventQueue-0,6,main] at de.dfki.vsm.runtime.project.RunTimeProject.writeSceneFlow(RunTimeProject.java:413)
+Saved sceneflow configuration file 'D:\GitHubOrg\KristinaRepository\VSM\res\prj\vsm\sceneflow.xml':
+KBM
+
+INFO to LOGFILE on Mon Jan 25 17:04:11 CET 2016 by de.dfki.vsm.util.log.LOGDefaultLogger in Thread[AWT-EventQueue-0,6,main] at de.dfki.vsm.runtime.project.RunTimeProject.writeSceneScript(RunTimeProject.java:481)
+Saved scenescript configuration file 'D:\GitHubOrg\KristinaRepository\VSM\res\prj\vsm\scenescript.xml':
+<SceneScript lower="0" upper="0">
+</SceneScript>
+
+INFO to LOGFILE on Mon Jan 25 17:04:11 CET 2016 by de.dfki.vsm.util.log.LOGDefaultLogger in Thread[AWT-EventQueue-0,6,main] at de.dfki.vsm.runtime.project.RunTimeProject.writeActiconConfig(RunTimeProject.java:552)
+Saved acticon configuration file 'D:\GitHubOrg\KristinaRepository\VSM\res\prj\vsm\acticon.xml':
+<Acticon>
+</Acticon>
+
+INFO to LOGFILE on Mon Jan 25 17:04:11 CET 2016 by de.dfki.vsm.util.log.LOGDefaultLogger in Thread[AWT-EventQueue-0,6,main] at de.dfki.vsm.runtime.project.RunTimeProject.writeVisiconConfig(RunTimeProject.java:692)
+Saved visicon configuration file 'D:\GitHubOrg\KristinaRepository\VSM\res\prj\vsm\visicon.xml':
+<Visicon>
+</Visicon>
+
+INFO to LOGFILE on Mon Jan 25 17:04:11 CET 2016 by de.dfki.vsm.util.log.LOGDefaultLogger in Thread[AWT-EventQueue-0,6,main] at de.dfki.vsm.runtime.project.RunTimeProject.writeGesticonConfig(RunTimeProject.java:623)
+Saved gesticon configuration file 'D:\GitHubOrg\KristinaRepository\VSM\res\prj\vsm\gesticon.xml':
+<Gesticon>
+</Gesticon>
+
+INFO to LOGFILE on Mon Jan 25 17:04:11 CET 2016 by de.dfki.vsm.util.log.LOGDefaultLogger in Thread[AWT-EventQueue-0,6,main] at de.dfki.vsm.model.project.EditorConfig.save(EditorConfig.java:249)
+Saved project configuration file 'D:\GitHubOrg\KristinaRepository\VSM\res\prj\vsm\editorconfig.xml':
+{autohidebottombar=true, num_magnets=8, grid=false, node_width=90, showvariables=true, frame_posy=0, frame_posx=0, scriptfonttype=Monospaced, shownodeid=true, showsceneeditor=true, visualization=true, frame_height=600, showgestures=true, launchPlayer=false, frame_name=SceneFlowEditor, showelementproperties=true, sceneflow_sceneeditor_ratio=0.75, node_height=90, scriptfonsize=14, frame_width=800, defaultsupernodename=default, visualizationtrace=false, grid_y=1, propertiesdividerlocation=757, grid_x=1, icon_file=res/img/icon.png, showsmartpathcalculations=false, showelements=true, frame_title=Visual SceneMaker, workspace_fontsize=16, showsceneelements=true, showscenefloweditor=true}
+
+INFO to LOGFILE on Mon Jan 25 17:04:11 CET 2016 by de.dfki.vsm.util.log.LOGDefaultLogger in Thread[AWT-EventQueue-0,6,main] at de.dfki.vsm.editor.EditorInstance.updateRecentProjects(EditorInstance.java:744)
+Updating recent projects with 'D:\GitHubOrg\KristinaRepository\VSM\res\prj\vsm' ''
+
+INFO to LOGFILE on Mon Jan 25 17:04:11 CET 2016 by de.dfki.vsm.util.log.LOGDefaultLogger in Thread[AWT-EventQueue-0,6,main] at de.dfki.vsm.editor.project.sceneflow.elements.ElementTree.refresh(SceneFlowElementPanel.java:313)
+Refreshing 'de.dfki.vsm.editor.project.sceneflow.elements.ElementTree[,0,0,226x393,alignmentX=0.0,alignmentY=0.0,border=javax.swing.border.EmptyBorder@40e4db00,flags=16777576,maximumSize=,minimumSize=,preferredSize=,editable=false,invokesStopCellEditing=false,largeModel=false,rootVisible=false,rowHeight=16,scrollsOnExpand=true,showsRootHandles=false,toggleClickCount=2,visibleRowCount=20]'
+

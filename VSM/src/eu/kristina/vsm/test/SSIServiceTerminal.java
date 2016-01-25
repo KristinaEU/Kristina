@@ -1,6 +1,6 @@
 package eu.kristina.vsm.test;
 
-import de.dfki.vsm.util.log.LOGConsoleLogger;
+import de.dfki.vsm.util.log.LOGDefaultLogger;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -17,8 +17,8 @@ import javax.json.JsonString;
 public final class SSIServiceTerminal extends Thread {
 
     // The logger instance
-    private final LOGConsoleLogger mLogger
-            = LOGConsoleLogger.getInstance();
+    private final LOGDefaultLogger mLogger
+            = LOGDefaultLogger.getInstance();
     // The console reader
     private final BufferedReader mReader;
     //

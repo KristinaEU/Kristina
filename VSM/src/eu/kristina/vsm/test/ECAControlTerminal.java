@@ -1,6 +1,6 @@
 package eu.kristina.vsm.test;
 
-import de.dfki.vsm.util.log.LOGConsoleLogger;
+import de.dfki.vsm.util.log.LOGDefaultLogger;
 import eu.kristina.eca.ECACommandClient;
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -12,8 +12,8 @@ import java.io.InputStreamReader;
 public final class ECAControlTerminal extends Thread {
 
     // The logger instance
-    private final LOGConsoleLogger mLogger
-            = LOGConsoleLogger.getInstance();
+    private final LOGDefaultLogger mLogger
+            = LOGDefaultLogger.getInstance();
     // The request client
     private final ECACommandClient mClient;
     // The console reader

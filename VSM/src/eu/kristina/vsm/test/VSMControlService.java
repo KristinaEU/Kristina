@@ -2,12 +2,10 @@ package eu.kristina.vsm.test;
 
 import com.sun.jersey.api.container.httpserver.HttpServerFactory;
 import com.sun.net.httpserver.HttpServer;
-import de.dfki.vsm.editor.EditorInstance;
 import de.dfki.vsm.runtime.RunTimeInstance;
 import de.dfki.vsm.runtime.project.RunTimeProject;
-import de.dfki.vsm.util.log.LOGConsoleLogger;
+import de.dfki.vsm.util.log.LOGDefaultLogger;
 import java.io.File;
-import javax.swing.SwingUtilities;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
@@ -21,8 +19,8 @@ import javax.ws.rs.core.MediaType;
 public class VSMControlService {
 
     // The logger instance
-    private static final LOGConsoleLogger sLogger
-            = LOGConsoleLogger.getInstance();
+    private static final LOGDefaultLogger sLogger
+            = LOGDefaultLogger.getInstance();
     // The runtime instance
     private static final RunTimeInstance sRunTime
             = RunTimeInstance.getInstance();

@@ -6,10 +6,9 @@ import de.dfki.vsm.runtime.project.RunTimeProject;
 import de.dfki.vsm.runtime.values.AbstractValue;
 import de.dfki.vsm.runtime.players.RunTimePlayer;
 import de.dfki.vsm.util.log.LOGConsoleLogger;
+import de.dfki.vsm.util.log.LOGDefaultLogger;
 import eu.kristina.eca.ECACommandClient;
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.net.URL;
 import java.util.HashMap;
 import java.util.LinkedList;
@@ -28,8 +27,8 @@ public final class KristinaScenePlayer implements RunTimePlayer {
     // The player instance
     public static KristinaScenePlayer sInstance = null;
     // The system logger
-    private final LOGConsoleLogger mLogger
-            = LOGConsoleLogger.getInstance();
+    private final LOGDefaultLogger mLogger
+            = LOGDefaultLogger.getInstance();
     // The runtime environment
     private final RunTimeInstance mRunTime
             = RunTimeInstance.getInstance();
