@@ -3,7 +3,7 @@
   <Plugins>
   </Plugins>
   <Players>
-    <Player name="defaultsceneplayer" class="eu.kristina.KristinaScenePlayer">
+    <Player name="defaultsceneplayer" class="eu.kristina.vsm.KristinaScenePlayer">
       <Feature key="vsm.agent.number" value="0"/>
       <Feature key="vsm.agent.0.name" value="none"/>
       <Feature key="vsm.agent.0.uaid" value="1"/>
@@ -13,6 +13,7 @@
       <Feature key="vsm.agent.0.remote.host" value="webglstudio.org"/>
       <Feature key="vsm.agent.0.remote.port" value="9900"/>
       <Feature key="vsm.agent.0.remote.flag" value="true"/>
+      <Feature key="ssi.service.url" value="http://137.250.171.230:11193/fusion/Service.svc/getCurrent"/>
     </Player>
   </Players>
   <Agents>

@@ -72,7 +72,6 @@ public final class ECACommandClient extends Thread {
             while (!mDone) {
                 final String line = recv();
                 mLogger.message("Reading Message'" + line + "'");
-
             }
         } catch (final Exception exc) {
             // Debug Some Information
@@ -85,7 +84,7 @@ public final class ECACommandClient extends Thread {
             try {
                 // Write message
                 mWriter.write(string);
-                mWriter.newLine();
+                //mWriter.newLine();
                 mWriter.flush();
                 // Return success
                 return true;
