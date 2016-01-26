@@ -1,4 +1,4 @@
-package eu.kristina.eca;
+package eu.kristina.vsm.owl;
 
 import de.dfki.vsm.util.log.LOGDefaultLogger;
 import java.io.BufferedReader;
@@ -11,7 +11,7 @@ import java.net.Socket;
 /**
  * @author Gregor Mehlmann
  */
-public final class ECACommandClient extends Thread {
+public final class OWLSocketHandler extends Thread {
 
     // The singelton logger instance
     private final LOGDefaultLogger mLogger
@@ -27,7 +27,7 @@ public final class ECACommandClient extends Thread {
     // The thread flag
     private volatile boolean mDone = false;
 
-    public ECACommandClient(
+    public OWLSocketHandler(
             final String host,
             final int port) {
         mHost = host;
@@ -88,8 +88,8 @@ public final class ECACommandClient extends Thread {
             try {
                 // Write message
                 mWriter.write(string);
-                //mWriter.newLine();
-                mWriter.flush();
+                mWriter.newLine();
+                mWriter.flush(); 
                 // Return success
                 return true;
             } catch (final IOException exc) {

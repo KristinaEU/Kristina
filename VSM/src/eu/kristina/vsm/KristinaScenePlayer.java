@@ -5,9 +5,9 @@ import de.dfki.vsm.runtime.RunTimeInstance;
 import de.dfki.vsm.runtime.project.RunTimeProject;
 import de.dfki.vsm.runtime.values.AbstractValue;
 import de.dfki.vsm.runtime.players.RunTimePlayer;
-import de.dfki.vsm.util.log.LOGConsoleLogger;
 import de.dfki.vsm.util.log.LOGDefaultLogger;
-import eu.kristina.eca.ECACommandClient;
+import eu.kristina.vsm.eca.ECASocketHandler;
+import eu.kristina.vsm.owl.OWLSocketHandler;
 import java.io.IOException;
 import java.net.URL;
 import java.util.HashMap;
@@ -39,7 +39,9 @@ public final class KristinaScenePlayer implements RunTimePlayer {
     // The project specific name
     private String mPlayerName;
     // The ECA command client
-    private ECACommandClient mClient;
+    private ECASocketHandler mECASocket;
+    // The OWL command client
+    private OWLSocketHandler mOWLSocket;
     // The SSI service url
     private String mSSIServiceURL;
     // Random number generator
@@ -69,10 +71,10 @@ public final class KristinaScenePlayer implements RunTimePlayer {
         // Initialize service url
         mSSIServiceURL = mPlayerConfig.getProperty("ssi.service.url");
         // Initialize the client
-        mClient = new ECACommandClient("webglstudio.org", 9900);
+        mECASocket = new ECASocketHandler("webglstudio.org", 9900);
         // Start the client
-        mClient.start();
-        mClient.init();
+        mECASocket.start();
+        mECASocket.init();
         // Print some information
         mLogger.message("Launching scene player '" + this + "' with configuration:\n" + mPlayerConfig);
         // Return true at success
@@ -84,11 +86,11 @@ public final class KristinaScenePlayer implements RunTimePlayer {
         // Print some information
         mLogger.message("Unloading scene player '" + this + "' with configuration:\n" + mPlayerConfig);
         //
-        mClient.abort();
-        //
+        mECASocket.abort();
+        mOWLSocket.abort();       
         try {
-            mClient.join();
-
+            mECASocket.join();
+            mOWLSocket.join();
         } catch (final InterruptedException exc) {
             mLogger.failure(exc.toString());
         }
@@ -101,21 +103,26 @@ public final class KristinaScenePlayer implements RunTimePlayer {
         // Do nothing here ...
     }
 
+    
+    public final void forward() {
+        mOWLSocket.send("Hallo Ulm!");
+    }
+    
     public final void blink(final String clientid) {
-        mClient.send(clientid + " " + "blink");
+        mECASocket.send(clientid + " " + "blink");
     }
 
     public final void face(
             final String clientid,
             final float activation,
             final float evaluation) {
-        mClient.send(clientid + " " + "face" + " " + activation + " " + evaluation);
+        mECASocket.send(clientid + " " + "face" + " " + activation + " " + evaluation);
     }
 
     public final void text(
             final String clientid,
             final String ttstext) {
-        mClient.send(clientid + " " + "text" + " " + ttstext);
+        mECASocket.send(clientid + " " + "text" + " " + ttstext);
     }
 
     public final float randFloat() {

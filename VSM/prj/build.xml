@@ -175,7 +175,7 @@
         <java classname="eu.kristina.vsm.test.VSMControlService" fork="true">
             <classpath refid="clspath"/>
             <arg line="http://137.250.171.120:11223/"/>
-            <!--<arg line="http://http://137.250.171.231:11223/"/>-->
+            <!--<arg line="http://137.250.171.231:11223/"/>-->
         </java>
     </target>  
     <!-- Execute Project -->

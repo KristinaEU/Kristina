@@ -14,6 +14,12 @@
       <Feature key="vsm.agent.0.remote.port" value="9900"/>
       <Feature key="vsm.agent.0.remote.flag" value="true"/>
       <Feature key="ssi.service.url" value="http://137.250.171.230:11193/fusion/Service.svc/getCurrent"/>
+      
+      <Feature key="owl.socket.local.host" value="137.250.171.120"/>
+      <Feature key="owl.socket.local.port" value="112230"/>
+      <Feature key="owl.socket.remote.host" value="137.250.171.120"/>
+      <Feature key="owl.socket.remote.port" value="112230"/>
+      
     </Player>
   </Players>
   <Agents>

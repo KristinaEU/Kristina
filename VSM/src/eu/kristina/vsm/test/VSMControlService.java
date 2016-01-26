@@ -7,6 +7,7 @@ import de.dfki.vsm.runtime.RunTimeInstance;
 import de.dfki.vsm.runtime.project.RunTimeProject;
 import de.dfki.vsm.util.log.LOGDefaultLogger;
 import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -31,13 +32,35 @@ public class VSMControlService {
     // The project instance
     private static final RunTimeProject sProject
             = new RunTimeProject(new File("res/prj/vsm"));
+    //
+    private static FileWriter sLogFile;
+
+    public static void log(final String text) {
+        try {
+            sLogFile.write(text);
+            sLogFile.write("\r\n");
+            sLogFile.flush();
+        } catch (final IOException exc) {
+            sLogger.failure(exc.toString());
+        }
+
+    }
+
+    static {
+        try {
+            sLogFile = new FileWriter("./log/klog.log");
+        } catch (final IOException exc) {
+            sLogger.failure(exc.toString());
+        }
+
+    }
 
     @GET
     @Produces(MediaType.TEXT_PLAIN)
     public synchronized String vsm() {
         return String.valueOf(sRunTime.isRunning(sProject));
     }
-    
+
     @GET
     @Path("{key}")
     @Produces(MediaType.TEXT_PLAIN)

@@ -1,7 +1,7 @@
 package eu.kristina.vsm.test;
 
 import de.dfki.vsm.util.log.LOGDefaultLogger;
-import eu.kristina.eca.ECACommandClient;
+import eu.kristina.vsm.eca.ECASocketHandler;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -15,7 +15,7 @@ public final class ECAControlTerminal extends Thread {
     private final LOGDefaultLogger mLogger
             = LOGDefaultLogger.getInstance();
     // The request client
-    private final ECACommandClient mClient;
+    private final ECASocketHandler mClient;
     // The console reader
     private final BufferedReader mReader;
     // The thread flag
@@ -23,7 +23,7 @@ public final class ECAControlTerminal extends Thread {
 
     public ECAControlTerminal(final String host, final int port) {
         // Initialize the client
-        mClient = new ECACommandClient(host, port);
+        mClient = new ECASocketHandler(host, port);
         // Initialize the reader
         mReader = new BufferedReader(
                 new InputStreamReader(System.in));
