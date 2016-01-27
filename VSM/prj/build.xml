@@ -164,10 +164,25 @@
         </java>
     </target>  
     <!-- Execute Project -->
-    <target name="test">
-        <java classname="eu.kristina.eca.ECABehaviorManager" fork="true">
+    <target name="test-eca">
+        <java classname="eu.kristina.vsm.test.ECAControlTerminal" fork="true">
             <classpath refid="clspath"/>
             <arg line="webglstudio.org 9900"/>
+        </java>
+    </target>  
+    <!-- Execute Project -->
+    <target name="service">
+        <java classname="eu.kristina.vsm.test.VSMControlService" fork="true">
+            <classpath refid="clspath"/>
+            <arg line="http://137.250.171.120:11223/"/>
+            <!--<arg line="http://137.250.171.231:11223/"/>-->
+        </java>
+    </target>  
+    <!-- Execute Project -->
+    <target name="test-ssi">
+        <java classname="eu.kristina.vsm.test.SSIServiceTerminal" fork="true">
+            <classpath refid="clspath"/>
+            <arg line="http://137.250.171.230:11193/fusion/Service.svc/getCurrent"/>
         </java>
     </target>  
     <!-- Execute Project -->
