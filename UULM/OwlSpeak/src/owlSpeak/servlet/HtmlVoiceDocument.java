@@ -5,8 +5,6 @@ import java.io.OutputStream;
 import java.util.Random;
 import java.util.Vector;
 
-import javax.servlet.http.HttpServletResponse;
-
 import org.jdom.DocType;
 import org.jdom.Document;
 import org.jdom.Element;
@@ -198,21 +196,6 @@ public class HtmlVoiceDocument extends Document implements OwlDocument {
 		return VDoc;
 	}
 
-	public void output(HttpServletResponse response) {
-		XMLOutputter outputter = new XMLOutputter();
-		outputter.setFormat(Format.getPrettyFormat());
-		OutputStream output;
-		try {
-			output = response.getOutputStream();
-			response.setContentType("text/html");
-			response.setHeader("Cache-Control", "no-cache");
-			outputter.output(this, output);
-			output.flush();
-			output.close();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-	}
 
 	public OwlDocument buildSolveConflict(String utterance, Vector<String[]> grammar, Agenda actualAgenda, String whereAmI, String user){
 		HtmlVoiceDocument VDoc = new HtmlVoiceDocument();

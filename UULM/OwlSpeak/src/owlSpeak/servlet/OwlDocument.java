@@ -2,8 +2,6 @@ package owlSpeak.servlet;
 
 import java.util.Vector;
 
-import javax.servlet.http.HttpServletResponse;
-
 import org.jdom.Element;
 
 import owlSpeak.Agenda;
@@ -60,12 +58,6 @@ public interface OwlDocument {
 	 * @param user the name of the user
 	 */
 	public void buildUtterance(Element element, Vector <CoreMove> utterance, Agenda actualAgenda, String whereAmI, String user);
-
-	/**
-	 * flushes the prepared OwlDocument to the ServletResponse
-	 * @param response the servlet response
-	 */
-	public void output(HttpServletResponse response);
 		
 	/**
 	 * the main function to fill the document with the given vectors of CoreMoves.
