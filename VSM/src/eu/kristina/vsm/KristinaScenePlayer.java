@@ -9,15 +9,8 @@ import de.dfki.vsm.util.log.LOGDefaultLogger;
 import eu.kristina.vsm.eca.ECASocketHandler;
 import eu.kristina.vsm.owl.OWLSocketHandler;
 import eu.kristina.vsm.ssi.SSISocketHandler;
-import java.io.IOException;
-import java.net.URL;
 import java.util.LinkedList;
 import java.util.Random;
-import javax.json.Json;
-import javax.json.JsonNumber;
-import javax.json.JsonObject;
-import javax.json.JsonReader;
-import javax.json.JsonString;
 
 /**
  * @author Gregor Mehlmann
@@ -58,8 +51,7 @@ public final class KristinaScenePlayer implements RunTimePlayer {
     private Integer mOWLSocketRemotePort;
     private Boolean mOWLSocketRemoteFlag;
     private OWLSocketHandler mOWLSocket;
-
-    // A Random number generator
+    // A random number generator
     private final Random mRandom = new Random();
 
     // Get the singelton player
@@ -125,7 +117,8 @@ public final class KristinaScenePlayer implements RunTimePlayer {
                 + "OWL Socket Handler Remote Flag : '" + mOWLSocketRemoteFlag + "'" + "\r\n");
 
         // Initialize the ECA socket
-        mECASocket = new ECASocketHandler(mECASocketRemoteHost, mECASocketRemotePort);
+        mECASocket = new ECASocketHandler(
+                this, mECASocketRemoteHost, mECASocketRemotePort);
         mECASocket.start();
 
         // Initialize the SSI socket
@@ -169,26 +162,6 @@ public final class KristinaScenePlayer implements RunTimePlayer {
         return true;
     }
 
-    // Set a string variable via runtime
-    public final void set(final String name, final String value) {
-        mRunTime.setVariable(mProject, name, value);
-    }
-
-    // Set a boolean variable via runtime
-    public final void set(final String name, final Boolean value) {
-        mRunTime.setVariable(mProject, name, value);
-    }
-
-    // Set a record variable via runtime
-    public final void set(final String name, final String member, final Float value) {
-        mRunTime.setVariable(mProject, name, member, value);
-    }
-
-    @Override
-    public final void play(final String name, final LinkedList<AbstractValue> args) {
-        // Do nothing here ...
-    }
-
     public final void blink(final String clientid) {
         mECASocket.send(clientid + " " + "blink");
     }
@@ -214,32 +187,81 @@ public final class KristinaScenePlayer implements RunTimePlayer {
         return mRandom.nextInt(bound);
     }
 
-    public final void get() {
-        try {
-            // Create the URL with the service
-            final URL url = new URL(mSSIRestServiceURL);
-            // Create the URL stream reader 
-            final JsonReader reader = Json.createReader(url.openStream());
-            // Read a JSON object from URL
-            final JsonObject object = reader.readObject();
-            // Parse the individual fields 
-            final JsonNumber jsonArousal = object.getJsonNumber("Arousal");
-            final JsonNumber jsonValence = object.getJsonNumber("Valence");
-            final JsonString jsonError = object.getJsonString("Error");
-            // Convert the single objects             
-            final float arousal = jsonArousal.bigDecimalValue().floatValue();
-            final float valence = jsonValence.bigDecimalValue().floatValue();
-            final String error = jsonError.getString();
-            // Print some information
-            //mLogger.message("Valence:" + valence + " Arousal:" + arousal + " Error:" + error);
-            // Set according variables
-            mRunTime.setVariable(mProject, "Valence", valence);
-            mRunTime.setVariable(mProject, "Arousal", arousal);
-            mRunTime.setVariable(mProject, "Error", error);
-
-        } catch (final IOException exc) {
-            mLogger.failure(exc.toString());
+    // Set a string variable via runtime
+    public final void set(final String name, final String value) {
+        if (mRunTime.hasVariable(mProject, name)) {
+            mRunTime.setVariable(mProject, name, value);
+        } else {
+            mLogger.failure("Error: Variable '" + name + "' does not exist");
         }
+    }
+
+    // Set a string variable via runtime
+    public final void set(final String name, final Float value) {
+        if (mRunTime.hasVariable(mProject, name)) {
+            mRunTime.setVariable(mProject, name, value);
+        } else {
+            mLogger.failure("Error: Variable '" + name + "' does not exist");
+        }
+    }
+
+    // Set a boolean variable via runtime
+    public final void set(final String name, final Integer value) {
+        if (mRunTime.hasVariable(mProject, name)) {
+            mRunTime.setVariable(mProject, name, value);
+        } else {
+            mLogger.failure("Error: Variable '" + name + "' does not exist");
+        }
+    }
+
+    // Set a boolean variable via runtime
+    public final void set(final String name, final Boolean value) {
+        if (mRunTime.hasVariable(mProject, name)) {
+            mRunTime.setVariable(mProject, name, value);
+        } else {
+            mLogger.failure("Error: Variable '" + name + "' does not exist");
+        }
+    }
+
+    // Set a record variable via runtime
+    public final void set(final String name, final String member, final String value) {
+        if (mRunTime.hasVariable(mProject, name, member)) {
+            mRunTime.setVariable(mProject, name, member, value);
+        } else {
+            mLogger.failure("Error: Variable '" + name + "." + member + "' does not exist");
+        }
+    }
+
+    // Set a record variable via runtime
+    public final void set(final String name, final String member, final Float value) {
+        if (mRunTime.hasVariable(mProject, name, member)) {
+            mRunTime.setVariable(mProject, name, member, value);
+        } else {
+            mLogger.failure("Error: Variable '" + name + "." + member + "' does not exist");
+        }
+    }
+
+    // Set a record variable via runtime
+    public final void set(final String name, final String member, final Integer value) {
+        if (mRunTime.hasVariable(mProject, name, member)) {
+            mRunTime.setVariable(mProject, name, member, value);
+        } else {
+            mLogger.failure("Error: Variable '" + name + "." + member + "' does not exist");
+        }
+    }
+
+    // Set a record variable via runtime
+    public final void set(final String name, final String member, final Boolean value) {
+        if (mRunTime.hasVariable(mProject, name, member)) {
+            mRunTime.setVariable(mProject, name, member, value);
+        } else {
+            mLogger.failure("Error: Variable '" + name + "." + member + "' does not exist");
+        }
+    }
+
+    @Override
+    public final void play(final String name, final LinkedList<AbstractValue> args) {
+        // Do nothing here ...
     }
 
 }

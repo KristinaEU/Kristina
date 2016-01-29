@@ -26,9 +26,6 @@ public final class SSISocketHandler extends Thread {
     // The singelton logger instance
     private final LOGDefaultLogger mLogger
             = LOGDefaultLogger.getInstance();
-    // The VSM runtime environment
-    private final RunTimeInstance mRunTime
-            = RunTimeInstance.getInstance();
     // The thread termination flag
     private boolean mDone = false;
     // The datagram connection 
@@ -147,14 +144,14 @@ public final class SSISocketHandler extends Thread {
                             if (name.equalsIgnoreCase("voice") || name.equalsIgnoreCase("vad")) {
                                 if (state.equalsIgnoreCase("completed")) {
                                     // User stopped speaking
-                                    mLogger.message("User stopped speaking");
+                                    //mLogger.message("User stopped speaking");
                                     // Try to set a variable
                                     if (mPlayer != null) {
                                         mPlayer.set("UserIsSpeaking", false);
                                     }
                                 } else if (state.equalsIgnoreCase("continued")) {
                                     // User started speaking
-                                    mLogger.message("User started speaking");
+                                    //mLogger.message("User started speaking");
                                     // Try to set a variable
                                     if (mPlayer != null) {
                                         mPlayer.set("UserIsSpeaking", true);
@@ -168,7 +165,7 @@ public final class SSISocketHandler extends Thread {
                                         // Just get the content
                                         final String text = event.getTextContent();
                                         // User said something
-                                        mLogger.message("User just said '" + text + "'");
+                                        //mLogger.message("User just said '" + text + "'");
                                         // Try to set a variable
                                         if (mPlayer != null) {
                                             mPlayer.set("UserDialogMove", text);
@@ -197,12 +194,9 @@ public final class SSISocketHandler extends Thread {
                                             final String key = tuple.getAttribute("string");
                                             final Double val = Double.parseDouble(tuple.getAttribute("value"));
                                             // User said something
-                                            mLogger.message("Fusion result '" + key + "' is '" + val + "'");
+                                            //mLogger.message("Fusion result '" + key + "' is '" + val + "'");
                                             // Try to set a variable
                                             if (mPlayer != null) {
-                                                // Now convert the dimensions 
-                                                //final String key = (key.equalsIgnoreCase("dim#0") ? "Valence"
-                                                //        : (key.equalsIgnoreCase("dim#1") ? "Arousal" : key));
                                                 // Append this to the record
                                                 // String.format(Locale.US, "%.6f", val)
                                                 mPlayer.set("UserAffectState", key, val.floatValue());

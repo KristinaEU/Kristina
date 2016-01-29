@@ -1,6 +1,8 @@
 package eu.kristina.vsm.eca;
 
+import de.dfki.vsm.runtime.RunTimeInstance;
 import de.dfki.vsm.util.log.LOGDefaultLogger;
+import eu.kristina.vsm.KristinaScenePlayer;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.IOException;
@@ -16,6 +18,9 @@ public final class ECASocketHandler extends Thread {
     // The singelton logger instance
     private final LOGDefaultLogger mLogger
             = LOGDefaultLogger.getInstance();
+    // The VSM runtime environment
+    private final RunTimeInstance mRunTime
+            = RunTimeInstance.getInstance();
     // The client socket
     private Socket mSocket;
     // The remote adress
@@ -26,11 +31,16 @@ public final class ECASocketHandler extends Thread {
     private BufferedWriter mWriter;
     // The thread flag
     private volatile boolean mDone = false;
+    // The scene player object
+    private final KristinaScenePlayer mPlayer;
 
     // Create the handler thread
     public ECASocketHandler(
-            final String host,
-            final int port) {
+            final KristinaScenePlayer player,
+            final String host, final Integer port) {
+        // Initialize the player
+        mPlayer = player;
+        // Initialize the adress
         mHost = host;
         mPort = port;
     }
@@ -74,9 +84,18 @@ public final class ECASocketHandler extends Thread {
     public final void run() {
         // Init the handshake
         send("12345");
-        // TODO: Receive the handshake here
-
-        //
+        // Receive the handshake 
+        final String hash = recv().substring(0).trim();
+        final String name = recv().substring(10).trim();
+        // Print some information
+        mLogger.message("Reading handshake hash '" + hash + "' and client id '" + name + " '");
+        // Set the variables then
+        if (mPlayer != null) {
+            mPlayer.set("ThisAgentStatus", "Hash", hash);
+            mPlayer.set("ThisAgentStatus", "Name", name);
+            // ATTENTION: Could be that the sceneflow is not yet running? 
+        }
+        // Now read new messages
         try {
             while (!mDone) {
                 final String line = recv();

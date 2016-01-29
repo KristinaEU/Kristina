@@ -23,7 +23,7 @@ public final class ECASocketTerminal extends Thread {
     // Create the terminal thread
     public ECASocketTerminal(final String host, final int port) {
         // Initialize the client
-        mClient = new ECASocketHandler(host, port);
+        mClient = new ECASocketHandler(null, host, port);
         // Initialize the reader
         mReader = new BufferedReader(
                 new InputStreamReader(System.in));
