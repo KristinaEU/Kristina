@@ -27,6 +27,7 @@ public final class ECASocketHandler extends Thread {
     // The thread flag
     private volatile boolean mDone = false;
 
+    // Create the handler thread
     public ECASocketHandler(
             final String host,
             final int port) {
@@ -34,6 +35,7 @@ public final class ECASocketHandler extends Thread {
         mPort = port;
     }
 
+    // Start the handler thread
     @Override
     public final void start() {
         try {
@@ -42,6 +44,8 @@ public final class ECASocketHandler extends Thread {
             // Establish streams
             mReader = new BufferedReader(new InputStreamReader(mSocket.getInputStream(), "UTF-8"));
             mWriter = new BufferedWriter(new OutputStreamWriter(mSocket.getOutputStream(), "UTF-8"));
+            // Print some information
+            mLogger.message("Starting ECA socket handler " + mSocket.getLocalSocketAddress() + " " + mSocket.getRemoteSocketAddress());
         } catch (final IOException exc) {
             mLogger.failure(exc.toString());
         }
@@ -49,25 +53,30 @@ public final class ECASocketHandler extends Thread {
         super.start();
     }
 
-    public final void init() {
-        send("12345");
-    }
-
+    // Abort the handler thread
     public final void abort() {
-        // Set the flag
+        // Set the termination flag
         mDone = true;
-        // Close socket 
-        if ((mSocket != null) && !mSocket.isClosed()) {
+        // Eventually close the socket
+        if (mSocket != null && !mSocket.isClosed()) {
             try {
                 mSocket.close();
             } catch (final IOException exc) {
                 mLogger.failure(exc.toString());
             }
         }
+        // Interrupt it if sleeping
+        interrupt();
     }
 
+    // Execute the handler thread
     @Override
     public final void run() {
+        // Init the handshake
+        send("12345");
+        // TODO: Receive the handshake here
+
+        //
         try {
             while (!mDone) {
                 final String line = recv();
@@ -83,13 +92,14 @@ public final class ECASocketHandler extends Thread {
         }
     }
 
+    // Send a message via handler
     public final boolean send(final String string) {
         if (mWriter != null) {
             try {
                 // Write message
                 mWriter.write(string);
                 mWriter.newLine();
-                mWriter.flush(); 
+                mWriter.flush();
                 // Return success
                 return true;
             } catch (final IOException exc) {
@@ -100,6 +110,7 @@ public final class ECASocketHandler extends Thread {
         return false;
     }
 
+    // Receive message via handler
     public final String recv() {
         if (mReader != null) {
             try {

@@ -1,32 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<SceneFlow id="KBM" name="KBM" comment="KBM" hideLocalVar="false" hideGlobalVar="false" exhaustive="false" preserving="false" modifDate="Di, 26 Jan 2016 09:40:53" start="S1;S2;" context="" package="" xmlns="xml.sceneflow.dfki.de" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="xml.sceneflow.dfki.de res/xsd/sceneflow.xsd">
+<SceneFlow id="KBM" name="KBM" comment="KBM" hideLocalVar="false" hideGlobalVar="false" exhaustive="false" preserving="false" modifDate="Fr, 29 Jan 2016 11:34:04" start="N15;" context="" package="" xmlns="xml.sceneflow.dfki.de" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="xml.sceneflow.dfki.de res/xsd/sceneflow.xsd">
   <Define>
+    <StructType name="AffectState">
+      <Member type="Float" name ="Valence"/>
+      <Member type="Float" name ="Arousal"/>
+    </StructType>
   </Define>
   <Declare>
-    <Variable type="Float" name ="Valence">
-      <Float value="0.0"/>
-    </Variable>
-    <Variable type="Float" name ="Arousal">
-      <Float value="0.0"/>
-    </Variable>
-    <Variable type="Int" name ="Blinking">
-      <Int value="0"/>
-    </Variable>
-    <Variable type="String" name ="Error">
+    <Variable type="String" name ="UserDialogMove">
       <String value=""/>
     </Variable>
-    <Variable type="String" name ="Status">
-      <String value=""/>
+    <Variable type="Bool" name ="UserIsSpeaking">
+      <Bool value="false"/>
+    </Variable>
+    <Variable type="AffectState" name ="UserAffectState">
+      <Struct>
+        <Assign>
+          <Variable name="Valence"/>
+          <Expression>
+            <Float value="0.0"/>
+          </Expression>
+        </Assign>
+        <Assign>
+          <Variable name="Arousal"/>
+          <Expression>
+            <Float value="0.0"/>
+          </Expression>
+        </Assign>
+      </Struct>
     </Variable>
   </Declare>
   <Commands>
   </Commands>
   <LocalVariableBadge>
-    <Position x-pos="225" y-pos="217"/>
+    <Position x-pos="128" y-pos="327"/>
   </LocalVariableBadge>
   <GlobalVariableBadge>
     <Position x-pos="10" y-pos="10"/>
   </GlobalVariableBadge>
+  <Node id="N15" name="N15" exhaustive="false" preserving="false" history="false">
+    <Define>
+    </Define>
+    <Declare>
+    </Declare>
+    <Commands>
+    </Commands>
+    <TEdge target="N15" start="" timeout="10000">
+    <Graphics>
+      <Arrow>
+        <Point x-pos="357" y-pos="122" control-x-pos="381" control-y-pos="36"/>
+        <Point x-pos="384" y-pos="142" control-x-pos="462" control-y-pos="96"/>
+      </Arrow>
+    </Graphics>
+    </TEdge>
+    <Graphics>
+      <Position x-pos="300" y-pos="120"/>
+    </Graphics>
+  </Node>
   <SuperNode id="S7" name="Model" comment="" exhaustive="false" preserving="false" hideLocalVar="false" hideGlobalVar="false" start="S3;S4;">
     <Define>
     </Define>

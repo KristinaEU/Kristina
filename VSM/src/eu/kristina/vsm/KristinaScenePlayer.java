@@ -8,9 +8,9 @@ import de.dfki.vsm.runtime.players.RunTimePlayer;
 import de.dfki.vsm.util.log.LOGDefaultLogger;
 import eu.kristina.vsm.eca.ECASocketHandler;
 import eu.kristina.vsm.owl.OWLSocketHandler;
+import eu.kristina.vsm.ssi.SSISocketHandler;
 import java.io.IOException;
 import java.net.URL;
-import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Random;
 import javax.json.Json;
@@ -24,35 +24,45 @@ import javax.json.JsonString;
  */
 public final class KristinaScenePlayer implements RunTimePlayer {
 
-    // The player instance
+    // The singelton player instance
     public static KristinaScenePlayer sInstance = null;
-    // The system logger
+    // The singelton logger instance
     private final LOGDefaultLogger mLogger
             = LOGDefaultLogger.getInstance();
-    // The runtime environment
+    // The VSM runtime environment
     private final RunTimeInstance mRunTime
             = RunTimeInstance.getInstance();
     // The player's runtime project 
     private RunTimeProject mProject;
-    // The project specific config
+    // The project's specific config
     private PlayerConfig mPlayerConfig;
-    // The project specific name
+    // The project's specific name
     private String mPlayerName;
-    // The ECA command client
+    // The SSI rest service url
+    private String mSSIRestServiceURL;
+    // The ECA socket handler
+    private String mECASocketRemoteHost;
+    private Integer mECASocketRemotePort;
     private ECASocketHandler mECASocket;
-    // The OWL command client
+    // The SSI socket handler
+    private String mSSISocketLocalHost;
+    private Integer mSSISocketLocalPort;
+    private String mSSISocketRemoteHost;
+    private Integer mSSISocketRemotePort;
+    private Boolean mSSISocketRemoteFlag;
+    private SSISocketHandler mSSISocket;
+    // The OWL socket handler
+    private String mOWLSocketLocalHost;
+    private Integer mOWLSocketLocalPort;
+    private String mOWLSocketRemoteHost;
+    private Integer mOWLSocketRemotePort;
+    private Boolean mOWLSocketRemoteFlag;
     private OWLSocketHandler mOWLSocket;
-    // The SSI service url
-    private String mSSIServiceURL;
-    // Random number generator
+
+    // A Random number generator
     private final Random mRandom = new Random();
-    // The queue of waiting tasks
-    private final HashMap<String, Thread> mTaskQueue
-            = new HashMap<>();
 
-    private KristinaScenePlayer() {
-    }
-
+    // Get the singelton player
     public static synchronized KristinaScenePlayer getInstance() {
         if (sInstance == null) {
             sInstance = new KristinaScenePlayer();
@@ -60,6 +70,7 @@ public final class KristinaScenePlayer implements RunTimePlayer {
         return sInstance;
     }
 
+    // Launch the VSM project
     @Override
     public final boolean launch(final RunTimeProject project) {
         // Initialize the project
@@ -68,34 +79,109 @@ public final class KristinaScenePlayer implements RunTimePlayer {
         mPlayerName = project.getPlayerName(this);
         // Initialize the config
         mPlayerConfig = project.getPlayerConfig(mPlayerName);
-        // Initialize service url
-        mSSIServiceURL = mPlayerConfig.getProperty("ssi.service.url");
-        // Initialize the client
-        mECASocket = new ECASocketHandler("webglstudio.org", 9900);
-        // Start the client
-        mECASocket.start();
-        mECASocket.init();
+
+        // Get the SSI rest service
+        mSSIRestServiceURL = mPlayerConfig.getProperty("ssi.rest.service.url");
+
+        // Get the ECA configuration
+        mECASocketRemoteHost = mPlayerConfig.getProperty("eca.socket.remote.host");
+        mECASocketRemotePort = Integer.parseInt(
+                mPlayerConfig.getProperty("eca.socket.remote.port"));
+
+        // Get the SSI configuration
+        mSSISocketLocalHost = mPlayerConfig.getProperty("ssi.socket.local.host");
+        mSSISocketLocalPort = Integer.parseInt(
+                mPlayerConfig.getProperty("ssi.socket.local.port"));
+        mSSISocketRemoteHost = mPlayerConfig.getProperty("ssi.socket.remote.host");
+        mSSISocketRemotePort = Integer.parseInt(
+                mPlayerConfig.getProperty("ssi.socket.remote.port"));
+        mSSISocketRemoteFlag = Boolean.parseBoolean(
+                mPlayerConfig.getProperty("ssi.socket.remote.flag"));
+
+        // Get the OWL configuration    
+        mOWLSocketLocalHost = mPlayerConfig.getProperty("owl.socket.local.host");
+        mOWLSocketLocalPort = Integer.parseInt(
+                mPlayerConfig.getProperty("owl.socket.local.port"));
+        mOWLSocketRemoteHost = mPlayerConfig.getProperty("owl.socket.remote.host");
+        mOWLSocketRemotePort = Integer.parseInt(
+                mPlayerConfig.getProperty("owl.socket.remote.port"));
+        mOWLSocketRemoteFlag = Boolean.parseBoolean(
+                mPlayerConfig.getProperty("owl.socket.remote.flag"));
+
         // Print some information
-        mLogger.message("Launching scene player '" + this + "' with configuration:\n" + mPlayerConfig);
+        mLogger.message(""
+                + "SSI Rest Service URL : '" + mSSIRestServiceURL + "'" + "\r\n"
+                + "ECA Socket Handler Remote Host : '" + mECASocketRemoteHost + "'" + "\r\n"
+                + "ECA Socket Handler Remote Port : '" + mECASocketRemotePort + "'" + "\r\n"
+                + "SSI Socket Handler Local Host  : '" + mSSISocketLocalHost + "'" + "\r\n"
+                + "SSI Socket Handler Local Port  : '" + mSSISocketLocalPort + "'" + "\r\n"
+                + "SSI Socket Handler Remote Host : '" + mSSISocketRemoteHost + "'" + "\r\n"
+                + "SSI Socket Handler Remote Port : '" + mSSISocketRemotePort + "'" + "\r\n"
+                + "SSI Socket Handler Remote Flag : '" + mSSISocketRemoteFlag + "'" + "\r\n"
+                + "OWL Socket Handler Local Host  : '" + mOWLSocketLocalHost + "'" + "\r\n"
+                + "OWL Socket Handler Local Port  : '" + mOWLSocketLocalPort + "'" + "\r\n"
+                + "OWL Socket Handler Remote Host : '" + mOWLSocketRemoteHost + "'" + "\r\n"
+                + "OWL Socket Handler Remote Port : '" + mOWLSocketRemotePort + "'" + "\r\n"
+                + "OWL Socket Handler Remote Flag : '" + mOWLSocketRemoteFlag + "'" + "\r\n");
+
+        // Initialize the ECA socket
+        mECASocket = new ECASocketHandler(mECASocketRemoteHost, mECASocketRemotePort);
+        mECASocket.start();
+
+        // Initialize the SSI socket
+        mSSISocket = new SSISocketHandler(this,
+                mSSISocketLocalHost, mSSISocketLocalPort,
+                mSSISocketRemoteHost, mSSISocketRemotePort,
+                mSSISocketRemoteFlag);
+        mSSISocket.start();
+
+        // Initialize the OWL socket
+        mOWLSocket = new OWLSocketHandler(this,
+                mOWLSocketLocalHost, mOWLSocketLocalPort,
+                mOWLSocketRemoteHost, mOWLSocketRemotePort,
+                mOWLSocketRemoteFlag);
+        //mOWLSocket.start();
+
+        // Print some information
+        mLogger.message("Launching KRISTINA scene player '" + this + "' with configuration:\n" + mPlayerConfig);
         // Return true at success
         return true;
     }
 
+    // Unload the VSM project
     @Override
     public final boolean unload() {
-        // Print some information
-        mLogger.message("Unloading scene player '" + this + "' with configuration:\n" + mPlayerConfig);
-        //
+        // Abort running handlers
         mECASocket.abort();
-        mOWLSocket.abort();       
+        mOWLSocket.abort();
+        mSSISocket.abort();
+        // Join with the handlers        
         try {
             mECASocket.join();
             mOWLSocket.join();
+            mSSISocket.join();
         } catch (final InterruptedException exc) {
             mLogger.failure(exc.toString());
         }
+        // Print some information
+        mLogger.message("Unloading KRISTINA scene player '" + this + "' with configuration:\n" + mPlayerConfig);
         // Return true at success
         return true;
+    }
+
+    // Set a string variable via runtime
+    public final void set(final String name, final String value) {
+        mRunTime.setVariable(mProject, name, value);
+    }
+
+    // Set a boolean variable via runtime
+    public final void set(final String name, final Boolean value) {
+        mRunTime.setVariable(mProject, name, value);
+    }
+
+    // Set a record variable via runtime
+    public final void set(final String name, final String member, final Float value) {
+        mRunTime.setVariable(mProject, name, member, value);
     }
 
     @Override
@@ -103,11 +189,6 @@ public final class KristinaScenePlayer implements RunTimePlayer {
         // Do nothing here ...
     }
 
-    
-    public final void forward() {
-        mOWLSocket.send("Hallo Ulm!");
-    }
-    
     public final void blink(final String clientid) {
         mECASocket.send(clientid + " " + "blink");
     }
@@ -136,7 +217,7 @@ public final class KristinaScenePlayer implements RunTimePlayer {
     public final void get() {
         try {
             // Create the URL with the service
-            final URL url = new URL(mSSIServiceURL);
+            final URL url = new URL(mSSIRestServiceURL);
             // Create the URL stream reader 
             final JsonReader reader = Json.createReader(url.openStream());
             // Read a JSON object from URL
