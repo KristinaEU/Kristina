@@ -5,7 +5,6 @@ import java.io.OutputStream;
 import java.util.Iterator;
 import java.util.Vector;
 
-import javax.servlet.http.HttpServletResponse;
 
 import org.jdom.CDATA;
 import org.jdom.Element;
@@ -265,28 +264,6 @@ public class EnhancedVoiceDocument extends VoiceDocument implements OwlDocument{
 		}
 	}
 
-	/**
-	 * flushes the VoiceDocument to the ServletResponse
-	 * @param response the HttpServletResponse to which the Document is written
-	 */
-	public void output(HttpServletResponse response){
-		XMLOutputter outputter = new XMLOutputter();
-		outputter.setFormat(Format.getPrettyFormat());
-		OutputStream output;
-		try {
-			output = response.getOutputStream();
-//			response.setHeader("Cache-Control", "no-cache");
-			response.setHeader("Expires", "Sat, 6 May 1995 12:00:00 GMT");
-			response.setHeader("Cache-Control", "no-store, no-cache, must-revalidate");
-			response.addHeader("Cache-Control", "post-check=0, pre-check=0");
-			response.setHeader("Pragma", "no-cache");
-			outputter.output(this, output);
-			output.flush();
-			output.close();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-	}
 	
 	/**
 	 * the main function to fill the document with the given vectors of CoreMoves.

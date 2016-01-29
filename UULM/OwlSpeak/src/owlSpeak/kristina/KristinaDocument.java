@@ -4,8 +4,6 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Vector;
 
-import javax.servlet.http.HttpServletResponse;
-
 import org.jdom.Document;
 import org.jdom.Element;
 import org.jdom.output.Format;
@@ -130,9 +128,5 @@ public class KristinaDocument implements OwlDocument{
 			return null;
 		}
 
-		@Override
-		public void output(HttpServletResponse response) {
-			// TODO Auto-generated method stub
-
-		}
+		
 	}
