@@ -1,4 +1,4 @@
-11221<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <Project name="">
   <Plugins>
   </Plugins>
@@ -7,21 +7,14 @@
       <Feature key="eca.socket.remote.host" value="webglstudio.org"/>
       <Feature key="eca.socket.remote.port" value="9900"/>
       <Feature key="ssi.rest.service.url" value="http://137.250.171.230:11193/fusion/Service.svc/getCurrent"/>
-      <Feature key="ssi.socket.local.host" value="137.250.171.120"/>
+      <Feature key="ssi.socket.local.host" value="137.250.171.231"/>
       <Feature key="ssi.socket.local.port" value="11220"/>
       <Feature key="ssi.socket.remote.host" value="137.250.171.230"/>
       <Feature key="ssi.socket.remote.port" value="11190"/>
       <Feature key="ssi.socket.remote.flag" value="false"/>
-      
-      <Feature key="owl.socket.local.host" value="137.250.171.120"/>
+      <Feature key="owl.socket.local.host" value="137.250.171.231"/>
       <Feature key="owl.socket.local.port" value="11221"/>
-      <Feature key="owl.socket.remote.host" value="137.250.171.230"/>
-      <Feature key="owl.socket.remote.port" value="11151"/>
-      <Feature key="owl.socket.remote.flag" value="false"/>
-      
-      <Feature key="owl.socket.local.host" value="137.250.171.120"/>
-      <Feature key="owl.socket.local.port" value="11221"/>
-      <Feature key="owl.socket.remote.host" value="137.250.171.230"/>
+      <Feature key="owl.socket.remote.host" value="137.250.171.231"/>
       <Feature key="owl.socket.remote.port" value="11151"/>
       <Feature key="owl.socket.remote.flag" value="false"/>
     </Player>
