@@ -64,6 +64,7 @@ public class FormatResource {
     @GET
     @Produces(MediaType.TEXT_PLAIN)
     public String getText(@QueryParam("speech_act") String speect_act, @QueryParam("info") String info) {
+        logger.debug("OK");
         try {
             //TODO return proper representation object
             return FileHelper.readFile("/framenet_example.xml");

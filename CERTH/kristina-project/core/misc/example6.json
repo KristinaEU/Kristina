@@ -1,55 +1,62 @@
 [{
         "Subject": [{
-                "term": " Symptoms",
+                "term": " symptom",
                 "concept": "sign or symptom",
                 "BabelNet": "http://babelnet.org/rdf/s00075683n",
                 "DBPedia": "http://dbpedia.org/resource/Symptom"
+            },
+            {
+                "term": " rubella infection virus",
+                "concept": "disease or syndrome",
+                "BabelNet": "http://babelnet.org/rdf/s00031157n",
+                "DBPedia": "http://dbpedia.org/resource/Rubella"
             }],
         "Predicate": {
-            "term": "include",
+            "term": "is",
             "concept": " ",
-            "BabelNet": "http://babelnet.org/rdf/s00089660v",
+            "BabelNet": "",
             "DBPedia": ""
         },
         "Object": [{
-                "term": " difficulty breathing",
-                "concept": "sign or symptom",
-                "BabelNet": "http://babelnet.org/rdf/s03686129n",
-                "DBPedia": "http://dbpedia.org/resource/Respiratory_distress"
-            },
-            {
-                "term": " rapid breathing",
-                "concept": "finding",
-                "BabelNet": "http://babelnet.org/rdf/s00109437a",
+                "term": " appearance",
+                "BabelNet": "http://babelnet.org/rdf/s00005023n",
                 "DBPedia": ""
             },
             {
-                "term": " nasal discharge",
+                "term": " rash",
                 "concept": "sign or symptom",
-                "BabelNet": "http://babelnet.org/rdf/s00056200n",
-                "DBPedia": "http://dbpedia.org/resource/Mucus"
+                "BabelNet": "http://babelnet.org/rdf/s00029895n",
+                "DBPedia": "http://dbpedia.org/resource/Rash"
             },
             {
-                "term": " lymphadenopathy",
-                "concept": "finding",
-                "BabelNet": "http://babelnet.org/rdf/s00052436n",
-                "DBPedia": "http://dbpedia.org/resource/Lymphadenopathy"
+                "term": " exanthem",
+                "concept": "sign or symptom",
+                "BabelNet": "http://babelnet.org/rdf/s00032103n",
+                "DBPedia": "http://dbpedia.org/resource/Exanthem"
             }],
-        "ObjectSentence": [{
-                "Subject": [{
-                        "term": " fatigue fever sore throat cough difficulty chills hoarseness headache",
-                        "concept": "sign or symptom",
-                        "BabelNet": "http://babelnet.org/rdf/s00061896n",
-                        "DBPedia": "http://dbpedia.org/resource/Pharyngitis"
-                    }],
-                "Predicate": {
-                    "term": "swallowing",
-                    "concept": "disease or syndrome",
-                    "BabelNet": "http://babelnet.org/rdf/s00088759v",
-                    "DBPedia": ""
-                },
-                "Object": [],
-                "ObjectSentence": []
-            }]
+        "ObjectSentence": []
+    },
+    {
+        "Subject": [],
+        "Predicate": {
+            "term": "spreads",
+            "concept": " ",
+            "BabelNet": "http://babelnet.org/rdf/s00073625n",
+            "DBPedia": ""
+        },
+        "Object": [],
+        "ObjectSentence": []
+    },
+    {
+        "Subject": [],
+        "Predicate": {
+            "term": "fades",
+            "concept": " ",
+            "BabelNet": "http://babelnet.org/rdf/s00032688n",
+            "DBPedia": ""
+        },
+        "Object": [],
+        "ObjectSentence": []
     }
+
 ]

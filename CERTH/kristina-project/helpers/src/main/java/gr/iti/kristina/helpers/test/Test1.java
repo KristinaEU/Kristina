@@ -1,7 +1,7 @@
-/* 
+/*
  * The MIT License
  *
- * Copyright 2015 gmeditsk.
+ * Copyright 2016 gmeditsk.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -21,36 +21,21 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package gr.iti.kristina.api;
+package gr.iti.kristina.helpers.test;
 
-import java.util.Set;
-import javax.ws.rs.core.Application;
+import gr.iti.kristina.helpers.repository.GraphDbRepositoryManager;
+import org.openrdf.repository.Repository;
+import org.openrdf.repository.RepositoryException;
 
 /**
  *
  * @author gmeditsk
  */
-@javax.ws.rs.ApplicationPath("/")
-public class ApplicationConfig extends Application {
-
-    @Override
-    public Set<Class<?>> getClasses() {
-        Set<Class<?>> resources = new java.util.HashSet<>();
-        addRestResourceClasses(resources);
-        return resources;
+public class Test1 {
+    public static void main(String[] args) throws RepositoryException {
+        GraphDbRepositoryManager manager = new GraphDbRepositoryManager("http://localhost:8084/graphdb-workbench-free", "test", "kristina", "samiam#2");
+        Repository r = manager.getRepository();
+        System.out.println(r.getConnection().getStatements(null, null, null, true).asList().size());
+        manager.shutDown();
     }
-
-    /**
-     * Do not modify addRestResourceClasses() method.
-     * It is automatically populated with
-     * all resources defined in the project.
-     * If required, comment out calling this method in getClasses().
-     */
-    private void addRestResourceClasses(Set<Class<?>> resources) {
-        resources.add(gr.iti.kristina.api.ContextQueryResource.class);
-        resources.add(gr.iti.kristina.api.ContextUpdateResource.class);
-        resources.add(gr.iti.kristina.api.FormatResource.class);
-        resources.add(gr.iti.kristina.api.KbUpdateResource.class);
-    }
-    
 }

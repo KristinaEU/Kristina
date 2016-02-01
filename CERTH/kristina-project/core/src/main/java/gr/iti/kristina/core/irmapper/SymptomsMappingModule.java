@@ -39,7 +39,7 @@ import com.ontotext.jena.SesameDataset;
 import gr.iti.kristina.core.irmapper.model.ETriple;
 import gr.iti.kristina.core.irmapper.model.ExResource;
 import gr.iti.kristina.core.irmapper.model.Triple;
-import gr.iti.kristina.core.repository.OWLIMRepositoryFactory;
+import gr.iti.kristina.helpers.repository.GraphDbRepositoryManager;
 import gr.iti.kristina.helpers.vocabulary.NS;
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -59,8 +59,6 @@ import org.apache.lucene.analysis.standard.StandardAnalyzer;
 import org.apache.lucene.analysis.standard.StandardTokenizer;
 import org.apache.lucene.analysis.tokenattributes.CharTermAttribute;
 import org.apache.lucene.util.Version;
-import org.openrdf.repository.Repository;
-import org.openrdf.repository.RepositoryException;
 import org.slf4j.LoggerFactory;
 
 /**
@@ -75,58 +73,70 @@ public class SymptomsMappingModule {
     public static final String HAS_SYMPTOM = "hasSymptom";
     public static final String RELATES_TO = "relatedTo";
 
-    private final Repository repository;
+    private String jsonInput;
+
+    public void setJsonInput(String jsonInput) {
+        this.jsonInput = jsonInput;
+    }
+
+    private GraphDbRepositoryManager manager;
 
     org.slf4j.Logger logger = LoggerFactory.getLogger(SymptomsMappingModule.class);
     HashSet<Triple> triples;
     HashMap<String, String> mappings = new HashMap();
 
     public SymptomsMappingModule(String serverURL, String repId, String username, String password) {
-        repository = OWLIMRepositoryFactory.newIstance(serverURL, repId, username, password);
+        manager = new GraphDbRepositoryManager(serverURL, repId, username, password);
     }
 
     public void call() throws IOException {
         createTriples();
-        assignPredicates();
-        updateKb();
+//        assignPredicates();
+        updateKb(false);
     }
 
     public void createTriples() throws IOException {
         triples = new HashSet<>();
-        try (Reader reader = new BufferedReader(new FileReader("misc/example5.json"))) {
-            Gson gson = new GsonBuilder().create();
-            Type collectionType = new TypeToken<Collection<ETriple>>() {
-            }.getType();
-            Collection<ETriple> etriples = gson.fromJson(reader, collectionType);
+//        try (Reader reader = new BufferedReader(new FileReader("misc/example6.json"))) {
+        Gson gson = new GsonBuilder().create();
+        Type collectionType = new TypeToken<Collection<ETriple>>() {
+        }.getType();
+        Collection<ETriple> etriples = gson.fromJson(jsonInput, collectionType);
 
-            Stack<ETriple> stack = new Stack();
-            stack.add((ETriple) etriples.toArray()[0]);
+        Stack<ETriple> stack = new Stack();
+        stack.add((ETriple) etriples.toArray()[0]);
 
-            while (!stack.empty()) {
-                ETriple current = stack.pop();
-                List<ExResource> subjects = current.getSubject();
-                List<ExResource> objects = current.getObject();
-                for (ExResource s : subjects) {
-                    ExResource parent = current.getParent();
-                    if (parent != null) {
-                        Triple t = new Triple(parent, "", s);
-                        if (!triples.contains(t)) {
-                            triples.add(t);
-                        }
+        while (!stack.empty()) {
+            ETriple current = stack.pop();
+            List<ExResource> subjects = current.getSubject();
+            List<ExResource> objects = current.getObject();
+            for (ExResource s : subjects) {
+                ExResource parent = current.getParent();
+                if (parent != null) {
+                    Triple t = new Triple(parent, "", s);
+                    if (!triples.contains(t)) {
+                        triples.add(t);
                     }
-                    for (ExResource o : objects) {
-                        Triple t = new Triple(s, "", o);
-                        if (!triples.contains(t)) {
-                            triples.add(t);
-                        }
-                    }
-                    List<ETriple> objectSentences = current.getObjectSentence();
-                    for (ETriple os : objectSentences) {
-                        os.setParent(s);
-                    }
-                    stack.addAll(objectSentences);
                 }
+                for (ExResource o : objects) {
+                    Triple t = new Triple(s, "", o);
+                    if (!triples.contains(t)) {
+                        triples.add(t);
+                    }
+                }
+                List<ETriple> objectSentences = current.getObjectSentence();
+                for (ETriple os : objectSentences) {
+                    os.setParent(s);
+                }
+                stack.addAll(objectSentences);
             }
+        }
+//        }
+
+        assignPredicates();
+        System.out.println("Generated Triples:");
+        for (Triple t : triples) {
+            System.out.println(t);
         }
     }
 
@@ -159,58 +169,49 @@ public class SymptomsMappingModule {
         return WordUtils.capitalize(concept).replaceAll(" ", "");
     }
 
-    public void updateKb() throws IOException {
-        try {
-            SesameDataset dataset = new SesameDataset(repository.getConnection());
-
-            Model _model = ModelFactory.createModelForGraph(dataset.getDefaultGraph());
-            OntModel temp = ModelFactory.createOntologyModel(OntModelSpec.OWL_MEM);
-
-            Property hasSymptom = _model.createProperty(NS.SYMPTOMS_NS + "hasSymptom");
-            Property relatesTo = _model.createProperty(NS.SYMPTOMS_NS + "relatesTo");
-
-            for (Triple t : triples) {
-                String slabel = removeStopWords(t.getSubject().getTerm());
-                String sConcept = conceptToClass(t.getSubject().getConcept());
-                Resource s = temp.createResource("http://anon#" + slabel.replaceAll(" ", "_"));
-                s.addLiteral(RDFS.label, slabel);
-                s.addProperty(RDF.type, _model.createResource(NS.SYMPTOMS_NS + sConcept));
-                String olabel = removeStopWords(t.getObject().getTerm());
-                String oConcept = conceptToClass(t.getObject().getConcept());
-                Resource o = temp.createResource("http://anon#" + olabel.replaceAll(" ", "_"));
-                o.addLiteral(RDFS.label, olabel);
-                o.addProperty(RDF.type, _model.createResource(NS.SYMPTOMS_NS + oConcept));
-                if (t.getPredicate().equals(HAS_SYMPTOM)) {
-                    temp.add(s, hasSymptom, o);
-                } else if (t.getPredicate().equals(RELATES_TO)) {
-                    temp.add(s, relatesTo, o);
-                }
+    public void updateKb(boolean persist) throws IOException {
+        SesameDataset dataset = new SesameDataset(manager.getConnection());
+        Model _model = ModelFactory.createModelForGraph(dataset.getDefaultGraph());
+        OntModel temp = ModelFactory.createOntologyModel(OntModelSpec.OWL_MEM);
+        Property hasSymptom = _model.createProperty(NS.SYMPTOMS_NS + "hasSymptom");
+        Property relatesTo = _model.createProperty(NS.SYMPTOMS_NS + "relatesTo");
+        for (Triple t : triples) {
+            System.out.println(t);
+            String slabel = removeStopWords(t.getSubject().getTerm());
+            String sConcept = conceptToClass(t.getSubject().getConcept());
+            Resource s = temp.createResource("http://anon#" + slabel.replaceAll(" ", "_"));
+            s.addLiteral(RDFS.label, slabel);
+            s.addProperty(RDF.type, _model.createResource(NS.SYMPTOMS_NS + sConcept));
+            String olabel = removeStopWords(t.getObject().getTerm());
+            String oConcept = conceptToClass(t.getObject().getConcept());
+            Resource o = temp.createResource("http://anon#" + olabel.replaceAll(" ", "_"));
+            o.addLiteral(RDFS.label, olabel);
+            o.addProperty(RDF.type, _model.createResource(NS.SYMPTOMS_NS + oConcept));
+            if (t.getPredicate().equals(HAS_SYMPTOM)) {
+                temp.add(s, hasSymptom, o);
+            } else if (t.getPredicate().equals(RELATES_TO)) {
+                temp.add(s, relatesTo, o);
             }
-
-            List<Statement> statements = temp.listStatements().toList();
-            for (Statement s : statements) {
-                System.out.println(s);
+        }
+        List<Statement> statements = temp.listStatements().toList();
+        for (Statement s : statements) {
+            System.out.println(s);
+            if (persist) {
                 _model.add(s);
             }
-
-            System.out.println(_model.listStatements().toList().size());
+        }
+        System.out.println(_model.listStatements().toList().size());
+        if (persist) {
             _model.commit();
-
-        } catch (RepositoryException ex) {
-            logger.error("", ex);
-        } finally {
-            if (repository != null) {
-                try {
-                    repository.shutDown();
-                } catch (RepositoryException ex) {
-                    logger.error("", ex);
-                }
-            }
+        }
+        if (manager != null) {
+            manager.shutDown();
         }
     }
 
     public static void main(String[] args) throws IOException {
         SymptomsMappingModule o = new SymptomsMappingModule("http://localhost:8080", "Symptoms-Repository", "admin", "Paran01@!#10");
+        o.setJsonInput("");
         o.call();
     }
 }

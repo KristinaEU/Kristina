@@ -1,7 +1,7 @@
-/* 
+/*
  * The MIT License
  *
- * Copyright 2015 gmeditsk.
+ * Copyright 2016 gmeditsk.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -23,34 +23,49 @@
  */
 package gr.iti.kristina.api;
 
-import java.util.Set;
-import javax.ws.rs.core.Application;
+import javax.ws.rs.core.Context;
+import javax.ws.rs.core.UriInfo;
+import javax.ws.rs.Consumes;
+import javax.ws.rs.POST;
+import javax.ws.rs.Path;
+import javax.ws.rs.core.MediaType;
 
 /**
+ * REST Web Service
  *
  * @author gmeditsk
  */
-@javax.ws.rs.ApplicationPath("/")
-public class ApplicationConfig extends Application {
+@Path("kb/update")
+public class KbUpdateResource {
 
-    @Override
-    public Set<Class<?>> getClasses() {
-        Set<Class<?>> resources = new java.util.HashSet<>();
-        addRestResourceClasses(resources);
-        return resources;
+    @Context
+    private UriInfo context;
+
+    /**
+     * Creates a new instance of KbUpdateResource
+     */
+    public KbUpdateResource() {
     }
 
     /**
-     * Do not modify addRestResourceClasses() method.
-     * It is automatically populated with
-     * all resources defined in the project.
-     * If required, comment out calling this method in getClasses().
+     * Retrieves representation of an instance of
+     * gr.iti.kristina.api.KbUpdateResource
+     *
+     * @return an instance of java.lang.String
      */
-    private void addRestResourceClasses(Set<Class<?>> resources) {
-        resources.add(gr.iti.kristina.api.ContextQueryResource.class);
-        resources.add(gr.iti.kristina.api.ContextUpdateResource.class);
-        resources.add(gr.iti.kristina.api.FormatResource.class);
-        resources.add(gr.iti.kristina.api.KbUpdateResource.class);
+//    @GET
+//    @Produces(MediaType.TEXT_PLAIN)
+//    public String getText() {
+//        //TODO return proper representation object
+//        throw new UnsupportedOperationException();
+//    }
+    /**
+     * PUT method for updating or creating an instance of KbUpdateResource
+     *
+     * @param content representation for the resource
+     */
+    @POST
+    @Consumes(MediaType.TEXT_PLAIN)
+    public void update(String content) {
     }
-    
 }

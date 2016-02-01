@@ -21,7 +21,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package gr.iti.kristina.core.repository;
+package gr.iti.kristina.helpers.repository;
 
 import org.openrdf.repository.Repository;
 import org.openrdf.repository.RepositoryConnection;
@@ -35,49 +35,48 @@ import org.slf4j.LoggerFactory;
  *
  * @author gmeditsk
  */
-public class OWLIMRepositoryFactory {
+public class GraphDbRepositoryManager {
 
-    private static Repository _this;
-    private static RepositoryConnection _connection;
-    private static RemoteRepositoryManager _manager;
+    private RemoteRepositoryManager _manager;
+    private Repository _repository;
+    private RepositoryConnection _connection;
 
-    static Logger logger = LoggerFactory.getLogger(OWLIMRepositoryFactory.class);
+    static Logger logger = LoggerFactory.getLogger(GraphDbRepositoryManager.class);
 
-    private OWLIMRepositoryFactory() {
-    }
-
-    public static Repository newIstance(String serverURL, String repositoryId, String username, String password) {
-        if (_this == null) {
-            try {
-                _manager = new RemoteRepositoryManager(serverURL);
-                _manager.setUsernameAndPassword(username, password);
-                _manager.initialize();
-                _this = _manager.getRepository(repositoryId);
-                _connection = _this.getConnection();
-            } catch (RepositoryException | RepositoryConfigException ex) {
-                logger.error("", ex);
-            }
+    public GraphDbRepositoryManager(String serverURL, String repositoryId, String username, String password) {
+        try {
+            _manager = new RemoteRepositoryManager(serverURL);
+            _manager.setUsernameAndPassword(username, password);
+            _manager.initialize();
+            _repository = _manager.getRepository(repositoryId);
+            _connection = _repository.getConnection();
+        } catch (RepositoryException | RepositoryConfigException ex) {
+            logger.error("", ex);
         }
-        return _this;
-    }
-
-    public static RepositoryConnection getConnection() {
-        return _connection;
-    }
-
-    public static RemoteRepositoryManager getManager() {
-        return _manager;
     }
 
     public void shutDown() {
-        if (_this != null) {
+        if (_manager != null) {
             try {
                 _connection.close();
-                _this.shutDown();
+                _repository.shutDown();
                 _manager.shutDown();
             } catch (Exception ex) {
                 logger.error("", ex);
             }
         }
     }
+
+    public RepositoryConnection getConnection() {
+        return _connection;
+    }
+
+    public Repository getRepository() {
+        return _repository;
+    }
+
+    public RemoteRepositoryManager getManager() {
+        return _manager;
+    }
+
 }

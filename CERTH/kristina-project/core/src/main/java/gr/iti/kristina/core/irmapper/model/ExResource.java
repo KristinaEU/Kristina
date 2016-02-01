@@ -24,8 +24,14 @@
 package gr.iti.kristina.core.irmapper.model;
 
 import com.google.gson.annotations.SerializedName;
+import gr.iti.kristina.helpers.repository.GraphDbRepositoryManager;
+import gr.iti.kristina.helpers.repository.WordNetRepository;
+import java.io.IOException;
 import java.io.Serializable;
 import java.util.Objects;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  *
@@ -43,6 +49,8 @@ public class ExResource implements Serializable, Comparable<ExResource> {
     private String dbPedia;
     private transient String localId;
 
+    static org.slf4j.Logger logger = LoggerFactory.getLogger(ExResource.class);
+
     public String getTerm() {
         return term;
     }
@@ -52,7 +60,16 @@ public class ExResource implements Serializable, Comparable<ExResource> {
     }
 
     public String getConcept() {
-        return concept;
+        if (concept == null || concept.isEmpty()) {
+            try {
+                return WordNetRepository.getWordNetSynsetFromBabelNet(this.getBabelNet());
+            } catch (IOException ex) {
+                logger.error("", ex);
+            }
+        } else {
+            return concept;
+        }
+        return null;
     }
 
     public void setConcept(String concept) {

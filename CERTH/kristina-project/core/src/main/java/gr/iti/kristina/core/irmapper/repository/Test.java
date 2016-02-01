@@ -26,8 +26,7 @@ package gr.iti.kristina.core.irmapper.repository;
 import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
 import com.ontotext.jena.SesameDataset;
-import gr.iti.kristina.core.repository.OWLIMRepositoryFactory;
-import org.openrdf.repository.Repository;
+import gr.iti.kristina.helpers.repository.GraphDbRepositoryManager;
 import org.openrdf.repository.RepositoryException;
 import org.openrdf.repository.config.RepositoryConfigException;
 
@@ -38,7 +37,7 @@ import org.openrdf.repository.config.RepositoryConfigException;
 public class Test {
 
     public static void main(String[] args) throws RepositoryException, RepositoryConfigException {
-        Repository repository = OWLIMRepositoryFactory.newIstance("http://localhost:8080", "Symptoms-Repository", "admin", "Paran01@!#10");
+        GraphDbRepositoryManager repository = new GraphDbRepositoryManager("http://localhost:8080", "Symptoms-Repository", "admin", "Paran01@!#10");
         SesameDataset dataset = new SesameDataset(repository.getConnection());
         Model model = ModelFactory.createModelForGraph(dataset.getDefaultGraph());
         System.out.println(model.listStatements().toList().size());

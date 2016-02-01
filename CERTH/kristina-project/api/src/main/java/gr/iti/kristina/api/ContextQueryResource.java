@@ -25,8 +25,6 @@ package gr.iti.kristina.api;
 
 import gr.iti.kristina.api.helpers.FileHelper;
 import java.io.IOException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.UriInfo;
 import javax.ws.rs.Produces;
