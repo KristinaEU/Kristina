@@ -118,7 +118,6 @@ public final class SSISocketHandler extends Thread {
             // Parse the received XML string
             final ByteArrayInputStream stream = new ByteArrayInputStream(xml.getBytes("UTF-8"));
             final DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-            factory.setValidating(false);
             final DocumentBuilder builder = factory.newDocumentBuilder();
             final Document document = builder.parse(stream);
             // Get the XML tree root element
