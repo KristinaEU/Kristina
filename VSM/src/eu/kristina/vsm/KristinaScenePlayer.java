@@ -6,7 +6,7 @@ import de.dfki.vsm.runtime.project.RunTimeProject;
 import de.dfki.vsm.runtime.values.AbstractValue;
 import de.dfki.vsm.runtime.players.RunTimePlayer;
 import de.dfki.vsm.util.log.LOGDefaultLogger;
-import eu.kristina.vsm.eca.ECASocketHandler;
+import eu.kristina.vsm.gti.GTISocketHandler;
 import eu.kristina.vsm.owl.OWLSocketHandler;
 import eu.kristina.vsm.ssi.SSISocketHandler;
 import java.util.LinkedList;
@@ -36,7 +36,7 @@ public final class KristinaScenePlayer implements RunTimePlayer {
     // The ECA socket handler
     private String mECASocketRemoteHost;
     private Integer mECASocketRemotePort;
-    private ECASocketHandler mECASocket;
+    private GTISocketHandler mECASocket;
     // The SSI socket handler
     private String mSSISocketLocalHost;
     private Integer mSSISocketLocalPort;
@@ -117,7 +117,7 @@ public final class KristinaScenePlayer implements RunTimePlayer {
                 + "OWL Socket Handler Remote Flag : '" + mOWLSocketRemoteFlag + "'" + "\r\n");
 
         // Initialize the ECA socket
-        mECASocket = new ECASocketHandler(
+        mECASocket = new GTISocketHandler(
                 this, mECASocketRemoteHost, mECASocketRemotePort);
         mECASocket.start();
 

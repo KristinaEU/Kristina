@@ -101,20 +101,24 @@ public final class SSISocketHandler extends Thread {
             final String message = recvString();
             // Check message content
             if (message != null) {
-                // Print some information
-                //mLogger.message("SSI socket handler receiving:\n" + message + "");
+
                 // Parse the SSI message
                 parse(message);
+                // Print some information
+                //mLogger.message("SSI socket handler receiving:\n" + message + "");
             }
         }
     }
 
     // Parse an SSI event object
     private void parse(final String xml) {
+        // Print some information
+        //mLogger.message("Parsing message " + xml + "");
         try {
             // Parse the received XML string
             final ByteArrayInputStream stream = new ByteArrayInputStream(xml.getBytes("UTF-8"));
             final DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+            factory.setValidating(false);
             final DocumentBuilder builder = factory.newDocumentBuilder();
             final Document document = builder.parse(stream);
             // Get the XML tree root element
@@ -144,17 +148,17 @@ public final class SSISocketHandler extends Thread {
                             if (name.equalsIgnoreCase("voice") || name.equalsIgnoreCase("vad")) {
                                 if (state.equalsIgnoreCase("completed")) {
                                     // User stopped speaking
-                                    //mLogger.message("User stopped speaking");
+                                    mLogger.message("User stopped speaking");
                                     // Try to set a variable
                                     if (mPlayer != null) {
-                                        mPlayer.set("UserIsSpeaking", false);
+                                        mPlayer.set("UserRoleActivity", "Speaking", false);
                                     }
                                 } else if (state.equalsIgnoreCase("continued")) {
                                     // User started speaking
-                                    //mLogger.message("User started speaking");
+                                    mLogger.message("User started speaking");
                                     // Try to set a variable
                                     if (mPlayer != null) {
-                                        mPlayer.set("UserIsSpeaking", true);
+                                        mPlayer.set("UserRoleActivity", "Speaking", true);
                                     }
                                 } else {
                                     // Cannot process this
@@ -165,7 +169,7 @@ public final class SSISocketHandler extends Thread {
                                         // Just get the content
                                         final String text = event.getTextContent();
                                         // User said something
-                                        //mLogger.message("User just said '" + text + "'");
+                                        mLogger.message("User just said '" + text + "'");
                                         // Try to set a variable
                                         if (mPlayer != null) {
                                             mPlayer.set("UserDialogMove", text);
@@ -213,6 +217,25 @@ public final class SSISocketHandler extends Thread {
                             } else {
                                 // Cannot process this
                             }
+                        } else if (mode.equalsIgnoreCase("upf")) {
+                            if (name.equalsIgnoreCase("la")) {
+                                if (state.equalsIgnoreCase("completed")) {
+                                    if (type.equalsIgnoreCase("string")) {
+                                        // Just get the content
+                                        final String text = event.getTextContent();
+                                         // Print some information
+                                        mLogger.message("Language analysis result is\n" + text + "");
+                                    } else {
+                                        // Cannot process this    
+                                    }
+                                } else if (state.equalsIgnoreCase("continued")) {
+                                    // Cannot process this
+                                } else {
+                                    // Cannot process this
+                                }                               
+                            } else {
+                                // Cannot process this
+                            }
                         } else {
                             // Cannot process this
                         }
@@ -224,6 +247,7 @@ public final class SSISocketHandler extends Thread {
             // Print some information
             mLogger.failure(exc.toString());
         }
+
     }
 
     // Send a message via the server
@@ -250,7 +274,7 @@ public final class SSISocketHandler extends Thread {
     private byte[] recvBytes() {
         try {
             // Construct a byte array
-            final byte[] buffer = new byte[4096];
+            final byte[] buffer = new byte[16384];
             // Construct an UDP packet
             final DatagramPacket packet
                     = new DatagramPacket(buffer, buffer.length);

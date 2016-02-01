@@ -196,8 +196,8 @@
         </java>
     </target>  
     <!-- Execute Project -->
-    <target name="run-eca-socket-terminal">
-        <java classname="eu.kristina.vsm.eca.ECASocketTerminal" fork="true">
+    <target name="run-gti-socket-terminal">
+        <java classname="eu.kristina.vsm.gti.ECASocketTerminal" fork="true">
             <classpath refid="clspath"/>
             <arg line="webglstudio.org 9900"/>
         </java>
