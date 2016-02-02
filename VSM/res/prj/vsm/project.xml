@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Project name="">
+<Project name="KRISTINA">
   <Plugins>
   </Plugins>
   <Players>
-    <Player name="defaultsceneplayer" class="eu.kristina.vsm.KristinaScenePlayer">
+    <Player name="defaultsceneplayer" class="eu.kristina.vsm.VSMKristinaPlayer">
       <Feature key="eca.socket.remote.host" value="webglstudio.org"/>
       <Feature key="eca.socket.remote.port" value="9900"/>
       <Feature key="ssi.rest.service.url" value="http://137.250.171.230:11193/fusion/Service.svc/getCurrent"/>

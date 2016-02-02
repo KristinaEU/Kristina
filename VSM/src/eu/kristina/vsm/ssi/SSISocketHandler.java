@@ -2,7 +2,7 @@ package eu.kristina.vsm.ssi;
 
 import de.dfki.vsm.runtime.RunTimeInstance;
 import de.dfki.vsm.util.log.LOGDefaultLogger;
-import eu.kristina.vsm.KristinaScenePlayer;
+import eu.kristina.vsm.VSMKristinaPlayer;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
@@ -40,11 +40,11 @@ public final class SSISocketHandler extends Thread {
     private final SocketAddress mLAddr;
     private final SocketAddress mRAddr;
     // The scene player object
-    private final KristinaScenePlayer mPlayer;
+    private final VSMKristinaPlayer mPlayer;
 
     // Create the handler thread
     public SSISocketHandler(
-            final KristinaScenePlayer player,
+            final VSMKristinaPlayer player,
             final String lHost, final Integer lPort,
             final String rHost, final Integer rPort,
             final Boolean rFlag) {

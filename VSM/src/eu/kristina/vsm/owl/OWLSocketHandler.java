@@ -1,7 +1,7 @@
 package eu.kristina.vsm.owl;
 
 import de.dfki.vsm.util.log.LOGConsoleLogger;
-import eu.kristina.vsm.KristinaScenePlayer;
+import eu.kristina.vsm.VSMKristinaPlayer;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.net.DatagramPacket;
@@ -33,11 +33,11 @@ public final class OWLSocketHandler extends Thread {
     private final SocketAddress mLAddr;
     private final SocketAddress mRAddr;
     // The scene player object
-    private final KristinaScenePlayer mPlayer;
+    private final VSMKristinaPlayer mPlayer;
 
     // Create the handler thread
     public OWLSocketHandler(
-            final KristinaScenePlayer player,
+            final VSMKristinaPlayer player,
             final String lHost, final Integer lPort,
             final String rHost, final Integer rPort,
             final Boolean rFlag) {

@@ -154,28 +154,35 @@
         </javadoc>
     </target>
     <!-- Execute Project -->
-    <target name="run-vsm-project-editor">
-        <java classname="de.dfki.vsm.SceneMaker3" fork="true">
-            <arg line="editor res/prj/vsm"/>
+    <target name="run-vsm-restful-client">
+        <java classname="eu.kristina.vsm.VSMRestWebClient" fork="true">
             <classpath refid="clspath"/>
+            <arg line="http://137.250.171.120:11223/vsm"/>
         </java>
     </target> 
     <!-- Execute Project -->
-    <target name="run-vsm-control-service">
-        <java classname="eu.kristina.vsm.VSMControlService" fork="true">
+    <target name="run-vsm-project-editor">
+        <java classname="de.dfki.vsm.SceneMaker3" fork="true">
+            <classpath refid="clspath"/>
+            <arg line="editor res/prj/vsm"/>
+        </java>
+    </target> 
+    <!-- Execute Project -->
+    <target name="run-vsm-restful-server">
+        <java classname="eu.kristina.vsm.VSMRestFulServer" fork="true">
             <classpath refid="clspath"/>
             <arg line="http://137.250.171.120:11223/"/>
         </java>
     </target>  
     <!-- Profile Project -->
-    <target name="profile-vsm-control-service" depends="build" description="Profile Project">
+    <target name="prf-vsm-restful-server" depends="build" description="Profile Project">
         <fail unless="netbeans.home">
             This target can only run inside the NetBeans IDE.
         </fail>
         <nbprofiledirect>
             <classpath refid="clspath"/>
         </nbprofiledirect>
-        <java classname="eu.kristina.vsm.VSMControlService" fork="true">
+        <java classname="eu.kristina.vsm.VSMRestFulServer" fork="true">
             <classpath refid="clspath"/>
             <arg line="http://137.250.171.120:11223/"/>
             <jvmarg line="${agent.jvmargs}"/>

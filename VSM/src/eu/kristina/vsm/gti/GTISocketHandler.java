@@ -2,7 +2,7 @@ package eu.kristina.vsm.gti;
 
 import de.dfki.vsm.runtime.RunTimeInstance;
 import de.dfki.vsm.util.log.LOGDefaultLogger;
-import eu.kristina.vsm.KristinaScenePlayer;
+import eu.kristina.vsm.VSMKristinaPlayer;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.IOException;
@@ -32,11 +32,11 @@ public final class GTISocketHandler extends Thread {
     // The thread flag
     private volatile boolean mDone = false;
     // The scene player object
-    private final KristinaScenePlayer mPlayer;
+    private final VSMKristinaPlayer mPlayer;
 
     // Create the handler thread
     public GTISocketHandler(
-            final KristinaScenePlayer player,
+            final VSMKristinaPlayer player,
             final String host, final Integer port) {
         // Initialize the player
         mPlayer = player;
