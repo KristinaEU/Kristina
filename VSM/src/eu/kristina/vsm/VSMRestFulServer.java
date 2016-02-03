@@ -5,18 +5,25 @@ import com.sun.jersey.spi.resource.Singleton;
 import com.sun.net.httpserver.HttpServer;
 import de.dfki.vsm.runtime.RunTimeInstance;
 import de.dfki.vsm.runtime.project.RunTimeProject;
+import de.dfki.vsm.runtime.symbol.SymbolEntry;
+import de.dfki.vsm.util.ios.IOSIndentWriter;
 import de.dfki.vsm.util.log.LOGDefaultLogger;
+import de.dfki.vsm.util.tpl.TPLTriple;
 import java.io.BufferedReader;
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.nio.file.Files;
-import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map.Entry;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import javax.ws.rs.DefaultValue;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
+import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 
 /**
@@ -34,6 +41,8 @@ public final class VSMRestFulServer {
             = RunTimeInstance.getInstance();
     // The project instance
     private static RunTimeProject sProject = null;
+    // The player instance
+    //private static RunTimePlayer sPlayer = null;
 
     /**
      * Load the VSM runtime project instance for KRISTINA
@@ -41,6 +50,19 @@ public final class VSMRestFulServer {
      * @return A boolean flag indicating success or failure
      */
     private static boolean load(final String filename) {
+        // Stop current project first
+        if (sProject != null) {
+            // Print some information
+            sLogger.warning("Warning: Trying to stop VSM runtime project '" + sProject.getProjectName() + "' first");
+            // Stop the project now
+            if (stop()) {
+                // Print some information
+                sLogger.success("Success: Stopped running VSM runtime project '" + sProject.getProjectName() + "' first");
+            } else {
+                // Print some information
+                sLogger.warning("Warning: There was no need to stop VSM runtime project '" + sProject.getProjectName() + "'");
+            }
+        }
         // Create the project file
         final File file = new File(filename);
         // Check if the file exists
@@ -50,18 +72,46 @@ public final class VSMRestFulServer {
             // Load the runtime project
             if (sProject.load()) {
                 // Print some information
-                sLogger.message("Success: Loading VSM runtime project '" + sProject.getProjectName() + "' for KRISTINA");
+                sLogger.success("Success: Loaded VSM runtime project '" + sProject.getProjectName() + "'");
                 // Return true at success
                 return true;
             } else {
                 // Print some information
-                sLogger.message("Failure: Cannot load VSM runtime project '" + sProject.getProjectName() + "' for KRISTINA");
+                sLogger.failure("Failure: Cannot load VSM runtime project '" + sProject.getProjectName() + "'");
                 // Return false at failure
                 return false;
             }
         } else {
             // Print some information
-            sLogger.message("Failure: Cannot fine VSM runtime project base directory '" + file + "'");
+            sLogger.failure("Failure: Cannot find any VSM runtime project base directory '" + file + "'");
+            // Return false at failure
+            return false;
+        }
+    }
+
+    /**
+     * Unload the VSM runtime project instance for KRISTINA
+     */
+    private static boolean unload() {
+        // Check if project is loaded        
+        if (sProject != null) {
+            // Stop the project now
+            if (stop()) {
+                // Print some information
+                sLogger.message("Stopped running VSM runtime project '" + sProject.getProjectName() + "' first");
+            } else {
+                // Print some information
+                sLogger.message("There was no need to stop VSM runtime project '" + sProject.getProjectName() + "'");
+            }
+            // Print some information
+            sLogger.success("Success: Unloaded VSM runtime project '" + sProject.getProjectName() + "'");
+            // Set the project null
+            sProject = null;
+            // Return true at success
+            return true;
+        } else {
+            // Print some information
+            sLogger.failure("Failure: There is no VSM runtime project loaded yet");
             // Return false at failure
             return false;
         }
@@ -73,28 +123,39 @@ public final class VSMRestFulServer {
      * @return A boolean flag indicating success or failure
      */
     private static boolean start() {
-        if (sRunTime != null) {
-            if (sRunTime.launch(sProject)) {
-                if (sRunTime.start(sProject)) {
-                    // Print some information
-                    sLogger.message("Success: Starting VSM runtime project '" + sProject.getProjectName() + "' for KRISTINA");
-                    // Return true at success
-                    return true;
+        // Check if project is loaded        
+        if (sProject != null) {
+            // Check if project is running
+            if (!sRunTime.isRunning(sProject)) {
+                // Then launch the project now
+                if (sRunTime.launch(sProject)) {
+                    // And then start the project
+                    if (sRunTime.start(sProject)) {
+                        // Print some information
+                        sLogger.success("Success: Starting VSM runtime project '" + sProject.getProjectName() + "'");
+                        // Return true at success
+                        return true;
+                    } else {
+                        // Print some information
+                        sLogger.failure("Failure: Cannot start VSM runtime project '" + sProject.getProjectName() + "'");
+                        // Return false at failure
+                        return false;
+                    }
                 } else {
                     // Print some information
-                    sLogger.message("Failure: Cannot start VSM runtime project '" + sProject.getProjectName() + "' for KRISTINA");
+                    sLogger.failure("Failure: Cannot launch VSM runtime project '" + sProject.getProjectName() + "'");
                     // Return false at failure
                     return false;
                 }
             } else {
                 // Print some information
-                sLogger.message("Failure: Cannot launch VSM runtime project '" + sProject.getProjectName() + "' for KRISTINA");
+                sLogger.failure("Failure: VSM runtime project '" + sProject.getProjectName() + "' is already running");
                 // Return false at failure
                 return false;
             }
         } else {
             // Print some information
-            sLogger.message("Failure: There is no VSM runtime project for KRISTINA loaded yet");
+            sLogger.failure("Failure: There is no VSM runtime project loaded yet");
             // Return false at failure
             return false;
         }
@@ -106,93 +167,161 @@ public final class VSMRestFulServer {
      * @return A boolean flag indicating success or failure
      */
     private static boolean stop() {
-        if (sRunTime != null) {
-            if (sRunTime.abort(sProject)) {
-                if (sRunTime.unload(sProject)) {
-                    // Print some information
-                    sLogger.message("Success: Stopping VSM runtime project '" + sProject.getProjectName() + "' for KRISTINA");
-                    // Return true at success
-                    return true;
+        // Check if project is loaded
+        if (sProject != null) {
+            // Check if project is running
+            if (sRunTime.isRunning(sProject)) {
+                // Then abort the running project
+                if (sRunTime.abort(sProject)) {
+                    // And unload the project then
+                    if (sRunTime.unload(sProject)) {
+                        // Print some information
+                        sLogger.success("Success: Stopping VSM runtime project '" + sProject.getProjectName() + "'");
+                        // Return true at success
+                        return true;
+                    } else {
+                        // Print some information
+                        sLogger.failure("Failure: Cannot unload VSM runtime project '" + sProject.getProjectName() + "'");
+                        // Return false at failure
+                        return false;
+                    }
                 } else {
                     // Print some information
-                    sLogger.message("Failure: Cannot unload VSM runtime project '" + sProject.getProjectName() + "' for KRISTINA");
+                    sLogger.failure("Failure: Cannot stop VSM runtime project '" + sProject.getProjectName() + "'");
                     // Return false at failure
                     return false;
                 }
             } else {
                 // Print some information
-                sLogger.message("Failure: Cannot stop VSM runtime project '" + sProject.getProjectName() + "' for KRISTINA");
+                sLogger.failure("Failure: VSM runtime project '" + sProject.getProjectName() + "' is not running");
                 // Return false at failure
                 return false;
             }
         } else {
             // Print some information
-            sLogger.message("Failure: There is no VSM runtime project for KRISTINA loaded yet");
+            sLogger.failure("Failure: There is no VSM runtime project loaded yet");
             // Return false at failure
             return false;
         }
     }
 
-    /**
-     * Produce the HTTP homepage of the server
-     *
-     * @return The HTTP main navigation menu of the server
-     */
-    private static String http() {
+    private static String response(final String result, final String status) {
+        // Create a byte array output stream
+        final ByteArrayOutputStream stream = new ByteArrayOutputStream();
+        // Open the stream with an indent writer
+        final IOSIndentWriter writer = new IOSIndentWriter(stream);
+        // Print the status event to xml format
         try {
-            // Get the CSS style definitions
-            final String style = new String(Files.readAllBytes(Paths.get("res/css/styles.css")));
-            // 
-            return "<!DOCTYPE html>\n"
-                    + "<head>\n"
-                    + "<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"/>\n"
-                    + "<title>Kristina Project Demonstrator - Visual Scene Maker Service</title>\n"
-                    + "<style>\n"
-                    + style
-                    + "</style>"
-                    + "</head>\n"
-                    + "<html>\n"
-                    + "<body>\n"
-                    + "<div id=\"container\">"
-                    + "<header>\n"
-                    + "  <div class=\"width\">\n"
-                    + "    <div>\n"
-                    + "      <h1>\n"
-                    + "        <a href=\"/\"><span>KRISTINA</span> Project Demonstrator</a>\n"
-                    + "      </h1>\n"
-                    + "      <h1>\n"
-                    + "        <a href=\"/\">Visual <span>SceneMaker</span> Control Service</a>\n"
-                    + "      </h1>\n"
-                    + "    </div>\n"
-                    + "  </div>\n"
-                    + "</header>"
-                    + "<nav>\n"
-                    + "  <div  class=\"width\">\n"
-                    + "    <ul>\n"
-                    + "                <li class=\"start selected\"><a href=\"index.html\">Home</a></li>\n"
-                    + "                <li class=\"\"><a href=\"getstarted.html\">Get Started!</a></li>\n"
-                    + "                <li class=\"\"><a href=\"tutorial.html\">Tutorials</a></li>\n"
-                    + "                <li class=\"\"><a href=\"faq.html\">FAQ</a></li>\n"
-                    + "                <li class=\"\"><a href=\"downloads.html\">Download</a></li>\n"
-                    + "                <li class=\"\"><a href=\"projects.html\">Projects</a></li>\n"
-                    + "                <li class=\"\"><a href=\"contact.html\">Contact</a></li>\n"
-                    + "            </ul>\n"
-                    + "        </div>\n"
-                    + "    </nav>  "
-                    + "</div>"
-                    + "</body>\n"
-                    + "</html>";
-        } catch (final IOException exc) {
-            // Print some information
+            // Write the XML header line
+            writer.println("<?xml version=\"1.0\" encoding=\"UTF-8\"?>");
+            // Open the response element 
+            writer.println("<Response result=\"" + result + "\" status=\"" + status + "\">").push();
+            // Check the project state 
+            if (sProject != null) {
+                // Write scene player config
+                sProject.getDefaultScenePlayerConfig().writeXML(writer);
+                // Get the configuration
+                if (sRunTime.isRunning(sProject)) {
+                    // Open the states element 
+                    writer.println("<States>").push();
+                    // Get the active state list
+                    final ArrayList states = sRunTime.listActiveStates(sProject);
+                    // Write the state list here
+                    for (final Object state : states) {
+                        final TPLTriple triple = (TPLTriple) state;
+                        final String threadid = (String) triple.getFirst();
+                        final String nodename = (String) triple.getSecond();
+                        final HashMap table = (HashMap) triple.getThird();
+                        // Open the states element 
+                        writer.println("<State threadid=\"" + threadid + "\" nodename=\"" + nodename + "\">").push();
+                        // Open the values element 
+                        writer.println("<Variables>").push();
+                        // List all variable values
+                        for (final Object object : table.entrySet()) {
+                            final Entry entry = (Entry) object;
+                            //
+                            final String name = entry.getKey().toString();
+                            //
+                            final SymbolEntry symbol = (SymbolEntry) entry.getValue();
+                            // Write the value element 
+                            writer.println("<Variable name=\"" + name + "\" value=\"" + symbol.getValue().getConcreteSyntax() + "\">");
+                        }
+                        // Close the values element 
+                        writer.pop().println("</Variables>");
+                        // Close the state element 
+                        writer.pop().println("</State>");
+                    }
+                    // Close the states element 
+                    writer.pop().println("</States>");
+                }
+            }
+            // Close the response element 
+            writer.pop().println("</Response>");
+            // Flush and close the writer and the stream
+            writer.flush();
+            writer.close();
+            // Return xml if writing was successfull
+            return stream.toString("UTF-8");
+        } catch (final Exception exc) {
+            // Print some error message in this case
             sLogger.failure(exc.toString());
-            // Return null at failure
+            // Return false if writing to XML failed
             return null;
         }
     }
 
+    /**
+     * Construct the RESTful VSM server object of KRISTINA
+     */
+    public VSMRestFulServer() {
+        // Print some information
+        sLogger.message("Constructing Kristina's VSM restful root resource class");
+    }
+
+    /**
+     * Execute a GET request on the restful server
+     *
+     * @param cmd The command of the query
+     * @param arg The argument of the query
+     * @return The result of the query execution
+     */
+    @GET
+    @Produces(MediaType.TEXT_PLAIN)
+    public synchronized String get(
+            @DefaultValue("") @QueryParam("cmd") final String cmd,
+            @DefaultValue("") @QueryParam("arg") final String arg) {
+        // Check the cmd parameter
+        if (!cmd.isEmpty()) {
+            // Print some information
+            sLogger.message("Detecting GET request query command '" + cmd + "'");
+            // Check the query command
+            if (cmd.equalsIgnoreCase("load")) {
+                // Check the arg parameter
+                if (!arg.isEmpty()) {
+                    // Print some information
+                    sLogger.message("Detecting GET request query argument '" + arg + "'");
+                    // Execute the load command
+                    return response((load(arg) ? "SUCCESS" : "FAILURE"), "UNKNOWN");
+                }
+            } else if (cmd.equalsIgnoreCase("unload")) {
+                // Execute the unload command
+                return response((unload() ? "SUCCESS" : "FAILURE"), "UNKNOWN");
+            } else if (cmd.equalsIgnoreCase("start")) {
+                // Execute the unload command
+                return response((start() ? "SUCCESS" : "FAILURE"), "UNKNOWN");
+            } else if (cmd.equalsIgnoreCase("stop")) {
+                // Execute the unload command
+                return response((stop() ? "SUCCESS" : "FAILURE"), "UNKNOWN");
+            }
+        }
+        // Return something here
+        return response("UNKNOWN", "UNKNOWN");
+
+    }
+
     public static void main(final String args[]) {
         // Print information
-        System.out.println("Initializing VSM KRISTINA restful server");
+        sLogger.message("Initializing VSM KRISTINA restful server");
         // Initialize the reader
         final BufferedReader reader = new BufferedReader(
                 new InputStreamReader(System.in));
@@ -217,18 +346,19 @@ public final class VSMRestFulServer {
                     if (in != null) {
                         if (in.equals("exit")) {
                             // Stop the project
-                            //service.stop();
+                            unload();
                             // Abort the server
                             done = true;
-                        } else if (in.equals("load")) {
+                        } else if (in.startsWith("load")) {
                             // Play the project
-                            //service.load();
+                            load(in.substring(4));
                         } else if (in.equals("start")) {
                             // Play the project
-                            //service.start();
+                            start();
                         } else if (in.equals("stop")) {
                             // Stop the project
-                            //service.stop();
+                            stop();
+                        } else {
                         }
                     }
                 } catch (final IOException exc) {
@@ -243,30 +373,7 @@ public final class VSMRestFulServer {
             System.err.println(exc.toString());
         }
         // Print information
-        System.out.println("Terminating VSM KRISTINA restful server");
-    }
-
-    /**
-     * Construct the RESTful VSM server object of KRISTINA
-     */
-    public VSMRestFulServer() {
-        // Print some information
-        sLogger.message("Constructing Kristina's VSM restful root resource class");
-    }
-
-    @GET
-    @Produces(MediaType.TEXT_HTML)
-    public synchronized String get() {
-        // Print some information
-        sLogger.message("Get");
-        // Return something here
-        return http();
-//        
-//        if (sRunTime.isRunning(sProject)) {
-//            return sProject.getProjectName();
-//        } else {
-//            return main();
-//        }
+        sLogger.message("Terminating VSM KRISTINA restful server");
     }
 
 //    @GET
@@ -333,4 +440,61 @@ public final class VSMRestFulServer {
 //    public synchronized String log() throws IOException {
 //        return new String(Files.readAllBytes(Paths.get(Preferences.sLOGFILE_FILE_NAME)));
 //    }
+    /**
+     * Produce the HTTP homepage of the server
+     *
+     * @return The HTTP main navigation menu of the server
+     */
+    /*
+     private static String http() {
+     try {
+     // Get the CSS style definitions
+     final String style = new String(Files.readAllBytes(Paths.get("res/css/styles.css")));
+     // 
+     return "<!DOCTYPE html>\n"
+     + "<head>\n"
+     + "<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"/>\n"
+     + "<title>Kristina Project Demonstrator - Visual Scene Maker Service</title>\n"
+     + "<style>\n"
+     + style
+     + "</style>"
+     + "</head>\n"
+     + "<html>\n"
+     + "<body>\n"
+     + "<div id=\"container\">"
+     + "<header>\n"
+     + "  <div class=\"width\">\n"
+     + "    <div>\n"
+     + "      <h1>\n"
+     + "        <a href=\"/\"><span>KRISTINA</span> Project Demonstrator</a>\n"
+     + "      </h1>\n"
+     + "      <h1>\n"
+     + "        <a href=\"/\">Visual <span>SceneMaker</span> Control Service</a>\n"
+     + "      </h1>\n"
+     + "    </div>\n"
+     + "  </div>\n"
+     + "</header>"
+     + "<nav>\n"
+     + "  <div  class=\"width\">\n"
+     + "    <ul>\n"
+     + "                <li class=\"start selected\"><a href=\"index.html\">Home</a></li>\n"
+     + "                <li class=\"\"><a href=\"getstarted.html\">Get Started!</a></li>\n"
+     + "                <li class=\"\"><a href=\"tutorial.html\">Tutorials</a></li>\n"
+     + "                <li class=\"\"><a href=\"faq.html\">FAQ</a></li>\n"
+     + "                <li class=\"\"><a href=\"downloads.html\">Download</a></li>\n"
+     + "                <li class=\"\"><a href=\"projects.html\">Projects</a></li>\n"
+     + "                <li class=\"\"><a href=\"contact.html\">Contact</a></li>\n"
+     + "            </ul>\n"
+     + "        </div>\n"
+     + "    </nav>  "
+     + "</div>"
+     + "</body>\n"
+     + "</html>";
+     } catch (final IOException exc) {
+     // Print some information
+     sLogger.failure(exc.toString());
+     // Return null at failure
+     return null;
+     }
+     }*/
 }
