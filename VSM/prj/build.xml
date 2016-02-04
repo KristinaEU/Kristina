@@ -155,9 +155,9 @@
     </target>
     <!-- Execute Project -->
     <target name="run-vsm-restful-client">
-        <java classname="eu.kristina.vsm.VSMRestWebClient" fork="true">
+        <java classname="eu.kristina.vsm.VSMRestFulClient" fork="true">
             <classpath refid="clspath"/>
-            <arg line="http://137.250.171.120:11223/vsm"/>
+            <arg line="http://137.250.171.231:11223"/>
         </java>
     </target> 
     <!-- Execute Project -->
@@ -171,7 +171,7 @@
     <target name="run-vsm-restful-server">
         <java classname="eu.kristina.vsm.VSMRestFulServer" fork="true">
             <classpath refid="clspath"/>
-            <arg line="http://137.250.171.120:11223/"/>
+            <arg line="http://137.250.171.231:11223/"/>
         </java>
     </target>  
     <!-- Profile Project -->
@@ -184,7 +184,7 @@
         </nbprofiledirect>
         <java classname="eu.kristina.vsm.VSMRestFulServer" fork="true">
             <classpath refid="clspath"/>
-            <arg line="http://137.250.171.120:11223/"/>
+            <arg line="http://137.250.171.231:11223/"/>
             <jvmarg line="${agent.jvmargs}"/>
         </java>
     </target>  
@@ -199,7 +199,7 @@
     <target name="run-ssi-socket-terminal">
         <java classname="eu.kristina.vsm.ssi.SSISocketTerminal" fork="true">
             <classpath refid="clspath"/>
-            <arg line="137.250.171.120 11220 137.250.171.230 11190 false"/>
+            <arg line="137.250.171.231 11220 137.250.171.230 11190 false"/>
         </java>
     </target>  
     <!-- Execute Project -->
