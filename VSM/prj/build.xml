@@ -155,9 +155,9 @@
     </target>
     <!-- Execute Project -->
     <target name="run-vsm-restful-client">
-        <java classname="eu.kristina.vsm.VSMRestWebClient" fork="true">
+        <java classname="eu.kristina.vsm.VSMRestFulClient" fork="true">
             <classpath refid="clspath"/>
-            <arg line="http://137.250.171.120:11223/vsm"/>
+            <arg line="http://137.250.171.120:11223"/>
         </java>
     </target> 
     <!-- Execute Project -->

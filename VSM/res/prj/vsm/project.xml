@@ -1,24 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Project name="KRISTINA">
-  <Plugins>
-  </Plugins>
-  <Players>
-    <Player name="defaultsceneplayer" class="eu.kristina.vsm.VSMKristinaPlayer">
-      <Feature key="eca.socket.remote.host" value="webglstudio.org"/>
-      <Feature key="eca.socket.remote.port" value="9900"/>
-      <Feature key="ssi.rest.service.url" value="http://137.250.171.230:11193/fusion/Service.svc/getCurrent"/>
-      <Feature key="ssi.socket.local.host" value="137.250.171.231"/>
-      <Feature key="ssi.socket.local.port" value="11220"/>
-      <Feature key="ssi.socket.remote.host" value="137.250.171.230"/>
-      <Feature key="ssi.socket.remote.port" value="11190"/>
-      <Feature key="ssi.socket.remote.flag" value="false"/>
-      <Feature key="owl.socket.local.host" value="137.250.171.231"/>
-      <Feature key="owl.socket.local.port" value="11221"/>
-      <Feature key="owl.socket.remote.host" value="137.250.171.231"/>
-      <Feature key="owl.socket.remote.port" value="11151"/>
-      <Feature key="owl.socket.remote.flag" value="false"/>
-    </Player>
-  </Players>
-  <Agents>
-  </Agents>
+    <Plugins>
+    </Plugins>
+    <Players>
+        <Player name="defaultsceneplayer" class="eu.kristina.vsm.VSMKristinaPlayer">
+            <Feature key="eca.socket.remote.host" value="webglstudio.org"/>
+            <Feature key="eca.socket.remote.port" value="9900"/>
+            <Feature key="restful.service.count" value="7"/>            
+            <Feature key="restful.service.0.host" value="UAU"/>
+            <Feature key="restful.service.0.name" value="SSI - Social Cue Pipeline"/>
+            <Feature key="restful.service.0.url" value="http://137.250.171.230:11193"/>
+            <Feature key="restful.service.0.in" value="*/*"/>
+            <Feature key="restful.service.0.out" value="*/*"/>            
+            <Feature key="restful.service.1.host" value="UAU"/>
+            <Feature key="restful.service.1.name" value="VSM - Turn Management"/>
+            <Feature key="restful.service.1.url" value="http://137.250.171.231:11223"/>
+            <Feature key="restful.service.1.in" value="*/*"/>
+            <Feature key="restful.service.1.out" value="*/*"/>            
+            <Feature key="restful.service.2.host" value="UULM"/>
+            <Feature key="restful.service.2.name" value="OWL - Dialog Management"/>
+            <Feature key="restful.service.2.url" value="http://137.250.171.232:11153"/>
+            <Feature key="restful.service.2.in" value="*/*"/>
+            <Feature key="restful.service.2.out" value="*/*"/>            
+            <Feature key="restful.service.3.host" value="UPF"/>
+            <Feature key="restful.service.3.name" value="TALN - Language Analysis"/>
+            <Feature key="restful.service.3.url" value="http://kristina.taln.upf.edu/services/language_analysis"/>
+            <Feature key="restful.service.3.in" value="*/*"/>
+            <Feature key="restful.service.3.out" value="*/*"/>            
+            <Feature key="restful.service.4.host" value="UPF"/>
+            <Feature key="restful.service.4.name" value="TALN - Language Generation"/>
+            <Feature key="restful.service.4.url" value="http://kristina.taln.upf.edu/services/language_generation"/>
+            <Feature key="restful.service.4.in" value="*/*"/>
+            <Feature key="restful.service.4.out" value="*/*"/>            
+            <Feature key="restful.service.5.host" value="UPF"/>
+            <Feature key="restful.service.5.name" value="TALN - Mode Selection"/>
+            <Feature key="restful.service.5.url" value="http://kristina.taln.upf.edu/services/mode_selection"/>
+            <Feature key="restful.service.5.in" value="*/*"/>
+            <Feature key="restful.service.5.out" value="*/*"/>   
+            <Feature key="restful.service.6.host" value="UPF"/>
+            <Feature key="restful.service.6.name" value="GTI - Character Engine"/>
+            <Feature key="restful.service.6.url" value="http://webglstudio.org:9902"/>
+            <Feature key="restful.service.6.in" value="*/*"/>
+            <Feature key="restful.service.6.out" value="*/*"/>          
+            <Feature key="ssi.socket.local.host" value="137.250.171.231"/>
+            <Feature key="ssi.socket.local.port" value="11220"/>
+            <Feature key="ssi.socket.remote.host" value="137.250.171.230"/>
+            <Feature key="ssi.socket.remote.port" value="11190"/>
+            <Feature key="ssi.socket.remote.flag" value="false"/>
+        </Player>
+    </Players>
+    <Agents>
+    </Agents>
 </Project>

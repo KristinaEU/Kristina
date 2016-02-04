@@ -6,9 +6,10 @@ import de.dfki.vsm.runtime.project.RunTimeProject;
 import de.dfki.vsm.runtime.values.AbstractValue;
 import de.dfki.vsm.runtime.players.RunTimePlayer;
 import de.dfki.vsm.util.log.LOGDefaultLogger;
+import eu.kristina.vsm.VSMRestFulClient.Service;
 import eu.kristina.vsm.gti.GTISocketHandler;
-import eu.kristina.vsm.owl.OWLSocketHandler;
 import eu.kristina.vsm.ssi.SSISocketHandler;
+import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Random;
 
@@ -25,14 +26,15 @@ public final class VSMKristinaPlayer implements RunTimePlayer {
     // The VSM runtime environment
     private final RunTimeInstance mRunTime
             = RunTimeInstance.getInstance();
+    // The  rest service urls
+    private final HashMap mServiceURLMap
+            = new HashMap<String, Service>();
     // The player's runtime project 
     private RunTimeProject mProject;
     // The project's specific config
     private PlayerConfig mPlayerConfig;
     // The project's specific name
     private String mPlayerName;
-    // The SSI rest service url
-    private String mSSIRestServiceURL;
     // The ECA socket handler
     private String mECASocketRemoteHost;
     private Integer mECASocketRemotePort;
@@ -44,13 +46,6 @@ public final class VSMKristinaPlayer implements RunTimePlayer {
     private Integer mSSISocketRemotePort;
     private Boolean mSSISocketRemoteFlag;
     private SSISocketHandler mSSISocket;
-    // The OWL socket handler
-    private String mOWLSocketLocalHost;
-    private Integer mOWLSocketLocalPort;
-    private String mOWLSocketRemoteHost;
-    private Integer mOWLSocketRemotePort;
-    private Boolean mOWLSocketRemoteFlag;
-    private OWLSocketHandler mOWLSocket;
     // The rest service client
     private VSMRestFulClient mRestClient;
     // A random number generator
@@ -74,9 +69,21 @@ public final class VSMKristinaPlayer implements RunTimePlayer {
         // Initialize the config
         mPlayerConfig = project.getPlayerConfig(mPlayerName);
 
-        // Get the SSI rest service
-        mSSIRestServiceURL = mPlayerConfig.getProperty("ssi.rest.service.url");
-
+        // Get the rest services
+        final int count = Integer.parseInt(mPlayerConfig.getProperty("restful.service.count"));
+        for (int i = 0; i < count; i++) {
+            final String host = mPlayerConfig.getProperty("restful.service." + i + ".host");
+            final String name = mPlayerConfig.getProperty("restful.service." + i + ".name");
+            final String url = mPlayerConfig.getProperty("restful.service." + i + ".url");
+            final String in = mPlayerConfig.getProperty("restful.service." + i + ".in");
+            final String out = mPlayerConfig.getProperty("restful.service." + i + ".out");
+            // Create the service data
+            final Service service = new Service(host, name, url, in, out);
+            // Add the new service then
+            mServiceURLMap.put(url, service);
+            // Print some information
+            mLogger.message("Registering restful service '" + service + "'" + "\r\n");
+        }
         // Get the ECA configuration
         mECASocketRemoteHost = mPlayerConfig.getProperty("eca.socket.remote.host");
         mECASocketRemotePort = Integer.parseInt(
@@ -92,31 +99,15 @@ public final class VSMKristinaPlayer implements RunTimePlayer {
         mSSISocketRemoteFlag = Boolean.parseBoolean(
                 mPlayerConfig.getProperty("ssi.socket.remote.flag"));
 
-        // Get the OWL configuration    
-        mOWLSocketLocalHost = mPlayerConfig.getProperty("owl.socket.local.host");
-        mOWLSocketLocalPort = Integer.parseInt(
-                mPlayerConfig.getProperty("owl.socket.local.port"));
-        mOWLSocketRemoteHost = mPlayerConfig.getProperty("owl.socket.remote.host");
-        mOWLSocketRemotePort = Integer.parseInt(
-                mPlayerConfig.getProperty("owl.socket.remote.port"));
-        mOWLSocketRemoteFlag = Boolean.parseBoolean(
-                mPlayerConfig.getProperty("owl.socket.remote.flag"));
-
         // Print some information
         mLogger.message(""
-                + "SSI Rest Service URL : '" + mSSIRestServiceURL + "'" + "\r\n"
                 + "ECA Socket Handler Remote Host : '" + mECASocketRemoteHost + "'" + "\r\n"
                 + "ECA Socket Handler Remote Port : '" + mECASocketRemotePort + "'" + "\r\n"
                 + "SSI Socket Handler Local Host  : '" + mSSISocketLocalHost + "'" + "\r\n"
                 + "SSI Socket Handler Local Port  : '" + mSSISocketLocalPort + "'" + "\r\n"
                 + "SSI Socket Handler Remote Host : '" + mSSISocketRemoteHost + "'" + "\r\n"
                 + "SSI Socket Handler Remote Port : '" + mSSISocketRemotePort + "'" + "\r\n"
-                + "SSI Socket Handler Remote Flag : '" + mSSISocketRemoteFlag + "'" + "\r\n"
-                + "OWL Socket Handler Local Host  : '" + mOWLSocketLocalHost + "'" + "\r\n"
-                + "OWL Socket Handler Local Port  : '" + mOWLSocketLocalPort + "'" + "\r\n"
-                + "OWL Socket Handler Remote Host : '" + mOWLSocketRemoteHost + "'" + "\r\n"
-                + "OWL Socket Handler Remote Port : '" + mOWLSocketRemotePort + "'" + "\r\n"
-                + "OWL Socket Handler Remote Flag : '" + mOWLSocketRemoteFlag + "'" + "\r\n");
+                + "SSI Socket Handler Remote Flag : '" + mSSISocketRemoteFlag + "'" + "\r\n");
 
         // Initialize the ECA socket
         mECASocket = new GTISocketHandler(
@@ -130,16 +121,9 @@ public final class VSMKristinaPlayer implements RunTimePlayer {
                 mSSISocketRemoteFlag);
         mSSISocket.start();
 
-        // Initialize the OWL socket
-        mOWLSocket = new OWLSocketHandler(this,
-                mOWLSocketLocalHost, mOWLSocketLocalPort,
-                mOWLSocketRemoteHost, mOWLSocketRemotePort,
-                mOWLSocketRemoteFlag);
-        //mOWLSocket.start();
-
         // Initialize the rest client
         mRestClient = new VSMRestFulClient(this);
-        
+
         // Print some information
         mLogger.message("Launching KRISTINA scene player '" + this + "' with configuration:\n" + mPlayerConfig);
         // Return true at success
@@ -151,12 +135,10 @@ public final class VSMKristinaPlayer implements RunTimePlayer {
     public final boolean unload() {
         // Abort running handlers
         mECASocket.abort();
-        mOWLSocket.abort();
         mSSISocket.abort();
         // Join with the handlers        
         try {
             mECASocket.join();
-            mOWLSocket.join();
             mSSISocket.join();
         } catch (final InterruptedException exc) {
             mLogger.failure(exc.toString());
