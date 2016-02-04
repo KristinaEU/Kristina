@@ -27,6 +27,8 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.MultivaluedMap;
+import javax.ws.rs.core.Response;
 
 /**
  * @author Gregor Mehlmann
@@ -387,7 +389,7 @@ public final class VSMRestFulServer {
      * @return The result of the query execution
      */
     @GET
-    @Produces(MediaType.TEXT_PLAIN)
+    @Produces(MediaType.APPLICATION_XML)
     public synchronized String get(
             @DefaultValue("") @QueryParam("cmd") final String cmd,
             @DefaultValue("") @QueryParam("arg") final String arg) {
@@ -413,15 +415,18 @@ public final class VSMRestFulServer {
     /**
      * Execute a POST request on the restful VSM server
      *
-     * @param obj The argument of the query
+     * @param object The argument of the query
      * @return The result of the query execution
      */
     @POST
-    @Produces(MediaType.TEXT_PLAIN)
-    @Consumes(MediaType.TEXT_PLAIN)
-    public synchronized String post(final String obj) {
+    @Consumes(MediaType.WILDCARD)
+    @Produces(MediaType.APPLICATION_XML)
+    public synchronized Response post(final String object) {
         // Return the object
-        return result(obj);
+        return Response
+                .status(Response.Status.OK)
+                .type(MediaType.APPLICATION_XML)
+                .entity(result(object)).build();
     }
 
     //
