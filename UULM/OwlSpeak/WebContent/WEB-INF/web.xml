@@ -13,7 +13,7 @@
     <description></description>
     <display-name>owlSpeak</display-name>
     <servlet-name>owlSpeak</servlet-name>
-    <servlet-class>owlSpeak.servlet.OwlSpeakServlet</servlet-class>
+    <servlet-class>owlSpeak.kristina.KristinaServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>owlSpeak</servlet-name>
