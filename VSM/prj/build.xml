@@ -153,43 +153,61 @@
             </fileset>
         </javadoc>
     </target>
+    <!-- Execute Project -->
+    <target name="run-vsm-restful-client">
+        <java classname="eu.kristina.vsm.VSMRestWebClient" fork="true">
+            <classpath refid="clspath"/>
+            <arg line="http://137.250.171.120:11223/vsm"/>
+        </java>
+    </target> 
+    <!-- Execute Project -->
+    <target name="run-vsm-project-editor">
+        <java classname="de.dfki.vsm.SceneMaker3" fork="true">
+            <classpath refid="clspath"/>
+            <arg line="editor res/prj/vsm"/>
+        </java>
+    </target> 
+    <!-- Execute Project -->
+    <target name="run-vsm-restful-server">
+        <java classname="eu.kristina.vsm.VSMRestFulServer" fork="true">
+            <classpath refid="clspath"/>
+            <arg line="http://137.250.171.120:11223/"/>
+        </java>
+    </target>  
     <!-- Profile Project -->
-    <target name="profile" depends="build" description="Profile">
+    <target name="prf-vsm-restful-server" depends="build" description="Profile Project">
         <fail unless="netbeans.home">
             This target can only run inside the NetBeans IDE.
         </fail>
-        <java classname="eu.kristina.eca.ECABehaviorManager" fork="true">
-            <jvmarg value="${profiler.info.jvmargs.agent}"/>
+        <nbprofiledirect>
             <classpath refid="clspath"/>
-        </java>
-    </target>  
-    <!-- Execute Project -->
-    <target name="test-eca">
-        <java classname="eu.kristina.vsm.test.ECAControlTerminal" fork="true">
-            <classpath refid="clspath"/>
-            <arg line="webglstudio.org 9900"/>
-        </java>
-    </target>  
-    <!-- Execute Project -->
-    <target name="service">
-        <java classname="eu.kristina.vsm.test.VSMControlService" fork="true">
+        </nbprofiledirect>
+        <java classname="eu.kristina.vsm.VSMRestFulServer" fork="true">
             <classpath refid="clspath"/>
             <arg line="http://137.250.171.120:11223/"/>
-            <!--<arg line="http://137.250.171.231:11223/"/>-->
+            <jvmarg line="${agent.jvmargs}"/>
         </java>
     </target>  
     <!-- Execute Project -->
-    <target name="test-ssi">
-        <java classname="eu.kristina.vsm.test.SSIServiceTerminal" fork="true">
+    <target name="run-ssi-service-terminal">
+        <java classname="eu.kristina.vsm.ssi.SSIServiceTerminal" fork="true">
             <classpath refid="clspath"/>
             <arg line="http://137.250.171.230:11193/fusion/Service.svc/getCurrent"/>
         </java>
     </target>  
     <!-- Execute Project -->
-    <target name="exec">
-        <java classname="de.dfki.vsm.SceneMaker3" fork="true">
-            <arg line="editor res/prj/vsm"/>
+    <target name="run-ssi-socket-terminal">
+        <java classname="eu.kristina.vsm.ssi.SSISocketTerminal" fork="true">
             <classpath refid="clspath"/>
+            <arg line="137.250.171.120 11220 137.250.171.230 11190 false"/>
         </java>
-    </target> 
+    </target>  
+    <!-- Execute Project -->
+    <target name="run-gti-socket-terminal">
+        <java classname="eu.kristina.vsm.gti.ECASocketTerminal" fork="true">
+            <classpath refid="clspath"/>
+            <arg line="webglstudio.org 9900"/>
+        </java>
+    </target>  
+   
 </project>
