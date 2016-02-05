@@ -41,10 +41,7 @@ import gr.iti.kristina.core.irmapper.model.ExResource;
 import gr.iti.kristina.core.irmapper.model.Triple;
 import gr.iti.kristina.helpers.repository.GraphDbRepositoryManager;
 import gr.iti.kristina.helpers.vocabulary.NS;
-import java.io.BufferedReader;
-import java.io.FileReader;
 import java.io.IOException;
-import java.io.Reader;
 import java.io.StringReader;
 import java.lang.reflect.Type;
 import java.util.Collection;
@@ -59,6 +56,10 @@ import org.apache.lucene.analysis.standard.StandardAnalyzer;
 import org.apache.lucene.analysis.standard.StandardTokenizer;
 import org.apache.lucene.analysis.tokenattributes.CharTermAttribute;
 import org.apache.lucene.util.Version;
+import org.openrdf.repository.Repository;
+import org.openrdf.repository.RepositoryConnection;
+import org.openrdf.repository.RepositoryException;
+import org.openrdf.repository.config.RepositoryConfigException;
 import org.slf4j.LoggerFactory;
 
 /**
@@ -72,6 +73,7 @@ public class SymptomsMappingModule {
     public static final String FINDING = "finding";
     public static final String HAS_SYMPTOM = "hasSymptom";
     public static final String RELATES_TO = "relatedTo";
+    private String repId;
 
     private String jsonInput;
 
@@ -86,10 +88,11 @@ public class SymptomsMappingModule {
     HashMap<String, String> mappings = new HashMap();
 
     public SymptomsMappingModule(String serverURL, String repId, String username, String password) {
-        manager = new GraphDbRepositoryManager(serverURL, repId, username, password);
+        manager = new GraphDbRepositoryManager(serverURL, username, password);
+        this.repId = repId;
     }
 
-    public void call() throws IOException {
+    public void call() throws IOException, RepositoryConfigException, RepositoryException {
         createTriples();
 //        assignPredicates();
         updateKb(false);
@@ -169,8 +172,10 @@ public class SymptomsMappingModule {
         return WordUtils.capitalize(concept).replaceAll(" ", "");
     }
 
-    public void updateKb(boolean persist) throws IOException {
-        SesameDataset dataset = new SesameDataset(manager.getConnection());
+    public void updateKb(boolean persist) throws IOException, RepositoryConfigException, RepositoryException {
+        Repository repository = manager.getRepository(repId);
+        RepositoryConnection connection = repository.getConnection();
+        SesameDataset dataset = new SesameDataset(connection);
         Model _model = ModelFactory.createModelForGraph(dataset.getDefaultGraph());
         OntModel temp = ModelFactory.createOntologyModel(OntModelSpec.OWL_MEM);
         Property hasSymptom = _model.createProperty(NS.SYMPTOMS_NS + "hasSymptom");
@@ -206,10 +211,12 @@ public class SymptomsMappingModule {
         }
         if (manager != null) {
             manager.shutDown();
+            connection.close();
+            repository.shutDown();
         }
     }
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException, RepositoryConfigException, RepositoryException {
         SymptomsMappingModule o = new SymptomsMappingModule("http://localhost:8080", "Symptoms-Repository", "admin", "Paran01@!#10");
         o.setJsonInput("");
         o.call();

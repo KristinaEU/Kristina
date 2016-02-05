@@ -37,11 +37,12 @@ import org.openrdf.repository.config.RepositoryConfigException;
 public class Test {
 
     public static void main(String[] args) throws RepositoryException, RepositoryConfigException {
-        GraphDbRepositoryManager repository = new GraphDbRepositoryManager("http://localhost:8080", "Symptoms-Repository", "admin", "Paran01@!#10");
-        SesameDataset dataset = new SesameDataset(repository.getConnection());
+        GraphDbRepositoryManager manager = new GraphDbRepositoryManager("http://localhost:8080", "admin", "Paran01@!#10");
+        
+        SesameDataset dataset = new SesameDataset(manager.getRepository("Symptoms-Repository").getConnection());
         Model model = ModelFactory.createModelForGraph(dataset.getDefaultGraph());
         System.out.println(model.listStatements().toList().size());
-        repository.shutDown();
+        manager.shutDown();
     }
 
 }

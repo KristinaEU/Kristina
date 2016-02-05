@@ -46,6 +46,10 @@ import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
+import org.openrdf.repository.Repository;
+import org.openrdf.repository.RepositoryConnection;
+import org.openrdf.repository.RepositoryException;
+import org.openrdf.repository.config.RepositoryConfigException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -63,12 +67,22 @@ public class ContextUpdateResource {
     private final String GRAPH_DB_URL = "http://localhost:8084/graphdb-workbench-free";
     private final String USERNAME = "kristina";
     private final String PASSWORD = "samiam#2";
+    private final String REP_ID = "test";
+    private final GraphDbRepositoryManager manager;
+    private final Repository repository;
+    private final RepositoryConnection connection;
     Logger logger = LoggerFactory.getLogger(ContextUpdateResource.class);
 
     /**
      * Creates a new instance of ContextUpdateResource
+     *
+     * @throws org.openrdf.repository.config.RepositoryConfigException
+     * @throws org.openrdf.repository.RepositoryException
      */
-    public ContextUpdateResource() {
+    public ContextUpdateResource() throws RepositoryConfigException, RepositoryException {
+        manager = new GraphDbRepositoryManager(GRAPH_DB_URL, USERNAME, PASSWORD);
+        repository = manager.getRepository(REP_ID);
+        connection = repository.getConnection();
     }
 
     /**
@@ -90,17 +104,20 @@ public class ContextUpdateResource {
      * @param frames Verbal communication results in the FrameSituation model
      * (DnS pattern)
      * @return The result of KI in RDF/OWL (DnS pattern)
+     * @throws org.openrdf.repository.config.RepositoryConfigException
+     * @throws org.openrdf.repository.RepositoryException
      */
     @POST
     @Consumes(MediaType.TEXT_PLAIN)
-    public String update(@QueryParam("emotions") String emotions, @QueryParam("frames") String frames) {
+    public String update(@QueryParam("emotions") String emotions, @QueryParam("frames") String frames) throws RepositoryConfigException, RepositoryException {
         logger.debug("frames: " + frames);
         logger.debug("emotions: " + emotions);
-        String result = null;
-        GraphDbRepositoryManager manager = new GraphDbRepositoryManager(GRAPH_DB_URL, "test", USERNAME, PASSWORD);
         logger.debug("POST on api/context/update");
-        fakeInsert(manager);
-        result = createResponse(manager);
+        fakeInsert();
+        String result = createResponse();
+        connection.close();
+        repository.shutDown();
+        manager.shutDown();
         return result;
     }
 
@@ -156,8 +173,8 @@ public class ContextUpdateResource {
         Individual sit1 = model.createIndividual(sit);
     }
 
-    private void fakeInsert(GraphDbRepositoryManager manager) {
-        SesameDataset dataset = new SesameDataset(manager.getConnection());
+    private void fakeInsert() {
+        SesameDataset dataset = new SesameDataset(connection);
         Model _model = ModelFactory.createModelForGraph(dataset.getDefaultGraph());
         OntModel temp = ModelFactory.createOntologyModel(OntModelSpec.OWL_MEM, _model);
         Resource sit = temp.createResource(PREFIXES.FRAMES + "FrameSituation");
@@ -166,8 +183,9 @@ public class ContextUpdateResource {
 //        dataset.close();
     }
 
-    private String createResponse(GraphDbRepositoryManager manager) {
-        SesameDataset dataset = new SesameDataset(manager.getConnection());
+    private String createResponse() throws RepositoryConfigException, RepositoryException {
+
+        SesameDataset dataset = new SesameDataset(connection);
         Model _model = ModelFactory.createModelForGraph(dataset.getDefaultGraph());
         OntModel model = ModelFactory.createOntologyModel(OntModelSpec.OWL_MEM);
         model.addSubModel(_model);

@@ -1,0 +1,60 @@
+# baseURI: http://kristina-project.eu/ontologies/framesituation/example
+# imports: http://kristina-project.eu/ontologies/framesituation/core
+
+@prefix : <http://kristina-project.eu/ontologies/framesituation/example#> .
+@prefix core: <http://kristina-project.eu/ontologies/framesituation/core#> .
+@prefix dul: <http://www.loa-cnr.it/ontologies/DUL.owl#> .
+@prefix ent: <http://kristina-project.eu/ontologies/entities#> .
+@prefix expl: <http://kristina-project.eu/ontologies/framesituation/example#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://kristina-project.eu/ontologies/framesituation/example>
+  rdf:type owl:Ontology ;
+  owl:imports <http://kristina-project.eu/ontologies/framesituation/core> ;
+.
+<http://kristina-project.eu/ontologies/framesituation/example#Age.Age_1Inf>
+  rdf:type <http://kristina-project.eu/ontologies/framesituation/core#Age.age> ;
+  rdf:type owl:NamedIndividual ;
+  dul:classifies expl:Age_1Inf ;
+.
+<http://kristina-project.eu/ontologies/framesituation/example#Age.Entity_1Inf>
+  rdf:type <http://kristina-project.eu/ontologies/framesituation/core#Entity.age> ;
+  rdf:type owl:NamedIndividual ;
+  dul:classifies expl:NaturalPerson_1Inf ;
+.
+expl:AgeDescription_1Inf
+  rdf:type core:AgeDescription ;
+  rdf:type owl:NamedIndividual ;
+  dul:defines <http://kristina-project.eu/ontologies/framesituation/example#Age.Age_1Inf> ;
+  dul:defines <http://kristina-project.eu/ontologies/framesituation/example#Age.Entity_1Inf> ;
+.
+expl:AgeFrame_1Inf
+  rdf:type core:AgeFrame ;
+  rdf:type owl:NamedIndividual ;
+  dul:isSettingFor expl:Age_1Inf ;
+  dul:isSettingFor expl:NaturalPerson_1Inf ;
+  dul:satisfies expl:AgeDescription_1Inf ;
+.
+expl:Age_1Inf
+  rdf:type ent:Age ;
+  rdf:type owl:NamedIndividual ;
+  dul:hasRegionDataValue "76"^^xsd:int ;
+.
+expl:InformAge_1
+  rdf:type core:InformSpeechAct ;
+  rdf:type owl:NamedIndividual ;
+  dul:isSettingFor expl:AgeFrame_1Inf ;
+  dul:satisfies expl:InformDescription_1 ;
+.
+expl:InformDescription_1
+  rdf:type core:InformDescription ;
+  rdf:type owl:NamedIndividual ;
+.
+expl:NaturalPerson_1Inf
+  rdf:type dul:NaturalPerson ;
+  rdf:type owl:NamedIndividual ;
+.

@@ -1,0 +1,380 @@
+# baseURI: http://kristina-project.eu/ontologies/framesituation/core
+# imports: http://kristina-project.eu/ontologies/entities
+# imports: http://www.loa-cnr.it/ontologies/DUL.owl
+# imports: http://www.w3.org/2004/02/skos/core
+
+@prefix : <http://kristina-project.eu/ontologies/framesituation/core#> .
+@prefix dul: <http://www.loa-cnr.it/ontologies/DUL.owl#> .
+@prefix ent: <http://kristina-project.eu/ontologies/entities#> .
+@prefix ofn: <http://www.ontologydesignpatterns.org/ont/ofn/ofn.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix spin: <http://spinrdf.org/spin#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://kristina-project.eu/ontologies/framesituation/core>
+  rdf:type owl:Ontology ;
+  spin:imports <http://topbraid.org/spin/owlrl-all> ;
+  owl:imports <http://kristina-project.eu/ontologies/entities> ;
+  owl:imports <http://www.loa-cnr.it/ontologies/DUL.owl> ;
+  owl:imports <http://www.w3.org/2004/02/skos/core> ;
+  owl:versionInfo "Core ontology that defines the basic vocabulary for capturing frame-related information using DnS"^^xsd:string ;
+.
+<http://kristina-project.eu/ontologies/framesituation/core#Age.age>
+  rdf:type owl:Class ;
+  rdfs:subClassOf :FrameElement ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom [
+          rdf:type owl:Restriction ;
+          owl:onProperty dul:hasSetting ;
+          owl:someValuesFrom :AgeFrame ;
+        ] ;
+      owl:onProperty dul:classifies ;
+    ] ;
+.
+:AgeDescription
+  rdf:type owl:Class ;
+  rdfs:subClassOf :FrameDescription ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty dul:defines ;
+      owl:someValuesFrom <http://kristina-project.eu/ontologies/framesituation/core#Age.age> ;
+    ] ;
+.
+:AgeFrame
+  rdf:type owl:Class ;
+  rdfs:subClassOf :FrameSituation ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onClass :AgeDescription ;
+      owl:onProperty dul:satisfies ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty dul:isSettingFor ;
+      owl:someValuesFrom [
+          rdf:type owl:Restriction ;
+          owl:onProperty dul:isClassifiedBy ;
+          owl:someValuesFrom <http://kristina-project.eu/ontologies/framesituation/core#Age.age> ;
+        ] ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty dul:isSettingFor ;
+      owl:someValuesFrom [
+          rdf:type owl:Restriction ;
+          owl:onProperty dul:isClassifiedBy ;
+          owl:someValuesFrom <http://kristina-project.eu/ontologies/framesituation/core#Entity.age> ;
+        ] ;
+    ] ;
+.
+<http://kristina-project.eu/ontologies/framesituation/core#Count.measure_volume>
+  rdf:type owl:Class ;
+  rdfs:subClassOf :Measurable ;
+.
+<http://kristina-project.eu/ontologies/framesituation/core#Degree.ingestion>
+  rdf:type owl:Class ;
+  rdfs:subClassOf :FrameElement ;
+.
+<http://kristina-project.eu/ontologies/framesituation/core#Entity.age>
+  rdf:type owl:Class ;
+  rdfs:subClassOf :FrameElement ;
+.
+:EventFrameSituation
+  rdf:type owl:Class ;
+  rdfs:subClassOf :FrameSituation ;
+.
+:FrameDescription
+  rdf:type owl:Class ;
+  rdfs:subClassOf dul:Description ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty dul:defines ;
+      owl:someValuesFrom :FrameElement ;
+    ] ;
+.
+:FrameElement
+  rdf:type owl:Class ;
+  rdfs:subClassOf dul:Concept ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty dul:classifies ;
+      owl:someValuesFrom dul:Entity ;
+    ] ;
+.
+:FrameSituation
+  rdf:type owl:Class ;
+  rdfs:subClassOf dul:Situation ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty dul:includesEvent ;
+      owl:someValuesFrom dul:Event ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty dul:satisfies ;
+      owl:someValuesFrom :FrameDescription ;
+    ] ;
+.
+:InformDescription
+  rdf:type owl:Class ;
+  rdfs:subClassOf :SpeechActDescription ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty dul:defines ;
+      owl:someValuesFrom :InformType ;
+    ] ;
+.
+:InformSpeechAct
+  rdf:type owl:Class ;
+  rdfs:subClassOf :SpeechAct ;
+  owl:equivalentClass [
+      rdf:type owl:Restriction ;
+      owl:onProperty dul:satisfies ;
+      owl:someValuesFrom :InformDescription ;
+    ] ;
+.
+:InformType
+  rdf:type owl:Class ;
+  rdfs:subClassOf :SpeechActType ;
+.
+<http://kristina-project.eu/ontologies/framesituation/core#Ingestibles.ingestion>
+  rdf:type owl:Class ;
+  rdfs:subClassOf :FrameElement ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom [
+          rdf:type owl:Restriction ;
+          owl:onProperty dul:hasSetting ;
+          owl:someValuesFrom :IngestionFrame ;
+        ] ;
+      owl:onProperty dul:classifies ;
+    ] ;
+.
+:IngestionDescription
+  rdf:type owl:Class ;
+  rdfs:subClassOf :FrameDescription ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty dul:defines ;
+      owl:someValuesFrom <http://kristina-project.eu/ontologies/framesituation/core#Degree.ingestion> ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty dul:defines ;
+      owl:someValuesFrom <http://kristina-project.eu/ontologies/framesituation/core#Ingestibles.ingestion> ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty dul:defines ;
+      owl:someValuesFrom <http://kristina-project.eu/ontologies/framesituation/core#Ingestor.ingestion> ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty dul:defines ;
+      owl:someValuesFrom <http://kristina-project.eu/ontologies/framesituation/core#Instrument.ingestion> ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty dul:defines ;
+      owl:someValuesFrom <http://kristina-project.eu/ontologies/framesituation/core#Manner.ingestion> ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty dul:defines ;
+      owl:someValuesFrom <http://kristina-project.eu/ontologies/framesituation/core#Place.ingestion> ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty dul:defines ;
+      owl:someValuesFrom <http://kristina-project.eu/ontologies/framesituation/core#Time.ingestion> ;
+    ] ;
+.
+:IngestionFrame
+  rdf:type owl:Class ;
+  rdfs:subClassOf :EventFrameSituation ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onClass :IngestionDescription ;
+      owl:onProperty dul:satisfies ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty dul:isSettingFor ;
+      owl:someValuesFrom [
+          rdf:type owl:Restriction ;
+          owl:onProperty dul:isClassifiedBy ;
+          owl:someValuesFrom <http://kristina-project.eu/ontologies/framesituation/core#Degree.ingestion> ;
+        ] ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty dul:isSettingFor ;
+      owl:someValuesFrom [
+          rdf:type owl:Restriction ;
+          owl:onProperty dul:isClassifiedBy ;
+          owl:someValuesFrom <http://kristina-project.eu/ontologies/framesituation/core#Ingestibles.ingestion> ;
+        ] ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty dul:isSettingFor ;
+      owl:someValuesFrom [
+          rdf:type owl:Restriction ;
+          owl:onProperty dul:isClassifiedBy ;
+          owl:someValuesFrom <http://kristina-project.eu/ontologies/framesituation/core#Ingestor.ingestion> ;
+        ] ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty dul:isSettingFor ;
+      owl:someValuesFrom [
+          rdf:type owl:Restriction ;
+          owl:onProperty dul:isClassifiedBy ;
+          owl:someValuesFrom <http://kristina-project.eu/ontologies/framesituation/core#Instrument.ingestion> ;
+        ] ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty dul:isSettingFor ;
+      owl:someValuesFrom [
+          rdf:type owl:Restriction ;
+          owl:onProperty dul:isClassifiedBy ;
+          owl:someValuesFrom <http://kristina-project.eu/ontologies/framesituation/core#Manner.ingestion> ;
+        ] ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty dul:isSettingFor ;
+      owl:someValuesFrom [
+          rdf:type owl:Restriction ;
+          owl:onProperty dul:isClassifiedBy ;
+          owl:someValuesFrom <http://kristina-project.eu/ontologies/framesituation/core#Place.ingestion> ;
+        ] ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty dul:isSettingFor ;
+      owl:someValuesFrom [
+          rdf:type owl:Restriction ;
+          owl:onProperty dul:isClassifiedBy ;
+          owl:someValuesFrom <http://kristina-project.eu/ontologies/framesituation/core#Time.ingestion> ;
+        ] ;
+    ] ;
+.
+<http://kristina-project.eu/ontologies/framesituation/core#Ingestor.ingestion>
+  rdf:type owl:Class ;
+  rdfs:subClassOf :FrameElement ;
+.
+<http://kristina-project.eu/ontologies/framesituation/core#Instrument.ingestion>
+  rdf:type owl:Class ;
+  rdfs:subClassOf :FrameElement ;
+.
+<http://kristina-project.eu/ontologies/framesituation/core#Manner.ingestion>
+  rdf:type owl:Class ;
+  rdfs:subClassOf :FrameElement ;
+.
+:Measurable
+  rdf:type owl:Class ;
+  rdfs:subClassOf :FrameElement ;
+.
+:Measure_VolumeFrame
+  rdf:type owl:Class ;
+  rdfs:subClassOf :FrameSituation ;
+.
+:Measure_volumeDescription
+  rdf:type owl:Class ;
+  rdfs:subClassOf :FrameDescription ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty dul:defines ;
+      owl:someValuesFrom <http://kristina-project.eu/ontologies/framesituation/core#Count.measure_volume> ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty dul:defines ;
+      owl:someValuesFrom <http://kristina-project.eu/ontologies/framesituation/core#Stuff.measure_volume> ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty dul:defines ;
+      owl:someValuesFrom <http://kristina-project.eu/ontologies/framesituation/core#Unit.measure_volume> ;
+    ] ;
+.
+<http://kristina-project.eu/ontologies/framesituation/core#Place.ingestion>
+  rdf:type owl:Class ;
+  rdfs:subClassOf :FrameElement ;
+.
+:RequestDescription
+  rdf:type owl:Class ;
+  rdfs:subClassOf :SpeechActDescription ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty dul:defines ;
+      owl:someValuesFrom :RequestType ;
+    ] ;
+.
+:RequestSpeechAct
+  rdf:type owl:Class ;
+  rdfs:subClassOf :SpeechAct ;
+  owl:equivalentClass [
+      rdf:type owl:Restriction ;
+      owl:onProperty dul:satisfies ;
+      owl:someValuesFrom :RequestDescription ;
+    ] ;
+.
+:RequestType
+  rdf:type owl:Class ;
+  rdfs:subClassOf :SpeechActType ;
+.
+:SpeechAct
+  rdf:type owl:Class ;
+  rdfs:comment "A SpeechAct is a Situation that creates a context for one or more FrameSituations." ;
+  rdfs:subClassOf dul:Situation ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty dul:isSettingFor ;
+      owl:someValuesFrom :FrameSituation ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty dul:satisfies ;
+      owl:someValuesFrom :SpeechActDescription ;
+    ] ;
+.
+:SpeechActDescription
+  rdf:type owl:Class ;
+  rdfs:subClassOf dul:Description ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty dul:defines ;
+      owl:someValuesFrom :SpeechActType ;
+    ] ;
+.
+:SpeechActType
+  rdf:type owl:Class ;
+  rdfs:subClassOf dul:Concept ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty dul:classifies ;
+      owl:someValuesFrom dul:Entity ;
+    ] ;
+.
+<http://kristina-project.eu/ontologies/framesituation/core#Stuff.measure_volume>
+  rdf:type owl:Class ;
+  rdfs:subClassOf :FrameElement ;
+.
+<http://kristina-project.eu/ontologies/framesituation/core#Time.ingestion>
+  rdf:type owl:Class ;
+  rdfs:subClassOf :FrameElement ;
+.
+<http://kristina-project.eu/ontologies/framesituation/core#Unit.measure_volume>
+  rdf:type owl:Class ;
+  rdfs:subClassOf :FrameElement ;
+.

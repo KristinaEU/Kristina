@@ -24,7 +24,6 @@
 package gr.iti.kristina.helpers.repository;
 
 import org.openrdf.repository.Repository;
-import org.openrdf.repository.RepositoryConnection;
 import org.openrdf.repository.RepositoryException;
 import org.openrdf.repository.config.RepositoryConfigException;
 import org.openrdf.repository.manager.RemoteRepositoryManager;
@@ -38,41 +37,31 @@ import org.slf4j.LoggerFactory;
 public class GraphDbRepositoryManager {
 
     private RemoteRepositoryManager _manager;
-    private Repository _repository;
-    private RepositoryConnection _connection;
 
     static Logger logger = LoggerFactory.getLogger(GraphDbRepositoryManager.class);
 
-    public GraphDbRepositoryManager(String serverURL, String repositoryId, String username, String password) {
+    public GraphDbRepositoryManager(String serverURL, String username, String password) {
         try {
             _manager = new RemoteRepositoryManager(serverURL);
             _manager.setUsernameAndPassword(username, password);
             _manager.initialize();
-            _repository = _manager.getRepository(repositoryId);
-            _connection = _repository.getConnection();
-        } catch (RepositoryException | RepositoryConfigException ex) {
+        } catch (RepositoryException ex) {
             logger.error("", ex);
         }
     }
-
+    
+     
+    public Repository getRepository(String id) throws RepositoryConfigException, RepositoryException{
+        return _manager.getRepository(id);
+    }
     public void shutDown() {
         if (_manager != null) {
             try {
-                _connection.close();
-                _repository.shutDown();
                 _manager.shutDown();
             } catch (Exception ex) {
                 logger.error("", ex);
             }
         }
-    }
-
-    public RepositoryConnection getConnection() {
-        return _connection;
-    }
-
-    public Repository getRepository() {
-        return _repository;
     }
 
     public RemoteRepositoryManager getManager() {

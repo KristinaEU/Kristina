@@ -57,9 +57,10 @@ public class WordNetRepository extends GraphDbRepositoryManager {
 
     public static String wordnetURI = "http://localhost:8084/graphdb-workbench-free/repositories/wordnet";
     public static String babelnetURI = "http://babelnet.org/sparql/";
+    private static String REP_ID = "wordnet";
 
     public WordNetRepository(String serverURL, String username, String password) {
-        super(serverURL, "wordnet", username, password);
+        super(serverURL, username, password);
     }
 
     public static String call(HttpHost target, HttpGet httpget, CloseableHttpClient httpclient, HttpClientContext context)

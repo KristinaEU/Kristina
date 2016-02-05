@@ -26,15 +26,16 @@ package gr.iti.kristina.helpers.test;
 import gr.iti.kristina.helpers.repository.GraphDbRepositoryManager;
 import org.openrdf.repository.Repository;
 import org.openrdf.repository.RepositoryException;
+import org.openrdf.repository.config.RepositoryConfigException;
 
 /**
  *
  * @author gmeditsk
  */
 public class Test1 {
-    public static void main(String[] args) throws RepositoryException {
-        GraphDbRepositoryManager manager = new GraphDbRepositoryManager("http://localhost:8084/graphdb-workbench-free", "test", "kristina", "samiam#2");
-        Repository r = manager.getRepository();
+    public static void main(String[] args) throws RepositoryException, RepositoryConfigException {
+        GraphDbRepositoryManager manager = new GraphDbRepositoryManager("http://localhost:8084/graphdb-workbench-free", "kristina", "samiam#2");
+        Repository r = manager.getRepository("test");
         System.out.println(r.getConnection().getStatements(null, null, null, true).asList().size());
         manager.shutDown();
     }
