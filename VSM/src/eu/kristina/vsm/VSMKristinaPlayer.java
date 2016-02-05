@@ -6,8 +6,7 @@ import de.dfki.vsm.runtime.project.RunTimeProject;
 import de.dfki.vsm.runtime.values.AbstractValue;
 import de.dfki.vsm.runtime.players.RunTimePlayer;
 import de.dfki.vsm.util.log.LOGDefaultLogger;
-import eu.kristina.vsm.VSMRestFulClient.Service;
-import eu.kristina.vsm.gti.GTISocketHandler;
+import eu.kristina.vsm.VSMRestFulClient.Resource;
 import eu.kristina.vsm.ssi.SSISocketHandler;
 import java.util.HashMap;
 import java.util.LinkedList;
@@ -27,18 +26,14 @@ public final class VSMKristinaPlayer implements RunTimePlayer {
     private final RunTimeInstance mRunTime
             = RunTimeInstance.getInstance();
     // The  rest service urls
-    private final HashMap mServiceURLMap
-            = new HashMap<String, Service>();
+    private final HashMap mResourceMap
+            = new HashMap<String, Resource>();
     // The player's runtime project 
     private RunTimeProject mProject;
     // The project's specific config
     private PlayerConfig mPlayerConfig;
     // The project's specific name
     private String mPlayerName;
-    // The ECA socket handler
-    private String mECASocketRemoteHost;
-    private Integer mECASocketRemotePort;
-    private GTISocketHandler mECASocket;
     // The SSI socket handler
     private String mSSISocketLocalHost;
     private Integer mSSISocketLocalPort;
@@ -68,27 +63,21 @@ public final class VSMKristinaPlayer implements RunTimePlayer {
         mPlayerName = project.getPlayerName(this);
         // Initialize the config
         mPlayerConfig = project.getPlayerConfig(mPlayerName);
-
         // Get the rest services
-        final int count = Integer.parseInt(mPlayerConfig.getProperty("restful.service.count"));
+        final int count = Integer.parseInt(mPlayerConfig.getProperty("restful.resource.count"));
         for (int i = 0; i < count; i++) {
-            final String host = mPlayerConfig.getProperty("restful.service." + i + ".host");
-            final String name = mPlayerConfig.getProperty("restful.service." + i + ".name");
-            final String url = mPlayerConfig.getProperty("restful.service." + i + ".url");
-            final String in = mPlayerConfig.getProperty("restful.service." + i + ".in");
-            final String out = mPlayerConfig.getProperty("restful.service." + i + ".out");
+            final String host = mPlayerConfig.getProperty("restful.resource." + i + ".host");
+            final String name = mPlayerConfig.getProperty("restful.resource." + i + ".name");
+            final String path = mPlayerConfig.getProperty("restful.resource." + i + ".pah");
+            final String cons = mPlayerConfig.getProperty("restful.resource." + i + ".cons");
+            final String prod = mPlayerConfig.getProperty("restful.resource." + i + ".prod");
             // Create the service data
-            final Service service = new Service(host, name, url, in, out);
+            final Resource resource = new Resource(host, name, path, cons, prod);
             // Add the new service then
-            mServiceURLMap.put(url, service);
+            mResourceMap.put(name, resource);
             // Print some information
-            mLogger.message("Registering restful service '" + service + "'" + "\r\n");
+            mLogger.message("Registering RESTful service resource '" + resource + "'" + "\r\n");
         }
-        // Get the ECA configuration
-        mECASocketRemoteHost = mPlayerConfig.getProperty("eca.socket.remote.host");
-        mECASocketRemotePort = Integer.parseInt(
-                mPlayerConfig.getProperty("eca.socket.remote.port"));
-
         // Get the SSI configuration
         mSSISocketLocalHost = mPlayerConfig.getProperty("ssi.socket.local.host");
         mSSISocketLocalPort = Integer.parseInt(
@@ -101,18 +90,11 @@ public final class VSMKristinaPlayer implements RunTimePlayer {
 
         // Print some information
         mLogger.message(""
-                + "ECA Socket Handler Remote Host : '" + mECASocketRemoteHost + "'" + "\r\n"
-                + "ECA Socket Handler Remote Port : '" + mECASocketRemotePort + "'" + "\r\n"
                 + "SSI Socket Handler Local Host  : '" + mSSISocketLocalHost + "'" + "\r\n"
                 + "SSI Socket Handler Local Port  : '" + mSSISocketLocalPort + "'" + "\r\n"
                 + "SSI Socket Handler Remote Host : '" + mSSISocketRemoteHost + "'" + "\r\n"
                 + "SSI Socket Handler Remote Port : '" + mSSISocketRemotePort + "'" + "\r\n"
                 + "SSI Socket Handler Remote Flag : '" + mSSISocketRemoteFlag + "'" + "\r\n");
-
-        // Initialize the ECA socket
-        mECASocket = new GTISocketHandler(
-                this, mECASocketRemoteHost, mECASocketRemotePort);
-        mECASocket.start();
 
         // Initialize the SSI socket
         mSSISocket = new SSISocketHandler(this,
@@ -134,11 +116,9 @@ public final class VSMKristinaPlayer implements RunTimePlayer {
     @Override
     public final boolean unload() {
         // Abort running handlers
-        mECASocket.abort();
         mSSISocket.abort();
         // Join with the handlers        
         try {
-            mECASocket.join();
             mSSISocket.join();
         } catch (final InterruptedException exc) {
             mLogger.failure(exc.toString());
@@ -150,20 +130,20 @@ public final class VSMKristinaPlayer implements RunTimePlayer {
     }
 
     public final void blink(final String clientid) {
-        mECASocket.send(clientid + " " + "blink");
+        //mECASocket.send(clientid + " " + "blink");
     }
 
     public final void face(
             final String clientid,
             final float activation,
             final float evaluation) {
-        mECASocket.send(clientid + " " + "face" + " " + activation + " " + evaluation);
+        //mECASocket.send(clientid + " " + "face" + " " + activation + " " + evaluation);
     }
 
     public final void text(
             final String clientid,
             final String ttstext) {
-        mECASocket.send(clientid + " " + "text" + " " + ttstext);
+        //mECASocket.send(clientid + " " + "text" + " " + ttstext);
     }
 
     public final float randFloat() {
