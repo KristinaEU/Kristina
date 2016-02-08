@@ -1,2 +1,0 @@
-- Execute run.bat to start the VSM RESTful server
-- Type "exit" in the console to stop the server

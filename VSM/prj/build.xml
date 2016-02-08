@@ -201,13 +201,5 @@
             <classpath refid="clspath"/>
             <arg line="137.250.171.231 11220 137.250.171.230 11190 false"/>
         </java>
-    </target>  
-    <!-- Execute Project -->
-    <target name="run-gti-socket-terminal">
-        <java classname="eu.kristina.vsm.gti.ECASocketTerminal" fork="true">
-            <classpath refid="clspath"/>
-            <arg line="webglstudio.org 9900"/>
-        </java>
-    </target>  
-   
+    </target>
 </project>

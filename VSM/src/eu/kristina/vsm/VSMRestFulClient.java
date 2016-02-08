@@ -168,6 +168,7 @@ public final class VSMRestFulClient {
         // Construct some JSON request
         final String json = ""
                 + "{" + "\n"
+                + " \"cmdId\": 12345," + "\n"
                 + " \"audioURL\": \"http://www.webglstudio.org/gerard/visemes/es003_2.wav\"" + "," + "\n"
                 + " \"sequence\":"
                 + " [[0.0, 0.0, 0.5, 0.0, 0.0, 0.0, 0.5],"

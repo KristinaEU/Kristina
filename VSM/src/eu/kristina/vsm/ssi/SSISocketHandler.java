@@ -1,6 +1,5 @@
 package eu.kristina.vsm.ssi;
 
-import de.dfki.vsm.runtime.RunTimeInstance;
 import de.dfki.vsm.util.log.LOGDefaultLogger;
 import eu.kristina.vsm.VSMKristinaPlayer;
 import java.io.ByteArrayInputStream;

@@ -26,8 +26,7 @@ public final class VSMKristinaPlayer implements RunTimePlayer {
     private final RunTimeInstance mRunTime
             = RunTimeInstance.getInstance();
     // The  rest service urls
-    private final HashMap mResourceMap
-            = new HashMap<String, Resource>();
+    private final HashMap<String, Resource> mResourceMap = new HashMap();
     // The player's runtime project 
     private RunTimeProject mProject;
     // The project's specific config
@@ -68,15 +67,15 @@ public final class VSMKristinaPlayer implements RunTimePlayer {
         for (int i = 0; i < count; i++) {
             final String host = mPlayerConfig.getProperty("restful.resource." + i + ".host");
             final String name = mPlayerConfig.getProperty("restful.resource." + i + ".name");
-            final String path = mPlayerConfig.getProperty("restful.resource." + i + ".pah");
+            final String path = mPlayerConfig.getProperty("restful.resource." + i + ".path");
             final String cons = mPlayerConfig.getProperty("restful.resource." + i + ".cons");
             final String prod = mPlayerConfig.getProperty("restful.resource." + i + ".prod");
             // Create the service data
             final Resource resource = new Resource(host, name, path, cons, prod);
-            // Add the new service then
-            mResourceMap.put(name, resource);
             // Print some information
             mLogger.message("Registering RESTful service resource '" + resource + "'" + "\r\n");
+            // Add the new service then
+            mResourceMap.put(name, resource);
         }
         // Get the SSI configuration
         mSSISocketLocalHost = mPlayerConfig.getProperty("ssi.socket.local.host");
@@ -102,10 +101,8 @@ public final class VSMKristinaPlayer implements RunTimePlayer {
                 mSSISocketRemoteHost, mSSISocketRemotePort,
                 mSSISocketRemoteFlag);
         mSSISocket.start();
-
         // Initialize the rest client
         mRestClient = new VSMRestFulClient(this);
-
         // Print some information
         mLogger.message("Launching KRISTINA scene player '" + this + "' with configuration:\n" + mPlayerConfig);
         // Return true at success
@@ -129,25 +126,64 @@ public final class VSMKristinaPlayer implements RunTimePlayer {
         return true;
     }
 
-    public final void blink(final String clientid) {
-        //mECASocket.send(clientid + " " + "blink");
+    public final synchronized void blink() {
+        // Print some information
+        mLogger.message("Executing blink command");
+        // Get the resource
+        final Resource resource = mResourceMap.get("Character-Engine");
+        // Print some information
+        mLogger.message("Resource is\n'" + resource + "'");
+        // Get the command
+        final String command = VSMActionFactory.newBlinkAction();
+        // Print some information
+        mLogger.message("Command is\n'" + command + "'");
+        // Get the query data
+        final String query = "?id=hcm";
+        // Execute POST request
+        mRestClient.post(resource, query, command);
+        //
     }
 
-    public final void face(
-            final String clientid,
-            final float activation,
-            final float evaluation) {
-        //mECASocket.send(clientid + " " + "face" + " " + activation + " " + evaluation);
+    public final synchronized void face(
+            final float valence,
+            final float arousal) {
+        // Print some information
+        mLogger.message("Executing face command");
+        // Get the resource
+        final Resource resource = mResourceMap.get("Character-Engine");
+        // Print some information
+        mLogger.message("Resource is\n'" + resource + "'");
+        // Get the command
+        final String command = VSMActionFactory.newFaceAction(valence, arousal);
+        // Print some information
+        mLogger.message("Command is\n'" + command + "'");
+        // Get the query data
+        final String query = "?id=hcm";
+        // Execute POST request
+        mRestClient.post(resource, query, command);
+        //
     }
-
-    public final void text(
-            final String clientid,
-            final String ttstext) {
-        //mECASocket.send(clientid + " " + "text" + " " + ttstext);
+    
+    public final synchronized void voice() {
+        // Print some information
+        mLogger.message("Executing voice command");
+        // Get the resource
+        final Resource resource = mResourceMap.get("Character-Engine");
+        // Print some information
+        mLogger.message("Resource is\n'" + resource + "'");
+        // Get the command
+        final String command = VSMActionFactory.newVoiceAction();
+        // Print some information
+        mLogger.message("Command is\n'" + command + "'");
+        // Get the query data
+        final String query = "?id=hcm";
+        // Execute POST request
+        mRestClient.post(resource, query, command);
+        //
     }
 
     public final float randFloat() {
-        return mRandom.nextFloat();
+        return 2 * (mRandom.nextFloat() - 0.5f);
     }
 
     public final int randInt(final int bound) {
