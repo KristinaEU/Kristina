@@ -268,7 +268,7 @@ public final class VSMKristinaPlayer implements RunTimePlayer, SSIEventHandler {
     @Override
     public final void handle(final String message) {
         // Print some information
-        //mLogger.message("Parsing message " + xml + "");
+       // mLogger.message("Parsing message " + message + "");
         try {
             // Parse the received XML string
             final ByteArrayInputStream stream = new ByteArrayInputStream(message.getBytes("UTF-8"));
@@ -313,24 +313,7 @@ public final class VSMKristinaPlayer implements RunTimePlayer, SSIEventHandler {
                                 } else {
                                     // Cannot process this
                                 }
-                            } else if (name.equalsIgnoreCase("speech")) {
-                                if (state.equalsIgnoreCase("completed")) {
-                                    if (type.equalsIgnoreCase("string")) {
-                                        // Just get the content
-                                        final String text = event.getTextContent();
-                                        // User said something
-                                        mLogger.message("User just said '" + text + "'");
-                                        // Set the variable value
-                                        set("UserDialogMove", text);
-                                    } else {
-                                        // Cannot process this    
-                                    }
-                                } else if (state.equalsIgnoreCase("continued")) {
-                                    // Cannot process this
-                                } else {
-                                    // Cannot process this
-                                }
-                            } else {
+                            }  else {
                                 // Cannot process this
                             }
                         } else if (mode.equalsIgnoreCase("fsender") || mode.equalsIgnoreCase("fusion")) {
@@ -364,10 +347,13 @@ public final class VSMKristinaPlayer implements RunTimePlayer, SSIEventHandler {
                             if (name.equalsIgnoreCase("la")) {
                                 if (state.equalsIgnoreCase("completed")) {
                                     if (type.equalsIgnoreCase("string")) {
-                                        // Just get the content
+                                         // Just get the content
                                         final String text = event.getTextContent();
-                                        // Print some information
-                                        mLogger.message("Language analysis result is\n" + text + "");
+                                        // User said something
+                                        mLogger.message("User speech act is '" + text + "'");
+                                        // Set the variable value
+                                        set("UserDialogMove", "Function", text);
+                                        //set("UserDialogMove", "Content", text);
                                     } else {
                                         // Cannot process this    
                                     }
@@ -379,7 +365,34 @@ public final class VSMKristinaPlayer implements RunTimePlayer, SSIEventHandler {
                             } else {
                                 // Cannot process this
                             }
-                        } else {
+                        }
+                        
+                        else if (mode.equalsIgnoreCase("vocapia")) {
+                            if (name.equalsIgnoreCase("transcript")) {
+                                if (state.equalsIgnoreCase("completed")) {
+                                    if (type.equalsIgnoreCase("string")) {
+                                          // Just get the content
+                                        final String text = event.getTextContent();
+                                        // User said something
+                                        mLogger.message("User utterance is '" + text + "'");
+                                        // Set the variable value
+                                        //set("UserDialogMove", "Function", text);
+                                        set("UserDialogMove", "Content", text);
+                                    } else {
+                                        // Cannot process this    
+                                    }
+                                } else if (state.equalsIgnoreCase("continued")) {
+                                    // Cannot process this
+                                } else {
+                                    // Cannot process this
+                                }
+                            } else {
+                                // Cannot process this
+                            }
+                        }
+                        
+                        
+                        else {
                             // Cannot process this
                         }
 

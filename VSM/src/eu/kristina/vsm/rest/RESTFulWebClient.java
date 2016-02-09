@@ -27,36 +27,43 @@ public final class RESTFulWebClient {
     public final String get(
             final RESTFulResource resource,
             final String queryargs) {
-        // Create the final URL
-        final String url = resource.getPath() + queryargs;
-        // Print some information
-        mLogger.message("Executing GET request to URL '" + url + "'");
-        // Execute the get request
-        final ClientResponse response = mClient
-                .resource(url)
-                .accept(resource.getProd())
-                .type(resource.getCons())
-                .get(ClientResponse.class);
-        // Check the response status
-        if (response.getStatus() == Status.OK.getStatusCode()) {
-            // Get the mime type name
-            final String type = response.getType().getType()
-                    + "/" + response.getType().getSubtype();
-            // Get the entity string
-            final String entity = response.getEntity(String.class);
+        try {
+            // Create the final URL
+            final String url = resource.getPath() + queryargs;
             // Print some information
-            mLogger.success("Success: The POST request '" + url
-                    + "' to RESTful service resource '" + resource
-                    + "' returned a response of type '" + type
-                    + "' and content entity:\n" + entity);
-            // Return the entity then
-            return entity;
-        } else {
+            mLogger.message("Executing GET request to URL '" + url + "'");
+            // Execute the get request
+            final ClientResponse response = mClient
+                    .resource(url)
+                    .accept(resource.getProd())
+                    .type(resource.getCons())
+                    .get(ClientResponse.class);
+            // Check the response status
+            if (response.getStatus() == Status.OK.getStatusCode()) {
+                // Get the mime type name
+                final String type = response.getType().getType()
+                        + "/" + response.getType().getSubtype();
+                // Get the entity string
+                final String entity = response.getEntity(String.class);
+                // Print some information
+                mLogger.success("Success: The POST request '" + url
+                        + "' to RESTful service resource '" + resource
+                        + "' returned a response of type '" + type
+                        + "' and content entity:\n" + entity);
+                // Return the entity then
+                return entity;
+            } else {
+                // Print some information
+                mLogger.failure("Failure: Response from '" + resource
+                        + "' has status '" + response.getStatus() + "'");
+                // Return null at failure
+                return Integer.toString(response.getStatus());
+            }
+        } catch (final Exception exc) {
             // Print some information
-            mLogger.failure("Failure: Response from '" + resource
-                    + "' has status '" + response.getStatus() + "'");
+            mLogger.failure(exc.toString());
             // Return null at failure
-            return null;
+            return exc.getMessage();
         }
     }
 
@@ -64,36 +71,43 @@ public final class RESTFulWebClient {
             final RESTFulResource resource,
             final String queryargs,
             final String content) {
-        // Create the final URL
-        final String url = resource.getPath() + queryargs;
-        // Print some information
-        mLogger.message("Executing POST request to URL '" + url + "' with content:\n" + content);
-        // Execute the post request
-        final ClientResponse response = mClient
-                .resource(url)
-                .accept(resource.getProd())
-                .type(resource.getCons())
-                .post(ClientResponse.class, content);
-        // Check the response status
-        if (response.getStatus() == Status.OK.getStatusCode()) {
-            // Get the mime type name
-            final String type = response.getType().getType()
-                    + "/" + response.getType().getSubtype();
-            // Get the entity string
-            final String entity = response.getEntity(String.class);
+        try {
+            // Create the final URL
+            final String url = resource.getPath() + queryargs;
             // Print some information
-            mLogger.success("Success: The POST request '" + url
-                    + "' to RESTful service resource '" + resource
-                    + "' returned a response of type '" + type
-                    + "' and content entity:\n" + entity);
-            // Return the entity then
-            return entity;
-        } else {
+            mLogger.message("Executing POST request to URL '" + url + "' with content:\n" + content);
+            // Execute the post request
+            final ClientResponse response = mClient
+                    .resource(url)
+                    .accept(resource.getProd())
+                    .type(resource.getCons())
+                    .post(ClientResponse.class, content);
+            // Check the response status
+            if (response.getStatus() == Status.OK.getStatusCode()) {
+                // Get the mime type name
+                final String type = response.getType().getType()
+                        + "/" + response.getType().getSubtype();
+                // Get the entity string
+                final String entity = response.getEntity(String.class);
+                // Print some information
+                mLogger.success("Success: The POST request '" + url
+                        + "' to RESTful service resource '" + resource
+                        + "' returned a response of type '" + type
+                        + "' and content entity:\n" + entity);
+                // Return the entity then
+                return entity;
+            } else {
+                // Print some information
+                mLogger.failure("Failure: Response from '" + resource
+                        + "' has status '" + response.getStatus() + "'");
+                // Return null at failure
+                return Integer.toString(response.getStatus());
+            }
+        } catch (final Exception exc) {
             // Print some information
-            mLogger.failure("Failure: Response from '" + resource
-                    + "' has status '" + response.getStatus() + "'");
+            mLogger.failure(exc.toString());
             // Return null at failure
-            return null;
+            return exc.getMessage();
         }
-    }   
+    }
 }
