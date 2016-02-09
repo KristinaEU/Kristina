@@ -1,18 +1,30 @@
 package presenter;
 
+import org.apache.jena.rdf.model.Model;
+import org.apache.jena.rdf.model.ModelFactory;
+
 import model.CerthClient;
+import model.KristinaModel;
 
 public class KristinaPresenter {
 
-	public static String performDM(String in) {
+	public static String performDM(String valence, String arousal, String content) {
 
 		// perform dialogue state update
-		String proposal = CerthClient.post(in);
+		String[] proposal = KristinaModel.performUpdate(content);
 
 		// perform agenda selection
-		String result = tmpSelection();
-
-		return result;
+		String sysmove = tmpSelection();
+		
+		//determine emotion
+		float sysValence = (float)(Float.parseFloat(valence) + Math.random()-0.5f);
+		float sysArousal = (float)(Float.parseFloat(arousal) + Math.random()-0.5f);
+		
+		//TODO: tmp solution
+		
+		String output = "VALENCE: "+sysValence+"\nAROUSAL: "+sysArousal+"\n"+sysmove;
+		
+		return output;
 
 	}
 

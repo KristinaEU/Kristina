@@ -1,36 +1,34 @@
 package model;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.URL;
 import java.net.URLEncoder;
+
+import javax.ws.rs.client.Client;
+import javax.ws.rs.client.ClientBuilder;
+import javax.ws.rs.client.Entity;
+import javax.ws.rs.client.Invocation;
+import javax.ws.rs.client.WebTarget;
+import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
 
 public class CerthClient {
 	
-	static final String address = " http://160.40.50.196:8080/api/context/";
+	static final String address = "http://160.40.50.196:8080/api/context/";
 
 	public static String get(String data) {
 		try {
-			URL url = new URL(address + "query?query=" + data);
-			HttpURLConnection conn = (HttpURLConnection) url.openConnection();
-
-			if (conn.getResponseCode() != 200) {
-				throw new IOException(conn.getResponseMessage());
+			Client client = ClientBuilder.newClient();
+			WebTarget webTarget = client.target(address+"query").queryParam("query", data);
+			
+			Invocation.Builder ib = webTarget.request(MediaType.TEXT_PLAIN_TYPE);
+			
+			Response response = ib.get();
+			if(response.getStatus()!= 200){
+				String s = response.getStatusInfo().toString();
+				response.close();
+				throw new IOException(s);
 			}
-
-			BufferedReader rd = new BufferedReader(new InputStreamReader(
-					conn.getInputStream()));
-			StringBuilder sb = new StringBuilder();
-			String line;
-			while ((line = rd.readLine()) != null) {
-				sb.append(line + "\n");
-			}
-			rd.close();
-
-			conn.disconnect();
-			return sb.toString();
+			return response.readEntity(String.class);
 		} catch (Exception e) {
 			return "";
 		}
@@ -38,31 +36,19 @@ public class CerthClient {
 
 	public static String post(String in)  {
 		try{
-		URL url = new URL(address + "update?frames="+URLEncoder.encode(in, "utf-8")+"&emotions=fake");
-		HttpURLConnection conn = (HttpURLConnection) url.openConnection();
-		conn.setRequestMethod("POST");
-		conn.setDoOutput(true);
-		conn.setDoInput(true);
-		conn.setUseCaches(false);
-		conn.setAllowUserInteraction(false);
-		
-
-		if (conn.getResponseCode() != 200) {
-			throw new IOException(conn.getResponseMessage());
-		}
-
-		// Buffer the result into a string
-		BufferedReader rd = new BufferedReader(new InputStreamReader(
-				conn.getInputStream()));
-		StringBuilder sb = new StringBuilder();
-		String line;
-		while ((line = rd.readLine()) != null) {
-			sb.append(line);
-		}
-		rd.close();
-
-		conn.disconnect();
-		return sb.toString();
+			Client client = ClientBuilder.newClient();
+			WebTarget webTarget = client.target(address+"update").queryParam("frames", URLEncoder.encode(in, "utf-8")).queryParam("emotions", "fake");
+			
+			Invocation.Builder ib = webTarget.request(MediaType.TEXT_PLAIN_TYPE);
+			
+			Response response = ib.post(Entity.entity("", MediaType.TEXT_PLAIN));
+			if(response.getStatus()!= 200){
+				String s = response.getStatusInfo().toString();
+				response.close();
+				throw new IOException(s);
+			}
+			return response.readEntity(String.class);
+			
 		}catch(Exception e){
 			e.printStackTrace();
 			return "";

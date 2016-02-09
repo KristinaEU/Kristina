@@ -11,6 +11,12 @@
 			<artifactId>jersey-container-jdk-http</artifactId>
 			<version>2.22.1</version>
 		</dependency>
+		<dependency>
+			<groupId>org.apache.jena</groupId>
+			<artifactId>apache-jena-libs</artifactId>
+			<type>pom</type>
+			<version>3.0.1</version>
+		</dependency>
 	</dependencies>
 	<build>
 		<sourceDirectory>src</sourceDirectory>
@@ -29,7 +35,7 @@
 				<configuration>
 					<archive>
 						<manifest>
-							<mainClass>view.VsmServer</mainClass>
+							<mainClass>main.KristinaMain</mainClass>
 						</manifest>
 					</archive>
 				</configuration>
