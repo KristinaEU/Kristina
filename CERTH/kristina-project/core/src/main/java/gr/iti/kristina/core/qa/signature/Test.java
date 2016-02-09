@@ -23,6 +23,7 @@
  */
 package gr.iti.kristina.core.qa.signature;
 
+import gr.iti.kristina.helpers.repository.GraphDbRepositoryManager;
 import gr.iti.kristina.helpers.repository.utils.EmbeddedGraphDB;
 import gr.iti.kristina.helpers.repository.utils.QueryUtil;
 import java.io.BufferedReader;
@@ -39,6 +40,7 @@ import org.openrdf.query.BindingSet;
 import org.openrdf.query.MalformedQueryException;
 import org.openrdf.query.QueryEvaluationException;
 import org.openrdf.query.TupleQueryResult;
+import org.openrdf.repository.Repository;
 import org.openrdf.repository.RepositoryConnection;
 import org.openrdf.repository.RepositoryException;
 import org.openrdf.repository.config.RepositoryConfigException;
@@ -52,12 +54,12 @@ import org.openrdf.rio.RDFParseException;
  */
 public class Test {
 
-    RepositoryConnection frameConnection;
-    RepositoryConnection ofnConnection;
+    GraphDbRepositoryManager manager;
+    Repository frameRepository, ofnRepository;
+    RepositoryConnection frameConnection, ofnConnection;
 
-    public Test() throws IOException, RepositoryException, RDFParseException, GraphUtilException, RepositoryConfigException, RDFHandlerException {
-        this.frameConnection = EmbeddedGraphDB.openLocalConnectionToRepository("frames", "owl2-rl-optimized");
-        this.ofnConnection = EmbeddedGraphDB.openLocalConnectionToRepository("ofn", "owl2-rl-optimized");
+    public Test(String serverUrl, String username, String password) throws IOException, RepositoryException, RDFParseException, GraphUtilException, RepositoryConfigException, RDFHandlerException {
+        manager = new GraphDbRepositoryManager(serverUrl, username, password);
     }
 
     public void close() throws RepositoryException {
@@ -65,36 +67,36 @@ public class Test {
         ofnConnection.close();
     }
 
-    public void loadData() throws IOException, RepositoryException, RDFParseException {
-        frameConnection.clear();
-        frameConnection.begin();
-        try (Reader reader = new BufferedReader(new FileReader("C:/Users/gmeditsk/Dropbox/iti.private/Kristina/ontologies/examples/inform.ttl"))) {
-            frameConnection.add(reader, "urn:base", RDFFormat.TURTLE);
-        }
-        try (Reader reader = new BufferedReader(new FileReader("C:/Users/gmeditsk/Dropbox/iti.private/Kristina/ontologies/imports/dul.rdf"))) {
-            frameConnection.add(reader, "urn:base", RDFFormat.RDFXML);
-        }
-        try (Reader reader = new BufferedReader(new FileReader("C:/Users/gmeditsk/Dropbox/iti.private/Kristina/ontologies/d5.2/frame_situation_d5.2.ttl"))) {
-            frameConnection.add(reader, "urn:base", RDFFormat.TURTLE);
-        }
-        frameConnection.commit();
-        System.out.println(frameConnection.size());
-        
-        ofnConnection.clear();
-        ofnConnection.begin();
-        try (Reader reader = new BufferedReader(new FileReader("C:/Users/gmeditsk/Dropbox/iti.private/Kristina/ontologies/imports/ofn.rdf"))) {
-            ofnConnection.add(reader, "urn:base", RDFFormat.RDFXML);
-        }
-        try (Reader reader = new BufferedReader(new FileReader("C:/Users/gmeditsk/Dropbox/iti.private/Kristina/ontologies/imports/ofntb.rdf"))) {
-            ofnConnection.add(reader, "urn:base", RDFFormat.RDFXML);
-        }
-        ofnConnection.commit();
-        System.out.println(ofnConnection.size());
-    }
+//    public void loadData() throws IOException, RepositoryException, RDFParseException {
+//        frameConnection.clear();
+//        frameConnection.begin();
+//        try (Reader reader = new BufferedReader(new FileReader("C:/Users/gmeditsk/Dropbox/iti.private/Kristina/ontologies/examples/inform.ttl"))) {
+//            frameConnection.add(reader, "urn:base", RDFFormat.TURTLE);
+//        }
+//        try (Reader reader = new BufferedReader(new FileReader("C:/Users/gmeditsk/Dropbox/iti.private/Kristina/ontologies/imports/dul.rdf"))) {
+//            frameConnection.add(reader, "urn:base", RDFFormat.RDFXML);
+//        }
+//        try (Reader reader = new BufferedReader(new FileReader("C:/Users/gmeditsk/Dropbox/iti.private/Kristina/ontologies/d5.2/frame_situation_d5.2.ttl"))) {
+//            frameConnection.add(reader, "urn:base", RDFFormat.TURTLE);
+//        }
+//        frameConnection.commit();
+//        System.out.println(frameConnection.size());
+//        
+//        ofnConnection.clear();
+//        ofnConnection.begin();
+//        try (Reader reader = new BufferedReader(new FileReader("C:/Users/gmeditsk/Dropbox/iti.private/Kristina/ontologies/imports/ofn.rdf"))) {
+//            ofnConnection.add(reader, "urn:base", RDFFormat.RDFXML);
+//        }
+//        try (Reader reader = new BufferedReader(new FileReader("C:/Users/gmeditsk/Dropbox/iti.private/Kristina/ontologies/imports/ofntb.rdf"))) {
+//            ofnConnection.add(reader, "urn:base", RDFFormat.RDFXML);
+//        }
+//        ofnConnection.commit();
+//        System.out.println(ofnConnection.size());
+//    }
 
-    public void buildSignatures() throws MalformedQueryException, RepositoryException, QueryEvaluationException {
+    public void buildSignatures() throws MalformedQueryException, RepositoryException, QueryEvaluationException, RepositoryConfigException {
         
-        List<URI> frames = getFrames(frameConnection);
+        List<URI> frames = getFrames();
 
         // get all frame instances + FE instances + classified instances  
         String keyConceptsQ = ""
@@ -120,7 +122,7 @@ public class Test {
 
     }
 
-    public List<URI> getFrames(RepositoryConnection connection) throws QueryEvaluationException, MalformedQueryException, RepositoryException {
+    public List<URI> getFrames() throws QueryEvaluationException, MalformedQueryException, RepositoryException, RepositoryConfigException {
         List<URI> frames = new ArrayList();
         String frameQ = ""
                 + "PREFIX core: <http://kristina-project.eu/ontologies/framesituation/core#>\n"
@@ -130,6 +132,7 @@ public class Test {
                 + "	?frame a core:FrameSituation .\n"
                 + "} ";
 
+        RepositoryConnection connection = manager.getRepository("frames").getConnection();
         TupleQueryResult result = QueryUtil.evaluateSelectQuery(connection, frameQ);
         while (result.hasNext()) {
             BindingSet bindingSet = result.next();
@@ -165,8 +168,8 @@ public class Test {
     public static void main(String[] args) {
         Test t = null;
         try {
-            t = new Test();
-            t.loadData();
+            t = new Test("","","");
+            //t.loadData();
             //t.buildSignatures();
         } catch (IOException | RepositoryException | RDFParseException | GraphUtilException | RepositoryConfigException | RDFHandlerException ex) {
             Logger.getLogger(Test.class.getName()).log(Level.SEVERE, null, ex);

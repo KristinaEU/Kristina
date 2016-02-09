@@ -23,12 +23,18 @@
  */
 package gr.iti.kristina.api;
 
+import gr.iti.kristina.core.irmapper.SymptomsMappingModule;
+import java.io.IOException;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.UriInfo;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
+import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
+import org.openrdf.repository.RepositoryException;
+import org.openrdf.repository.config.RepositoryConfigException;
+import org.slf4j.LoggerFactory;
 
 /**
  * REST Web Service
@@ -40,6 +46,8 @@ public class KbUpdateResource {
 
     @Context
     private UriInfo context;
+
+    org.slf4j.Logger logger = LoggerFactory.getLogger(KbUpdateResource.class);
 
     /**
      * Creates a new instance of KbUpdateResource
@@ -63,9 +71,20 @@ public class KbUpdateResource {
      * PUT method for updating or creating an instance of KbUpdateResource
      *
      * @param content representation for the resource
+     * @return 
      */
     @POST
     @Consumes(MediaType.TEXT_PLAIN)
-    public void update(String content) {
+    public String update(@QueryParam("content") String content) {
+        logger.debug(content);
+        try {
+            SymptomsMappingModule o = new SymptomsMappingModule("http://localhost:8084/graphdb-workbench-free", "Symptoms-Repository", "kristina", "samiam#2");
+            o.setJsonInput(content);
+            o.call();
+            return "ok";
+        } catch (IOException | RepositoryConfigException | RepositoryException ex) {
+            logger.error("", ex);
+        }
+        return "";
     }
 }

@@ -217,8 +217,78 @@ public class SymptomsMappingModule {
     }
 
     public static void main(String[] args) throws IOException, RepositoryConfigException, RepositoryException {
-        SymptomsMappingModule o = new SymptomsMappingModule("http://localhost:8080", "Symptoms-Repository", "admin", "Paran01@!#10");
-        o.setJsonInput("");
+        SymptomsMappingModule o = new SymptomsMappingModule("http://localhost:8084/graphdb-workbench-free", "Symptoms-Repository", "kristina", "samiam#2");
+        o.setJsonInput("[{\n" +
+"        \"Subject\": [],\n" +
+"        \"Predicate\": {\n" +
+"            \"term\": \"cause\",\n" +
+"            \"concept\": \" \",\n" +
+"            \"BabelNet\": \"\",\n" +
+"            \"DBPedia\": \"\"\n" +
+"        },\n" +
+"        \"Object\": [{\n" +
+"                \"term\": \" mild infection\",\n" +
+"                \"concept\": \"disease or syndrome\",\n" +
+"                \"BabelNet\": \"http://babelnet.org/rdf/s00106719a\",\n" +
+"                \"DBPedia\": \"\"\n" +
+"            },\n" +
+"            {\n" +
+"                \"term\": \" headache\",\n" +
+"                \"concept\": \"sign or symptom\",\n" +
+"                \"BabelNet\": \"http://babelnet.org/rdf/s00017236n\",\n" +
+"                \"DBPedia\": \"http://dbpedia.org/resource/Headache\"\n" +
+"            },\n" +
+"            {\n" +
+"                \"term\": \" back pain\",\n" +
+"                \"concept\": \"sign or symptom\",\n" +
+"                \"BabelNet\": \"http://babelnet.org/rdf/s00756144n\",\n" +
+"                \"DBPedia\": \"http://dbpedia.org/resource/Back_pain\"\n" +
+"            },\n" +
+"            {\n" +
+"                \"term\": \" of appetite loss\",\n" +
+"                \"concept\": \"disease or syndrome\",\n" +
+"                \"BabelNet\": \"http://babelnet.org/rdf/s00004425n\",\n" +
+"                \"DBPedia\": \"http://dbpedia.org/resource/Anorexia_(symptom)\"\n" +
+"            },\n" +
+"            {\n" +
+"                \"term\": \" muscle pain\",\n" +
+"                \"concept\": \"finding\",\n" +
+"                \"BabelNet\": \"http://babelnet.org/rdf/s00056563n\",\n" +
+"                \"DBPedia\": \"http://dbpedia.org/resource/Myalgia\"\n" +
+"            },\n" +
+"            {\n" +
+"                \"term\": \" vomiting\",\n" +
+"                \"concept\": \"sign or symptom\",\n" +
+"                \"BabelNet\": \"http://babelnet.org/rdf/s00083115v\",\n" +
+"                \"DBPedia\": \"\"\n" +
+"            },\n" +
+"            {\n" +
+"                \"term\": \" chills\",\n" +
+"                \"concept\": \"sign or symptom\",\n" +
+"                \"BabelNet\": \"http://babelnet.org/rdf/s00018387n\",\n" +
+"                \"DBPedia\": \"\"\n" +
+"            },\n" +
+"            {\n" +
+"                \"term\": \" fatigue\",\n" +
+"                \"concept\": \"sign or symptom\",\n" +
+"                \"BabelNet\": \"http://babelnet.org/rdf/s00033794n\",\n" +
+"                \"DBPedia\": \"http://dbpedia.org/resource/Fatigue_(medical)\"\n" +
+"            },\n" +
+"            {\n" +
+"                \"term\": \" fever\",\n" +
+"                \"concept\": \"finding\",\n" +
+"                \"BabelNet\": \"http://babelnet.org/rdf/s00033883n\",\n" +
+"                \"DBPedia\": \"http://dbpedia.org/resource/Fever\"\n" +
+"            },\n" +
+"            {\n" +
+"                \"term\": \" nausea\",\n" +
+"                \"concept\": \"sign or symptom\",\n" +
+"                \"BabelNet\": \"http://babelnet.org/rdf/s00057034n\",\n" +
+"                \"DBPedia\": \"http://dbpedia.org/resource/Nausea\"\n" +
+"            }],\n" +
+"        \"ObjectSentence\": []\n" +
+"    }\n" +
+"]");
         o.call();
     }
 }
