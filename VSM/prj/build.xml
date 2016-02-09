@@ -153,9 +153,9 @@
             </fileset>
         </javadoc>
     </target>
-    <!-- Execute Project -->
-    <target name="run-vsm-restful-client">
-        <java classname="eu.kristina.vsm.VSMRestFulClient" fork="true">
+    <!-- -->
+    <target name="tests">
+        <java classname="eu.kristina.vsm.test.RESTFulPipeTestSuite" fork="true">
             <classpath refid="clspath"/>
             <arg line="http://137.250.171.231:11223"/>
         </java>
@@ -167,15 +167,29 @@
             <arg line="editor res/prj/vsm"/>
         </java>
     </target> 
-    <!-- Execute Project -->
-    <target name="run-vsm-restful-server">
-        <java classname="eu.kristina.vsm.VSMRestFulServer" fork="true">
+    <!-- -->
+    <target name="run-vsm-kristina-service">
+        <java classname="eu.kristina.vsm.VSMKristinaService" fork="true">
             <classpath refid="clspath"/>
             <arg line="http://137.250.171.231:11223/"/>
         </java>
-    </target>  
-    <!-- Profile Project -->
-    <target name="prf-vsm-restful-server" depends="build" description="Profile Project">
+    </target>     
+    <!-- -->
+    <target name="run-ssi-handler-terminal">
+        <java classname="eu.kristina.vsm.ssi.SSIHandlerTerminal" fork="true">
+            <classpath refid="clspath"/>
+            <arg line="137.250.171.231 11220 137.250.171.230 11190 false"/>
+        </java>
+    </target>
+    <!-- -->
+    <target name="run-ssi-service-terminal">
+        <java classname="eu.kristina.vsm.ssi.SSIServiceTerminal" fork="true">
+            <classpath refid="clspath"/>
+            <arg line="http://137.250.171.230:11193"/>
+        </java>
+    </target>   
+    <!-- 
+    <target name="prf-vsm-restful-service" depends="build" description="Profile Project">
         <fail unless="netbeans.home">
             This target can only run inside the NetBeans IDE.
         </fail>
@@ -188,18 +202,5 @@
             <jvmarg line="${agent.jvmargs}"/>
         </java>
     </target>  
-    <!-- Execute Project -->
-    <target name="run-ssi-service-terminal">
-        <java classname="eu.kristina.vsm.ssi.SSIServiceTerminal" fork="true">
-            <classpath refid="clspath"/>
-            <arg line="http://137.250.171.230:11193/fusion/Service.svc/getCurrent"/>
-        </java>
-    </target>  
-    <!-- Execute Project -->
-    <target name="run-ssi-socket-terminal">
-        <java classname="eu.kristina.vsm.ssi.SSISocketTerminal" fork="true">
-            <classpath refid="clspath"/>
-            <arg line="137.250.171.231 11220 137.250.171.230 11190 false"/>
-        </java>
-    </target>
+    --> 
 </project>
