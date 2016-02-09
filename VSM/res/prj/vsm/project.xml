@@ -1,54 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Project name="KRISTINA">
-    <Plugins>
-    </Plugins>
-    <Players>
-        <Player name="defaultsceneplayer" class="eu.kristina.vsm.VSMKristinaPlayer">
-            <Feature key="eca.socket.remote.host" value="webglstudio.org"/>
-            <Feature key="eca.socket.remote.port" value="9900"/>
-            <Feature key="restful.service.count" value="7"/>            
-            <Feature key="restful.service.0.host" value="UAU"/>
-            <Feature key="restful.service.0.name" value="SSI - Social Cue Pipeline"/>
-            <Feature key="restful.service.0.url" value="http://137.250.171.230:11193"/>
-            <Feature key="restful.service.0.in" value="*/*"/>
-            <Feature key="restful.service.0.out" value="*/*"/>            
-            <Feature key="restful.service.1.host" value="UAU"/>
-            <Feature key="restful.service.1.name" value="VSM - Turn Management"/>
-            <Feature key="restful.service.1.url" value="http://137.250.171.231:11223"/>
-            <Feature key="restful.service.1.in" value="*/*"/>
-            <Feature key="restful.service.1.out" value="*/*"/>            
-            <Feature key="restful.service.2.host" value="UULM"/>
-            <Feature key="restful.service.2.name" value="OWL - Dialog Management"/>
-            <Feature key="restful.service.2.url" value="http://137.250.171.232:11153"/>
-            <Feature key="restful.service.2.in" value="*/*"/>
-            <Feature key="restful.service.2.out" value="*/*"/>            
-            <Feature key="restful.service.3.host" value="UPF"/>
-            <Feature key="restful.service.3.name" value="TALN - Language Analysis"/>
-            <Feature key="restful.service.3.url" value="http://kristina.taln.upf.edu/services/language_analysis"/>
-            <Feature key="restful.service.3.in" value="*/*"/>
-            <Feature key="restful.service.3.out" value="*/*"/>            
-            <Feature key="restful.service.4.host" value="UPF"/>
-            <Feature key="restful.service.4.name" value="TALN - Language Generation"/>
-            <Feature key="restful.service.4.url" value="http://kristina.taln.upf.edu/services/language_generation"/>
-            <Feature key="restful.service.4.in" value="*/*"/>
-            <Feature key="restful.service.4.out" value="*/*"/>            
-            <Feature key="restful.service.5.host" value="UPF"/>
-            <Feature key="restful.service.5.name" value="TALN - Mode Selection"/>
-            <Feature key="restful.service.5.url" value="http://kristina.taln.upf.edu/services/mode_selection"/>
-            <Feature key="restful.service.5.in" value="*/*"/>
-            <Feature key="restful.service.5.out" value="*/*"/>   
-            <Feature key="restful.service.6.host" value="UPF"/>
-            <Feature key="restful.service.6.name" value="GTI - Character Engine"/>
-            <Feature key="restful.service.6.url" value="http://webglstudio.org:9902"/>
-            <Feature key="restful.service.6.in" value="*/*"/>
-            <Feature key="restful.service.6.out" value="*/*"/>          
-            <Feature key="ssi.socket.local.host" value="137.250.171.231"/>
-            <Feature key="ssi.socket.local.port" value="11220"/>
-            <Feature key="ssi.socket.remote.host" value="137.250.171.230"/>
-            <Feature key="ssi.socket.remote.port" value="11190"/>
-            <Feature key="ssi.socket.remote.flag" value="false"/>
-        </Player>
-    </Players>
-    <Agents>
-    </Agents>
+  <Plugins>
+  </Plugins>
+  <Players>
+    <Player name="defaultsceneplayer" class="eu.kristina.vsm.VSMKristinaPlayer">
+      <Feature key="restful.resource.count" value="9"/>
+      <Feature key="restful.resource.0.host" value="UAU-VSM"/>
+      <Feature key="restful.resource.0.name" value="Turn-Control"/>
+      <Feature key="restful.resource.0.path" value="http://137.250.171.231:11223"/>
+      <Feature key="restful.resource.0.cons" value="*/*"/>
+      <Feature key="restful.resource.0.prod" value="application/xml"/>
+      <Feature key="restful.resource.1.host" value="UAU-SSI"/>
+      <Feature key="restful.resource.1.name" value="Fusion-Status"/>
+      <Feature key="restful.resource.1.path" value="http://137.250.171.230:11193"/>
+      <Feature key="restful.resource.1.cons" value="*/*"/>
+      <Feature key="restful.resource.1.prod" value="application/json"/>
+      <Feature key="restful.resource.2.host" value="UAU-SSI"/>
+      <Feature key="restful.resource.2.name" value="Fusion-Emotion"/>
+      <Feature key="restful.resource.2.path" value="http://137.250.171.230:11193"/>
+      <Feature key="restful.resource.2.cons" value="*/*"/>
+      <Feature key="restful.resource.2.prod" value="application/json"/>
+      <Feature key="restful.resource.3.host" value="UAU-SSI"/>
+      <Feature key="restful.resource.3.name" value="Fusion-Control"/>
+      <Feature key="restful.resource.3.path" value="http://137.250.171.230:11193"/>
+      <Feature key="restful.resource.3.cons" value="application/json"/>
+      <Feature key="restful.resource.3.prod" value="application/json"/>
+      <Feature key="restful.resource.4.host" value="UULM-OWL"/>
+      <Feature key="restful.resource.4.name" value="Dialog-Management"/>
+      <Feature key="restful.resource.4.path" value="http://137.250.171.232:11153"/>
+      <Feature key="restful.resource.4.cons" value="*/*"/>
+      <Feature key="restful.resource.4.prod" value="*/*"/>
+      <Feature key="restful.resource.5.host" value="UPF-TALN"/>
+      <Feature key="restful.resource.5.name" value="Language-Analysis"/>
+      <Feature key="restful.resource.5.path" value="http://kristina.taln.upf.edu/services/language_analysis"/>
+      <Feature key="restful.resource.5.cons" value="application/x-www-form-urlencoded"/>
+      <Feature key="restful.resource.5.prod" value="application/xml"/>
+      <Feature key="restful.resource.6.host" value="UPF-TALN"/>
+      <Feature key="restful.resource.6.name" value="Language-Generation"/>
+      <Feature key="restful.resource.6.path" value="http://kristina.taln.upf.edu/services/language_generation"/>
+      <Feature key="restful.resource.6.cons" value="application/x-www-form-urlencoded"/>
+      <Feature key="restful.resource.6.prod" value="application/json"/>
+      <Feature key="restful.resource.7.host" value="UPF-TALN"/>
+      <Feature key="restful.resource.7.name" value="Mode-Selection"/>
+      <Feature key="restful.resource.7.path" value="http://kristina.taln.upf.edu/services/mode_selection"/>
+      <Feature key="restful.resource.7.cons" value="application/x-www-form-urlencoded"/>
+      <Feature key="restful.resource.7.prod" value="application/xml"/>
+      <Feature key="restful.resource.8.host" value="UPF-GTI"/>
+      <Feature key="restful.resource.8.name" value="Character-Engine"/>
+      <Feature key="restful.resource.8.path" value="http://webglstudio.org:8080/newData"/>
+      <Feature key="restful.resource.8.cons" value="application/json"/>
+      <Feature key="restful.resource.8.prod" value="*/*"/>
+      <Feature key="ssi.socket.local.host" value="137.250.171.231"/>
+      <Feature key="ssi.socket.local.port" value="11220"/>
+      <Feature key="ssi.socket.remote.host" value="137.250.171.230"/>
+      <Feature key="ssi.socket.remote.port" value="11190"/>
+      <Feature key="ssi.socket.remote.flag" value="false"/>
+    </Player>
+
+  </Players>
+  <Agents>
+  </Agents>
 </Project>
