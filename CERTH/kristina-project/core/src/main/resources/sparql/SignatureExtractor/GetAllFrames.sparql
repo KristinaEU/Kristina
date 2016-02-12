@@ -1,0 +1,8 @@
+PREFIX core: <http://kristina-project.eu/ontologies/framesituation/core#>
+select distinct ?x 
+where { 
+    ?x a core:FrameSituation .
+    GRAPH ?context {
+        ?x a [] .
+    }
+}

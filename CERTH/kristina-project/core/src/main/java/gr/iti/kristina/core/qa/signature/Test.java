@@ -23,15 +23,15 @@
  */
 package gr.iti.kristina.core.qa.signature;
 
+import gr.iti.kristina.helpers.files.FileHelper;
 import gr.iti.kristina.helpers.repository.GraphDbRepositoryManager;
-import gr.iti.kristina.helpers.repository.utils.EmbeddedGraphDB;
 import gr.iti.kristina.helpers.repository.utils.QueryUtil;
-import java.io.BufferedReader;
-import java.io.FileReader;
 import java.io.IOException;
-import java.io.Reader;
+import java.io.StringReader;
+import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import org.openrdf.model.URI;
@@ -57,14 +57,23 @@ public class Test {
     GraphDbRepositoryManager manager;
     Repository frameRepository, ofnRepository;
     RepositoryConnection frameConnection, ofnConnection;
+    URI context;
 
     public Test(String serverUrl, String username, String password) throws IOException, RepositoryException, RDFParseException, GraphUtilException, RepositoryConfigException, RDFHandlerException {
         manager = new GraphDbRepositoryManager(serverUrl, username, password);
+        frameConnection = manager.getRepository("frames").getConnection();
+        context = frameConnection.getValueFactory().createURI("http://frames/context#" + UUID.randomUUID());
     }
 
     public void close() throws RepositoryException {
         frameConnection.close();
-        ofnConnection.close();
+        //ofnConnection.close();
+    }
+
+    public void loadInput(String content) throws IOException, RDFParseException, RepositoryException {
+        frameConnection.begin();
+        frameConnection.add(new StringReader(content), "urn:base", RDFFormat.TURTLE, context);
+        frameConnection.commit();
     }
 
 //    public void loadData() throws IOException, RepositoryException, RDFParseException {
@@ -93,9 +102,8 @@ public class Test {
 //        ofnConnection.commit();
 //        System.out.println(ofnConnection.size());
 //    }
-
     public void buildSignatures() throws MalformedQueryException, RepositoryException, QueryEvaluationException, RepositoryConfigException {
-        
+
         List<URI> frames = getFrames();
 
         // get all frame instances + FE instances + classified instances  
@@ -132,8 +140,7 @@ public class Test {
                 + "	?frame a core:FrameSituation .\n"
                 + "} ";
 
-        RepositoryConnection connection = manager.getRepository("frames").getConnection();
-        TupleQueryResult result = QueryUtil.evaluateSelectQuery(connection, frameQ);
+        TupleQueryResult result = QueryUtil.evaluateSelectQuery(frameConnection, frameQ);
         while (result.hasNext()) {
             BindingSet bindingSet = result.next();
             URI frame = (URI) bindingSet.getBinding("frame").getValue();
@@ -142,7 +149,7 @@ public class Test {
         result.close();
         return frames;
     }
-    
+
     public List<URI> getClassifiedResources(RepositoryConnection connection) throws QueryEvaluationException, MalformedQueryException, RepositoryException {
         List<URI> resources = new ArrayList();
         String frameQ = ""
@@ -162,13 +169,12 @@ public class Test {
         result.close();
         return resources;
     }
-    
-    
 
     public static void main(String[] args) {
         Test t = null;
         try {
-            t = new Test("","","");
+            t = new Test("http://localhost:8084/graphdb-workbench-free", "kristina", "samiam#2");
+            t.loadInput(FileHelper.readFile("C:/Users/gmeditsk/Dropbox/iti.private/Kristina/ontologies/examples/inform.ttl", Charset.forName("utf-8")));
             //t.loadData();
             //t.buildSignatures();
         } catch (IOException | RepositoryException | RDFParseException | GraphUtilException | RepositoryConfigException | RDFHandlerException ex) {

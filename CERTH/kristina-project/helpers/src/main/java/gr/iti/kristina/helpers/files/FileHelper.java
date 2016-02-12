@@ -25,6 +25,9 @@ package gr.iti.kristina.helpers.files;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.nio.charset.Charset;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import org.apache.commons.io.IOUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -40,6 +43,12 @@ public class FileHelper {
     public static String readFile(Class c, String path) throws IOException {
         InputStream file = c.getResourceAsStream(path);
         return IOUtils.toString(file);
+    }
+
+    public static String readFile(String path, Charset encoding)
+            throws IOException {
+        byte[] encoded = Files.readAllBytes(Paths.get(path));
+        return new String(encoded, encoding);
     }
 
 }
