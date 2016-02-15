@@ -134,7 +134,7 @@ public final class VSMKristinaPlayer implements RunTimePlayer, SSIEventHandler {
 
     public final /*synchronized*/ String blink(final String id) {
         // Get the resource
-        final RESTFulResource resource = mResourceMap.get("Character-Engine");
+        final RESTFulResource resource = mResourceMap.get("Avatar-Verbal");
         // Get the command
         final String command = GTIActionFactory.blink();
         // Execute POST request
@@ -146,7 +146,7 @@ public final class VSMKristinaPlayer implements RunTimePlayer, SSIEventHandler {
                     final float valence,
                     final float arousal) {
         // Get the resource
-        final RESTFulResource resource = mResourceMap.get("Character-Engine");
+        final RESTFulResource resource = mResourceMap.get("Avatar-Verbal");
         // Get the command
         final String command = GTIActionFactory.face(valence, arousal);
         // Execute POST request
@@ -155,7 +155,7 @@ public final class VSMKristinaPlayer implements RunTimePlayer, SSIEventHandler {
 
     public final /*synchronized*/ String speech(final String id) {
         // Get the resource
-        final RESTFulResource resource = mResourceMap.get("Character-Engine");
+        final RESTFulResource resource = mResourceMap.get("Avatar-Verbal");
         // Get the command
         final String command = GTIActionFactory.__speech();
         // Execute POST request
@@ -173,6 +173,66 @@ public final class VSMKristinaPlayer implements RunTimePlayer, SSIEventHandler {
         mLogger.message("Resource is\n'" + resource + "'");
         // Get the query data
         final String query = "?valence=" + valence + "&arousal=" + arousal;
+        // Execute POST request
+        return mRestClient.post(resource, query, content);
+    }
+
+    public final String mv(
+            final String content) {
+        // Get the resource
+        final RESTFulResource resource = mResourceMap.get("Mode-Selection");
+        // Print some information
+        mLogger.message("Resource is\n'" + resource + "'");
+        // Get the query data
+        final String query = "?mode=verbal";
+        // Execute POST request
+        return mRestClient.post(resource, query, content);
+    }
+
+    public final String mn(
+            final String content) {
+        // Get the resource
+        final RESTFulResource resource = mResourceMap.get("Mode-Selection");
+        // Print some information
+        mLogger.message("Resource is\n'" + resource + "'");
+        // Get the query data
+        final String query = "?mode=non_verbal";
+        // Execute POST request
+        return mRestClient.post(resource, query, content);
+    }
+
+    public final String lg(
+            final String content) {
+        // Get the resource
+        final RESTFulResource resource = mResourceMap.get("Language-Generation");
+        // Print some information
+        mLogger.message("Resource is\n'" + resource + "'");
+        // Get the query data
+        final String query = "";
+        // Execute POST request
+        return mRestClient.post(resource, query, content);
+    }
+
+    public final String av(
+            final String content) {
+        // Get the resource
+        final RESTFulResource resource = mResourceMap.get("Avatar-Verbal");
+        // Print some information
+        mLogger.message("Resource is\n'" + resource + "'");
+        // Get the query data
+        final String query = "?id=hcm";
+        // Execute POST request
+        return mRestClient.post(resource, query, content);
+    }
+
+    public final String an(
+            final String content) {
+        // Get the resource
+        final RESTFulResource resource = mResourceMap.get("Avatar-Nonverbal");
+        // Print some information
+        mLogger.message("Resource is\n'" + resource + "'");
+        // Get the query data
+        final String query = "?id=hcm";
         // Execute POST request
         return mRestClient.post(resource, query, content);
     }
@@ -268,7 +328,7 @@ public final class VSMKristinaPlayer implements RunTimePlayer, SSIEventHandler {
     @Override
     public final void handle(final String message) {
         // Print some information
-       // mLogger.message("Parsing message " + message + "");
+        // mLogger.message("Parsing message " + message + "");
         try {
             // Parse the received XML string
             final ByteArrayInputStream stream = new ByteArrayInputStream(message.getBytes("UTF-8"));
@@ -313,7 +373,7 @@ public final class VSMKristinaPlayer implements RunTimePlayer, SSIEventHandler {
                                 } else {
                                     // Cannot process this
                                 }
-                            }  else {
+                            } else {
                                 // Cannot process this
                             }
                         } else if (mode.equalsIgnoreCase("fsender") || mode.equalsIgnoreCase("fusion")) {
@@ -347,12 +407,14 @@ public final class VSMKristinaPlayer implements RunTimePlayer, SSIEventHandler {
                             if (name.equalsIgnoreCase("la")) {
                                 if (state.equalsIgnoreCase("completed")) {
                                     if (type.equalsIgnoreCase("string")) {
-                                         // Just get the content
+                                        // Just get the content
                                         final String text = event.getTextContent();
                                         // User said something
                                         mLogger.message("User speech act is '" + text + "'");
                                         // Set the variable value
                                         set("UserDialogMove", "Function", text);
+                                        //
+                                        set("LA", text);
                                         //set("UserDialogMove", "Content", text);
                                     } else {
                                         // Cannot process this    
@@ -365,13 +427,11 @@ public final class VSMKristinaPlayer implements RunTimePlayer, SSIEventHandler {
                             } else {
                                 // Cannot process this
                             }
-                        }
-                        
-                        else if (mode.equalsIgnoreCase("vocapia")) {
+                        } else if (mode.equalsIgnoreCase("vocapia")) {
                             if (name.equalsIgnoreCase("transcript")) {
                                 if (state.equalsIgnoreCase("completed")) {
                                     if (type.equalsIgnoreCase("string")) {
-                                          // Just get the content
+                                        // Just get the content
                                         final String text = event.getTextContent();
                                         // User said something
                                         mLogger.message("User utterance is '" + text + "'");
@@ -389,10 +449,7 @@ public final class VSMKristinaPlayer implements RunTimePlayer, SSIEventHandler {
                             } else {
                                 // Cannot process this
                             }
-                        }
-                        
-                        
-                        else {
+                        } else {
                             // Cannot process this
                         }
 

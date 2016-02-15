@@ -3,6 +3,9 @@ package eu.kristina.vsm;
 import com.sun.jersey.api.container.httpserver.HttpServerFactory;
 import com.sun.jersey.spi.resource.Singleton;
 import com.sun.net.httpserver.HttpServer;
+import de.dfki.vsm.editor.EditorInstance;
+import de.dfki.vsm.editor.project.EditorProject;
+import de.dfki.vsm.editor.project.ProjectEditor;
 import de.dfki.vsm.runtime.RunTimeInstance;
 import de.dfki.vsm.runtime.project.RunTimeProject;
 import de.dfki.vsm.runtime.symbol.SymbolEntry;
@@ -42,8 +45,13 @@ public final class VSMKristinaService {
     // The runtime instance
     private static final RunTimeInstance sRunTime
             = RunTimeInstance.getInstance();
+    // The graphics instance
+    private final static EditorInstance sGraphics
+            = EditorInstance.getInstance();
     // The project instance
-    private static RunTimeProject sProject = null;
+    //private static RunTimeProject sProject = null;
+    private static EditorProject sProject = null;
+    private static ProjectEditor sEditor = null;
 
     // The status enumeration
     private enum Status {
@@ -51,6 +59,38 @@ public final class VSMKristinaService {
         NULLED,
         LOADED,
         ACTIVE
+    }
+
+    private static boolean show() {
+        //
+        if (sProject != null) {
+            //
+            sEditor = sGraphics.showProject(sProject);
+            //
+            return true;
+        } else {
+            // Print some information
+            sLogger.failure("Failure: Cannot show editor project in editor instance");
+            // Return false at failure
+            return false;
+        }
+    }
+
+    private static boolean hide() {
+        //
+        if (sEditor != null) {
+            //
+            sGraphics.hideProject(sEditor);
+            //
+            sEditor = null;
+            //
+            return true;
+        } else {
+            // Print some information
+            sLogger.failure("Failure: Cannot hide editor project in editor instance");
+            // Return false at failure
+            return false;
+        }
     }
 
     /**
@@ -77,16 +117,27 @@ public final class VSMKristinaService {
         // Check if the file exists
         if (file.exists() && file.isDirectory()) {
             // Get the runtime project
-            sProject = new RunTimeProject(new File(filename));
-            // Load the runtime project
-            if (sProject.load()) {
-                // Print some information
-                sLogger.success("Success: Loaded VSM runtime project '" + sProject.getProjectName() + "'");
-                // Return true at success
-                return true;
+            //sProject = new RunTimeProject(file);
+
+            sProject = new EditorProject();
+
+            if (sProject.parse(file.getAbsolutePath())) {
+
+                // Load the runtime project
+                if (sRunTime.load(sProject)) {
+                    // Print some information
+                    sLogger.success("Success: Loaded VSM runtime project '" + sProject.getProjectName() + "'");
+                    // Return true at success
+                    return true;
+                } else {
+                    // Print some information
+                    sLogger.failure("Failure: Cannot load VSM runtime project '" + sProject.getProjectName() + "'");
+                    // Return false at failure
+                    return false;
+                }
             } else {
                 // Print some information
-                sLogger.failure("Failure: Cannot load VSM runtime project '" + sProject.getProjectName() + "'");
+                sLogger.failure("Failure: Cannot find any VSM runtime project base directory '" + file + "'");
                 // Return false at failure
                 return false;
             }
@@ -401,6 +452,10 @@ public final class VSMKristinaService {
             return result((stop() ? "SUCCESS" : "FAILURE"));
         } else if (cmd.equalsIgnoreCase("unload")) {
             return result((unload() ? "SUCCESS" : "FAILURE"));
+        } else if (cmd.equalsIgnoreCase("show")) {
+            return result((show() ? "SUCCESS" : "FAILURE"));
+        } else if (cmd.equalsIgnoreCase("hide")) {
+            return result((hide() ? "SUCCESS" : "FAILURE"));
         } else if (cmd.equalsIgnoreCase("status")) {
             return result(status());
         } else if (cmd.equalsIgnoreCase("config")) {
@@ -476,6 +531,12 @@ public final class VSMKristinaService {
                     } else if (in.equals("stop")) {
                         // Stop the project
                         stop();
+                    } else if (in.equals("show")) {
+                        // Show the editor
+                        show();
+                    } else if (in.equals("hide")) {
+                        // Hide the editor
+                        hide();
                     } else if (in.equals("config")) {
                         // Get the config
                         sLogger.success(config());

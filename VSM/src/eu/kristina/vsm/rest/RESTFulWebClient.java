@@ -22,6 +22,11 @@ public final class RESTFulWebClient {
     public RESTFulWebClient() {
         // Create the rest service client
         mClient = Client.create(new DefaultClientConfig());
+        mClient.setConnectTimeout(1000);
+        mClient.setReadTimeout(1000);
+        
+        // Print some information
+        mLogger.message("Creating RESTful client '" + mClient + "'");
     }
 
     public final String get(
@@ -38,6 +43,8 @@ public final class RESTFulWebClient {
                     .accept(resource.getProd())
                     .type(resource.getCons())
                     .get(ClientResponse.class);
+            // Print some information
+            mLogger.message("Receiving GET response from URL '" + url + "' as object:\n" + response);
             // Check the response status
             if (response.getStatus() == Status.OK.getStatusCode()) {
                 // Get the mime type name
@@ -82,6 +89,8 @@ public final class RESTFulWebClient {
                     .accept(resource.getProd())
                     .type(resource.getCons())
                     .post(ClientResponse.class, content);
+            // Print some information
+            mLogger.message("Receiving POST response from URL '" + url + "' as object:\n" + response);
             // Check the response status
             if (response.getStatus() == Status.OK.getStatusCode()) {
                 // Get the mime type name
@@ -106,6 +115,8 @@ public final class RESTFulWebClient {
         } catch (final Exception exc) {
             // Print some information
             mLogger.failure(exc.toString());
+            //
+            //exc.printStackTrace();
             // Return null at failure
             return exc.getMessage();
         }
