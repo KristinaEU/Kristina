@@ -52,7 +52,7 @@
       <Feature key="restful.resource.8.prod" value="*/*"/>
       <Feature key="restful.resource.9.host" value="UPF-GTI"/>
       <Feature key="restful.resource.9.name" value="Avatar-Nonverbal"/>
-      <Feature key="restful.resource.9.path" value="http://webglstudio.org:8080/nonVerbal"/>
+      <Feature key="restful.resource.9.path" value="http://webglstudio.org:8080/non_verbal"/>
       <Feature key="restful.resource.9.cons" value="application/xml"/>
       <Feature key="restful.resource.9.prod" value="*/*"/>
       <Feature key="ssi.socket.local.host" value="137.250.171.231"/>

@@ -63,17 +63,17 @@ public class RESTFulPipeTestSuite {
                 "application/x-www-form-urlencoded", "application/json");
         final String _lg = client.post(lg, "", _ms_v);
         // CHARACTER ENGINE 
-        final RESTFulResource ce = new RESTFulResource(
+        final RESTFulResource ce_v = new RESTFulResource(
                 "UPF-GTI", "Character Engine",
-                "http://webglstudio.org:8080/newData",
+                "http://webglstudio.org:8080/verbal",
                 "application/json", "*/*");
-        //final String _ce_v = client.post(ce, "?id=hcm", _lg);
+        final String _ce_v = client.post(ce_v, "?id=hcm", _lg);
         // CHARACTER ENGINE 
-        final RESTFulResource gticmd = new RESTFulResource(
+        final RESTFulResource ce_n = new RESTFulResource(
                 "UPF-GTI", "Character Engine",
-                "http://webglstudio.org:8080/nonVerbal",
+                "http://webglstudio.org:8080/non_verbal",
                 "application/xml", "*/*");
-        final String _ce_n = client.post(gticmd, "?id=hcm", _ms_n);
+        final String _ce_n = client.post(ce_n, "?id=hcm", _ms_n);
 
     }
 
@@ -168,13 +168,25 @@ public class RESTFulPipeTestSuite {
                 + " \"text\": \"Hello world!\"" + "\n"
                 + "}";
 
+        // Construct some XML request
+        //final String xml = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n"
+        //        + "</HellWord> ";
+
         // Build the GTI service config
-        final RESTFulResource gticmd = new RESTFulResource(
+        final RESTFulResource ce_v = new RESTFulResource(
                 "UPF-GTI", "Avatar-Verbal",
                 "http://webglstudio.org:8080/verbal",
                 "application/json", "*/*");
         // Try executing a GET or a POST 
-        client.post(gticmd, "?id=hcm", json);
+        client.post(ce_v, "?id=hcm", json);
+
+        // Build the GTI service config
+        //final RESTFulResource ce_n = new RESTFulResource(
+        //        "UPF-GTI", "Avatar-Nonverbal",
+        //        "http://webglstudio.org:8080/non_verbal",
+        //        "application/json", "*/*");
+        // Try executing a GET or a POST 
+        //client.post(ce_n, "?id=hcm", xml);
     }
 
 }
