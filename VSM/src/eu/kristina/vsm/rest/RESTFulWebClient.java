@@ -22,8 +22,8 @@ public final class RESTFulWebClient {
     public RESTFulWebClient() {
         // Create the rest service client
         mClient = Client.create(new DefaultClientConfig());
-        mClient.setConnectTimeout(1000);
-        mClient.setReadTimeout(1000);
+        mClient.setConnectTimeout(60000);
+        mClient.setReadTimeout(60000);
         
         // Print some information
         mLogger.message("Creating RESTful client '" + mClient + "'");
