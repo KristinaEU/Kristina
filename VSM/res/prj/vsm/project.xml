@@ -4,7 +4,7 @@
   </Plugins>
   <Players>
     <Player name="defaultsceneplayer" class="eu.kristina.vsm.VSMKristinaPlayer">
-      <Feature key="restful.resource.count" value="9"/>
+      <Feature key="restful.resource.count" value="10"/>
       <Feature key="restful.resource.0.host" value="UAU-VSM"/>
       <Feature key="restful.resource.0.name" value="Turn-Control"/>
       <Feature key="restful.resource.0.path" value="http://137.250.171.231:11223"/>
@@ -46,10 +46,15 @@
       <Feature key="restful.resource.7.cons" value="application/x-www-form-urlencoded"/>
       <Feature key="restful.resource.7.prod" value="application/xml"/>
       <Feature key="restful.resource.8.host" value="UPF-GTI"/>
-      <Feature key="restful.resource.8.name" value="Character-Engine"/>
-      <Feature key="restful.resource.8.path" value="http://webglstudio.org:8080/newData"/>
+      <Feature key="restful.resource.8.name" value="Avatar-Verbal"/>
+      <Feature key="restful.resource.8.path" value="http://webglstudio.org:8080/verbal"/>
       <Feature key="restful.resource.8.cons" value="application/json"/>
       <Feature key="restful.resource.8.prod" value="*/*"/>
+      <Feature key="restful.resource.9.host" value="UPF-GTI"/>
+      <Feature key="restful.resource.9.name" value="Avatar-Nonverbal"/>
+      <Feature key="restful.resource.9.path" value="http://webglstudio.org:8080/non_verbal"/>
+      <Feature key="restful.resource.9.cons" value="application/xml"/>
+      <Feature key="restful.resource.9.prod" value="*/*"/>
       <Feature key="ssi.socket.local.host" value="137.250.171.231"/>
       <Feature key="ssi.socket.local.port" value="11220"/>
       <Feature key="ssi.socket.remote.host" value="137.250.171.230"/>

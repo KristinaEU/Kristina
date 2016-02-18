@@ -2,8 +2,6 @@ package eu.kristina.vsm.test;
 
 import eu.kristina.vsm.rest.RESTFulResource;
 import eu.kristina.vsm.rest.RESTFulWebClient;
-import eu.kristina.vsm.ssi.SSIEventHandler;
-import eu.kristina.vsm.ssi.SSIEventListener;
 
 /**
  * @author Gregor Mehlmann
@@ -16,8 +14,8 @@ public class RESTFulPipeTestSuite {
         //testSSI();
         //testOWL();
         //testUPF();
-        //testGTI();
-        testPipe();
+        testGTI();
+        //testPipe();
 
     }
 
@@ -38,7 +36,7 @@ public class RESTFulPipeTestSuite {
                 false);
         // Start the listener
         listener.start();
-        */
+         */
         // LANGUAGE ANALYSIS
         final RESTFulResource la = new RESTFulResource(
                 "UPF-TALN", "Language Analysis",
@@ -56,20 +54,27 @@ public class RESTFulPipeTestSuite {
                 "UPF-TALN", "Mode Selection",
                 "http://kristina.taln.upf.edu/services/mode_selection",
                 "application/x-www-form-urlencoded", "application/xml");
-        final String _ms_v = client.post(dm, "?mode=verbal", _dm);
-        final String _ms_n = client.post(dm, "?mode=non_verbal", _dm);
+        final String _ms_v = client.post(ms, "?mode=verbal", _dm);
+        final String _ms_n = client.post(ms, "?mode=non_verbal", _dm);
         // LANGUAGE GENERATION
         final RESTFulResource lg = new RESTFulResource(
                 "UPF-TALN", "Language Generation",
                 "http://kristina.taln.upf.edu/services/language_generation",
                 "application/x-www-form-urlencoded", "application/json");
         final String _lg = client.post(lg, "", _ms_v);
-        // CHARACTER ENGINE
-        final RESTFulResource ce = new RESTFulResource(
+        // CHARACTER ENGINE 
+        final RESTFulResource ce_v = new RESTFulResource(
                 "UPF-GTI", "Character Engine",
-                "http://webglstudio.org:8080/newData",
+                "http://webglstudio.org:8080/verbal",
                 "application/json", "*/*");
-        final String _ce = client.post(ce, "?id=hcm", _lg+_ms_n);
+        final String _ce_v = client.post(ce_v, "?id=hcm", _lg);
+        // CHARACTER ENGINE 
+        final RESTFulResource ce_n = new RESTFulResource(
+                "UPF-GTI", "Character Engine",
+                "http://webglstudio.org:8080/non_verbal",
+                "application/xml", "*/*");
+        final String _ce_n = client.post(ce_n, "?id=hcm", _ms_n);
+
     }
 
     private static void testSSI(final RESTFulWebClient client) {
@@ -124,30 +129,6 @@ public class RESTFulPipeTestSuite {
         client.post(owlall, "", "Hello World!");
     }
 
-    private static void testGTI(final RESTFulWebClient client) {
-        // Construct some JSON request
-        final String json = ""
-                + "{" + "\n"
-                + " \"cmdId\": 12345," + "\n"
-                + " \"audioURL\": \"http://www.webglstudio.org/gerard/visemes/es003_2.wav\"" + "," + "\n"
-                + " \"sequence\":"
-                + " [[0.0, 0.0, 0.5, 0.0, 0.0, 0.0, 0.5],"
-                + "  [1.0, 0.5, 0.0, 0.5, 1.0, 0.5, 1.0],"
-                + "  [1.5, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]]" + "," + "\n"
-                + " \"face\": [-0.5, 0.5]" + "," + "\n"
-                + " \"blink\": true" + "," + "\n"
-                + " \"text\": \"Hello world!\"" + "\n"
-                + "}";
-
-        // Build the GTI service config
-        final RESTFulResource gticmd = new RESTFulResource(
-                "UPF-GTI", "Character Engine",
-                "http://webglstudio.org:8080/newData",
-                "application/json", "*/*");
-        // Try executing a GET or a POST 
-        client.post(gticmd, "?id=hcm", json);
-    }
-
     private static void testUPF(final RESTFulWebClient client) {
         // Build the UPF service configs
         final RESTFulResource la = new RESTFulResource(
@@ -169,6 +150,43 @@ public class RESTFulPipeTestSuite {
         client.post(la, "", "Hello World!");
         client.post(lg, "", "Hello World!");
         client.post(ms, "", "Hello World!");
+    }
+
+    private static void testGTI() {
+        // Create the client
+        final RESTFulWebClient client = new RESTFulWebClient();
+        // Construct some JSON request
+        final String json = ""
+                + "{" + "\n"
+                + " \"audioURL\": \"http://www.webglstudio.org/gerard/visemes/es003_2.wav\"" + "," + "\n"
+                + " \"sequence\":"
+                + " [[0.0, 0.0, 0.5, 0.0, 0.0, 0.0, 0.5],"
+                + "  [1.0, 0.5, 0.0, 0.5, 1.0, 0.5, 1.0],"
+                + "  [1.5, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]]" + "," + "\n"
+                + " \"face\": [-0.5, 0.5]" + "," + "\n"
+                + " \"blink\": true" + "," + "\n"
+                + " \"text\": \"Hello world!\"" + "\n"
+                + "}";
+
+        // Construct some XML request
+        //final String xml = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n"
+        //        + "</HellWord> ";
+
+        // Build the GTI service config
+        final RESTFulResource ce_v = new RESTFulResource(
+                "UPF-GTI", "Avatar-Verbal",
+                "http://webglstudio.org:8080/verbal",
+                "application/json", "*/*");
+        // Try executing a GET or a POST 
+        client.post(ce_v, "?id=hcm", json);
+
+        // Build the GTI service config
+        //final RESTFulResource ce_n = new RESTFulResource(
+        //        "UPF-GTI", "Avatar-Nonverbal",
+        //        "http://webglstudio.org:8080/non_verbal",
+        //        "application/json", "*/*");
+        // Try executing a GET or a POST 
+        //client.post(ce_n, "?id=hcm", xml);
     }
 
 }
