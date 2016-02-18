@@ -12,10 +12,9 @@
 			<version>2.22.1</version>
 		</dependency>
 		<dependency>
-			<groupId>org.apache.jena</groupId>
-			<artifactId>apache-jena-libs</artifactId>
-			<type>pom</type>
-			<version>3.0.1</version>
+			<groupId>net.sourceforge.owlapi</groupId>
+			<artifactId>owlapi-distribution</artifactId>
+			<version>3.5.1</version>
 		</dependency>
 	</dependencies>
 	<build>

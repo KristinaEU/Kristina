@@ -1,36 +1,42 @@
 package model;
 
-import java.util.LinkedList;
-import java.util.List;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.Set;
+import java.util.function.Consumer;
 
-import org.apache.commons.io.IOUtils;
-import org.apache.jena.rdf.model.Model;
-import org.apache.jena.rdf.model.ModelFactory;
-import org.apache.jena.rdf.model.Statement;
-import org.apache.jena.rdf.model.StmtIterator;
+import org.semanticweb.owlapi.apibinding.OWLManager;
+import org.semanticweb.owlapi.io.StringDocumentSource;
+import org.semanticweb.owlapi.model.OWLAxiom;
+import org.semanticweb.owlapi.model.OWLOntology;
+import org.semanticweb.owlapi.model.OWLOntologyCreationException;
+import org.semanticweb.owlapi.model.OWLOntologyManager;
 
 public class KristinaModel {
 	
-	public static String[] performUpdate(String usermove){
+	private static final OWLOntologyManager manager = OWLManager.createOWLOntologyManager();
+	
+	public static OWLOntology performUpdate(String usermove) throws OWLOntologyCreationException{
 		
 		String workspaceRDF = CerthClient.post(usermove);
+        System.out.println(workspaceRDF);
 		
-		//String[] workspace = parseRDF(workspaceRDF);
-		String[] workspace = new String[] {workspaceRDF};
+		OWLOntology workspace = parseRDF(workspaceRDF);
 		
 		return workspace;
 	}
 	
-	private static String[] parseRDF(String rdf){
-		Model model = ModelFactory.createDefaultModel();
-		model.read(IOUtils.toInputStream(rdf),null);
-		
-		StmtIterator it = model.listStatements();
-		List<String> statements = new LinkedList<String>();
-		while(it.hasNext()){
-			Statement s = it.next();
-			statements.add(s.toString());
+	private static OWLOntology parseRDF(String rdf) throws OWLOntologyCreationException{
+		//TODO: this is temporary until KI ontology is in place
+		manager.setSilentMissingImportsHandling(true);
+		OWLOntology onto = manager.loadOntologyFromOntologyDocument(new StringDocumentSource(rdf));
+		/*ArrayList<OWLAxiom> axioms = new ArrayList<OWLAxiom>(onto.getAxioms());
+		String[] proposal = new String[axioms.size()];
+		for (int i = 0; i < axioms.size(); i++){
+			proposal[i] = axioms.get(i).toString();
+			System.out.println(axioms.get(i).toString());
 		}
-		return (String[])statements.toArray();
+		return proposal;*/
+        return onto;
 	}
 }
