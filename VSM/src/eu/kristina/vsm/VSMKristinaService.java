@@ -3,8 +3,10 @@ package eu.kristina.vsm;
 import com.sun.jersey.api.container.httpserver.HttpServerFactory;
 import com.sun.jersey.spi.resource.Singleton;
 import com.sun.net.httpserver.HttpServer;
+import de.dfki.vsm.editor.EditorInstance;
+import de.dfki.vsm.editor.project.EditorProject;
+import de.dfki.vsm.editor.project.ProjectEditor;
 import de.dfki.vsm.runtime.RunTimeInstance;
-import de.dfki.vsm.runtime.project.RunTimeProject;
 import de.dfki.vsm.runtime.symbol.SymbolEntry;
 import de.dfki.vsm.util.ios.IOSIndentWriter;
 import de.dfki.vsm.util.log.LOGDefaultLogger;
@@ -13,7 +15,6 @@ import java.io.BufferedReader;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.InputStreamReader;
-import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map.Entry;
@@ -42,8 +43,13 @@ public final class VSMKristinaService {
     // The runtime instance
     private static final RunTimeInstance sRunTime
             = RunTimeInstance.getInstance();
+    // The graphics instance
+    //private final static EditorInstance sGraphics
+    //        = EditorInstance.getInstance();
     // The project instance
-    private static RunTimeProject sProject = null;
+    //private static RunTimeProject sProject = null;
+    private static EditorProject sProject = null;
+    private static ProjectEditor sEditor = null;
 
     // The status enumeration
     private enum Status {
@@ -54,45 +60,125 @@ public final class VSMKristinaService {
     }
 
     /**
+     * Show the VSM editor view for debugging the execution
+     *
+     * @return A boolean flag indicating success or failure
+     */
+    private static boolean show() {
+        try {
+            // Check if the project is null
+            if (sProject != null) {
+                // Show the project editor 
+                //sEditor = sGraphics.showProject(sProject);
+                // return true at success
+                return true;
+            } else {
+                // Print some information
+                sLogger.failure("Failure: Cannot show editor project in editor instance");
+                // Return false at failure
+                return false;
+            }
+        } catch (final Exception exc) {
+            // Print some information
+            sLogger.failure("Failure: An exception occured in the service:\n");
+            // Print some information
+            sLogger.failure(exc.toString());
+            // Return false at failure
+            return false;
+        }
+    }
+
+    /**
+     * Hide the VSM editor view for debugging the execution
+     *
+     * @return A boolean flag indicating success or failure
+     */
+    private static boolean hide() {
+        try {
+            // Check if the editor is null
+            if (sEditor != null) {
+                // Hide the current editor 
+                //sGraphics.hideProject(sEditor);
+                // And set the editor null
+                sEditor = null;
+                // Return true at success
+                return true;
+            } else {
+                // Print some information
+                sLogger.failure("Failure: Cannot hide editor project in editor instance");
+                // Return false at failure
+                return false;
+            }
+        } catch (final Exception exc) {
+            // Print some information
+            sLogger.failure("Failure: An exception occured in the service:\n");
+            // Print some information
+            sLogger.failure(exc.toString());
+            // Return false at failure
+            return false;
+        }
+    }
+
+    /**
      * Load the VSM runtime project instance for KRISTINA
      *
      * @return A boolean flag indicating success or failure
      */
     private static boolean load(final String filename) {
-        // Stop current project first
-        if (sProject != null) {
-            // Print some information
-            sLogger.warning("Warning: Trying to stop VSM runtime project '" + sProject.getProjectName() + "' first");
-            // Stop the project now
-            if (stop()) {
+        try {
+            // Stop current project first
+            if (sProject != null) {
                 // Print some information
-                sLogger.success("Success: Stopped running VSM runtime project '" + sProject.getProjectName() + "' first");
-            } else {
-                // Print some information
-                sLogger.warning("Warning: There was no need to stop VSM runtime project '" + sProject.getProjectName() + "'");
+                sLogger.warning("Warning: Trying to stop VSM runtime project '" + sProject.getProjectName() + "' first");
+                // Stop the project now
+                if (stop()) {
+                    // Print some information
+                    sLogger.success("Success: Stopped running VSM runtime project '" + sProject.getProjectName() + "' first");
+                } else {
+                    // Print some information
+                    sLogger.warning("Warning: There was no need to stop VSM runtime project '" + sProject.getProjectName() + "'");
+                }
             }
-        }
-        // Create the project file
-        final File file = new File(filename);
-        // Check if the file exists
-        if (file.exists() && file.isDirectory()) {
-            // Get the runtime project
-            sProject = new RunTimeProject(new File(filename));
-            // Load the runtime project
-            if (sProject.load()) {
-                // Print some information
-                sLogger.success("Success: Loaded VSM runtime project '" + sProject.getProjectName() + "'");
-                // Return true at success
-                return true;
+            // Create the project file
+            final File file = new File(filename);
+            // Check if the file exists
+            if (file.exists() && file.isDirectory()) {
+                // Get the runtime project
+                //sProject = new RunTimeProject(file);
+
+                sProject = new EditorProject();
+
+                if (sProject.parse(file.getAbsolutePath())) {
+
+                    // Load the runtime project
+                    if (sRunTime.load(sProject)) {
+                        // Print some information
+                        sLogger.success("Success: Loaded VSM runtime project '" + sProject.getProjectName() + "'");
+                        // Return true at success
+                        return true;
+                    } else {
+                        // Print some information
+                        sLogger.failure("Failure: Cannot load VSM runtime project '" + sProject.getProjectName() + "'");
+                        // Return false at failure
+                        return false;
+                    }
+                } else {
+                    // Print some information
+                    sLogger.failure("Failure: Cannot find any VSM runtime project base directory '" + file + "'");
+                    // Return false at failure
+                    return false;
+                }
             } else {
                 // Print some information
-                sLogger.failure("Failure: Cannot load VSM runtime project '" + sProject.getProjectName() + "'");
+                sLogger.failure("Failure: Cannot find any VSM runtime project base directory '" + file + "'");
                 // Return false at failure
                 return false;
             }
-        } else {
+        } catch (final Exception exc) {
             // Print some information
-            sLogger.failure("Failure: Cannot find any VSM runtime project base directory '" + file + "'");
+            sLogger.failure("Failure: An exception occured in the service:\n");
+            // Print some information
+            sLogger.failure(exc.toString());
             // Return false at failure
             return false;
         }
@@ -102,25 +188,34 @@ public final class VSMKristinaService {
      * Unload the VSM runtime project instance for KRISTINA
      */
     private static boolean unload() {
-        // Check if project is loaded        
-        if (sProject != null) {
-            // Stop the project now
-            if (stop()) {
+        try {
+            // Check if project is loaded        
+            if (sProject != null) {
+                // Stop the project now
+                if (stop()) {
+                    // Print some information
+                    sLogger.message("Stopped running VSM runtime project '" + sProject.getProjectName() + "' first");
+                } else {
+                    // Print some information
+                    sLogger.message("There was no need to stop VSM runtime project '" + sProject.getProjectName() + "'");
+                }
                 // Print some information
-                sLogger.message("Stopped running VSM runtime project '" + sProject.getProjectName() + "' first");
+                sLogger.success("Success: Unloaded VSM runtime project '" + sProject.getProjectName() + "'");
+                // Set the project null
+                sProject = null;
+                // Return true at success
+                return true;
             } else {
                 // Print some information
-                sLogger.message("There was no need to stop VSM runtime project '" + sProject.getProjectName() + "'");
+                sLogger.failure("Failure: There is no VSM runtime project loaded yet");
+                // Return false at failure
+                return false;
             }
+        } catch (final Exception exc) {
             // Print some information
-            sLogger.success("Success: Unloaded VSM runtime project '" + sProject.getProjectName() + "'");
-            // Set the project null
-            sProject = null;
-            // Return true at success
-            return true;
-        } else {
+            sLogger.failure("Failure: An exception occured in the service:\n");
             // Print some information
-            sLogger.failure("Failure: There is no VSM runtime project loaded yet");
+            sLogger.failure(exc.toString());
             // Return false at failure
             return false;
         }
@@ -132,39 +227,48 @@ public final class VSMKristinaService {
      * @return A boolean flag indicating success or failure
      */
     private static boolean start() {
-        // Check if project is loaded        
-        if (sProject != null) {
-            // Check if project is running
-            if (!sRunTime.isRunning(sProject)) {
-                // Then launch the project now
-                if (sRunTime.launch(sProject)) {
-                    // And then start the project
-                    if (sRunTime.start(sProject)) {
-                        // Print some information
-                        sLogger.success("Success: Starting VSM runtime project '" + sProject.getProjectName() + "'");
-                        // Return true at success
-                        return true;
+        try {
+            // Check if project is loaded        
+            if (sProject != null) {
+                // Check if project is running
+                if (!sRunTime.isRunning(sProject)) {
+                    // Then launch the project now
+                    if (sRunTime.launch(sProject)) {
+                        // And then start the project
+                        if (sRunTime.start(sProject)) {
+                            // Print some information
+                            sLogger.success("Success: Starting VSM runtime project '" + sProject.getProjectName() + "'");
+                            // Return true at success
+                            return true;
+                        } else {
+                            // Print some information
+                            sLogger.failure("Failure: Cannot start VSM runtime project '" + sProject.getProjectName() + "'");
+                            // Return false at failure
+                            return false;
+                        }
                     } else {
                         // Print some information
-                        sLogger.failure("Failure: Cannot start VSM runtime project '" + sProject.getProjectName() + "'");
+                        sLogger.failure("Failure: Cannot launch VSM runtime project '" + sProject.getProjectName() + "'");
                         // Return false at failure
                         return false;
                     }
                 } else {
                     // Print some information
-                    sLogger.failure("Failure: Cannot launch VSM runtime project '" + sProject.getProjectName() + "'");
+                    sLogger.failure("Failure: VSM runtime project '" + sProject.getProjectName() + "' is already running");
                     // Return false at failure
                     return false;
                 }
             } else {
                 // Print some information
-                sLogger.failure("Failure: VSM runtime project '" + sProject.getProjectName() + "' is already running");
+                sLogger.failure("Failure: There is no VSM runtime project loaded yet");
                 // Return false at failure
                 return false;
             }
-        } else {
+        } catch (final Exception exc) {
             // Print some information
-            sLogger.failure("Failure: There is no VSM runtime project loaded yet");
+            sLogger.failure("Failure: An exception occured in the service:\n");
+            // Print some information
+            sLogger.failure(exc.toString());
             // Return false at failure
             return false;
         }
@@ -176,39 +280,48 @@ public final class VSMKristinaService {
      * @return A boolean flag indicating success or failure
      */
     private static boolean stop() {
-        // Check if project is loaded
-        if (sProject != null) {
-            // Check if project is running
-            if (sRunTime.isRunning(sProject)) {
-                // Then abort the running project
-                if (sRunTime.abort(sProject)) {
-                    // And unload the project then
-                    if (sRunTime.unload(sProject)) {
-                        // Print some information
-                        sLogger.success("Success: Stopping VSM runtime project '" + sProject.getProjectName() + "'");
-                        // Return true at success
-                        return true;
+        try {
+            // Check if project is loaded
+            if (sProject != null) {
+                // Check if project is running
+                if (sRunTime.isRunning(sProject)) {
+                    // Then abort the running project
+                    if (sRunTime.abort(sProject)) {
+                        // And unload the project then
+                        if (sRunTime.unload(sProject)) {
+                            // Print some information
+                            sLogger.success("Success: Stopping VSM runtime project '" + sProject.getProjectName() + "'");
+                            // Return true at success
+                            return true;
+                        } else {
+                            // Print some information
+                            sLogger.failure("Failure: Cannot unload VSM runtime project '" + sProject.getProjectName() + "'");
+                            // Return false at failure
+                            return false;
+                        }
                     } else {
                         // Print some information
-                        sLogger.failure("Failure: Cannot unload VSM runtime project '" + sProject.getProjectName() + "'");
+                        sLogger.failure("Failure: Cannot stop VSM runtime project '" + sProject.getProjectName() + "'");
                         // Return false at failure
                         return false;
                     }
                 } else {
                     // Print some information
-                    sLogger.failure("Failure: Cannot stop VSM runtime project '" + sProject.getProjectName() + "'");
+                    sLogger.failure("Failure: VSM runtime project '" + sProject.getProjectName() + "' is not running");
                     // Return false at failure
                     return false;
                 }
             } else {
                 // Print some information
-                sLogger.failure("Failure: VSM runtime project '" + sProject.getProjectName() + "' is not running");
+                sLogger.failure("Failure: There is no VSM runtime project loaded yet");
                 // Return false at failure
                 return false;
             }
-        } else {
+        } catch (final Exception exc) {
             // Print some information
-            sLogger.failure("Failure: There is no VSM runtime project loaded yet");
+            sLogger.failure("Failure: An exception occured in the service:\n");
+            // Print some information
+            sLogger.failure(exc.toString());
             // Return false at failure
             return false;
         }
@@ -221,15 +334,14 @@ public final class VSMKristinaService {
      * @return The xml string reprsentation of the response
      */
     private static String result(final String text) {
-        // Create a byte array output stream
-        final ByteArrayOutputStream stream = new ByteArrayOutputStream();
-        // Open the stream with an indent writer
-        final IOSIndentWriter writer = new IOSIndentWriter(stream);
-        // Print the status event to xml format
         try {
+            // Create a byte array output stream
+            final ByteArrayOutputStream stream = new ByteArrayOutputStream();
+            // Open the stream with an indent writer
+            final IOSIndentWriter writer = new IOSIndentWriter(stream);
             // Write the XML header line
             writer.println("<?xml version=\"1.0\" encoding=\"UTF-8\"?>");
-            //
+            // Print the status to xml 
             if (text.isEmpty()) {
                 // Open the response element 
                 writer.print("<Result/>");
@@ -246,10 +358,12 @@ public final class VSMKristinaService {
             writer.close();
             // Return xml if writing was successfull
             return stream.toString("UTF-8");
-        } catch (final UnsupportedEncodingException exc) {
-            // Print some error message in this case
+        } catch (final Exception exc) {
+            // Print some information
+            sLogger.failure("Failure: An exception occured in the service:\n");
+            // Print some information
             sLogger.failure(exc.toString());
-            // Return false if writing to XML failed
+            // Return null at failure
             return null;
         }
     }
@@ -260,14 +374,23 @@ public final class VSMKristinaService {
      * @return The xml string representation of the VSM status
      */
     private static String status() {
-        if (sProject != null) {
-            if (sRunTime.isRunning(sProject)) {
-                return Status.ACTIVE.name();
+        try {
+            if (sProject != null) {
+                if (sRunTime.isRunning(sProject)) {
+                    return Status.ACTIVE.name();
+                } else {
+                    return Status.LOADED.name();
+                }
             } else {
-                return Status.LOADED.name();
+                return Status.NULLED.name();
             }
-        } else {
-            return Status.NULLED.name();
+        } catch (final Exception exc) {
+            // Print some information
+            sLogger.failure("Failure: An exception occured in the service:\n");
+            // Print some information
+            sLogger.failure(exc.toString());
+            // Return null at failure
+            return null;
         }
     }
 
@@ -277,12 +400,11 @@ public final class VSMKristinaService {
      * @return The xml string representation of the VSM config
      */
     private static String config() {
-        // Create a byte array output stream
-        final ByteArrayOutputStream stream = new ByteArrayOutputStream();
-        // Open the stream with an indent writer
-        final IOSIndentWriter writer = new IOSIndentWriter(stream);
-        // Print the status event to xml format
         try {
+            // Create a byte array output stream
+            final ByteArrayOutputStream stream = new ByteArrayOutputStream();
+            // Open the stream with an indent writer
+            final IOSIndentWriter writer = new IOSIndentWriter(stream);
             // Check the project state 
             if (sProject != null) {
                 // Open the response element 
@@ -301,9 +423,11 @@ public final class VSMKristinaService {
             // Return xml if writing was successfull
             return stream.toString("UTF-8");
         } catch (final Exception exc) {
-            // Print some error message in this case
+            // Print some information
+            sLogger.failure("Failure: An exception occured in the service:\n");
+            // Print some information
             sLogger.failure(exc.toString());
-            // Return false if writing to XML failed
+            // Return null at failure
             return null;
         }
     }
@@ -314,12 +438,11 @@ public final class VSMKristinaService {
      * @return The xml string representation of the VSM states
      */
     private static String states() {
-        // Create a byte array output stream
-        final ByteArrayOutputStream stream = new ByteArrayOutputStream();
-        // Open the stream with an indent writer
-        final IOSIndentWriter writer = new IOSIndentWriter(stream);
-        // Print the status event to xml format
         try {
+            // Create a byte array output stream
+            final ByteArrayOutputStream stream = new ByteArrayOutputStream();
+            // Open the stream with an indent writer
+            final IOSIndentWriter writer = new IOSIndentWriter(stream);
             // Check the project state 
             if (sProject != null) {
                 // Get the configuration
@@ -366,9 +489,11 @@ public final class VSMKristinaService {
             // Return xml if writing was successfull
             return stream.toString("UTF-8");
         } catch (final Exception exc) {
-            // Print some error message in this case
+            // Print some information
+            sLogger.failure("Failure: An exception occured in the service:\n");
+            // Print some information
             sLogger.failure(exc.toString());
-            // Return false if writing to XML failed
+            // Return null at failure
             return null;
         }
     }
@@ -401,6 +526,10 @@ public final class VSMKristinaService {
             return result((stop() ? "SUCCESS" : "FAILURE"));
         } else if (cmd.equalsIgnoreCase("unload")) {
             return result((unload() ? "SUCCESS" : "FAILURE"));
+        } else if (cmd.equalsIgnoreCase("show")) {
+            return result((show() ? "SUCCESS" : "FAILURE"));
+        } else if (cmd.equalsIgnoreCase("hide")) {
+            return result((hide() ? "SUCCESS" : "FAILURE"));
         } else if (cmd.equalsIgnoreCase("status")) {
             return result(status());
         } else if (cmd.equalsIgnoreCase("config")) {
@@ -476,6 +605,12 @@ public final class VSMKristinaService {
                     } else if (in.equals("stop")) {
                         // Stop the project
                         stop();
+                    } else if (in.equals("show")) {
+                        // Show the editor
+                        show();
+                    } else if (in.equals("hide")) {
+                        // Hide the editor
+                        hide();
                     } else if (in.equals("config")) {
                         // Get the config
                         sLogger.success(config());
