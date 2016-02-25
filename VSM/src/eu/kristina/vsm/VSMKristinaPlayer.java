@@ -9,6 +9,7 @@ import de.dfki.vsm.runtime.values.AbstractValue;
 import de.dfki.vsm.runtime.players.RunTimePlayer;
 import de.dfki.vsm.util.log.LOGDefaultLogger;
 import eu.kristina.vsm.rest.RESTFulResource;
+import eu.kristina.vsm.ssi.SSIEventFactory;
 import eu.kristina.vsm.ssi.SSIEventListener;
 import java.io.ByteArrayInputStream;
 import java.util.HashMap;
@@ -20,6 +21,7 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 import eu.kristina.vsm.ssi.SSIEventHandler;
+import eu.kristina.vsm.ssi.SSIEventNotifier;
 
 /**
  * @author Gregor Mehlmann
@@ -34,23 +36,19 @@ public final class VSMKristinaPlayer implements RunTimePlayer, SSIEventHandler {
     // The VSM runtime environment
     private final RunTimeInstance mRunTime
             = RunTimeInstance.getInstance();
-    // The  rest service urls
-    private final HashMap<String, RESTFulResource> mResourceMap = new HashMap();
     // The player's runtime project 
     private RunTimeProject mProject;
     // The project's specific config
     private PlayerConfig mPlayerConfig;
     // The project's specific name
     private String mPlayerName;
-    // The SSI socket handler
-    private String mSSISocketLocalHost;
-    private Integer mSSISocketLocalPort;
-    private String mSSISocketRemoteHost;
-    private Integer mSSISocketRemotePort;
-    private Boolean mSSISocketRemoteFlag;
-    private SSIEventListener mSSISocket;
+    // The SSI socket handlers
+    private SSIEventListener mSSIListener;
+    private SSIEventNotifier mSSINotifier;
     // The rest service client
     private RESTFulWebClient mRestClient;
+    // The  rest service urls
+    private final HashMap<String, RESTFulResource> mResourceMap = new HashMap();
     // A random number generator
     private final Random mRandom = new Random();
 
@@ -86,27 +84,45 @@ public final class VSMKristinaPlayer implements RunTimePlayer, SSIEventHandler {
             // Add the new service then
             mResourceMap.put(name, resource);
         }
-        // Get the SSI configuration
-        mSSISocketLocalHost = mPlayerConfig.getProperty("ssi.socket.local.host");
-        mSSISocketLocalPort = Integer.parseInt(mPlayerConfig.getProperty("ssi.socket.local.port"));
-        mSSISocketRemoteHost = mPlayerConfig.getProperty("ssi.socket.remote.host");
-        mSSISocketRemotePort = Integer.parseInt(mPlayerConfig.getProperty("ssi.socket.remote.port"));
-        mSSISocketRemoteFlag = Boolean.parseBoolean(mPlayerConfig.getProperty("ssi.socket.remote.flag"));
-
+        // Get SSI listener config
+        final String ssillhost = mPlayerConfig.getProperty("ssi.listener.local.host");
+        final String ssillport = mPlayerConfig.getProperty("ssi.listener.local.port");
+        final String ssilrhost = mPlayerConfig.getProperty("ssi.listener.remote.host");
+        final String ssilrport = mPlayerConfig.getProperty("ssi.listener.remote.port");
+        final String ssilrflag = mPlayerConfig.getProperty("ssi.listener.remote.flag");
         // Print some information
         mLogger.message(""
-                + "SSI Socket Handler Local Host  : '" + mSSISocketLocalHost + "'" + "\r\n"
-                + "SSI Socket Handler Local Port  : '" + mSSISocketLocalPort + "'" + "\r\n"
-                + "SSI Socket Handler Remote Host : '" + mSSISocketRemoteHost + "'" + "\r\n"
-                + "SSI Socket Handler Remote Port : '" + mSSISocketRemotePort + "'" + "\r\n"
-                + "SSI Socket Handler Remote Flag : '" + mSSISocketRemoteFlag + "'" + "\r\n");
+                + "SSI Listener Local Host  : '" + ssillhost + "'" + "\r\n"
+                + "SSI Listener Local Port  : '" + ssillport + "'" + "\r\n"
+                + "SSI Listener Remote Host : '" + ssilrhost + "'" + "\r\n"
+                + "SSI Listener Remote Port : '" + ssilrport + "'" + "\r\n"
+                + "SSI Listener Remote Flag : '" + ssilrflag + "'" + "\r\n");
+        // Get SSI notifoer config
+        final String ssinlhost = mPlayerConfig.getProperty("ssi.notifier.local.host");
+        final String ssinlport = mPlayerConfig.getProperty("ssi.notifier.local.port");
+        final String ssinrhost = mPlayerConfig.getProperty("ssi.notifier.remote.host");
+        final String ssinrport = mPlayerConfig.getProperty("ssi.notifier.remote.port");
+        final String ssinrflag = mPlayerConfig.getProperty("ssi.notifier.remote.flag");
+        // Print some information
+        mLogger.message(""
+                + "SSI Notifier Local Host  : '" + ssinlhost + "'" + "\r\n"
+                + "SSI Notifier Local Port  : '" + ssinlport + "'" + "\r\n"
+                + "SSI Notifier Remote Host : '" + ssinrhost + "'" + "\r\n"
+                + "SSI Notifier Remote Port : '" + ssinrport + "'" + "\r\n"
+                + "SSI Notifier Remote Flag : '" + ssinrflag + "'" + "\r\n");
 
-        // Initialize the SSI socket
-        mSSISocket = new SSIEventListener(this,
-                mSSISocketLocalHost, mSSISocketLocalPort,
-                mSSISocketRemoteHost, mSSISocketRemotePort,
-                mSSISocketRemoteFlag);
-        mSSISocket.start();
+        // Initialize the SSI listener
+        mSSIListener = new SSIEventListener(this,
+                ssillhost, Integer.parseInt(ssillport),
+                ssilrhost, Integer.parseInt(ssilrport),
+                Boolean.parseBoolean(ssilrflag));
+        mSSIListener.start();
+        // Initialize the SSI notifier
+        mSSINotifier = new SSIEventNotifier(this,
+                ssinlhost, Integer.parseInt(ssinlport),
+                ssinrhost, Integer.parseInt(ssinrport),
+                Boolean.parseBoolean(ssinrflag));
+        mSSINotifier.start();
         // Initialize the rest client
         mRestClient = new RESTFulWebClient();
         // Print some information
@@ -119,10 +135,12 @@ public final class VSMKristinaPlayer implements RunTimePlayer, SSIEventHandler {
     @Override
     public final boolean unload() {
         // Abort running handlers
-        mSSISocket.abort();
+        mSSIListener.abort();
+        mSSINotifier.abort();
         // Join with the handlers        
         try {
-            mSSISocket.join();
+            mSSIListener.join();
+            mSSINotifier.join();
         } catch (final InterruptedException exc) {
             mLogger.failure(exc.toString());
         }
@@ -130,6 +148,13 @@ public final class VSMKristinaPlayer implements RunTimePlayer, SSIEventHandler {
         mLogger.message("Unloading KRISTINA scene player '" + this + "' with configuration:\n" + mPlayerConfig);
         // Return true at success
         return true;
+    }
+
+    public final /*synchronized*/ void ssi(final String content) {
+        // Create the SSI event
+        final String event = SSIEventFactory.createEvent(content);
+        // Send the SSI event
+        mSSINotifier.sendString(event);
     }
 
     public final /*synchronized*/ String blink(final String id) {

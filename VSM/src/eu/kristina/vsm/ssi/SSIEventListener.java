@@ -105,6 +105,8 @@ public final class SSIEventListener extends Thread {
                 mHandler.handle(event);
             }
         }
+        // Print some information
+        mLogger.message("Aborting SSI event listener " + mLAddr + " " + mRAddr);
     }
 
     // Receive a sized byte array
