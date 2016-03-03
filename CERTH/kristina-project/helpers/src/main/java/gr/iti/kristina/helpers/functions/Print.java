@@ -21,35 +21,41 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package gr.iti.kristina.core.qa.signature;
+package gr.iti.kristina.helpers.functions;
 
-import gr.iti.kristina.core.state.State;
-import java.util.ArrayList;
-import java.util.List;
+import com.google.common.collect.Multimap;
+import java.util.Collection;
+import java.util.Set;
 import org.openrdf.model.URI;
-import org.openrdf.repository.RepositoryConnection;
 
 /**
  *
  * @author gmeditsk
  */
-public class SignatureExtractor {
+public class Print {
 
-    State state;
-    List<String> coreConcepts;
-
-    public SignatureExtractor(State state) {
-        this.state = state;
-        this.coreConcepts = new ArrayList<>();
-        start();
+    public static <K, V> void printMap(Multimap<K, V> source) {
+        Set<K> keys = source.keySet();
+        for (K key : keys) {
+            Collection<V> value = source.get(key);
+            System.out.printf(" - %-30s %s \n", key instanceof URI ? ((URI) key).getLocalName()
+                    : key,
+                    flattenCollection(value));
+        }
     }
 
-    public void extractCoreConcepts() {
+    public static String flattenCollection(Collection col) {
+        String result = "[\n";
+        for (Object object : col) {
+            if (object instanceof URI) {
+                result += ((URI) object).getLocalName() + ", \n ";
+            } else {
+                result += object + ", \n";
+            }
+        }
+        result += "]";
+        return result;
     }
-
-    private void start() {
-        extractCoreConcepts();
-    }
-
-
+    
+    
 }

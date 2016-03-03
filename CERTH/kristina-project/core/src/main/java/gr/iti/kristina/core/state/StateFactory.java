@@ -41,14 +41,14 @@ public class StateFactory {
 
     static Logger logger = LoggerFactory.getLogger(StateFactory.class);
     private static State _state;
-    
+
     private StateFactory() {
     }
 
-    public static State newInstance(String serverUrl, String username, String password) throws FileNotFoundException, IOException, RepositoryException, RDFParseException, GraphUtilException, RepositoryConfigException, RDFHandlerException {
+    public static State newInstance(String serverUrl, String username, String password, boolean reload) throws FileNotFoundException, IOException, RepositoryException, RDFParseException, GraphUtilException, RepositoryConfigException, RDFHandlerException {
         if (_state == null) {
             _state = new State();
-            _state.initialisation(serverUrl, username, password);
+            _state.initialisation(serverUrl, username, password, reload);
         }
         return _state;
     }

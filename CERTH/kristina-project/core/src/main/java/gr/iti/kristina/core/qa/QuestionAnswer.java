@@ -23,8 +23,19 @@
  */
 package gr.iti.kristina.core.qa;
 
-import gr.iti.kristina.core.qa.signature.SignatureExtractor;
+import com.google.common.collect.Multimap;
+import gr.iti.kristina.core.qa.rules.ContextCluster;
 import gr.iti.kristina.core.state.State;
+import gr.iti.kristina.helpers.functions.Print;
+import gr.iti.kristina.helpers.repository.GraphDbRepositoryManager;
+import java.util.HashSet;
+import org.openrdf.query.MalformedQueryException;
+import org.openrdf.query.QueryEvaluationException;
+import org.openrdf.repository.RepositoryConnection;
+import org.openrdf.repository.RepositoryException;
+import org.openrdf.repository.config.RepositoryConfigException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  *
@@ -34,21 +45,113 @@ public class QuestionAnswer {
 
     State state;
 
-    public QuestionAnswer(State state) {
+    GraphDbRepositoryManager manager;
+    RepositoryConnection kbConnection;
+
+    final String serverUrl = "http://localhost:8084/graphdb-workbench-free",
+            username = "kristina", password = "samiam#2";
+    final String repositoryId = "kb";
+
+    static Logger logger = LoggerFactory.getLogger(QuestionAnswer.class);
+
+    public QuestionAnswer(State state) throws RepositoryConfigException, RepositoryException {
         this.state = state;
+        manager = new GraphDbRepositoryManager(serverUrl, username, password);
+        kbConnection = manager.getRepository(repositoryId).getConnection();
     }
 
-    public void start() {
-        signatureExtraction();
-        disambiguation();
-       
+    public void start() throws RepositoryConfigException, RepositoryException {
+        try {
+            //HashSet<Signature> concepts = conceptExtraction();
+            HashSet<Signature> concepts  = fakeConceptsFrequency();
+            Multimap<Signature, String> mappings = domainMapping(concepts);
+            HashSet<ContextCluster> contextClusters = buildContexts(mappings);
+        } catch (MalformedQueryException | QueryEvaluationException ex) {
+            logger.error("", ex);
+        } finally {
+            if (kbConnection != null) {
+                kbConnection.close();
+                manager.shutDown("QuestionAnswer::");
+            }
+        }
+
     }
 
-    private void signatureExtraction() {
-        SignatureExtractor sigExtractor = new SignatureExtractor(state);
+    private HashSet<Signature> conceptExtraction() {
+        ConceptExtractor conceptExtractor = new ConceptExtractor(state);
+        HashSet<Signature> concepts = conceptExtractor.getConcepts();
+        //System.out.println(Print.flattenCollection(concepts));
+        return concepts;
     }
 
-    private void disambiguation() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+//    private void disambiguation() {
+//        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+//    }
+    private Multimap<Signature, String> domainMapping(HashSet<Signature> concepts) throws RepositoryConfigException, RepositoryException, MalformedQueryException, QueryEvaluationException {
+        DomainMapping match = new DomainMapping(concepts, state, kbConnection);
+        match.start();
+        return match.getMappings();
+    }
+
+    private HashSet<ContextCluster> buildContexts(Multimap<Signature, String> mappings) throws MalformedQueryException, RepositoryException, QueryEvaluationException {
+        ContextBuilder ctx = new ContextBuilder(mappings, state, kbConnection);
+        ctx.start();
+        HashSet<ContextCluster> contextClusters = ctx.getContextClusters();
+        System.out.println(contextClusters);
+        return contextClusters;
+    }
+
+    private HashSet<Signature> fakeConceptsSpouse() {
+        HashSet<Signature> result = new HashSet<>();
+        
+        Signature s1 = new Signature();
+        s1.label = "Natural Person";
+        s1.uri = "http://www.loa-cnr.it/ontologies/DUL.owl#NaturalPerson";
+        s1.localName = "NaturalPerson";
+        
+        Signature s2 = new Signature();
+        s2.label = "Name";
+        s2.uri = "http://www.loa-cnr.it/ontologies/DUL.owl#Name";
+        s2.localName = "Name";
+        
+        Signature s3 = new Signature();
+        s3.label = "spouse";
+        s3.uri = "http://www.loa-cnr.it/ontologies/DUL.owl#Spouse";
+        s3.localName = "Spouse";
+        
+        result.add(s3);
+        result.add(s2);
+        result.add(s1);
+            
+        
+        
+        return result;
+    }
+    
+    private HashSet<Signature> fakeConceptsFrequency() {
+        HashSet<Signature> result = new HashSet<>();
+        
+        Signature s1 = new Signature();
+        s1.label = "drink";
+        s1.uri = "http://kristina-project.eu/ontologies/entities#Drink";
+        s1.localName = "drink";
+        
+        Signature s2 = new Signature();
+        s2.label = "Water";
+        s2.uri = "http://kristina-project.eu/ontologies/entities#Water";
+        s2.localName = "Water";
+//        
+//        Signature s3 = new Signature();
+//        s3.label = "spouse";
+//        s3.uri = "http://www.loa-cnr.it/ontologies/DUL.owl#Spouse";
+//        s3.localName = "Spouse";
+//        
+//        result.add(s3);
+        result.add(s2);
+        result.add(s1);
+            
+        
+        
+        return result;
     }
 }

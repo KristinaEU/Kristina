@@ -12,9 +12,16 @@
         <module>api</module>
         <module>core</module>
         <module>helpers</module>
+        <module>sparql-functions</module>
     </modules>
   
     <dependencies>
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>19.0</version>
+            <type>jar</type>
+        </dependency>
         <dependency>
             <groupId>org.apache.jena</groupId>
             <artifactId>jena-core</artifactId>

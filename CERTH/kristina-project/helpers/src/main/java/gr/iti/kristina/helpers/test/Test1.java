@@ -37,6 +37,6 @@ public class Test1 {
         GraphDbRepositoryManager manager = new GraphDbRepositoryManager("http://localhost:8084/graphdb-workbench-free", "kristina", "samiam#2");
         Repository r = manager.getRepository("test");
         System.out.println(r.getConnection().getStatements(null, null, null, true).asList().size());
-        manager.shutDown();
+        manager.shutDown("Test1::");
     }
 }

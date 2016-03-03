@@ -54,7 +54,8 @@ public class GraphDbRepositoryManager {
     public Repository getRepository(String id) throws RepositoryConfigException, RepositoryException{
         return _manager.getRepository(id);
     }
-    public void shutDown() {
+    public void shutDown(String CONTEXT) {
+        logger.debug("closing GraphDb manager ["+ CONTEXT + "]");
         if (_manager != null) {
             try {
                 _manager.shutDown();

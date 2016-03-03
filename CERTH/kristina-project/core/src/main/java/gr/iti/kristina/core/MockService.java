@@ -24,8 +24,8 @@
 package gr.iti.kristina.core;
 
 import gr.iti.kristina.core.qa.QuestionAnswer;
-import gr.iti.kristina.core.state.StateFactory;
 import gr.iti.kristina.core.state.State;
+import gr.iti.kristina.core.state.StateFactory;
 import gr.iti.kristina.helpers.files.FileHelper;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -50,23 +50,33 @@ public class MockService {
 
     static Logger logger = LoggerFactory.getLogger(MockService.class);
 
-    public MockService() throws FileNotFoundException {
+    public MockService(boolean reloadStateRepository) throws FileNotFoundException {
         try {
-            state = StateFactory.newInstance(serverUrl, username, password);
+            state = StateFactory.newInstance(serverUrl, username, password, reloadStateRepository);
         } catch (IOException | RepositoryException | RDFParseException | GraphUtilException | RepositoryConfigException | RDFHandlerException ex) {
             logger.error("", ex);
+            if (state != null) {
+                state.close();
+            }
         }
     }
 
-    public void updateState(String frameSituations) throws IOException {
+    public void updateState(String frameSituations) throws RepositoryConfigException, RepositoryException {
         state.updateState(frameSituations);
         QuestionAnswer qa = new QuestionAnswer(state);
         qa.start();
     }
 
-    public static void main(String[] args) throws FileNotFoundException, IOException {
-        MockService mockService = new MockService();
+    public static void main(String[] args) throws FileNotFoundException, IOException, RepositoryConfigException, RepositoryException {
+        MockService mockService = new MockService(false);
         mockService.updateState(FileHelper.readFile("C:/Users/gmeditsk/Dropbox/iti.private/Kristina/ontologies/examples/inform.ttl", Charset.forName("utf-8")));
+        mockService.shutDown();
+    }
+
+    private void shutDown() {
+        if (state != null) {
+            state.close();
+        }
     }
 
 }

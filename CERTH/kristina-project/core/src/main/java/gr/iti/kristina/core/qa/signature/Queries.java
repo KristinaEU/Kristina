@@ -37,7 +37,7 @@ public class Queries {
     public static String SignatureExtractor_GetAllFrames(String context) throws IOException {
         return FileHelper.readFile(Queries.class, path + "GetAllFrames.sparql");
     }
-    
+
     public static void main(String[] args) throws IOException {
         System.out.println(Queries.SignatureExtractor_GetAllFrames(path));
     }

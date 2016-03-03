@@ -24,21 +24,16 @@
 package gr.iti.kristina.core.state;
 
 import com.hp.hpl.jena.ontology.OntClass;
-import com.hp.hpl.jena.ontology.OntDocumentManager;
 import com.hp.hpl.jena.ontology.OntModel;
-import com.hp.hpl.jena.ontology.OntModelSpec;
 import com.hp.hpl.jena.ontology.OntResource;
-import com.hp.hpl.jena.rdf.model.Model;
-import com.hp.hpl.jena.rdf.model.ModelFactory;
 import com.hp.hpl.jena.util.iterator.ExtendedIterator;
-import com.ontotext.jena.SesameDataset;
 import gr.iti.kristina.helpers.repository.GraphDbRepositoryManager;
+import gr.iti.kristina.helpers.repository.JenaWrapper;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.StringReader;
-import java.util.logging.Level;
 import org.openrdf.model.util.GraphUtilException;
 import org.openrdf.repository.Repository;
 import org.openrdf.repository.RepositoryConnection;
@@ -63,15 +58,14 @@ public class State {
     Repository stateRepository;
     RepositoryConnection stateConnection;
 
-    //jena
-    SesameDataset dataset;
-    Model stateModel;
-    OntModel stateOntModel;
+    //jena wrapper
+    JenaWrapper jenaWrapper;
 
     State() {
     }
 
     private void loadDefaultStateOntologies() throws FileNotFoundException, IOException, RDFParseException, RepositoryException {
+        stateConnection.clear();
         stateConnection.begin();
         try (InputStream reader = new FileInputStream("C:/Users/gmeditsk/Dropbox/iti.private/Kristina/ontologies/imports/dul.rdf")) {
             stateConnection.add(reader, "urn:base", RDFFormat.RDFXML);
@@ -82,21 +76,18 @@ public class State {
         stateConnection.commit();
     }
 
-    public void initialisation(String serverUrl, String username, String password) throws FileNotFoundException, IOException, RepositoryException, RDFParseException, GraphUtilException, RepositoryConfigException, RDFHandlerException {
+    public void initialisation(String serverUrl, String username, String password, boolean reload) throws FileNotFoundException, IOException, RepositoryException, RDFParseException, GraphUtilException, RepositoryConfigException, RDFHandlerException {
         manager = new GraphDbRepositoryManager(serverUrl, username, password);
         stateConnection = manager.getRepository("state").getConnection();
-        stateConnection.clear();
-        loadDefaultStateOntologies();
-        OntDocumentManager m = new OntDocumentManager();
-        m.setProcessImports(false);
-        OntModelSpec s = new OntModelSpec(OntModelSpec.OWL_DL_MEM);
-        s.setDocumentManager(m);
-        dataset = new SesameDataset(stateConnection);
-        stateModel = ModelFactory.createModelForGraph(dataset.getDefaultGraph());
-        stateOntModel = ModelFactory.createOntologyModel(s, stateModel);
+        if (reload) {
+            loadDefaultStateOntologies();
+        }
+
+        jenaWrapper = new JenaWrapper(stateConnection);
     }
 
     public void updateState(String frameSituations) {
+        OntModel stateOntModel = jenaWrapper.getStateOntModel();
         stateOntModel.read(new StringReader(frameSituations), "", "TURTLE");
         stateOntModel.commit();
         OntClass c = stateOntModel.getOntClass("http://www.loa-cnr.it/ontologies/DUL.owl#Situation");
@@ -113,14 +104,19 @@ public class State {
     }
 
     public OntModel getStateOntModel() {
-        return stateOntModel;
+        return jenaWrapper.getStateOntModel();
     }
-    
-    public void close(){
+
+    public RepositoryConnection getStateConnection() {
+        return stateConnection;
+    }
+
+    public void close() {
         try {
             stateConnection.close();
-            stateRepository.shutDown();
-            manager.shutDown();
+//            jenaWrapper.close();
+//            stateRepository.shutDown();
+            manager.shutDown("State::");
         } catch (RepositoryException ex) {
             logger.debug("", ex);
         }

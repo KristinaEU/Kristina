@@ -28,5 +28,5 @@ package gr.iti.kristina.core.qa.signature;
  * @author gmeditsk
  */
 public class Relation {
-    
+
 }

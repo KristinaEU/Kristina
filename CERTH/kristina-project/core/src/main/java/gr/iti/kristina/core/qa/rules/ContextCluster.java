@@ -21,59 +21,46 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package gr.iti.kristina.core.irmapper.model;
+package gr.iti.kristina.core.qa.rules;
 
+import gr.iti.kristina.core.qa.Triple;
+import gr.iti.kristina.helpers.functions.Print;
 import java.io.Serializable;
+import java.util.HashSet;
 import java.util.Objects;
 
 /**
  *
  * @author gmeditsk
  */
-public class Triple implements Serializable {
+public class ContextCluster implements Serializable {
 
-    private ExResource subject, object;
-    private String predicate;
+    HashSet<Triple> triples;
 
-    public Triple() {
+    public ContextCluster() {
+        triples = new HashSet<>();
+    }
+    
+    public void add(Triple t){
+        triples.add(t);
+    }
+    
+    public void addAll(HashSet<Triple> triples){
+        this.triples.addAll(triples);
     }
 
-    public Triple(ExResource subject, String predicate, ExResource object) {
-        this.subject = subject;
-        this.object = object;
-        this.predicate = predicate;
+    public HashSet<Triple> getTriples() {
+        return triples;
     }
 
-    public ExResource getSubject() {
-        return subject;
-    }
-
-    public void setSubject(ExResource subject) {
-        this.subject = subject;
-    }
-
-    public ExResource getObject() {
-        return object;
-    }
-
-    public void setObject(ExResource object) {
-        this.object = object;
-    }
-
-    public String getPredicate() {
-        return predicate;
-    }
-
-    public void setPredicate(String predicate) {
-        this.predicate = predicate;
+    public void setTriples(HashSet<Triple> triples) {
+        this.triples = triples;
     }
 
     @Override
     public int hashCode() {
-        int hash = 5;
-        hash = 61 * hash + Objects.hashCode(this.subject);
-        hash = 61 * hash + Objects.hashCode(this.object);
-        hash = 61 * hash + Objects.hashCode(this.predicate);
+        int hash = 3;
+        hash = 71 * hash + Objects.hashCode(this.triples);
         return hash;
     }
 
@@ -88,14 +75,8 @@ public class Triple implements Serializable {
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final Triple other = (Triple) obj;
-        if (!Objects.equals(this.predicate, other.predicate)) {
-            return false;
-        }
-        if (!Objects.equals(this.subject, other.subject)) {
-            return false;
-        }
-        if (!Objects.equals(this.object, other.object)) {
+        final ContextCluster other = (ContextCluster) obj;
+        if (!Objects.equals(this.triples, other.triples)) {
             return false;
         }
         return true;
@@ -103,7 +84,13 @@ public class Triple implements Serializable {
 
     @Override
     public String toString() {
-        return "Triple{" + "subject=" + subject + ", predicate=" + predicate + ", object=" + object + '}';
+        return "ContextCluster{" + "triples=" + Print.flattenCollection(triples) + '}';
     }
+    
+    
+    
+    
+    
+    
 
 }

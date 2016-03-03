@@ -15,12 +15,7 @@
             <artifactId>drools-compiler</artifactId>
             <version>6.3.0.Final</version>
         </dependency>
-        <dependency>
-            <groupId>com.google.guava</groupId>
-            <artifactId>guava</artifactId>
-            <version>19.0</version>
-            <type>jar</type>
-        </dependency>
+        
         <dependency>
             <groupId>org.kie</groupId>
             <artifactId>kie-api</artifactId>

@@ -21,7 +21,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package gr.iti.kristina.core.irmapper.model;
+package gr.iti.kristina.core.qa;
 
 import java.io.Serializable;
 import java.util.Objects;
@@ -30,50 +30,32 @@ import java.util.Objects;
  *
  * @author gmeditsk
  */
-public class Triple implements Serializable {
+public class Triple implements Serializable, Comparable<Triple> {
 
-    private ExResource subject, object;
-    private String predicate;
+    String s, p, o;
 
-    public Triple() {
+    public Triple(String s, String p, String o) {
+        this.s = s;
+        this.p = p;
+        this.o = o;
     }
 
-    public Triple(ExResource subject, String predicate, ExResource object) {
-        this.subject = subject;
-        this.object = object;
-        this.predicate = predicate;
+    @Override
+    public String toString() {
+        return "Triple{" + "s=" + s + ", p=" + p + ", o=" + o + '}';
     }
 
-    public ExResource getSubject() {
-        return subject;
-    }
-
-    public void setSubject(ExResource subject) {
-        this.subject = subject;
-    }
-
-    public ExResource getObject() {
-        return object;
-    }
-
-    public void setObject(ExResource object) {
-        this.object = object;
-    }
-
-    public String getPredicate() {
-        return predicate;
-    }
-
-    public void setPredicate(String predicate) {
-        this.predicate = predicate;
+    @Override
+    public int compareTo(Triple o) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
     public int hashCode() {
         int hash = 5;
-        hash = 61 * hash + Objects.hashCode(this.subject);
-        hash = 61 * hash + Objects.hashCode(this.object);
-        hash = 61 * hash + Objects.hashCode(this.predicate);
+        hash = 59 * hash + Objects.hashCode(this.s);
+        hash = 59 * hash + Objects.hashCode(this.p);
+        hash = 59 * hash + Objects.hashCode(this.o);
         return hash;
     }
 
@@ -89,21 +71,20 @@ public class Triple implements Serializable {
             return false;
         }
         final Triple other = (Triple) obj;
-        if (!Objects.equals(this.predicate, other.predicate)) {
+        if (!Objects.equals(this.s, other.s)) {
             return false;
         }
-        if (!Objects.equals(this.subject, other.subject)) {
+        if (!Objects.equals(this.p, other.p)) {
             return false;
         }
-        if (!Objects.equals(this.object, other.object)) {
+        if (!Objects.equals(this.o, other.o)) {
             return false;
         }
         return true;
     }
-
-    @Override
-    public String toString() {
-        return "Triple{" + "subject=" + subject + ", predicate=" + predicate + ", object=" + object + '}';
-    }
+    
+    
+    
+    
 
 }

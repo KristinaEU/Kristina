@@ -117,7 +117,7 @@ public class ContextUpdateResource {
         String result = createResponse();
         connection.close();
         repository.shutDown();
-        manager.shutDown();
+        manager.shutDown("ContextUpdateResource::");
         return result;
     }
 

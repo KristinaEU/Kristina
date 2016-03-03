@@ -21,52 +21,37 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package gr.iti.kristina.core.qa.signature;
+package gr.iti.kristina.core.qa.rules;
 
-import java.util.List;
+import java.io.Serializable;
 
 /**
  *
  * @author gmeditsk
  */
-public class ClassifiedResourceContext {
+public class Dependency implements Serializable {
 
-    private String uri;
-    //all the labels of the superclasses
-    private List<String> labels;
-    //all relevant synsets
-    private List<String> synsets;
+    String key1, key2;
 
-    public ClassifiedResourceContext() {
+    public Dependency(String key1, String key2) {
+        this.key1 = key1;
+        this.key2 = key2;
     }
 
-    @Override
-    public String toString() {
-        return "ClassifiedResource{" + "uri=" + uri + '}';
+    public String getKey1() {
+        return key1;
     }
 
-    public String getUri() {
-        return uri;
+    public void setKey1(String key1) {
+        this.key1 = key1;
     }
 
-    public void setUri(String uri) {
-        this.uri = uri;
+    public String getKey2() {
+        return key2;
     }
 
-    public List<String> getLabels() {
-        return labels;
-    }
-
-    public void setLabels(List<String> labels) {
-        this.labels = labels;
-    }
-
-    public List<String> getSynsets() {
-        return synsets;
-    }
-
-    public void setSynsets(List<String> synsets) {
-        this.synsets = synsets;
+    public void setKey2(String key2) {
+        this.key2 = key2;
     }
 
 }
