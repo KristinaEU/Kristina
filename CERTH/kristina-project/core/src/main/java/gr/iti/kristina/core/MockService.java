@@ -64,12 +64,12 @@ public class MockService {
     public void updateState(String frameSituations) throws RepositoryConfigException, RepositoryException {
         state.updateState(frameSituations);
         QuestionAnswer qa = new QuestionAnswer(state);
-        qa.start();
+        qa.demo();
     }
 
     public static void main(String[] args) throws FileNotFoundException, IOException, RepositoryConfigException, RepositoryException {
         MockService mockService = new MockService(false);
-        mockService.updateState(FileHelper.readFile("C:/Users/gmeditsk/Dropbox/iti.private/Kristina/ontologies/examples/inform.ttl", Charset.forName("utf-8")));
+        mockService.updateState(FileHelper.readFile("C:/Users/gmeditsk/Dropbox/iti.private/Kristina/ontologies/review2016-demo/example1.ttl", Charset.forName("utf-8")));
         mockService.shutDown();
     }
 

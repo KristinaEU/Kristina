@@ -24,10 +24,12 @@
 package gr.iti.kristina.core.qa;
 
 import com.google.common.collect.Multimap;
+import com.hp.hpl.jena.ontology.OntModel;
 import gr.iti.kristina.core.qa.rules.ContextCluster;
 import gr.iti.kristina.core.state.State;
 import gr.iti.kristina.helpers.functions.Print;
 import gr.iti.kristina.helpers.repository.GraphDbRepositoryManager;
+import gr.iti.kristina.helpers.repository.JenaWrapper;
 import java.util.HashSet;
 import org.openrdf.query.MalformedQueryException;
 import org.openrdf.query.QueryEvaluationException;
@@ -153,5 +155,18 @@ public class QuestionAnswer {
         
         
         return result;
+    }
+
+    
+    /**
+     * demo method
+     */
+    public void demo() {
+        JenaWrapper jenaWrapper  = new JenaWrapper(state.getStateConnection());
+        OntModel stateOntModel = jenaWrapper.getStateOntModel();
+        
+        System.out.println(stateOntModel.listStatements().toList().size());
+        
+        
     }
 }
