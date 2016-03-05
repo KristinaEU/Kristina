@@ -13,7 +13,8 @@
         <module>core</module>
         <module>helpers</module>
         <module>sparql-functions</module>
-    </modules>
+    <module>demo-service</module>
+  </modules>
   
     <dependencies>
         <dependency>

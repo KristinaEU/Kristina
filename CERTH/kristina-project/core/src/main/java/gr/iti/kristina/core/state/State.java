@@ -23,18 +23,29 @@
  */
 package gr.iti.kristina.core.state;
 
+import com.google.common.collect.LinkedListMultimap;
+import com.google.common.collect.Multimap;
 import com.hp.hpl.jena.ontology.OntClass;
 import com.hp.hpl.jena.ontology.OntModel;
+import com.hp.hpl.jena.ontology.OntProperty;
 import com.hp.hpl.jena.ontology.OntResource;
+import com.hp.hpl.jena.rdf.model.Literal;
 import com.hp.hpl.jena.util.iterator.ExtendedIterator;
 import gr.iti.kristina.helpers.repository.GraphDbRepositoryManager;
 import gr.iti.kristina.helpers.repository.JenaWrapper;
+import gr.iti.kristina.helpers.repository.utils.QueryUtil;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.StringReader;
+import java.util.Calendar;
+import org.openrdf.model.URI;
 import org.openrdf.model.util.GraphUtilException;
+import org.openrdf.query.BindingSet;
+import org.openrdf.query.MalformedQueryException;
+import org.openrdf.query.QueryEvaluationException;
+import org.openrdf.query.TupleQueryResult;
 import org.openrdf.repository.Repository;
 import org.openrdf.repository.RepositoryConnection;
 import org.openrdf.repository.RepositoryException;
@@ -86,16 +97,24 @@ public class State {
         jenaWrapper = new JenaWrapper(stateConnection);
     }
 
-    public void updateState(String frameSituations) {
+    public String updateState(String frameSituations) {
         OntModel stateOntModel = jenaWrapper.getStateOntModel();
         stateOntModel.read(new StringReader(frameSituations), "", "TURTLE");
         stateOntModel.commit();
         OntClass c = stateOntModel.getOntClass("http://www.loa-cnr.it/ontologies/DUL.owl#Situation");
-        System.out.println(stateOntModel.size());
+        OntProperty timestamp = stateOntModel.createDatatypeProperty("http://www.w3.org/2006/time#inXSDDateTime");
         ExtendedIterator<? extends OntResource> listInstances = c.listInstances();
+        Calendar now = Calendar.getInstance();
+        Literal nowL = stateOntModel.createTypedLiteral(now);
         while (listInstances.hasNext()) {
-            System.out.println(listInstances.next());
+            OntResource next = listInstances.next();
+            if (!next.hasProperty(timestamp)) {
+                next.addLiteral(timestamp, nowL);
+            }
         }
+        stateOntModel.commit();
+        String logMessage = "State has been updated";
+        return logMessage;
     }
 
     public void clearState() throws RepositoryException, IOException, FileNotFoundException, RDFParseException {
@@ -120,6 +139,45 @@ public class State {
         } catch (RepositoryException ex) {
             logger.debug("", ex);
         }
+    }
+
+    public Multimap<String, String> getContextHistory(int recentItems) throws MalformedQueryException, RepositoryException, QueryEvaluationException {
+        Multimap<String, String> multimap = LinkedListMultimap.create();
+        if (recentItems == 0) {
+            recentItems = 999999;
+        }
+
+        String q = "PREFIX schema: <http://kristina-project.eu/demo/schema#>\n"
+                + "PREFIX DUL: <http://www.loa-cnr.it/ontologies/DUL.owl#>\n"
+                + "PREFIX time: <http://www.w3.org/2006/time#>\n"
+                + "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n"
+                + "PREFIX owl: <http://www.w3.org/2002/07/owl#>\n"
+                + "\n"
+                + "select ?directClass ?timestamp where { \n"
+                + "	?resource a DUL:Situation;\n"
+                + "        time:inXSDDateTime ?timestamp .\n"
+                + "    ?resource a ?directClass . \n"
+                + "   	FILTER (!isBlank(?directClass)) . \n"
+                + "    FILTER (?directClass != owl:NamedIndividual && CONTAINS(str(?directClass), \"http://kristina-project.eu/demo/schema#\")) .\n"
+                + "    FILTER NOT EXISTS {\n"
+                + "		?temp rdfs:subClassOf owl:Thing . \n"
+                + "		FILTER (((?temp != owl:Thing) && (?temp != ?directClass)) && (!isBlank(?temp))) . \n"
+                + "        ?resource a ?temp . \n"
+                + "        ?temp rdfs:subClassOf ?directClass . \n"
+                + "    }\n"
+                + "} ORDER BY DESC(?timestamp) LIMIT " + recentItems;
+
+        TupleQueryResult result = QueryUtil.evaluateSelectQuery(stateConnection, q);
+        while (result.hasNext()) {
+            BindingSet bindingSet = result.next();
+            //URI resource = (URI) bindingSet.getBinding("resource").getValue();
+            URI directClass = (URI) bindingSet.getBinding("directClass").getValue();
+            String timestamp = bindingSet.getBinding("timestamp").getValue().stringValue();
+            //multimap.put(timestamp, resource.getLocalName());
+            multimap.put(timestamp, directClass.getLocalName());
+        }
+        result.close();
+        return multimap;
     }
 
 }

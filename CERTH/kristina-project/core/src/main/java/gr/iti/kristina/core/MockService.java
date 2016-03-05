@@ -23,6 +23,7 @@
  */
 package gr.iti.kristina.core;
 
+import com.google.common.collect.Multimap;
 import gr.iti.kristina.core.qa.QuestionAnswer;
 import gr.iti.kristina.core.state.State;
 import gr.iti.kristina.core.state.StateFactory;
@@ -31,6 +32,8 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.nio.charset.Charset;
 import org.openrdf.model.util.GraphUtilException;
+import org.openrdf.query.MalformedQueryException;
+import org.openrdf.query.QueryEvaluationException;
 import org.openrdf.repository.RepositoryException;
 import org.openrdf.repository.config.RepositoryConfigException;
 import org.openrdf.rio.RDFHandlerException;
@@ -51,6 +54,7 @@ public class MockService {
     static Logger logger = LoggerFactory.getLogger(MockService.class);
 
     public MockService(boolean reloadStateRepository) throws FileNotFoundException {
+        logger.debug("Creating MockService");
         try {
             state = StateFactory.newInstance(serverUrl, username, password, reloadStateRepository);
         } catch (IOException | RepositoryException | RDFParseException | GraphUtilException | RepositoryConfigException | RDFHandlerException ex) {
@@ -61,15 +65,32 @@ public class MockService {
         }
     }
 
-    public void updateState(String frameSituations) throws RepositoryConfigException, RepositoryException {
-        state.updateState(frameSituations);
-        QuestionAnswer qa = new QuestionAnswer(state);
-        qa.demo();
+    public String updateState(String frameSituations) {
+        return state.updateState(frameSituations);
     }
 
-    public static void main(String[] args) throws FileNotFoundException, IOException, RepositoryConfigException, RepositoryException {
+    public Multimap<String, String> getContextHistory(int recentItems) {
+        try {
+            return state.getContextHistory(recentItems);
+        } catch (MalformedQueryException | RepositoryException | QueryEvaluationException ex) {
+            logger.error("", ex);
+        }
+        return null;
+    }
+
+    public String startQA() throws RepositoryConfigException, RepositoryException, MalformedQueryException, QueryEvaluationException {
+        QuestionAnswer qa = new QuestionAnswer(state);
+        return qa.demo();
+    }
+
+    public static void main(String[] args) throws FileNotFoundException, IOException, RepositoryConfigException, RepositoryException, MalformedQueryException, QueryEvaluationException {
         MockService mockService = new MockService(false);
-        mockService.updateState(FileHelper.readFile("C:/Users/gmeditsk/Dropbox/iti.private/Kristina/ontologies/review2016-demo/example1.ttl", Charset.forName("utf-8")));
+        String updateStateLog = mockService.updateState(FileHelper.readFile("C:/Users/gmeditsk/Dropbox/iti.private/Kristina/ontologies/review2016-demo/example1.ttl", Charset.forName("utf-8")));
+        String startQALog = mockService.startQA();
+        //Multimap<String, String> contextStatus = mockService.getContextStatus(0);
+        //Print.printMap(contextStatus);
+        System.out.println(updateStateLog);
+        System.out.println(startQALog);
         mockService.shutDown();
     }
 
