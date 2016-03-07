@@ -69,7 +69,7 @@ public class MockService {
     }
 
     public String updateState(String frameSituations) throws RepositoryException, UnsupportedEncodingException {
-        logger.debug(frameSituations);
+        //logger.debug(frameSituations);
         return state.updateState(frameSituations);
     }
 

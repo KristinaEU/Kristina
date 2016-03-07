@@ -113,6 +113,7 @@ public class State {
         org.openrdf.model.Literal nowL = vf.createLiteral(new Date());
         stateConnection.begin();
         while (statements.hasNext()) {
+            System.out.println("in");
             Statement statement = statements.next();
             if (!stateConnection.hasStatement(statement.getSubject(), timestamp, null, true)) {
                 stateConnection.add(statement.getSubject(), timestamp, nowL);
@@ -122,6 +123,7 @@ public class State {
                 stateConnection.add(statement.getSubject(), current, f);
             }
         }
+        statements.close();
         
         stateConnection.commit();
         logger.debug("state has been updated");

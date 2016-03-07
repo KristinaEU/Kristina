@@ -29,6 +29,7 @@ public class ApplicationConfig extends Application {
      * If required, comment out calling this method in getClasses().
      */
     private void addRestResourceClasses(Set<Class<?>> resources) {
+        resources.add(gr.iti.kristina.demo.service.AccessControlResponseFilter.class);
         resources.add(gr.iti.kristina.demo.service.Api.class);
     }
     
