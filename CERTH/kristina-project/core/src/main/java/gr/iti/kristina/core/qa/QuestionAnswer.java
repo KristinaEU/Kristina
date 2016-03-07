@@ -179,20 +179,19 @@ public class QuestionAnswer {
     }
 
     public String demo() throws MalformedQueryException, RepositoryException, QueryEvaluationException {
-        Map.Entry<String, Collection<String>> currentContext = state.getContextHistory(1).asMap().entrySet().iterator().next();
+        Map.Entry<String, Collection<String>> currentContext = state.getContextHistory(0).asMap().entrySet().iterator().next();
 
-        JenaWrapper jenaWrapper = new JenaWrapper(state.getStateConnection());
-        OntModel stateOntModel = jenaWrapper.getStateOntModel();
-
+//        JenaWrapper jenaWrapper = new JenaWrapper(state.getStateConnection());
+//        OntModel stateOntModel = jenaWrapper.getStateOntModel();
         SPINModuleRegistry.get().init();
 
-        Model newTriples = ModelFactory.createDefaultModel(ReificationStyle.Minimal);
-        stateOntModel.addSubModel(newTriples);
-
+//        Model newTriples = ModelFactory.createDefaultModel(ReificationStyle.Minimal);
+//        stateOntModel.addSubModel(newTriples);
         OntModel rulesModel = loadModelWithImports("C:/Users/gmeditsk/Dropbox/iti.private/Kristina/ontologies/review2016-demo/rules.ttl");
         Map<CommandWrapper, Map<String, RDFNode>> initialTemplateBindings = new HashMap<>();
         Map<Resource, List<CommandWrapper>> cls2Query = SPINQueryFinder.getClass2QueryMap(rulesModel, rulesModel, SPIN.rule, true, initialTemplateBindings, false);
 
+        System.out.println(currentContext);
         Set<Resource> keySet = cls2Query.keySet();
         String logMessage = "";
         for (Resource k : keySet) {
@@ -200,20 +199,24 @@ public class QuestionAnswer {
             if (!currentContext.getValue().contains(cl.getLocalName())) {
                 continue;
             }
-            CommandWrapper q = cls2Query.get(k).get(0);
-            Query prepareQuery = QueryUtil.prepareQuery(state.getStateConnection(), q.getText());
-            if (prepareQuery instanceof GraphQuery) {
-                GraphQueryResult result = QueryUtil.evaluateConstructQuery(state.getStateConnection(), q.getText());
-                kbConnection.begin();
-                while (result.hasNext()) {
-                    Statement statement = result.next();
-                    kbConnection.remove(statement.getSubject(), statement.getPredicate(), null);
-                    kbConnection.add(statement);
-                    logMessage += "KB will be updated with: " + statement;
+            System.out.println(cl.getLocalName());
+            List<CommandWrapper> get = cls2Query.get(k);
+            for (CommandWrapper q : get) {
+                Query prepareQuery = QueryUtil.prepareQuery(state.getStateConnection(), q.getText());
+                if (prepareQuery instanceof GraphQuery) {
+                    GraphQueryResult result = QueryUtil.evaluateConstructQuery(state.getStateConnection(), q.getText());
+                    System.out.println(q.getText());
+                    kbConnection.begin();
+                    while (result.hasNext()) {
+                        Statement statement = result.next();
+                        kbConnection.remove(statement.getSubject(), statement.getPredicate(), null);
+                        kbConnection.add(statement);
+                        logMessage += "KB has been updated with: " + statement;
+                    }
+                    result.close();
+                    kbConnection.commit();
                 }
-                kbConnection.commit();
             }
-
         }
         return logMessage;
     }

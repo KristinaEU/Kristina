@@ -25,12 +25,8 @@ package gr.iti.kristina.core.state;
 
 import com.google.common.collect.LinkedListMultimap;
 import com.google.common.collect.Multimap;
-import com.hp.hpl.jena.ontology.OntClass;
 import com.hp.hpl.jena.ontology.OntModel;
-import com.hp.hpl.jena.ontology.OntProperty;
-import com.hp.hpl.jena.ontology.OntResource;
-import com.hp.hpl.jena.rdf.model.Literal;
-import com.hp.hpl.jena.util.iterator.ExtendedIterator;
+//import com.hp.hpl.jena.vocabulary.RDF;
 import gr.iti.kristina.helpers.repository.GraphDbRepositoryManager;
 import gr.iti.kristina.helpers.repository.JenaWrapper;
 import gr.iti.kristina.helpers.repository.utils.QueryUtil;
@@ -39,9 +35,12 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.StringReader;
-import java.util.Calendar;
+import java.util.Date;
+import org.openrdf.model.Statement;
 import org.openrdf.model.URI;
+import org.openrdf.model.ValueFactory;
 import org.openrdf.model.util.GraphUtilException;
+import org.openrdf.model.vocabulary.RDF;
 import org.openrdf.query.BindingSet;
 import org.openrdf.query.MalformedQueryException;
 import org.openrdf.query.QueryEvaluationException;
@@ -49,6 +48,7 @@ import org.openrdf.query.TupleQueryResult;
 import org.openrdf.repository.Repository;
 import org.openrdf.repository.RepositoryConnection;
 import org.openrdf.repository.RepositoryException;
+import org.openrdf.repository.RepositoryResult;
 import org.openrdf.repository.config.RepositoryConfigException;
 import org.openrdf.rio.RDFFormat;
 import org.openrdf.rio.RDFHandlerException;
@@ -68,6 +68,7 @@ public class State {
     GraphDbRepositoryManager manager;
     Repository stateRepository;
     RepositoryConnection stateConnection;
+    ValueFactory vf;
 
     //jena wrapper
     JenaWrapper jenaWrapper;
@@ -90,6 +91,7 @@ public class State {
     public void initialisation(String serverUrl, String username, String password, boolean reload) throws FileNotFoundException, IOException, RepositoryException, RDFParseException, GraphUtilException, RepositoryConfigException, RDFHandlerException {
         manager = new GraphDbRepositoryManager(serverUrl, username, password);
         stateConnection = manager.getRepository("state").getConnection();
+        vf = stateConnection.getValueFactory();
         if (reload) {
             loadDefaultStateOntologies();
         }
@@ -97,22 +99,30 @@ public class State {
         jenaWrapper = new JenaWrapper(stateConnection);
     }
 
-    public String updateState(String frameSituations) {
+    public String updateState(String frameSituations) throws RepositoryException {
         OntModel stateOntModel = jenaWrapper.getStateOntModel();
         stateOntModel.read(new StringReader(frameSituations), "", "TURTLE");
         stateOntModel.commit();
-        OntClass c = stateOntModel.getOntClass("http://www.loa-cnr.it/ontologies/DUL.owl#Situation");
-        OntProperty timestamp = stateOntModel.createDatatypeProperty("http://www.w3.org/2006/time#inXSDDateTime");
-        ExtendedIterator<? extends OntResource> listInstances = c.listInstances();
-        Calendar now = Calendar.getInstance();
-        Literal nowL = stateOntModel.createTypedLiteral(now);
-        while (listInstances.hasNext()) {
-            OntResource next = listInstances.next();
-            if (!next.hasProperty(timestamp)) {
-                next.addLiteral(timestamp, nowL);
+        URI situation = vf.createURI("http://www.loa-cnr.it/ontologies/DUL.owl#Situation");
+        URI timestamp = vf.createURI("http://www.w3.org/2006/time#inXSDDateTime");
+        URI current = vf.createURI("http://kristina-project.eu/demo/schema#current");
+        RepositoryResult<Statement> statements = stateConnection.getStatements(null, RDF.TYPE, situation, true);
+        org.openrdf.model.Literal t = vf.createLiteral(true);
+        org.openrdf.model.Literal f = vf.createLiteral(false);
+        org.openrdf.model.Literal nowL = vf.createLiteral(new Date());
+        stateConnection.begin();
+        while (statements.hasNext()) {
+            Statement statement = statements.next();
+            if (!stateConnection.hasStatement(statement.getSubject(), timestamp, null, true)) {
+                stateConnection.add(statement.getSubject(), timestamp, nowL);
+                stateConnection.add(statement.getSubject(), current, t);
+            } else {
+//                stateConnection.remove(statement.getSubject(), current, t);
+                stateConnection.add(statement.getSubject(), current, f);
             }
         }
-        stateOntModel.commit();
+        
+        stateConnection.commit();
         String logMessage = "State has been updated";
         return logMessage;
     }
@@ -165,7 +175,7 @@ public class State {
                 + "        ?resource a ?temp . \n"
                 + "        ?temp rdfs:subClassOf ?directClass . \n"
                 + "    }\n"
-                + "} ORDER BY DESC(?timestamp) LIMIT " + recentItems;
+                + "} ORDER BY DESC(?timestamp) ";
 
         TupleQueryResult result = QueryUtil.evaluateSelectQuery(stateConnection, q);
         while (result.hasNext()) {

@@ -28,6 +28,7 @@ import gr.iti.kristina.core.qa.QuestionAnswer;
 import gr.iti.kristina.core.state.State;
 import gr.iti.kristina.core.state.StateFactory;
 import gr.iti.kristina.helpers.files.FileHelper;
+import gr.iti.kristina.helpers.functions.Print;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.nio.charset.Charset;
@@ -65,7 +66,7 @@ public class MockService {
         }
     }
 
-    public String updateState(String frameSituations) {
+    public String updateState(String frameSituations) throws RepositoryException {
         return state.updateState(frameSituations);
     }
 
@@ -85,12 +86,12 @@ public class MockService {
 
     public static void main(String[] args) throws FileNotFoundException, IOException, RepositoryConfigException, RepositoryException, MalformedQueryException, QueryEvaluationException {
         MockService mockService = new MockService(false);
-        String updateStateLog = mockService.updateState(FileHelper.readFile("C:/Users/gmeditsk/Dropbox/iti.private/Kristina/ontologies/review2016-demo/example1.ttl", Charset.forName("utf-8")));
-        String startQALog = mockService.startQA();
-        //Multimap<String, String> contextStatus = mockService.getContextStatus(0);
-        //Print.printMap(contextStatus);
-        System.out.println(updateStateLog);
-        System.out.println(startQALog);
+        //String updateStateLog = mockService.updateState(FileHelper.readFile("C:/Users/gmeditsk/Dropbox/iti.private/Kristina/ontologies/review2016-demo/example3.ttl", Charset.forName("utf-8")));
+        //String startQALog = mockService.startQA();
+        Multimap<String, String> contextStatus = mockService.getContextHistory(0);
+        Print.printMap(contextStatus);
+        //System.out.println(updateStateLog);
+        //System.out.println(startQALog);
         mockService.shutDown();
     }
 
