@@ -12,8 +12,10 @@ import com.google.common.collect.Multimap;
 import com.google.gson.Gson;
 import gr.iti.kristina.core.MockService;
 import java.io.FileNotFoundException;
+import java.io.UnsupportedEncodingException;
 import java.util.Collection;
 import java.util.Map;
+import java.util.UUID;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.ws.rs.core.Context;
@@ -58,14 +60,20 @@ public class Api {
 
     /**
      * Retrieves representation of an instance of gr.iti.kristina.demo.service.GenericResource
+     * @param la
      * @return an instance of java.lang.String
      */
     @GET
     @Path("/updateState")
     @Produces(MediaType.TEXT_PLAIN)
-    public String getText(@QueryParam("la") String la) {
+    public String getText(@QueryParam("la") String la) throws RepositoryException, UnsupportedEncodingException {
         //TODO return proper representation object
-        return service.updateState(la);
+        String decode = java.net.URLDecoder.decode(la, "UTF-8");
+        String s = UUID.randomUUID().toString();
+        decode = decode.replaceAll("__X", s);
+        String log = service.updateState(decode);
+        System.out.println("SERVER:: " + log);
+        return log;
     }
     
     @GET

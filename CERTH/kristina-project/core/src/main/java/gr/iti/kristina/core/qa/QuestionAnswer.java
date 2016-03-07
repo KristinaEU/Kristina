@@ -191,7 +191,7 @@ public class QuestionAnswer {
         Map<CommandWrapper, Map<String, RDFNode>> initialTemplateBindings = new HashMap<>();
         Map<Resource, List<CommandWrapper>> cls2Query = SPINQueryFinder.getClass2QueryMap(rulesModel, rulesModel, SPIN.rule, true, initialTemplateBindings, false);
 
-        System.out.println(currentContext);
+        logger.debug(currentContext.toString());
         Set<Resource> keySet = cls2Query.keySet();
         String logMessage = "";
         for (Resource k : keySet) {
@@ -199,13 +199,13 @@ public class QuestionAnswer {
             if (!currentContext.getValue().contains(cl.getLocalName())) {
                 continue;
             }
-            System.out.println(cl.getLocalName());
+            logger.debug(cl.getLocalName());
             List<CommandWrapper> get = cls2Query.get(k);
             for (CommandWrapper q : get) {
                 Query prepareQuery = QueryUtil.prepareQuery(state.getStateConnection(), q.getText());
                 if (prepareQuery instanceof GraphQuery) {
                     GraphQueryResult result = QueryUtil.evaluateConstructQuery(state.getStateConnection(), q.getText());
-                    System.out.println(q.getText());
+                    logger.debug(q.getText());
                     kbConnection.begin();
                     while (result.hasNext()) {
                         Statement statement = result.next();

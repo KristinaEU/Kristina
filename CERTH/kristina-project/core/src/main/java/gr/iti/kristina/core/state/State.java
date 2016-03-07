@@ -100,6 +100,7 @@ public class State {
     }
 
     public String updateState(String frameSituations) throws RepositoryException {
+        logger.debug("updating state...");
         OntModel stateOntModel = jenaWrapper.getStateOntModel();
         stateOntModel.read(new StringReader(frameSituations), "", "TURTLE");
         stateOntModel.commit();
@@ -123,6 +124,7 @@ public class State {
         }
         
         stateConnection.commit();
+        logger.debug("state has been updated");
         String logMessage = "State has been updated";
         return logMessage;
     }
