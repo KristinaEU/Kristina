@@ -34,12 +34,11 @@ import com.hp.hpl.jena.rdf.model.Resource;
 import com.hp.hpl.jena.shared.ReificationStyle;
 import gr.iti.kristina.core.qa.rules.ContextCluster;
 import gr.iti.kristina.core.state.State;
-import gr.iti.kristina.helpers.functions.Print;
 import gr.iti.kristina.helpers.repository.GraphDbRepositoryManager;
-import gr.iti.kristina.helpers.repository.JenaWrapper;
 import gr.iti.kristina.helpers.repository.utils.QueryUtil;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -53,6 +52,10 @@ import org.openrdf.query.GraphQueryResult;
 import org.openrdf.query.MalformedQueryException;
 import org.openrdf.query.Query;
 import org.openrdf.query.QueryEvaluationException;
+import org.openrdf.query.QueryLanguage;
+import org.openrdf.query.Update;
+import org.openrdf.query.UpdateExecutionException;
+import org.openrdf.query.impl.BindingImpl;
 import org.openrdf.repository.RepositoryConnection;
 import org.openrdf.repository.RepositoryException;
 import org.openrdf.repository.config.RepositoryConfigException;
@@ -178,8 +181,10 @@ public class QuestionAnswer {
         return result;
     }
 
-    public String demo() throws MalformedQueryException, RepositoryException, QueryEvaluationException {
+    public List<String> demo() throws MalformedQueryException, RepositoryException, QueryEvaluationException, UpdateExecutionException {
         Map.Entry<String, Collection<String>> currentContext = state.getContextHistory(0).asMap().entrySet().iterator().next();
+
+        List<String> triples = new ArrayList<>();
 
 //        JenaWrapper jenaWrapper = new JenaWrapper(state.getStateConnection());
 //        OntModel stateOntModel = jenaWrapper.getStateOntModel();
@@ -193,7 +198,7 @@ public class QuestionAnswer {
 
         logger.debug(currentContext.toString());
         Set<Resource> keySet = cls2Query.keySet();
-        String logMessage = "";
+        //String logMessage = "";
         for (Resource k : keySet) {
             Resource cl = k;
             if (!currentContext.getValue().contains(cl.getLocalName())) {
@@ -211,14 +216,39 @@ public class QuestionAnswer {
                         Statement statement = result.next();
                         kbConnection.remove(statement.getSubject(), statement.getPredicate(), null);
                         kbConnection.add(statement);
-                        logMessage += "KB has been updated with: " + statement;
+                        triples.add("(" + statement.getSubject().stringValue() + ", " + statement.getPredicate().stringValue() + ", " + statement.getObject().stringValue() + ")");
                     }
                     result.close();
                     kbConnection.commit();
                 }
             }
         }
-        return logMessage;
+
+        org.openrdf.model.Literal f = state.getStateConnection().getValueFactory().createLiteral(false);
+        String q = "INSERT\n"
+                + "{\n"
+                + "  ?x <http://kristina-project.eu/demo/schema#current> ?false .\n"
+                + "}\n"
+                + "WHERE\n"
+                + "{\n"
+                + "  ?x a <http://www.loa-cnr.it/ontologies/DUL.owl#Situation>.\n"
+                + "  FILTER EXISTS {\n"
+                + "	?x <http://www.w3.org/2006/time#inXSDDateTime> [] .\n"
+                + "  }\n"
+                + "}";
+
+//        GraphQueryResult result = QueryUtil.evaluateConstructQuery(state.getStateConnection(), q, new BindingImpl("false", f));
+//        while (result.hasNext()) {
+//            Statement next = result.next();
+//            state.getStateConnection().add(next);
+//        }
+//        result.close();
+//        state.getStateConnection().commit();
+        Update prepareUpdate = state.getStateConnection().prepareUpdate(QueryLanguage.SPARQL, q);
+        prepareUpdate.setBinding("false", f);
+        prepareUpdate.execute();
+
+        return triples;
     }
 
     private static OntModel loadModelWithImports(String filePath) {

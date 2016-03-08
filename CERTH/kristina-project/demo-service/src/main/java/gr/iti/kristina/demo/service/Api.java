@@ -16,6 +16,7 @@ import gr.iti.kristina.core.MockService;
 import java.io.FileNotFoundException;
 import java.io.UnsupportedEncodingException;
 import java.util.Collection;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.UUID;
@@ -35,6 +36,7 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import org.openrdf.query.MalformedQueryException;
 import org.openrdf.query.QueryEvaluationException;
+import org.openrdf.query.UpdateExecutionException;
 import org.openrdf.repository.RepositoryException;
 import org.openrdf.repository.config.RepositoryConfigException;
 
@@ -76,7 +78,7 @@ public class Api {
     @Path("/updateState")
     @Produces(MediaType.TEXT_PLAIN)
     @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
-    public String getText(@FormParam("la") String la) throws RepositoryException, UnsupportedEncodingException {
+    public String getText(@FormParam("la") String la) throws RepositoryException, UnsupportedEncodingException, MalformedQueryException, QueryEvaluationException, UpdateExecutionException {
         //TODO return proper representation object
         String decode = java.net.URLDecoder.decode(la, "UTF-8");
         String s = UUID.randomUUID().toString();
@@ -118,9 +120,10 @@ public class Api {
 
     @GET
     @Path("/startqa")
-    @Produces(MediaType.TEXT_PLAIN)
-    public String startQA() throws RepositoryConfigException, RepositoryException, MalformedQueryException, QueryEvaluationException {
-        return service.startQA();
+    @Produces(MediaType.APPLICATION_JSON)
+    public String startQA() throws RepositoryConfigException, RepositoryException, MalformedQueryException, QueryEvaluationException, UpdateExecutionException {
+        List<String> triples = service.startQA();
+        return new Gson().toJson(triples);
     }
 
     /**

@@ -40,15 +40,18 @@ import org.openrdf.model.Statement;
 import org.openrdf.model.URI;
 import org.openrdf.model.ValueFactory;
 import org.openrdf.model.util.GraphUtilException;
-import org.openrdf.model.vocabulary.RDF;
 import org.openrdf.query.BindingSet;
+import org.openrdf.query.GraphQueryResult;
 import org.openrdf.query.MalformedQueryException;
 import org.openrdf.query.QueryEvaluationException;
+import org.openrdf.query.QueryLanguage;
 import org.openrdf.query.TupleQueryResult;
+import org.openrdf.query.Update;
+import org.openrdf.query.UpdateExecutionException;
+import org.openrdf.query.impl.BindingImpl;
 import org.openrdf.repository.Repository;
 import org.openrdf.repository.RepositoryConnection;
 import org.openrdf.repository.RepositoryException;
-import org.openrdf.repository.RepositoryResult;
 import org.openrdf.repository.config.RepositoryConfigException;
 import org.openrdf.rio.RDFFormat;
 import org.openrdf.rio.RDFHandlerException;
@@ -99,33 +102,59 @@ public class State {
         jenaWrapper = new JenaWrapper(stateConnection);
     }
 
-    public String updateState(String frameSituations) throws RepositoryException {
+    public String updateState(String frameSituations) throws RepositoryException, MalformedQueryException, QueryEvaluationException, UpdateExecutionException {
         logger.debug("updating state...");
         OntModel stateOntModel = jenaWrapper.getStateOntModel();
         stateOntModel.read(new StringReader(frameSituations), "", "TURTLE");
         stateOntModel.commit();
-        URI situation = vf.createURI("http://www.loa-cnr.it/ontologies/DUL.owl#Situation");
-        URI timestamp = vf.createURI("http://www.w3.org/2006/time#inXSDDateTime");
-        URI current = vf.createURI("http://kristina-project.eu/demo/schema#current");
-        RepositoryResult<Statement> statements = stateConnection.getStatements(null, RDF.TYPE, situation, true);
+//        URI situation = vf.createURI("http://www.loa-cnr.it/ontologies/DUL.owl#Situation");
+//        URI timestamp = vf.createURI("http://www.w3.org/2006/time#inXSDDateTime");
+//        //URI current = vf.createURI("http://kristina-project.eu/demo/schema#current");
+//        RepositoryResult<Statement> statements = stateConnection.getStatements(null, RDF.TYPE, situation, true);
         org.openrdf.model.Literal t = vf.createLiteral(true);
-        org.openrdf.model.Literal f = vf.createLiteral(false);
+//        org.openrdf.model.Literal f = vf.createLiteral(false);
         org.openrdf.model.Literal nowL = vf.createLiteral(new Date());
-        stateConnection.begin();
-        while (statements.hasNext()) {
-            System.out.println("in");
-            Statement statement = statements.next();
-            if (!stateConnection.hasStatement(statement.getSubject(), timestamp, null, true)) {
-                stateConnection.add(statement.getSubject(), timestamp, nowL);
-                stateConnection.add(statement.getSubject(), current, t);
-            } else {
-//                stateConnection.remove(statement.getSubject(), current, t);
-                stateConnection.add(statement.getSubject(), current, f);
-            }
-        }
-        statements.close();
-        
-        stateConnection.commit();
+//        stateConnection.begin();
+//        while (statements.hasNext()) {
+//            System.out.println("in");
+//            Statement statement = statements.next();
+//            if (!stateConnection.hasStatement(statement.getSubject(), timestamp, null, true)) {
+//                stateConnection.add(statement.getSubject(), timestamp, nowL);
+//                //stateConnection.add(statement.getSubject(), current, t);
+//            } else {
+////                stateConnection.remove(statement.getSubject(), current, t);
+//                //stateConnection.add(statement.getSubject(), current, f);
+//            }
+//        }
+//        statements.close();
+//
+//        stateConnection.commit();
+
+        String q = "INSERT\n"
+                + "{\n"
+                + "  ?x <http://www.w3.org/2006/time#inXSDDateTime> ?timestamp .\n"
+                + "  ?x <http://kristina-project.eu/demo/schema#current> ?true .\n"
+                + "}\n"
+                + "WHERE\n"
+                + "{\n"
+                + "  ?x a <http://www.loa-cnr.it/ontologies/DUL.owl#Situation>.\n"
+                + "  FILTER NOT EXISTS {\n"
+                + "	?x <http://www.w3.org/2006/time#inXSDDateTime> [] .\n"
+                + "  }\n"
+                + "}";
+
+        //GraphQueryResult result = QueryUtil.evaluateConstructQuery(stateConnection, q, new BindingImpl("timestamp", nowL), new BindingImpl("true", t));
+        Update prepareUpdate = stateConnection.prepareUpdate(QueryLanguage.SPARQL, q);
+        prepareUpdate.setBinding("timestamp", nowL);
+        prepareUpdate.setBinding("true", t);
+        prepareUpdate.execute();
+//        while (result.hasNext()) {
+//            Statement next = result.next();
+//            stateConnection.add(next);
+//        }
+//        result.close();
+//        stateConnection.commit();
+
         logger.debug("state has been updated");
         String logMessage = "State has been updated";
         return logMessage;

@@ -33,10 +33,12 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.nio.charset.Charset;
+import java.util.List;
 import java.util.UUID;
 import org.openrdf.model.util.GraphUtilException;
 import org.openrdf.query.MalformedQueryException;
 import org.openrdf.query.QueryEvaluationException;
+import org.openrdf.query.UpdateExecutionException;
 import org.openrdf.repository.RepositoryException;
 import org.openrdf.repository.config.RepositoryConfigException;
 import org.openrdf.rio.RDFHandlerException;
@@ -68,7 +70,7 @@ public class MockService {
         }
     }
 
-    public String updateState(String frameSituations) throws RepositoryException, UnsupportedEncodingException {
+    public String updateState(String frameSituations) throws RepositoryException, UnsupportedEncodingException, MalformedQueryException, QueryEvaluationException, UpdateExecutionException {
         //logger.debug(frameSituations);
         return state.updateState(frameSituations);
     }
@@ -82,19 +84,19 @@ public class MockService {
         return null;
     }
 
-    public String startQA() throws RepositoryConfigException, RepositoryException, MalformedQueryException, QueryEvaluationException {
+    public List<String> startQA() throws RepositoryConfigException, RepositoryException, MalformedQueryException, QueryEvaluationException, UpdateExecutionException {
         QuestionAnswer qa = new QuestionAnswer(state);
         return qa.demo();
     }
 
-    public static void main(String[] args) throws FileNotFoundException, IOException, RepositoryConfigException, RepositoryException, MalformedQueryException, QueryEvaluationException {
+    public static void main(String[] args) throws FileNotFoundException, IOException, RepositoryConfigException, RepositoryException, MalformedQueryException, QueryEvaluationException, UnsupportedEncodingException, UpdateExecutionException {
         MockService mockService = new MockService(false);
-        String updateStateLog = mockService.updateState(FileHelper.readFile("C:/Users/gmeditsk/Dropbox/iti.private/Kristina/ontologies/review2016-demo/example2.ttl", Charset.forName("utf-8")));
-        //String startQALog = mockService.startQA();
+        String updateStateLog = mockService.updateState(FileHelper.readFile("C:/Users/gmeditsk/Dropbox/iti.private/Kristina/ontologies/review2016-demo/example3.ttl", Charset.forName("utf-8")));
+        List<String> startQALog = mockService.startQA();
         //Multimap<String, String> contextStatus = mockService.getContextHistory(0);
         //Print.printMap(contextStatus);
         System.out.println(updateStateLog);
-        //System.out.println(startQALog);
+        System.out.println(startQALog);
         mockService.shutDown();
     }
 
