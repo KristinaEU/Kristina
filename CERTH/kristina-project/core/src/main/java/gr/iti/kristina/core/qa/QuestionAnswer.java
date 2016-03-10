@@ -90,12 +90,13 @@ public class QuestionAnswer {
         kbConnection = manager.getRepository(repositoryId).getConnection();
     }
 
-    public void start() throws RepositoryConfigException, RepositoryException {
+    public List<String> start() throws RepositoryConfigException, RepositoryException {
         try {
             //HashSet<Signature> concepts = conceptExtraction();
             HashSet<Signature> concepts = fakeConceptsFrequency();
             Multimap<Signature, String> mappings = domainMapping(concepts);
             HashSet<ContextCluster> contextClusters = buildContexts(mappings);
+            return null;
         } catch (MalformedQueryException | QueryEvaluationException ex) {
             logger.error("", ex);
         } finally {
@@ -104,6 +105,7 @@ public class QuestionAnswer {
                 manager.shutDown("QuestionAnswer::");
             }
         }
+        return null;
 
     }
 
@@ -168,13 +170,19 @@ public class QuestionAnswer {
         s2.label = "Water";
         s2.uri = "http://kristina-project.eu/ontologies/entities#Water";
         s2.localName = "Water";
+        
+        Signature s3 = new Signature();
+        s3.label = "Glass";
+        s3.uri = "http://purl.oclc.org/NET/muo/ucum/unit/volume/glass";
+        s3.localName = "glass";
 //        
-//        Signature s3 = new Signature();
-//        s3.label = "spouse";
-//        s3.uri = "http://www.loa-cnr.it/ontologies/DUL.owl#Spouse";
-//        s3.localName = "Spouse";
+        Signature s4 = new Signature();
+        s4.label = "person";
+        s4.uri = "http://kristina-project.eu/ontologies/profile#Person";
+        s4.localName = "person";
 //        
-//        result.add(s3);
+        result.add(s4);
+        result.add(s3);
         result.add(s2);
         result.add(s1);
 

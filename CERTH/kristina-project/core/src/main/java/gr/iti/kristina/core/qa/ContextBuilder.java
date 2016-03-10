@@ -75,6 +75,7 @@ public class ContextBuilder {
 
     void start() throws MalformedQueryException, RepositoryException, QueryEvaluationException {
         contexts = HashMultimap.create();
+        HashSet<String> agenda = new HashSet<>();
 
         Set<Signature> mappingsSet = mappings.keySet();
 
@@ -82,23 +83,29 @@ public class ContextBuilder {
                 + "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> "
                 + "select distinct * where {  "
                 + "    ?node ?p ?y  . "
+                + "    FILTER (!contains(str(?p), \"http://www.w3.org/2000/01/rdf-schema#\"))"
+                + "    FILTER (!contains(str(?p), \"http://www.w3.org/1999/02/22-rdf-syntax-ns#\"))"
                 + "    FILTER(?y != ?node && ?y != owl:Thing "
                 + "     && ?y != rdfs:Class && ?y != owl:Class && ?y != rdf:Property && ?y != owl:ObjectProperty && ?y != owl:DatatypeProperty "
-                + "     && ?p != rdfs:domain && ?p != rdfs:range && ?p != rdfs:label && !isBlank(?y))"
+                + "     && ?p != rdfs:domain && ?p != rdfs:range && ?p != rdfs:label && ?p != rdfs:comment && !isBlank(?y))"
                 + "}  ";
 
         String q2 = "PREFIX owl: <http://www.w3.org/2002/07/owl#> "
                 + "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> "
                 + "select distinct * where {  "
                 + "    ?x ?p ?node  . "
-                + "    FILTER(?node != ?x && ?x != owl:Nothing && ?p != rdfs:domain && ?p != rdfs:range && ?p != rdfs:label)"
+                + "    FILTER (!contains(str(?p), \"http://www.w3.org/2000/01/rdf-schema#\"))"
+                + "    FILTER (!contains(str(?p), \"http://www.w3.org/1999/02/22-rdf-syntax-ns#\"))"
+                + "    FILTER(?node != ?x && ?x != owl:Nothing && ?p != rdfs:domain && ?p != rdfs:range && ?p != rdfs:label && ?p != rdfs:comment)"
                 + "}  ";
 
         String q3 = "PREFIX owl: <http://www.w3.org/2002/07/owl#> "
                 + "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> "
                 + "select distinct * where {  "
                 + "    ?x ?node ?y  . "
-                + "    FILTER(?node != ?x && ?x != owl:Nothing && ?p != rdfs:domain && ?p != rdfs:range && ?p != rdfs:label && !isBlank(?y))"
+                + "    FILTER (!contains(str(?p), \"http://www.w3.org/2000/01/rdf-schema#\"))"
+                + "    FILTER (!contains(str(?p), \"http://www.w3.org/1999/02/22-rdf-syntax-ns#\"))"
+                + "    FILTER(?node != ?x && ?x != owl:Nothing && ?p != rdfs:domain && ?p != rdfs:range && ?p != rdfs:label && ?p != rdfs:comment && !isBlank(?y))"
                 + "}  ";
 
         for (Signature s : mappingsSet) {
@@ -110,6 +117,10 @@ public class ContextBuilder {
                 Binding p = bindingSet.getBinding("p");
                 Binding y = bindingSet.getBinding("y");
                 contexts.put(s.uri, new Triple(_node, p.getValue().stringValue(), y.getValue().stringValue()));
+                System.out.println(y.getValue().getClass().getSimpleName());
+                if (!"LiteralImpl".equals(y.getValue().getClass().getSimpleName())) {
+                    agenda.add(y.getValue().stringValue());
+                }
             }
             result.close();
             result = QueryUtil.evaluateSelectQuery(kbConnection, q2,
@@ -119,6 +130,10 @@ public class ContextBuilder {
                 Binding x = bindingSet.getBinding("x");
                 Binding p = bindingSet.getBinding("p");
                 contexts.put(s.uri, new Triple(x.getValue().stringValue(), p.getValue().stringValue(), _node));
+                if (!"LiteralImpl".equals(x.getValue().getClass().getSimpleName())) {
+                    agenda.add(x.getValue().stringValue());
+                }
+                //agenda.add(x.getValue().stringValue());
             }
             result.close();
 
@@ -129,11 +144,55 @@ public class ContextBuilder {
                 Binding x = bindingSet.getBinding("x");
                 Binding y = bindingSet.getBinding("y");
                 contexts.put(s.uri, new Triple(x.getValue().stringValue(), _node, y.getValue().stringValue()));
+                if (!"LiteralImpl".equals(y.getValue().getClass().getSimpleName())) {
+                    agenda.add(y.getValue().stringValue());
+                }
+                //agenda.add(y.getValue().stringValue());
+                if (!"LiteralImpl".equals(x.getValue().getClass().getSimpleName())) {
+                    agenda.add(x.getValue().stringValue());
+                }
+                //agenda.add(x.getValue().stringValue());
             }
             result.close();
 
         }
+
+        //one more
+        for (String a : agenda) {
+            //String _node = mappings.get(s).iterator().next();
+            TupleQueryResult result = QueryUtil.evaluateSelectQuery(kbConnection, q1,
+                    new BindingImpl("node", vf.createURI(a)));
+            while (result.hasNext()) {
+                BindingSet bindingSet = result.next();
+                Binding p = bindingSet.getBinding("p");
+                Binding y = bindingSet.getBinding("y");
+                contexts.put(a, new Triple(a, p.getValue().stringValue(), y.getValue().stringValue()));
+                
+            }
+            result.close();
+            result = QueryUtil.evaluateSelectQuery(kbConnection, q2,
+                    new BindingImpl("node", vf.createURI(a)));
+            while (result.hasNext()) {
+                BindingSet bindingSet = result.next();
+                Binding x = bindingSet.getBinding("x");
+                Binding p = bindingSet.getBinding("p");
+                contexts.put(a, new Triple(x.getValue().stringValue(), p.getValue().stringValue(), a));
+            }
+            result.close();
+
+            result = QueryUtil.evaluateSelectQuery(kbConnection, q3,
+                    new BindingImpl("node", vf.createURI(a)));
+            while (result.hasNext()) {
+                BindingSet bindingSet = result.next();
+                Binding x = bindingSet.getBinding("x");
+                Binding y = bindingSet.getBinding("y");
+                contexts.put(a, new Triple(x.getValue().stringValue(), a, y.getValue().stringValue()));             
+            }
+            result.close();
+        }
+
         Print.printMap(contexts);
+        System.out.println(Print.flattenCollection(agenda));
 
         runRuleEngine();
         //mergeContexts();
@@ -173,15 +232,14 @@ public class ContextBuilder {
         }
         return false;
     }
-    
-    public void logContextCluster(ContextCluster cluster){
+
+    public void logContextCluster(ContextCluster cluster) {
         contextClusters.add(cluster);
     }
 
 //    public void logDependency(Dependency d) {
 //        contextDependencies.add(d);
 //    }
-
 //    private Set<Triple> mergeContexts() {
 //        for (Dependency d : contextDependencies) {
 //            String key1 = d.getKey1();
@@ -195,11 +253,8 @@ public class ContextBuilder {
 //
 //        }
 //    }
-
     public HashSet<ContextCluster> getContextClusters() {
         return contextClusters;
     }
-    
-    
 
 }

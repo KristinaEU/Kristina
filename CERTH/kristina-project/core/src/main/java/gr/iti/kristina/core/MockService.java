@@ -90,13 +90,13 @@ public class MockService {
 
     public List<String> startQA() throws RepositoryConfigException, RepositoryException, MalformedQueryException, QueryEvaluationException, UpdateExecutionException {
         QuestionAnswer qa = new QuestionAnswer(state);
-        return qa.demo();
+        return qa.start();
     }
 
     public static void main(String[] args) throws FileNotFoundException, IOException, RepositoryConfigException, RepositoryException, MalformedQueryException, QueryEvaluationException, UnsupportedEncodingException, UpdateExecutionException, RDFParseException {
         MockService mockService = new MockService(false);
-        mockService.clearState();
-        String updateStateLog = mockService.updateState(FileHelper.readFile("C:/Users/gmeditsk/Dropbox/iti.private/Kristina/ontologies/review2016-demo/example3.ttl", Charset.forName("utf-8")));
+        //mockService.clearState();
+        String updateStateLog = mockService.updateState(FileHelper.readFile("C:/Users/gmeditsk/Dropbox/iti.private/Kristina/ontologies/examples/inform.ttl", Charset.forName("utf-8")));
         List<String> startQALog = mockService.startQA();
         //Multimap<String, String> contextStatus = mockService.getContextHistory(0);
         //Print.printMap(contextStatus);
