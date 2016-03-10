@@ -14,6 +14,7 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import gr.iti.kristina.core.MockService;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.util.Collection;
 import java.util.List;
@@ -39,6 +40,7 @@ import org.openrdf.query.QueryEvaluationException;
 import org.openrdf.query.UpdateExecutionException;
 import org.openrdf.repository.RepositoryException;
 import org.openrdf.repository.config.RepositoryConfigException;
+import org.openrdf.rio.RDFParseException;
 
 /**
  * REST Web Service
@@ -54,7 +56,6 @@ public class Api {
 
     static {
         try {
-
             service = new MockService(false);
         } catch (FileNotFoundException ex) {
             Logger.getLogger(Api.class.getName()).log(Level.SEVERE, null, ex);
@@ -124,6 +125,20 @@ public class Api {
     public String startQA() throws RepositoryConfigException, RepositoryException, MalformedQueryException, QueryEvaluationException, UpdateExecutionException {
         List<String> triples = service.startQA();
         return new Gson().toJson(triples);
+    }
+    
+    @GET
+    @Path("/clearkb")
+    @Produces(MediaType.APPLICATION_JSON)
+    public void clearkb() throws RepositoryConfigException, RepositoryException, IOException, RDFParseException {
+        service.clearKb();
+    }
+    
+    @GET
+    @Path("/clearstate")
+    @Produces(MediaType.APPLICATION_JSON)
+    public void clearState() throws RepositoryConfigException, RepositoryException, IOException, RDFParseException {
+        service.clearState();
     }
 
     /**

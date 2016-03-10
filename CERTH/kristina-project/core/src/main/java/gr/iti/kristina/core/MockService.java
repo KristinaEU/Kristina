@@ -29,6 +29,8 @@ import gr.iti.kristina.core.state.State;
 import gr.iti.kristina.core.state.StateFactory;
 import gr.iti.kristina.helpers.files.FileHelper;
 import gr.iti.kristina.helpers.functions.Print;
+import gr.iti.kristina.helpers.repository.GraphDbRepositoryManager;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
@@ -39,8 +41,10 @@ import org.openrdf.model.util.GraphUtilException;
 import org.openrdf.query.MalformedQueryException;
 import org.openrdf.query.QueryEvaluationException;
 import org.openrdf.query.UpdateExecutionException;
+import org.openrdf.repository.RepositoryConnection;
 import org.openrdf.repository.RepositoryException;
 import org.openrdf.repository.config.RepositoryConfigException;
+import org.openrdf.rio.RDFFormat;
 import org.openrdf.rio.RDFHandlerException;
 import org.openrdf.rio.RDFParseException;
 import org.slf4j.Logger;
@@ -59,7 +63,7 @@ public class MockService {
     static Logger logger = LoggerFactory.getLogger(MockService.class);
 
     public MockService(boolean reloadStateRepository) throws FileNotFoundException {
-        logger.debug("Creating MockService");
+        logger.debug("******************************************************** Creating MockService************************************************");
         try {
             state = StateFactory.newInstance(serverUrl, username, password, reloadStateRepository);
         } catch (IOException | RepositoryException | RDFParseException | GraphUtilException | RepositoryConfigException | RDFHandlerException ex) {
@@ -89,14 +93,16 @@ public class MockService {
         return qa.demo();
     }
 
-    public static void main(String[] args) throws FileNotFoundException, IOException, RepositoryConfigException, RepositoryException, MalformedQueryException, QueryEvaluationException, UnsupportedEncodingException, UpdateExecutionException {
+    public static void main(String[] args) throws FileNotFoundException, IOException, RepositoryConfigException, RepositoryException, MalformedQueryException, QueryEvaluationException, UnsupportedEncodingException, UpdateExecutionException, RDFParseException {
         MockService mockService = new MockService(false);
+        mockService.clearState();
         String updateStateLog = mockService.updateState(FileHelper.readFile("C:/Users/gmeditsk/Dropbox/iti.private/Kristina/ontologies/review2016-demo/example3.ttl", Charset.forName("utf-8")));
         List<String> startQALog = mockService.startQA();
         //Multimap<String, String> contextStatus = mockService.getContextHistory(0);
         //Print.printMap(contextStatus);
         System.out.println(updateStateLog);
         System.out.println(startQALog);
+        
         mockService.shutDown();
     }
 
@@ -105,5 +111,42 @@ public class MockService {
             state.close();
         }
     }
+    
+    public void clearState() throws RepositoryException, FileNotFoundException, IOException, RDFParseException{
+        RepositoryConnection c = state.getStateConnection();
+        c.begin();
+        c.clear();
+        c.commit();
+        logger.debug(c.size() + "");
+        
+        String schema = "C:/Users/gmeditsk/Dropbox/iti.private/Kristina/ontologies/review2016-demo/schema.ttl";
+        String dul = "C:/Users/gmeditsk/Dropbox/iti.private/Kristina/ontologies/imports/DUL.rdf";
+        String time = "C:/Users/gmeditsk/Dropbox/iti.private/Kristina/ontologies/imports/time.ttl";
+        c.begin();
+        c.add(new FileInputStream(schema), "http://kristina", RDFFormat.TURTLE);
+        c.add(new FileInputStream(dul), "http://kristina", RDFFormat.RDFXML);
+        c.add(new FileInputStream(time), "http://kristina", RDFFormat.TURTLE);
+        c.commit();
+        logger.debug(c.size() + "");
+        
+    }
+
+    public void clearKb() throws RepositoryConfigException, RepositoryException, IOException, RDFParseException {
+        GraphDbRepositoryManager manager = new GraphDbRepositoryManager(serverUrl, username, password);
+        RepositoryConnection kbConnection = manager.getRepository("kb").getConnection();
+        kbConnection.begin();
+        kbConnection.clear();
+        kbConnection.commit();
+        logger.debug(kbConnection.size() + "");
+        
+        kbConnection.begin();
+        String profile = "C:/Users/gmeditsk/Dropbox/iti.private/Kristina/ontologies/review2016-demo/profile.ttl";
+        kbConnection.add(new FileInputStream(profile), "http://kristina", RDFFormat.TURTLE);
+        kbConnection.commit();
+        logger.debug(kbConnection.size() + "");
+
+    }
+
+    
 
 }
