@@ -24,6 +24,8 @@
 package gr.iti.kristina.core.qa;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 /**
@@ -32,12 +34,15 @@ import java.util.Objects;
  */
 public class Triple implements Serializable, Comparable<Triple> {
 
-    String s, p, o;
+    public String s, p, o;
+    public List<Triple> connections;
 
     public Triple(String s, String p, String o) {
         this.s = s;
         this.p = p;
         this.o = o;
+        
+        connections = new ArrayList<>();
     }
 
     @Override
@@ -82,6 +87,44 @@ public class Triple implements Serializable, Comparable<Triple> {
         }
         return true;
     }
+    
+    public void add(Triple t){
+        this.connections.add(t);
+    }
+
+    public String getS() {
+        return s;
+    }
+
+    public void setS(String s) {
+        this.s = s;
+    }
+
+    public String getP() {
+        return p;
+    }
+
+    public void setP(String p) {
+        this.p = p;
+    }
+
+    public String getO() {
+        return o;
+    }
+
+    public void setO(String o) {
+        this.o = o;
+    }
+
+    public List<Triple> getConnections() {
+        return connections;
+    }
+
+    public void setConnections(List<Triple> connections) {
+        this.connections = connections;
+    }
+    
+    
     
     
     

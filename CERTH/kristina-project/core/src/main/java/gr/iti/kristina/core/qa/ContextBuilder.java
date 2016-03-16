@@ -31,6 +31,7 @@ import gr.iti.kristina.helpers.functions.Print;
 import gr.iti.kristina.helpers.repository.utils.QueryUtil;
 import java.util.Collection;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import org.kie.api.KieServices;
@@ -117,7 +118,6 @@ public class ContextBuilder {
                 Binding p = bindingSet.getBinding("p");
                 Binding y = bindingSet.getBinding("y");
                 contexts.put(s.uri, new Triple(_node, p.getValue().stringValue(), y.getValue().stringValue()));
-                System.out.println(y.getValue().getClass().getSimpleName());
                 if (!"LiteralImpl".equals(y.getValue().getClass().getSimpleName())) {
                     agenda.add(y.getValue().stringValue());
                 }
@@ -167,7 +167,7 @@ public class ContextBuilder {
                 Binding p = bindingSet.getBinding("p");
                 Binding y = bindingSet.getBinding("y");
                 contexts.put(a, new Triple(a, p.getValue().stringValue(), y.getValue().stringValue()));
-                
+
             }
             result.close();
             result = QueryUtil.evaluateSelectQuery(kbConnection, q2,
@@ -186,7 +186,7 @@ public class ContextBuilder {
                 BindingSet bindingSet = result.next();
                 Binding x = bindingSet.getBinding("x");
                 Binding y = bindingSet.getBinding("y");
-                contexts.put(a, new Triple(x.getValue().stringValue(), a, y.getValue().stringValue()));             
+                contexts.put(a, new Triple(x.getValue().stringValue(), a, y.getValue().stringValue()));
             }
             result.close();
         }
@@ -211,7 +211,9 @@ public class ContextBuilder {
         Collection<Map.Entry<String, Triple>> entries = contexts.entries();
 
         for (Map.Entry<String, Triple> entry : entries) {
-            kSession.insert(entry);
+            //kSession.insert(entry);
+            kSession.insert(entry.getValue());
+
         }
 
         kSession.fireAllRules();
