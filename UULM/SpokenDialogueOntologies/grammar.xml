@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<grammar xmlns="http://www.w3.org/2001/06/grammar" root="rootRule" xml:lang="en-us" mode="voice" tag-format="semantics/1.0" version="1.0">
-  <rule scope="public" id="rootRule">
-    <one-of />
-    <tag>out.TAGutterance = "'" + meta.current().text + "'";</tag>
-  </rule>
-</grammar>
-
