@@ -35,17 +35,22 @@ import java.util.Objects;
  */
 public class ContextCluster implements Serializable {
 
+    String bridge;
     HashSet<Triple> triples;
 
     public ContextCluster() {
         triples = new HashSet<>();
     }
-    
-    public void add(Triple t){
+
+    public void add(Triple t) {
         triples.add(t);
     }
-    
-    public void addAll(HashSet<Triple> triples){
+
+    public void setBridge(String bridge) {
+        this.bridge = bridge;
+    }
+
+    public void addAll(HashSet<Triple> triples) {
         this.triples.addAll(triples);
     }
 
@@ -86,11 +91,5 @@ public class ContextCluster implements Serializable {
     public String toString() {
         return "ContextCluster{" + "triples=" + Print.flattenCollection(triples) + '}';
     }
-    
-    
-    
-    
-    
-    
 
 }

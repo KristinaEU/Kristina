@@ -10,39 +10,167 @@ import gr.iti.kristina.helpers.functions.Print
 global org.slf4j.Logger logger
 global gr.iti.kristina.core.qa.ContextBuilder service
 
+declare R 
+    t: Triple
+end
+declare Bridge 
+    resource: String
+end
 
-rule "transitive" 
+
+
+
+rule "find bridge resources: resources that belong to many contexts" 
+    salience 1000
+when
+    $e1: Entry($k1:key, $t1: value)
+    $e2: Entry($k2:key && $k1 != $k2, $t2:value)
+    $s: String() from service.bridge((Triple) $t1, (Triple) $t2)
+    not Bridge(resource == $s)
+then
+    Bridge b = new Bridge();
+    b.setResource((String) $s);
+    insert(b);
+end
+
+
+
+
+//rule "find connections among the bridges" 
+//    salience 900
+//when
+//    $b: Bridge($r: resource)
+//    $e1: Entry($k1:key, $t1: value, ((Triple) $t1).s == $r || ((Triple)$t1).o == $r)
+//then
+//    logger.debug((String) $r);
+//    
+//end
+
+
+
+
+
+//rule "find dependencies among contexts" 
+//    salience 200
+//when
+//    $e1: Entry($k1:key, $t1: value)
+//    $e2: Entry($k2:key && $k1 != $k2, $t2:value && service.match((Triple) $t1, (Triple) $t2))
+//    //not R(t == $t1)
+//then
+//    //logger.debug("*****" + $t1.toString());
+//    //logger.debug("*****" + $t2.toString());
+//service.logBridge((Triple) $t2);
+//    //R r = new R();
+//    //r.setT((Triple) $t1);
+//    //insert(r);
+//end
+
+//rule "merge clusters" 
+//    salience 120
+//when
+//    $cl1: ContextCluster($triples1:triples)
+//    $t: Triple() from $triples1
+//    $cl2: ContextCluster(this != $cl1, $triples2:triples, service.matchList((Triple) $t, (HashSet) $triples2))
+//then
+//    modify($cl1){
+//        addAll($triples2);
+//    }
+//    retract($cl2);
+//    logger.debug("clusters merged ");   
+//end
+
+
+rule "update cluster" 
     salience 110
 when
-    $t1: Triple($connections1:connections)
-    $t2: Triple(this != $t1, $connections2:connections) from $connections1    
-    $t3: Triple(this != $t2, $connections1 not contains this) from $connections2
-then 
-    $t1.add($t3);
-    update($t1);
-    logger.debug("clusters merged ");   
+    $b: Bridge($r: resource)
+    $e: Entry($t: value, ((Triple) $t).s == $r || ((Triple) $t).o == $r)
     
+    $cl: ContextCluster($triples:triples, service.matchList((Triple) $t, (HashSet) $triples))
+then
+    modify($cl){
+        add((Triple) $t);
+    }
+    insert($cl);
+    retract($e);
+    logger.debug("cluster updated with triple -> " + $t);   
 end
 
-
-rule "direct links" 
+rule "initiate cluster" 
     salience 100
 when
-    $t1: Triple($s1:s, $o1:o)
-    $t2: Triple(this != $t1, $s2:s, $o2:o, $o2 == $s1 && $s2 != $o1, connections not contains $t1 )
+    $b: Bridge($r: resource)
+    $e: Entry($t: value, ((Triple) $t).s == $r || ((Triple) $t).o == $r)
+    not ContextCluster($triples:triples, service.matchResourceList((String) $r, (HashSet) $triples))
 then
-    $t2.add($t1);
-    update($t2);
-    logger.debug("triple connected");   
+    ContextCluster cl = new ContextCluster();
+    cl.add((Triple) $t);
+    cl.setBridge($r);
+    insert(cl);
+    retract($e);
+    logger.debug("cluster added for resource -> " + $r);   
 end
 
-rule "print" 
-    salience 0
-when
-    $t1: Triple($s1:s, $p1:p, $o1:o, $connections:connections)
-then
-    logger.debug($s1 + ", " + $p1 + ", " + $o1);   
-    logger.debug(Print.flattenCollection($connections));   
-end
+//rule "print clusters" 
+//    salience 0
+//when
+//    $cl: ContextCluster($triples:triples)
+//then
+//    //logger.debug("cluster found -> " + $triples);   
+//    service.logContextCluster((ContextCluster) $cl);
+//end
+
+
+//******if there is a triple whose s and o belong to difference contexts!!!!!
+
+//rule "find dependencies among contexts" 
+//    salience 200
+//when
+//    $m1: Entry($k1:key, $t1: value)
+//    $m2: Entry($k2:key && $k1 != $k2, $t2:value && service.match((Triple) $t1, (Triple) $t2))
+//    not R(t == $t1)
+//then
+//    logger.debug($t1.toString());
+//    R r = new R();
+//    r.setT((Triple) $t1);
+//    insert(r);
+//end
+
+
+
+
+//rule "transitive" 
+///    salience 110
+//when
+//    $t1: Triple($connections1:connections)
+//    $t2: Triple(this != $t1, $connections2:connections) from $connections1    
+//    $t3: Triple(this != $t2, $connections1 not contains this) from $connections2
+//then 
+//    $t1.add($t3);
+//    update($t1);
+//    logger.debug("clusters merged ");   
+//    
+//end
+
+
+//rule "direct links" 
+//    salience 100
+//when
+//    $t1: Triple($s1:s, $o1:o)
+//    $t2: Triple(this != $t1, $s2:s, $o2:o, $o2 == $s1 && $s2 != $o1, connections not contains $t1 )
+//then
+//    $t2.add($t1);
+  //  update($t2);
+//    logger.debug("triple connected");   
+//end
+
+//rule "print" 
+//    salience 0
+//when
+//    $t1: Triple($s1:s, $p1:p, $o1:o, $connections:connections)
+//then
+//    logger.debug($s1 + ", " + $p1 + ", " + $o1);   
+//    logger.debug(Print.flattenCollection($connections));   
+//end
 
 

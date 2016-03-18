@@ -26,7 +26,9 @@ package gr.iti.kristina.helpers.functions;
 import com.google.common.collect.Multimap;
 import java.util.Collection;
 import java.util.Set;
+import org.apache.commons.lang.StringUtils;
 import org.openrdf.model.URI;
+import org.openrdf.model.Value;
 
 /**
  *
@@ -56,6 +58,18 @@ public class Print {
         result += "]";
         return result;
     }
-    
-    
+
+    public static String printValue(Value v) {
+        String s = v.stringValue();
+        if (s.contains("#")) {
+            return StringUtils.substringAfterLast(v.stringValue(), "#");
+        } 
+        
+        if (s.contains("/")) {
+            return StringUtils.substringAfterLast(v.stringValue(), "/");
+        }
+        return s;
+
+    }
+
 }
