@@ -12,8 +12,6 @@ import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
-import org.apache.commons.io.IOUtils;
-
 public class KristinaTest {
 
 	static final String address = "http://localhost:11153";
@@ -22,8 +20,16 @@ public class KristinaTest {
 
 		try {
 
-			String data = IOUtils.toString(new FileReader(
+			BufferedReader r = new BufferedReader(new FileReader(
 					"./src/test/inform.ttl"));
+			
+			String data = "";
+			String tmp = r.readLine();
+			while(tmp != null){
+				data = data + tmp + "\n";
+				tmp = r.readLine();
+			}
+			r.close();
 
 			Client client = ClientBuilder.newClient();
 			WebTarget webTarget = client.target(address)
