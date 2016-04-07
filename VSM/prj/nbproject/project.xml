@@ -56,7 +56,7 @@ auxiliary.show.customizer.message=<message>
                     <target>build</target>
                 </action>
                 <action name="run">
-                    <target>exec</target>
+                    <target>run-vsm-project-editor</target>
                 </action>
                 <action name="test">
                     <target>infos</target>

@@ -22,6 +22,7 @@ import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 import eu.kristina.vsm.ssi.SSIEventHandler;
 import eu.kristina.vsm.ssi.SSIEventNotifier;
+import java.util.Locale;
 
 /**
  * @author Gregor Mehlmann
@@ -150,44 +151,93 @@ public final class VSMKristinaPlayer implements RunTimePlayer, SSIEventHandler {
         return true;
     }
 
-    public final /*synchronized*/ void ssi(final String content) {
+    ////////////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////
+    public final void ssi(final String content) {
         // Create the SSI event
         final String event = SSIEventFactory.createEvent(content);
         // Send the SSI event
         mSSINotifier.sendString(event);
     }
 
-    public final /*synchronized*/ String blink(final String id) {
+    ////////////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////
+    public final String blink(
+            final String id,
+            final float duration) {
         // Get the resource
         final RESTFulResource resource = mResourceMap.get("Avatar-Verbal");
         // Get the command
-        final String command = GTIActionFactory.blink();
+        final String command = GTIActionFactory.blink(duration);
         // Execute POST request
         return mRestClient.post(resource, "?id=" + id, command);
     }
 
-    public final /*synchronized*/ String face(
-                    final String id,
-                    final float valence,
-                    final float arousal) {
+    public final String face(
+            final String id,
+            final float valence,
+            final float arousal,
+            final float duration) {
         // Get the resource
         final RESTFulResource resource = mResourceMap.get("Avatar-Verbal");
         // Get the command
-        final String command = GTIActionFactory.face(valence, arousal);
+        final String command = GTIActionFactory.face(valence, arousal, duration);
         // Execute POST request
         return mRestClient.post(resource, "?id=" + id, command);
     }
 
-    public final /*synchronized*/ String speech(final String id) {
+    public final String head(
+            final String id,
+            final String direction,
+            final float duration) {
         // Get the resource
         final RESTFulResource resource = mResourceMap.get("Avatar-Verbal");
         // Get the command
-        final String command = GTIActionFactory.__speech();
+        final String command = GTIActionFactory.head(direction, duration);
+        // Execute POST request
+        return mRestClient.post(resource, "?id=" + id, command);
+    }
+
+    public final String eyes(
+            final String id,
+            final String direction,
+            final float duration) {
+        // Get the resource
+        final RESTFulResource resource = mResourceMap.get("Avatar-Verbal");
+        // Get the command
+        final String command = GTIActionFactory.eyes(direction, duration);
+        // Execute POST request
+        return mRestClient.post(resource, "?id=" + id, command);
+    }
+
+    public final String anim(
+            final String id,
+            final String name,
+            final String mode,
+            final float speed) {
+        // Get the resource
+        final RESTFulResource resource = mResourceMap.get("Avatar-Verbal");
+        // Get the command
+        final String command = GTIActionFactory.anim(name, mode, speed);
+        // Execute POST request
+        return mRestClient.post(resource, "?id=" + id, command);
+    }
+
+    public final String speech(final String id) {
+        // Get the resource
+        final RESTFulResource resource = mResourceMap.get("Avatar-Verbal");
+        // Get the command
+        final String command = GTIActionFactory.speech();
         // Execute POST request
         return mRestClient.post(resource, "?id=" + id, command);
 
     }
 
+    ////////////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////
     public final String dm(
             final float valence,
             final float arousal,
@@ -262,9 +312,12 @@ public final class VSMKristinaPlayer implements RunTimePlayer, SSIEventHandler {
         return mRestClient.post(resource, query, content);
     }
 
-    // Get a random float from [-1, 1[
-    public final float randFloat() {
-        return 2 * (mRandom.nextFloat() - 0.5f);
+    ////////////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////
+    // Get a random float from [scale * (0 - shift), scale * (0 - shift)[
+    public final float randFloat(final float scale, final float shift) {
+        return scale * (mRandom.nextFloat() - shift);
     }
 
     // Get a random int from [0, bound[
@@ -272,6 +325,9 @@ public final class VSMKristinaPlayer implements RunTimePlayer, SSIEventHandler {
         return mRandom.nextInt(bound);
     }
 
+    ////////////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////
     // Set a string variable via runtime
     public final void set(final String name, final String value) {
         if (mRunTime.hasVariable(mProject, name)) {
@@ -344,16 +400,22 @@ public final class VSMKristinaPlayer implements RunTimePlayer, SSIEventHandler {
         }
     }
 
+    ////////////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////
     @Override
     public final void play(final String name, final LinkedList<AbstractValue> args) {
         // Do nothing here ...
     }
 
+    ////////////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////
     // Handle an SSI event 
     @Override
     public final void handle(final String message) {
         // Print some information
-        // mLogger.message("Parsing message " + message + "");
+        //mLogger.message("Receiving SSI event:\n" + message + "");
         try {
             // Parse the received XML string
             final ByteArrayInputStream stream = new ByteArrayInputStream(message.getBytes("UTF-8"));
@@ -388,13 +450,11 @@ public final class VSMKristinaPlayer implements RunTimePlayer, SSIEventHandler {
                                 if (state.equalsIgnoreCase("completed")) {
                                     // User stopped speaking
                                     mLogger.message("User stopped speaking");
-                                    // Set the variable value
-                                    set("UserRoleActivity", "Speaking", false);
+                                    set("UserStatus", "Speaking", false);
                                 } else if (state.equalsIgnoreCase("continued")) {
                                     // User started speaking
                                     mLogger.message("User started speaking");
-                                    // Set the variable value
-                                    set("UserRoleActivity", "Speaking", true);
+                                    set("UserStatus", "Speaking", true);
                                 } else {
                                     // Cannot process this
                                 }
@@ -404,7 +464,7 @@ public final class VSMKristinaPlayer implements RunTimePlayer, SSIEventHandler {
                         } else if (mode.equalsIgnoreCase("fsender") || mode.equalsIgnoreCase("fusion")) {
                             if (name.equalsIgnoreCase("fevent") || name.equalsIgnoreCase("fusion")) {
                                 if (state.equalsIgnoreCase("completed")) {
-                                    if (type.equalsIgnoreCase("ntuple")) {
+                                    if (type.equalsIgnoreCase("ntuple") || type.equalsIgnoreCase("map")) {
                                         // Get the list of tuples
                                         final NodeList tuples = element.getElementsByTagName("tuple");
                                         for (int j = 0; j < tuples.getLength(); j++) {
@@ -413,9 +473,10 @@ public final class VSMKristinaPlayer implements RunTimePlayer, SSIEventHandler {
                                             // Get the tuple's attributes
                                             final String key = tuple.getAttribute("string");
                                             final Double val = Double.parseDouble(tuple.getAttribute("value"));
-                                            // String.format(Locale.US, "%.6f", val)                                            
+
                                             // Set the variable value
-                                            set("UserAffectState", key, val.floatValue());
+                                            //mLogger.message(key + "=" + String.format(Locale.US, "%.6f", val));
+                                            set("UserStatus", key, val.floatValue());
                                         }
                                     } else {
                                         // Cannot process this    
@@ -437,9 +498,10 @@ public final class VSMKristinaPlayer implements RunTimePlayer, SSIEventHandler {
                                         // User said something
                                         mLogger.message("User speech act is '" + text + "'");
                                         // Set the variable value
-                                        set("UserDialogMove", "Function", text);
+                                        //set("UserDialogMove", "Function", text);
                                         //
                                         set("LA", text);
+
                                         //set("UserDialogMove", "Content", text);
                                     } else {
                                         // Cannot process this    
@@ -462,7 +524,8 @@ public final class VSMKristinaPlayer implements RunTimePlayer, SSIEventHandler {
                                         mLogger.message("User utterance is '" + text + "'");
                                         // Set the variable value
                                         //set("UserDialogMove", "Function", text);
-                                        set("UserDialogMove", "Content", text);
+                                        //set("UserDialogMove", "Content", text);
+                                        set("TS", text);
                                     } else {
                                         // Cannot process this    
                                     }
@@ -485,6 +548,5 @@ public final class VSMKristinaPlayer implements RunTimePlayer, SSIEventHandler {
             // Print some information
             mLogger.failure(exc.toString());
         }
-
     }
 }

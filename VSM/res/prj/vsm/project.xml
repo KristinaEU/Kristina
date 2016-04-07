@@ -66,6 +66,7 @@
       <Feature key="ssi.notifier.remote.port" value="1337"/>
       <Feature key="ssi.notifier.remote.flag" value="false"/>
     </Player>
+
   </Players>
   <Agents>
   </Agents>
