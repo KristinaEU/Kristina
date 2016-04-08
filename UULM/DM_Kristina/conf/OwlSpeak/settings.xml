@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE name SYSTEM "./conf/OwlSpeak/settings.dtd">
+
+<owlSetting>
+  <!--The platform that is used to run the SDM [voxeo|tellme] -->
+  <platform>voxeo</platform>
+  <!--Main URL where the root ontology can be found (0=off,1=on) -->
+  <URI>http://localfiles/OwlSpeak/OwlSpeakOnto.owl</URI>
+  <!--Home directory-->
+  <HomePath>./conf/OwlSpeak/</HomePath>
+  <!--plugins-->
+  <plugin>3</plugin>
+  <!--Youpi UPNP Wrapper switch (0=off,1=on) -->
+  <Youpi>0</Youpi>
+  <!--Youpi UPNP Wrapper switch (0=off,1=on) -->
+  <YoupiPath>..\dm\owlspeak\device.xml</YoupiPath>
+  <!--Youpi ID (long value) -->
+  <YoupiID>66612341</YoupiID>
+  <!--Youpi UPNP Wrapper switch (0=off,1=on) -->
+  <YoupiFriendlyName>SDM Study</YoupiFriendlyName>
+  <!-- Used to set the Controller to different Agenda-Priority calculation modes -->
+  <MatchAgenda>0</MatchAgenda>
+  <!-- Factor used for the dynamic Agenda-Priority calculation -->
+  <PrioFactor>10</PrioFactor>
+  <!-- Duration of Loop -->
+  <LoopDuration>7</LoopDuration>
+  <!-- Maxspeechtimeout -->
+  <MaxSpeechTimeout>10</MaxSpeechTimeout>
+  <!-- Speaking rate -->
+  <speakRate>+0%</speakRate>
+  <ttsCodes>
+    <tts id="1">de-de</tts>
+    <tts id="2">en-us</tts>
+    <tts id="3">zira</tts>
+    <tts id="4">tom</tts>
+    <tts id="5">de-de-anna</tts>
+    <!--<tts id="6">de-de-stefan</tts>-->
+	<tts id="6">de-de-katrin</tts>
+  </ttsCodes>
+  <ttsMode>1</ttsMode>
+  <asrCodes>
+    <asr id="1">de-de</asr>
+    <asr id="2">en-us</asr>
+    <asr id="3">de-de</asr>
+  </asrCodes>
+  <asrMode>1</asrMode>
+  <deriveQuality>1</deriveQuality>
+  <dbLogging>0</dbLogging>
+  <callRecording>0</callRecording>
+  <maxNBestListEntries>3</maxNBestListEntries>
+  <SysCommands>
+    <Command name="reset" />
+    <!--to activate set corresponding Agenda in System.owl to respawn=true/-->
+    <!--Command name="reduce" /-->
+    <Command name="reloadSettings" />
+  </SysCommands>
+  
+  <!-- select type of HISvariant (systemStateVariant 1):
+		0: Semantics
+		1: Variables
+	-->
+	
+  <!--  select type of policy variant:
+  		0: heuristic policy (default)
+  		1: trained policy 
+  -->
+  
+  <!--  select type of system state variant:
+  		0: single system state (default)
+  		1: distribution over all system states (HIS)
+  -->
+  <Files>
+    <!--<ontoFile name="system" path="C:\OwlSpeak\" file="System.owl">The System's main Ontology</ontoFile>-->
+	<!--<ontoFile name="travel" path="C:\OwlSpeak\POMDP\" file="travel.var.jaise.owl" HISvariant="1" policyVariant="0" systemStateVariant="0">Travel JAISE</ontoFile>-->
+	<!-- <ontoFile name="heating" path="C:\OwlSpeak\JAISE\" file="heating.jaise.owl" HISvariant="1" policyVariant="0" systemStateVariant="0">Heating JAISE</ontoFile> -->
+	<ontoFile name="kristina" path="./conf/OwlSpeak/" file="StandardMoves.owl" HISvariant="0" policyVariant="0" systemStateVariant="0">KristinaTest</ontoFile>
+  </Files>
+  
+  <Users>
+      <!-- select type of voice document:
+		1: VoiceDocument - regular vxml doc
+		2: HtmlVoiceDocument - html browsing
+		4: HtmlSaltDocument
+		5: EnhancedVoiceDocument
+		6: VoiceDocumentHIS - HIS implementation with n-best-list etc.
+		7: VoiceDocumentPOMDP - slot mechanism with n-best-list etc.
+		8: KristinaDocument
+		10: User Simulation
+	-->
+	
+	<!-- select type of grammar (docType 1,5,6,7):
+		1: Nuance GSL
+		2: GrXML
+		3: JSGF
+		4: JSGF as file
+	-->
+	
+	<User name="user" docType="8" grammarType="5" sleep="0" AutoSave="1">
+	  <!-- <Useronto status="enabled" name="travel">Userontology</Useronto> -->
+	  <!-- <Useronto status="enabled" name="heating">Userontology</Useronto> -->
+	  <Useronto status="enabled" name="kristina">Userontology</Useronto>
+    </User>
+  </Users>
+</owlSetting>
+
