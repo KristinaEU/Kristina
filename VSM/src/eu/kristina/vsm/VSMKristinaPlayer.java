@@ -496,10 +496,12 @@ public final class VSMKristinaPlayer implements RunTimePlayer, SSIEventHandler {
                                         // Just get the content
                                         final String text = event.getTextContent();
                                         // User said something
-                                        mLogger.message("User speech act is '" + text + "'");
+                                        mLogger.warning("User speech act is\n'" + text + "");
                                         // Set the variable value
                                         //set("UserDialogMove", "Function", text);
                                         //
+                                        mLogger.message("Received event is\n" + message + "");
+                                        
                                         set("LA", text);
 
                                         //set("UserDialogMove", "Content", text);
@@ -547,6 +549,7 @@ public final class VSMKristinaPlayer implements RunTimePlayer, SSIEventHandler {
         } catch (final Exception exc) {
             // Print some information
             mLogger.failure(exc.toString());
+            exc.printStackTrace();
         }
     }
 }

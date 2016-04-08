@@ -64,7 +64,7 @@ public final class VSMKristinaService {
      *
      * @return A boolean flag indicating success or failure
      */
-    private static boolean show() {
+    private static synchronized boolean show() {
         try {
             // Check if the project is null
             if (sProject != null) {
@@ -93,7 +93,7 @@ public final class VSMKristinaService {
      *
      * @return A boolean flag indicating success or failure
      */
-    private static boolean hide() {
+    private static synchronized boolean hide() {
         try {
             // Check if the editor is null
             if (sEditor != null) {
@@ -124,7 +124,7 @@ public final class VSMKristinaService {
      *
      * @return A boolean flag indicating success or failure
      */
-    private static boolean load(final String filename) {
+    private static synchronized boolean load(final String filename) {
         try {
             // Stop current project first
             if (sProject != null) {
@@ -187,7 +187,7 @@ public final class VSMKristinaService {
     /**
      * Unload the VSM runtime project instance for KRISTINA
      */
-    private static boolean unload() {
+    private static synchronized boolean unload() {
         try {
             // Check if project is loaded        
             if (sProject != null) {
@@ -226,7 +226,7 @@ public final class VSMKristinaService {
      *
      * @return A boolean flag indicating success or failure
      */
-    private static boolean start() {
+    private static synchronized boolean start() {
         try {
             // Check if project is loaded        
             if (sProject != null) {
@@ -279,7 +279,7 @@ public final class VSMKristinaService {
      *
      * @return A boolean flag indicating success or failure
      */
-    private static boolean stop() {
+    private static synchronized boolean stop() {
         try {
             // Check if project is loaded
             if (sProject != null) {
@@ -373,7 +373,8 @@ public final class VSMKristinaService {
      *
      * @return The xml string representation of the VSM status
      */
-    private static String status() {
+    private static synchronized String status() {
+        //return "bla";
         try {
             if (sProject != null) {
                 if (sRunTime.isRunning(sProject)) {
@@ -391,7 +392,7 @@ public final class VSMKristinaService {
             sLogger.failure(exc.toString());
             // Return null at failure
             return null;
-        }
+        }//*/
     }
 
     /**
@@ -399,7 +400,7 @@ public final class VSMKristinaService {
      *
      * @return The xml string representation of the VSM config
      */
-    private static String config() {
+    private static synchronized String config() {
         try {
             // Create a byte array output stream
             final ByteArrayOutputStream stream = new ByteArrayOutputStream();
@@ -437,7 +438,7 @@ public final class VSMKristinaService {
      *
      * @return The xml string representation of the VSM states
      */
-    private static String states() {
+    private static synchronized String states() {
         try {
             // Create a byte array output stream
             final ByteArrayOutputStream stream = new ByteArrayOutputStream();
@@ -526,11 +527,15 @@ public final class VSMKristinaService {
             return result((stop() ? "SUCCESS" : "FAILURE"));
         } else if (cmd.equalsIgnoreCase("unload")) {
             return result((unload() ? "SUCCESS" : "FAILURE"));
-        } else if (cmd.equalsIgnoreCase("show")) {
+        } 
+        /*
+        else if (cmd.equalsIgnoreCase("show")) {
             return result((show() ? "SUCCESS" : "FAILURE"));
         } else if (cmd.equalsIgnoreCase("hide")) {
             return result((hide() ? "SUCCESS" : "FAILURE"));
-        } else if (cmd.equalsIgnoreCase("status")) {
+        } 
+        */
+        else if (cmd.equalsIgnoreCase("status")) {
             return result(status());
         } else if (cmd.equalsIgnoreCase("config")) {
             return result(config());
