@@ -63,9 +63,11 @@ public class KristinaDemo {
 	@GET
 	@Path("workspace")
 	@Produces("application/json")
-	public synchronized String getWorkspace(){
+	public synchronized String getWorkspace(){try{
 		String[] ws = KristinaPresenter.getWorkspace("user");
+
 		String selection = KristinaPresenter.getSystemMove("user");
+		
 		String result = "{\"selection\":\""+selection+"\",\"workspace\":[";
 		if(ws.length>0){
 			result = result+"\""+ws[0]+"\"";
@@ -75,6 +77,10 @@ public class KristinaDemo {
 		}
 		result = result+"]}";
 		return result;
+	}catch(Exception e){
+		e.printStackTrace();
+	}
+	return null;
 	}
 	
 	@POST
@@ -104,7 +110,9 @@ public class KristinaDemo {
 		} catch (OWLOntologyCreationException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		} 
+		} catch (Exception e){
+			e.printStackTrace();
+		}
 		
 		
 	}

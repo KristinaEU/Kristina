@@ -31,6 +31,7 @@ import org.semanticweb.owlapi.model.OWLImportsDeclaration;
 import org.semanticweb.owlapi.model.OWLIndividual;
 import org.semanticweb.owlapi.model.OWLNamedIndividual;
 import org.semanticweb.owlapi.model.OWLOntology;
+import org.semanticweb.owlapi.model.OWLOntologyAlreadyExistsException;
 import org.semanticweb.owlapi.model.OWLOntologyCreationException;
 import org.semanticweb.owlapi.model.OWLOntologyManager;
 import org.semanticweb.owlapi.model.OWLOntologyStorageException;
@@ -125,7 +126,6 @@ public class InputOutputConverter {
 		for(Node<OWLNamedIndividual> node: ns){
 			set.add(new KristinaMove(node.getRepresentativeElement(), dmOnto, factory, manager));
 		}
-		manager.removeOntology(onto);
 		
 		return set;
 
@@ -224,9 +224,19 @@ public class InputOutputConverter {
 
 	private OWLOntology buildOWLOntology(String rdf)
 			throws OWLOntologyCreationException {
-		
-		OWLOntology onto = manager
+		OWLOntology onto = null;
+		try{
+			onto = manager
 		.loadOntologyFromOntologyDocument(new StringDocumentSource(rdf));
+		}catch(OWLOntologyAlreadyExistsException e){
+			manager.removeOntology(e.getOntologyID());
+			try{
+			onto = manager
+					.loadOntologyFromOntologyDocument(new StringDocumentSource(rdf));
+			}catch(Exception e1){
+				e1.printStackTrace();
+			}
+		}
 		
 		return onto;
 	}

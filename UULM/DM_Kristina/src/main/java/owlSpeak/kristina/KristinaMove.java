@@ -43,7 +43,21 @@ public class KristinaMove extends Move{
 		OWLOntology srcOnto = findSrcOntology();
 		assert srcOnto != null: "Found no declaration for individual "+this;
 		
-		HashSet<OWLClass> topics = new HashSet<OWLClass>();
+		HashSet<OWLNamedIndividual> indiColl = new HashSet<OWLNamedIndividual>();
+		HashSet<OWLNamedIndividual> indis = new HashSet<OWLNamedIndividual>();
+		indis.add((OWLNamedIndividual)indi);
+		indiColl.add((OWLNamedIndividual)indi);
+		do{
+			HashSet<OWLNamedIndividual> tmpColl = new HashSet<OWLNamedIndividual>();
+			for(OWLIndividual i: indis){
+				tmpColl.addAll(findRelatedIndividuals(i,srcOnto));
+			}
+			indis = tmpColl;
+			indis.removeAll(indiColl);
+			indiColl.addAll(indis);
+		}while(!indis.isEmpty());
+		
+		Set<OWLClass> topics = getClasses(indiColl, srcOnto);
 		
 		return topics;
 	}
@@ -57,18 +71,29 @@ public class KristinaMove extends Move{
 		return (OWLClass)dialogueAct;
 	}
 	
-	/*@Override
+	@Override
 	public String toString(){
-		String result = getDialogueAct().toString();
+		OWLClass dialogueAct = getDialogueAct();
+
+		if(!findSrcOntology().equals(onto)){
+
+		String result = dialogueAct.toStringID().split("\\#")[1];
 		Set<OWLClass> topics = getTopics();
+
 		if (topics.size()> 0){
 			result = result + ": ";
+			String top = "";
 			for(OWLClass cl: topics){
-				result = result + cl.toString();
+				top = top + ", "+cl.toStringID().split("\\#")[1];
 			}
+			result = result + top.substring(2);
 		}
+
 		return result;
-	}*/
+		}else{
+			return getLocalName();
+		}
+	}
 	
 	private OWLOntology findSrcOntology(){
 		Set<OWLOntology> allOntos = manager.getOntologies();
@@ -79,5 +104,23 @@ public class KristinaMove extends Move{
 			}
 		}
 		return null;
+	}
+	
+	private Set<OWLNamedIndividual> findRelatedIndividuals(OWLIndividual i, OWLOntology srcOnto){
+
+		Set<OWLAxiom> axioms = ((OWLEntity) i).getReferencingAxioms(srcOnto);
+		HashSet<OWLNamedIndividual> indis = new HashSet<OWLNamedIndividual>();
+		for(OWLAxiom a: axioms){
+			indis.addAll(a.getIndividualsInSignature());
+		}
+		return indis;
+	}
+	
+	private Set<OWLClass> getClasses(Set<OWLNamedIndividual> indis, OWLOntology o){
+		HashSet<OWLClass> classes = new HashSet<OWLClass>();
+		for(OWLNamedIndividual i: indis){
+			classes.add((OWLClass)i.getTypes(o).iterator().next());
+		}
+		return classes;
 	}
 }

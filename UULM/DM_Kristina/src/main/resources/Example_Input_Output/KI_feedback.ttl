@@ -48,15 +48,13 @@
         <rdf:type rdf:resource="&core;Temp.temp"/>
         <dul:classifies rdf:resource="&expl;Temp_1Inf"/>
     </owl:NamedIndividual>
-
-
+	
 
     <!-- http://kristina-project.eu/ontologies/framesituation/example#AgeDescription_1Inf -->
 
     <owl:NamedIndividual rdf:about="&expl;TempDescription_1Inf">
         <rdf:type rdf:resource="&core;TempDescription"/>
         <dul:defines rdf:resource="&expl;Temp.Temp_1Inf"/>
-        <dul:defines rdf:resource="&expl;Temp.Entity_1Inf"/>
     </owl:NamedIndividual>
 
 

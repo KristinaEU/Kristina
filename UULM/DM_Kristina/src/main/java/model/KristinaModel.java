@@ -38,7 +38,6 @@ public class KristinaModel {
 	public static OWLOntology performUpdate(String usermove) throws OWLOntologyCreationException{
 		
 		String workspaceRDF = CerthClient.post(usermove);
-        System.out.println(workspaceRDF);
 		
 		OWLOntology workspace = parseRDF(workspaceRDF);
 		

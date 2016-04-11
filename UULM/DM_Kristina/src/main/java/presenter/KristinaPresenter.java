@@ -140,10 +140,9 @@ public class KristinaPresenter {
 		String[] result = new String[ws.size()];
 		int i = 0;
 		for(Agenda a: ws){
-			result[i++] = a.getHas().iterator().next().toString();
+			result[i++] = a.getHas().iterator().next().asKristinaMove().toString();
 		}
 		return result;
-		
 	}
 	
 	
@@ -216,7 +215,7 @@ public class KristinaPresenter {
 	private static void createEvent(String value){
 		String event = "\"<?xml version=\\\"1.0\\\" ?>"
 				+"<events ssi-v=\\\"V2\\\">"
-				+"<event sender=\\\"DM\\\" event=\\\"STATUS\\\" from=\\\""+System.currentTimeMillis()+"\\\" dur=\\\"0\\\" prob=\\\"1.000000\\\" type=\\\"STRING\\\" state=\\\"COMPLETED\\\" glue=\\\"0\\\">"
+				+"<event sender=\\\"DM\\\" event=\\\"STATUS\\\" from=\\\"0\\\" dur=\\\"0\\\" prob=\\\"1.000000\\\" type=\\\"STRING\\\" state=\\\"COMPLETED\\\" glue=\\\"0\\\">"
 				+value
 				+"<\\/event>"
 				+"<\\/events>\"";
