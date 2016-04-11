@@ -1,6 +1,11 @@
 package presenter;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.DatagramPacket;
+import java.net.DatagramSocket;
+import java.net.InetAddress;
 import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.HashSet;
@@ -46,7 +51,6 @@ public class KristinaPresenter {
 	private static ServletEngine owlEngine; 
 	private static InputOutputConverter ioConverter;
 	private static EmotionGenerator emotionGenerator;
-	private static List<String> events = new LinkedList();
 	
 	// ALMA configuration files
 		private final static String sALMACOMP = "/EmotionGeneration/AffectComputation.aml";
@@ -101,7 +105,7 @@ public class KristinaPresenter {
 
 		}
 		
-		events.add(createEvent("Sending System Move"));
+		createEvent("Sending System Move");
 
 		return output;
 
@@ -207,18 +211,22 @@ public class KristinaPresenter {
 		return null;
 	}
 	
-	public static List<String> getDMEvents(){
-		List<String> tmp = new LinkedList<String>(events);
-		events.removeAll(events);
-		return tmp;
-	}
-	
-	private static String createEvent(String value){
-		return 	"<?xml version=\\\"1.0\\\" ?>"
+	private static void createEvent(String value){
+		String event = "\"<?xml version=\\\"1.0\\\" ?>"
 				+"<events ssi-v=\\\"V2\\\">"
 				+"<event sender=\\\"DM\\\" event=\\\"STATUS\\\" from=\\\""+System.currentTimeMillis()+"\\\" dur=\\\"0\\\" prob=\\\"1.000000\\\" type=\\\"STRING\\\" state=\\\"COMPLETED\\\" glue=\\\"0\\\">"
 				+value
 				+"<\\/event>"
-				+"<\\/events>";
+				+"<\\/events>\"";
+		try{
+		      DatagramSocket clientSocket = new DatagramSocket();
+		      InetAddress IPAddress = InetAddress.getByName("137.250.171.230");
+		      byte[] sendData = event.getBytes();
+		      DatagramPacket sendPacket = new DatagramPacket(sendData, sendData.length, IPAddress, 1337);
+		      clientSocket.send(sendPacket);
+		      clientSocket.close(); 
+		}catch(Exception e){
+			e.printStackTrace();
+		}
 	}
 }

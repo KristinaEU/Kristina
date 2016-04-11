@@ -114,20 +114,4 @@ public class KristinaDemo {
 	public synchronized void setEmotion(@QueryParam("valence") String valence, @QueryParam("arousal") String arousal){
 		KristinaPresenter.setUserEmotion(new KristinaEmotion(Float.parseFloat(valence), Float.parseFloat(arousal)));
 	}
-	
-	@GET
-	@Path("getDMEvents")
-	@Produces("application/json")
-	public synchronized String getDMEvents(){
-		String result = "[";
-		List<String> l = KristinaPresenter.getDMEvents();
-		if(l.size()>0){
-			result = result+"\""+l.get(0)+"\"";
-		for(int i = 1; i < l.size(); i++){
-			result = result+",\""+l.get(i)+"\"";
-		}
-		}
-		result = result+"]";
-		return result;
-	}
 }
