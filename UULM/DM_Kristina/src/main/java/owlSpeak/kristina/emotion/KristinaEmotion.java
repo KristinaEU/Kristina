@@ -16,5 +16,9 @@ public class KristinaEmotion {
 	public double getArousal() {
 		return arousal;
 	}
+	
+	public boolean isExtremeEmotion(){
+		return Math.sqrt(valence*valence+arousal*arousal)>0.5;
+	}
 
 }

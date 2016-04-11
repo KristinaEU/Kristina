@@ -5,7 +5,7 @@
     <script src="js/charts.js"></script>
     <script src="js/status.js"></script>
     <script src="js/executeCommands.js"></script>
-    <script src="js/ssiEventLog.js"></script>
+	<script src="js/workspaceLog.js"></script>
 	<script src="js/controls.js"></script>
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -34,7 +34,7 @@
 
 </head>
 
-<body onload="initStatusCheck(); initEventLog()">
+<body onload="initStatusCheck(); initWorkspaceLog()">
     <div class="container">
 
         <!-- section start-page -->
@@ -157,7 +157,7 @@
             <h1>WORKSPACE</h1>
             <hr />
             <p id="tmp" class="title">Current Agendas in Workspace</p>
-            <div id="eventDiv" style="padding-top: 40px;"></div>
+            <div id="workspaceDiv" style="padding-top: 40px;"></div>
         </section>
 		
         <div class="clear"></div>

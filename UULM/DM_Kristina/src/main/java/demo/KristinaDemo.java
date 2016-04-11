@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.net.URISyntaxException;
+import java.util.List;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
@@ -16,6 +17,7 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 import javax.ws.rs.WebApplicationException;
+
 
 
 
@@ -111,5 +113,21 @@ public class KristinaDemo {
 	@Path("sendVA")
 	public synchronized void setEmotion(@QueryParam("valence") String valence, @QueryParam("arousal") String arousal){
 		KristinaPresenter.setUserEmotion(new KristinaEmotion(Float.parseFloat(valence), Float.parseFloat(arousal)));
+	}
+	
+	@GET
+	@Path("getDMEvents")
+	@Produces("application/json")
+	public synchronized String getDMEvents(){
+		String result = "[";
+		List<String> l = KristinaPresenter.getDMEvents();
+		if(l.size()>0){
+			result = result+"\""+l.get(0)+"\"";
+		for(int i = 1; i < l.size(); i++){
+			result = result+",\""+l.get(i)+"\"";
+		}
+		}
+		result = result+"]";
+		return result;
 	}
 }

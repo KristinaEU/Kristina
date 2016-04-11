@@ -2,7 +2,7 @@
 var almaRunning, almaRunning, lastchecked;
 
 function getDMStatus() {
-    $.get("http://137.250.171.232:11153/status", function (data) {
+    $.get("http://localhost:11153/status", function (data) {
         var nd = new Date();
         lastchecked = "Last checked: " + nd.getHours() + ':' + (nd.getMinutes() < 10 ? '0' + nd.getMinutes() : nd.getMinutes()) + ':' + (nd.getSeconds() < 10 ? '0' + nd.getSeconds() : nd.getSeconds()) + ' - ' + nd.getDay() + '.' + (nd.getMonth() + 1) + '.' + nd.getYear() + '</br>';
         owlRunning = data.owlRunning;

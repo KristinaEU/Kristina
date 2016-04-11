@@ -396,10 +396,11 @@ td {
 
 .about-us {
     position: relative;
-    width: 900px;
+    width: 80%;
     margin: 0 auto;
     margin-bottom: 10px;
     height: 100%;
+	float:right;
 }
 
     .about-us h1 {

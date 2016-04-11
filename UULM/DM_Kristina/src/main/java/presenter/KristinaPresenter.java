@@ -5,12 +5,14 @@ import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.Iterator;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
 import java.util.UUID;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import org.coode.owlapi.owlxmlparser.OWLIndividualElementHandler;
 import org.semanticweb.owlapi.model.OWLOntologyCreationException;
 
 import model.KristinaModel;
@@ -18,7 +20,9 @@ import model.KristinaModel;
 import org.semanticweb.owlapi.apibinding.OWLManager;
 import org.semanticweb.owlapi.io.StringDocumentTarget;
 import org.semanticweb.owlapi.model.IRI;
+import org.semanticweb.owlapi.model.OWLAxiom;
 import org.semanticweb.owlapi.model.OWLIndividual;
+import org.semanticweb.owlapi.model.OWLNamedIndividual;
 import org.semanticweb.owlapi.model.OWLOntology;
 import org.semanticweb.owlapi.model.OWLOntologyManager;
 import org.semanticweb.owlapi.model.OWLOntologyStorageException;
@@ -42,6 +46,7 @@ public class KristinaPresenter {
 	private static ServletEngine owlEngine; 
 	private static InputOutputConverter ioConverter;
 	private static EmotionGenerator emotionGenerator;
+	private static List<String> events = new LinkedList();
 	
 	// ALMA configuration files
 		private final static String sALMACOMP = "/EmotionGeneration/AffectComputation.aml";
@@ -95,6 +100,8 @@ public class KristinaPresenter {
 					sysArousal);
 
 		}
+		
+		events.add(createEvent("Sending System Move"));
 
 		return output;
 
@@ -159,17 +166,59 @@ public class KristinaPresenter {
 	}
 	
 	private static KristinaMove selectSystemMove(WorkSpace ws){
-		Iterator<Agenda> it = ws.getNext().iterator();
-		int strategy = (int)(Math.random()*ws.getNext().size());
-		while(it.hasNext()){
-			if(strategy == 0){
-				return it.next().getHas().iterator().next().asKristinaMove();
+		Collection<Agenda> agendas = ws.getNext();
+		KristinaEmotion sysEmo = getCurrentEmotion();
+		if(sysEmo.isExtremeEmotion()){
+			String chosen = "";
+			if(sysEmo.getValence()>0){
+				chosen = "agenda_Express_Joy";
+			}else if (sysEmo.getArousal() < -0.5){
+				chosen = "agenda_Express_Commiseration";
+			}else if (sysEmo.getArousal() < 0.5){
+				chosen = "agenda_Cheer_Up";
+			}else{
+				chosen = "agenda_Calm_Down";
 			}
-			strategy = strategy-1;	
-			it.next();
+			
+			for(Agenda agenda: agendas){
+				if(agenda.getLocalName().equals(chosen)){
+					return agenda.getHas().iterator().next().asKristinaMove();
+				}
+			}
+			
+		}else{
+			Collection<Agenda> realMoves = new HashSet<Agenda>();
+			for(Agenda agenda: agendas){
+				OWLAxiom decl = ws.factory.getOWLDeclarationAxiom((OWLNamedIndividual)agenda.indi);
+				if(!ws.onto.containsAxiom(decl)){
+					realMoves.add(agenda);
+				}
+			}
+			
+			int strategy = (int)(Math.random()*realMoves.size());
+			for(Agenda agenda: realMoves){
+				if(strategy == 0){
+					return agenda.getHas().iterator().next().asKristinaMove();
+				}
+				strategy = strategy-1;
+			}
+			
 		}
 		return null;
 	}
 	
+	public static List<String> getDMEvents(){
+		List<String> tmp = new LinkedList<String>(events);
+		events.removeAll(events);
+		return tmp;
+	}
 	
+	private static String createEvent(String value){
+		return 	"<?xml version=\\\"1.0\\\" ?>"
+				+"<events ssi-v=\\\"V2\\\">"
+				+"<event sender=\\\"DM\\\" event=\\\"STATUS\\\" from=\\\""+System.currentTimeMillis()+"\\\" dur=\\\"0\\\" prob=\\\"1.000000\\\" type=\\\"STRING\\\" state=\\\"COMPLETED\\\" glue=\\\"0\\\">"
+				+value
+				+"<\\/event>"
+				+"<\\/events>";
+	}
 }
