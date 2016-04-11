@@ -15,6 +15,16 @@ function getEvents() {
         }
         updateList();
     });
+	$.get("http://137.250.171.232:11153/getDMEvents", function (data) {
+        for (i = data.length - 1 ; i >= 0; i--) {
+            var parsed = parseXML(data[i]);
+            if (parsed != false) {
+                eventQueque.unshift(parsed);
+                eventQueque.pop();
+            }
+        }
+        updateList();
+    });
 }
 
 function updateList() {
