@@ -167,6 +167,8 @@ public class KristinaPresenter {
 		WorkSpace ws = new KristinaModel().performDemoUpdate(userMoves.iterator().next(), user, ioConverter, owlEngine);
 		
 		systemMove = selectSystemMove(ws);
+		
+		createEvent("Sending System Move");
 	}
 	
 	private static KristinaMove selectSystemMove(WorkSpace ws){
@@ -221,6 +223,7 @@ public class KristinaPresenter {
 		try{
 		      DatagramSocket clientSocket = new DatagramSocket();
 		      InetAddress IPAddress = InetAddress.getByName("137.250.171.230");
+		      //InetAddress IPAddress = InetAddress.getByName("localhost");
 		      byte[] sendData = event.getBytes();
 		      DatagramPacket sendPacket = new DatagramPacket(sendData, sendData.length, IPAddress, 1337);
 		      clientSocket.send(sendPacket);
