@@ -221,7 +221,7 @@ public class KristinaPresenter {
 				+"<\\/events>\"";
 		try{
 		      DatagramSocket clientSocket = new DatagramSocket();
-		      InetAddress IPAddress = InetAddress.getByName("137.250.171.230");
+		      InetAddress IPAddress = InetAddress.getByName("137.250.171.232");
 		      //InetAddress IPAddress = InetAddress.getByName("localhost");
 		      byte[] sendData = event.getBytes();
 		      DatagramPacket sendPacket = new DatagramPacket(sendData, sendData.length, IPAddress, 1337);

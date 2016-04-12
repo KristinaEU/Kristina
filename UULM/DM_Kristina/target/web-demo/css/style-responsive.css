@@ -10,6 +10,10 @@
 
 /* iPad (portrait) */
 @media (min-width: 320px) and (max-width: 579px) {
+.custom-wrapper{
+	width:10%;
+	height:100%;
+}
 
 .menu{
   display:none;
@@ -41,7 +45,8 @@ h1 {
 }
 
 .about-us{
-  width:300px;
+  
+    width: 80%;
 }
 
 .about-us hr,.portfolio .portfolio-margin hr, .contact hr {
@@ -53,10 +58,6 @@ h1 {
   margin-bottom:20px;
 }
 
- .about-us .column-three{
-  width:300px;
-  margin-bottom:70px;
- }
 
 .portfolio .portfolio-margin{
   width:300px;
@@ -115,6 +116,11 @@ h1 {
 /* iPad (portrait) */
 @media (min-width: 580px) and (max-width: 767px) {
 
+.custom-wrapper{
+	width:10%;
+	height:100%;
+}
+
 .menu{
   display:none;
 }
@@ -149,7 +155,8 @@ h1 {
 }
 
 .about-us{
-  width:300px;
+  
+    width: 80%;
 }
 
 .about-us hr,.portfolio .portfolio-margin hr, .contact hr {
@@ -160,11 +167,6 @@ h1 {
   width:300px;
   margin-bottom:20px;
 }
-
- .about-us .column-three{
-  width:300px;
-  margin-bottom:70px;
- }
 
 .portfolio .portfolio-margin{
   width:300px;
@@ -222,6 +224,10 @@ h1 {
 @media (min-width: 768px) and (max-width: 1023px) {
 
 
+.custom-wrapper{
+	width:10%;
+	height:100%;
+}
 
 .menu-content .logo{
   width:200px;
@@ -232,19 +238,17 @@ h1 {
 }
 
 .about-us{
-  width:700px;
+  width: 80%;
 }
 
 .about-us .column-one{
-  width:233px;
+  width:45%;
+  margin-left: 0px;
 }
 
 .about-us .column-two{
-  width:233px;
-}
-
-.about-us .column-three{
-  width:233px;
+  width:45%;
+  margin-right: 0px;
 }
 
 .portfolio .portfolio-margin {
