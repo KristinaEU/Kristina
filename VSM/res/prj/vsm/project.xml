@@ -59,7 +59,7 @@
       <Feature key="ssi.listener.local.port" value="11220"/>
       <Feature key="ssi.listener.remote.host" value="137.250.171.230"/>
       <Feature key="ssi.listener.remote.port" value="0"/>
-      <Feature key="ssi.listener.remote.flag" value="false"/>
+      <Feature key="ssi.listener.remote.flag" value="false/">
       <Feature key="ssi.notifier.local.host" value="137.250.171.231"/>
       <Feature key="ssi.notifier.local.port" value="1337"/>
       <Feature key="ssi.notifier.remote.host" value="137.250.171.230"/>

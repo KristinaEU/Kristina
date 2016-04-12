@@ -22,7 +22,6 @@ import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 import eu.kristina.vsm.ssi.SSIEventHandler;
 import eu.kristina.vsm.ssi.SSIEventNotifier;
-import java.util.Locale;
 
 /**
  * @author Gregor Mehlmann
@@ -81,7 +80,7 @@ public final class VSMKristinaPlayer implements RunTimePlayer, SSIEventHandler {
             // Create the service data
             final RESTFulResource resource = new RESTFulResource(host, name, path, cons, prod);
             // Print some information
-            mLogger.message("Registering RESTful service resource '" + resource + "'" + "\r\n");
+            //mLogger.message("Registering RESTful service resource '" + resource + "'" + "\r\n");
             // Add the new service then
             mResourceMap.put(name, resource);
         }
@@ -111,13 +110,6 @@ public final class VSMKristinaPlayer implements RunTimePlayer, SSIEventHandler {
                 + "SSI Notifier Remote Host : '" + ssinrhost + "'" + "\r\n"
                 + "SSI Notifier Remote Port : '" + ssinrport + "'" + "\r\n"
                 + "SSI Notifier Remote Flag : '" + ssinrflag + "'" + "\r\n");
-
-        // Initialize the SSI listener
-        mSSIListener = new SSIEventListener(this,
-                ssillhost, Integer.parseInt(ssillport),
-                ssilrhost, Integer.parseInt(ssilrport),
-                Boolean.parseBoolean(ssilrflag));
-        mSSIListener.start();
         // Initialize the SSI notifier
         mSSINotifier = new SSIEventNotifier(this,
                 ssinlhost, Integer.parseInt(ssinlport),
@@ -126,8 +118,14 @@ public final class VSMKristinaPlayer implements RunTimePlayer, SSIEventHandler {
         mSSINotifier.start();
         // Initialize the rest client
         mRestClient = new RESTFulWebClient();
+         // Initialize the SSI listener
+        mSSIListener = new SSIEventListener(this,
+                ssillhost, Integer.parseInt(ssillport),
+                ssilrhost, Integer.parseInt(ssilrport),
+                Boolean.parseBoolean(ssilrflag));
+        mSSIListener.start();
         // Print some information
-        mLogger.message("Launching KRISTINA scene player '" + this + "' with configuration:\n" + mPlayerConfig);
+        //mLogger.message("Launching KRISTINA scene player '" + this + "' with configuration:\n" + mPlayerConfig);
         // Return true at success
         return true;
     }
@@ -245,7 +243,7 @@ public final class VSMKristinaPlayer implements RunTimePlayer, SSIEventHandler {
         // Get the resource
         final RESTFulResource resource = mResourceMap.get("Dialog-Management");
         // Print some information
-        mLogger.message("Resource is\n'" + resource + "'");
+        //mLogger.message("Resource is\n'" + resource + "'");
         // Get the query data
         final String query = "?valence=" + valence + "&arousal=" + arousal;
         // Execute POST request
@@ -257,7 +255,7 @@ public final class VSMKristinaPlayer implements RunTimePlayer, SSIEventHandler {
         // Get the resource
         final RESTFulResource resource = mResourceMap.get("Mode-Selection");
         // Print some information
-        mLogger.message("Resource is\n'" + resource + "'");
+        //mLogger.message("Resource is\n'" + resource + "'");
         // Get the query data
         final String query = "?mode=verbal";
         // Execute POST request
@@ -269,7 +267,7 @@ public final class VSMKristinaPlayer implements RunTimePlayer, SSIEventHandler {
         // Get the resource
         final RESTFulResource resource = mResourceMap.get("Mode-Selection");
         // Print some information
-        mLogger.message("Resource is\n'" + resource + "'");
+        //mLogger.message("Resource is\n'" + resource + "'");
         // Get the query data
         final String query = "?mode=non_verbal";
         // Execute POST request
@@ -281,7 +279,7 @@ public final class VSMKristinaPlayer implements RunTimePlayer, SSIEventHandler {
         // Get the resource
         final RESTFulResource resource = mResourceMap.get("Language-Generation");
         // Print some information
-        mLogger.message("Resource is\n'" + resource + "'");
+        //mLogger.message("Resource is\n'" + resource + "'");
         // Get the query data
         final String query = "";
         // Execute POST request
@@ -293,7 +291,7 @@ public final class VSMKristinaPlayer implements RunTimePlayer, SSIEventHandler {
         // Get the resource
         final RESTFulResource resource = mResourceMap.get("Avatar-Verbal");
         // Print some information
-        mLogger.message("Resource is\n'" + resource + "'");
+        //mLogger.message("Resource is\n'" + resource + "'");
         // Get the query data
         final String query = "?id=hcm";
         // Execute POST request
@@ -305,7 +303,7 @@ public final class VSMKristinaPlayer implements RunTimePlayer, SSIEventHandler {
         // Get the resource
         final RESTFulResource resource = mResourceMap.get("Avatar-Nonverbal");
         // Print some information
-        mLogger.message("Resource is\n'" + resource + "'");
+        //mLogger.message("Resource is\n'" + resource + "'");
         // Get the query data
         final String query = "?id=hcm";
         // Execute POST request
@@ -333,7 +331,7 @@ public final class VSMKristinaPlayer implements RunTimePlayer, SSIEventHandler {
         if (mRunTime.hasVariable(mProject, name)) {
             mRunTime.setVariable(mProject, name, value);
         } else {
-            mLogger.failure("Error: Variable '" + name + "' does not exist");
+            //mLogger.failure("Error: Variable '" + name + "' does not exist");
         }
     }
 
@@ -342,7 +340,7 @@ public final class VSMKristinaPlayer implements RunTimePlayer, SSIEventHandler {
         if (mRunTime.hasVariable(mProject, name)) {
             mRunTime.setVariable(mProject, name, value);
         } else {
-            mLogger.failure("Error: Variable '" + name + "' does not exist");
+            //mLogger.failure("Error: Variable '" + name + "' does not exist");
         }
     }
 
@@ -351,7 +349,7 @@ public final class VSMKristinaPlayer implements RunTimePlayer, SSIEventHandler {
         if (mRunTime.hasVariable(mProject, name)) {
             mRunTime.setVariable(mProject, name, value);
         } else {
-            mLogger.failure("Error: Variable '" + name + "' does not exist");
+            //mLogger.failure("Error: Variable '" + name + "' does not exist");
         }
     }
 
@@ -360,7 +358,7 @@ public final class VSMKristinaPlayer implements RunTimePlayer, SSIEventHandler {
         if (mRunTime.hasVariable(mProject, name)) {
             mRunTime.setVariable(mProject, name, value);
         } else {
-            mLogger.failure("Error: Variable '" + name + "' does not exist");
+            //mLogger.failure("Error: Variable '" + name + "' does not exist");
         }
     }
 
@@ -369,7 +367,7 @@ public final class VSMKristinaPlayer implements RunTimePlayer, SSIEventHandler {
         if (mRunTime.hasVariable(mProject, name, member)) {
             mRunTime.setVariable(mProject, name, member, value);
         } else {
-            mLogger.failure("Error: Variable '" + name + "." + member + "' does not exist");
+            //mLogger.failure("Error: Variable '" + name + "." + member + "' does not exist");
         }
     }
 
@@ -378,7 +376,7 @@ public final class VSMKristinaPlayer implements RunTimePlayer, SSIEventHandler {
         if (mRunTime.hasVariable(mProject, name, member)) {
             mRunTime.setVariable(mProject, name, member, value);
         } else {
-            mLogger.failure("Error: Variable '" + name + "." + member + "' does not exist");
+            //mLogger.failure("Error: Variable '" + name + "." + member + "' does not exist");
         }
     }
 
@@ -387,7 +385,7 @@ public final class VSMKristinaPlayer implements RunTimePlayer, SSIEventHandler {
         if (mRunTime.hasVariable(mProject, name, member)) {
             mRunTime.setVariable(mProject, name, member, value);
         } else {
-            mLogger.failure("Error: Variable '" + name + "." + member + "' does not exist");
+            //mLogger.failure("Error: Variable '" + name + "." + member + "' does not exist");
         }
     }
 
@@ -396,7 +394,7 @@ public final class VSMKristinaPlayer implements RunTimePlayer, SSIEventHandler {
         if (mRunTime.hasVariable(mProject, name, member)) {
             mRunTime.setVariable(mProject, name, member, value);
         } else {
-            mLogger.failure("Error: Variable '" + name + "." + member + "' does not exist");
+            //mLogger.failure("Error: Variable '" + name + "." + member + "' does not exist");
         }
     }
 
@@ -449,11 +447,11 @@ public final class VSMKristinaPlayer implements RunTimePlayer, SSIEventHandler {
                             if (name.equalsIgnoreCase("voice") || name.equalsIgnoreCase("vad")) {
                                 if (state.equalsIgnoreCase("completed")) {
                                     // User stopped speaking
-                                    mLogger.message("User stopped speaking");
+                                    mLogger.success("User stopped speaking");
                                     set("UserStatus", "Speaking", false);
                                 } else if (state.equalsIgnoreCase("continued")) {
                                     // User started speaking
-                                    mLogger.message("User started speaking");
+                                    mLogger.success("User started speaking");
                                     set("UserStatus", "Speaking", true);
                                 } else {
                                     // Cannot process this
@@ -496,15 +494,9 @@ public final class VSMKristinaPlayer implements RunTimePlayer, SSIEventHandler {
                                         // Just get the content
                                         final String text = event.getTextContent();
                                         // User said something
-                                        mLogger.warning("User speech act is\n'" + text + "");
+                                        mLogger.success("User speech act is\n" + text + "");
                                         // Set the variable value
-                                        //set("UserDialogMove", "Function", text);
-                                        //
-                                        mLogger.message("Received event is\n" + message + "");
-                                        
                                         set("LA", text);
-
-                                        //set("UserDialogMove", "Content", text);
                                     } else {
                                         // Cannot process this    
                                     }
@@ -523,10 +515,8 @@ public final class VSMKristinaPlayer implements RunTimePlayer, SSIEventHandler {
                                         // Just get the content
                                         final String text = event.getTextContent();
                                         // User said something
-                                        mLogger.message("User utterance is '" + text + "'");
+                                        mLogger.success("User utterance is\n" + text + "'");
                                         // Set the variable value
-                                        //set("UserDialogMove", "Function", text);
-                                        //set("UserDialogMove", "Content", text);
                                         set("TS", text);
                                     } else {
                                         // Cannot process this    

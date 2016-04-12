@@ -3,7 +3,6 @@ package eu.kristina.vsm;
 import com.sun.jersey.api.container.httpserver.HttpServerFactory;
 import com.sun.jersey.spi.resource.Singleton;
 import com.sun.net.httpserver.HttpServer;
-import de.dfki.vsm.editor.EditorInstance;
 import de.dfki.vsm.editor.project.EditorProject;
 import de.dfki.vsm.editor.project.ProjectEditor;
 import de.dfki.vsm.runtime.RunTimeInstance;
@@ -374,7 +373,6 @@ public final class VSMKristinaService {
      * @return The xml string representation of the VSM status
      */
     private static synchronized String status() {
-        //return "bla";
         try {
             if (sProject != null) {
                 if (sRunTime.isRunning(sProject)) {
@@ -527,15 +525,13 @@ public final class VSMKristinaService {
             return result((stop() ? "SUCCESS" : "FAILURE"));
         } else if (cmd.equalsIgnoreCase("unload")) {
             return result((unload() ? "SUCCESS" : "FAILURE"));
-        } 
-        /*
+        } /*
         else if (cmd.equalsIgnoreCase("show")) {
             return result((show() ? "SUCCESS" : "FAILURE"));
         } else if (cmd.equalsIgnoreCase("hide")) {
             return result((hide() ? "SUCCESS" : "FAILURE"));
         } 
-        */
-        else if (cmd.equalsIgnoreCase("status")) {
+         */ else if (cmd.equalsIgnoreCase("status")) {
             return result(status());
         } else if (cmd.equalsIgnoreCase("config")) {
             return result(config());

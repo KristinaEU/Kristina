@@ -24,9 +24,8 @@ public final class RESTFulWebClient {
         mClient = Client.create(new DefaultClientConfig());
         mClient.setConnectTimeout(60000);
         mClient.setReadTimeout(60000);
-        
         // Print some information
-        mLogger.message("Creating RESTful client '" + mClient + "'");
+        //mLogger.message("Creating RESTful client '" + mClient + "'");
     }
 
     public final String get(
@@ -36,7 +35,7 @@ public final class RESTFulWebClient {
             // Create the final URL
             final String url = resource.getPath() + queryargs;
             // Print some information
-            mLogger.message("Executing GET request to URL '" + url + "'");
+            //mLogger.message("Executing GET request to URL '" + url + "'");
             // Execute the get request
             final ClientResponse response = mClient
                     .resource(url)
@@ -44,7 +43,7 @@ public final class RESTFulWebClient {
                     .type(resource.getCons())
                     .get(ClientResponse.class);
             // Print some information
-            mLogger.message("Receiving GET response from URL '" + url + "' as object:\n" + response);
+            //mLogger.message("Receiving GET response from URL '" + url + "' as object:\n" + response);
             // Check the response status
             if (response.getStatus() == Status.OK.getStatusCode()) {
                 // Get the mime type name
@@ -53,10 +52,10 @@ public final class RESTFulWebClient {
                 // Get the entity string
                 final String entity = response.getEntity(String.class);
                 // Print some information
-                mLogger.success("Success: The POST request '" + url
-                        + "' to RESTful service resource '" + resource
-                        + "' returned a response of type '" + type
-                        + "' and content entity:\n" + entity);
+                //mLogger.success("Success: The GET request '" + url
+                //        + "' to RESTful service resource '" + resource
+                //        + "' returned a response of type '" + type
+                //        + "' and content entity:\n" + entity);
                 // Return the entity then
                 return entity;
             } else {
@@ -82,7 +81,7 @@ public final class RESTFulWebClient {
             // Create the final URL
             final String url = resource.getPath() + queryargs;
             // Print some information
-            mLogger.message("Executing POST request to URL '" + url + "' with content:\n" + content);
+            //mLogger.message("Executing POST request to URL '" + url + "' with content:\n" + content);
             // Execute the post request
             final ClientResponse response = mClient
                     .resource(url)
@@ -90,7 +89,7 @@ public final class RESTFulWebClient {
                     .type(resource.getCons())
                     .post(ClientResponse.class, content);
             // Print some information
-            mLogger.message("Receiving POST response from URL '" + url + "' as object:\n" + response);
+            //mLogger.message("Receiving POST response from URL '" + url + "' as object:\n" + response);
             // Check the response status
             if (response.getStatus() == Status.OK.getStatusCode()) {
                 // Get the mime type name
@@ -99,10 +98,10 @@ public final class RESTFulWebClient {
                 // Get the entity string
                 final String entity = response.getEntity(String.class);
                 // Print some information
-                mLogger.success("Success: The POST request '" + url
-                        + "' to RESTful service resource '" + resource
-                        + "' returned a response of type '" + type
-                        + "' and content entity:\n" + entity);
+                //mLogger.success("Success: The POST request '" + url
+                //      + "' to RESTful service resource '" + resource
+                //        + "' returned a response of type '" + type
+                //        + "' and content entity:\n" + entity);
                 // Return the entity then
                 return entity;
             } else {
@@ -115,8 +114,6 @@ public final class RESTFulWebClient {
         } catch (final Exception exc) {
             // Print some information
             mLogger.failure(exc.toString());
-            //
-            //exc.printStackTrace();
             // Return null at failure
             return exc.getMessage();
         }

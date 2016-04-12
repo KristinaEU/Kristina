@@ -1,0 +1,15 @@
+Start RUN.BAT
+
+type the following:
+
+load res/prj/vsm
+start
+
+   .
+   .
+   .
+
+stop
+unload
+exit
+

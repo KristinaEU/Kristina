@@ -2,14 +2,11 @@ package eu.kristina.vsm.ssi;
 
 import de.dfki.vsm.util.log.LOGDefaultLogger;
 import eu.kristina.vsm.VSMKristinaPlayer;
-import java.io.IOException;
-import java.io.UnsupportedEncodingException;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.InetSocketAddress;
 import java.net.SocketAddress;
 import java.net.SocketException;
-import java.util.Arrays;
 
 /**
  *
@@ -54,7 +51,7 @@ public class SSIEventNotifier extends Thread {
         mLAddr = new InetSocketAddress(mLHost, mLPort);
         mRAddr = new InetSocketAddress(mRHost, mRPort);
         // Print some information
-        mLogger.message("Creating SSI event notifier " + mLAddr + " " + mRAddr);
+        //mLogger.message("Creating SSI event notifier " + mLAddr + " " + mRAddr);
     }
 
     // Start the handler thread
@@ -68,7 +65,7 @@ public class SSIEventNotifier extends Thread {
                 mSocket.connect(mRAddr);
             }
             // Print some information
-            mLogger.message("Starting SSI event notifier " + mLAddr + " " + mRAddr);
+            //mLogger.message("Starting SSI event notifier " + mLAddr + " " + mRAddr);
             // Start the server thread
             super.start();
         } catch (final SocketException exc) {
@@ -87,7 +84,7 @@ public class SSIEventNotifier extends Thread {
         // Interrupt it if sleeping
         interrupt();
         // Print some information
-        mLogger.message("Aborting SSI event notifier " + mLAddr + " " + mRAddr);
+        //mLogger.message("Aborting SSI event notifier " + mLAddr + " " + mRAddr);
     }
 
     // Execute the handler thread
@@ -103,7 +100,7 @@ public class SSIEventNotifier extends Thread {
             }
         }
         // Print some information
-        mLogger.message("Terminating SSI event notifier " + mLAddr + " " + mRAddr);
+        //mLogger.message("Terminating SSI event notifier " + mLAddr + " " + mRAddr);
     }
 
     // Send a message via the server
@@ -117,7 +114,7 @@ public class SSIEventNotifier extends Thread {
             // And send the UDP packet
             mSocket.send(packet);
             // Print some information
-            mLogger.message("SSI event notifier sending '" + string + "'");
+            //mLogger.message("SSI event notifier sending '" + string + "'");
             // Return true at success
             return true;
         } catch (final Exception exc) {

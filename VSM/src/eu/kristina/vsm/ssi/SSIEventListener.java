@@ -56,7 +56,7 @@ public final class SSIEventListener extends Thread {
         mLAddr = new InetSocketAddress(mLHost, mLPort);
         mRAddr = new InetSocketAddress(mRHost, mRPort);
         // Print some information
-        mLogger.message("Creating SSI event listener " + mLAddr + " " + mRAddr);
+        //mLogger.message("Creating SSI event listener " + mLAddr + " " + mRAddr);
     }
 
     // Start the handler thread
@@ -65,12 +65,16 @@ public final class SSIEventListener extends Thread {
         try {
             // Create the server socket
             mSocket = new DatagramSocket(mLAddr);
+           
             // Connect the server socket
             if (mRFlag) {
+                //
+                //mSocket.bind(mRAddr);
+                //
                 mSocket.connect(mRAddr);
             }
             // Print some information
-            mLogger.message("Starting SSI event listener " + mLAddr + " " + mRAddr);
+            //mLogger.message("Starting SSI event listener " + mLAddr + " " + mRAddr);
             // Start the server thread
             super.start();
         } catch (final SocketException exc) {
@@ -89,7 +93,7 @@ public final class SSIEventListener extends Thread {
         // Interrupt it if sleeping
         interrupt();
         // Print some information
-        mLogger.message("Aborting SSI event listener " + mLAddr + " " + mRAddr);
+        //mLogger.message("Aborting SSI event listener " + mLAddr + " " + mRAddr);
     }
 
     // Execute the handler thread
@@ -106,7 +110,7 @@ public final class SSIEventListener extends Thread {
             }
         }
         // Print some information
-        mLogger.message("Aborting SSI event listener " + mLAddr + " " + mRAddr);
+        //mLogger.message("Aborting SSI event listener " + mLAddr + " " + mRAddr);
     }
 
     // Receive a sized byte array
