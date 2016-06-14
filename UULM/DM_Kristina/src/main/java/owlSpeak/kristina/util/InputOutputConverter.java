@@ -7,6 +7,7 @@
 package owlSpeak.kristina.util;
 
 import java.io.BufferedReader;
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -14,9 +15,13 @@ import java.io.InputStreamReader;
 import java.net.URISyntaxException;
 import java.util.HashSet;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Set;
 import java.util.UUID;
 
+import org.apache.jena.rdf.model.Model;
+import org.apache.jena.rdf.model.ModelFactory;
+import org.apache.jena.rdf.model.ReifiedStatement;
 import org.semanticweb.owlapi.apibinding.OWLManager;
 import org.semanticweb.owlapi.io.StringDocumentSource;
 import org.semanticweb.owlapi.io.StringDocumentTarget;
@@ -62,6 +67,12 @@ public class InputOutputConverter {
 			coreName + "#");
 	private final IRI coreIRI = IRI.create(coreName);
 	
+	//KI ontology
+	private final String kiName = "http://kristina-project.eu/ontologies/responses/v1";
+	private final PrefixManager kiPrefix = new DefaultPrefixManager(
+			kiName + "#");
+	private final IRI kiIRI = IRI.create(kiName);
+	
 	//Data of ontology for output
 	private final OWLImportsDeclaration importDeclaraton;
 	private final IRI ioOntoIRI = IRI
@@ -82,6 +93,12 @@ public class InputOutputConverter {
 		manager.addIRIMapper(new SimpleIRIMapper(
 				IRI.create("http://kristina-project.eu/ontologies/framesituation/core"),
 				IRI.create(getClass().getResource("/Example_Input_Output/frame_situation_Stam.ttl"))));
+		manager.addIRIMapper(new SimpleIRIMapper(
+				IRI.create("http://kristina-project.eu/ontologies/responses/v1"),
+				IRI.create(getClass().getResource("/Example_Input_Output/response.ttl"))));
+		manager.addIRIMapper(new SimpleIRIMapper(
+				IRI.create("http://kristina-project.eu/ontologies/context-light/v1"),
+				IRI.create(getClass().getResource("/Example_Input_Output/context-light_v3.ttl"))));
 				
 		OWLOntology onto = manager.createOntology(ioOntoIRI);
 		
@@ -130,6 +147,30 @@ public class InputOutputConverter {
 		return set;
 
 	}
+	
+	public Set<Move> buildKristinaKIMove(String rdf)
+			throws OWLOntologyCreationException {
+
+		OWLOntology onto = buildOWLOntology(rdf);
+
+		manager.applyChange(new AddImport(onto, factory
+				.getOWLImportsDeclaration(kiIRI)));
+		manager.loadOntology(kiIRI);
+		
+		OWLReasoner reasoner = new StructuralReasonerFactory()
+				.createReasoner(onto);
+		OWLClass speechact = factory.getOWLClass(":Response", kiPrefix);
+		NodeSet<OWLNamedIndividual> ns = reasoner
+				.getInstances(speechact, false);
+
+		Set<Move> set = new HashSet<Move>();
+		for(Node<OWLNamedIndividual> node: ns){
+			set.add(new KristinaMove(node.getRepresentativeElement(), dmOnto, factory, manager));
+		}
+		
+		return set;
+
+	}
 
 	// Output functions
 	/**
@@ -144,9 +185,8 @@ public class InputOutputConverter {
 	 * @throws URISyntaxException 
 	 */
 	public String buildOutput(KristinaMove sysmov, float valence,
-			float arousal) throws OWLOntologyCreationException,
-			OWLOntologyStorageException {
-		// create empty ontology
+			float arousal) {
+		/*// create empty ontology
 		OWLOntology onto = createOntology();
 
 		// add semantic content of system move to ontology
@@ -168,7 +208,28 @@ public class InputOutputConverter {
 		manager.addAxioms(onto, setVA);
 
 		String result = buildRDFString(onto);
-		return result;
+		return result;*/
+		
+		Model model = ModelFactory.createDefaultModel() ;
+		
+		model.createResource("http://kristina-project.eu/tmp#response", model.getResource("http://kristina-project.eu/ontologies/dialogue_actions#Declare"));
+		model.addLiteral(model.getResource("http://kristina-project.eu/tmp#response"), model.getProperty("http://kristina-project.eu/ontologies/dialogue_actions#verbosity"),1);
+		model.addLiteral(model.getResource("http://kristina-project.eu/tmp#response"), model.getProperty("http://kristina-project.eu/ontologies/dialogue_actions#directness"),1);
+		model.addLiteral(model.getResource("http://kristina-project.eu/tmp#response"), model.getProperty("http://kristina-project.eu/ontologies/dialogue_actions#isFormal"),true);
+		model.addLiteral(model.getResource("http://kristina-project.eu/tmp#response"), model.getProperty("http://kristina-project.eu/ontologies/dialogue_actions#isAdvice"),true);
+		model.addLiteral(model.getResource("http://kristina-project.eu/tmp#response"), model.getProperty("http://kristina-project.eu/ontologies/dialogue_actions#isBelief"),true);
+		model.addLiteral(model.getResource("http://kristina-project.eu/tmp#response"), model.getProperty("http://kristina-project.eu/ontologies/dialogue_actions#hasValence"),valence);
+		model.addLiteral(model.getResource("http://kristina-project.eu/tmp#response"), model.getProperty("http://kristina-project.eu/ontologies/dialogue_actions#hasArousal"),arousal);
+		
+		List<ReifiedStatement> stmtList = sysmov.getStatements();
+		for(ReifiedStatement stmt: stmtList){
+			model.createReifiedStatement(stmt.getURI(), stmt.getStatement());
+			model.add(model.getResource("http://kristina-project.eu/tmp#response"), model.getProperty("http://kristina-project.eu/ontologies/dialogue_actions#containsSemantics"),model.getResource(stmt.getURI()));
+		}
+		ByteArrayOutputStream result = new ByteArrayOutputStream();
+		model.write(result,"TURTLE");
+		return result.toString();
+		
 	}
 
 	/**
@@ -185,7 +246,7 @@ public class InputOutputConverter {
 	public String buildEmotionOutput(float valence, float arousal)
 			throws OWLOntologyCreationException, OWLOntologyStorageException{
 
-		// create empty speech act
+		/*// create empty speech act
 		OWLClass speechact = factory.getOWLClass(":SpeechAct", corePrefix);
 		OWLNamedIndividual ind = factory.getOWLNamedIndividual(IRI
 				.create("http://kristina-project.eu/systemMoves#move1"));
@@ -200,7 +261,17 @@ public class InputOutputConverter {
 		manager.addAxioms(onto, set);
 
 		String result = buildRDFString(onto);
-		return result;
+		return result;*/
+		
+		Model model = ModelFactory.createDefaultModel() ;
+		
+		model.createResource("http://kristina-project.eu/tmp#response", model.getResource("http://kristina-project.eu/ontologies/dialogue_actions#Empty"));
+		model.addLiteral(model.getResource("http://kristina-project.eu/tmp#response"), model.getProperty("http://kristina-project.eu/ontologies/dialogue_actions#hasValence"),valence);
+		model.addLiteral(model.getResource("http://kristina-project.eu/tmp#response"), model.getProperty("http://kristina-project.eu/ontologies/dialogue_actions#hasArousal"),arousal);
+		
+		ByteArrayOutputStream result = new ByteArrayOutputStream();
+		model.write(result,"TURTLE");
+		return result.toString();
 	}
 
 	// Helper functions
@@ -287,8 +358,11 @@ public class InputOutputConverter {
 
 		// add and load imports
 		manager.applyChange(new AddImport(onto, importDeclaraton));
+		manager.applyChange(new AddImport(onto, factory
+				.getOWLImportsDeclaration(kiIRI)));
 		
 		manager.loadOntology(coreIRI);
+		manager.loadOntology(kiIRI);
 
 		return onto;
 	}

@@ -603,7 +603,6 @@ public class OwlSpeakOntology implements Comparable<OwlSpeakOntology> {
 	public static OSFactory loadOSFactory(String filename, String localFolder)
 			throws OWLOntologyCreationException, FileNotFoundException {
 		OWLOntologyManager manager = OWLManager.createOWLOntologyManager();
-		manager.addIRIMapper(new SimpleIRIMapper(IRI.create("http://localfiles/OwlSpeak/OwlSpeakOnto.owl"), IRI.create(new File("./conf/OwlSpeak/OwlSpeakOnto.owl"))));
 		
 		OWLOntology ontology = manager
 				.loadOntologyFromOntologyDocument(new File(localFolder

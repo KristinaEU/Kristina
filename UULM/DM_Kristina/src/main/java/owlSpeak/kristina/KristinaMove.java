@@ -1,8 +1,13 @@
 package owlSpeak.kristina;
 
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
+import model.KristinaModel;
+
+import org.apache.jena.rdf.model.ReifiedStatement;
+import org.apache.jena.rdf.model.Statement;
 import org.semanticweb.owlapi.model.OWLAxiom;
 import org.semanticweb.owlapi.model.OWLClass;
 import org.semanticweb.owlapi.model.OWLClassExpression;
@@ -12,6 +17,7 @@ import org.semanticweb.owlapi.model.OWLIndividual;
 import org.semanticweb.owlapi.model.OWLNamedIndividual;
 import org.semanticweb.owlapi.model.OWLOntology;
 import org.semanticweb.owlapi.model.OWLOntologyManager;
+import org.semanticweb.owlapi.reasoner.NodeSet;
 import org.semanticweb.owlapi.reasoner.OWLReasoner;
 import org.semanticweb.owlapi.reasoner.structural.StructuralReasonerFactory;
 
@@ -29,6 +35,10 @@ public class KristinaMove extends Move{
 			OWLOntologyManager manager) {
 		super(indi, onto, factory, manager);
 		
+	}
+	
+	public List<ReifiedStatement> getStatements(){
+		return KristinaModel.getStatements(indi.asOWLNamedIndividual().getIRI());
 	}
 	
 	public Set<OWLAxiom> getAxioms(){

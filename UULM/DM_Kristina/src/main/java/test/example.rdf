@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xmlns:ns0="http://kristina-project.eu/ontologies/responses/v1#">
+
+  <owl:Ontology rdf:about="http://kristina-project.eu/ontologies/testdata">
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Created with TopBraid Composer</owl:versionInfo>
+  </owl:Ontology>
+
+  <rdf:Description rdf:about="http://kristina-project.eu/ontologies/testdata#ResponseContainer_1">
+    <rdf:type rdf:resource="http://kristina-project.eu/ontologies/responses/v1#ResponseContainer"/>
+    <ns0:containsResponse>
+      <ns0:StatementResponse rdf:about="http://kristina-project.eu/ontologies/testdata#StatementResponse_1">
+        <ns0:plausibility rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1</ns0:plausibility>
+        <ns0:rdf>
+          <rdf:Statement rdf:about="http://kristina-project.eu/ontologies/testdata#Statement_1">
+            <rdf:object rdf:resource="http://kristina-project.eu/ontologies/sleeping_habits_pattern#Description_1"/>
+            <rdf:predicate rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#satisfies"/>
+            <rdf:subject rdf:resource="http://kristina-project.eu/ontologies/sleeping_habits_pattern#ActivityOnSetPattern_1"/>
+          </rdf:Statement>
+        </ns0:rdf>
+
+        <ns0:rdf>
+          <rdf:Statement rdf:about="http://kristina-project.eu/ontologies/testdata#Statement_2">
+            <rdf:object rdf:resource="http://kristina-project.eu/ontologies/sleeping_habits_pattern#eugene"/>
+            <rdf:predicate rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#involvesAgent"/>
+            <rdf:subject rdf:resource="http://kristina-project.eu/ontologies/sleeping_habits_pattern#ActivityOnSetPattern_1"/>
+          </rdf:Statement>
+        </ns0:rdf>
+
+        <ns0:rdf>
+          <rdf:Statement rdf:about="http://kristina-project.eu/ontologies/testdata#Statement_3">
+            <rdf:object rdf:resource="http://kristina-project.eu/ontologies/sleeping_habits_pattern#EventType_1"/>
+            <rdf:predicate rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#defines"/>
+            <rdf:subject rdf:resource="http://kristina-project.eu/ontologies/sleeping_habits_pattern#Description_1"/>
+          </rdf:Statement>
+        </ns0:rdf>
+
+        <ns0:rdf>
+          <rdf:Statement rdf:about="http://kristina-project.eu/ontologies/testdata#Statement_4">
+            <rdf:object rdf:resource="http://kristina-project.eu/ontologies/sleeping_habits_pattern#Sleep"/>
+            <rdf:predicate rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#classifies"/>
+            <rdf:subject rdf:resource="http://kristina-project.eu/ontologies/sleeping_habits_pattern#EventType_1"/>
+          </rdf:Statement>
+        </ns0:rdf>
+
+        <ns0:rdf>
+          <rdf:Statement rdf:about="http://kristina-project.eu/ontologies/testdata#Statement_5">
+            <rdf:object rdf:resource="http://kristina-project.eu/ontologies/sleeping_habits_pattern#OnSet_1"/>
+            <rdf:predicate rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#defines"/>
+            <rdf:subject rdf:resource="http://kristina-project.eu/ontologies/sleeping_habits_pattern#Description_1"/>
+          </rdf:Statement>
+        </ns0:rdf>
+
+        <ns0:rdf>
+          <rdf:Statement rdf:about="http://kristina-project.eu/ontologies/testdata#Statement_6">
+            <rdf:object rdf:resource="http://kristina-project.eu/ontologies/sleeping_habits_pattern#TemporalEntity_1"/>
+            <rdf:predicate rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#classifies"/>
+            <rdf:subject rdf:resource="http://kristina-project.eu/ontologies/sleeping_habits_pattern#OnSet_1"/>
+          </rdf:Statement>
+        </ns0:rdf>
+
+        <ns0:rdf>
+          <rdf:Statement rdf:about="http://kristina-project.eu/ontologies/testdata#Statement_7">
+            <rdf:object rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12:00</rdf:object>
+            <rdf:predicate rdf:resource="http://kristina-project.eu/ontologies/sleeping_habits_pattern#at"/>
+            <rdf:subject rdf:resource="http://kristina-project.eu/ontologies/sleeping_habits_pattern#TemporalEntity_1"/>
+          </rdf:Statement>
+        </ns0:rdf>
+
+        <ns0:responseType rdf:resource="http://kristina-project.eu/ontologies/responses/v1#structured"/>
+      </ns0:StatementResponse>
+    </ns0:containsResponse>
+
+    <ns0:conversationalContext rdf:resource="http://kristina-project.eu/ontologies/context-light/v1#ActivityRoutineContext"/>
+    <ns0:timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-05-25T17:09:32.794</ns0:timestamp>
+  </rdf:Description>
+
+</rdf:RDF>

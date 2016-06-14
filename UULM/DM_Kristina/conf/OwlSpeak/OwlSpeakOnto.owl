@@ -6,10 +6,10 @@
     xmlns:owl="http://www.w3.org/2002/07/owl#"
     xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
-    xmlns="http://localfiles/OwlSpeak/OwlSpeakOnto.owl#"
+    xmlns="http://localhost:8080/OwlSpeakOnto.owl#"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-  xml:base="http://localfiles/OwlSpeak/OwlSpeakOnto.owl">
+  xml:base="http://localhost:8080/OwlSpeakOnto.owl">
   <owl:Ontology rdf:about=""/>
   <owl:Class rdf:ID="State">
     <rdfs:subClassOf>

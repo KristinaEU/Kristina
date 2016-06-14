@@ -1,0 +1,864 @@
+@prefix : <http://kristina-project.eu/ontologies/context-light/v1#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix spin: <http://spinrdf.org/spin#> .
+
+<http://kristina-project.eu/ontologies/context-light/v1> a owl:Ontology ;
+	owl:versionInfo "Created with TopBraid Composer"^^xsd:string ;
+	spin:imports <http://topbraid.org/spin/owlrl-all> .
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://kristina-project.eu/ontologies/context-light/v1#contains
+
+:contains a owl:ObjectProperty ;
+	rdfs:domain :Context ;
+	rdfs:range owl:Thing .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://kristina-project.eu/ontologies/context-light/v1#Activity
+
+:Activity a owl:Class ;
+	owl:equivalentClass :Event ;
+	rdfs:subClassOf :Concept .
+# 
+# http://kristina-project.eu/ontologies/context-light/v1#ActivityNormContext
+
+:ActivityNormContext a owl:Class ;
+	owl:equivalentClass _:genid1 .
+
+_:genid1 owl:intersectionOf _:genid4 .
+
+_:genid4 a rdf:List ;
+	rdf:first :NormContext ;
+	rdf:rest _:genid2 .
+
+_:genid2 a rdf:List ;
+	rdf:first _:genid3 .
+
+_:genid3 a owl:Restriction ;
+	owl:onProperty :contains ;
+	owl:someValuesFrom :Activity .
+
+_:genid2 rdf:rest rdf:nil .
+
+_:genid1 a owl:Class .
+
+:ActivityNormContext rdfs:subClassOf :NormContext .
+# 
+# http://kristina-project.eu/ontologies/context-light/v1#ActivityRoutineContext
+
+:ActivityRoutineContext a owl:Class ;
+	owl:equivalentClass _:genid5 .
+
+_:genid5 owl:intersectionOf _:genid10 .
+
+_:genid10 a rdf:List ;
+	rdf:first :IndividualContext ;
+	rdf:rest _:genid8 .
+
+_:genid8 a rdf:List ;
+	rdf:first _:genid9 .
+
+_:genid9 a owl:Restriction ;
+	owl:onProperty :contains ;
+	owl:someValuesFrom :Activity .
+
+_:genid8 rdf:rest _:genid6 .
+
+_:genid6 a rdf:List ;
+	rdf:first _:genid7 .
+
+_:genid7 a owl:Restriction ;
+	owl:onProperty :contains ;
+	owl:someValuesFrom :Pattern .
+
+_:genid6 rdf:rest rdf:nil .
+
+_:genid5 a owl:Class .
+# 
+# http://kristina-project.eu/ontologies/context-light/v1#Additional
+
+:Additional a owl:Class ;
+	rdfs:subClassOf :Concept .
+# 
+# http://kristina-project.eu/ontologies/context-light/v1#AdditionalContext
+
+:AdditionalContext a owl:Class ;
+	owl:equivalentClass _:genid11 .
+
+_:genid11 owl:intersectionOf _:genid14 .
+
+_:genid14 a rdf:List ;
+	rdf:first :Context ;
+	rdf:rest _:genid12 .
+
+_:genid12 a rdf:List ;
+	rdf:first _:genid13 .
+
+_:genid13 a owl:Restriction ;
+	owl:onProperty :contains ;
+	owl:someValuesFrom :Additional .
+
+_:genid12 rdf:rest rdf:nil .
+
+_:genid11 a owl:Class .
+
+:AdditionalContext rdfs:comment "for detecting that the user needs additional answers (e.g. \"Give me more on than...\"" .
+# 
+# http://kristina-project.eu/ontologies/context-light/v1#Adult
+
+:Adult a owl:Class ;
+	rdfs:subClassOf :HumanGrowth .
+# 
+# http://kristina-project.eu/ontologies/context-light/v1#Age
+
+:Age a owl:Class ;
+	rdfs:subClassOf :BiographicalAttribute .
+# 
+# http://kristina-project.eu/ontologies/context-light/v1#Assistance
+
+:Assistance a owl:Class ;
+	rdfs:subClassOf :Concept .
+# 
+# http://kristina-project.eu/ontologies/context-light/v1#Baby
+
+:Baby a owl:Class ;
+	rdfs:subClassOf :HumanGrowth .
+# 
+# http://kristina-project.eu/ontologies/context-light/v1#Bathe
+
+:Bathe a owl:Class ;
+	rdfs:subClassOf :Activity .
+# 
+# http://kristina-project.eu/ontologies/context-light/v1#Bathroom
+
+:Bathroom a owl:Class ;
+	rdfs:subClassOf :Room .
+# 
+# http://kristina-project.eu/ontologies/context-light/v1#Bed
+
+:Bed a owl:Class ;
+	rdfs:subClassOf :Object .
+# 
+# http://kristina-project.eu/ontologies/context-light/v1#Bedroom
+
+:Bedroom a owl:Class ;
+	rdfs:subClassOf :Room .
+# 
+# http://kristina-project.eu/ontologies/context-light/v1#BiographicalAttribute
+
+:BiographicalAttribute a owl:Class ;
+	rdfs:subClassOf :Concept .
+# 
+# http://kristina-project.eu/ontologies/context-light/v1#BiographicalContext
+
+:BiographicalContext a owl:Class ;
+	owl:equivalentClass _:genid15 .
+
+_:genid15 owl:intersectionOf _:genid18 .
+
+_:genid18 a rdf:List ;
+	rdf:first :IndividualContext ;
+	rdf:rest _:genid16 .
+
+_:genid16 a rdf:List ;
+	rdf:first _:genid17 .
+
+_:genid17 a owl:Restriction ;
+	owl:onProperty :contains ;
+	owl:someValuesFrom :BiographicalAttribute .
+
+_:genid16 rdf:rest rdf:nil .
+
+_:genid15 a owl:Class .
+# 
+# http://kristina-project.eu/ontologies/context-light/v1#BooleanContext
+
+:BooleanContext a owl:Class ;
+	rdfs:subClassOf :Context ;
+	rdfs:comment "Boolean response (the response should be yes/no). Need to define here the context to understand this type of question from LA (if possible)" .
+# 
+# http://kristina-project.eu/ontologies/context-light/v1#Call
+
+:Call a owl:Class ;
+	rdfs:subClassOf :Activity .
+# 
+# http://kristina-project.eu/ontologies/context-light/v1#CareRecipient
+
+:CareRecipient a owl:Class ;
+	rdfs:subClassOf :Role .
+# 
+# http://kristina-project.eu/ontologies/context-light/v1#Caregiver
+
+:Caregiver a owl:Class ;
+	rdfs:subClassOf :Role .
+# 
+# http://kristina-project.eu/ontologies/context-light/v1#Concept
+
+:Concept a owl:Class ;
+	rdfs:subClassOf owl:Thing ;
+	rdfs:comment "Root class for capturing LA classified entities (incomplete list...)"^^xsd:string .
+# 
+# http://kristina-project.eu/ontologies/context-light/v1#Context
+
+:Context a owl:Class ;
+	rdfs:subClassOf owl:Thing , _:genid19 .
+
+_:genid19 a owl:Restriction ;
+	owl:onProperty :contains ;
+	owl:someValuesFrom _:genid20 .
+
+_:genid20 a owl:Class ;
+	owl:unionOf _:genid22 .
+
+_:genid22 a rdf:List ;
+	rdf:first :Concept ;
+	rdf:rest _:genid21 .
+
+_:genid21 a rdf:List ;
+	rdf:first :Context ;
+	rdf:rest rdf:nil .
+
+:Context rdfs:comment "Root class for defining the contexts supported by KB and KI. Contexts instances act as container entities that group the resources (contains property assertions) classified through LA. I.e. a context is defined as a set of detected entities, resources, etc. The reasoning process tries to classify context instances in context hierarchy, based on the concept instances they contain"^^xsd:string .
+# 
+# http://kristina-project.eu/ontologies/context-light/v1#Day
+
+:Day a owl:Class ;
+	rdfs:subClassOf :Period .
+# 
+# http://kristina-project.eu/ontologies/context-light/v1#DefinitionContext
+
+:DefinitionContext a owl:Class ;
+	rdfs:subClassOf :GenericContext ;
+	rdfs:comment "need something from LA (e.g. a classified entity) in order to understand that this is a topic relevant to the definition of something..." .
+# 
+# http://kristina-project.eu/ontologies/context-light/v1#Disease
+
+:Disease a owl:Class ;
+	rdfs:subClassOf :MedicalTerm .
+# 
+# http://kristina-project.eu/ontologies/context-light/v1#DiseaseDefinitionContext
+
+:DiseaseDefinitionContext a owl:Class ;
+	owl:equivalentClass _:genid23 .
+
+_:genid23 owl:intersectionOf _:genid26 .
+
+_:genid26 a rdf:List ;
+	rdf:first :DefinitionContext ;
+	rdf:rest _:genid24 .
+
+_:genid24 a rdf:List ;
+	rdf:first _:genid25 .
+
+_:genid25 a owl:Restriction ;
+	owl:onProperty :contains ;
+	owl:someValuesFrom :Disease .
+
+_:genid24 rdf:rest rdf:nil .
+
+_:genid23 a owl:Class .
+
+:DiseaseDefinitionContext rdfs:subClassOf :DefinitionContext ;
+	rdfs:comment "definition of a disease" .
+# 
+# http://kristina-project.eu/ontologies/context-light/v1#Doctor
+
+:Doctor a owl:Class ;
+	rdfs:subClassOf :Entity .
+# 
+# http://kristina-project.eu/ontologies/context-light/v1#DoesAfter
+
+:DoesAfter a owl:Class ;
+	rdfs:subClassOf :OrderingPattern .
+# 
+# http://kristina-project.eu/ontologies/context-light/v1#DoesBefore
+
+:DoesBefore a owl:Class ;
+	rdfs:subClassOf :OrderingPattern .
+# 
+# http://kristina-project.eu/ontologies/context-light/v1#Drink
+
+:Drink a owl:Class ;
+	rdfs:subClassOf :Activity .
+# 
+# http://kristina-project.eu/ontologies/context-light/v1#Drinkable
+
+:Drinkable a owl:Class ;
+	rdfs:subClassOf :Food .
+# 
+# http://kristina-project.eu/ontologies/context-light/v1#Duration
+
+:Duration a owl:Class ;
+	rdfs:subClassOf :TemporalPattern .
+# 
+# http://kristina-project.eu/ontologies/context-light/v1#Dust
+
+:Dust a owl:Class ;
+	rdfs:subClassOf :Material .
+# 
+# http://kristina-project.eu/ontologies/context-light/v1#Eat
+
+:Eat a owl:Class ;
+	rdfs:subClassOf :Activity .
+# 
+# http://kristina-project.eu/ontologies/context-light/v1#Edible
+
+:Edible a owl:Class ;
+	rdfs:subClassOf :Food .
+# 
+# http://kristina-project.eu/ontologies/context-light/v1#EndTime
+
+:EndTime a owl:Class ;
+	rdfs:subClassOf :TemporalPattern .
+# 
+# http://kristina-project.eu/ontologies/context-light/v1#Entity
+
+:Entity a owl:Class ;
+	rdfs:subClassOf :Concept .
+# 
+# http://kristina-project.eu/ontologies/context-light/v1#Event
+
+:Event a owl:Class ;
+	rdfs:subClassOf :Concept .
+# 
+# http://kristina-project.eu/ontologies/context-light/v1#Fever
+
+:Fever a owl:Class ;
+	rdfs:subClassOf :Symptom .
+# 
+# http://kristina-project.eu/ontologies/context-light/v1#Food
+
+:Food a owl:Class ;
+	rdfs:subClassOf :Concept .
+# 
+# http://kristina-project.eu/ontologies/context-light/v1#Frequency
+
+:Frequency a owl:Class ;
+	rdfs:subClassOf :Pattern .
+# 
+# http://kristina-project.eu/ontologies/context-light/v1#Generic
+
+:Generic a owl:Class ;
+	rdfs:subClassOf :Concept .
+# 
+# http://kristina-project.eu/ontologies/context-light/v1#GenericContext
+
+:GenericContext a owl:Class ;
+	owl:equivalentClass _:genid27 .
+
+_:genid27 a owl:Restriction ;
+	owl:onProperty :contains ;
+	owl:someValuesFrom :Generic .
+
+:GenericContext rdfs:subClassOf :Context ;
+	owl:disjointWith :IndividualContext .
+# 
+# http://kristina-project.eu/ontologies/context-light/v1#Goodbye
+
+:Goodbye a owl:Class ;
+	rdfs:subClassOf :Greeting .
+# 
+# http://kristina-project.eu/ontologies/context-light/v1#Greeting
+
+:Greeting a owl:Class ;
+	rdfs:subClassOf :Concept .
+# 
+# http://kristina-project.eu/ontologies/context-light/v1#HeartRate
+
+:HeartRate a owl:Class ;
+	rdfs:subClassOf :MeasurableElement .
+# 
+# http://kristina-project.eu/ontologies/context-light/v1#Hello
+
+:Hello a owl:Class ;
+	rdfs:subClassOf :Greeting .
+# 
+# http://kristina-project.eu/ontologies/context-light/v1#Hospital
+
+:Hospital a owl:Class ;
+	rdfs:subClassOf :Entity .
+# 
+# http://kristina-project.eu/ontologies/context-light/v1#Hours
+
+:Hours a owl:Class ;
+	rdfs:subClassOf :Period .
+# 
+# http://kristina-project.eu/ontologies/context-light/v1#HowToCallSomeone
+
+:HowToCallSomeone a owl:Class ;
+	owl:equivalentClass _:genid28 .
+
+_:genid28 owl:intersectionOf _:genid33 .
+
+_:genid33 a rdf:List ;
+	rdf:first :InstructionContext ;
+	rdf:rest _:genid31 .
+
+_:genid31 a rdf:List ;
+	rdf:first _:genid32 .
+
+_:genid32 a owl:Restriction ;
+	owl:onProperty :contains ;
+	owl:someValuesFrom :Call .
+
+_:genid31 rdf:rest _:genid29 .
+
+_:genid29 a rdf:List ;
+	rdf:first _:genid30 .
+
+_:genid30 a owl:Restriction ;
+	owl:onProperty :contains ;
+	owl:someValuesFrom :Entity .
+
+_:genid29 rdf:rest rdf:nil .
+
+_:genid28 a owl:Class .
+
+:HowToCallSomeone rdfs:subClassOf :InstructionContext .
+# 
+# http://kristina-project.eu/ontologies/context-light/v1#HowToMeasureContext
+
+:HowToMeasureContext a owl:Class ;
+	owl:equivalentClass _:genid34 .
+
+_:genid34 owl:intersectionOf _:genid37 .
+
+_:genid37 a rdf:List ;
+	rdf:first :InstructionContext ;
+	rdf:rest _:genid35 .
+
+_:genid35 a rdf:List ;
+	rdf:first _:genid36 .
+
+_:genid36 a owl:Restriction ;
+	owl:onProperty :contains ;
+	owl:someValuesFrom :MeasurableElement .
+
+_:genid35 rdf:rest rdf:nil .
+
+_:genid34 a owl:Class .
+
+:HowToMeasureContext rdfs:subClassOf :InstructionContext .
+# 
+# http://kristina-project.eu/ontologies/context-light/v1#HowToTreatDisease
+
+:HowToTreatDisease a owl:Class ;
+	owl:equivalentClass _:genid38 .
+
+_:genid38 owl:intersectionOf _:genid41 .
+
+_:genid41 a rdf:List ;
+	rdf:first :TreatmentContext ;
+	rdf:rest _:genid39 .
+
+_:genid39 a rdf:List ;
+	rdf:first _:genid40 .
+
+_:genid40 a owl:Restriction ;
+	owl:onProperty :contains ;
+	owl:someValuesFrom :Disease .
+
+_:genid39 rdf:rest rdf:nil .
+
+_:genid38 a owl:Class .
+
+:HowToTreatDisease rdfs:subClassOf :TreatmentContext .
+# 
+# http://kristina-project.eu/ontologies/context-light/v1#HowToTreatSymptom
+
+:HowToTreatSymptom a owl:Class ;
+	owl:equivalentClass _:genid42 .
+
+_:genid42 owl:intersectionOf _:genid45 .
+
+_:genid45 a rdf:List ;
+	rdf:first :TreatmentContext ;
+	rdf:rest _:genid43 .
+
+_:genid43 a rdf:List ;
+	rdf:first _:genid44 .
+
+_:genid44 a owl:Restriction ;
+	owl:onProperty :contains ;
+	owl:someValuesFrom :Symptom .
+
+_:genid43 rdf:rest rdf:nil .
+
+_:genid42 a owl:Class .
+
+:HowToTreatSymptom rdfs:subClassOf :TreatmentContext .
+# 
+# http://kristina-project.eu/ontologies/context-light/v1#HowToUseObjectContext
+
+:HowToUseObjectContext a owl:Class ;
+	owl:equivalentClass _:genid46 .
+
+_:genid46 owl:intersectionOf _:genid49 .
+
+_:genid49 a rdf:List ;
+	rdf:first :InstructionContext ;
+	rdf:rest _:genid47 .
+
+_:genid47 a rdf:List ;
+	rdf:first _:genid48 .
+
+_:genid48 a owl:Restriction ;
+	owl:onProperty :contains ;
+	owl:someValuesFrom :Object .
+
+_:genid47 rdf:rest rdf:nil .
+
+_:genid46 a owl:Class .
+
+:HowToUseObjectContext rdfs:subClassOf :InstructionContext .
+# 
+# http://kristina-project.eu/ontologies/context-light/v1#HumanGrowth
+
+:HumanGrowth a owl:Class ;
+	rdfs:subClassOf :Concept .
+# 
+# http://kristina-project.eu/ontologies/context-light/v1#IndividualContext
+
+:IndividualContext a owl:Class ;
+	owl:equivalentClass _:genid50 .
+
+_:genid50 owl:intersectionOf _:genid53 .
+
+_:genid53 a rdf:List ;
+	rdf:first :Context ;
+	rdf:rest _:genid51 .
+
+_:genid51 a rdf:List ;
+	rdf:first _:genid52 .
+
+_:genid52 a owl:Restriction ;
+	owl:onProperty :contains ;
+	owl:someValuesFrom :CareRecipient .
+
+_:genid51 rdf:rest rdf:nil .
+
+_:genid50 a owl:Class .
+# 
+# http://kristina-project.eu/ontologies/context-light/v1#InstructionContext
+
+:InstructionContext a owl:Class ;
+	rdfs:subClassOf :GenericContext .
+# 
+# http://kristina-project.eu/ontologies/context-light/v1#Kitchen
+
+:Kitchen a owl:Class ;
+	rdfs:subClassOf :Room .
+# 
+# http://kristina-project.eu/ontologies/context-light/v1#Livingroom
+
+:Livingroom a owl:Class ;
+	rdfs:subClassOf :Room .
+# 
+# http://kristina-project.eu/ontologies/context-light/v1#Location
+
+:Location a owl:Class ;
+	rdfs:subClassOf :Concept .
+# 
+# http://kristina-project.eu/ontologies/context-light/v1#Material
+
+:Material a owl:Class ;
+	rdfs:subClassOf :Concept .
+# 
+# http://kristina-project.eu/ontologies/context-light/v1#MeasurableElement
+
+:MeasurableElement a owl:Class ;
+	rdfs:subClassOf :Concept .
+# 
+# http://kristina-project.eu/ontologies/context-light/v1#MedicalContext
+
+:MedicalContext a owl:Class ;
+	rdfs:subClassOf :GenericContext .
+# 
+# http://kristina-project.eu/ontologies/context-light/v1#MedicalTerm
+
+:MedicalTerm a owl:Class ;
+	rdfs:subClassOf :Concept .
+# 
+# http://kristina-project.eu/ontologies/context-light/v1#Milk
+
+:Milk a owl:Class ;
+	rdfs:subClassOf :Drinkable .
+# 
+# http://kristina-project.eu/ontologies/context-light/v1#Name
+
+:Name a owl:Class ;
+	rdfs:subClassOf :BiographicalAttribute .
+# 
+# http://kristina-project.eu/ontologies/context-light/v1#Nap
+
+:Nap a owl:Class ;
+	rdfs:subClassOf :Sleep .
+# 
+# http://kristina-project.eu/ontologies/context-light/v1#NeedsAssistanceContext
+
+:NeedsAssistanceContext a owl:Class ;
+	owl:equivalentClass _:genid54 .
+
+_:genid54 owl:intersectionOf _:genid57 .
+
+_:genid57 a rdf:List ;
+	rdf:first :IndividualContext ;
+	rdf:rest _:genid55 .
+
+_:genid55 a rdf:List ;
+	rdf:first _:genid56 .
+
+_:genid56 a owl:Restriction ;
+	owl:onProperty :contains ;
+	owl:someValuesFrom :Assistance .
+
+_:genid55 rdf:rest rdf:nil .
+
+_:genid54 a owl:Class .
+# 
+# http://kristina-project.eu/ontologies/context-light/v1#NeedsAssistanceForActivity
+
+:NeedsAssistanceForActivity a owl:Class ;
+	owl:equivalentClass _:genid58 .
+
+_:genid58 owl:intersectionOf _:genid61 .
+
+_:genid61 a rdf:List ;
+	rdf:first :NeedsAssistanceContext ;
+	rdf:rest _:genid59 .
+
+_:genid59 a rdf:List ;
+	rdf:first _:genid60 .
+
+_:genid60 a owl:Restriction ;
+	owl:onProperty :contains ;
+	owl:someValuesFrom :Activity .
+
+_:genid59 rdf:rest rdf:nil .
+
+_:genid58 a owl:Class .
+
+:NeedsAssistanceForActivity rdfs:subClassOf :NeedsAssistanceContext .
+# 
+# http://kristina-project.eu/ontologies/context-light/v1#Newspaper
+
+:Newspaper a owl:Class ;
+	rdfs:subClassOf :Object .
+# 
+# http://kristina-project.eu/ontologies/context-light/v1#NewspaperContext
+
+:NewspaperContext a owl:Class ;
+	owl:equivalentClass _:genid62 .
+
+_:genid62 owl:intersectionOf _:genid67 .
+
+_:genid67 a rdf:List ;
+	rdf:first :Context ;
+	rdf:rest _:genid65 .
+
+_:genid65 a rdf:List ;
+	rdf:first _:genid66 .
+
+_:genid66 a owl:Restriction ;
+	owl:onProperty :contains ;
+	owl:someValuesFrom :Newspaper .
+
+_:genid65 rdf:rest _:genid63 .
+
+_:genid63 a rdf:List ;
+	rdf:first _:genid64 .
+
+_:genid64 a owl:Restriction ;
+	owl:onProperty :contains ;
+	owl:someValuesFrom :Read .
+
+_:genid63 rdf:rest rdf:nil .
+
+_:genid62 a owl:Class .
+# 
+# http://kristina-project.eu/ontologies/context-light/v1#Night
+
+:Night a owl:Class ;
+	rdfs:subClassOf :Period .
+# 
+# http://kristina-project.eu/ontologies/context-light/v1#NormContext
+
+:NormContext a owl:Class ;
+	rdfs:subClassOf :GenericContext ;
+	rdfs:comment "need hints to recognise that we are talking about norms, e.g. best?usual?typical?" .
+# 
+# http://kristina-project.eu/ontologies/context-light/v1#Object
+
+:Object a owl:Class ;
+	rdfs:subClassOf :Concept .
+# 
+# http://kristina-project.eu/ontologies/context-light/v1#OrderingPattern
+
+:OrderingPattern a owl:Class ;
+	rdfs:subClassOf :Pattern .
+# 
+# http://kristina-project.eu/ontologies/context-light/v1#Pain
+
+:Pain a owl:Class ;
+	rdfs:subClassOf :Symptom .
+# 
+# http://kristina-project.eu/ontologies/context-light/v1#Pattern
+
+:Pattern a owl:Class ;
+	rdfs:subClassOf :Concept .
+# 
+# http://kristina-project.eu/ontologies/context-light/v1#Period
+
+:Period a owl:Class ;
+	rdfs:subClassOf :Concept .
+# 
+# http://kristina-project.eu/ontologies/context-light/v1#Position
+
+:Position a owl:Class ;
+	rdfs:subClassOf :Concept .
+# 
+# http://kristina-project.eu/ontologies/context-light/v1#Read
+
+:Read a owl:Class ;
+	rdfs:subClassOf :Activity .
+# 
+# http://kristina-project.eu/ontologies/context-light/v1#Relative
+
+:Relative a owl:Class ;
+	rdfs:subClassOf :Entity .
+# 
+# http://kristina-project.eu/ontologies/context-light/v1#Repetition
+
+:Repetition a owl:Class ;
+	rdfs:subClassOf :Pattern .
+# 
+# http://kristina-project.eu/ontologies/context-light/v1#Role
+
+:Role a owl:Class ;
+	rdfs:subClassOf :Concept .
+# 
+# http://kristina-project.eu/ontologies/context-light/v1#Room
+
+:Room a owl:Class ;
+	rdfs:subClassOf :Location .
+# 
+# http://kristina-project.eu/ontologies/context-light/v1#Sleep
+
+:Sleep a owl:Class ;
+	rdfs:subClassOf :Activity .
+# 
+# http://kristina-project.eu/ontologies/context-light/v1#StartTime
+
+:StartTime a owl:Class ;
+	rdfs:subClassOf :TemporalPattern .
+# 
+# http://kristina-project.eu/ontologies/context-light/v1#Symptom
+
+:Symptom a owl:Class ;
+	rdfs:subClassOf :MedicalTerm .
+# 
+# http://kristina-project.eu/ontologies/context-light/v1#SymptomsOfDisease
+
+:SymptomsOfDisease a owl:Class ;
+	owl:equivalentClass _:genid68 .
+
+_:genid68 owl:intersectionOf _:genid71 .
+
+_:genid71 a rdf:List ;
+	rdf:first _:genid72 .
+
+_:genid72 a owl:Restriction ;
+	owl:onProperty :contains ;
+	owl:someValuesFrom :Disease .
+
+_:genid71 rdf:rest _:genid69 .
+
+_:genid69 a rdf:List ;
+	rdf:first _:genid70 .
+
+_:genid70 a owl:Restriction ;
+	owl:onProperty :contains ;
+	owl:someValuesFrom :Symptom .
+
+_:genid69 rdf:rest rdf:nil .
+
+_:genid68 a owl:Class .
+
+:SymptomsOfDisease rdfs:subClassOf :MedicalContext .
+# 
+# http://kristina-project.eu/ontologies/context-light/v1#Temperature
+
+:Temperature a owl:Class ;
+	rdfs:subClassOf :MeasurableElement .
+# 
+# http://kristina-project.eu/ontologies/context-light/v1#TemporalPattern
+
+:TemporalPattern a owl:Class ;
+	rdfs:subClassOf :Pattern .
+# 
+# http://kristina-project.eu/ontologies/context-light/v1#Thank
+
+:Thank a owl:Class ;
+	rdfs:subClassOf :Greeting .
+# 
+# http://kristina-project.eu/ontologies/context-light/v1#Toilet
+
+:Toilet a owl:Class ;
+	rdfs:subClassOf :Activity .
+# 
+# http://kristina-project.eu/ontologies/context-light/v1#Treatment
+
+:Treatment a owl:Class ;
+	rdfs:subClassOf :MedicalTerm .
+# 
+# http://kristina-project.eu/ontologies/context-light/v1#TreatmentContext
+
+:TreatmentContext a owl:Class ;
+	owl:equivalentClass _:genid73 .
+
+_:genid73 a owl:Restriction ;
+	owl:onProperty :contains ;
+	owl:someValuesFrom :Treatment .
+
+:TreatmentContext rdfs:subClassOf :MedicalContext .
+# 
+# http://kristina-project.eu/ontologies/context-light/v1#Walk
+
+:Walk a owl:Class ;
+	rdfs:subClassOf :Activity .
+# 
+# http://kristina-project.eu/ontologies/context-light/v1#WashHand
+
+:WashHand a owl:Class ;
+	rdfs:subClassOf :Activity .
+# 
+# http://kristina-project.eu/ontologies/context-light/v1#Water
+
+:Water a owl:Class ;
+	rdfs:subClassOf :Drinkable .
+# 
+# http://kristina-project.eu/ontologies/context-light/v1#Weight
+
+:Weight a owl:Class ;
+	rdfs:subClassOf :MeasurableElement .
+# 
+# Generated by the OWL API (version 4.2.3.20160319-0906) https://github.com/owlcs/owlapi

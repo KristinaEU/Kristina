@@ -29,39 +29,46 @@ public class KristinaMain {
 	 * @throws URISyntaxException 
 	 */
 	public static void main(final String args[]) {
-		try{
-		//Start the dialogue manager
-		KristinaPresenter.init();
 		
-		// Print information
-		System.out.println("Initializing KRISTINA DM restful server");
-		// Initialize the reader
-		final BufferedReader reader = new BufferedReader(new InputStreamReader(
-				System.in));
-		// Start the HTTP server
-		try {
-			// Create the server
-			URI baseUri = UriBuilder.fromUri(args[0])
-					.port(Integer.parseInt(args[1])).build();
-			ResourceConfig config = new ResourceConfig(KristinaServlet.class);
-			config = config.registerClasses(KristinaDemo.class);
-			final HttpServer server = JdkHttpServerFactory.createHttpServer(
-					baseUri, config);
+			try {
+				//Start the OwlDocumentServer
+				// Create the server
+				URI baseUriDoc = UriBuilder.fromUri("http://localhost/")
+						.port(8080).build();
+				ResourceConfig configDoc = new ResourceConfig(OwlDocumentServlet.class);
+				final HttpServer serverDoc = JdkHttpServerFactory.createHttpServer(
+						baseUriDoc, configDoc);
 
-			reader.readLine();
+				//Start the dialogue manager
+				KristinaPresenter.init();
+				
+				// Print information
+				System.out.println("Initializing KRISTINA DM restful server");
+				// Initialize the reader
+				final BufferedReader reader = new BufferedReader(new InputStreamReader(
+						System.in));
+				// Start the HTTP server
+				
+				// Create the server
+				URI baseUri = UriBuilder.fromUri(args[0])
+						.port(Integer.parseInt(args[1])).build();
+				ResourceConfig config = new ResourceConfig(KristinaServlet.class);
+				config = config.registerClasses(KristinaDemo.class);
+				final HttpServer server = JdkHttpServerFactory.createHttpServer(
+						baseUri, config);
 
-			// Abort the server
-			server.stop(0);
-		} catch (final Exception exc) {
-			exc.printStackTrace();
-		}
+				reader.readLine();
+
+				// Abort the server
+				server.stop(0);
+				serverDoc.stop(0);
+			} catch (final Exception exc) {
+				exc.printStackTrace();
+			}			
+			
 		// Print information
 		System.out.println("Terminating KRISTINA DM restful server");
-		}catch(URISyntaxException e1){
-			e1.printStackTrace();
-		}catch(OWLOntologyCreationException e2){
-			e2.printStackTrace();
-		}
+		
 	}
 
 }

@@ -94,6 +94,10 @@ public class KristinaPresenter {
 
 			proposal.getOWLOntologyManager().saveOntology(proposal, t);
 
+			//perform configuration of agenda
+			
+			
+			
 			String sysmove = t.toString();
 			System.out.println("Input KI\n"+sysmove);
 
@@ -166,6 +170,13 @@ public class KristinaPresenter {
 		WorkSpace ws = new KristinaModel().performDemoUpdate(userMoves.iterator().next(), user, ioConverter, owlEngine);
 		
 		systemMove = selectSystemMove(ws);
+		
+		if(systemMove!=null){
+			System.out.println(ioConverter.buildOutput(systemMove, 0.5f, 0.5f));
+		}else{
+			System.out.println("null");
+		}
+		
 		
 		createEvent("Sending System Move");
 	}

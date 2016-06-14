@@ -7,28 +7,22 @@
 @prefix sleeping_habits_pattern: <http://kristina-project.eu/ontologies/sleeping_habits_pattern#> .
 @prefix v1: <http://kristina-project.eu/ontologies/responses/v1#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dialogue: <http://kristina-project.eu/dialogue_actions> .
 
-<http://kristina-project.eu/ontologies/testdata>
-  rdf:type owl:Ontology ;
-  owl:versionInfo "Created with TopBraid Composer"^^xsd:string ;
-.
-:ResponseContainer_1
-  rdf:type sleeping_habits_pattern:ResponseContainer ;
-  v1:containsResponse :StatementResponse_1 ;
-  v1:conversationalContext <http://kristina-project.eu/ontologies/context-light/v1#ActivityRoutineContext> ;
-  v1:timestamp "2016-05-25T17:09:32.794"^^xsd:dateTime ;
-.
-:StatementResponse_1
-  rdf:type v1:StatementResponse ;
-  v1:plausibility "1"^^xsd:double ;
-  v1:rdf :Statement_1 ;
-  v1:rdf :Statement_2 ;
-  v1:rdf :Statement_3 ;
-  v1:rdf :Statement_4 ;
-  v1:rdf :Statement_5 ;
-  v1:rdf :Statement_6 ;
-  v1:rdf :Statement_7 ;
-  v1:responseType v1:structured ;
+:Response_1
+  rdf:type dialogue:Declare ;
+  dialogue:verbosity "1"^^xsd:double ;
+  dialogue:directness "1"^^xsd:double ;
+  dialogue:isFormal "false"^^xsd:true ;
+  dialogue:isAdvice "false"^^xsd:true ;
+  dialogue:isBelief "false"^^xsd:true ;
+  dialogue:semantics :Statement_1 ;
+  dialogue:semantics :Statement_2 ;
+  dialogue:semantics :Statement_3 ;
+  dialogue:semantics :Statement_4 ;
+  dialogue:semantics :Statement_5 ;
+  dialogue:semantics :Statement_6 ;
+  dialogue:semantics :Statement_7 ;
 .
 :Statement_1
   rdf:type rdf:Statement ;

@@ -13,7 +13,7 @@
   owl:versionInfo "Created with TopBraid Composer"^^xsd:string ;
 .
 :ResponseContainer_1
-  rdf:type sleeping_habits_pattern:ResponseContainer ;
+  rdf:type v1:ResponseContainer ;
   v1:containsResponse :StatementResponse_1 ;
   v1:conversationalContext <http://kristina-project.eu/ontologies/context-light/v1#ActivityRoutineContext> ;
   v1:timestamp "2016-05-25T17:09:32.794"^^xsd:dateTime ;

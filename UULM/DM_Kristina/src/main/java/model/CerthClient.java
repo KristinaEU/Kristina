@@ -1,6 +1,9 @@
 package model;
 
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.net.URLEncoder;
 
 import javax.ws.rs.client.Client;
@@ -10,6 +13,8 @@ import javax.ws.rs.client.Invocation;
 import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+
+import owlSpeak.Move;
 
 public class CerthClient {
 	

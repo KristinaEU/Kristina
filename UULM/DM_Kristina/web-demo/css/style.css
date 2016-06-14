@@ -60,13 +60,14 @@ table {
 th {
     padding: 15px;
     height: 15px;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #2f363e;
+	border-top: 1px solid #2f363e;
     border-collapse: collapse;
 }
 
 td {
     height: 15px;
-    padding: 15px;
+    padding: 10px;
 }
 .sel {
 	background-color: #a3b2c0;
@@ -366,6 +367,7 @@ td {
 	height:100%;
 	background: rgba(0, 0, 0, 0);
     z-index: 1000;
+	width:230px;
 }
 .controls {
 	color:#a3b2c0;
@@ -381,6 +383,7 @@ td {
 	color:white;
 	border-radius: 5px;
 	background-color: #a3b2c0;
+	width:100px;
 }
 .controls input[type=range] {
 	background-color:#2f363e;
@@ -405,18 +408,18 @@ td {
 }
 
     .about-us h1 {
-        font-size: 56px;
+        font-size: 35px;
         color: black;
         text-align: center;
         margin-top: 50px;
         font-weight: bold;
         text-transform: uppercase;
-        line-height: 1.2;
+        line-height: 1.1;
     }
 
     .about-us hr {
         color: black;
-        margin-top: 30px;
+        margin-top: 20px;
         background-color: black;
         height: 1px;
         width: 340px;
@@ -425,7 +428,7 @@ td {
 
     .about-us p.title {
         color: #919191;
-        margin-top: 40px;
+        margin-top: 20px;
         width: 100%;
         font-size: 15px;
         text-align: center;
@@ -444,20 +447,20 @@ td {
 
     .about-us p {
         text-align: center;
-        margin-top: 20px;
+        margin-top: 0px;
         font-size: 15px;
         width: 100%;
         color: #919191;
-        line-height: 1.4;
+        line-height: 1.1;
         position: relative;
         font-weight: 400;
     }
 
     .about-us .column-one {
-        margin-top: 40px;
+        margin-top: 30px;
         width: 35%;
         float: left;
-        margin-bottom: 20px;
+        margin-bottom: 1px;
 		margin-left: 15%;
         height: 40%;
     }
@@ -475,11 +478,11 @@ td {
         }
 
     .about-us .column-two {
-        margin-top: 40px;
+        margin-top: 30px;
         width: 35%;
         float: right;
 		margin-right:15%;
-        margin-bottom: 20px;
+        margin-bottom: 1px;
         height: 40%;
     }
 
@@ -502,7 +505,7 @@ float: center;
 margin-left: auto;
 margin-right: auto;
         margin-bottom: 70px;
-        height: 350px;
+        height: 250px;
     }
 
         .about-us .column-three .circle-three {
@@ -528,7 +531,7 @@ margin-right: auto;
     .about-us .column-three .legend-circle-up {
         height: 30px;
         width: 30px;
-        margin: 20% auto;
+        margin: 10% auto;
         position: relative;
         border: 8px solid #ebebeb;
         background: url(../img/icons/up.png) #5f666e no-repeat center center;
@@ -551,7 +554,7 @@ margin-right: auto;
         width: 30px;
         margin: 0 auto;
         position: relative;
-        margin: 20% auto;
+        margin: 10% auto;
         border: 8px solid #ebebeb;
         background: url(../img/icons/down.png) #5f666e no-repeat center center;
         background-size: 75%;
@@ -570,7 +573,7 @@ margin-right: auto;
     .about-us .column-three .legend-circle-neutral {
         height: 30px;
         width: 30px;
-        margin: 20% auto;
+        margin: 10% auto;
         position: relative;
         border: 8px solid #ebebeb;
         background: url(../img/icons/neutral.png) #5f666e no-repeat center center;

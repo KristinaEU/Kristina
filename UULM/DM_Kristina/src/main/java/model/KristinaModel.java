@@ -1,16 +1,30 @@
 package model;
 
 import java.io.BufferedReader;
+import java.io.ByteArrayInputStream;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.StringReader;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.HashSet;
 import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Set;
 import java.util.UUID;
 import java.util.function.Consumer;
 
+import org.apache.jena.rdf.model.Model;
+import org.apache.jena.rdf.model.ModelFactory;
+import org.apache.jena.rdf.model.RSIterator;
+import org.apache.jena.rdf.model.ReifiedStatement;
+import org.apache.jena.rdf.model.Statement;
+import org.apache.jena.rdf.model.StmtIterator;
+import org.python.apache.commons.compress.utils.IOUtils;
 import org.semanticweb.owlapi.apibinding.OWLManager;
 import org.semanticweb.owlapi.io.StringDocumentSource;
 import org.semanticweb.owlapi.model.IRI;
@@ -20,6 +34,8 @@ import org.semanticweb.owlapi.model.OWLNamedIndividual;
 import org.semanticweb.owlapi.model.OWLOntology;
 import org.semanticweb.owlapi.model.OWLOntologyCreationException;
 import org.semanticweb.owlapi.model.OWLOntologyManager;
+
+import com.github.andrewoma.dexx.collection.HashMap;
 
 import owlSpeak.Agenda;
 import owlSpeak.Move;
@@ -35,11 +51,14 @@ public class KristinaModel {
 	
 	private static final OWLOntologyManager manager = OWLManager.createOWLOntologyManager();
 	
+	private static Model inputKI;
+	
 	public static OWLOntology performUpdate(String usermove) throws OWLOntologyCreationException{
 		
-		String workspaceRDF = CerthClient.post(usermove);
+		String workspaceRDF = new KristinaModel().askDemoKI(null);
 		
 		OWLOntology workspace = parseRDF(workspaceRDF);
+		inputKI = extractSemantics(workspaceRDF);
 		
 		return workspace;
 	}
@@ -59,13 +78,21 @@ public class KristinaModel {
         return onto;
 	}
 	
+	private static Model extractSemantics(String rdf){
+		Model model = ModelFactory.createDefaultModel() ;
+        model.read(new StringReader(rdf),null, "TURTLE") ;
+        
+        return model;
+	}
+	
 	//Demo functions
 	
 	public WorkSpace performDemoUpdate(Move userMove, String user, InputOutputConverter ioConv, ServletEngine owlEngine) throws OWLOntologyCreationException{
 		removeKIMovesFromWorkspace(owlEngine, user);
 		
 		String rdfMoves = askDemoKI(userMove);
-		Set<Move> systemMoves = ioConv.buildKristinaMove(rdfMoves);
+		Set<Move> systemMoves = ioConv.buildKristinaKIMove(rdfMoves);
+		inputKI = extractSemantics(rdfMoves);
 		return addToWorkspace(systemMoves, user,owlEngine);
 		
 	}
@@ -91,7 +118,7 @@ public class KristinaModel {
 		
 		try {
 			r = new BufferedReader(new InputStreamReader(
-					getClass().getResourceAsStream("/Example_Input_Output/KI_feedback.ttl")));
+					getClass().getResourceAsStream("/Example_Input_Output/test.ttl")));
 			String data = "";
 			String tmp = r.readLine();
 			while(tmp != null){
@@ -126,5 +153,25 @@ public class KristinaModel {
 				}
 			}
 		}
+	}
+	
+	public static List<ReifiedStatement> getStatements(IRI response){
+		StmtIterator it = inputKI.getResource(response.toString()).listProperties(inputKI.getProperty("http://kristina-project.eu/ontologies/responses/v1#rdf"));
+		LinkedList<ReifiedStatement> result = new LinkedList<ReifiedStatement>();
+		Iterator<ReifiedStatement> it2 = inputKI.listReifiedStatements();
+		List<String> stmts = new LinkedList<String>();
+		
+		while(it.hasNext()){
+			Statement st = it.next();
+			stmts.add(st.getObject().asResource().getURI());
+		}
+		while(it2.hasNext()){
+			ReifiedStatement stmt = it2.next();
+			if(stmts.contains(stmt.getURI())){
+					result.add(stmt);
+			}
+		}
+		
+		return result;
 	}
 }
