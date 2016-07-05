@@ -16,6 +16,36 @@
 			<artifactId>owlapi-distribution</artifactId>
 			<version>3.5.1</version>
 		</dependency>
+		<dependency>
+			<groupId>org.jdom</groupId>
+			<artifactId>jdom</artifactId>
+			<version>1.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.python</groupId>
+			<artifactId>jython</artifactId>
+			<version>2.7.0</version>
+		</dependency>
+		<dependency>
+			<groupId>tw.edu.ntu.csie</groupId>
+			<artifactId>libsvm</artifactId>
+			<version>3.17</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.xmlbeans</groupId>
+			<artifactId>xmlbeans</artifactId>
+			<version>2.6.0</version>
+		</dependency>
+		<dependency>
+			<groupId>de.affect</groupId>
+			<artifactId>alma</artifactId>
+			<version>1.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.jena</groupId>
+			<artifactId>jena-core</artifactId>
+			<version>3.1.0</version>
+		</dependency>
 	</dependencies>
 	<build>
 		<sourceDirectory>src</sourceDirectory>
@@ -34,7 +64,7 @@
 				<configuration>
 					<archive>
 						<manifest>
-							<mainClass>main.KristinaMain</mainClass>
+							<mainClass>owlSpeak.servlet.KristinaMain</mainClass>
 						</manifest>
 					</archive>
 				</configuration>
@@ -45,6 +75,19 @@
 				<version>2.3</version>
 			</plugin>
 		</plugins>
+		<resources>
+			<resource>
+				<directory>${project.basedir}/src/main/resources</directory>
+			</resource>
+			<resource>
+				<directory>${project.basedir}/conf</directory>
+				<targetPath>${project.build.directory}/conf</targetPath>
+			</resource>
+			<resource>
+				<directory>${project.basedir}/web-demo</directory>
+				<targetPath>${project.build.directory}/web-demo</targetPath>
+			</resource>
+		</resources>
 	</build>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

@@ -1,0 +1,1145 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="c:/OwlSpeak/empty.owl#"
+     xml:base="c:/OwlSpeak/empty.owl"
+     xmlns:p1="http://localhost:8080/OwlSpeakOnto.owl#"
+     xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="c:/OwlSpeak/empty.owl">
+        <owl:imports rdf:resource="http://localhost:8080/OwlSpeakOnto.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#History-1080028057 -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#History-1080028057">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#History"/>
+        <p1:addTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</p1:addTime>
+        <p1:agendaPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">42</p1:agendaPriority>
+        <p1:forAgenda rdf:resource="c:/OwlSpeak/empty.owl#agenda_ThankPersonal"/>
+        <p1:inWorkspace rdf:resource="c:/OwlSpeak/empty.owl#userWorkspace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#History-1082806269 -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#History-1082806269">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#History"/>
+        <p1:addTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</p1:addTime>
+        <p1:agendaPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">42</p1:agendaPriority>
+        <p1:forAgenda rdf:resource="c:/OwlSpeak/empty.owl#agenda_GreetEvening"/>
+        <p1:inWorkspace rdf:resource="c:/OwlSpeak/empty.owl#userWorkspace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#History-1145864137 -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#History-1145864137">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#History"/>
+        <p1:addTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</p1:addTime>
+        <p1:agendaPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">42</p1:agendaPriority>
+        <p1:forAgenda rdf:resource="c:/OwlSpeak/empty.owl#agenda_Thank"/>
+        <p1:inWorkspace rdf:resource="c:/OwlSpeak/empty.owl#userWorkspace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#History-1205600193 -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#History-1205600193">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#History"/>
+        <p1:addTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</p1:addTime>
+        <p1:agendaPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">42</p1:agendaPriority>
+        <p1:forAgenda rdf:resource="c:/OwlSpeak/empty.owl#agenda_Console"/>
+        <p1:inWorkspace rdf:resource="c:/OwlSpeak/empty.owl#userWorkspace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#History-1214160399 -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#History-1214160399">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#History"/>
+        <p1:addTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</p1:addTime>
+        <p1:agendaPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">42</p1:agendaPriority>
+        <p1:forAgenda rdf:resource="c:/OwlSpeak/empty.owl#agenda_AskMood"/>
+        <p1:inWorkspace rdf:resource="c:/OwlSpeak/empty.owl#userWorkspace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#History-1276400464 -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#History-1276400464">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#History"/>
+        <p1:addTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</p1:addTime>
+        <p1:agendaPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">42</p1:agendaPriority>
+        <p1:forAgenda rdf:resource="c:/OwlSpeak/empty.owl#agenda_StateMissingComprehension"/>
+        <p1:inWorkspace rdf:resource="c:/OwlSpeak/empty.owl#userWorkspace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#History-1380742554 -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#History-1380742554">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#History"/>
+        <p1:addTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</p1:addTime>
+        <p1:agendaPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">42</p1:agendaPriority>
+        <p1:forAgenda rdf:resource="c:/OwlSpeak/empty.owl#agenda_MotivateGroupOriented"/>
+        <p1:inWorkspace rdf:resource="c:/OwlSpeak/empty.owl#userWorkspace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#History-1430864036 -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#History-1430864036">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#History"/>
+        <p1:addTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</p1:addTime>
+        <p1:agendaPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">42</p1:agendaPriority>
+        <p1:forAgenda rdf:resource="c:/OwlSpeak/empty.owl#agenda_SayGoodbyeMorning"/>
+        <p1:inWorkspace rdf:resource="c:/OwlSpeak/empty.owl#userWorkspace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#History-1485807313 -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#History-1485807313">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#History"/>
+        <p1:addTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</p1:addTime>
+        <p1:agendaPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">42</p1:agendaPriority>
+        <p1:forAgenda rdf:resource="c:/OwlSpeak/empty.owl#agenda_GreetPersonal"/>
+        <p1:inWorkspace rdf:resource="c:/OwlSpeak/empty.owl#userWorkspace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#History-1576457703 -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#History-1576457703">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#History"/>
+        <p1:addTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</p1:addTime>
+        <p1:agendaPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">42</p1:agendaPriority>
+        <p1:forAgenda rdf:resource="c:/OwlSpeak/empty.owl#agenda_AnswerThankPersonal"/>
+        <p1:inWorkspace rdf:resource="c:/OwlSpeak/empty.owl#userWorkspace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#History-1694041056 -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#History-1694041056">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#History"/>
+        <p1:addTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</p1:addTime>
+        <p1:agendaPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">42</p1:agendaPriority>
+        <p1:forAgenda rdf:resource="c:/OwlSpeak/empty.owl#agenda_RequestRepeat"/>
+        <p1:inWorkspace rdf:resource="c:/OwlSpeak/empty.owl#userWorkspace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#History-1738504054 -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#History-1738504054">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#History"/>
+        <p1:addTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</p1:addTime>
+        <p1:agendaPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">42</p1:agendaPriority>
+        <p1:forAgenda rdf:resource="c:/OwlSpeak/empty.owl#agenda_GreetAfternoon"/>
+        <p1:inWorkspace rdf:resource="c:/OwlSpeak/empty.owl#userWorkspace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#History-1768786698 -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#History-1768786698">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#History"/>
+        <p1:addTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</p1:addTime>
+        <p1:agendaPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">42</p1:agendaPriority>
+        <p1:forAgenda rdf:resource="c:/OwlSpeak/empty.owl#agenda_MotivateIndividuisticallyOriented"/>
+        <p1:inWorkspace rdf:resource="c:/OwlSpeak/empty.owl#userWorkspace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#History-181520091 -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#History-181520091">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#History"/>
+        <p1:addTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</p1:addTime>
+        <p1:agendaPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">42</p1:agendaPriority>
+        <p1:forAgenda rdf:resource="c:/OwlSpeak/empty.owl#agenda_MotivatePersonal"/>
+        <p1:inWorkspace rdf:resource="c:/OwlSpeak/empty.owl#userWorkspace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#History-216967780 -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#History-216967780">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#History"/>
+        <p1:addTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</p1:addTime>
+        <p1:agendaPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">42</p1:agendaPriority>
+        <p1:forAgenda rdf:resource="c:/OwlSpeak/empty.owl#agenda_SayGoodbyeMeetAgain"/>
+        <p1:inWorkspace rdf:resource="c:/OwlSpeak/empty.owl#userWorkspace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#History-395982389 -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#History-395982389">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#History"/>
+        <p1:addTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</p1:addTime>
+        <p1:agendaPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">42</p1:agendaPriority>
+        <p1:forAgenda rdf:resource="c:/OwlSpeak/empty.owl#agenda_CalmDown"/>
+        <p1:inWorkspace rdf:resource="c:/OwlSpeak/empty.owl#userWorkspace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#History-554336182 -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#History-554336182">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#History"/>
+        <p1:addTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</p1:addTime>
+        <p1:agendaPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">42</p1:agendaPriority>
+        <p1:forAgenda rdf:resource="c:/OwlSpeak/empty.owl#agenda_SayGoodbyeAfternoon"/>
+        <p1:inWorkspace rdf:resource="c:/OwlSpeak/empty.owl#userWorkspace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#History-69668823 -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#History-69668823">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#History"/>
+        <p1:addTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</p1:addTime>
+        <p1:agendaPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">42</p1:agendaPriority>
+        <p1:forAgenda rdf:resource="c:/OwlSpeak/empty.owl#agenda_Apologise"/>
+        <p1:inWorkspace rdf:resource="c:/OwlSpeak/empty.owl#userWorkspace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#History-727338200 -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#History-727338200">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#History"/>
+        <p1:addTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</p1:addTime>
+        <p1:agendaPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">42</p1:agendaPriority>
+        <p1:forAgenda rdf:resource="c:/OwlSpeak/empty.owl#agenda_GreetMorning"/>
+        <p1:inWorkspace rdf:resource="c:/OwlSpeak/empty.owl#userWorkspace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#History-973236181 -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#History-973236181">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#History"/>
+        <p1:addTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</p1:addTime>
+        <p1:agendaPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">42</p1:agendaPriority>
+        <p1:forAgenda rdf:resource="c:/OwlSpeak/empty.owl#agenda_RequestRephrase"/>
+        <p1:inWorkspace rdf:resource="c:/OwlSpeak/empty.owl#userWorkspace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#History1049773662 -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#History1049773662">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#History"/>
+        <p1:addTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</p1:addTime>
+        <p1:agendaPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">42</p1:agendaPriority>
+        <p1:forAgenda rdf:resource="c:/OwlSpeak/empty.owl#agenda_Motivate"/>
+        <p1:inWorkspace rdf:resource="c:/OwlSpeak/empty.owl#userWorkspace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#History105959320 -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#History105959320">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#History"/>
+        <p1:addTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</p1:addTime>
+        <p1:agendaPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">42</p1:agendaPriority>
+        <p1:forAgenda rdf:resource="c:/OwlSpeak/empty.owl#agenda_Greet"/>
+        <p1:inWorkspace rdf:resource="c:/OwlSpeak/empty.owl#userWorkspace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#History1105387122 -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#History1105387122">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#History"/>
+        <p1:addTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</p1:addTime>
+        <p1:agendaPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">42</p1:agendaPriority>
+        <p1:forAgenda rdf:resource="c:/OwlSpeak/empty.owl#agenda_AskTaskSuccess"/>
+        <p1:inWorkspace rdf:resource="c:/OwlSpeak/empty.owl#userWorkspace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#History1145219601 -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#History1145219601">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#History"/>
+        <p1:addTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</p1:addTime>
+        <p1:agendaPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">42</p1:agendaPriority>
+        <p1:forAgenda rdf:resource="c:/OwlSpeak/empty.owl#agenda_AskWellBeing"/>
+        <p1:inWorkspace rdf:resource="c:/OwlSpeak/empty.owl#userWorkspace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#History1282815243 -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#History1282815243">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#History"/>
+        <p1:addTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</p1:addTime>
+        <p1:agendaPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">42</p1:agendaPriority>
+        <p1:forAgenda rdf:resource="c:/OwlSpeak/empty.owl#agenda_SayGoodbyeEvening"/>
+        <p1:inWorkspace rdf:resource="c:/OwlSpeak/empty.owl#userWorkspace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#History165585400 -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#History165585400">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#History"/>
+        <p1:addTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</p1:addTime>
+        <p1:agendaPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">42</p1:agendaPriority>
+        <p1:forAgenda rdf:resource="c:/OwlSpeak/empty.owl#agenda_AskPlans"/>
+        <p1:inWorkspace rdf:resource="c:/OwlSpeak/empty.owl#userWorkspace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#History1694141256 -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#History1694141256">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#History"/>
+        <p1:addTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</p1:addTime>
+        <p1:agendaPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">42</p1:agendaPriority>
+        <p1:forAgenda rdf:resource="c:/OwlSpeak/empty.owl#agenda_AskTask"/>
+        <p1:inWorkspace rdf:resource="c:/OwlSpeak/empty.owl#userWorkspace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#History171427982 -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#History171427982">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#History"/>
+        <p1:addTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</p1:addTime>
+        <p1:agendaPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">42</p1:agendaPriority>
+        <p1:forAgenda rdf:resource="c:/OwlSpeak/empty.owl#agenda_SayGoodbyeWeekend"/>
+        <p1:inWorkspace rdf:resource="c:/OwlSpeak/empty.owl#userWorkspace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#History1950640600 -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#History1950640600">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#History"/>
+        <p1:addTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</p1:addTime>
+        <p1:agendaPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">42</p1:agendaPriority>
+        <p1:forAgenda rdf:resource="c:/OwlSpeak/empty.owl#agenda_ShareJoy"/>
+        <p1:inWorkspace rdf:resource="c:/OwlSpeak/empty.owl#userWorkspace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#History1961945781 -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#History1961945781">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#History"/>
+        <p1:addTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</p1:addTime>
+        <p1:agendaPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">42</p1:agendaPriority>
+        <p1:forAgenda rdf:resource="c:/OwlSpeak/empty.owl#agenda_SayGoodbye"/>
+        <p1:inWorkspace rdf:resource="c:/OwlSpeak/empty.owl#userWorkspace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#History2085045171 -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#History2085045171">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#History"/>
+        <p1:addTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</p1:addTime>
+        <p1:agendaPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">42</p1:agendaPriority>
+        <p1:forAgenda rdf:resource="c:/OwlSpeak/empty.owl#agenda_CheerUp"/>
+        <p1:inWorkspace rdf:resource="c:/OwlSpeak/empty.owl#userWorkspace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#History2092521141 -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#History2092521141">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#History"/>
+        <p1:addTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</p1:addTime>
+        <p1:agendaPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">42</p1:agendaPriority>
+        <p1:forAgenda rdf:resource="c:/OwlSpeak/empty.owl#agenda_AnswerThank"/>
+        <p1:inWorkspace rdf:resource="c:/OwlSpeak/empty.owl#userWorkspace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#History2096480116 -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#History2096480116">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#History"/>
+        <p1:addTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</p1:addTime>
+        <p1:agendaPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">42</p1:agendaPriority>
+        <p1:forAgenda rdf:resource="c:/OwlSpeak/empty.owl#agenda_ApologisePersonal"/>
+        <p1:inWorkspace rdf:resource="c:/OwlSpeak/empty.owl#userWorkspace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#History292998949 -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#History292998949">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#History"/>
+        <p1:addTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</p1:addTime>
+        <p1:agendaPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">42</p1:agendaPriority>
+        <p1:forAgenda rdf:resource="c:/OwlSpeak/empty.owl#agenda_SayGoodbyePersonal"/>
+        <p1:inWorkspace rdf:resource="c:/OwlSpeak/empty.owl#userWorkspace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#agenda_AnswerThank -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#agenda_AnswerThank">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_AnswerThank"/>
+        <p1:has rdf:resource="c:/OwlSpeak/empty.owl#move_sys_AnswerThank"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#agenda_AnswerThankPersonal -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#agenda_AnswerThankPersonal">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_AnswerThankPersonal"/>
+        <p1:has rdf:resource="c:/OwlSpeak/empty.owl#move_sys_AnswerThankPersonal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#agenda_Apologise -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#agenda_Apologise">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_Apologise"/>
+        <p1:has rdf:resource="c:/OwlSpeak/empty.owl#move_sys_Apologise"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#agenda_ApologisePersonal -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#agenda_ApologisePersonal">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_ApologisePersonal"/>
+        <p1:has rdf:resource="c:/OwlSpeak/empty.owl#move_sys_ApologisePersonal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#agenda_AskMood -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#agenda_AskMood">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_AskMood"/>
+        <p1:has rdf:resource="c:/OwlSpeak/empty.owl#move_sys_AskMood"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#agenda_AskPlans -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#agenda_AskPlans">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_AskPlans"/>
+        <p1:has rdf:resource="c:/OwlSpeak/empty.owl#move_sys_AskPlans"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#agenda_AskTask -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#agenda_AskTask">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_AskTask"/>
+        <p1:has rdf:resource="c:/OwlSpeak/empty.owl#move_sys_AskTask"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#agenda_AskTaskSuccess -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#agenda_AskTaskSuccess">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_AskTaskSuccess"/>
+        <p1:has rdf:resource="c:/OwlSpeak/empty.owl#move_sys_AskTaskSuccess"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#agenda_AskWellBeing -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#agenda_AskWellBeing">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_AskWellBeing"/>
+        <p1:has rdf:resource="c:/OwlSpeak/empty.owl#move_sys_AskWellBeing"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#agenda_CalmDown -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#agenda_CalmDown">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_CalmDown"/>
+        <p1:has rdf:resource="c:/OwlSpeak/empty.owl#move_sys_CalmDown"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#agenda_CheerUp -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#agenda_CheerUp">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_CheerUp"/>
+        <p1:has rdf:resource="c:/OwlSpeak/empty.owl#move_sys_CheerUp"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#agenda_Console -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#agenda_Console">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_Console"/>
+        <p1:has rdf:resource="c:/OwlSpeak/empty.owl#move_sys_Console"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#agenda_Greet -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#agenda_Greet">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_Greet"/>
+        <p1:has rdf:resource="c:/OwlSpeak/empty.owl#move_sys_Greet"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#agenda_GreetAfternoon -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#agenda_GreetAfternoon">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_GreetAfternoon"/>
+        <p1:has rdf:resource="c:/OwlSpeak/empty.owl#move_sys_GreetAfternoon"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#agenda_GreetEvening -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#agenda_GreetEvening">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_GreetEvening"/>
+        <p1:has rdf:resource="c:/OwlSpeak/empty.owl#move_sys_GreetEvening"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#agenda_GreetMorning -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#agenda_GreetMorning">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_GreetMorning"/>
+        <p1:has rdf:resource="c:/OwlSpeak/empty.owl#move_sys_GreetMorning"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#agenda_GreetPersonal -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#agenda_GreetPersonal">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_GreetPersonal"/>
+        <p1:has rdf:resource="c:/OwlSpeak/empty.owl#move_sys_GreetPersonal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#agenda_Master -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#agenda_Master">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <p1:isMasterBool rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</p1:isMasterBool>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_AnswerThank"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_AnswerThankPersonal"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_Apologise"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_ApologisePersonal"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_AskMood"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_AskPlans"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_AskTask"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_AskTaskSuccess"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_AskWellBeing"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_CalmDown"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_CheerUp"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_Console"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_Greet"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_GreetAfternoon"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_GreetEvening"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_GreetMorning"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_GreetPersonal"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_Motivate"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_MotivateGroupOriented"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_MotivateIndividuisticallyOriented"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_MotivatePersonal"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_RequestRepeat"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_RequestRephrase"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_SayGoodbye"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_SayGoodbyeAfternoon"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_SayGoodbyeEvening"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_SayGoodbyeMeetAgain"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_SayGoodbyeMorning"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_SayGoodbyePersonal"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_SayGoodbyeWeekend"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_ShareJoy"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_StateMissingComprehension"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_Thank"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_ThankPersonal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#agenda_Motivate -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#agenda_Motivate">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_Motivate"/>
+        <p1:has rdf:resource="c:/OwlSpeak/empty.owl#move_sys_Motivate"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#agenda_MotivateGroupOriented -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#agenda_MotivateGroupOriented">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_MotivateGroupOriented"/>
+        <p1:has rdf:resource="c:/OwlSpeak/empty.owl#move_sys_MotivateGroupOriented"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#agenda_MotivateIndividuisticallyOriented -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#agenda_MotivateIndividuisticallyOriented">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_MotivateIndividuisticallyOriented"/>
+        <p1:has rdf:resource="c:/OwlSpeak/empty.owl#move_sys_MotivateIndividuisticallyOriented"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#agenda_MotivatePersonal -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#agenda_MotivatePersonal">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_MotivatePersonal"/>
+        <p1:has rdf:resource="c:/OwlSpeak/empty.owl#move_sys_MotivatePersonal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#agenda_RequestRepeat -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#agenda_RequestRepeat">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_RequestRepeat"/>
+        <p1:has rdf:resource="c:/OwlSpeak/empty.owl#move_sys_RequestRepeat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#agenda_RequestRephrase -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#agenda_RequestRephrase">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_RequestRephrase"/>
+        <p1:has rdf:resource="c:/OwlSpeak/empty.owl#move_sys_RequestRephrase"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#agenda_SayGoodbye -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#agenda_SayGoodbye">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_SayGoodbye"/>
+        <p1:has rdf:resource="c:/OwlSpeak/empty.owl#move_sys_SayGoodbye"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#agenda_SayGoodbyeAfternoon -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#agenda_SayGoodbyeAfternoon">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_SayGoodbyeAfternoon"/>
+        <p1:has rdf:resource="c:/OwlSpeak/empty.owl#move_sys_SayGoodbyeAfternoon"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#agenda_SayGoodbyeEvening -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#agenda_SayGoodbyeEvening">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_SayGoodbyeEvening"/>
+        <p1:has rdf:resource="c:/OwlSpeak/empty.owl#move_sys_SayGoodbyeEvening"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#agenda_SayGoodbyeMeetAgain -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#agenda_SayGoodbyeMeetAgain">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_SayGoodbyeMeetAgain"/>
+        <p1:has rdf:resource="c:/OwlSpeak/empty.owl#move_sys_SayGoodbyeMeetAgain"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#agenda_SayGoodbyeMorning -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#agenda_SayGoodbyeMorning">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_SayGoodbyeMorning"/>
+        <p1:has rdf:resource="c:/OwlSpeak/empty.owl#move_sys_SayGoodbyeMorning"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#agenda_SayGoodbyePersonal -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#agenda_SayGoodbyePersonal">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_SayGoodbyePersonal"/>
+        <p1:has rdf:resource="c:/OwlSpeak/empty.owl#move_sys_SayGoodbyePersonal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#agenda_SayGoodbyeWeekend -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#agenda_SayGoodbyeWeekend">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_SayGoodbyeWeekend"/>
+        <p1:has rdf:resource="c:/OwlSpeak/empty.owl#move_sys_SayGoodbyeWeekend"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#agenda_ShareJoy -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#agenda_ShareJoy">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_ShareJoy"/>
+        <p1:has rdf:resource="c:/OwlSpeak/empty.owl#move_sys_ShareJoy"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#agenda_StateMissingComprehension -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#agenda_StateMissingComprehension">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_StateMissingComprehension"/>
+        <p1:has rdf:resource="c:/OwlSpeak/empty.owl#move_sys_StateMissingComprehension"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#agenda_Thank -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#agenda_Thank">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_Thank"/>
+        <p1:has rdf:resource="c:/OwlSpeak/empty.owl#move_sys_Thank"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#agenda_ThankPersonal -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#agenda_ThankPersonal">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_ThankPersonal"/>
+        <p1:has rdf:resource="c:/OwlSpeak/empty.owl#move_sys_ThankPersonal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#move_sys_AnswerThank -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#move_sys_AnswerThank">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#move_sys_AnswerThankPersonal -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#move_sys_AnswerThankPersonal">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#move_sys_Apologise -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#move_sys_Apologise">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#move_sys_ApologisePersonal -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#move_sys_ApologisePersonal">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#move_sys_AskMood -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#move_sys_AskMood">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#move_sys_AskPlans -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#move_sys_AskPlans">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#move_sys_AskTask -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#move_sys_AskTask">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#move_sys_AskTaskSuccess -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#move_sys_AskTaskSuccess">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#move_sys_AskWellBeing -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#move_sys_AskWellBeing">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#move_sys_CalmDown -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#move_sys_CalmDown">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#move_sys_CheerUp -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#move_sys_CheerUp">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#move_sys_Console -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#move_sys_Console">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#move_sys_Greet -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#move_sys_Greet">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#move_sys_GreetAfternoon -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#move_sys_GreetAfternoon">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#move_sys_GreetEvening -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#move_sys_GreetEvening">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#move_sys_GreetMorning -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#move_sys_GreetMorning">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#move_sys_GreetPersonal -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#move_sys_GreetPersonal">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#move_sys_Motivate -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#move_sys_Motivate">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#move_sys_MotivateGroupOriented -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#move_sys_MotivateGroupOriented">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#move_sys_MotivateIndividuisticallyOriented -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#move_sys_MotivateIndividuisticallyOriented">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#move_sys_MotivatePersonal -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#move_sys_MotivatePersonal">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#move_sys_RequestRepeat -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#move_sys_RequestRepeat">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#move_sys_RequestRephrase -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#move_sys_RequestRephrase">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#move_sys_SayGoodbye -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#move_sys_SayGoodbye">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#move_sys_SayGoodbyeAfternoon -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#move_sys_SayGoodbyeAfternoon">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#move_sys_SayGoodbyeEvening -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#move_sys_SayGoodbyeEvening">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#move_sys_SayGoodbyeMeetAgain -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#move_sys_SayGoodbyeMeetAgain">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#move_sys_SayGoodbyeMorning -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#move_sys_SayGoodbyeMorning">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#move_sys_SayGoodbyePersonal -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#move_sys_SayGoodbyePersonal">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#move_sys_SayGoodbyeWeekend -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#move_sys_SayGoodbyeWeekend">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#move_sys_ShareJoy -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#move_sys_ShareJoy">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#move_sys_StateMissingComprehension -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#move_sys_StateMissingComprehension">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#move_sys_Thank -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#move_sys_Thank">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#move_sys_ThankPersonal -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#move_sys_ThankPersonal">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#userBeliefspace -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#userBeliefspace">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#BeliefSpace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#userWorkspace -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#userWorkspace">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#WorkSpace"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_AnswerThank"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_AnswerThankPersonal"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_Apologise"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_ApologisePersonal"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_AskMood"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_AskPlans"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_AskTask"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_AskTaskSuccess"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_AskWellBeing"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_CalmDown"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_CheerUp"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_Console"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_Greet"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_GreetAfternoon"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_GreetEvening"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_GreetMorning"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_GreetPersonal"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_Motivate"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_MotivateGroupOriented"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_MotivateIndividuisticallyOriented"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_MotivatePersonal"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_RequestRepeat"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_RequestRephrase"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_SayGoodbye"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_SayGoodbyeAfternoon"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_SayGoodbyeEvening"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_SayGoodbyeMeetAgain"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_SayGoodbyeMorning"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_SayGoodbyePersonal"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_SayGoodbyeWeekend"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_ShareJoy"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_StateMissingComprehension"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_Thank"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_ThankPersonal"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.1) http://owlapi.sourceforge.net -->
+
