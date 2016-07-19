@@ -72,7 +72,13 @@
     <!-- Build Project -->
     <target name="build" depends="clean,infos">
         <!-- Compile Project -->
-        <javac srcdir="${srcdir}" destdir="${tmpdir}" debug="on" includes="**/*.java" encoding="utf-8" includeantruntime="false" fork="true">
+        <javac srcdir="${srcdir}" 
+               destdir="${tmpdir}" 
+               debug="on" 
+               includes="**/*.java" 
+               encoding="utf-8" 
+               includeantruntime="false" 
+               fork="true">
             <classpath refid="clspath"/>
         </javac>
         <!-- Copy JavaDocs -->
@@ -88,7 +94,10 @@
             </fileset>
         </copy>
         <!-- Build JAR File -->
-        <jar jarfile="${jarfile}" basedir="${tmpdir}" destfile="${jarfile}" includes="de/**/*.class,**/*.*">
+        <jar jarfile="${jarfile}" 
+             basedir="${tmpdir}" 
+             destfile="${jarfile}" 
+             includes="de/**/*.class,**/*.*">
             <zipgroupfileset dir="${libdir}" includes="*.jar"/>
             <manifest>
                 <attribute name="Built-By" value="Human Centered Multimedia Augsburg"/>
@@ -157,7 +166,7 @@
     <target name="tests">
         <java classname="eu.kristina.vsm.test.RESTFulPipeTestSuite" fork="true">
             <classpath refid="clspath"/>
-            <arg line="http://137.250.171.231:11223"/>
+            <!--<arg line="http://172.31.26.245:11223"/>-->
         </java>
     </target> 
     <!-- Execute Project -->
@@ -171,7 +180,7 @@
     <target name="run-vsm-kristina-service">
         <java classname="eu.kristina.vsm.VSMKristinaService" fork="true">
             <classpath refid="clspath"/>
-            <arg line="http://137.250.171.231:11223/"/>
+            <arg line="http://172.31.26.245:11223/"/>
         </java>
     </target>     
     <!-- -->

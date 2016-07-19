@@ -10,18 +10,20 @@ public class RESTFulPipeTestSuite {
 
     // Execute the rest test
     public static final void main(final String args[]) {
+        // Create the client
+        final RESTFulWebClient client = new RESTFulWebClient();
+
         //testVSM();
         //testSSI();
-        //testOWL();
-        //testUPF();
-        testGTI();
+        testOWL(client);
+        //testUPF(client);
+        //testGTI();
         //testPipe();
 
     }
 
-    private static void testPipe() {
-        // Create the client
-        final RESTFulWebClient client = new RESTFulWebClient();
+    private static void testPipe(final RESTFulWebClient client) {
+
         /*
         // Create the listener
         final SSIEventListener listener = new SSIEventListener(
@@ -122,10 +124,10 @@ public class RESTFulPipeTestSuite {
         // Build the OWL service config
         final RESTFulResource owlall = new RESTFulResource(
                 "UULM-OWL", "Dialog Management",
-                "http://137.250.171.232:11153",
+                "http://52.29.254.9:11153",
                 "*/*", "*/*");
         // Try executing a GET or a POST 
-        client.get(owlall, "?valence=" + 0.5f + "&arousal=" + 0.5f);
+        //client.get(owlall, "?valence=" + 0.5f + "&arousal=" + 0.5f);
         client.post(owlall, "", "Hello World!");
     }
 
@@ -144,9 +146,9 @@ public class RESTFulPipeTestSuite {
                 "http://kristina.taln.upf.edu/services/mode_selection",
                 "application/x-www-form-urlencoded", "application/xml");
         // Try executing a GET or a POST 
-        client.get(la, "?text=hello");
-        client.get(lg, "?text=hello");
-        client.get(ms, "?text=hello");
+        //client.get(la, "?text=hello");
+        //client.get(lg, "?text=hello");
+        //client.get(ms, "?text=hello");
         client.post(la, "", "Hello World!");
         client.post(lg, "", "Hello World!");
         client.post(ms, "", "Hello World!");
@@ -171,7 +173,6 @@ public class RESTFulPipeTestSuite {
         // Construct some XML request
         //final String xml = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n"
         //        + "</HellWord> ";
-
         // Build the GTI service config
         final RESTFulResource ce_v = new RESTFulResource(
                 "UPF-GTI", "Avatar-Verbal",
