@@ -359,10 +359,10 @@ public final class VSMKristinaPlayer implements RunTimePlayer, SSIEventHandler {
         // Execute POST request
         return mRestClient.post(resource, "?id=" + id, command);
     }
-////////////////////////////////////////////////////////////////////////////
-    ////////////////////////////////////////////////////////////////////////////
-    ////////////////////////////////////////////////////////////////////////////
 
+    ////////////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////
     public final String nod(
             final float amount,
             final int repetition) {
@@ -382,6 +382,58 @@ public final class VSMKristinaPlayer implements RunTimePlayer, SSIEventHandler {
         final RESTFulResource resource = mResourceMap.get("Avatar-Idle");
         // Get the command
         final String command = GTIActionFactory.nod(amount, repetition);
+        // Execute POST request
+        return mRestClient.post(resource, "?id=" + id, command);
+    }
+
+    ////////////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////
+    public final String shake(
+            final float amount,
+            final int repetition) {
+        // Get the resource
+        final RESTFulResource resource = mResourceMap.get("Avatar-Idle");
+        // Get the command
+        final String command = GTIActionFactory.shake(amount, repetition);
+        // Execute POST request
+        return mRestClient.post(resource, "?id=" + mAvatarID, command);
+    }
+
+    public final String shake(
+            final String id,
+            final float amount,
+            final int repetition) {
+        // Get the resource
+        final RESTFulResource resource = mResourceMap.get("Avatar-Idle");
+        // Get the command
+        final String command = GTIActionFactory.shake(amount, repetition);
+        // Execute POST request
+        return mRestClient.post(resource, "?id=" + id, command);
+    }
+
+    ////////////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////
+    public final String tilt(
+            final float amount,
+            final int repetition) {
+        // Get the resource
+        final RESTFulResource resource = mResourceMap.get("Avatar-Idle");
+        // Get the command
+        final String command = GTIActionFactory.tilt(amount, repetition);
+        // Execute POST request
+        return mRestClient.post(resource, "?id=" + mAvatarID, command);
+    }
+
+    public final String tilt(
+            final String id,
+            final float amount,
+            final int repetition) {
+        // Get the resource
+        final RESTFulResource resource = mResourceMap.get("Avatar-Idle");
+        // Get the command
+        final String command = GTIActionFactory.tilt(amount, repetition);
         // Execute POST request
         return mRestClient.post(resource, "?id=" + id, command);
     }

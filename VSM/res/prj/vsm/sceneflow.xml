@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<SceneFlow id="KRISTINA" name="KRISTINA" comment="KRISTINA" hideLocalVar="false" hideGlobalVar="false" exhaustive="false" preserving="false" modifDate="Tue, 19 Jul 2016 11:26:19" start="S1;" context="" package="" xmlns="xml.sceneflow.dfki.de" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="xml.sceneflow.dfki.de res/xsd/sceneflow.xsd">
+<SceneFlow id="KRISTINA" name="KRISTINA" comment="KRISTINA" hideLocalVar="false" hideGlobalVar="false" exhaustive="false" preserving="false" modifDate="Tue, 19 Jul 2016 12:47:09" start="S1;" context="" package="" xmlns="xml.sceneflow.dfki.de" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="xml.sceneflow.dfki.de res/xsd/sceneflow.xsd">
   <Define>
     <StructType name="StatusData">
       <Member type="Float" name ="Valence"/>
@@ -464,7 +464,7 @@
       </SuperNode>
     </SuperNode>
   </SuperNode>
-  <SuperNode id="S1" name="Test Idle" comment="" exhaustive="false" preserving="false" hideLocalVar="false" hideGlobalVar="false" start="S20;S23;">
+  <SuperNode id="S1" name="Test Idle" comment="" exhaustive="false" preserving="false" hideLocalVar="false" hideGlobalVar="false" start="S20;S23;S15;S14;">
     <Define>
     </Define>
     <Declare>
@@ -1154,20 +1154,122 @@
         </Declare>
         <Commands>
           <UserCommand name="nod">
-            <Float value="0.25"/>
+            <Float value="0.5"/>
             <Int value="0"/>
           </UserCommand>
         </Commands>
-        <TEdge target="N28" start="" timeout="10000">
+        <TEdge target="N28" start="" timeout="1500">
         <Graphics>
           <Arrow>
-            <Point x-pos="207" y-pos="234" control-x-pos="225" control-y-pos="166"/>
-            <Point x-pos="228" y-pos="250" control-x-pos="288" control-y-pos="214"/>
+            <Point x-pos="207" y-pos="164" control-x-pos="225" control-y-pos="96"/>
+            <Point x-pos="228" y-pos="180" control-x-pos="288" control-y-pos="144"/>
           </Arrow>
         </Graphics>
         </TEdge>
         <Graphics>
-          <Position x-pos="163" y-pos="233"/>
+          <Position x-pos="163" y-pos="163"/>
+        </Graphics>
+      </Node>
+    </SuperNode>
+    <SuperNode id="S24" name="Shake" comment="" exhaustive="false" preserving="false" hideLocalVar="false" hideGlobalVar="false" start="N46;">
+      <Define>
+      </Define>
+      <Declare>
+      </Declare>
+      <Commands>
+      </Commands>
+      <Graphics>
+        <Position x-pos="583" y-pos="233"/>
+      </Graphics>
+      <LocalVariableBadge>
+        <Position x-pos="10" y-pos="10"/>
+      </LocalVariableBadge>
+      <GlobalVariableBadge>
+        <Position x-pos="10" y-pos="10"/>
+      </GlobalVariableBadge>
+      <Node id="N45" name="History" exhaustive="false" preserving="false" history="true">
+        <Define>
+        </Define>
+        <Declare>
+        </Declare>
+        <Commands>
+        </Commands>
+        <Graphics>
+          <Position x-pos="23" y-pos="163"/>
+        </Graphics>
+      </Node>
+      <Node id="N46" name="Shake" exhaustive="false" preserving="false" history="false">
+        <Define>
+        </Define>
+        <Declare>
+        </Declare>
+        <Commands>
+          <UserCommand name="shake">
+            <Float value="0.5"/>
+            <Int value="0"/>
+          </UserCommand>
+        </Commands>
+        <TEdge target="N46" start="" timeout="1500">
+        <Graphics>
+          <Arrow>
+            <Point x-pos="207" y-pos="164" control-x-pos="225" control-y-pos="96"/>
+            <Point x-pos="228" y-pos="180" control-x-pos="288" control-y-pos="144"/>
+          </Arrow>
+        </Graphics>
+        </TEdge>
+        <Graphics>
+          <Position x-pos="163" y-pos="163"/>
+        </Graphics>
+      </Node>
+    </SuperNode>
+    <SuperNode id="S25" name="Tilt" comment="" exhaustive="false" preserving="false" hideLocalVar="false" hideGlobalVar="false" start="N52;">
+      <Define>
+      </Define>
+      <Declare>
+      </Declare>
+      <Commands>
+      </Commands>
+      <Graphics>
+        <Position x-pos="583" y-pos="303"/>
+      </Graphics>
+      <LocalVariableBadge>
+        <Position x-pos="10" y-pos="10"/>
+      </LocalVariableBadge>
+      <GlobalVariableBadge>
+        <Position x-pos="10" y-pos="10"/>
+      </GlobalVariableBadge>
+      <Node id="N50" name="History" exhaustive="false" preserving="false" history="true">
+        <Define>
+        </Define>
+        <Declare>
+        </Declare>
+        <Commands>
+        </Commands>
+        <Graphics>
+          <Position x-pos="23" y-pos="163"/>
+        </Graphics>
+      </Node>
+      <Node id="N52" name="Tilt" exhaustive="false" preserving="false" history="false">
+        <Define>
+        </Define>
+        <Declare>
+        </Declare>
+        <Commands>
+          <UserCommand name="tilt">
+            <Float value="0.5"/>
+            <Int value="0"/>
+          </UserCommand>
+        </Commands>
+        <TEdge target="N52" start="" timeout="1500">
+        <Graphics>
+          <Arrow>
+            <Point x-pos="207" y-pos="164" control-x-pos="225" control-y-pos="96"/>
+            <Point x-pos="228" y-pos="180" control-x-pos="288" control-y-pos="144"/>
+          </Arrow>
+        </Graphics>
+        </TEdge>
+        <Graphics>
+          <Position x-pos="163" y-pos="163"/>
         </Graphics>
       </Node>
     </SuperNode>
@@ -1699,6 +1801,10 @@
     <UserCommand name="randInt" classname ="eu.kristina.vsm.VSMKristinaPlayer.sInstance" method="randInt">
       <Argument name="Arg0" type="int"/>
     </UserCommand>
+    <UserCommand name="shake" classname ="eu.kristina.vsm.VSMKristinaPlayer.sInstance" method="shake">
+      <Argument name="Arg0" type="float"/>
+      <Argument name="Arg1" type="int"/>
+    </UserCommand>
     <UserCommand name="ssi" classname ="eu.kristina.vsm.VSMKristinaPlayer.sInstance" method="ssi">
       <Argument name="Arg0" type="java.lang.String"/>
     </UserCommand>
@@ -1712,6 +1818,10 @@
     </UserCommand>
     <UserCommand name="blink" classname ="eu.kristina.vsm.VSMKristinaPlayer.sInstance" method="blink">
       <Argument name="Arg0" type="float"/>
+    </UserCommand>
+    <UserCommand name="tilt" classname ="eu.kristina.vsm.VSMKristinaPlayer.sInstance" method="tilt">
+      <Argument name="Arg0" type="float"/>
+      <Argument name="Arg1" type="int"/>
     </UserCommand>
     <UserCommand name="an" classname ="eu.kristina.vsm.VSMKristinaPlayer.sInstance" method="an">
       <Argument name="Arg0" type="java.lang.String"/>

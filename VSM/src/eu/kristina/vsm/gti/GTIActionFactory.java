@@ -98,15 +98,57 @@ public final class GTIActionFactory {
                 + "  \"cmdId\": " + id() + "," + "\n"
                 + "  \"head\": {" + "\n"
                 + "    \"start\": " + 0 + "," + "\n"
-                + "    \"ready\": " + 1 + "," + "\n"
-                + "    \"strokeStart\": " + 1 + "," + "\n"
-                + "    \"stroke\": " + 2 + "," + "\n"
-                + "    \"strokeEnd\": " + 3 + "," + "\n"
-                + "    \"relax\": " + 3 + "," + "\n"
-                + "    \"end\": " + 2 + "," + "\n"
+                + "    \"ready\": " + 0.25 + "," + "\n"
+                + "    \"strokeStart\": " + 0.25 + "," + "\n"
+                + "    \"stroke\": " + 0.5 + "," + "\n"
+                + "    \"strokeEnd\": " + 0.75 + "," + "\n"
+                + "    \"relax\": " + 0.75 + "," + "\n"
+                + "    \"end\": " + 1 + "," + "\n"
                 + "    \"lexeme\": \"NOD\"" + "," + "\n"
                 + "    \"amount\": " + amount + "," + "\n"
-                + "    \"repetition\": \"" + repetition + "\"\n"
+                + "    \"repetition\": " + repetition + "\n"
+                + "  }" + "\n"
+                + "}";
+    }
+
+    // Get a shake command
+    public static String shake(
+            final float amount,
+            final int repetition) {
+        return "{" + "\n"
+                + "  \"cmdId\": " + id() + "," + "\n"
+                + "  \"head\": {" + "\n"
+                + "    \"start\": " + 0 + "," + "\n"
+                + "    \"ready\": " + 0.25 + "," + "\n"
+                + "    \"strokeStart\": " + 0.25 + "," + "\n"
+                + "    \"stroke\": " + 0.5 + "," + "\n"
+                + "    \"strokeEnd\": " + 0.75 + "," + "\n"
+                + "    \"relax\": " + 0.75 + "," + "\n"
+                + "    \"end\": " + 1 + "," + "\n"
+                + "    \"lexeme\": \"SHAKE\"" + "," + "\n"
+                + "    \"amount\": " + amount + "," + "\n"
+                + "    \"repetition\": " + repetition + "\n"
+                + "  }" + "\n"
+                + "}";
+    }
+
+    // Get a shake command
+    public static String tilt(
+            final float amount,
+            final int repetition) {
+        return "{" + "\n"
+                + "  \"cmdId\": " + id() + "," + "\n"
+                + "  \"head\": {" + "\n"
+                + "    \"start\": " + 0 + "," + "\n"
+                + "    \"ready\": " + 0.25 + "," + "\n"
+                + "    \"strokeStart\": " + 0.25 + "," + "\n"
+                + "    \"stroke\": " + 0.5 + "," + "\n"
+                + "    \"strokeEnd\": " + 0.75 + "," + "\n"
+                + "    \"relax\": " + 0.75 + "," + "\n"
+                + "    \"end\": " + 1 + "," + "\n"
+                + "    \"lexeme\": \"TILT\"" + "," + "\n"
+                + "    \"amount\": " + amount + "," + "\n"
+                + "    \"repetition\": " + repetition + "\n"
                 + "  }" + "\n"
                 + "}";
     }
