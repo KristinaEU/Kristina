@@ -8,6 +8,7 @@ import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.io.Reader;
 import java.util.Iterator;
 import java.util.Set;
@@ -73,7 +74,7 @@ public class KIinputTest {
 			//TODO: temporary solution until ontology is in place
 			//manager.addIRIMapper(new SimpleIRIMapper(IRI.create("http://kristina-project.eu/ontologies/responses/v1"), IRI.create(new File("./src/main/java/test/response.ttl"))));
 			
-			OWLOntology onto = manager.loadOntologyFromOntologyDocument(new File("./src/main/java/test/sleeping_habits_response_1.ttl"));
+			//OWLOntology onto = manager.loadOntologyFromOntologyDocument(new File("./src/main/java/test/sleeping_habits_response_1.ttl"));
 			
 			
 			/*OWLDataFactory factory = manager.getOWLDataFactory();
@@ -85,11 +86,11 @@ public class KIinputTest {
 				System.out.println(ax);
 			}*/
 			
-			StringDocumentTarget t = new StringDocumentTarget();
+			//StringDocumentTarget t = new StringDocumentTarget();
 
             // perform agenda selection
             
-            manager.saveOntology(onto, t);
+            //manager.saveOntology(onto, t);
             //System.out.println(t);
             
             /*manager.saveOntology(onto, new FileOutputStream(new File("./src/main/java/test/sleeping_habits_response_2.ttl")));
@@ -104,15 +105,11 @@ public class KIinputTest {
             System.out.println(t);*/   
             
             Model model = ModelFactory.createDefaultModel() ;
-            model.read(new FileInputStream("./src/main/java/test/sleeping_habits_response_1.ttl"), "something","TURTLE") ;
-            
-            OntModel owlOntology = ModelFactory.createOntologyModel( OntModelSpec.RDFS_MEM, model );
-            for ( OntClass klass : owlOntology.listClasses().toList() ) {
-                System.out.println( klass );
-            }
+            model.read(new FileInputStream("./src/main/java/test/newpaper_test_response.ttl"), "something","TURTLE") ;
             
             
-            //model.write(System.out, "TURTLE");
+            model.write(System.out, "TURTLE");
+            
             
             
             
@@ -122,12 +119,7 @@ public class KIinputTest {
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		} catch (OWLOntologyCreationException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (OWLOntologyStorageException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		} 
 	}
+	
 }

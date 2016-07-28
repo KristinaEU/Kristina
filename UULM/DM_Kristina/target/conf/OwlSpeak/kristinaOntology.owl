@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="c:/OwlSpeak/empty.owl#"
      xml:base="c:/OwlSpeak/empty.owl"
-     xmlns:p1="http://localfiles/OwlSpeak/OwlSpeakOnto.owl#"
+     xmlns:p1="http://localhost:8080/OwlSpeakOnto.owl#"
      xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
@@ -11,7 +11,7 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
     <owl:Ontology rdf:about="c:/OwlSpeak/empty.owl">
-        <owl:imports rdf:resource="http://localfiles/OwlSpeak/OwlSpeakOnto.owl"/>
+        <owl:imports rdf:resource="http://localhost:8080/OwlSpeakOnto.owl"/>
     </owl:Ontology>
     
 
@@ -30,7 +30,7 @@
     <!-- c:/OwlSpeak/empty.owl#History942264260 -->
 
     <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#History942264260">
-        <rdf:type rdf:resource="http://localfiles/OwlSpeak/OwlSpeakOnto.owl#History"/>
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#History"/>
         <p1:addTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</p1:addTime>
         <p1:agendaPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">200</p1:agendaPriority>
         <p1:forAgenda rdf:resource="c:/OwlSpeak/empty.owl#agenda_Hello"/>
@@ -42,7 +42,7 @@
     <!-- c:/OwlSpeak/empty.owl#InteractionQuality -->
 
     <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#InteractionQuality">
-        <rdf:type rdf:resource="http://localfiles/OwlSpeak/OwlSpeakOnto.owl#Variable"/>
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Variable"/>
     </owl:NamedIndividual>
     
 
@@ -50,7 +50,7 @@
     <!-- c:/OwlSpeak/empty.owl#Masteragenda -->
 
     <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#Masteragenda">
-        <rdf:type rdf:resource="http://localfiles/OwlSpeak/OwlSpeakOnto.owl#Agenda"/>
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
         <p1:isMasterBool rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</p1:isMasterBool>
         <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_Hello"/>
         <p1:summaryAgenda rdf:resource="c:/OwlSpeak/empty.owl#sumAgenda_Start"/>
@@ -61,7 +61,7 @@
     <!-- c:/OwlSpeak/empty.owl#agenda_Bye -->
 
     <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#agenda_Bye">
-        <rdf:type rdf:resource="http://localfiles/OwlSpeak/OwlSpeakOnto.owl#Agenda"/>
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
         <p1:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">200</p1:priority>
         <p1:has rdf:resource="c:/OwlSpeak/empty.owl#move_sys_Bye"/>
         <p1:requires rdf:resource="c:/OwlSpeak/empty.owl#sem_Bye"/>
@@ -73,7 +73,7 @@
     <!-- c:/OwlSpeak/empty.owl#agenda_Hello -->
 
     <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#agenda_Hello">
-        <rdf:type rdf:resource="http://localfiles/OwlSpeak/OwlSpeakOnto.owl#Agenda"/>
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
         <p1:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">200</p1:priority>
         <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_Request_Task"/>
         <p1:has rdf:resource="c:/OwlSpeak/empty.owl#move_sys_Hello"/>
@@ -86,7 +86,7 @@
     <!-- c:/OwlSpeak/empty.owl#agenda_Request_Task -->
 
     <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#agenda_Request_Task">
-        <rdf:type rdf:resource="http://localfiles/OwlSpeak/OwlSpeakOnto.owl#Agenda"/>
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
         <p1:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">80</p1:priority>
         <p1:role rdf:datatype="http://www.w3.org/2001/XMLSchema#string">collection</p1:role>
         <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_Tell_Revive"/>
@@ -102,7 +102,7 @@
     <!-- c:/OwlSpeak/empty.owl#agenda_Tell_Revive -->
 
     <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#agenda_Tell_Revive">
-        <rdf:type rdf:resource="http://localfiles/OwlSpeak/OwlSpeakOnto.owl#Agenda"/>
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
         <p1:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">150</p1:priority>
         <p1:role rdf:datatype="http://www.w3.org/2001/XMLSchema#string">collection</p1:role>
         <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_Bye"/>
@@ -120,7 +120,7 @@
     <!-- c:/OwlSpeak/empty.owl#agenda_Tell_Swoon -->
 
     <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#agenda_Tell_Swoon">
-        <rdf:type rdf:resource="http://localfiles/OwlSpeak/OwlSpeakOnto.owl#Agenda"/>
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
         <p1:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">150</p1:priority>
         <p1:role rdf:datatype="http://www.w3.org/2001/XMLSchema#string">collection</p1:role>
         <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_Bye"/>
@@ -138,7 +138,7 @@
     <!-- c:/OwlSpeak/empty.owl#gr_Bye -->
 
     <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#gr_Bye">
-        <rdf:type rdf:resource="http://localfiles/OwlSpeak/OwlSpeakOnto.owl#Grammar"/>
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Grammar"/>
         <p1:grammarString xml:lang="de">Bis Bald</p1:grammarString>
         <p1:grammarString xml:lang="de">Das war alles</p1:grammarString>
     </owl:NamedIndividual>
@@ -148,7 +148,7 @@
     <!-- c:/OwlSpeak/empty.owl#gr_Hello -->
 
     <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#gr_Hello">
-        <rdf:type rdf:resource="http://localfiles/OwlSpeak/OwlSpeakOnto.owl#Grammar"/>
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Grammar"/>
         <p1:grammarString xml:lang="de">[Mir geht es] gut [danke]</p1:grammarString>
     </owl:NamedIndividual>
     
@@ -157,7 +157,7 @@
     <!-- c:/OwlSpeak/empty.owl#gr_Revive -->
 
     <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#gr_Revive">
-        <rdf:type rdf:resource="http://localfiles/OwlSpeak/OwlSpeakOnto.owl#Grammar"/>
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Grammar"/>
         <p1:grammarString xml:lang="de">(Wie funktionieren Wiederbelebungsmassnahmen | wiederbelebung)</p1:grammarString>
     </owl:NamedIndividual>
     
@@ -166,7 +166,7 @@
     <!-- c:/OwlSpeak/empty.owl#gr_Swoon -->
 
     <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#gr_Swoon">
-        <rdf:type rdf:resource="http://localfiles/OwlSpeak/OwlSpeakOnto.owl#Grammar"/>
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Grammar"/>
         <p1:grammarString xml:lang="de">(Was mache ich wenn mein Vater bewusstlos wird | Bewusstlos)</p1:grammarString>
     </owl:NamedIndividual>
     
@@ -175,7 +175,7 @@
     <!-- c:/OwlSpeak/empty.owl#move_sys_Bye -->
 
     <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#move_sys_Bye">
-        <rdf:type rdf:resource="http://localfiles/OwlSpeak/OwlSpeakOnto.owl#Move"/>
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
         <p1:isExitMove rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</p1:isExitMove>
         <p1:utterance rdf:resource="c:/OwlSpeak/empty.owl#utterance_Bye"/>
     </owl:NamedIndividual>
@@ -185,7 +185,7 @@
     <!-- c:/OwlSpeak/empty.owl#move_sys_Hello -->
 
     <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#move_sys_Hello">
-        <rdf:type rdf:resource="http://localfiles/OwlSpeak/OwlSpeakOnto.owl#Move"/>
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
         <p1:utterance rdf:resource="c:/OwlSpeak/empty.owl#utterance_Hello"/>
     </owl:NamedIndividual>
     
@@ -194,7 +194,7 @@
     <!-- c:/OwlSpeak/empty.owl#move_sys_Request_Task -->
 
     <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#move_sys_Request_Task">
-        <rdf:type rdf:resource="http://localfiles/OwlSpeak/OwlSpeakOnto.owl#Move"/>
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
         <p1:utterance rdf:resource="c:/OwlSpeak/empty.owl#utterance_Request_Task"/>
     </owl:NamedIndividual>
     
@@ -203,7 +203,7 @@
     <!-- c:/OwlSpeak/empty.owl#move_sys_Tell_Revive -->
 
     <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#move_sys_Tell_Revive">
-        <rdf:type rdf:resource="http://localfiles/OwlSpeak/OwlSpeakOnto.owl#Move"/>
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
         <p1:semantic rdf:resource="c:/OwlSpeak/empty.owl#sem_Revive_done"/>
         <p1:utterance rdf:resource="c:/OwlSpeak/empty.owl#utterance_Tell_Revive"/>
     </owl:NamedIndividual>
@@ -213,7 +213,7 @@
     <!-- c:/OwlSpeak/empty.owl#move_sys_Tell_Swoon -->
 
     <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#move_sys_Tell_Swoon">
-        <rdf:type rdf:resource="http://localfiles/OwlSpeak/OwlSpeakOnto.owl#Move"/>
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
         <p1:semantic rdf:resource="c:/OwlSpeak/empty.owl#sem_Swoon_done"/>
         <p1:utterance rdf:resource="c:/OwlSpeak/empty.owl#utterance_Tell_Swoon"/>
     </owl:NamedIndividual>
@@ -223,7 +223,7 @@
     <!-- c:/OwlSpeak/empty.owl#move_user_Bye -->
 
     <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#move_user_Bye">
-        <rdf:type rdf:resource="http://localfiles/OwlSpeak/OwlSpeakOnto.owl#Move"/>
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
         <p1:grammar rdf:resource="c:/OwlSpeak/empty.owl#gr_Bye"/>
         <p1:semantic rdf:resource="c:/OwlSpeak/empty.owl#semGroup_Bye"/>
         <p1:semantic rdf:resource="c:/OwlSpeak/empty.owl#sem_Bye"/>
@@ -234,7 +234,7 @@
     <!-- c:/OwlSpeak/empty.owl#move_user_Hello -->
 
     <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#move_user_Hello">
-        <rdf:type rdf:resource="http://localfiles/OwlSpeak/OwlSpeakOnto.owl#Move"/>
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
         <p1:grammar rdf:resource="c:/OwlSpeak/empty.owl#gr_Hello"/>
     </owl:NamedIndividual>
     
@@ -243,7 +243,7 @@
     <!-- c:/OwlSpeak/empty.owl#move_user_Request_Revive -->
 
     <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#move_user_Request_Revive">
-        <rdf:type rdf:resource="http://localfiles/OwlSpeak/OwlSpeakOnto.owl#Move"/>
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
         <p1:grammar rdf:resource="c:/OwlSpeak/empty.owl#gr_Revive"/>
         <p1:semantic rdf:resource="c:/OwlSpeak/empty.owl#sem_Revive"/>
     </owl:NamedIndividual>
@@ -253,7 +253,7 @@
     <!-- c:/OwlSpeak/empty.owl#move_user_Request_Swoon -->
 
     <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#move_user_Request_Swoon">
-        <rdf:type rdf:resource="http://localfiles/OwlSpeak/OwlSpeakOnto.owl#Move"/>
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
         <p1:grammar rdf:resource="c:/OwlSpeak/empty.owl#gr_Swoon"/>
         <p1:semantic rdf:resource="c:/OwlSpeak/empty.owl#sem_Swoon"/>
     </owl:NamedIndividual>
@@ -263,7 +263,7 @@
     <!-- c:/OwlSpeak/empty.owl#semGroup_Bye -->
 
     <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#semGroup_Bye">
-        <rdf:type rdf:resource="http://localfiles/OwlSpeak/OwlSpeakOnto.owl#SemanticGroup"/>
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#SemanticGroup"/>
         <p1:containsSemantics rdf:resource="c:/OwlSpeak/empty.owl#sem_Bye"/>
     </owl:NamedIndividual>
     
@@ -272,7 +272,7 @@
     <!-- c:/OwlSpeak/empty.owl#semGroup_Revive -->
 
     <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#semGroup_Revive">
-        <rdf:type rdf:resource="http://localfiles/OwlSpeak/OwlSpeakOnto.owl#SemanticGroup"/>
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#SemanticGroup"/>
         <p1:containsSemantics rdf:resource="c:/OwlSpeak/empty.owl#sem_Revive"/>
         <p1:containsSemantics rdf:resource="c:/OwlSpeak/empty.owl#sem_Revive_done"/>
     </owl:NamedIndividual>
@@ -282,7 +282,7 @@
     <!-- c:/OwlSpeak/empty.owl#semGroup_Swoon -->
 
     <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#semGroup_Swoon">
-        <rdf:type rdf:resource="http://localfiles/OwlSpeak/OwlSpeakOnto.owl#SemanticGroup"/>
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#SemanticGroup"/>
         <p1:containsSemantics rdf:resource="c:/OwlSpeak/empty.owl#sem_Swoon"/>
         <p1:containsSemantics rdf:resource="c:/OwlSpeak/empty.owl#sem_Swoon_done"/>
     </owl:NamedIndividual>
@@ -292,7 +292,7 @@
     <!-- c:/OwlSpeak/empty.owl#sem_Bye -->
 
     <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#sem_Bye">
-        <rdf:type rdf:resource="http://localfiles/OwlSpeak/OwlSpeakOnto.owl#Semantic"/>
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Semantic"/>
         <p1:confirmationInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">confirmation</p1:confirmationInfo>
         <p1:semanticGroup rdf:resource="c:/OwlSpeak/empty.owl#semGroup_Bye"/>
     </owl:NamedIndividual>
@@ -302,7 +302,7 @@
     <!-- c:/OwlSpeak/empty.owl#sem_Revive -->
 
     <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#sem_Revive">
-        <rdf:type rdf:resource="http://localfiles/OwlSpeak/OwlSpeakOnto.owl#Semantic"/>
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Semantic"/>
         <p1:confirmationInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">confirmation</p1:confirmationInfo>
         <p1:semanticGroup rdf:resource="c:/OwlSpeak/empty.owl#semGroup_Revive"/>
     </owl:NamedIndividual>
@@ -312,7 +312,7 @@
     <!-- c:/OwlSpeak/empty.owl#sem_Revive_done -->
 
     <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#sem_Revive_done">
-        <rdf:type rdf:resource="http://localfiles/OwlSpeak/OwlSpeakOnto.owl#Semantic"/>
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Semantic"/>
         <p1:confirmationInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">confirmation</p1:confirmationInfo>
         <p1:semanticGroup rdf:resource="c:/OwlSpeak/empty.owl#semGroup_Revive"/>
     </owl:NamedIndividual>
@@ -322,7 +322,7 @@
     <!-- c:/OwlSpeak/empty.owl#sem_Swoon -->
 
     <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#sem_Swoon">
-        <rdf:type rdf:resource="http://localfiles/OwlSpeak/OwlSpeakOnto.owl#Semantic"/>
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Semantic"/>
         <p1:confirmationInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">confirmation</p1:confirmationInfo>
         <p1:semanticGroup rdf:resource="c:/OwlSpeak/empty.owl#semGroup_Swoon"/>
     </owl:NamedIndividual>
@@ -332,7 +332,7 @@
     <!-- c:/OwlSpeak/empty.owl#sem_Swoon_done -->
 
     <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#sem_Swoon_done">
-        <rdf:type rdf:resource="http://localfiles/OwlSpeak/OwlSpeakOnto.owl#Semantic"/>
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Semantic"/>
         <p1:confirmationInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">confirmation</p1:confirmationInfo>
         <p1:semanticGroup rdf:resource="c:/OwlSpeak/empty.owl#semGroup_Swoon"/>
     </owl:NamedIndividual>
@@ -342,7 +342,7 @@
     <!-- c:/OwlSpeak/empty.owl#sumAgenda_End -->
 
     <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#sumAgenda_End">
-        <rdf:type rdf:resource="http://localfiles/OwlSpeak/OwlSpeakOnto.owl#SummaryAgenda"/>
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#SummaryAgenda"/>
         <p1:summaryAgendaType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">announcement</p1:summaryAgendaType>
         <p1:role rdf:datatype="http://www.w3.org/2001/XMLSchema#string">collection</p1:role>
         <p1:summarizesAgendas rdf:resource="c:/OwlSpeak/empty.owl#agenda_Bye"/>
@@ -353,7 +353,7 @@
     <!-- c:/OwlSpeak/empty.owl#sumAgenda_Request -->
 
     <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#sumAgenda_Request">
-        <rdf:type rdf:resource="http://localfiles/OwlSpeak/OwlSpeakOnto.owl#SummaryAgenda"/>
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#SummaryAgenda"/>
         <p1:summaryAgendaType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">announcement</p1:summaryAgendaType>
         <p1:role rdf:datatype="http://www.w3.org/2001/XMLSchema#string">collection</p1:role>
         <p1:summarizesAgendas rdf:resource="c:/OwlSpeak/empty.owl#agenda_Request_Task"/>
@@ -364,7 +364,7 @@
     <!-- c:/OwlSpeak/empty.owl#sumAgenda_Start -->
 
     <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#sumAgenda_Start">
-        <rdf:type rdf:resource="http://localfiles/OwlSpeak/OwlSpeakOnto.owl#SummaryAgenda"/>
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#SummaryAgenda"/>
         <p1:role rdf:datatype="http://www.w3.org/2001/XMLSchema#string">collection</p1:role>
         <p1:summaryAgendaType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">request</p1:summaryAgendaType>
         <p1:summarizesAgendas rdf:resource="c:/OwlSpeak/empty.owl#Masteragenda"/>
@@ -376,7 +376,7 @@
     <!-- c:/OwlSpeak/empty.owl#sumAgenda_Tell -->
 
     <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#sumAgenda_Tell">
-        <rdf:type rdf:resource="http://localfiles/OwlSpeak/OwlSpeakOnto.owl#SummaryAgenda"/>
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#SummaryAgenda"/>
         <p1:summaryAgendaType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">announcement</p1:summaryAgendaType>
         <p1:role rdf:datatype="http://www.w3.org/2001/XMLSchema#string">collection</p1:role>
         <p1:summarizesAgendas rdf:resource="c:/OwlSpeak/empty.owl#agenda_Tell_Revive"/>
@@ -388,7 +388,7 @@
     <!-- c:/OwlSpeak/empty.owl#userBeliefspace -->
 
     <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#userBeliefspace">
-        <rdf:type rdf:resource="http://localfiles/OwlSpeak/OwlSpeakOnto.owl#BeliefSpace"/>
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#BeliefSpace"/>
     </owl:NamedIndividual>
     
 
@@ -396,7 +396,7 @@
     <!-- c:/OwlSpeak/empty.owl#userWorkspace -->
 
     <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#userWorkspace">
-        <rdf:type rdf:resource="http://localfiles/OwlSpeak/OwlSpeakOnto.owl#WorkSpace"/>
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#WorkSpace"/>
         <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_Hello"/>
     </owl:NamedIndividual>
     
@@ -405,7 +405,7 @@
     <!-- c:/OwlSpeak/empty.owl#utterance_Bye -->
 
     <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#utterance_Bye">
-        <rdf:type rdf:resource="http://localfiles/OwlSpeak/OwlSpeakOnto.owl#Utterance"/>
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Utterance"/>
         <p1:utteranceString xml:lang="en">Thank you. Good bye.</p1:utteranceString>
     </owl:NamedIndividual>
     
@@ -414,7 +414,7 @@
     <!-- c:/OwlSpeak/empty.owl#utterance_Hello -->
 
     <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#utterance_Hello">
-        <rdf:type rdf:resource="http://localfiles/OwlSpeak/OwlSpeakOnto.owl#Utterance"/>
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Utterance"/>
         <p1:utteranceString xml:lang="en">Welcome to the Cambridge Restaurant Information System.</p1:utteranceString>
     </owl:NamedIndividual>
     
@@ -423,7 +423,7 @@
     <!-- c:/OwlSpeak/empty.owl#utterance_Request_Task -->
 
     <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#utterance_Request_Task">
-        <rdf:type rdf:resource="http://localfiles/OwlSpeak/OwlSpeakOnto.owl#Utterance"/>
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Utterance"/>
         <p1:utteranceString xml:lang="en">In which area do you want to eat?</p1:utteranceString>
     </owl:NamedIndividual>
     
@@ -432,7 +432,7 @@
     <!-- c:/OwlSpeak/empty.owl#utterance_Tell_Revive -->
 
     <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#utterance_Tell_Revive">
-        <rdf:type rdf:resource="http://localfiles/OwlSpeak/OwlSpeakOnto.owl#Utterance"/>
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Utterance"/>
         <p1:utteranceString xml:lang="en">The address of the restaurant %var_Name% is 27 Baker Street.</p1:utteranceString>
     </owl:NamedIndividual>
     
@@ -441,7 +441,7 @@
     <!-- c:/OwlSpeak/empty.owl#utterance_Tell_Swoon -->
 
     <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#utterance_Tell_Swoon">
-        <rdf:type rdf:resource="http://localfiles/OwlSpeak/OwlSpeakOnto.owl#Utterance"/>
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Utterance"/>
         <p1:utteranceString xml:lang="en">The restaurant Anatolia would be an alternative.</p1:utteranceString>
     </owl:NamedIndividual>
 </rdf:RDF>

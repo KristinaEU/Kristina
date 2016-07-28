@@ -22,7 +22,7 @@ public class KristinaTest {
 		try {
 
 			BufferedReader r = new BufferedReader(new InputStreamReader(
-					KristinaTest.class.getResourceAsStream("/Example_Input_Output/inform.ttl")));
+					KristinaTest.class.getResourceAsStream("/ExampleData_LA/gt-sleepTime_Question.ttl")));
 			
 			String data = "";
 			String tmp = r.readLine();

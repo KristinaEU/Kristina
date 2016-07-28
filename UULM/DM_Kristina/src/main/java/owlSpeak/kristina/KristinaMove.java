@@ -5,9 +5,12 @@ import java.util.List;
 import java.util.Set;
 
 import model.KristinaModel;
+import model.SemanticsOntology;
 
+import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.ReifiedStatement;
 import org.apache.jena.rdf.model.Statement;
+import org.semanticweb.owlapi.model.IRI;
 import org.semanticweb.owlapi.model.OWLAxiom;
 import org.semanticweb.owlapi.model.OWLClass;
 import org.semanticweb.owlapi.model.OWLClassExpression;
@@ -29,7 +32,8 @@ import owlSpeak.Move;
  */
 public class KristinaMove extends Move{
 	
-	
+	//TODO: initialize from ontology
+	public enum DialogueAction {Move,REQUEST_MISSING, REQUEST_ADDITIONAL, REQUEST_CLARIFICATION,CONFIRM_EXPLICITLY,CONFIRM_IMPLICITLY,REPEAT,REPHRASE,STATEMENT, ACCEPT,REJECT,ACKNOWLEDGE,DECLARE,ADVISE,OBLIGATE,ORDER,SHOW_WEBPAGE,SHOW_VIDEO,READ_NEWSPAPER};
 	
 	public KristinaMove(OWLIndividual indi, OWLOntology onto, OWLDataFactory factory,
 			OWLOntologyManager manager) {
@@ -39,6 +43,26 @@ public class KristinaMove extends Move{
 	
 	public List<ReifiedStatement> getStatements(){
 		return KristinaModel.getStatements(indi.asOWLNamedIndividual().getIRI());
+	}
+	
+	public DialogueAction getDialogueAction(){
+		String dialogueAction = indi.getTypes(onto).iterator().next().asOWLClass().getIRI().toString();
+		switch (dialogueAction){
+			case "http://kristina-project.eu/ontologies/dialogue_actions#Statement":
+				//return DialogueAction.STATEMENT;
+				//TODO: return Declare only as long as no decision mechanism is implemented that maps Statement to the more specific kind
+				return DialogueAction.DECLARE;
+			case "http://kristina-project.eu/ontologies/dialogue_actions#ReadNewspaper":
+				return DialogueAction.READ_NEWSPAPER;
+			case "http://kristina-project.eu/ontologies/dialogue_actions#Declare":
+				return DialogueAction.DECLARE;
+			default:
+				return DialogueAction.Move;
+		}
+	}
+	
+	public String getText(){
+		return KristinaModel.getText(indi.asOWLNamedIndividual().getIRI());
 	}
 	
 	public Set<OWLAxiom> getAxioms(){
@@ -103,6 +127,10 @@ public class KristinaMove extends Move{
 		}else{
 			return getLocalName();
 		}
+	}
+	
+	public Model getModel(){
+		return SemanticsOntology.getModel(this.indi.asOWLNamedIndividual().getIRI());
 	}
 	
 	private OWLOntology findSrcOntology(){

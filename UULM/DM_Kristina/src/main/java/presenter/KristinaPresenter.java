@@ -1,40 +1,24 @@
 package presenter;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.InetAddress;
 import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.HashSet;
-import java.util.Iterator;
 import java.util.LinkedList;
-import java.util.List;
-import java.util.Set;
-import java.util.UUID;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
-import org.coode.owlapi.owlxmlparser.OWLIndividualElementHandler;
 import org.semanticweb.owlapi.model.OWLOntologyCreationException;
 
 import model.KristinaModel;
 
-import org.semanticweb.owlapi.apibinding.OWLManager;
-import org.semanticweb.owlapi.io.StringDocumentTarget;
 import org.semanticweb.owlapi.model.IRI;
 import org.semanticweb.owlapi.model.OWLAxiom;
-import org.semanticweb.owlapi.model.OWLIndividual;
 import org.semanticweb.owlapi.model.OWLNamedIndividual;
-import org.semanticweb.owlapi.model.OWLOntology;
-import org.semanticweb.owlapi.model.OWLOntologyManager;
+import org.semanticweb.owlapi.model.OWLOntologyDocumentAlreadyExistsException;
 import org.semanticweb.owlapi.model.OWLOntologyStorageException;
 
-import de.affect.mood.Mood;
 import owlSpeak.Agenda;
-import owlSpeak.Move;
 import owlSpeak.WorkSpace;
 import owlSpeak.engine.OwlSpeakOntology;
 import owlSpeak.engine.ServletEngine;
@@ -42,14 +26,12 @@ import owlSpeak.engine.Settings;
 import owlSpeak.kristina.KristinaMove;
 import owlSpeak.kristina.emotion.EmotionGenerator;
 import owlSpeak.kristina.emotion.KristinaEmotion;
-import owlSpeak.kristina.util.InputOutputConverter;
-import owlSpeak.servlet.KristinaDocument;
+import owlSpeak.kristina.util.LAConverter;
 import owlSpeak.servlet.OwlSpeakServlet;
 
 public class KristinaPresenter {
 	
 	private static ServletEngine owlEngine; 
-	private static InputOutputConverter ioConverter;
 	private static EmotionGenerator emotionGenerator;
 	
 	// ALMA configuration files
@@ -64,11 +46,7 @@ public class KristinaPresenter {
 		
 		System.setProperty("owlSpeak.settings.file", "./conf/OwlSpeak/settings.xml");
 		owlEngine = new ServletEngine();
-		OwlSpeakServlet.reset(owlEngine, "", "user");
-		
-		
-		ioConverter = new InputOutputConverter(owlEngine.systemCore.ontologies.get(0).factory.onto, owlEngine.systemCore.ontologies.get(0).factory.factory, owlEngine.systemCore.ontologies.get(0).factory.manager);
-		
+		OwlSpeakServlet.reset(owlEngine, "", "user");		
 	}
 
 	public static String performDM(float valence, float arousal,
@@ -76,7 +54,8 @@ public class KristinaPresenter {
 			OWLOntologyStorageException {
 		
 		System.out.println("Input LA\n"+content);
-
+		IRI userMove = LAConverter.convertToMove(content);
+		
 		// determine emotion
 		float sysValence = valence;
 		float sysArousal = arousal;
@@ -86,25 +65,25 @@ public class KristinaPresenter {
 		String output="";
 		if (!content.isEmpty()) {
 			// perform dialogue state update
-			OWLOntology proposal = KristinaModel.performUpdate(content);
-
-			StringDocumentTarget t = new StringDocumentTarget();
+		try{
+			WorkSpace ws = new KristinaModel().performUpdate(userMove, "user", owlEngine);
+	
+			systemMove = selectSystemMove(ws);
 
 			// perform agenda selection
 
-			proposal.getOWLOntologyManager().saveOntology(proposal, t);
-
-			//perform configuration of agenda
-			
-			
-			
-			String sysmove = t.toString();
-			System.out.println("Input KI\n"+sysmove);
-
-			output = output + "\n" + sysmove;
+			//perform configuration of agenda		
+			LinkedList<KristinaMove> out = new LinkedList<KristinaMove>();
+			out.add(systemMove);
+			output = LAConverter.convertFromMove(out, 0.5f, 0.5f);
+		}catch(OWLOntologyDocumentAlreadyExistsException e1){
+			System.err.println(e1.getOntologyDocumentIRI());
+		}catch(Exception e){
+			e.printStackTrace();
+		}
 		} else {
 
-			output = ioConverter.buildEmotionOutput(sysValence,
+			output = LAConverter.convertFromEmotion(sysValence,
 					sysArousal);
 
 		}
@@ -113,6 +92,10 @@ public class KristinaPresenter {
 
 		return output;
 
+	}
+	
+	public static void restart(String user, String scenario){
+		OwlSpeakServlet.reset(owlEngine, "", user);
 	}
 	
 	/* Functions needed for the demonstration */
@@ -161,7 +144,7 @@ public class KristinaPresenter {
 	}
 	
 	public static void performDemoDM(String input, String user) throws OWLOntologyCreationException{
-		systemMove = null;
+		/*systemMove = null;
 		
 		Set<Move> userMoves = ioConverter.buildKristinaMove(input);
 		
@@ -175,7 +158,7 @@ public class KristinaPresenter {
 			System.out.println(ioConverter.buildOutput(systemMove, 0.5f, 0.5f));
 		}else{
 			System.out.println("null");
-		}
+		}*/
 		
 		
 		createEvent("Sending System Move");
@@ -205,6 +188,7 @@ public class KristinaPresenter {
 		}else{
 			Collection<Agenda> realMoves = new HashSet<Agenda>();
 			for(Agenda agenda: agendas){
+				System.out.println(agenda);
 				OWLAxiom decl = ws.factory.getOWLDeclarationAxiom((OWLNamedIndividual)agenda.indi);
 				if(!ws.onto.containsAxiom(decl)){
 					realMoves.add(agenda);
