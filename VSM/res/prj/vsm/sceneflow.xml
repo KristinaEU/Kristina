@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<SceneFlow id="KRISTINA" name="KRISTINA" comment="KRISTINA" hideLocalVar="false" hideGlobalVar="false" exhaustive="false" preserving="false" modifDate="Tue, 19 Jul 2016 12:47:09" start="S1;" context="" package="" xmlns="xml.sceneflow.dfki.de" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="xml.sceneflow.dfki.de res/xsd/sceneflow.xsd">
+<SceneFlow id="KRISTINA" name="KRISTINA" comment="KRISTINA" hideLocalVar="false" hideGlobalVar="false" exhaustive="false" preserving="false" modifDate="Thu, 28 Jul 2016 12:14:49" start="S27;" context="" package="" xmlns="xml.sceneflow.dfki.de" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="xml.sceneflow.dfki.de res/xsd/sceneflow.xsd">
   <Define>
     <StructType name="StatusData">
       <Member type="Float" name ="Valence"/>
@@ -9,462 +9,49 @@
     </StructType>
   </Define>
   <Declare>
-    <Variable type="StatusData" name ="UserStatus">
-      <Struct>
-        <Assign>
-          <Variable name="Valence"/>
-          <Expression>
-            <Float value="0.0"/>
-          </Expression>
-        </Assign>
-        <Assign>
-          <Variable name="Arousal"/>
-          <Expression>
-            <Float value="0.0"/>
-          </Expression>
-        </Assign>
-        <Assign>
-          <Variable name="Present"/>
-          <Expression>
-            <Bool value="false"/>
-          </Expression>
-        </Assign>
-        <Assign>
-          <Variable name="Speaking"/>
-          <Expression>
-            <Bool value="false"/>
-          </Expression>
-        </Assign>
-      </Struct>
-    </Variable>
     <Variable type="String" name ="TS">
-      <String value=""/>
+      <String value="undefined"/>
     </Variable>
     <Variable type="String" name ="LA">
-      <String value=""/>
+      <String value="undefined"/>
     </Variable>
     <Variable type="String" name ="DM">
-      <String value=""/>
+      <String value="undefined"/>
     </Variable>
     <Variable type="String" name ="MN">
-      <String value=""/>
+      <String value="undefined"/>
     </Variable>
     <Variable type="String" name ="MV">
-      <String value=""/>
+      <String value="undefined"/>
     </Variable>
     <Variable type="String" name ="LG">
-      <String value=""/>
+      <String value="undefined"/>
     </Variable>
     <Variable type="String" name ="AN">
-      <String value=""/>
+      <String value="undefined"/>
     </Variable>
     <Variable type="String" name ="AV">
-      <String value=""/>
+      <String value="undefined"/>
+    </Variable>
+    <Variable type="Float" name ="UV">
+      <Float value="0.0"/>
+    </Variable>
+    <Variable type="Float" name ="UA">
+      <Float value="0.0"/>
+    </Variable>
+    <Variable type="Bool" name ="US">
+      <Bool value="false"/>
     </Variable>
   </Declare>
   <Commands>
   </Commands>
   <LocalVariableBadge>
-    <Position x-pos="1" y-pos="1"/>
+    <Position x-pos="24" y-pos="13"/>
   </LocalVariableBadge>
   <GlobalVariableBadge>
     <Position x-pos="1" y-pos="1"/>
   </GlobalVariableBadge>
-  <SuperNode id="S7" name="Idle" comment="" exhaustive="false" preserving="false" hideLocalVar="false" hideGlobalVar="false" start="S3;S4;">
-    <Define>
-    </Define>
-    <Declare>
-    </Declare>
-    <Commands>
-    </Commands>
-    <IEdge target="S2" start="">
-      <Graphics>
-        <Arrow>
-          <Point x-pos="443" y-pos="268" control-x-pos="390" control-y-pos="268"/>
-          <Point x-pos="303" y-pos="268" control-x-pos="355" control-y-pos="268"/>
-        </Arrow>
-      </Graphics>
-      <Not>
-        <Member name="UserStatus" member="Speaking">
-        </Member>
-      </Not>
-    </IEdge>
-    <Graphics>
-      <Position x-pos="443" y-pos="233"/>
-    </Graphics>
-    <LocalVariableBadge>
-      <Position x-pos="1" y-pos="1"/>
-    </LocalVariableBadge>
-    <GlobalVariableBadge>
-      <Position x-pos="1" y-pos="1"/>
-    </GlobalVariableBadge>
-    <Comment>
-      <Graphics>
-        <Rect x-pos="223" y-pos="392" width="260" height="78"/>
-      </Graphics>
-      <Text style="color:blue">
-        <html>
-          <head>
-            <style type="text/css">
-              <!--
-                body { font-family: SansSerif; font-size: 12pt }
-              -->
-            </style>
-            
-          </head>
-          <body>
-            The automaton 'Behavior' models the nonverbal behavior of the character 
-            during the interaction.
-          </body>
-        </html>
-      </Text>
-    </Comment>
-    <Node id="N3" name="History" exhaustive="false" preserving="false" history="true">
-      <Define>
-      </Define>
-      <Declare>
-      </Declare>
-      <Commands>
-      </Commands>
-      <Graphics>
-        <Position x-pos="93" y-pos="303"/>
-      </Graphics>
-    </Node>
-    <SuperNode id="S3" name="Statistics" comment="" exhaustive="false" preserving="false" hideLocalVar="false" hideGlobalVar="false" start="N2;">
-      <Define>
-      </Define>
-      <Declare>
-      </Declare>
-      <Commands>
-      </Commands>
-      <Graphics>
-        <Position x-pos="513" y-pos="303"/>
-      </Graphics>
-      <LocalVariableBadge>
-        <Position x-pos="159" y-pos="197"/>
-      </LocalVariableBadge>
-      <GlobalVariableBadge>
-        <Position x-pos="10" y-pos="10"/>
-      </GlobalVariableBadge>
-      <Node id="N4" name="History" exhaustive="false" preserving="false" history="true">
-        <Define>
-        </Define>
-        <Declare>
-        </Declare>
-        <Commands>
-        </Commands>
-        <Graphics>
-          <Position x-pos="163" y-pos="303"/>
-        </Graphics>
-      </Node>
-      <Node id="N2" name="Wait" exhaustive="false" preserving="false" history="false">
-        <Define>
-        </Define>
-        <Declare>
-        </Declare>
-        <Commands>
-        </Commands>
-        <TEdge target="N2" start="" timeout="60000">
-        <Graphics>
-          <Arrow>
-            <Point x-pos="355" y-pos="308" control-x-pos="381" control-y-pos="216"/>
-            <Point x-pos="368" y-pos="320" control-x-pos="462" control-y-pos="276"/>
-          </Arrow>
-        </Graphics>
-        </TEdge>
-        <Graphics>
-          <Position x-pos="303" y-pos="303"/>
-        </Graphics>
-      </Node>
-    </SuperNode>
-    <SuperNode id="S4" name="Nonverbal" comment="" exhaustive="false" preserving="false" hideLocalVar="false" hideGlobalVar="false" start="S8;">
-      <Define>
-      </Define>
-      <Declare>
-      </Declare>
-      <Commands>
-      </Commands>
-      <Graphics>
-        <Position x-pos="303" y-pos="303"/>
-      </Graphics>
-      <LocalVariableBadge>
-        <Position x-pos="438" y-pos="190"/>
-      </LocalVariableBadge>
-      <GlobalVariableBadge>
-        <Position x-pos="11" y-pos="8"/>
-      </GlobalVariableBadge>
-      <Node id="N14" name="History" exhaustive="false" preserving="false" history="true">
-        <Define>
-        </Define>
-        <Declare>
-        </Declare>
-        <Commands>
-        </Commands>
-        <Graphics>
-          <Position x-pos="93" y-pos="303"/>
-        </Graphics>
-      </Node>
-      <SuperNode id="S61" name="Interactor" comment="" exhaustive="false" preserving="false" hideLocalVar="false" hideGlobalVar="false" start="S12;">
-        <Define>
-        </Define>
-        <Declare>
-        </Declare>
-        <Commands>
-        </Commands>
-        <IEdge target="S8" start="">
-          <Graphics>
-            <Arrow>
-              <Point x-pos="373" y-pos="539" control-x-pos="540" control-y-pos="524"/>
-              <Point x-pos="373" y-pos="347" control-x-pos="617" control-y-pos="405"/>
-            </Arrow>
-          </Graphics>
-          <Eq>
-            <Variable name="AgentRole"/>
-            <String value=""/>
-          </Eq>
-        </IEdge>
-        <Graphics>
-          <Position x-pos="303" y-pos="513"/>
-        </Graphics>
-        <LocalVariableBadge>
-          <Position x-pos="10" y-pos="10"/>
-        </LocalVariableBadge>
-        <GlobalVariableBadge>
-          <Position x-pos="10" y-pos="10"/>
-        </GlobalVariableBadge>
-        <Node id="N48" name="History" exhaustive="false" preserving="false" history="true">
-          <Define>
-          </Define>
-          <Declare>
-          </Declare>
-          <Commands>
-          </Commands>
-          <Graphics>
-            <Position x-pos="120" y-pos="300"/>
-          </Graphics>
-        </Node>
-        <SuperNode id="S12" name="Bystander" comment="" exhaustive="false" preserving="false" hideLocalVar="false" hideGlobalVar="false" start="">
-          <Define>
-          </Define>
-          <Declare>
-          </Declare>
-          <Commands>
-          </Commands>
-          <IEdge target="S13" start="">
-            <Graphics>
-              <Arrow>
-                <Point x-pos="345" y-pos="300" control-x-pos="345" control-y-pos="232"/>
-                <Point x-pos="525" y-pos="300" control-x-pos="525" control-y-pos="232"/>
-              </Arrow>
-            </Graphics>
-            <Or>
-              <Eq>
-                <Variable name="AgentRole"/>
-                <String value=""/>
-              </Eq>
-              <Eq>
-                <Variable name="AgentRole"/>
-                <String value=""/>
-              </Eq>
-            </Or>
-          </IEdge>
-          <Graphics>
-            <Position x-pos="300" y-pos="300"/>
-          </Graphics>
-          <LocalVariableBadge>
-            <Position x-pos="456" y-pos="187"/>
-          </LocalVariableBadge>
-          <GlobalVariableBadge>
-            <Position x-pos="10" y-pos="10"/>
-          </GlobalVariableBadge>
-          <Node id="N51" name="History" exhaustive="false" preserving="false" history="true">
-            <Define>
-            </Define>
-            <Declare>
-            </Declare>
-            <Commands>
-            </Commands>
-            <Graphics>
-              <Position x-pos="30" y-pos="30"/>
-            </Graphics>
-          </Node>
-        </SuperNode>
-        <SuperNode id="S13" name="Participant" comment="" exhaustive="false" preserving="false" hideLocalVar="false" hideGlobalVar="false" start="S66;">
-          <Define>
-          </Define>
-          <Declare>
-          </Declare>
-          <Commands>
-          </Commands>
-          <IEdge target="S12" start="">
-            <Graphics>
-              <Arrow>
-                <Point x-pos="525" y-pos="390" control-x-pos="525" control-y-pos="457"/>
-                <Point x-pos="345" y-pos="390" control-x-pos="345" control-y-pos="457"/>
-              </Arrow>
-            </Graphics>
-            <Eq>
-              <Variable name="AgentRole"/>
-              <String value=""/>
-            </Eq>
-          </IEdge>
-          <Graphics>
-            <Position x-pos="480" y-pos="300"/>
-          </Graphics>
-          <LocalVariableBadge>
-            <Position x-pos="10" y-pos="10"/>
-          </LocalVariableBadge>
-          <GlobalVariableBadge>
-            <Position x-pos="5" y-pos="3"/>
-          </GlobalVariableBadge>
-          <Node id="N127" name="History" exhaustive="false" preserving="false" history="true">
-            <Define>
-            </Define>
-            <Declare>
-            </Declare>
-            <Commands>
-            </Commands>
-            <Graphics>
-              <Position x-pos="120" y-pos="300"/>
-            </Graphics>
-          </Node>
-          <SuperNode id="S62" name="Speaker" comment="" exhaustive="false" preserving="false" hideLocalVar="false" hideGlobalVar="false" start="">
-            <Define>
-            </Define>
-            <Declare>
-            </Declare>
-            <Commands>
-            </Commands>
-            <IEdge target="S66" start="">
-              <Graphics>
-                <Arrow>
-                  <Point x-pos="525" y-pos="390" control-x-pos="525" control-y-pos="457"/>
-                  <Point x-pos="345" y-pos="390" control-x-pos="345" control-y-pos="457"/>
-                </Arrow>
-              </Graphics>
-              <Eq>
-                <Variable name="AgentRole"/>
-                <String value=""/>
-              </Eq>
-            </IEdge>
-            <Graphics>
-              <Position x-pos="480" y-pos="300"/>
-            </Graphics>
-            <LocalVariableBadge>
-              <Position x-pos="10" y-pos="10"/>
-            </LocalVariableBadge>
-            <GlobalVariableBadge>
-              <Position x-pos="10" y-pos="10"/>
-            </GlobalVariableBadge>
-            <Node id="N130" name="History" exhaustive="false" preserving="false" history="true">
-              <Define>
-              </Define>
-              <Declare>
-              </Declare>
-              <Commands>
-              </Commands>
-              <Graphics>
-                <Position x-pos="120" y-pos="300"/>
-              </Graphics>
-            </Node>
-          </SuperNode>
-          <SuperNode id="S66" name="Addressee" comment="" exhaustive="false" preserving="false" hideLocalVar="false" hideGlobalVar="false" start="">
-            <Define>
-            </Define>
-            <Declare>
-            </Declare>
-            <Commands>
-            </Commands>
-            <IEdge target="S62" start="">
-              <Graphics>
-                <Arrow>
-                  <Point x-pos="345" y-pos="300" control-x-pos="345" control-y-pos="232"/>
-                  <Point x-pos="525" y-pos="300" control-x-pos="525" control-y-pos="232"/>
-                </Arrow>
-              </Graphics>
-              <Eq>
-                <Variable name="AgentRole"/>
-                <String value=""/>
-              </Eq>
-            </IEdge>
-            <Graphics>
-              <Position x-pos="300" y-pos="300"/>
-            </Graphics>
-            <LocalVariableBadge>
-              <Position x-pos="652" y-pos="281"/>
-            </LocalVariableBadge>
-            <GlobalVariableBadge>
-              <Position x-pos="7" y-pos="6"/>
-            </GlobalVariableBadge>
-            <Node id="N140" name="History" exhaustive="false" preserving="false" history="true">
-              <Define>
-              </Define>
-              <Declare>
-              </Declare>
-              <Commands>
-              </Commands>
-              <Graphics>
-                <Position x-pos="120" y-pos="300"/>
-              </Graphics>
-            </Node>
-          </SuperNode>
-        </SuperNode>
-      </SuperNode>
-      <SuperNode id="S8" name="Overhearer" comment="" exhaustive="false" preserving="false" hideLocalVar="false" hideGlobalVar="false" start="">
-        <Define>
-        </Define>
-        <Declare>
-        </Declare>
-        <Commands>
-        </Commands>
-        <IEdge target="S61" start="">
-          <Graphics>
-            <Arrow>
-              <Point x-pos="347" y-pos="373" control-x-pos="345" control-y-pos="412"/>
-              <Point x-pos="347" y-pos="513" control-x-pos="345" control-y-pos="457"/>
-            </Arrow>
-          </Graphics>
-          <Or>
-            <Or>
-              <Eq>
-                <Variable name="AgentRole"/>
-                <String value=""/>
-              </Eq>
-              <Eq>
-                <Variable name="AgentRole"/>
-                <String value=""/>
-              </Eq>
-            </Or>
-            <Eq>
-              <Variable name="AgentRole"/>
-              <String value=""/>
-            </Eq>
-          </Or>
-        </IEdge>
-        <Graphics>
-          <Position x-pos="303" y-pos="303"/>
-        </Graphics>
-        <LocalVariableBadge>
-          <Position x-pos="10" y-pos="10"/>
-        </LocalVariableBadge>
-        <GlobalVariableBadge>
-          <Position x-pos="10" y-pos="10"/>
-        </GlobalVariableBadge>
-        <Node id="N10" name="History" exhaustive="false" preserving="false" history="true">
-          <Define>
-          </Define>
-          <Declare>
-          </Declare>
-          <Commands>
-          </Commands>
-          <Graphics>
-            <Position x-pos="120" y-pos="300"/>
-          </Graphics>
-        </Node>
-      </SuperNode>
-    </SuperNode>
-  </SuperNode>
-  <SuperNode id="S1" name="Test Idle" comment="" exhaustive="false" preserving="false" hideLocalVar="false" hideGlobalVar="false" start="S20;S23;S15;S14;">
+  <SuperNode id="S1" name="Idle" comment="" exhaustive="false" preserving="false" hideLocalVar="false" hideGlobalVar="false" start="S15;">
     <Define>
     </Define>
     <Declare>
@@ -1274,33 +861,23 @@
       </Node>
     </SuperNode>
   </SuperNode>
-  <SuperNode id="S2" name="Dialog" comment="" exhaustive="false" preserving="false" hideLocalVar="false" hideGlobalVar="false" start="S5;">
+  <SuperNode id="S27" name="Model" comment="" exhaustive="false" preserving="false" hideLocalVar="false" hideGlobalVar="false" start="S56;S60;">
     <Define>
     </Define>
     <Declare>
     </Declare>
     <Commands>
     </Commands>
-    <IEdge target="S7" start="">
-      <Graphics>
-        <Arrow>
-          <Point x-pos="303" y-pos="259" control-x-pos="355" control-y-pos="245"/>
-          <Point x-pos="443" y-pos="259" control-x-pos="390" control-y-pos="245"/>
-        </Arrow>
-      </Graphics>
-      <Member name="UserStatus" member="Speaking">
-      </Member>
-    </IEdge>
     <Graphics>
-      <Position x-pos="233" y-pos="233"/>
+      <Position x-pos="93" y-pos="373"/>
     </Graphics>
     <LocalVariableBadge>
       <Position x-pos="10" y-pos="10"/>
     </LocalVariableBadge>
     <GlobalVariableBadge>
-      <Position x-pos="13" y-pos="7"/>
+      <Position x-pos="10" y-pos="10"/>
     </GlobalVariableBadge>
-    <Node id="N9" name="History" exhaustive="false" preserving="false" history="true">
+    <Node id="N58" name="History" exhaustive="false" preserving="false" history="true">
       <Define>
       </Define>
       <Declare>
@@ -1308,26 +885,18 @@
       <Commands>
       </Commands>
       <Graphics>
-        <Position x-pos="23" y-pos="163"/>
+        <Position x-pos="23" y-pos="233"/>
       </Graphics>
     </Node>
-    <SuperNode id="S5" name="LA" comment="" exhaustive="false" preserving="false" hideLocalVar="false" hideGlobalVar="false" start="N20;">
+    <SuperNode id="S56" name="Planning" comment="" exhaustive="false" preserving="false" hideLocalVar="false" hideGlobalVar="false" start="S57;">
       <Define>
       </Define>
       <Declare>
       </Declare>
       <Commands>
       </Commands>
-      <EEdge target="S9" start ="">
       <Graphics>
-        <Arrow>
-          <Point x-pos="233" y-pos="198" control-x-pos="250" control-y-pos="198"/>
-          <Point x-pos="303" y-pos="198" control-x-pos="285" control-y-pos="198"/>
-        </Arrow>
-      </Graphics>
-      </EEdge>
-      <Graphics>
-        <Position x-pos="163" y-pos="163"/>
+        <Position x-pos="163" y-pos="303"/>
       </Graphics>
       <LocalVariableBadge>
         <Position x-pos="10" y-pos="10"/>
@@ -1335,7 +904,67 @@
       <GlobalVariableBadge>
         <Position x-pos="10" y-pos="10"/>
       </GlobalVariableBadge>
-      <Node id="N11" name="History" exhaustive="false" preserving="false" history="true">
+      <Comment>
+        <Graphics>
+          <Rect x-pos="127" y-pos="182" width="150" height="50"/>
+        </Graphics>
+        <Text style="color:blue">
+          <html>
+            <head>
+              <style type="text/css">
+                <!--
+                  body { font-family: SansSerif; font-size: 12pt }
+                -->
+              </style>
+              
+            </head>
+            <body>
+              Await a new user move contribution of the user
+            </body>
+          </html>
+        </Text>
+      </Comment>
+      <Comment>
+        <Graphics>
+          <Rect x-pos="399" y-pos="183" width="162" height="50"/>
+        </Graphics>
+        <Text style="color:blue">
+          <html>
+            <head>
+              <style type="text/css">
+                <!--
+                  body { font-family: SansSerif; font-size: 12pt }
+                -->
+              </style>
+              
+            </head>
+            <body>
+              Start planning the response to this incoming user move
+            </body>
+          </html>
+        </Text>
+      </Comment>
+      <Comment>
+        <Graphics>
+          <Rect x-pos="248" y-pos="446" width="192" height="50"/>
+        </Graphics>
+        <Text style="color:blue">
+          <html>
+            <head>
+              <style type="text/css">
+                <!--
+                  body { font-family: SansSerif; font-size: 12pt }
+                -->
+              </style>
+              
+            </head>
+            <body>
+              Reset the values and allow the detection of the next user move
+            </body>
+          </html>
+        </Text>
+      </Comment>
+      <Node id="N149" name="History" exhaustive="false" preserving="false" history="true">
         <Define>
         </Define>
         <Declare>
@@ -1343,172 +972,336 @@
         <Commands>
         </Commands>
         <Graphics>
-          <Position x-pos="23" y-pos="163"/>
+          <Position x-pos="23" y-pos="233"/>
         </Graphics>
       </Node>
-      <Node id="N20" name="Wait" exhaustive="false" preserving="false" history="false">
+      <SuperNode id="S57" name="Await" comment="" exhaustive="false" preserving="false" hideLocalVar="false" hideGlobalVar="false" start="N153;">
         <Define>
         </Define>
         <Declare>
         </Declare>
         <Commands>
-          <UserCommand name="ssi">
-            <String value="Awaiting LA"/>
-          </UserCommand>
         </Commands>
-        <CEdge target="N29" start="">
+        <IEdge target="S58" start="">
           <Graphics>
             <Arrow>
-              <Point x-pos="233" y-pos="198" control-x-pos="250" control-y-pos="198"/>
-              <Point x-pos="303" y-pos="198" control-x-pos="285" control-y-pos="198"/>
+              <Point x-pos="233" y-pos="268" control-x-pos="320" control-y-pos="268"/>
+              <Point x-pos="443" y-pos="268" control-x-pos="355" control-y-pos="268"/>
             </Arrow>
           </Graphics>
           <Neq>
             <Variable name="LA"/>
-            <String value=""/>
+            <String value="undefined"/>
           </Neq>
-        </CEdge>
-        <TEdge target="N20" start="" timeout="3000">
+        </IEdge>
+        <Graphics>
+          <Position x-pos="163" y-pos="233"/>
+        </Graphics>
+        <LocalVariableBadge>
+          <Position x-pos="10" y-pos="10"/>
+        </LocalVariableBadge>
+        <GlobalVariableBadge>
+          <Position x-pos="10" y-pos="10"/>
+        </GlobalVariableBadge>
+        <Node id="N150" name="History" exhaustive="false" preserving="false" history="true">
+          <Define>
+          </Define>
+          <Declare>
+          </Declare>
+          <Commands>
+          </Commands>
+          <Graphics>
+            <Position x-pos="23" y-pos="233"/>
+          </Graphics>
+        </Node>
+        <Node id="N153" name="Wait" exhaustive="false" preserving="false" history="false">
+          <Define>
+          </Define>
+          <Declare>
+          </Declare>
+          <Commands>
+          </Commands>
+          <TEdge target="N153" start="" timeout="1000">
+          <Graphics>
+            <Arrow>
+              <Point x-pos="207" y-pos="234" control-x-pos="225" control-y-pos="166"/>
+              <Point x-pos="228" y-pos="250" control-x-pos="288" control-y-pos="214"/>
+            </Arrow>
+          </Graphics>
+          </TEdge>
+          <Graphics>
+            <Position x-pos="163" y-pos="233"/>
+          </Graphics>
+        </Node>
+      </SuperNode>
+      <SuperNode id="S58" name="Plan" comment="" exhaustive="false" preserving="false" hideLocalVar="false" hideGlobalVar="false" start="N157;">
+        <Define>
+        </Define>
+        <Declare>
+        </Declare>
+        <Commands>
+        </Commands>
+        <EEdge target="S59" start ="">
         <Graphics>
           <Arrow>
-            <Point x-pos="207" y-pos="164" control-x-pos="225" control-y-pos="96"/>
-            <Point x-pos="228" y-pos="180" control-x-pos="288" control-y-pos="144"/>
+            <Point x-pos="443" y-pos="303" control-x-pos="396" control-y-pos="349"/>
+            <Point x-pos="373" y-pos="373" control-x-pos="419" control-y-pos="326"/>
           </Arrow>
         </Graphics>
-        </TEdge>
+        </EEdge>
         <Graphics>
-          <Position x-pos="163" y-pos="163"/>
+          <Position x-pos="443" y-pos="233"/>
         </Graphics>
-      </Node>
-      <Node id="N29" name="LA" exhaustive="false" preserving="false" history="false">
-        <Define>
-        </Define>
-        <Declare>
-        </Declare>
-        <Commands>
-          <UserCommand name="ssi">
-            <Add>
-              <String value="LA:"/>
-              <Variable name="LA"/>
-            </Add>
-          </UserCommand>
-        </Commands>
-        <Graphics>
-          <Position x-pos="303" y-pos="163"/>
-        </Graphics>
-      </Node>
-    </SuperNode>
-    <SuperNode id="S6" name="MS" comment="" exhaustive="false" preserving="false" hideLocalVar="false" hideGlobalVar="false" start="N24;N27;">
-      <Define>
-      </Define>
-      <Declare>
-      </Declare>
-      <Commands>
-      </Commands>
-      <EEdge target="S11" start ="">
-      <Graphics>
-        <Arrow>
-          <Point x-pos="478" y-pos="233" control-x-pos="478" control-y-pos="250"/>
-          <Point x-pos="478" y-pos="303" control-x-pos="478" control-y-pos="285"/>
-        </Arrow>
-      </Graphics>
-      </EEdge>
-      <Graphics>
-        <Position x-pos="443" y-pos="163"/>
-      </Graphics>
-      <LocalVariableBadge>
-        <Position x-pos="10" y-pos="10"/>
-      </LocalVariableBadge>
-      <GlobalVariableBadge>
-        <Position x-pos="10" y-pos="10"/>
-      </GlobalVariableBadge>
-      <Node id="N21" name="History" exhaustive="false" preserving="false" history="true">
-        <Define>
-        </Define>
-        <Declare>
-        </Declare>
-        <Commands>
-        </Commands>
-        <Graphics>
-          <Position x-pos="23" y-pos="163"/>
-        </Graphics>
-      </Node>
-      <Node id="N24" name="MV" exhaustive="false" preserving="false" history="false">
-        <Define>
-        </Define>
-        <Declare>
-        </Declare>
-        <Commands>
-          <Assign>
-            <Variable name="MV"/>
-            <Expression>
-              <UserCommand name="mv">
-                <Variable name="DM"/>
-              </UserCommand>
-            </Expression>
-          </Assign>
-          <UserCommand name="ssi">
-            <Add>
-              <String value="MV:"/>
+        <LocalVariableBadge>
+          <Position x-pos="10" y-pos="10"/>
+        </LocalVariableBadge>
+        <GlobalVariableBadge>
+          <Position x-pos="10" y-pos="10"/>
+        </GlobalVariableBadge>
+        <Node id="N151" name="History" exhaustive="false" preserving="false" history="true">
+          <Define>
+          </Define>
+          <Declare>
+          </Declare>
+          <Commands>
+          </Commands>
+          <Graphics>
+            <Position x-pos="23" y-pos="303"/>
+          </Graphics>
+        </Node>
+        <Node id="N154" name="MV" exhaustive="false" preserving="false" history="false">
+          <Define>
+          </Define>
+          <Declare>
+          </Declare>
+          <Commands>
+            <Assign>
               <Variable name="MV"/>
-            </Add>
-          </UserCommand>
-        </Commands>
-        <Graphics>
-          <Position x-pos="303" y-pos="163"/>
-        </Graphics>
-      </Node>
-      <Node id="N27" name="MN" exhaustive="false" preserving="false" history="false">
+              <Expression>
+                <UserCommand name="mv">
+                  <Variable name="DM"/>
+                </UserCommand>
+              </Expression>
+            </Assign>
+          </Commands>
+          <EEdge target="N156" start ="">
+          <Graphics>
+            <Arrow>
+              <Point x-pos="373" y-pos="268" control-x-pos="390" control-y-pos="268"/>
+              <Point x-pos="443" y-pos="268" control-x-pos="425" control-y-pos="268"/>
+            </Arrow>
+          </Graphics>
+          </EEdge>
+          <Graphics>
+            <Position x-pos="303" y-pos="233"/>
+          </Graphics>
+        </Node>
+        <Node id="N155" name="MN" exhaustive="false" preserving="false" history="false">
+          <Define>
+          </Define>
+          <Declare>
+          </Declare>
+          <Commands>
+            <Assign>
+              <Variable name="MN"/>
+              <Expression>
+                <UserCommand name="mn">
+                  <Variable name="DM"/>
+                </UserCommand>
+              </Expression>
+            </Assign>
+          </Commands>
+          <Graphics>
+            <Position x-pos="303" y-pos="373"/>
+          </Graphics>
+        </Node>
+        <Node id="N156" name="LG" exhaustive="false" preserving="false" history="false">
+          <Define>
+          </Define>
+          <Declare>
+          </Declare>
+          <Commands>
+            <Assign>
+              <Variable name="LG"/>
+              <Expression>
+                <UserCommand name="lg">
+                  <Variable name="MV"/>
+                </UserCommand>
+              </Expression>
+            </Assign>
+          </Commands>
+          <Graphics>
+            <Position x-pos="443" y-pos="233"/>
+          </Graphics>
+        </Node>
+        <Node id="N157" name="DM" exhaustive="false" preserving="false" history="false">
+          <Define>
+          </Define>
+          <Declare>
+          </Declare>
+          <Commands>
+            <Assign>
+              <Variable name="DM"/>
+              <Expression>
+                <UserCommand name="dm">
+                  <Float value="0.0"/>
+                  <Float value="0.0"/>
+                  <Variable name="LA"/>
+                </UserCommand>
+              </Expression>
+            </Assign>
+          </Commands>
+          <FEdge target="N155" start="">
+            <Graphics>
+              <Arrow>
+                <Point x-pos="228" y-pos="356" control-x-pos="250" control-y-pos="369"/>
+                <Point x-pos="308" y-pos="390" control-x-pos="285" control-y-pos="376"/>
+              </Arrow>
+            </Graphics>
+          </FEdge>
+          <FEdge target="N154" start="">
+            <Graphics>
+              <Arrow>
+                <Point x-pos="228" y-pos="320" control-x-pos="250" control-y-pos="306"/>
+                <Point x-pos="308" y-pos="285" control-x-pos="285" control-y-pos="297"/>
+              </Arrow>
+            </Graphics>
+          </FEdge>
+          <Graphics>
+            <Position x-pos="163" y-pos="303"/>
+          </Graphics>
+        </Node>
+      </SuperNode>
+      <SuperNode id="S59" name="Reset" comment="" exhaustive="false" preserving="false" hideLocalVar="false" hideGlobalVar="false" start="N158;">
         <Define>
         </Define>
         <Declare>
         </Declare>
         <Commands>
-          <Assign>
-            <Variable name="MN"/>
-            <Expression>
-              <UserCommand name="mn">
-                <Variable name="DM"/>
-              </UserCommand>
-            </Expression>
-          </Assign>
-          <UserCommand name="ssi">
-            <Add>
-              <String value="MN:"/>
-              <Variable name="MN"/>
-            </Add>
-          </UserCommand>
         </Commands>
+        <EEdge target="S57" start ="">
         <Graphics>
-          <Position x-pos="163" y-pos="163"/>
+          <Arrow>
+            <Point x-pos="303" y-pos="373" control-x-pos="256" control-y-pos="326"/>
+            <Point x-pos="233" y-pos="303" control-x-pos="279" control-y-pos="349"/>
+          </Arrow>
         </Graphics>
-      </Node>
+        </EEdge>
+        <Graphics>
+          <Position x-pos="303" y-pos="373"/>
+        </Graphics>
+        <LocalVariableBadge>
+          <Position x-pos="10" y-pos="10"/>
+        </LocalVariableBadge>
+        <GlobalVariableBadge>
+          <Position x-pos="10" y-pos="10"/>
+        </GlobalVariableBadge>
+        <Node id="N152" name="History" exhaustive="false" preserving="false" history="true">
+          <Define>
+          </Define>
+          <Declare>
+          </Declare>
+          <Commands>
+          </Commands>
+          <Graphics>
+            <Position x-pos="23" y-pos="233"/>
+          </Graphics>
+        </Node>
+        <Node id="N158" name="Set" exhaustive="false" preserving="false" history="false">
+          <Define>
+          </Define>
+          <Declare>
+          </Declare>
+          <Commands>
+            <Assign>
+              <Variable name="LA"/>
+              <Expression>
+                <String value="undefined"/>
+              </Expression>
+            </Assign>
+            <Assign>
+              <Variable name="DM"/>
+              <Expression>
+                <String value="undefined"/>
+              </Expression>
+            </Assign>
+            <Assign>
+              <Variable name="MV"/>
+              <Expression>
+                <String value="undefined"/>
+              </Expression>
+            </Assign>
+          </Commands>
+          <Graphics>
+            <Position x-pos="163" y-pos="233"/>
+          </Graphics>
+        </Node>
+      </SuperNode>
     </SuperNode>
-    <SuperNode id="S9" name="DM" comment="" exhaustive="false" preserving="false" hideLocalVar="false" hideGlobalVar="false" start="N16;">
+    <SuperNode id="S60" name="Behavior" comment="" exhaustive="false" preserving="false" hideLocalVar="false" hideGlobalVar="false" start="S61;">
       <Define>
       </Define>
       <Declare>
       </Declare>
       <Commands>
       </Commands>
-      <EEdge target="S6" start ="">
       <Graphics>
-        <Arrow>
-          <Point x-pos="373" y-pos="198" control-x-pos="390" control-y-pos="198"/>
-          <Point x-pos="443" y-pos="198" control-x-pos="425" control-y-pos="198"/>
-        </Arrow>
-      </Graphics>
-      </EEdge>
-      <Graphics>
-        <Position x-pos="303" y-pos="163"/>
+        <Position x-pos="163" y-pos="233"/>
       </Graphics>
       <LocalVariableBadge>
         <Position x-pos="10" y-pos="10"/>
       </LocalVariableBadge>
       <GlobalVariableBadge>
-        <Position x-pos="11" y-pos="9"/>
+        <Position x-pos="10" y-pos="10"/>
       </GlobalVariableBadge>
-      <Node id="N15" name="History" exhaustive="false" preserving="false" history="true">
+      <Comment>
+        <Graphics>
+          <Rect x-pos="106" y-pos="303" width="211" height="155"/>
+        </Graphics>
+        <Text style="color:blue">
+          <html>
+            <head>
+              <style type="text/css">
+                <!--
+                  body { font-family: SansSerif; font-size: 12pt }
+                -->
+              </style>
+              
+            </head>
+            <body>
+              First abort any possible still running utterance or behavior of the 
+              avatar. Then show some listening behavior, no matter if an agent move has 
+              been planned or not. Thus the agent is polite and does not try to 
+              interrupt the user while the user is speaking.
+            </body>
+          </html>
+        </Text>
+      </Comment>
+      <Comment>
+        <Graphics>
+          <Rect x-pos="329" y-pos="302" width="225" height="156"/>
+        </Graphics>
+        <Text style="color:blue">
+          <html>
+            <head>
+              <style type="text/css">
+                <!--
+                  body { font-family: SansSerif; font-size: 12pt }
+                -->
+              </style>
+              
+            </head>
+            <body>
+              Show some speaker behavior while the user is not speaking. If there has 
+              been a contribution planned in the addressee role or if there is coming up 
+              a contribution during the speaker role, then this contribution is played 
+              back. However, as soon as the user starts speaking again, the contribution 
+              is aborted and the role is switched back.
+            </body>
+          </html>
+        </Text>
+      </Comment>
+      <Node id="N159" name="History" exhaustive="false" preserving="false" history="true">
         <Define>
         </Define>
         <Declare>
@@ -1516,10 +1309,1208 @@
         <Commands>
         </Commands>
         <Graphics>
-          <Position x-pos="23" y-pos="163"/>
+          <Position x-pos="23" y-pos="233"/>
         </Graphics>
       </Node>
-      <Node id="N16" name="DM" exhaustive="false" preserving="false" history="false">
+      <SuperNode id="S61" name="Addressee" comment="" exhaustive="false" preserving="false" hideLocalVar="false" hideGlobalVar="false" start="N14;">
+        <Define>
+        </Define>
+        <Declare>
+        </Declare>
+        <Commands>
+        </Commands>
+        <IEdge target="S62" start="">
+          <Graphics>
+            <Arrow>
+              <Point x-pos="233" y-pos="259" control-x-pos="285" control-y-pos="245"/>
+              <Point x-pos="373" y-pos="259" control-x-pos="320" control-y-pos="245"/>
+            </Arrow>
+          </Graphics>
+          <Not>
+            <Variable name="US"/>
+          </Not>
+        </IEdge>
+        <Graphics>
+          <Position x-pos="163" y-pos="233"/>
+        </Graphics>
+        <LocalVariableBadge>
+          <Position x-pos="10" y-pos="10"/>
+        </LocalVariableBadge>
+        <GlobalVariableBadge>
+          <Position x-pos="10" y-pos="10"/>
+        </GlobalVariableBadge>
+        <Comment>
+          <Graphics>
+            <Rect x-pos="244" y-pos="308" width="242" height="150"/>
+          </Graphics>
+          <Text style="color:blue">
+            <html>
+              <head>
+                <style type="text/css">
+                  <!--
+                    body { font-family: SansSerif; font-size: 12pt }
+                  -->
+                </style>
+                
+              </head>
+              <body>
+                The idle behavior depends on the information state. If the agent is just 
+                listening without having a contribution then he does some standard 
+                listening behavior. If there has been planned a contribution or such a 
+                contribution is coming up while listening then this should be shown via 
+                appropriate behaviors.
+              </body>
+            </html>
+          </Text>
+        </Comment>
+        <Node id="N162" name="History" exhaustive="false" preserving="false" history="true">
+          <Define>
+          </Define>
+          <Declare>
+          </Declare>
+          <Commands>
+          </Commands>
+          <Graphics>
+            <Position x-pos="23" y-pos="233"/>
+          </Graphics>
+        </Node>
+        <Node id="N14" name="Abort" exhaustive="false" preserving="false" history="false">
+          <Define>
+          </Define>
+          <Declare>
+          </Declare>
+          <Commands>
+          </Commands>
+          <EEdge target="S2" start ="">
+          <Graphics>
+            <Arrow>
+              <Point x-pos="233" y-pos="268" control-x-pos="285" control-y-pos="268"/>
+              <Point x-pos="303" y-pos="268" control-x-pos="250" control-y-pos="268"/>
+            </Arrow>
+          </Graphics>
+          </EEdge>
+          <Graphics>
+            <Position x-pos="163" y-pos="233"/>
+          </Graphics>
+        </Node>
+        <SuperNode id="S2" name="Idle" comment="" exhaustive="false" preserving="false" hideLocalVar="false" hideGlobalVar="false" start="N19;">
+          <Define>
+          </Define>
+          <Declare>
+          </Declare>
+          <Commands>
+          </Commands>
+          <Graphics>
+            <Position x-pos="303" y-pos="233"/>
+          </Graphics>
+          <LocalVariableBadge>
+            <Position x-pos="10" y-pos="10"/>
+          </LocalVariableBadge>
+          <GlobalVariableBadge>
+            <Position x-pos="10" y-pos="10"/>
+          </GlobalVariableBadge>
+          <Node id="N2" name="History" exhaustive="false" preserving="false" history="true">
+            <Define>
+            </Define>
+            <Declare>
+            </Declare>
+            <Commands>
+            </Commands>
+            <Graphics>
+              <Position x-pos="23" y-pos="233"/>
+            </Graphics>
+          </Node>
+          <Node id="N19" name="Nod" exhaustive="false" preserving="false" history="false">
+            <Define>
+            </Define>
+            <Declare>
+            </Declare>
+            <Commands>
+              <UserCommand name="nod">
+                <Float value="0.5"/>
+                <Int value="0"/>
+              </UserCommand>
+            </Commands>
+            <TEdge target="N19" start="" timeout="1500">
+            <Graphics>
+              <Arrow>
+                <Point x-pos="207" y-pos="234" control-x-pos="225" control-y-pos="166"/>
+                <Point x-pos="228" y-pos="250" control-x-pos="288" control-y-pos="214"/>
+              </Arrow>
+            </Graphics>
+            </TEdge>
+            <Graphics>
+              <Position x-pos="163" y-pos="233"/>
+            </Graphics>
+          </Node>
+        </SuperNode>
+      </SuperNode>
+      <SuperNode id="S62" name="Speaker" comment="" exhaustive="false" preserving="false" hideLocalVar="false" hideGlobalVar="false" start="S63;">
+        <Define>
+        </Define>
+        <Declare>
+        </Declare>
+        <Commands>
+        </Commands>
+        <IEdge target="S61" start="">
+          <Graphics>
+            <Arrow>
+              <Point x-pos="373" y-pos="277" control-x-pos="320" control-y-pos="290"/>
+              <Point x-pos="233" y-pos="277" control-x-pos="285" control-y-pos="290"/>
+            </Arrow>
+          </Graphics>
+          <Variable name="US"/>
+        </IEdge>
+        <Graphics>
+          <Position x-pos="373" y-pos="233"/>
+        </Graphics>
+        <LocalVariableBadge>
+          <Position x-pos="10" y-pos="10"/>
+        </LocalVariableBadge>
+        <GlobalVariableBadge>
+          <Position x-pos="10" y-pos="10"/>
+        </GlobalVariableBadge>
+        <Node id="N163" name="History" exhaustive="false" preserving="false" history="true">
+          <Define>
+          </Define>
+          <Declare>
+          </Declare>
+          <Commands>
+          </Commands>
+          <Graphics>
+            <Position x-pos="23" y-pos="233"/>
+          </Graphics>
+        </Node>
+        <Node id="N15" name="Timeout" exhaustive="false" preserving="false" history="false">
+          <Define>
+          </Define>
+          <Declare>
+          </Declare>
+          <Commands>
+            <Assign>
+              <Variable name="LA"/>
+              <Expression>
+                <String value="timeout"/>
+              </Expression>
+            </Assign>
+          </Commands>
+          <EEdge target="S63" start ="">
+          <Graphics>
+            <Arrow>
+              <Point x-pos="374" y-pos="277" control-x-pos="323" control-y-pos="290"/>
+              <Point x-pos="233" y-pos="277" control-x-pos="285" control-y-pos="290"/>
+            </Arrow>
+          </Graphics>
+          </EEdge>
+          <Graphics>
+            <Position x-pos="373" y-pos="233"/>
+          </Graphics>
+        </Node>
+        <SuperNode id="S63" name="Idle" comment="" exhaustive="false" preserving="false" hideLocalVar="false" hideGlobalVar="false" start="N20;">
+          <Define>
+          </Define>
+          <Declare>
+          </Declare>
+          <Commands>
+          </Commands>
+          <IEdge target="S64" start="">
+            <Graphics>
+              <Arrow>
+                <Point x-pos="198" y-pos="303" control-x-pos="198" control-y-pos="320"/>
+                <Point x-pos="198" y-pos="373" control-x-pos="198" control-y-pos="355"/>
+              </Arrow>
+            </Graphics>
+            <And>
+              <Neq>
+                <Variable name="LG"/>
+                <String value="undefined"/>
+              </Neq>
+              <Neq>
+                <Variable name="MN"/>
+                <String value="undefined"/>
+              </Neq>
+            </And>
+          </IEdge>
+          <IEdge target="N15" start="">
+            <Graphics>
+              <Arrow>
+                <Point x-pos="233" y-pos="268" control-x-pos="285" control-y-pos="268"/>
+                <Point x-pos="373" y-pos="268" control-x-pos="320" control-y-pos="268"/>
+              </Arrow>
+            </Graphics>
+            <TimeoutCondition>
+            <Int value="10000"/>
+            </TimeoutCondition>
+          </IEdge>
+          <Graphics>
+            <Position x-pos="163" y-pos="233"/>
+          </Graphics>
+          <LocalVariableBadge>
+            <Position x-pos="10" y-pos="10"/>
+          </LocalVariableBadge>
+          <GlobalVariableBadge>
+            <Position x-pos="10" y-pos="10"/>
+          </GlobalVariableBadge>
+          <Node id="N164" name="History" exhaustive="false" preserving="false" history="true">
+            <Define>
+            </Define>
+            <Declare>
+            </Declare>
+            <Commands>
+            </Commands>
+            <Graphics>
+              <Position x-pos="23" y-pos="233"/>
+            </Graphics>
+          </Node>
+          <Node id="N18" name="Down" exhaustive="false" preserving="false" history="false">
+            <Define>
+            </Define>
+            <Declare>
+            </Declare>
+            <Commands>
+              <UserCommand name="head">
+                <Float value="1.0"/>
+                <Float value="10.0"/>
+                <String value="DOWNLEFT"/>
+              </UserCommand>
+            </Commands>
+            <TEdge target="N20" start="" timeout="2000">
+            <Graphics>
+              <Arrow>
+                <Point x-pos="374" y-pos="277" control-x-pos="323" control-y-pos="290"/>
+                <Point x-pos="232" y-pos="277" control-x-pos="283" control-y-pos="290"/>
+              </Arrow>
+            </Graphics>
+            </TEdge>
+            <Graphics>
+              <Position x-pos="373" y-pos="233"/>
+            </Graphics>
+          </Node>
+          <Node id="N20" name="Up" exhaustive="false" preserving="false" history="false">
+            <Define>
+            </Define>
+            <Declare>
+            </Declare>
+            <Commands>
+              <UserCommand name="head">
+                <Float value="1.0"/>
+                <Float value="10.0"/>
+                <String value="UPRIGHT"/>
+              </UserCommand>
+            </Commands>
+            <TEdge target="N18" start="" timeout="2000">
+            <Graphics>
+              <Arrow>
+                <Point x-pos="232" y-pos="259" control-x-pos="283" control-y-pos="245"/>
+                <Point x-pos="374" y-pos="259" control-x-pos="323" control-y-pos="245"/>
+              </Arrow>
+            </Graphics>
+            </TEdge>
+            <Graphics>
+              <Position x-pos="163" y-pos="233"/>
+            </Graphics>
+          </Node>
+        </SuperNode>
+        <SuperNode id="S64" name="Speak" comment="" exhaustive="false" preserving="false" hideLocalVar="false" hideGlobalVar="false" start="S65;">
+          <Define>
+          </Define>
+          <Declare>
+          </Declare>
+          <Commands>
+          </Commands>
+          <EEdge target="S63" start ="">
+          <Graphics>
+            <Arrow>
+              <Point x-pos="207" y-pos="373" control-x-pos="211" control-y-pos="355"/>
+              <Point x-pos="207" y-pos="303" control-x-pos="211" control-y-pos="320"/>
+            </Arrow>
+          </Graphics>
+          </EEdge>
+          <Graphics>
+            <Position x-pos="163" y-pos="373"/>
+          </Graphics>
+          <LocalVariableBadge>
+            <Position x-pos="10" y-pos="10"/>
+          </LocalVariableBadge>
+          <GlobalVariableBadge>
+            <Position x-pos="10" y-pos="10"/>
+          </GlobalVariableBadge>
+          <Node id="N165" name="History" exhaustive="false" preserving="false" history="true">
+            <Define>
+            </Define>
+            <Declare>
+            </Declare>
+            <Commands>
+            </Commands>
+            <Graphics>
+              <Position x-pos="23" y-pos="233"/>
+            </Graphics>
+          </Node>
+          <SuperNode id="S65" name="Planning" comment="" exhaustive="false" preserving="false" hideLocalVar="false" hideGlobalVar="false" start="N3;">
+            <Define>
+            </Define>
+            <Declare>
+            </Declare>
+            <Commands>
+            </Commands>
+            <EEdge target="S66" start ="">
+            <Graphics>
+              <Arrow>
+                <Point x-pos="233" y-pos="268" control-x-pos="250" control-y-pos="268"/>
+                <Point x-pos="303" y-pos="268" control-x-pos="285" control-y-pos="268"/>
+              </Arrow>
+            </Graphics>
+            </EEdge>
+            <Graphics>
+              <Position x-pos="163" y-pos="233"/>
+            </Graphics>
+            <LocalVariableBadge>
+              <Position x-pos="10" y-pos="10"/>
+            </LocalVariableBadge>
+            <GlobalVariableBadge>
+              <Position x-pos="10" y-pos="10"/>
+            </GlobalVariableBadge>
+            <Node id="N173" name="History" exhaustive="false" preserving="false" history="true">
+              <Define>
+              </Define>
+              <Declare>
+              </Declare>
+              <Commands>
+              </Commands>
+              <Graphics>
+                <Position x-pos="23" y-pos="233"/>
+              </Graphics>
+            </Node>
+            <Node id="N3" name="Up" exhaustive="false" preserving="false" history="false">
+              <Define>
+              </Define>
+              <Declare>
+              </Declare>
+              <Commands>
+                <UserCommand name="gaze">
+                  <Float value="1.0"/>
+                  <Float value="20.0"/>
+                  <String value="UPRIGHT"/>
+                </UserCommand>
+              </Commands>
+              <TEdge target="N16" start="" timeout="1000">
+              <Graphics>
+                <Arrow>
+                  <Point x-pos="233" y-pos="268" control-x-pos="285" control-y-pos="268"/>
+                  <Point x-pos="373" y-pos="268" control-x-pos="320" control-y-pos="268"/>
+                </Arrow>
+              </Graphics>
+              </TEdge>
+              <Graphics>
+                <Position x-pos="163" y-pos="233"/>
+              </Graphics>
+            </Node>
+            <Node id="N16" name="Straight" exhaustive="false" preserving="false" history="false">
+              <Define>
+              </Define>
+              <Declare>
+              </Declare>
+              <Commands>
+                <UserCommand name="gaze">
+                  <Float value="1.0"/>
+                  <Float value="0.0"/>
+                  <String value="UPRIGHT"/>
+                </UserCommand>
+              </Commands>
+              <Graphics>
+                <Position x-pos="373" y-pos="233"/>
+              </Graphics>
+            </Node>
+          </SuperNode>
+          <SuperNode id="S66" name="Speaking" comment="" exhaustive="false" preserving="false" hideLocalVar="false" hideGlobalVar="false" start="N4;N9;">
+            <Define>
+            </Define>
+            <Declare>
+            </Declare>
+            <Commands>
+            </Commands>
+            <EEdge target="S3" start ="">
+            <Graphics>
+              <Arrow>
+                <Point x-pos="373" y-pos="268" control-x-pos="390" control-y-pos="268"/>
+                <Point x-pos="443" y-pos="268" control-x-pos="425" control-y-pos="268"/>
+              </Arrow>
+            </Graphics>
+            </EEdge>
+            <Graphics>
+              <Position x-pos="303" y-pos="233"/>
+            </Graphics>
+            <LocalVariableBadge>
+              <Position x-pos="10" y-pos="10"/>
+            </LocalVariableBadge>
+            <GlobalVariableBadge>
+              <Position x-pos="10" y-pos="10"/>
+            </GlobalVariableBadge>
+            <Node id="N174" name="History" exhaustive="false" preserving="false" history="true">
+              <Define>
+              </Define>
+              <Declare>
+              </Declare>
+              <Commands>
+              </Commands>
+              <Graphics>
+                <Position x-pos="23" y-pos="233"/>
+              </Graphics>
+            </Node>
+            <Node id="N4" name="AN" exhaustive="false" preserving="false" history="false">
+              <Define>
+              </Define>
+              <Declare>
+              </Declare>
+              <Commands>
+                <Assign>
+                  <Variable name="AN"/>
+                  <Expression>
+                    <UserCommand name="an">
+                      <Variable name="MN"/>
+                    </UserCommand>
+                  </Expression>
+                </Assign>
+              </Commands>
+              <Graphics>
+                <Position x-pos="163" y-pos="233"/>
+              </Graphics>
+            </Node>
+            <Node id="N9" name="AV" exhaustive="false" preserving="false" history="false">
+              <Define>
+              </Define>
+              <Declare>
+              </Declare>
+              <Commands>
+                <Assign>
+                  <Variable name="AV"/>
+                  <Expression>
+                    <UserCommand name="av">
+                      <Variable name="LG"/>
+                    </UserCommand>
+                  </Expression>
+                </Assign>
+              </Commands>
+              <Graphics>
+                <Position x-pos="303" y-pos="233"/>
+              </Graphics>
+            </Node>
+          </SuperNode>
+          <SuperNode id="S68" name="Yielding" comment="" exhaustive="false" preserving="false" hideLocalVar="false" hideGlobalVar="false" start="N17;">
+            <Define>
+            </Define>
+            <Declare>
+            </Declare>
+            <Commands>
+            </Commands>
+            <Graphics>
+              <Position x-pos="583" y-pos="233"/>
+            </Graphics>
+            <LocalVariableBadge>
+              <Position x-pos="10" y-pos="10"/>
+            </LocalVariableBadge>
+            <GlobalVariableBadge>
+              <Position x-pos="10" y-pos="10"/>
+            </GlobalVariableBadge>
+            <Node id="N176" name="History" exhaustive="false" preserving="false" history="true">
+              <Define>
+              </Define>
+              <Declare>
+              </Declare>
+              <Commands>
+              </Commands>
+              <Graphics>
+                <Position x-pos="23" y-pos="233"/>
+              </Graphics>
+            </Node>
+            <Node id="N17" name="Yield" exhaustive="false" preserving="false" history="false">
+              <Define>
+              </Define>
+              <Declare>
+              </Declare>
+              <Commands>
+              </Commands>
+              <Graphics>
+                <Position x-pos="163" y-pos="233"/>
+              </Graphics>
+            </Node>
+          </SuperNode>
+          <SuperNode id="S3" name="Reset" comment="" exhaustive="false" preserving="false" hideLocalVar="false" hideGlobalVar="false" start="N13;">
+            <Define>
+            </Define>
+            <Declare>
+            </Declare>
+            <Commands>
+            </Commands>
+            <EEdge target="S68" start ="">
+            <Graphics>
+              <Arrow>
+                <Point x-pos="513" y-pos="268" control-x-pos="530" control-y-pos="268"/>
+                <Point x-pos="583" y-pos="268" control-x-pos="565" control-y-pos="268"/>
+              </Arrow>
+            </Graphics>
+            </EEdge>
+            <Graphics>
+              <Position x-pos="443" y-pos="233"/>
+            </Graphics>
+            <LocalVariableBadge>
+              <Position x-pos="10" y-pos="10"/>
+            </LocalVariableBadge>
+            <GlobalVariableBadge>
+              <Position x-pos="10" y-pos="10"/>
+            </GlobalVariableBadge>
+            <Node id="N11" name="History" exhaustive="false" preserving="false" history="true">
+              <Define>
+              </Define>
+              <Declare>
+              </Declare>
+              <Commands>
+              </Commands>
+              <Graphics>
+                <Position x-pos="23" y-pos="233"/>
+              </Graphics>
+            </Node>
+            <Node id="N13" name="Set" exhaustive="false" preserving="false" history="false">
+              <Define>
+              </Define>
+              <Declare>
+              </Declare>
+              <Commands>
+                <Assign>
+                  <Variable name="LG"/>
+                  <Expression>
+                    <String value="undefined"/>
+                  </Expression>
+                </Assign>
+                <Assign>
+                  <Variable name="MN"/>
+                  <Expression>
+                    <String value="undefined"/>
+                  </Expression>
+                </Assign>
+              </Commands>
+              <Graphics>
+                <Position x-pos="163" y-pos="233"/>
+              </Graphics>
+            </Node>
+          </SuperNode>
+        </SuperNode>
+      </SuperNode>
+    </SuperNode>
+  </SuperNode>
+  <SuperNode id="S10" name="Pipe" comment="" exhaustive="false" preserving="false" hideLocalVar="false" hideGlobalVar="false" start="S55;">
+    <Define>
+    </Define>
+    <Declare>
+    </Declare>
+    <Commands>
+    </Commands>
+    <Graphics>
+      <Position x-pos="163" y-pos="233"/>
+    </Graphics>
+    <LocalVariableBadge>
+      <Position x-pos="10" y-pos="10"/>
+    </LocalVariableBadge>
+    <GlobalVariableBadge>
+      <Position x-pos="13" y-pos="9"/>
+    </GlobalVariableBadge>
+    <Node id="N72" name="History" exhaustive="false" preserving="false" history="true">
+      <Define>
+      </Define>
+      <Declare>
+      </Declare>
+      <Commands>
+      </Commands>
+      <Graphics>
+        <Position x-pos="23" y-pos="303"/>
+      </Graphics>
+    </Node>
+    <SuperNode id="S47" name="3" comment="" exhaustive="false" preserving="false" hideLocalVar="false" hideGlobalVar="false" start="S48;">
+      <Define>
+      </Define>
+      <Declare>
+      </Declare>
+      <Commands>
+      </Commands>
+      <Graphics>
+        <Position x-pos="303" y-pos="373"/>
+      </Graphics>
+      <LocalVariableBadge>
+        <Position x-pos="10" y-pos="10"/>
+      </LocalVariableBadge>
+      <GlobalVariableBadge>
+        <Position x-pos="13" y-pos="7"/>
+      </GlobalVariableBadge>
+      <Comment>
+        <Graphics>
+          <Rect x-pos="127" y-pos="194" width="138" height="50"/>
+        </Graphics>
+        <Text style="color:blue">
+          <html>
+            <head>
+              <style type="text/css">
+                <!--
+                  body { font-family: SansSerif; font-size: 12pt }
+                -->
+              </style>
+              
+            </head>
+            <body>
+              Language Analysis
+            </body>
+          </html>
+        </Text>
+      </Comment>
+      <Comment>
+        <Graphics>
+          <Rect x-pos="271" y-pos="193" width="133" height="50"/>
+        </Graphics>
+        <Text style="color:blue">
+          <html>
+            <head>
+              <style type="text/css">
+                <!--
+                  body { font-family: SansSerif; font-size: 12pt }
+                -->
+              </style>
+              
+            </head>
+            <body>
+              Dialog Management
+            </body>
+          </html>
+        </Text>
+      </Comment>
+      <Comment>
+        <Graphics>
+          <Rect x-pos="409" y-pos="192" width="139" height="50"/>
+        </Graphics>
+        <Text style="color:blue">
+          <html>
+            <head>
+              <style type="text/css">
+                <!--
+                  body { font-family: SansSerif; font-size: 12pt }
+                -->
+              </style>
+              
+            </head>
+            <body>
+              Mode Selection
+            </body>
+          </html>
+        </Text>
+      </Comment>
+      <Comment>
+        <Graphics>
+          <Rect x-pos="553" y-pos="191" width="130" height="50"/>
+        </Graphics>
+        <Text style="color:blue">
+          <html>
+            <head>
+              <style type="text/css">
+                <!--
+                  body { font-family: SansSerif; font-size: 12pt }
+                -->
+              </style>
+              
+            </head>
+            <body>
+              Language Generation
+            </body>
+          </html>
+        </Text>
+      </Comment>
+      <Comment>
+        <Graphics>
+          <Rect x-pos="687" y-pos="190" width="135" height="50"/>
+        </Graphics>
+        <Text style="color:blue">
+          <html>
+            <head>
+              <style type="text/css">
+                <!--
+                  body { font-family: SansSerif; font-size: 12pt }
+                -->
+              </style>
+              
+            </head>
+            <body>
+              Avatar Behavior
+            </body>
+          </html>
+        </Text>
+      </Comment>
+      <Node id="N73" name="History" exhaustive="false" preserving="false" history="true">
+        <Define>
+        </Define>
+        <Declare>
+        </Declare>
+        <Commands>
+        </Commands>
+        <Graphics>
+          <Position x-pos="23" y-pos="233"/>
+        </Graphics>
+      </Node>
+      <SuperNode id="S48" name="LA" comment="" exhaustive="false" preserving="false" hideLocalVar="false" hideGlobalVar="false" start="N76;">
+        <Define>
+        </Define>
+        <Declare>
+        </Declare>
+        <Commands>
+        </Commands>
+        <EEdge target="S50" start ="">
+        <Graphics>
+          <Arrow>
+            <Point x-pos="233" y-pos="268" control-x-pos="250" control-y-pos="268"/>
+            <Point x-pos="303" y-pos="268" control-x-pos="285" control-y-pos="268"/>
+          </Arrow>
+        </Graphics>
+        </EEdge>
+        <Graphics>
+          <Position x-pos="163" y-pos="233"/>
+        </Graphics>
+        <LocalVariableBadge>
+          <Position x-pos="10" y-pos="10"/>
+        </LocalVariableBadge>
+        <GlobalVariableBadge>
+          <Position x-pos="10" y-pos="10"/>
+        </GlobalVariableBadge>
+        <Node id="N74" name="History" exhaustive="false" preserving="false" history="true">
+          <Define>
+          </Define>
+          <Declare>
+          </Declare>
+          <Commands>
+          </Commands>
+          <Graphics>
+            <Position x-pos="23" y-pos="233"/>
+          </Graphics>
+        </Node>
+        <Node id="N76" name="Wait" exhaustive="false" preserving="false" history="false">
+          <Define>
+          </Define>
+          <Declare>
+          </Declare>
+          <Commands>
+          </Commands>
+          <CEdge target="N77" start="">
+            <Graphics>
+              <Arrow>
+                <Point x-pos="233" y-pos="268" control-x-pos="250" control-y-pos="268"/>
+                <Point x-pos="303" y-pos="268" control-x-pos="285" control-y-pos="268"/>
+              </Arrow>
+            </Graphics>
+            <Neq>
+              <Variable name="LA"/>
+              <String value=""/>
+            </Neq>
+          </CEdge>
+          <TEdge target="N76" start="" timeout="60000">
+          <Graphics>
+            <Arrow>
+              <Point x-pos="207" y-pos="234" control-x-pos="225" control-y-pos="166"/>
+              <Point x-pos="228" y-pos="250" control-x-pos="288" control-y-pos="214"/>
+            </Arrow>
+          </Graphics>
+          </TEdge>
+          <Graphics>
+            <Position x-pos="163" y-pos="233"/>
+          </Graphics>
+        </Node>
+        <Node id="N77" name="LA" exhaustive="false" preserving="false" history="false">
+          <Define>
+          </Define>
+          <Declare>
+          </Declare>
+          <Commands>
+          </Commands>
+          <Graphics>
+            <Position x-pos="303" y-pos="233"/>
+          </Graphics>
+        </Node>
+      </SuperNode>
+      <SuperNode id="S49" name="MS" comment="" exhaustive="false" preserving="false" hideLocalVar="false" hideGlobalVar="false" start="N87;N86;">
+        <Define>
+        </Define>
+        <Declare>
+        </Declare>
+        <Commands>
+        </Commands>
+        <EEdge target="S52" start ="">
+        <Graphics>
+          <Arrow>
+            <Point x-pos="513" y-pos="268" control-x-pos="530" control-y-pos="268"/>
+            <Point x-pos="583" y-pos="268" control-x-pos="565" control-y-pos="268"/>
+          </Arrow>
+        </Graphics>
+        </EEdge>
+        <Graphics>
+          <Position x-pos="443" y-pos="233"/>
+        </Graphics>
+        <LocalVariableBadge>
+          <Position x-pos="10" y-pos="10"/>
+        </LocalVariableBadge>
+        <GlobalVariableBadge>
+          <Position x-pos="10" y-pos="10"/>
+        </GlobalVariableBadge>
+        <Node id="N85" name="History" exhaustive="false" preserving="false" history="true">
+          <Define>
+          </Define>
+          <Declare>
+          </Declare>
+          <Commands>
+          </Commands>
+          <Graphics>
+            <Position x-pos="23" y-pos="163"/>
+          </Graphics>
+        </Node>
+        <Node id="N86" name="MV" exhaustive="false" preserving="false" history="false">
+          <Define>
+          </Define>
+          <Declare>
+          </Declare>
+          <Commands>
+            <Assign>
+              <Variable name="MV"/>
+              <Expression>
+                <UserCommand name="mv">
+                  <Variable name="DM"/>
+                </UserCommand>
+              </Expression>
+            </Assign>
+          </Commands>
+          <Graphics>
+            <Position x-pos="303" y-pos="163"/>
+          </Graphics>
+        </Node>
+        <Node id="N87" name="MN" exhaustive="false" preserving="false" history="false">
+          <Define>
+          </Define>
+          <Declare>
+          </Declare>
+          <Commands>
+            <Assign>
+              <Variable name="MN"/>
+              <Expression>
+                <UserCommand name="mn">
+                  <Variable name="DM"/>
+                </UserCommand>
+              </Expression>
+            </Assign>
+          </Commands>
+          <Graphics>
+            <Position x-pos="163" y-pos="163"/>
+          </Graphics>
+        </Node>
+      </SuperNode>
+      <SuperNode id="S50" name="DM" comment="" exhaustive="false" preserving="false" hideLocalVar="false" hideGlobalVar="false" start="N89;">
+        <Define>
+        </Define>
+        <Declare>
+        </Declare>
+        <Commands>
+        </Commands>
+        <EEdge target="S49" start ="">
+        <Graphics>
+          <Arrow>
+            <Point x-pos="373" y-pos="268" control-x-pos="390" control-y-pos="268"/>
+            <Point x-pos="443" y-pos="268" control-x-pos="425" control-y-pos="268"/>
+          </Arrow>
+        </Graphics>
+        </EEdge>
+        <Graphics>
+          <Position x-pos="303" y-pos="233"/>
+        </Graphics>
+        <LocalVariableBadge>
+          <Position x-pos="10" y-pos="10"/>
+        </LocalVariableBadge>
+        <GlobalVariableBadge>
+          <Position x-pos="11" y-pos="9"/>
+        </GlobalVariableBadge>
+        <Node id="N88" name="History" exhaustive="false" preserving="false" history="true">
+          <Define>
+          </Define>
+          <Declare>
+          </Declare>
+          <Commands>
+          </Commands>
+          <Graphics>
+            <Position x-pos="23" y-pos="163"/>
+          </Graphics>
+        </Node>
+        <Node id="N89" name="DM" exhaustive="false" preserving="false" history="false">
+          <Define>
+          </Define>
+          <Declare>
+          </Declare>
+          <Commands>
+            <Assign>
+              <Variable name="DM"/>
+              <Expression>
+                <UserCommand name="dm">
+                  <Float value="0.0"/>
+                  <Float value="0.0"/>
+                  <Variable name="LA"/>
+                </UserCommand>
+              </Expression>
+            </Assign>
+          </Commands>
+          <Graphics>
+            <Position x-pos="163" y-pos="163"/>
+          </Graphics>
+        </Node>
+      </SuperNode>
+      <SuperNode id="S51" name="AE" comment="" exhaustive="false" preserving="false" hideLocalVar="false" hideGlobalVar="false" start="N125;N126;">
+        <Define>
+        </Define>
+        <Declare>
+        </Declare>
+        <Commands>
+        </Commands>
+        <Graphics>
+          <Position x-pos="723" y-pos="233"/>
+        </Graphics>
+        <LocalVariableBadge>
+          <Position x-pos="10" y-pos="10"/>
+        </LocalVariableBadge>
+        <GlobalVariableBadge>
+          <Position x-pos="10" y-pos="10"/>
+        </GlobalVariableBadge>
+        <Node id="N90" name="History" exhaustive="false" preserving="false" history="true">
+          <Define>
+          </Define>
+          <Declare>
+          </Declare>
+          <Commands>
+          </Commands>
+          <Graphics>
+            <Position x-pos="23" y-pos="163"/>
+          </Graphics>
+        </Node>
+        <Node id="N125" name="AN" exhaustive="false" preserving="false" history="false">
+          <Define>
+          </Define>
+          <Declare>
+          </Declare>
+          <Commands>
+            <Assign>
+              <Variable name="AN"/>
+              <Expression>
+                <UserCommand name="an">
+                  <Variable name="MN"/>
+                </UserCommand>
+              </Expression>
+            </Assign>
+          </Commands>
+          <Graphics>
+            <Position x-pos="163" y-pos="163"/>
+          </Graphics>
+        </Node>
+        <Node id="N126" name="AV" exhaustive="false" preserving="false" history="false">
+          <Define>
+          </Define>
+          <Declare>
+          </Declare>
+          <Commands>
+            <Assign>
+              <Variable name="AV"/>
+              <Expression>
+                <UserCommand name="av">
+                  <Variable name="LG"/>
+                </UserCommand>
+              </Expression>
+            </Assign>
+          </Commands>
+          <Graphics>
+            <Position x-pos="303" y-pos="163"/>
+          </Graphics>
+        </Node>
+      </SuperNode>
+      <SuperNode id="S52" name="LG" comment="" exhaustive="false" preserving="false" hideLocalVar="false" hideGlobalVar="false" start="N128;">
+        <Define>
+        </Define>
+        <Declare>
+        </Declare>
+        <Commands>
+        </Commands>
+        <EEdge target="S51" start ="">
+        <Graphics>
+          <Arrow>
+            <Point x-pos="653" y-pos="268" control-x-pos="670" control-y-pos="268"/>
+            <Point x-pos="723" y-pos="268" control-x-pos="705" control-y-pos="268"/>
+          </Arrow>
+        </Graphics>
+        </EEdge>
+        <Graphics>
+          <Position x-pos="583" y-pos="233"/>
+        </Graphics>
+        <LocalVariableBadge>
+          <Position x-pos="10" y-pos="10"/>
+        </LocalVariableBadge>
+        <GlobalVariableBadge>
+          <Position x-pos="10" y-pos="10"/>
+        </GlobalVariableBadge>
+        <Node id="N127" name="History" exhaustive="false" preserving="false" history="true">
+          <Define>
+          </Define>
+          <Declare>
+          </Declare>
+          <Commands>
+          </Commands>
+          <Graphics>
+            <Position x-pos="23" y-pos="163"/>
+          </Graphics>
+        </Node>
+        <Node id="N128" name="LG" exhaustive="false" preserving="false" history="false">
+          <Define>
+          </Define>
+          <Declare>
+          </Declare>
+          <Commands>
+            <Assign>
+              <Variable name="LG"/>
+              <Expression>
+                <UserCommand name="lg">
+                  <Variable name="MV"/>
+                </UserCommand>
+              </Expression>
+            </Assign>
+          </Commands>
+          <Graphics>
+            <Position x-pos="163" y-pos="163"/>
+          </Graphics>
+        </Node>
+      </SuperNode>
+    </SuperNode>
+    <SuperNode id="S53" name="2" comment="" exhaustive="false" preserving="false" hideLocalVar="false" hideGlobalVar="false" start="N136;">
+      <Define>
+      </Define>
+      <Declare>
+      </Declare>
+      <Commands>
+      </Commands>
+      <Graphics>
+        <Position x-pos="303" y-pos="303"/>
+      </Graphics>
+      <LocalVariableBadge>
+        <Position x-pos="10" y-pos="10"/>
+      </LocalVariableBadge>
+      <GlobalVariableBadge>
+        <Position x-pos="10" y-pos="10"/>
+      </GlobalVariableBadge>
+      <Comment>
+        <Graphics>
+          <Rect x-pos="341" y-pos="193" width="136" height="50"/>
+        </Graphics>
+        <Text style="color:blue">
+          <html>
+            <head>
+              <style type="text/css">
+                <!--
+                  body { font-family: SansSerif; font-size: 12pt }
+                -->
+              </style>
+              
+            </head>
+            <body>
+              Mode Selection
+            </body>
+          </html>
+        </Text>
+      </Comment>
+      <Comment>
+        <Graphics>
+          <Rect x-pos="482" y-pos="194" width="131" height="50"/>
+        </Graphics>
+        <Text style="color:blue">
+          <html>
+            <head>
+              <style type="text/css">
+                <!--
+                  body { font-family: SansSerif; font-size: 12pt }
+                -->
+              </style>
+              
+            </head>
+            <body>
+              Language Generation
+            </body>
+          </html>
+        </Text>
+      </Comment>
+      <Comment>
+        <Graphics>
+          <Rect x-pos="619" y-pos="195" width="134" height="50"/>
+        </Graphics>
+        <Text style="color:blue">
+          <html>
+            <head>
+              <style type="text/css">
+                <!--
+                  body { font-family: SansSerif; font-size: 12pt }
+                -->
+              </style>
+              
+            </head>
+            <body>
+              Avatar Behavior
+            </body>
+          </html>
+        </Text>
+      </Comment>
+      <Comment>
+        <Graphics>
+          <Rect x-pos="201" y-pos="194" width="135" height="50"/>
+        </Graphics>
+        <Text style="color:blue">
+          <html>
+            <head>
+              <style type="text/css">
+                <!--
+                  body { font-family: SansSerif; font-size: 12pt }
+                -->
+              </style>
+              
+            </head>
+            <body>
+              Dialog Management
+            </body>
+          </html>
+        </Text>
+      </Comment>
+      <Comment>
+        <Graphics>
+          <Rect x-pos="78" y-pos="193" width="118" height="50"/>
+        </Graphics>
+        <Text style="color:blue">
+          <html>
+            <head>
+              <style type="text/css">
+                <!--
+                  body { font-family: SansSerif; font-size: 12pt }
+                -->
+              </style>
+              
+            </head>
+            <body>
+              Language Analysis
+            </body>
+          </html>
+        </Text>
+      </Comment>
+      <Node id="N129" name="History" exhaustive="false" preserving="false" history="true">
+        <Define>
+        </Define>
+        <Declare>
+        </Declare>
+        <Commands>
+        </Commands>
+        <Graphics>
+          <Position x-pos="23" y-pos="233"/>
+        </Graphics>
+      </Node>
+      <Node id="N130" name="DM" exhaustive="false" preserving="false" history="false">
         <Define>
         </Define>
         <Declare>
@@ -1535,140 +2526,82 @@
               </UserCommand>
             </Expression>
           </Assign>
-          <UserCommand name="ssi">
-            <Add>
-              <String value="DM:"/>
-              <Variable name="DM"/>
-            </Add>
-          </UserCommand>
         </Commands>
+        <FEdge target="N131" start="">
+          <Graphics>
+            <Arrow>
+              <Point x-pos="298" y-pos="320" control-x-pos="320" control-y-pos="306"/>
+              <Point x-pos="374" y-pos="277" control-x-pos="348" control-y-pos="283"/>
+            </Arrow>
+          </Graphics>
+        </FEdge>
+        <FEdge target="N132" start="">
+          <Graphics>
+            <Arrow>
+              <Point x-pos="298" y-pos="356" control-x-pos="320" control-y-pos="369"/>
+              <Point x-pos="374" y-pos="399" control-x-pos="348" control-y-pos="392"/>
+            </Arrow>
+          </Graphics>
+        </FEdge>
         <Graphics>
-          <Position x-pos="163" y-pos="163"/>
+          <Position x-pos="233" y-pos="303"/>
         </Graphics>
       </Node>
-    </SuperNode>
-    <SuperNode id="S10" name="AE" comment="" exhaustive="false" preserving="false" hideLocalVar="false" hideGlobalVar="false" start="N19;N23;">
-      <Define>
-      </Define>
-      <Declare>
-      </Declare>
-      <Commands>
-      </Commands>
-      <EEdge target="S21" start ="">
-      <Graphics>
-        <Arrow>
-          <Point x-pos="303" y-pos="338" control-x-pos="285" control-y-pos="338"/>
-          <Point x-pos="233" y-pos="338" control-x-pos="250" control-y-pos="338"/>
-        </Arrow>
-      </Graphics>
-      </EEdge>
-      <Graphics>
-        <Position x-pos="303" y-pos="303"/>
-      </Graphics>
-      <LocalVariableBadge>
-        <Position x-pos="10" y-pos="10"/>
-      </LocalVariableBadge>
-      <GlobalVariableBadge>
-        <Position x-pos="10" y-pos="10"/>
-      </GlobalVariableBadge>
-      <Node id="N17" name="History" exhaustive="false" preserving="false" history="true">
-        <Define>
-        </Define>
-        <Declare>
-        </Declare>
-        <Commands>
-        </Commands>
-        <Graphics>
-          <Position x-pos="23" y-pos="163"/>
-        </Graphics>
-      </Node>
-      <Node id="N19" name="AN" exhaustive="false" preserving="false" history="false">
+      <Node id="N131" name="MV" exhaustive="false" preserving="false" history="false">
         <Define>
         </Define>
         <Declare>
         </Declare>
         <Commands>
           <Assign>
-            <Variable name="AN"/>
+            <Variable name="MV"/>
             <Expression>
-              <UserCommand name="an">
-                <Variable name="MN"/>
+              <UserCommand name="mv">
+                <Variable name="DM"/>
               </UserCommand>
             </Expression>
           </Assign>
-          <UserCommand name="ssi">
-            <Add>
-              <String value="AN:"/>
-              <Variable name="LA"/>
-            </Add>
-          </UserCommand>
         </Commands>
+        <EEdge target="N133" start ="">
         <Graphics>
-          <Position x-pos="163" y-pos="163"/>
+          <Arrow>
+            <Point x-pos="443" y-pos="268" control-x-pos="460" control-y-pos="268"/>
+            <Point x-pos="513" y-pos="268" control-x-pos="495" control-y-pos="268"/>
+          </Arrow>
+        </Graphics>
+        </EEdge>
+        <Graphics>
+          <Position x-pos="373" y-pos="233"/>
         </Graphics>
       </Node>
-      <Node id="N23" name="AV" exhaustive="false" preserving="false" history="false">
+      <Node id="N132" name="MN" exhaustive="false" preserving="false" history="false">
         <Define>
         </Define>
         <Declare>
         </Declare>
         <Commands>
           <Assign>
-            <Variable name="AV"/>
+            <Variable name="MN"/>
             <Expression>
-              <UserCommand name="av">
-                <Variable name="LG"/>
+              <UserCommand name="mn">
+                <Variable name="DM"/>
               </UserCommand>
             </Expression>
           </Assign>
-          <UserCommand name="ssi">
-            <Add>
-              <String value="AV:"/>
-              <Variable name="AV"/>
-            </Add>
-          </UserCommand>
         </Commands>
+        <EEdge target="N135" start ="">
         <Graphics>
-          <Position x-pos="303" y-pos="163"/>
+          <Arrow>
+            <Point x-pos="443" y-pos="408" control-x-pos="530" control-y-pos="408"/>
+            <Point x-pos="653" y-pos="408" control-x-pos="565" control-y-pos="408"/>
+          </Arrow>
+        </Graphics>
+        </EEdge>
+        <Graphics>
+          <Position x-pos="373" y-pos="373"/>
         </Graphics>
       </Node>
-    </SuperNode>
-    <SuperNode id="S11" name="LG" comment="" exhaustive="false" preserving="false" hideLocalVar="false" hideGlobalVar="false" start="N22;">
-      <Define>
-      </Define>
-      <Declare>
-      </Declare>
-      <Commands>
-      </Commands>
-      <EEdge target="S10" start ="">
-      <Graphics>
-        <Arrow>
-          <Point x-pos="443" y-pos="338" control-x-pos="425" control-y-pos="338"/>
-          <Point x-pos="373" y-pos="338" control-x-pos="390" control-y-pos="338"/>
-        </Arrow>
-      </Graphics>
-      </EEdge>
-      <Graphics>
-        <Position x-pos="443" y-pos="303"/>
-      </Graphics>
-      <LocalVariableBadge>
-        <Position x-pos="10" y-pos="10"/>
-      </LocalVariableBadge>
-      <GlobalVariableBadge>
-        <Position x-pos="10" y-pos="10"/>
-      </GlobalVariableBadge>
-      <Node id="N18" name="History" exhaustive="false" preserving="false" history="true">
-        <Define>
-        </Define>
-        <Declare>
-        </Declare>
-        <Commands>
-        </Commands>
-        <Graphics>
-          <Position x-pos="23" y-pos="163"/>
-        </Graphics>
-      </Node>
-      <Node id="N22" name="LG" exhaustive="false" preserving="false" history="false">
+      <Node id="N133" name="LG" exhaustive="false" preserving="false" history="false">
         <Define>
         </Define>
         <Declare>
@@ -1682,30 +2615,416 @@
               </UserCommand>
             </Expression>
           </Assign>
-          <UserCommand name="ssi">
-            <Add>
-              <String value="LG:"/>
-              <Variable name="LG"/>
-            </Add>
-          </UserCommand>
+        </Commands>
+        <EEdge target="N134" start ="">
+        <Graphics>
+          <Arrow>
+            <Point x-pos="583" y-pos="268" control-x-pos="600" control-y-pos="268"/>
+            <Point x-pos="653" y-pos="268" control-x-pos="635" control-y-pos="268"/>
+          </Arrow>
+        </Graphics>
+        </EEdge>
+        <Graphics>
+          <Position x-pos="513" y-pos="233"/>
+        </Graphics>
+      </Node>
+      <Node id="N134" name="AV" exhaustive="false" preserving="false" history="false">
+        <Define>
+        </Define>
+        <Declare>
+        </Declare>
+        <Commands>
+          <Assign>
+            <Variable name="AV"/>
+            <Expression>
+              <UserCommand name="av">
+                <Variable name="LG"/>
+              </UserCommand>
+            </Expression>
+          </Assign>
         </Commands>
         <Graphics>
-          <Position x-pos="163" y-pos="163"/>
+          <Position x-pos="653" y-pos="233"/>
+        </Graphics>
+      </Node>
+      <Node id="N135" name="AN" exhaustive="false" preserving="false" history="false">
+        <Define>
+        </Define>
+        <Declare>
+        </Declare>
+        <Commands>
+          <Assign>
+            <Variable name="AN"/>
+            <Expression>
+              <UserCommand name="an">
+                <Variable name="MN"/>
+              </UserCommand>
+            </Expression>
+          </Assign>
+        </Commands>
+        <Graphics>
+          <Position x-pos="653" y-pos="373"/>
+        </Graphics>
+      </Node>
+      <Node id="N136" name="LA" exhaustive="false" preserving="false" history="false">
+        <Define>
+        </Define>
+        <Declare>
+        </Declare>
+        <Commands>
+        </Commands>
+        <CEdge target="N130" start="">
+          <Graphics>
+            <Arrow>
+              <Point x-pos="163" y-pos="338" control-x-pos="250" control-y-pos="338"/>
+              <Point x-pos="233" y-pos="338" control-x-pos="145" control-y-pos="338"/>
+            </Arrow>
+          </Graphics>
+          <Neq>
+            <Variable name="LA"/>
+            <String value=""/>
+          </Neq>
+        </CEdge>
+        <TEdge target="N136" start="" timeout="60000">
+        <Graphics>
+          <Arrow>
+            <Point x-pos="137" y-pos="304" control-x-pos="155" control-y-pos="236"/>
+            <Point x-pos="158" y-pos="320" control-x-pos="218" control-y-pos="284"/>
+          </Arrow>
+        </Graphics>
+        </TEdge>
+        <Graphics>
+          <Position x-pos="93" y-pos="303"/>
         </Graphics>
       </Node>
     </SuperNode>
-    <SuperNode id="S21" name="RESET" comment="" exhaustive="false" preserving="false" hideLocalVar="false" hideGlobalVar="false" start="N25;">
+    <SuperNode id="S54" name="1" comment="" exhaustive="false" preserving="false" hideLocalVar="false" hideGlobalVar="false" start="N144;">
       <Define>
       </Define>
       <Declare>
       </Declare>
       <Commands>
       </Commands>
-      <EEdge target="S5" start ="">
+      <Graphics>
+        <Position x-pos="303" y-pos="233"/>
+      </Graphics>
+      <LocalVariableBadge>
+        <Position x-pos="10" y-pos="10"/>
+      </LocalVariableBadge>
+      <GlobalVariableBadge>
+        <Position x-pos="10" y-pos="10"/>
+      </GlobalVariableBadge>
+      <Comment>
+        <Graphics>
+          <Rect x-pos="342" y-pos="195" width="135" height="52"/>
+        </Graphics>
+        <Text style="color:blue">
+          <html>
+            <head>
+              <style type="text/css">
+                <!--
+                  body { font-family: SansSerif; font-size: 12pt }
+                -->
+              </style>
+              
+            </head>
+            <body>
+              Mode Selection
+            </body>
+          </html>
+        </Text>
+      </Comment>
+      <Comment>
+        <Graphics>
+          <Rect x-pos="482" y-pos="196" width="134" height="50"/>
+        </Graphics>
+        <Text style="color:blue">
+          <html>
+            <head>
+              <style type="text/css">
+                <!--
+                  body { font-family: SansSerif; font-size: 12pt }
+                -->
+              </style>
+              
+            </head>
+            <body>
+              Language Generation
+            </body>
+          </html>
+        </Text>
+      </Comment>
+      <Comment>
+        <Graphics>
+          <Rect x-pos="622" y-pos="197" width="131" height="50"/>
+        </Graphics>
+        <Text style="color:blue">
+          <html>
+            <head>
+              <style type="text/css">
+                <!--
+                  body { font-family: SansSerif; font-size: 12pt }
+                -->
+              </style>
+              
+            </head>
+            <body>
+              Avatar Behavior
+            </body>
+          </html>
+        </Text>
+      </Comment>
+      <Comment>
+        <Graphics>
+          <Rect x-pos="206" y-pos="196" width="131" height="50"/>
+        </Graphics>
+        <Text style="color:blue">
+          <html>
+            <head>
+              <style type="text/css">
+                <!--
+                  body { font-family: SansSerif; font-size: 12pt }
+                -->
+              </style>
+              
+            </head>
+            <body>
+              Dialog Management
+            </body>
+          </html>
+        </Text>
+      </Comment>
+      <Comment>
+        <Graphics>
+          <Rect x-pos="80" y-pos="196" width="121" height="50"/>
+        </Graphics>
+        <Text style="color:blue">
+          <html>
+            <head>
+              <style type="text/css">
+                <!--
+                  body { font-family: SansSerif; font-size: 12pt }
+                -->
+              </style>
+              
+            </head>
+            <body>
+              Language Analysis
+            </body>
+          </html>
+        </Text>
+      </Comment>
+      <Node id="N137" name="History" exhaustive="false" preserving="false" history="true">
+        <Define>
+        </Define>
+        <Declare>
+        </Declare>
+        <Commands>
+        </Commands>
+        <Graphics>
+          <Position x-pos="23" y-pos="233"/>
+        </Graphics>
+      </Node>
+      <Node id="N138" name="DM" exhaustive="false" preserving="false" history="false">
+        <Define>
+        </Define>
+        <Declare>
+        </Declare>
+        <Commands>
+          <Assign>
+            <Variable name="DM"/>
+            <Expression>
+              <UserCommand name="dm">
+                <Float value="0.0"/>
+                <Float value="0.0"/>
+                <Variable name="LA"/>
+              </UserCommand>
+            </Expression>
+          </Assign>
+        </Commands>
+        <FEdge target="N140" start="">
+          <Graphics>
+            <Arrow>
+              <Point x-pos="298" y-pos="356" control-x-pos="320" control-y-pos="369"/>
+              <Point x-pos="374" y-pos="399" control-x-pos="348" control-y-pos="392"/>
+            </Arrow>
+          </Graphics>
+        </FEdge>
+        <FEdge target="N139" start="">
+          <Graphics>
+            <Arrow>
+              <Point x-pos="298" y-pos="320" control-x-pos="320" control-y-pos="306"/>
+              <Point x-pos="378" y-pos="285" control-x-pos="355" control-y-pos="297"/>
+            </Arrow>
+          </Graphics>
+        </FEdge>
+        <Graphics>
+          <Position x-pos="233" y-pos="303"/>
+        </Graphics>
+      </Node>
+      <Node id="N139" name="MV" exhaustive="false" preserving="false" history="false">
+        <Define>
+        </Define>
+        <Declare>
+        </Declare>
+        <Commands>
+          <Assign>
+            <Variable name="MV"/>
+            <Expression>
+              <UserCommand name="mv">
+                <Variable name="DM"/>
+              </UserCommand>
+            </Expression>
+          </Assign>
+        </Commands>
+        <EEdge target="N141" start ="">
+        <Graphics>
+          <Arrow>
+            <Point x-pos="443" y-pos="268" control-x-pos="460" control-y-pos="268"/>
+            <Point x-pos="513" y-pos="268" control-x-pos="495" control-y-pos="268"/>
+          </Arrow>
+        </Graphics>
+        </EEdge>
+        <Graphics>
+          <Position x-pos="373" y-pos="233"/>
+        </Graphics>
+      </Node>
+      <Node id="N140" name="MN" exhaustive="false" preserving="false" history="false">
+        <Define>
+        </Define>
+        <Declare>
+        </Declare>
+        <Commands>
+          <Assign>
+            <Variable name="MN"/>
+            <Expression>
+              <UserCommand name="mn">
+                <Variable name="DM"/>
+              </UserCommand>
+            </Expression>
+          </Assign>
+        </Commands>
+        <Graphics>
+          <Position x-pos="373" y-pos="373"/>
+        </Graphics>
+      </Node>
+      <Node id="N141" name="LG" exhaustive="false" preserving="false" history="false">
+        <Define>
+        </Define>
+        <Declare>
+        </Declare>
+        <Commands>
+          <Assign>
+            <Variable name="LG"/>
+            <Expression>
+              <UserCommand name="lg">
+                <Variable name="MV"/>
+              </UserCommand>
+            </Expression>
+          </Assign>
+        </Commands>
+        <FEdge target="N143" start="">
+          <Graphics>
+            <Arrow>
+              <Point x-pos="573" y-pos="293" control-x-pos="606" control-y-pos="326"/>
+              <Point x-pos="654" y-pos="399" control-x-pos="608" control-y-pos="387"/>
+            </Arrow>
+          </Graphics>
+        </FEdge>
+        <FEdge target="N142" start="">
+          <Graphics>
+            <Arrow>
+              <Point x-pos="583" y-pos="268" control-x-pos="600" control-y-pos="268"/>
+              <Point x-pos="653" y-pos="268" control-x-pos="635" control-y-pos="268"/>
+            </Arrow>
+          </Graphics>
+        </FEdge>
+        <Graphics>
+          <Position x-pos="513" y-pos="233"/>
+        </Graphics>
+      </Node>
+      <Node id="N142" name="AV" exhaustive="false" preserving="false" history="false">
+        <Define>
+        </Define>
+        <Declare>
+        </Declare>
+        <Commands>
+          <Assign>
+            <Variable name="AV"/>
+            <Expression>
+              <UserCommand name="av">
+                <Variable name="LG"/>
+              </UserCommand>
+            </Expression>
+          </Assign>
+        </Commands>
+        <Graphics>
+          <Position x-pos="653" y-pos="233"/>
+        </Graphics>
+      </Node>
+      <Node id="N143" name="AN" exhaustive="false" preserving="false" history="false">
+        <Define>
+        </Define>
+        <Declare>
+        </Declare>
+        <Commands>
+          <Assign>
+            <Variable name="AN"/>
+            <Expression>
+              <UserCommand name="an">
+                <Variable name="MN"/>
+              </UserCommand>
+            </Expression>
+          </Assign>
+        </Commands>
+        <Graphics>
+          <Position x-pos="653" y-pos="373"/>
+        </Graphics>
+      </Node>
+      <Node id="N144" name="LA" exhaustive="false" preserving="false" history="false">
+        <Define>
+        </Define>
+        <Declare>
+        </Declare>
+        <Commands>
+        </Commands>
+        <CEdge target="N138" start="">
+          <Graphics>
+            <Arrow>
+              <Point x-pos="163" y-pos="338" control-x-pos="180" control-y-pos="338"/>
+              <Point x-pos="233" y-pos="338" control-x-pos="215" control-y-pos="338"/>
+            </Arrow>
+          </Graphics>
+          <Neq>
+            <Variable name="LA"/>
+            <String value=""/>
+          </Neq>
+        </CEdge>
+        <TEdge target="N144" start="" timeout="60000">
+        <Graphics>
+          <Arrow>
+            <Point x-pos="137" y-pos="304" control-x-pos="155" control-y-pos="236"/>
+            <Point x-pos="158" y-pos="320" control-x-pos="218" control-y-pos="284"/>
+          </Arrow>
+        </Graphics>
+        </TEdge>
+        <Graphics>
+          <Position x-pos="93" y-pos="303"/>
+        </Graphics>
+      </Node>
+    </SuperNode>
+    <SuperNode id="S55" name="Reset" comment="" exhaustive="false" preserving="false" hideLocalVar="false" hideGlobalVar="false" start="N146;">
+      <Define>
+      </Define>
+      <Declare>
+      </Declare>
+      <Commands>
+      </Commands>
+      <EEdge target="S47" start ="">
       <Graphics>
         <Arrow>
-          <Point x-pos="198" y-pos="303" control-x-pos="198" control-y-pos="285"/>
-          <Point x-pos="198" y-pos="233" control-x-pos="198" control-y-pos="250"/>
+          <Point x-pos="233" y-pos="338" control-x-pos="258" control-y-pos="338"/>
+          <Point x-pos="303" y-pos="408" control-x-pos="277" control-y-pos="408"/>
         </Arrow>
       </Graphics>
       </EEdge>
@@ -1718,7 +3037,7 @@
       <GlobalVariableBadge>
         <Position x-pos="10" y-pos="10"/>
       </GlobalVariableBadge>
-      <Node id="N13" name="History" exhaustive="false" preserving="false" history="true">
+      <Node id="N145" name="History" exhaustive="false" preserving="false" history="true">
         <Define>
         </Define>
         <Declare>
@@ -1726,10 +3045,10 @@
         <Commands>
         </Commands>
         <Graphics>
-          <Position x-pos="23" y-pos="163"/>
+          <Position x-pos="23" y-pos="233"/>
         </Graphics>
       </Node>
-      <Node id="N25" name="Set" exhaustive="false" preserving="false" history="false">
+      <Node id="N146" name="Data" exhaustive="false" preserving="false" history="false">
         <Define>
         </Define>
         <Declare>
@@ -1738,54 +3057,54 @@
           <Assign>
             <Variable name="TS"/>
             <Expression>
-              <String value=""/>
+              <String value="undefined"/>
             </Expression>
           </Assign>
           <Assign>
             <Variable name="LA"/>
             <Expression>
-              <String value=""/>
+              <String value="undefined"/>
             </Expression>
           </Assign>
           <Assign>
             <Variable name="DM"/>
             <Expression>
-              <String value=""/>
+              <String value="undefined"/>
             </Expression>
           </Assign>
           <Assign>
             <Variable name="MN"/>
             <Expression>
-              <String value=""/>
+              <String value="undefined"/>
             </Expression>
           </Assign>
           <Assign>
             <Variable name="MV"/>
             <Expression>
-              <String value=""/>
+              <String value="undefined"/>
             </Expression>
           </Assign>
           <Assign>
             <Variable name="LG"/>
             <Expression>
-              <String value=""/>
+              <String value="undefined"/>
             </Expression>
           </Assign>
           <Assign>
             <Variable name="AN"/>
             <Expression>
-              <String value=""/>
+              <String value="undefined"/>
             </Expression>
           </Assign>
           <Assign>
             <Variable name="AV"/>
             <Expression>
-              <String value=""/>
+              <String value="undefined"/>
             </Expression>
           </Assign>
         </Commands>
         <Graphics>
-          <Position x-pos="163" y-pos="163"/>
+          <Position x-pos="163" y-pos="233"/>
         </Graphics>
       </Node>
     </SuperNode>

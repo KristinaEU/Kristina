@@ -20,7 +20,7 @@ public final class RESTFulWebClient {
     // The logger instance
     private final LOGDefaultLogger mLogger
             = LOGDefaultLogger.getInstance();
-    private final TrustManager[] mTrustAllManager;
+    private final TrustManager[] mTrust;
     // The RESTful client
     private final Client mClient;
 
@@ -30,7 +30,7 @@ public final class RESTFulWebClient {
 
         // Create a trust manager that does 
         // not validate certificate chains
-        mTrustAllManager = new TrustManager[]{
+        mTrust = new TrustManager[]{
             new X509TrustManager() {
                 @Override
                 public final X509Certificate[] getAcceptedIssuers() {
@@ -49,21 +49,70 @@ public final class RESTFulWebClient {
                         final String authentication) {
                 }
             }};
-
-        // Install the trust manager
-        try {
-            final SSLContext sc = SSLContext.getInstance("TLS");
-            sc.init(null, mTrustAllManager, new SecureRandom());
-            HttpsURLConnection.setDefaultSSLSocketFactory(sc.getSocketFactory());
-        } catch (final Exception exc) {
-            mLogger.warning(exc.toString());
-        }
         // Create the rest service client
         mClient = Client.create(new DefaultClientConfig());
         mClient.setConnectTimeout(60000);
         mClient.setReadTimeout(60000);
         // Print some information
-        //mLogger.message("Creating RESTful client '" + mClient + "'");
+        mLogger.message("Creating RESTful client '" + mClient + "'");
+        // Install the trust manager
+        try {
+
+            final SSLContext sslcontext = SSLContext.getInstance("TLS");
+            sslcontext.init(null, mTrust, new SecureRandom());
+            HttpsURLConnection.setDefaultSSLSocketFactory(sslcontext.getSocketFactory());
+            // Print some information
+            mLogger.message("Installing  trust manager '" + mTrust + "'");
+
+        } catch (final Exception exc) {
+            mLogger.warning(exc.toString());
+        }
+
+    }
+
+    public final String post(
+            final RESTFulResource resource,
+            final String queryargs,
+            final String content) {
+        try {
+            // Create the final URL
+            final String url = resource.getPath() + queryargs;
+            // Print some information
+            mLogger.message("Executing POST request to URL '" + url + "' with content:\n" + content);
+            // Execute the post request
+            final ClientResponse response = mClient
+                    .resource(url)
+                    .accept(resource.getProd())
+                    .type(resource.getCons())
+                    .post(ClientResponse.class, content);
+            // Check the response status
+            if (response.getStatus() == Status.OK.getStatusCode()) {
+                // Get the mime type name
+                final String type = response.getType().getType()
+                        + "/" + response.getType().getSubtype();
+                // Get the entity string
+                final String entity = response.getEntity(String.class);
+                // Print some information
+                mLogger.success("Success: The POST request '" + url
+                        + "' to RESTful service resource '" + resource
+                        + "' returned a response of type '" + type
+                        + "' and content entity:\n" + entity);
+                // Return the entity then
+                return entity;
+            } else {
+                // Print some information
+                mLogger.failure("Success: The POST request '" + url
+                        + "' to RESTful service resource '" + resource
+                        + "' failed with status '" + response.getStatus() + "'");
+                // Return null at failure
+                return Integer.toString(response.getStatus());
+            }
+        } catch (final Exception exc) {
+            // Print some information
+            mLogger.failure(exc.toString());
+            // Return null at failure
+            return exc.getMessage();
+        }
     }
 
     public final String get(
@@ -92,52 +141,6 @@ public final class RESTFulWebClient {
                 // Print some information
                 //mLogger.success("Success: The GET request '" + url
                 //        + "' to RESTful service resource '" + resource
-                //        + "' returned a response of type '" + type
-                //        + "' and content entity:\n" + entity);
-                // Return the entity then
-                return entity;
-            } else {
-                // Print some information
-                mLogger.failure("Failure: Response from '" + resource
-                        + "' has status '" + response.getStatus() + "'");
-                // Return null at failure
-                return Integer.toString(response.getStatus());
-            }
-        } catch (final Exception exc) {
-            // Print some information
-            mLogger.failure(exc.toString());
-            // Return null at failure
-            return exc.getMessage();
-        }
-    }
-
-    public final String post(
-            final RESTFulResource resource,
-            final String queryargs,
-            final String content) {
-        try {
-            // Create the final URL
-            final String url = resource.getPath() + queryargs;
-            // Print some information
-            mLogger.message("Executing POST request to URL '" + url + "' with content:\n" + content);
-            // Execute the post request
-            final ClientResponse response = mClient
-                    .resource(url)
-                    .accept(resource.getProd())
-                    .type(resource.getCons())
-                    .post(ClientResponse.class, content);
-            // Print some information
-            mLogger.message("Receiving POST response from URL '" + url + "' as object:\n" + response);
-            // Check the response status
-            if (response.getStatus() == Status.OK.getStatusCode()) {
-                // Get the mime type name
-                final String type = response.getType().getType()
-                        + "/" + response.getType().getSubtype();
-                // Get the entity string
-                final String entity = response.getEntity(String.class);
-                // Print some information
-                //mLogger.success("Success: The POST request '" + url
-                //      + "' to RESTful service resource '" + resource
                 //        + "' returned a response of type '" + type
                 //        + "' and content entity:\n" + entity);
                 // Return the entity then

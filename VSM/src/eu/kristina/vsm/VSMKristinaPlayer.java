@@ -526,10 +526,8 @@ public final class VSMKristinaPlayer implements RunTimePlayer, SSIEventHandler {
         final RESTFulResource resource = mResourceMap.get("Avatar-Verbal");
         // Print some information
         //mLogger.message("Resource is\n'" + resource + "'");
-        // Get the query data
-        final String query = "?id=hcm";
         // Execute POST request
-        return mRestClient.post(resource, query, content);
+        return mRestClient.post(resource, "?id=" + mAvatarID, content);
     }
 
     public final String an(
@@ -538,10 +536,8 @@ public final class VSMKristinaPlayer implements RunTimePlayer, SSIEventHandler {
         final RESTFulResource resource = mResourceMap.get("Avatar-Nonverbal");
         // Print some information
         //mLogger.message("Resource is\n'" + resource + "'");
-        // Get the query data
-        final String query = "?id=hcm";
         // Execute POST request
-        return mRestClient.post(resource, query, content);
+        return mRestClient.post(resource, "?id=" + mAvatarID, content);
     }
 
     ////////////////////////////////////////////////////////////////////////////
@@ -557,6 +553,7 @@ public final class VSMKristinaPlayer implements RunTimePlayer, SSIEventHandler {
         return mRandom.nextInt(bound);
     }
 
+    
     ////////////////////////////////////////////////////////////////////////////
     ////////////////////////////////////////////////////////////////////////////
     ////////////////////////////////////////////////////////////////////////////
