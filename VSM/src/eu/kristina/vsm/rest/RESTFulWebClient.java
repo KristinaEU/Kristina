@@ -101,7 +101,7 @@ public final class RESTFulWebClient {
                 return entity;
             } else {
                 // Print some information
-                mLogger.failure("Success: The POST request '" + url
+                mLogger.failure("Failure: The POST request '" + url
                         + "' to RESTful service resource '" + resource
                         + "' failed with status '" + response.getStatus() + "'");
                 // Return null at failure

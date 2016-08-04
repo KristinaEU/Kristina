@@ -61,14 +61,14 @@
       <Feature key="restful.resource.10.path" value="https://webglstudio.org:8080/non_verbal"/>
       <Feature key="restful.resource.10.cons" value="application/xml"/>
       <Feature key="restful.resource.10.prod" value="*/*"/>
-      <Feature key="ssi.listener.local.host" value="172.31.26.245"/>
+      <Feature key="ssi.listener.local.host" value="127.0.0.1"/>
       <Feature key="ssi.listener.local.port" value="11221"/>
-      <Feature key="ssi.listener.remote.host" value="172.31.26.245"/>
+      <Feature key="ssi.listener.remote.host" value="127.0.0.1"/>
       <Feature key="ssi.listener.remote.port" value="11191"/>
       <Feature key="ssi.listener.remote.flag" value="false"/>
-      <Feature key="ssi.notifier.local.host" value="172.31.26.245"/>
+      <Feature key="ssi.notifier.local.host" value="127.0.0.1"/>
       <Feature key="ssi.notifier.local.port" value="11222"/>
-      <Feature key="ssi.notifier.remote.host" value="172.31.26.245"/>
+      <Feature key="ssi.notifier.remote.host" value="127.0.0.1"/>
       <Feature key="ssi.notifier.remote.port" value="11192"/>
       <Feature key="ssi.notifier.remote.flag" value="false"/>
     </Player>

@@ -22,6 +22,7 @@ import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 import eu.kristina.vsm.ssi.SSIEventHandler;
 import eu.kristina.vsm.ssi.SSIEventNotifier;
+import java.util.Locale;
 
 /**
  * @author Gregor Mehlmann
@@ -49,6 +50,8 @@ public final class VSMKristinaPlayer implements RunTimePlayer, SSIEventHandler {
     private RESTFulWebClient mRestClient;
     // The kristina avatar id
     private String mAvatarID = "KRISTINA";
+    // The language parameter 
+    private String mLanguage = "de";
     // The  rest service urls
     private final HashMap<String, RESTFulResource> mResourceMap = new HashMap();
     // A random number generator
@@ -112,8 +115,10 @@ public final class VSMKristinaPlayer implements RunTimePlayer, SSIEventHandler {
                 + "SSI Notifier Remote Host : '" + ssinrhost + "'" + "\r\n"
                 + "SSI Notifier Remote Port : '" + ssinrport + "'" + "\r\n"
                 + "SSI Notifier Remote Flag : '" + ssinrflag + "'" + "\r\n");
-        //
+        // Initialize the avatar identifier
         mAvatarID = mPlayerConfig.getProperty("kristina.gti.avatar.id");
+        // Initialize the language parameter
+        mLanguage = mPlayerConfig.getProperty("kristina.conf.lang.out");
         // Initialize the SSI notifier
         mSSINotifier = new SSIEventNotifier(this,
                 ssinlhost, Integer.parseInt(ssinlport),
@@ -490,10 +495,8 @@ public final class VSMKristinaPlayer implements RunTimePlayer, SSIEventHandler {
         final RESTFulResource resource = mResourceMap.get("Mode-Selection");
         // Print some information
         //mLogger.message("Resource is\n'" + resource + "'");
-        // Get the query data
-        final String query = "?mode=verbal";
         // Execute POST request
-        return mRestClient.post(resource, query, content);
+        return mRestClient.post(resource, "?mode=verbal", content);
     }
 
     public final String mn(
@@ -502,10 +505,8 @@ public final class VSMKristinaPlayer implements RunTimePlayer, SSIEventHandler {
         final RESTFulResource resource = mResourceMap.get("Mode-Selection");
         // Print some information
         //mLogger.message("Resource is\n'" + resource + "'");
-        // Get the query data
-        final String query = "?mode=non_verbal";
         // Execute POST request
-        return mRestClient.post(resource, query, content);
+        return mRestClient.post(resource, "?mode=non_verbal", content);
     }
 
     public final String lg(
@@ -515,7 +516,9 @@ public final class VSMKristinaPlayer implements RunTimePlayer, SSIEventHandler {
         // Print some information
         //mLogger.message("Resource is\n'" + resource + "'");
         // Get the query data
-        final String query = "";
+        final String query = "";        
+        // The new query with language parameter?
+        //final String query = "?lang=" + mAvatarID;
         // Execute POST request
         return mRestClient.post(resource, query, content);
     }
@@ -553,7 +556,6 @@ public final class VSMKristinaPlayer implements RunTimePlayer, SSIEventHandler {
         return mRandom.nextInt(bound);
     }
 
-    
     ////////////////////////////////////////////////////////////////////////////
     ////////////////////////////////////////////////////////////////////////////
     ////////////////////////////////////////////////////////////////////////////
@@ -675,23 +677,23 @@ public final class VSMKristinaPlayer implements RunTimePlayer, SSIEventHandler {
 
                         // Process the event features
                         if (mode.equalsIgnoreCase("audio")) {
-                            if (name.equalsIgnoreCase("voice") || name.equalsIgnoreCase("vad")) {
+                            if (name.equalsIgnoreCase("vad")) {
                                 if (state.equalsIgnoreCase("completed")) {
                                     // User stopped speaking
                                     mLogger.success("User stopped speaking");
-                                    set("UserStatus", "Speaking", false);
+                                    set("US", false);
                                 } else if (state.equalsIgnoreCase("continued")) {
                                     // User started speaking
                                     mLogger.success("User started speaking");
-                                    set("UserStatus", "Speaking", true);
+                                    set("US", true);
                                 } else {
                                     // Cannot process this
                                 }
                             } else {
                                 // Cannot process this
                             }
-                        } else if (mode.equalsIgnoreCase("fsender") || mode.equalsIgnoreCase("fusion")) {
-                            if (name.equalsIgnoreCase("fevent") || name.equalsIgnoreCase("fusion")) {
+                        } else if (mode.equalsIgnoreCase("fsender")) {
+                            if (name.equalsIgnoreCase("fevent")) {
                                 if (state.equalsIgnoreCase("completed")) {
                                     if (type.equalsIgnoreCase("ntuple") || type.equalsIgnoreCase("map")) {
                                         // Get the list of tuples
@@ -702,10 +704,15 @@ public final class VSMKristinaPlayer implements RunTimePlayer, SSIEventHandler {
                                             // Get the tuple's attributes
                                             final String key = tuple.getAttribute("string");
                                             final Double val = Double.parseDouble(tuple.getAttribute("value"));
-
                                             // Set the variable value
                                             //mLogger.message(key + "=" + String.format(Locale.US, "%.6f", val));
-                                            set("UserStatus", key, val.floatValue());
+                                            if (key.equalsIgnoreCase("valence")) {
+                                                set("UV", val.floatValue());
+                                            } else if (key.equalsIgnoreCase("arousal")) {
+                                                set("UA", val.floatValue());
+                                            } else {
+                                                // Cannot process this  
+                                            }
                                         }
                                     } else {
                                         // Cannot process this    
