@@ -4,6 +4,7 @@
   </Plugins>
   <Players>
     <Player name="defaultsceneplayer" class="eu.kristina.vsm.VSMKristinaPlayer">
+      <Feature key="kristina.conf.lang.out" value="de"/>
       <Feature key="kristina.gti.avatar.id" value="KRISTINA"/>
       <Feature key="restful.resource.count" value="11"/>
       <Feature key="restful.resource.0.host" value="UAU-VSM"/>

@@ -1,7 +1,9 @@
 package eu.kristina.vsm.test;
 
+import static eu.kristina.vsm.json.JSONKristinaUtility.merge;
 import eu.kristina.vsm.rest.RESTFulResource;
 import eu.kristina.vsm.rest.RESTFulWebClient;
+import org.json.JSONObject;
 
 /**
  * @author Gregor Mehlmann
@@ -10,16 +12,30 @@ public class RESTFulPipeTestSuite {
 
     // Execute the rest test
     public static final void main(final String args[]) {
-        // Create the client
-        final RESTFulWebClient client = new RESTFulWebClient();
 
+        JSONObject l = new JSONObject("{" + "\r\n"
+                + "\"0\":{\"verbal\":\"hello\"}" + "," + "\r\n"
+                + "\"1\":{\"verbal\":\"world\"}" + "\r\n"
+                + "}");
+        
+         JSONObject r = new JSONObject("{" + "\r\n"
+                + "\"0\":{\"nonverbal\":\"wave\"}" + "," + "\r\n"
+                + "\"2\":{\"nonverbal\":\"nod\"}" + "\r\n"
+                + "}");
+
+         System.err.println(l.toString());
+         System.err.println(r.toString());
+         System.err.println(merge(l,r));
+         
+         
+        // Create the client
+        //final RESTFulWebClient client = new RESTFulWebClient();
         //testVSM();
         //testSSI();
-        testOWL(client);
+        //testOWL(client);
         //testUPF(client);
         //testGTI();
         //testPipe();
-
     }
 
     private static void testPipe(final RESTFulWebClient client) {

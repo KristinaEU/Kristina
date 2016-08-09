@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<SceneFlow id="KRISTINA" name="KRISTINA" comment="KRISTINA" hideLocalVar="false" hideGlobalVar="false" exhaustive="false" preserving="false" modifDate="Thu, 4 Aug 2016 11:15:26" start="S27;" context="" package="" xmlns="xml.sceneflow.dfki.de" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="xml.sceneflow.dfki.de res/xsd/sceneflow.xsd">
+<SceneFlow id="KRISTINA" name="KRISTINA" comment="KRISTINA" hideLocalVar="false" hideGlobalVar="false" exhaustive="false" preserving="false" modifDate="Tue, 9 Aug 2016 08:53:43" start="S27;" context="" package="" xmlns="xml.sceneflow.dfki.de" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="xml.sceneflow.dfki.de res/xsd/sceneflow.xsd">
   <Define>
     <StructType name="StatusData">
       <Member type="Float" name ="Valence"/>
@@ -31,6 +31,9 @@
       <String><![CDATA[undefined]]></String>
     </Variable>
     <Variable type="String" name ="AV">
+      <String><![CDATA[undefined]]></String>
+    </Variable>
+    <Variable type="String" name ="AA">
       <String><![CDATA[undefined]]></String>
     </Variable>
     <Variable type="Float" name ="UV">
@@ -250,6 +253,86 @@
         <GlobalVariableBadge>
           <Position x-pos="10" y-pos="10"/>
         </GlobalVariableBadge>
+        <Comment>
+          <Graphics>
+            <Rect x-pos="127" y-pos="332" width="144" height="50"/>
+          </Graphics>
+          <Text style="color:blue">
+            <html>
+              <head>
+                <style type="text/css">
+                  <!--
+                    body { font-family: SansSerif; font-size: 12pt }
+                  -->
+                </style>
+                
+              </head>
+              <body>
+                Dialog Management
+              </body>
+            </html>
+          </Text>
+        </Comment>
+        <Comment>
+          <Graphics>
+            <Rect x-pos="287" y-pos="332" width="107" height="50"/>
+          </Graphics>
+          <Text style="color:blue">
+            <html>
+              <head>
+                <style type="text/css">
+                  <!--
+                    body { font-family: SansSerif; font-size: 12pt }
+                  -->
+                </style>
+                
+              </head>
+              <body>
+                Nonverbal Mode Selection
+              </body>
+            </html>
+          </Text>
+        </Comment>
+        <Comment>
+          <Graphics>
+            <Rect x-pos="422" y-pos="333" width="114" height="50"/>
+          </Graphics>
+          <Text style="color:blue">
+            <html>
+              <head>
+                <style type="text/css">
+                  <!--
+                    body { font-family: SansSerif; font-size: 12pt }
+                  -->
+                </style>
+                
+              </head>
+              <body>
+                Verbal Mode Selection
+              </body>
+            </html>
+          </Text>
+        </Comment>
+        <Comment>
+          <Graphics>
+            <Rect x-pos="567" y-pos="334" width="108" height="50"/>
+          </Graphics>
+          <Text style="color:blue">
+            <html>
+              <head>
+                <style type="text/css">
+                  <!--
+                    body { font-family: SansSerif; font-size: 12pt }
+                  -->
+                </style>
+                
+              </head>
+              <body>
+                Language Generation
+              </body>
+            </html>
+          </Text>
+        </Comment>
         <Node id="N151" name="History" exhaustive="false" preserving="false" history="true">
           <Define>
           </Define>
@@ -279,13 +362,13 @@
           <EEdge target="N156" start ="">
           <Graphics>
             <Arrow>
-              <Point x-pos="373" y-pos="198" control-x-pos="390" control-y-pos="198"/>
-              <Point x-pos="443" y-pos="198" control-x-pos="425" control-y-pos="198"/>
+              <Point x-pos="513" y-pos="268" control-x-pos="530" control-y-pos="268"/>
+              <Point x-pos="583" y-pos="268" control-x-pos="565" control-y-pos="268"/>
             </Arrow>
           </Graphics>
           </EEdge>
           <Graphics>
-            <Position x-pos="303" y-pos="163"/>
+            <Position x-pos="443" y-pos="233"/>
           </Graphics>
         </Node>
         <Node id="N155" name="MN" exhaustive="false" preserving="false" history="false">
@@ -303,8 +386,16 @@
               </Expression>
             </Assign>
           </Commands>
+          <EEdge target="N154" start ="">
           <Graphics>
-            <Position x-pos="303" y-pos="303"/>
+            <Arrow>
+              <Point x-pos="373" y-pos="268" control-x-pos="390" control-y-pos="268"/>
+              <Point x-pos="443" y-pos="268" control-x-pos="425" control-y-pos="268"/>
+            </Arrow>
+          </Graphics>
+          </EEdge>
+          <Graphics>
+            <Position x-pos="303" y-pos="233"/>
           </Graphics>
         </Node>
         <Node id="N156" name="LG" exhaustive="false" preserving="false" history="false">
@@ -323,7 +414,7 @@
             </Assign>
           </Commands>
           <Graphics>
-            <Position x-pos="443" y-pos="163"/>
+            <Position x-pos="583" y-pos="233"/>
           </Graphics>
         </Node>
         <Node id="N157" name="DM" exhaustive="false" preserving="false" history="false">
@@ -336,29 +427,21 @@
               <Variable name="DM"/>
               <Expression>
                 <UserCommand name="dm">
-                  <Float value="0.0"/>
-                  <Float value="0.0"/>
+                  <Variable name="UV"/>
+                  <Variable name="UA"/>
                   <Variable name="LA"/>
                 </UserCommand>
               </Expression>
             </Assign>
           </Commands>
-          <FEdge target="N155" start="">
-            <Graphics>
-              <Arrow>
-                <Point x-pos="223" y-pos="293" control-x-pos="241" control-y-pos="311"/>
-                <Point x-pos="304" y-pos="329" control-x-pos="278" control-y-pos="322"/>
-              </Arrow>
-            </Graphics>
-          </FEdge>
-          <FEdge target="N154" start="">
-            <Graphics>
-              <Arrow>
-                <Point x-pos="223" y-pos="243" control-x-pos="241" control-y-pos="224"/>
-                <Point x-pos="304" y-pos="207" control-x-pos="278" control-y-pos="213"/>
-              </Arrow>
-            </Graphics>
-          </FEdge>
+          <EEdge target="N155" start ="">
+          <Graphics>
+            <Arrow>
+              <Point x-pos="233" y-pos="268" control-x-pos="250" control-y-pos="268"/>
+              <Point x-pos="303" y-pos="268" control-x-pos="285" control-y-pos="268"/>
+            </Arrow>
+          </Graphics>
+          </EEdge>
           <Graphics>
             <Position x-pos="163" y-pos="233"/>
           </Graphics>
@@ -1094,7 +1177,7 @@
               </Graphics>
             </Node>
           </SuperNode>
-          <SuperNode id="S66" name="Speaking" comment="" exhaustive="false" preserving="false" hideLocalVar="false" hideGlobalVar="false" start="N4;N9;">
+          <SuperNode id="S66" name="Speaking" comment="" exhaustive="false" preserving="false" hideLocalVar="false" hideGlobalVar="false" start="N26;">
             <Define>
             </Define>
             <Declare>
@@ -1159,6 +1242,28 @@
                   <Expression>
                     <UserCommand name="av">
                       <Variable name="LG"/>
+                    </UserCommand>
+                  </Expression>
+                </Assign>
+              </Commands>
+              <Graphics>
+                <Position x-pos="303" y-pos="233"/>
+              </Graphics>
+            </Node>
+            <Node id="N26" name="AA" exhaustive="false" preserving="false" history="false">
+              <Define>
+              </Define>
+              <Declare>
+              </Declare>
+              <Commands>
+                <Assign>
+                  <Variable name="AA"/>
+                  <Expression>
+                    <UserCommand name="av">
+                      <Add>
+                        <Variable name="MN"/>
+                        <Variable name="LG"/>
+                      </Add>
                     </UserCommand>
                   </Expression>
                 </Assign>
