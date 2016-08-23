@@ -1,0 +1,671 @@
+@prefix : <http://kristina-project.eu/ontologies/la/onto#> .
+@prefix dul: <http://www.loa-cnr.it/ontologies/DUL.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix onto: <http://kristina-project.eu/ontologies/la/onto#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://kristina-project.eu/ontologies/la/onto> .
+
+<http://kristina-project.eu/ontologies/la/onto> rdf:type owl:Ontology .
+
+
+#################################################################
+#
+#    Object Properties
+#
+#################################################################
+
+
+###  http://kristina-project.eu/ontologies/la/onto#associatedWith
+
+onto:associatedWith rdf:type owl:ObjectProperty .
+
+
+
+###  http://kristina-project.eu/ontologies/la/onto#endPoint
+
+onto:endPoint rdf:type owl:ObjectProperty .
+
+
+
+###  http://kristina-project.eu/ontologies/la/onto#hasBodyPart
+
+onto:hasBodyPart rdf:type owl:ObjectProperty .
+
+
+
+###  http://kristina-project.eu/ontologies/la/onto#hasPeriod
+
+onto:hasPeriod rdf:type owl:ObjectProperty ;
+               
+               rdfs:subPropertyOf owl:topObjectProperty .
+
+
+
+###  http://kristina-project.eu/ontologies/la/onto#hasRange
+
+onto:hasRange rdf:type owl:ObjectProperty .
+
+
+
+###  http://kristina-project.eu/ontologies/la/onto#hasUnit
+
+onto:hasUnit rdf:type owl:ObjectProperty .
+
+
+
+###  http://kristina-project.eu/ontologies/la/onto#hasValue
+
+onto:hasValue rdf:type owl:ObjectProperty .
+
+
+
+###  http://kristina-project.eu/ontologies/la/onto#startPoint
+
+onto:startPoint rdf:type owl:ObjectProperty .
+
+
+
+
+
+#################################################################
+#
+#    Data properties
+#
+#################################################################
+
+
+###  http://kristina-project.eu/ontologies/la/onto#hasEnd
+
+onto:hasEnd rdf:type owl:DatatypeProperty .
+
+
+
+###  http://kristina-project.eu/ontologies/la/onto#hasStart
+
+onto:hasStart rdf:type owl:DatatypeProperty .
+
+
+
+###  http://kristina-project.eu/ontologies/la/onto#hasValue
+
+onto:hasValue rdf:type owl:DatatypeProperty .
+
+
+
+
+
+#################################################################
+#
+#    Classes
+#
+#################################################################
+
+
+###  http://kristina-project.eu/ontologies/la/onto#After
+
+onto:After rdf:type owl:Class ;
+           
+           rdfs:subClassOf onto:TemporalPattern .
+
+
+
+###  http://kristina-project.eu/ontologies/la/onto#Assistance
+
+onto:Assistance rdf:type owl:Class ;
+                
+                rdfs:subClassOf onto:Pattern .
+
+
+
+###  http://kristina-project.eu/ontologies/la/onto#Attribute
+
+onto:Attribute rdf:type owl:Class ;
+               
+               rdfs:subClassOf onto:DomainEntity .
+
+
+
+###  http://kristina-project.eu/ontologies/la/onto#Bathe
+
+onto:Bathe rdf:type owl:Class ;
+           
+           rdfs:subClassOf onto:Event .
+
+
+
+###  http://kristina-project.eu/ontologies/la/onto#Before
+
+onto:Before rdf:type owl:Class ;
+            
+            rdfs:subClassOf onto:TemporalPattern .
+
+
+
+###  http://kristina-project.eu/ontologies/la/onto#BoardGame
+
+onto:BoardGame rdf:type owl:Class ;
+               
+               rdfs:subClassOf onto:DomainEntity .
+
+
+
+###  http://kristina-project.eu/ontologies/la/onto#BodyPart
+
+onto:BodyPart rdf:type owl:Class ;
+              
+              rdfs:subClassOf onto:DomainEntity .
+
+
+
+###  http://kristina-project.eu/ontologies/la/onto#CareRecipient
+
+onto:CareRecipient rdf:type owl:Class ;
+                   
+                   rdfs:subClassOf onto:User .
+
+
+
+###  http://kristina-project.eu/ontologies/la/onto#Caregiver
+
+onto:Caregiver rdf:type owl:Class ;
+               
+               rdfs:subClassOf onto:User .
+
+
+
+###  http://kristina-project.eu/ontologies/la/onto#Comb
+
+onto:Comb rdf:type owl:Class ;
+          
+          rdfs:subClassOf onto:Event .
+
+
+
+###  http://kristina-project.eu/ontologies/la/onto#Day
+
+onto:Day rdf:type owl:Class ;
+         
+         rdfs:subClassOf onto:TemporalEntity .
+
+
+
+###  http://kristina-project.eu/ontologies/la/onto#DomainEntity
+
+onto:DomainEntity rdf:type owl:Class .
+
+
+
+###  http://kristina-project.eu/ontologies/la/onto#Drink
+
+onto:Drink rdf:type owl:Class ;
+           
+           rdfs:subClassOf onto:Event .
+
+
+
+###  http://kristina-project.eu/ontologies/la/onto#Duration
+
+onto:Duration rdf:type owl:Class ;
+              
+              rdfs:subClassOf onto:DomainEntity .
+
+
+
+###  http://kristina-project.eu/ontologies/la/onto#During
+
+onto:During rdf:type owl:Class ;
+            
+            rdfs:subClassOf onto:TemporalPattern .
+
+
+
+###  http://kristina-project.eu/ontologies/la/onto#Early
+
+onto:Early rdf:type owl:Class ;
+           
+           rdfs:subClassOf onto:TemporalParameter .
+
+
+
+###  http://kristina-project.eu/ontologies/la/onto#Emotion
+
+onto:Emotion rdf:type owl:Class ;
+             
+             rdfs:subClassOf onto:Attribute .
+
+
+
+###  http://kristina-project.eu/ontologies/la/onto#EndTime
+
+onto:EndTime rdf:type owl:Class ;
+             
+             rdfs:subClassOf onto:Time .
+
+
+
+###  http://kristina-project.eu/ontologies/la/onto#Evening
+
+onto:Evening rdf:type owl:Class ;
+             
+             rdfs:subClassOf onto:TemporalEntity .
+
+
+
+###  http://kristina-project.eu/ontologies/la/onto#Event
+
+onto:Event rdf:type owl:Class ;
+           
+           rdfs:subClassOf onto:DomainEntity .
+
+
+
+###  http://kristina-project.eu/ontologies/la/onto#Favourite
+
+onto:Favourite rdf:type owl:Class ;
+               
+               rdfs:subClassOf onto:Attribute .
+
+
+
+###  http://kristina-project.eu/ontologies/la/onto#Fine
+
+onto:Fine rdf:type owl:Class ;
+          
+          rdfs:subClassOf onto:Emotion .
+
+
+
+###  http://kristina-project.eu/ontologies/la/onto#Frequency
+
+onto:Frequency rdf:type owl:Class ;
+               
+               rdfs:subClassOf onto:DomainEntity .
+
+
+
+###  http://kristina-project.eu/ontologies/la/onto#FrequencyParameter
+
+onto:FrequencyParameter rdf:type owl:Class ;
+                        
+                        rdfs:subClassOf onto:Parameter .
+
+
+
+###  http://kristina-project.eu/ontologies/la/onto#GetUp
+
+onto:GetUp rdf:type owl:Class ;
+           
+           rdfs:subClassOf onto:Event .
+
+
+
+###  http://kristina-project.eu/ontologies/la/onto#Go
+
+onto:Go rdf:type owl:Class ;
+        
+        rdfs:subClassOf onto:Event .
+
+
+
+###  http://kristina-project.eu/ontologies/la/onto#GoToilet
+
+onto:GoToilet rdf:type owl:Class ;
+              
+              rdfs:subClassOf onto:Go .
+
+
+
+###  http://kristina-project.eu/ontologies/la/onto#Good
+
+onto:Good rdf:type owl:Class ;
+          
+          rdfs:subClassOf onto:Emotion .
+
+
+
+###  http://kristina-project.eu/ontologies/la/onto#Hair
+
+onto:Hair rdf:type owl:Class ;
+          
+          rdfs:subClassOf onto:BodyPart .
+
+
+
+###  http://kristina-project.eu/ontologies/la/onto#High
+
+onto:High rdf:type owl:Class ;
+          
+          rdfs:subClassOf onto:Parameter .
+
+
+
+###  http://kristina-project.eu/ontologies/la/onto#Hour
+
+onto:Hour rdf:type owl:Class ;
+          
+          rdfs:subClassOf onto:TemporalEntity .
+
+
+
+###  http://kristina-project.eu/ontologies/la/onto#Interval
+
+onto:Interval rdf:type owl:Class ;
+              
+              rdfs:subClassOf onto:Parameter .
+
+
+
+###  http://kristina-project.eu/ontologies/la/onto#Late
+
+onto:Late rdf:type owl:Class ;
+          
+          rdfs:subClassOf onto:TemporalParameter .
+
+
+
+###  http://kristina-project.eu/ontologies/la/onto#Like
+
+onto:Like rdf:type owl:Class ;
+          
+          rdfs:subClassOf onto:Event .
+
+
+
+###  http://kristina-project.eu/ontologies/la/onto#Milk
+
+onto:Milk rdf:type owl:Class ;
+          
+          rdfs:subClassOf onto:DomainEntity .
+
+
+
+###  http://kristina-project.eu/ontologies/la/onto#Minute
+
+onto:Minute rdf:type owl:Class ;
+            
+            rdfs:subClassOf onto:TemporalEntity .
+
+
+
+###  http://kristina-project.eu/ontologies/la/onto#Month
+
+onto:Month rdf:type owl:Class ;
+           
+           rdfs:subClassOf onto:TemporalEntity .
+
+
+
+###  http://kristina-project.eu/ontologies/la/onto#Morning
+
+onto:Morning rdf:type owl:Class ;
+             
+             rdfs:subClassOf onto:TemporalEntity .
+
+
+
+###  http://kristina-project.eu/ontologies/la/onto#Need
+
+onto:Need rdf:type owl:Class ;
+          
+          rdfs:subClassOf onto:Event .
+
+
+
+###  http://kristina-project.eu/ontologies/la/onto#Night
+
+onto:Night rdf:type owl:Class ;
+           
+           rdfs:subClassOf onto:TemporalEntity .
+
+
+
+###  http://kristina-project.eu/ontologies/la/onto#Often
+
+onto:Often rdf:type owl:Class ;
+           
+           rdfs:subClassOf onto:FrequencyParameter .
+
+
+
+###  http://kristina-project.eu/ontologies/la/onto#Parameter
+
+onto:Parameter rdf:type owl:Class ;
+               
+               rdfs:subClassOf onto:DomainEntity .
+
+
+
+###  http://kristina-project.eu/ontologies/la/onto#Pattern
+
+onto:Pattern rdf:type owl:Class ;
+             
+             rdfs:subClassOf onto:DomainEntity .
+
+
+
+###  http://kristina-project.eu/ontologies/la/onto#Person
+
+onto:Person rdf:type owl:Class ;
+            
+            rdfs:subClassOf onto:DomainEntity .
+
+
+
+###  http://kristina-project.eu/ontologies/la/onto#Play
+
+onto:Play rdf:type owl:Class ;
+          
+          rdfs:subClassOf onto:Event .
+
+
+
+###  http://kristina-project.eu/ontologies/la/onto#PlayBoardGame
+
+onto:PlayBoardGame rdf:type owl:Class ;
+                   
+                   rdfs:subClassOf onto:Play ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty onto:associatedWith ;
+                                     owl:someValuesFrom onto:BoardGame
+                                   ] .
+
+
+
+###  http://kristina-project.eu/ontologies/la/onto#Preference
+
+onto:Preference rdf:type owl:Class ;
+                
+                rdfs:subClassOf onto:Pattern .
+
+
+
+###  http://kristina-project.eu/ontologies/la/onto#Range
+
+onto:Range rdf:type owl:Class ;
+           
+           rdfs:subClassOf onto:DomainEntity .
+
+
+
+###  http://kristina-project.eu/ontologies/la/onto#Rarely
+
+onto:Rarely rdf:type owl:Class ;
+            
+            rdfs:subClassOf onto:FrequencyParameter .
+
+
+
+###  http://kristina-project.eu/ontologies/la/onto#Short
+
+onto:Short rdf:type owl:Class ;
+           
+           rdfs:subClassOf onto:Parameter .
+
+
+
+###  http://kristina-project.eu/ontologies/la/onto#Sleep
+
+onto:Sleep rdf:type owl:Class ;
+           
+           rdfs:subClassOf onto:Event .
+
+
+
+###  http://kristina-project.eu/ontologies/la/onto#Sometimes
+
+onto:Sometimes rdf:type owl:Class ;
+               
+               rdfs:subClassOf onto:FrequencyParameter .
+
+
+
+###  http://kristina-project.eu/ontologies/la/onto#StartTime
+
+onto:StartTime rdf:type owl:Class ;
+               
+               rdfs:subClassOf onto:Time .
+
+
+
+###  http://kristina-project.eu/ontologies/la/onto#TV
+
+onto:TV rdf:type owl:Class ;
+        
+        rdfs:subClassOf onto:DomainEntity .
+
+
+
+###  http://kristina-project.eu/ontologies/la/onto#TemporalEntity
+
+onto:TemporalEntity rdf:type owl:Class ;
+                    
+                    rdfs:subClassOf onto:DomainEntity .
+
+
+
+###  http://kristina-project.eu/ontologies/la/onto#TemporalParameter
+
+onto:TemporalParameter rdf:type owl:Class ;
+                       
+                       rdfs:subClassOf onto:Parameter .
+
+
+
+###  http://kristina-project.eu/ontologies/la/onto#TemporalPattern
+
+onto:TemporalPattern rdf:type owl:Class ;
+                     
+                     rdfs:subClassOf onto:DomainEntity .
+
+
+
+###  http://kristina-project.eu/ontologies/la/onto#Time
+
+onto:Time rdf:type owl:Class ;
+          
+          rdfs:subClassOf onto:DomainEntity .
+
+
+
+###  http://kristina-project.eu/ontologies/la/onto#Toilet
+
+onto:Toilet rdf:type owl:Class ;
+            
+            rdfs:subClassOf onto:DomainEntity .
+
+
+
+###  http://kristina-project.eu/ontologies/la/onto#Use
+
+onto:Use rdf:type owl:Class ;
+         
+         rdfs:subClassOf onto:Event .
+
+
+
+###  http://kristina-project.eu/ontologies/la/onto#User
+
+onto:User rdf:type owl:Class ;
+          
+          rdfs:subClassOf onto:DomainEntity .
+
+
+
+###  http://kristina-project.eu/ontologies/la/onto#Usually
+
+onto:Usually rdf:type owl:Class ;
+             
+             rdfs:subClassOf onto:FrequencyParameter .
+
+
+
+###  http://kristina-project.eu/ontologies/la/onto#Value
+
+onto:Value rdf:type owl:Class ;
+           
+           rdfs:subClassOf onto:DomainEntity ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty onto:hasValue ;
+                             owl:someValuesFrom rdfs:Literal
+                           ] .
+
+
+
+###  http://kristina-project.eu/ontologies/la/onto#WakeUp
+
+onto:WakeUp rdf:type owl:Class ;
+            
+            rdfs:subClassOf onto:Event .
+
+
+
+###  http://kristina-project.eu/ontologies/la/onto#Watch
+
+onto:Watch rdf:type owl:Class ;
+           
+           rdfs:subClassOf onto:Event .
+
+
+
+###  http://kristina-project.eu/ontologies/la/onto#WatchTV
+
+onto:WatchTV rdf:type owl:Class ;
+             
+             rdfs:subClassOf onto:Watch ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty onto:associatedWith ;
+                               owl:someValuesFrom onto:TV
+                             ] .
+
+
+
+###  http://kristina-project.eu/ontologies/la/onto#WaterBottle
+
+onto:WaterBottle rdf:type owl:Class ;
+                 
+                 rdfs:subClassOf onto:DomainEntity .
+
+
+
+###  http://kristina-project.eu/ontologies/la/onto#Week
+
+onto:Week rdf:type owl:Class ;
+          
+          rdfs:subClassOf onto:TemporalEntity .
+
+
+
+###  http://kristina-project.eu/ontologies/la/onto#Year
+
+onto:Year rdf:type owl:Class ;
+          
+          rdfs:subClassOf onto:TemporalEntity .
+
+
+
+
+###  Generated by the OWL API (version 3.5.1) http://owlapi.sourceforge.net
+

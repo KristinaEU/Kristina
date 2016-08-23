@@ -1,0 +1,86 @@
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+<http://temp#9lrg3qouar6vqo3i6h70537g0g>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/sleeping-habits-data#concept_1> ;
+      rdf:predicate <http://www.loa-cnr.it/ontologies/DUL.owl#isClassifiedBy> ;
+      rdf:subject <http://kristina-project.eu/ontologies/sleeping-habits-data#Frequency_1> .
+
+<http://temp#64rp22o3eoslsq206hdd297e74>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/sleeping-habits-data#concept_1> ;
+      rdf:predicate <http://www.loa-cnr.it/ontologies/DUL.owl#defines> ;
+      rdf:subject <http://kristina-project.eu/ontologies/sleeping-habits-data#WakeUpAtNight_Description_1> .
+
+<http://temp#bcfllmp2jekqub17hs258n1o1u>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/sleeping-habits-data#Event_3> ;
+      rdf:predicate <http://www.loa-cnr.it/ontologies/DUL.owl#classifies> ;
+      rdf:subject <http://kristina-project.eu/ontologies/sleeping-habits-data#EventType_1> .
+
+<http://temp#rlefpabce73g9rfhls4p4gj752>
+      a       rdf:Statement ;
+      rdf:object "1" ;
+      rdf:predicate <http://kristina-project.eu/ontologies/common-entities#min> ;
+      rdf:subject <http://kristina-project.eu/ontologies/sleeping-habits-data#Frequency_1> .
+
+<http://response-data>
+      a       owl:Ontology ;
+      owl:imports <http://kristina-project.eu/ontologies/responses> .
+
+<http://temp#ofoe9subodjl8u1dc7qdosj97b>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/sleeping-habits-data#WakeUpAtNight_Description_1> ;
+      rdf:predicate <http://www.loa-cnr.it/ontologies/DUL.owl#isDefinedIn> ;
+      rdf:subject <http://kristina-project.eu/ontologies/sleeping-habits-data#concept_1> .
+
+<http://temp#2masturng70rtngo0hpjgbt5et>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/sleeping-habits-data#EventType_1> ;
+      rdf:predicate <http://www.loa-cnr.it/ontologies/DUL.owl#defines> ;
+      rdf:subject <http://kristina-project.eu/ontologies/sleeping-habits-data#WakeUpAtNight_Description_1> .
+
+<http://temp#kv26gum7k27j2gbha1oiqeh2r3>
+      a       <http://kristina-project.eu/ontologies/responses#StatementResponse> ;
+      <http://kristina-project.eu/ontologies/responses#plausibility>
+              "1.0"^^xsd:double ;
+      <http://kristina-project.eu/ontologies/responses#rdf>
+              <http://temp#9lrg3qouar6vqo3i6h70537g0g> , <http://temp#2masturng70rtngo0hpjgbt5et> , <http://temp#ofoe9subodjl8u1dc7qdosj97b> , <http://temp#r7s4jj62o3j3srluu4b6ab9e86> , <http://temp#ilom14aomfhsl3aab9ibkg4so0> , <http://temp#64rp22o3eoslsq206hdd297e74> , <http://temp#bcfllmp2jekqub17hs258n1o1u> , <http://temp#rlefpabce73g9rfhls4p4gj752> , <http://temp#u4frtp88il053v4gesjop5v1j9> , <http://temp#ra351n25ff7shjd2tibn283pf7> ;
+      <http://kristina-project.eu/ontologies/responses#responseType>
+              <http://kristina-project.eu/ontologies/responses#structured> .
+
+<http://temp#v4djs7hreuipahsvc6uqj37gmm>
+      a       <http://kristina-project.eu/ontologies/responses#ResponseContainer> ;
+      <http://kristina-project.eu/ontologies/responses#containsResponse>
+              <http://temp#kv26gum7k27j2gbha1oiqeh2r3> ;
+      <http://kristina-project.eu/ontologies/responses#conversationalContext>
+              <http://temp#m424eq67aiqhb79l1ecokhgual> ;
+      <http://kristina-project.eu/ontologies/responses#timestamp>
+              "2016-06-23T14:39:38.02Z"^^xsd:dateTime .
+
+<http://temp#r7s4jj62o3j3srluu4b6ab9e86>
+      a       rdf:Statement ;
+      rdf:object "4" ;
+      rdf:predicate <http://kristina-project.eu/ontologies/common-entities#max> ;
+      rdf:subject <http://kristina-project.eu/ontologies/sleeping-habits-data#Frequency_1> .
+
+<http://temp#ilom14aomfhsl3aab9ibkg4so0>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/sleeping-habits-data#Frequency_1> ;
+      rdf:predicate <http://www.loa-cnr.it/ontologies/DUL.owl#classifies> ;
+      rdf:subject <http://kristina-project.eu/ontologies/sleeping-habits-data#concept_1> .
+
+<http://temp#u4frtp88il053v4gesjop5v1j9>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/sleeping-habits-data#EventType_1> ;
+      rdf:predicate <http://www.loa-cnr.it/ontologies/DUL.owl#isClassifiedBy> ;
+      rdf:subject <http://kristina-project.eu/ontologies/sleeping-habits-data#Event_3> .
+
+<http://temp#ra351n25ff7shjd2tibn283pf7>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/sleeping-habits-data#WakeUpAtNight_Description_1> ;
+      rdf:predicate <http://www.loa-cnr.it/ontologies/DUL.owl#isDefinedIn> ;
+      rdf:subject <http://kristina-project.eu/ontologies/sleeping-habits-data#EventType_1> .

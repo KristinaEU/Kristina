@@ -41,16 +41,15 @@ public class CerthClient {
 		}
 	}
 
-	public static String post(String in)  {
+	public static String post(String in, double valence, double arousal)  {
 		try{
 			Client client = ClientBuilder.newClient();
-			client.register(new LoggingFilter());
 			
 			WebTarget webTarget = client.target(address+"update");
 			
 			Invocation.Builder ib = webTarget.request(MediaType.TEXT_PLAIN_TYPE);
 			
-			Response response = ib.post(Entity.entity("frames="+URLEncoder.encode(in, "utf-8"), "application/x-www-form-urlencoded"));
+			Response response = ib.post(Entity.entity("frames="+URLEncoder.encode(in, "utf-8")+"\n&emotions="+URLEncoder.encode("{valence:"+valence+",arousal:"+arousal+"}", "utf-8"), "application/x-www-form-urlencoded"));
 
 			if(response.getStatus()!= 200){
 				String s = response.getStatusInfo().toString();

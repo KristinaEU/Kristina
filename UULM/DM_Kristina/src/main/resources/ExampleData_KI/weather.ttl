@@ -1,0 +1,67 @@
+# baseURI: http://kristina-project.eu/ontologies/weather
+
+@prefix : <http://kristina-project.eu/ontologies/weather#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://kristina-project.eu/ontologies/weather>
+  rdf:type owl:Ontology ;
+.
+:Forecast
+  rdf:type owl:Class ;
+  rdfs:comment """skyCondition: [\"fineSkyConditionRating\",\"partlyCloudySkyConditionRating\",\"cloudySkyConditionRating\", \"overcastSkyConditionRating\"]
+
+temperature: double (celcius)
+
+pressure: >0, double (dont know units)
+
+humidity: [0, 100], double (%)
+
+windDirection: [\"SWWindDirectionRating\", \"SWindDirectionRating\", \"SEWindDirectionRating\", \"NWindDirectionRating\", \"NWWindDirectionRating\", \"NEWindDirectionRating\", \"EWindDirectionRating\", \"WWindDirectionRating\"]
+
+windSpeed: double (meter per secs)""" ;
+.
+:Forecast_1
+  rdf:type :Forecast ;
+  :humidity "66"^^xsd:double ;
+  :pressure "736"^^xsd:double ;
+  :skyCondition "partlyCloudySkyConditionRating"^^xsd:string ;
+  :temperature "25"^^xsd:double ;
+  :windDirection "NWWindDirectionRating"^^xsd:string ;
+  :windSpeed "3"^^xsd:double ;
+.
+:humidity
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain :Forecast ;
+  rdfs:range xsd:double ;
+.
+:pressure
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain :Forecast ;
+  rdfs:range xsd:double ;
+  rdfs:subPropertyOf owl:topDataProperty ;
+.
+:skyCondition
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain :Forecast ;
+  rdfs:range xsd:string ;
+.
+:temperature
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain :Forecast ;
+  rdfs:range xsd:double ;
+.
+:windDirection
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain :Forecast ;
+  rdfs:range xsd:string ;
+  rdfs:subPropertyOf owl:topDataProperty ;
+.
+:windSpeed
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain :Forecast ;
+  rdfs:range xsd:double ;
+.

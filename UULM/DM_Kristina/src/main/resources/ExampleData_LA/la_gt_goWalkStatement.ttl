@@ -1,0 +1,167 @@
+@prefix : <http://kristina-project.eu/ontologies/la/gt_walkStatement#> .
+@prefix act: <http://kristina-project.eu/ontologies/la/action#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix onto: <http://kristina-project.eu/ontologies/la/onto#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dialogue: <http://kristina-project.eu/ontologies/dialogue_actions#> .
+@base <http://kristina-project.eu/ontologies/la/gt_walkStatement1#> .
+
+<http://kristina-project.eu/ontologies/la/gt_walkStatement1#> rdf:type owl:Ontology ;
+                                                              
+                                                              owl:imports <http://kristina-project.eu/ontologies/dialogue_actions> ,
+                                                                          <http://kristina-project.eu/ontologies/la/action> ,
+                                                                          <http://kristina-project.eu/ontologies/la/onto> .
+
+
+#################################################################
+#
+#    Individuals
+#
+#################################################################
+
+
+###  http://kristina-project.eu/ontologies/la/gt_walkStatement1#Anna
+
+<http://kristina-project.eu/ontologies/la/gt_walkStatement1#Anna> rdf:type onto:CareRecipient ,
+                                                                           owl:NamedIndividual .
+
+
+
+###  http://kristina-project.eu/ontologies/la/gt_walkStatement1#agent1
+
+<http://kristina-project.eu/ontologies/la/gt_walkStatement1#agent1> rdf:type <http://kristina-project.eu/ontologies/la/context#Agent> ,
+                                                                             owl:NamedIndividual ;
+                                                                    
+                                                                    <http://kristina-project.eu/ontologies/la/context#classifies> <http://kristina-project.eu/ontologies/la/gt_walkStatement1#context1> .
+
+
+
+###  http://kristina-project.eu/ontologies/la/gt_walkStatement1#agent2
+
+<http://kristina-project.eu/ontologies/la/gt_walkStatement1#agent2> rdf:type <http://kristina-project.eu/ontologies/la/context#Agent> ,
+                                                                             owl:NamedIndividual ;
+                                                                    
+                                                                    <http://kristina-project.eu/ontologies/la/context#classifies> <http://kristina-project.eu/ontologies/la/gt_walkStatement1#Anna> .
+
+
+
+###  http://kristina-project.eu/ontologies/la/gt_walkStatement1#context1
+
+<http://kristina-project.eu/ontologies/la/gt_walkStatement1#context1> rdf:type <http://kristina-project.eu/ontologies/la/context#Context> ,
+                                                                               owl:NamedIndividual ;
+                                                                      
+                                                                      <http://kristina-project.eu/ontologies/la/context#classifies> <http://kristina-project.eu/ontologies/la/gt_walkStatement1#like1> .
+
+
+
+###  http://kristina-project.eu/ontologies/la/gt_walkStatement1#context2
+
+<http://kristina-project.eu/ontologies/la/gt_walkStatement1#context2> rdf:type <http://kristina-project.eu/ontologies/la/context#Context> ,
+                                                                               owl:NamedIndividual ;
+                                                                      
+                                                                      <http://kristina-project.eu/ontologies/la/context#classifies> <http://kristina-project.eu/ontologies/la/gt_walkStatement1#goWalk2> .
+
+
+
+###  http://kristina-project.eu/ontologies/la/gt_walkStatement1#goWalk2
+
+<http://kristina-project.eu/ontologies/la/gt_walkStatement1#goWalk2> rdf:type onto:GoForWalk ,
+                                                                              owl:NamedIndividual .
+
+
+
+###  http://kristina-project.eu/ontologies/la/gt_walkStatement1#goWalkCtx2
+
+<http://kristina-project.eu/ontologies/la/gt_walkStatement1#goWalkCtx2> rdf:type <http://kristina-project.eu/ontologies/la/context#Situation> ,
+                                                                                 owl:NamedIndividual ;
+                                                                        
+                                                                        <http://kristina-project.eu/ontologies/la/context#includes> <http://kristina-project.eu/ontologies/la/gt_walkStatement1#Anna> ;
+                                                                        
+                                                                        <http://kristina-project.eu/ontologies/la/context#includesEvent> <http://kristina-project.eu/ontologies/la/gt_walkStatement1#goWalk2> ;
+                                                                        
+                                                                        <http://kristina-project.eu/ontologies/la/context#satisfies> <http://kristina-project.eu/ontologies/la/gt_walkStatement1#goWalkDesc2> .
+
+
+
+###  http://kristina-project.eu/ontologies/la/gt_walkStatement1#goWalkDesc2
+
+<http://kristina-project.eu/ontologies/la/gt_walkStatement1#goWalkDesc2> rdf:type <http://kristina-project.eu/ontologies/la/context#ContextDescription> ,
+                                                                                  owl:NamedIndividual ;
+                                                                         
+                                                                         <http://kristina-project.eu/ontologies/la/context#defines> <http://kristina-project.eu/ontologies/la/gt_walkStatement1#agent2> ,
+                                                                                                                                    <http://kristina-project.eu/ontologies/la/gt_walkStatement1#context2> .
+
+
+
+###  http://kristina-project.eu/ontologies/la/gt_walkStatement1#like1
+
+<http://kristina-project.eu/ontologies/la/gt_walkStatement1#like1> rdf:type onto:Like ,
+                                                                            owl:NamedIndividual .
+
+
+
+###  http://kristina-project.eu/ontologies/la/gt_walkStatement1#likeCtx1
+
+<http://kristina-project.eu/ontologies/la/gt_walkStatement1#likeCtx1> rdf:type <http://kristina-project.eu/ontologies/la/context#Situation> ,
+                                                                               owl:NamedIndividual ;
+                                                                      
+                                                                      <http://kristina-project.eu/ontologies/la/context#includes> <http://kristina-project.eu/ontologies/la/gt_walkStatement1#Anna> ,
+                                                                                                                                  <http://kristina-project.eu/ontologies/la/gt_walkStatement1#goWalkCtx2> ;
+                                                                      
+                                                                      <http://kristina-project.eu/ontologies/la/context#includesEvent> <http://kristina-project.eu/ontologies/la/gt_walkStatement1#like1> ;
+                                                                      
+                                                                      <http://kristina-project.eu/ontologies/la/context#satisfies> <http://kristina-project.eu/ontologies/la/gt_walkStatement1#likeDesc1> .
+
+
+
+###  http://kristina-project.eu/ontologies/la/gt_walkStatement1#likeDesc1
+
+<http://kristina-project.eu/ontologies/la/gt_walkStatement1#likeDesc1> rdf:type <http://kristina-project.eu/ontologies/la/context#ContextDescription> ,
+                                                                                owl:NamedIndividual ;
+                                                                       
+                                                                       <http://kristina-project.eu/ontologies/la/context#defines> <http://kristina-project.eu/ontologies/la/gt_walkStatement1#agent1> ,
+                                                                                                                                  <http://kristina-project.eu/ontologies/la/gt_walkStatement1#context1> ,
+                                                                                                                                  <http://kristina-project.eu/ontologies/la/gt_walkStatement1#theme1> .
+
+
+
+###  http://kristina-project.eu/ontologies/la/gt_walkStatement1#speechAct1
+
+<http://kristina-project.eu/ontologies/la/gt_walkStatement1#speechAct1> rdf:type dialogue:Declare ,
+                                                                                 owl:NamedIndividual ;
+                                                                        
+                                                                        act:semanticContent <http://kristina-project.eu/ontologies/la/gt_walkStatement1#goWalkCtx2> ,
+                                                                                            <http://kristina-project.eu/ontologies/la/gt_walkStatement1#likeCtx1> .
+
+
+
+###  http://kristina-project.eu/ontologies/la/gt_walkStatement1#theme1
+
+<http://kristina-project.eu/ontologies/la/gt_walkStatement1#theme1> rdf:type <http://kristina-project.eu/ontologies/la/context#Theme> ,
+                                                                             owl:NamedIndividual ;
+                                                                    
+                                                                    <http://kristina-project.eu/ontologies/la/context#classifies> <http://kristina-project.eu/ontologies/la/gt_walkStatement1#goWalkCtx2> .
+
+
+
+###  http://kristina-project.eu/ontologies/la/gt_walkStatement1#userAction1
+
+<http://kristina-project.eu/ontologies/la/gt_walkStatement1#userAction1> rdf:type dialogue:UserAction ,
+                                                                                  owl:NamedIndividual ;
+                                                                         
+                                                                         act:sentenceASRconfidence "0.7"^^xsd:float ;
+                                                                         
+                                                                         act:textualContent "I would like to go for a walk today."^^xsd:string ;
+                                                                         
+                                                                         act:individualType "true"^^xsd:boolean ;
+                                                                         
+                                                                         act:contains <http://kristina-project.eu/ontologies/la/gt_walkStatement1#speechAct1> .
+
+
+
+
+###  Generated by the OWL API (version 3.5.1) http://owlapi.sourceforge.net
+

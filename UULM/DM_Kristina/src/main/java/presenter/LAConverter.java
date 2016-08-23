@@ -1,4 +1,4 @@
-package owlSpeak.kristina.util;
+package presenter;
 
 import java.io.ByteArrayOutputStream;
 import java.io.StringReader;
@@ -9,8 +9,12 @@ import java.util.List;
 import java.util.Set;
 import java.util.UUID;
 
+import model.DialogueAction;
+import model.KristinaModel;
 import model.SemanticsOntology;
 
+import org.apache.commons.lang3.tuple.ImmutablePair;
+import org.apache.commons.lang3.tuple.Pair;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.ModelFactory;
 import org.apache.jena.rdf.model.NodeIterator;
@@ -19,6 +23,8 @@ import org.apache.jena.rdf.model.ResIterator;
 import org.apache.jena.rdf.model.Resource;
 import org.apache.jena.rdf.model.Statement;
 import org.apache.jena.rdf.model.StmtIterator;
+import org.apache.jena.util.ResourceUtils;
+import org.apache.jena.vocabulary.RDF;
 import org.semanticweb.owlapi.model.IRI;
 import org.semanticweb.owlapi.model.OWLDataFactory;
 import org.semanticweb.owlapi.model.OWLOntology;
@@ -31,97 +37,137 @@ import owlSpeak.kristina.KristinaMove;
 import uk.ac.manchester.cs.owl.owlapi.OWLNamedIndividualImpl;
 
 public class LAConverter {
-	
-	private final static String act = "http://kristina-project.eu/ontologies/dialogue_actions#";
-	//private final static String act = "http://kristina-project.eu/ontologies/la/action#";
-	
-	public static IRI convertToMove(String rdf){
-		Model model = ModelFactory.createDefaultModel() ;
-		model.read(new StringReader(rdf),null, "TURTLE");
-		
-		ResIterator start = model.listResourcesWithProperty(model.getProperty("http://www.w3.org/1999/02/22-rdf-syntax-ns#type"),model.getResource(act+"UserAction"));
-		
-		Resource res = start.next();
-		
-		StmtIterator it = res.listProperties();
-		Resource id = model.createResource(res.getNameSpace()+UUID.randomUUID().toString(), model.getResource(act+"UserAction"));
 
-		IRI usrMove = IRI.create(id.getURI());
-		
-		while(it.hasNext()){
-			Statement s = it.next();
-			model.add(model.createStatement(id, s.getPredicate(), s.getObject()));
+	
+
+	public static List<Resource> convertToMove(String rdf, String user, String act, String dialogue) {
+		Model model = ModelFactory.createDefaultModel();
+		model.read(new StringReader(rdf), null, "TURTLE");
+
+		ResIterator tmp = model.listResourcesWithProperty(RDF.type,
+				model.getResource(dialogue + "UserAction"));
+
+		Resource start = tmp.next();
+		NodeIterator it = model.listObjectsOfProperty(start,
+				model.getProperty(act + "contains"));
+		LinkedList<Resource> usrmove = new LinkedList<Resource>();
+		while (it.hasNext()) {
+			Resource res = it.next().asResource();
+			res = ResourceUtils.renameResource(res, res.getNameSpace()
+					+ UUID.randomUUID().toString());
+			
+			SemanticsOntology.add(res, model, user);
+			usrmove.add(res);
 		}
-		model.remove(res.listProperties());
-		
-		SemanticsOntology.add(usrMove, model);
-		
-		return usrMove;
+
+		return usrmove;
 	}
 
-	public static String convertFromMove(List<KristinaMove> sysmovs, float valence,
-			float arousal) {
-		Model model = ModelFactory.createDefaultModel() ;
-		String response = "http://kristina-project.eu/tmp#"+UUID.randomUUID().toString();
+	public static String convertFromMove(List<KristinaMove> sysmovs,
+			double valence, double arousal, String dialogue) {
+		Model model = ModelFactory.createDefaultModel();
+		String response = "http://kristina-project.eu/tmp#"
+				+ UUID.randomUUID().toString();
+
+		model.createResource(response, model.getResource(dialogue + "SystemAction"));
+		model.addLiteral(model.getResource(response),
+				model.getProperty(dialogue + "hasValence"), valence);
+		model.addLiteral(model.getResource(response),
+				model.getProperty(dialogue + "hasArousal"), arousal);
+		String tmp = "";
 		
-		model.createResource(response, model.getResource(act+"SystemAction"));
-		model.addLiteral(model.getResource(response), model.getProperty(act+"hasValence"),valence);
-		model.addLiteral(model.getResource(response), model.getProperty(act+"hasArousal"),arousal);
-		
-		for(KristinaMove sysmov: sysmovs){
-			String moveName = "http://kristina-project.eu/tmp#"+UUID.randomUUID().toString();
-			model.add(model.getResource(response), model.getProperty(act+"containsSystemAct"),moveName);
-			if(sysmov.equals(sysmovs.get(0))){
-				model.add(model.getResource(response), model.getProperty(act+"startWith"),moveName);
+		for (KristinaMove sysmov : sysmovs) {
+			String moveName = "http://kristina-project.eu/tmp#"
+					+ UUID.randomUUID().toString();
+			model.add(model.getResource(response),
+					model.getProperty(dialogue + "containsSystemAct"), model.getResource(moveName));
+			if (sysmov.equals(sysmovs.get(0))) {
+				model.add(model.getResource(response),
+						model.getProperty(dialogue + "startWith"), model.getResource(moveName));
+			}else{
+				model.add(model.getResource(tmp), model.getProperty(dialogue+"followedBy"), model.getResource(moveName));
 			}
-		switch(sysmov.getDialogueAction()){
-			
-			case DECLARE:
-				model.createResource(moveName, model.getResource(act+"Declare"));
-				model.addLiteral(model.getResource(moveName), model.getProperty(act+"verbosity"),1);
-				model.addLiteral(model.getResource(moveName), model.getProperty(act+"directness"),1);
-				model.addLiteral(model.getResource(moveName), model.getProperty(act+"isFormal"),true);
-				model.addLiteral(model.getResource(moveName), model.getProperty(act+"isAdvice"),true);
-				model.addLiteral(model.getResource(moveName), model.getProperty(act+"isBelief"),true);
-		
+			tmp = moveName;
+			switch (sysmov.getDialogueAction()) {
+
+			case DialogueAction.DECLARE:
+				model.createResource(moveName,
+						model.getResource(dialogue + "Declare"));
+				model.addLiteral(model.getResource(moveName),
+						model.getProperty(dialogue + "verbosity"), 0);
+				model.addLiteral(model.getResource(moveName),
+						model.getProperty(dialogue + "directness"), 1);
+				model.addLiteral(model.getResource(moveName),
+						model.getProperty(dialogue + "isFormal"), false);
+				model.addLiteral(model.getResource(moveName),
+						model.getProperty(dialogue + "isAdvice"), false);
+				model.addLiteral(model.getResource(moveName),
+						model.getProperty(dialogue + "isBelief"), false);
+
 				List<ReifiedStatement> stmtList = sysmov.getStatements();
-				for(ReifiedStatement stmt: stmtList){
-					model.createReifiedStatement(stmt.getURI(), stmt.getStatement());
-					model.add(model.getResource(moveName), model.getProperty(act+"containsSemantics"),model.getResource(stmt.getURI()));
+				for (ReifiedStatement stmt : stmtList) {
+					model.createReifiedStatement(stmt.getURI(),
+							stmt.getStatement());
+					model.add(model.getResource(moveName),
+							model.getProperty(dialogue + "containsSemantics"),
+							model.getResource(stmt.getURI()));
 				}
 				break;
-			case READ_NEWSPAPER:
-				model.createResource(moveName, model.getResource(act+"ReadNewspaper"));
-				
-				model.add(model.getResource(moveName), model.getProperty(act+"text"), sysmov.getText());
+			case DialogueAction.READ_NEWSPAPER:
+				model.createResource(moveName,
+						model.getResource(dialogue + "ReadNewspaper"));
+
+				model.add(model.getResource(moveName),
+						model.getProperty(dialogue + "text"), sysmov.getText());
+				break;
+			case DialogueAction.SHOW_WEATHER:
+				model.createResource(moveName,
+						model.getResource(dialogue + "ShowWeather"));
+
+				model.add(model.getResource(moveName),
+						model.getProperty(dialogue + "text"), sysmov.getText());
+				break;
+			case DialogueAction.CANNED:
+				model.createResource(moveName,
+						model.getResource(dialogue + "Canned"));
+				model.add(model.getResource(moveName),
+						model.getProperty(dialogue + "text"), sysmov.getText());
 				break;
 			default:
+				model.createResource(moveName,
+						model.getResource(sysmov.getDialogueAction()));
 				break;
+			}
 		}
-		}
-		
+
 		ByteArrayOutputStream result = new ByteArrayOutputStream();
-		model.write(result,"TURTLE");
+		model.write(result, "TURTLE");
+		return result.toString();
+	}
+
+	public static String convertFromEmotion(double valence, double arousal, String dialogue)
+			throws OWLOntologyCreationException, OWLOntologyStorageException {
+
+		Model model = ModelFactory.createDefaultModel();
+		String response = "http://kristina-project.eu/tmp#"
+				+ UUID.randomUUID().toString();
+
+		model.createResource(response, model.getResource(dialogue + "SystemAction"));
+		model.addLiteral(model.getResource(response),
+				model.getProperty(dialogue + "hasValence"), valence);
+		model.addLiteral(model.getResource(response),
+				model.getProperty(dialogue + "hasArousal"), arousal);
+
+		String moveName = "http://kristina-project.eu/tmp#"
+				+ UUID.randomUUID().toString();
+		model.add(model.getResource(response),
+				model.getProperty(dialogue + "containsSystemAct"), moveName);
+		model.createResource(moveName, model.getResource(dialogue + "Empty"));
+
+		ByteArrayOutputStream result = new ByteArrayOutputStream();
+		model.write(result, "TURTLE");
 		return result.toString();
 	}
 	
-	public static String convertFromEmotion(float valence, float arousal)
-			throws OWLOntologyCreationException, OWLOntologyStorageException{
-		
-		Model model = ModelFactory.createDefaultModel() ;
-		String response = "http://kristina-project.eu/tmp#"+UUID.randomUUID().toString();
-		
-		model.createResource(response, model.getResource(act+"SystemAction"));
-		model.addLiteral(model.getResource(response), model.getProperty(act+"hasValence"),valence);
-		model.addLiteral(model.getResource(response), model.getProperty(act+"hasArousal"),arousal);
-		
 
-		String moveName = "http://kristina-project.eu/tmp#"+UUID.randomUUID().toString();
-		model.add(model.getResource(response), model.getProperty(act+"containsSystemAct"),moveName);
-		model.createResource(moveName, model.getResource(act+"Empty"));
-		
-		ByteArrayOutputStream result = new ByteArrayOutputStream();
-		model.write(result,"TURTLE");
-		return result.toString();
-	}
 }

@@ -1,0 +1,257 @@
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+<http://temp#blej9umjak7g0o4chg44avlulj>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_assistanceToilet#go1> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#includesEvent> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_assistanceToilet#goToiletCtx1> .
+
+<http://temp#ifrsdupdbbeg0dj40lbur4jkcd>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_assistanceToilet#goToiletCtx1> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/action#semanticContent> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_assistanceToilet#speechAct1> .
+
+<http://temp#27hcr4gu5juivhaq5dinljdugr>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/onto#Caregiver> ;
+      rdf:predicate rdf:type ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_assistanceToilet#caregiver1> .
+
+<http://temp#clfa383el5564umd001si4eel2>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_assistanceToilet#Eugene> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#classifies> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_assistanceToilet#agent1> .
+
+<http://temp#9dsq3abr5llq8ibb61dj5fjifr>
+      a       <http://kristina-project.eu/ontologies/context-light#NeedContext> .
+
+<http://temp#6s0ukepeil0vg1ln3r0lihdjc6>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_assistanceToilet#getUp2> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#includesEvent> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_assistanceToilet#getUpCtx2> .
+
+<http://temp#8d5dnqfeuqut6u70irphsu3oe6>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/onto#Assistance> ;
+      rdf:predicate rdf:type ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_assistanceToilet#assistance1> .
+
+<http://temp#ul0kcf77llac8bidbmj826nr90>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_assistanceToilet#Eugene> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#includes> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_assistanceToilet#getUpCtx2> .
+
+<http://response-data>
+      a       owl:Ontology ;
+      owl:imports <http://kristina-project.eu/ontologies/responses> .
+
+<http://temp#3vmkj7qfl7ave0ug39vcfvdluj>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/onto#Go> ;
+      rdf:predicate rdf:type ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_assistanceToilet#go1> .
+
+<http://temp#7n54qga7rbd8n8iio83hb3gli9>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/context#Agent> ;
+      rdf:predicate rdf:type ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_assistanceToilet#agent1> .
+
+<http://temp#obc1snaqsp70u827jcedip669h>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_assistanceToilet#go1> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#classifies> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_assistanceToilet#context1> .
+
+<http://temp#2vcg3h2pphonc335irg8im0nq8>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_assistanceToilet#agent1> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#defines> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_assistanceToilet#goToiletDesc1> .
+
+<http://temp#8tmef4dcqde022cruoi9tr9ril>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/context#Agent> ;
+      rdf:predicate rdf:type ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_assistanceToilet#agent2> .
+
+<http://temp#njvcsfkaqtui8bmjs53rofatf7>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_assistanceToilet#necessityPat1> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#defines> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_assistanceToilet#goToiletDesc1> .
+
+<http://temp#mrar2qigklscpmvot9cj2ressa>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_assistanceToilet#caregiver1> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#referenceEntity> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_assistanceToilet#assistance1> .
+
+<http://temp#o3tomubbh1ji2gchgqbk71jfqd>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/context#Situation> ;
+      rdf:predicate rdf:type ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_assistanceToilet#goToiletCtx1> .
+
+<http://temp#1rl8g3las9lnfps00o7idlrr4e>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_assistanceToilet#context2> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#defines> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_assistanceToilet#getUpDesc2> .
+
+<http://temp#ud9l697jevu16036s1oi5go5m1>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_assistanceToilet#Eugene> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#classifies> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_assistanceToilet#agent2> .
+
+<http://temp#riga7uu5d6khiv40idcgebcg30>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/onto#CareRecipient> ;
+      rdf:predicate rdf:type ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_assistanceToilet#Eugene> .
+
+<http://temp#8m1erggge8ecfvmbgbs8khqj30>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_assistanceToilet#assistance1> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#classifies> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_assistanceToilet#necessityPat1> .
+
+<http://temp#ebod1ar2jmgq7tkv8kdbq6lb8g>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_assistanceToilet#agent2> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#defines> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_assistanceToilet#getUpDesc2> .
+
+<http://temp#dp29t24n55u87h4bo4gku6pnng>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/context#ContextDescription> ;
+      rdf:predicate rdf:type ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_assistanceToilet#goToiletDesc1> .
+
+<http://temp#e4ukb6q5mh61gu1eqbtk55jt7r>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/action#Inform> ;
+      rdf:predicate rdf:type ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_assistanceToilet#speechAct1> .
+
+<http://temp#nfs7ru08hbr9b5ric49o2nsjq6>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_assistanceToilet#destination1> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#defines> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_assistanceToilet#goToiletDesc1> .
+
+<http://temp#in6scthi2ibmftsuisq1f696kf>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_assistanceToilet#toilet1> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#includes> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_assistanceToilet#goToiletCtx1> .
+
+<http://temp#d2rni35lgu6pfqogu9gb948dab>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_assistanceToilet#getUp2> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#classifies> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_assistanceToilet#context2> .
+
+<http://temp#6jguskdca2gluhvo9lt7ddlk58>
+      a       <http://kristina-project.eu/ontologies/responses#StatementResponse> ;
+      <http://kristina-project.eu/ontologies/responses#plausibility>
+              "1.0"^^xsd:double ;
+      <http://kristina-project.eu/ontologies/responses#rdf>
+              <http://temp#blej9umjak7g0o4chg44avlulj> , <http://temp#ifrsdupdbbeg0dj40lbur4jkcd> , <http://temp#27hcr4gu5juivhaq5dinljdugr> , <http://temp#clfa383el5564umd001si4eel2> , <http://temp#6s0ukepeil0vg1ln3r0lihdjc6> , <http://temp#8d5dnqfeuqut6u70irphsu3oe6> , <http://temp#ul0kcf77llac8bidbmj826nr90> , <http://temp#3vmkj7qfl7ave0ug39vcfvdluj> , <http://temp#7n54qga7rbd8n8iio83hb3gli9> , <http://temp#obc1snaqsp70u827jcedip669h> , <http://temp#2vcg3h2pphonc335irg8im0nq8> , <http://temp#8tmef4dcqde022cruoi9tr9ril> , <http://temp#njvcsfkaqtui8bmjs53rofatf7> , <http://temp#o3tomubbh1ji2gchgqbk71jfqd> , <http://temp#mrar2qigklscpmvot9cj2ressa> , <http://temp#1rl8g3las9lnfps00o7idlrr4e> , <http://temp#ud9l697jevu16036s1oi5go5m1> , <http://temp#ebod1ar2jmgq7tkv8kdbq6lb8g> , <http://temp#riga7uu5d6khiv40idcgebcg30> , <http://temp#8m1erggge8ecfvmbgbs8khqj30> , <http://temp#dp29t24n55u87h4bo4gku6pnng> , <http://temp#e4ukb6q5mh61gu1eqbtk55jt7r> , <http://temp#nfs7ru08hbr9b5ric49o2nsjq6> , <http://temp#in6scthi2ibmftsuisq1f696kf> , <http://temp#d2rni35lgu6pfqogu9gb948dab> , <http://temp#n63u426sfg03hdfkbuc8blmgv6> , <http://temp#jfuq4s12537mvjehokk4erpe53> , <http://temp#e1f948fv4mtdsmnnr6idnj687g> , <http://temp#fjqp9k8mt26vlipit1nr8n5cqt> , <http://temp#qolnej6ruc9eo1ft2hnq6813fh> , <http://temp#29dqfe59rj2bg5ndgmprcgrmmb> , <http://temp#hbfe1t9ontic8fftcecg7i54n7> , <http://temp#7cfttoqm6im0qjuuh6h4tot59v> , <http://temp#btq75rm4b5lucbmegrcpv4funv> , <http://temp#3amv8g2h9ip42br7c93ja4f23a> , <http://temp#j7un2096ednvo49o7t0sb6uf73> , <http://temp#76koat1qrlrb0fvgjbdujfsa3> , <http://temp#tut49vdlmndibf3sm2uqp5eq0a> ;
+      <http://kristina-project.eu/ontologies/responses#responseType>
+              <http://kristina-project.eu/ontologies/responses#structured> .
+
+<http://temp#n63u426sfg03hdfkbuc8blmgv6>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/context#ContextDescription> ;
+      rdf:predicate rdf:type ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_assistanceToilet#getUpDesc2> .
+
+<http://temp#e3q9ku210h500k8um4f3tjsids>
+      a       <http://kristina-project.eu/ontologies/responses#ResponseContainer> ;
+      <http://kristina-project.eu/ontologies/responses#containsResponse>
+              <http://temp#6jguskdca2gluhvo9lt7ddlk58> ;
+      <http://kristina-project.eu/ontologies/responses#conversationalContext>
+              <http://temp#9dsq3abr5llq8ibb61dj5fjifr> ;
+      <http://kristina-project.eu/ontologies/responses#timestamp>
+              "2016-07-28T15:03:14.634Z"^^xsd:dateTime .
+
+<http://temp#jfuq4s12537mvjehokk4erpe53>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_assistanceToilet#assistance1> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#includes> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_assistanceToilet#goToiletCtx1> .
+
+<http://temp#fjqp9k8mt26vlipit1nr8n5cqt>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_assistanceToilet#goToiletDesc1> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#satisfies> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_assistanceToilet#goToiletCtx1> .
+
+<http://temp#e1f948fv4mtdsmnnr6idnj687g>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/context#Situation> ;
+      rdf:predicate rdf:type ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_assistanceToilet#getUpCtx2> .
+
+<http://temp#qolnej6ruc9eo1ft2hnq6813fh>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/context#NecessityPattern> ;
+      rdf:predicate rdf:type ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_assistanceToilet#necessityPat1> .
+
+<http://temp#29dqfe59rj2bg5ndgmprcgrmmb>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_assistanceToilet#getUpCtx2> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#referenceContext> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_assistanceToilet#assistance1> .
+
+<http://temp#hbfe1t9ontic8fftcecg7i54n7>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_assistanceToilet#Eugene> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#includes> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_assistanceToilet#goToiletCtx1> .
+
+<http://temp#7cfttoqm6im0qjuuh6h4tot59v>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_assistanceToilet#toilet1> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#classifies> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_assistanceToilet#destination1> .
+
+<http://temp#btq75rm4b5lucbmegrcpv4funv>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/context#Context> ;
+      rdf:predicate rdf:type ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_assistanceToilet#context1> .
+
+<http://temp#3amv8g2h9ip42br7c93ja4f23a>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/onto#GetUp> ;
+      rdf:predicate rdf:type ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_assistanceToilet#getUp2> .
+
+<http://temp#j7un2096ednvo49o7t0sb6uf73>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_assistanceToilet#context1> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#defines> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_assistanceToilet#goToiletDesc1> .
+
+<http://temp#76koat1qrlrb0fvgjbdujfsa3>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/context#Destination> ;
+      rdf:predicate rdf:type ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_assistanceToilet#destination1> .
+
+<http://temp#tut49vdlmndibf3sm2uqp5eq0a>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/onto#Toilet> ;
+      rdf:predicate rdf:type ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_assistanceToilet#toilet1> .

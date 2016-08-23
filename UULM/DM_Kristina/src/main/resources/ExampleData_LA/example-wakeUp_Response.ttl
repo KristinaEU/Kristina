@@ -1,0 +1,152 @@
+@prefix : <http://kristina-project.eu/ontologies/la/exampledataResponse#> .
+@prefix act: <http://kristina-project.eu/ontologies/la/action#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix onto: <http://kristina-project.eu/ontologies/la/onto#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dialogue: <http://kristina-project.eu/ontologies/dialogue_actions#> .
+@base <http://kristina-project.eu/ontologies/la/exampledataResponse> .
+
+<http://kristina-project.eu/ontologies/la/exampledataResponse> rdf:type owl:Ontology ;
+                                                               
+                                                               owl:imports <http://kristina-project.eu/ontologies/la/action> ,
+                                                                           <http://kristina-project.eu/ontologies/la/onto> .
+
+
+#################################################################
+#
+#    Annotation properties
+#
+#################################################################
+
+
+###  http://kristina-project.eu/ontologies/la/context#hasValue
+
+<http://kristina-project.eu/ontologies/la/context#hasValue> rdf:type owl:AnnotationProperty .
+
+
+
+
+
+#################################################################
+#
+#    Individuals
+#
+#################################################################
+
+
+###  http://kristina-project.eu/ontologies/la/exampledataResponse#Eugene
+
+:Eugene rdf:type onto:CareRecipient ,
+                 owl:NamedIndividual .
+
+
+
+###  http://kristina-project.eu/ontologies/la/exampledataResponse#action1
+
+:action1 rdf:type dialogue:UserAction ,
+                  owl:NamedIndividual ;
+         
+         act:contains :speechAct1 .
+
+
+
+###  http://kristina-project.eu/ontologies/la/exampledataResponse#agent1
+
+:agent1 rdf:type <http://kristina-project.eu/ontologies/la/context#Agent> ,
+                 owl:NamedIndividual ;
+        
+        <http://kristina-project.eu/ontologies/la/context#classifies> :Eugene .
+
+
+
+###  http://kristina-project.eu/ontologies/la/exampledataResponse#context1
+
+:context1 rdf:type <http://kristina-project.eu/ontologies/la/context#Context> ,
+                   owl:NamedIndividual ;
+          
+          <http://kristina-project.eu/ontologies/la/context#classifies> :wakeUp1 .
+
+
+
+###  http://kristina-project.eu/ontologies/la/exampledataResponse#requestDesc1
+
+:requestDesc1 rdf:type <http://kristina-project.eu/ontologies/la/context#RequestDescription> ,
+                       owl:NamedIndividual ;
+              
+              <http://kristina-project.eu/ontologies/la/context#defines> :requested1 .
+
+
+
+###  http://kristina-project.eu/ontologies/la/exampledataResponse#requested1
+
+:requested1 rdf:type <http://kristina-project.eu/ontologies/la/context#RequestElement> ,
+                     owl:NamedIndividual ;
+            
+            <http://kristina-project.eu/ontologies/la/context#classifies> :time1 .
+
+
+
+###  http://kristina-project.eu/ontologies/la/exampledataResponse#speechAct1
+
+:speechAct1 rdf:type dialogue:Statement ,
+                     owl:NamedIndividual ;
+            
+            act:semanticContent :wakeUpCtx1 .
+
+
+
+###  http://kristina-project.eu/ontologies/la/exampledataResponse#startTime1
+
+:startTime1 rdf:type <http://kristina-project.eu/ontologies/la/context#StartTime> ,
+                     owl:NamedIndividual ;
+            
+            <http://kristina-project.eu/ontologies/la/context#classifies> :time1 .
+
+
+
+###  http://kristina-project.eu/ontologies/la/exampledataResponse#time1
+
+:time1 rdf:type onto:Time ,
+                owl:NamedIndividual ;
+       
+       <http://kristina-project.eu/ontologies/la/context#hasValue> "8 a.m."^^xsd:string .
+
+
+
+###  http://kristina-project.eu/ontologies/la/exampledataResponse#wakeUp1
+
+:wakeUp1 rdf:type onto:WakeUp ,
+                  owl:NamedIndividual .
+
+
+
+###  http://kristina-project.eu/ontologies/la/exampledataResponse#wakeUpCtx1
+
+:wakeUpCtx1 rdf:type <http://kristina-project.eu/ontologies/la/context#ContextSituation> ,
+                     owl:NamedIndividual ;
+            
+            <http://kristina-project.eu/ontologies/la/context#includes> :Eugene ,
+                                                                        :time1 ,
+                                                                        :wakeUp1 ;
+            
+            <http://kristina-project.eu/ontologies/la/context#satisfies> :wakeUpDesc1 .
+
+
+
+###  http://kristina-project.eu/ontologies/la/exampledataResponse#wakeUpDesc1
+
+:wakeUpDesc1 rdf:type <http://kristina-project.eu/ontologies/la/context#ContextDescription> ,
+                      owl:NamedIndividual ;
+             
+             <http://kristina-project.eu/ontologies/la/context#defines> :agent1 ,
+                                                                        :context1 ,
+                                                                        :startTime1 .
+
+
+
+
+###  Generated by the OWL API (version 3.5.1) http://owlapi.sourceforge.net
+

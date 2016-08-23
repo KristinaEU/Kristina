@@ -22,10 +22,14 @@ function getWorkspace() {
 function updateWorkspace() {
     var list = "<table><thead><tr><th>Workspace</th></tr></thead><tbody>";
     for (i = 0; i < workSpaceQueque.length; i++) {
-		if(selection == workSpaceQueque[i]){
-			list += "<tr class=\"sel\"><td>"+workSpaceQueque[i]+"</td></tr>";
-		}
-        else{
+    	var selected = false;
+    	for(j = 0; j < selection.length; j++){
+    		if(selection[j] == workSpaceQueque[i]){
+    			list += "<tr class=\"sel\"><td>"+workSpaceQueque[i]+"</td></tr>";
+    			selected = true;
+    		}
+    	}
+		if(selected == false){
 			list += "<tr><td>"+workSpaceQueque[i]+"</td></tr>";
 		}
     }

@@ -1,10 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <AffectComputation xmlns="xml.affect.de" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="xml.affect.de ../xsd/Affect.xsd">
 	<AvailableActs>
-		<ActSpecification name="Accuse" use="true" docu=""/>
-		<ActSpecification name="AnnounceConcern" use="true" docu=""/>
-		<ActSpecification name="Calm" use="true" docu=""/>
-		<ActSpecification name="Condemn" use="true" docu=""/>
+		<ActSpecification name="LowASR" use="true" docu=""/>
+		<ActSpecification name="Incomprehensible" use="true" docu=""/>
+		<ActSpecification name="Greet" use="true" docu=""/>
+		<ActSpecification name="Goodbye" use="true" docu=""/>
+		<ActSpecification name="Thank" use="true" docu=""/>
+		<ActSpecification name="StatementSad" use="true" docu=""/>
+		<ActSpecification name="StatementFine" use="true" docu=""/>
+		<ActSpecification name="ShareJoy" use="true" docu=""/>
+		<ActSpecification name="CheerUp" use="true" docu=""/>
+		<ActSpecification name="Console" use="true" docu=""/>
+		<ActSpecification name="RequestReasonEmotionSad" use="true" docu=""/>
+		<ActSpecification name="CalmDown" use="true" docu=""/>
+		<ActSpecification name="Apologise" use="true" docu=""/>
+		<ActSpecification name="RequesetRephrase" use="true" docu=""/>
+		<ActSpecification name="Accept" use="true" docu=""/>
+		<ActSpecification name="GreetSelf" use="true" docu=""/>
+		<ActSpecification name="GoodbyeSelf" use="true" docu=""/>
+		<ActSpecification name="AnswerThank" use="true" docu=""/>
+		<ActSpecification name="Motivate" use="true" docu=""/>
 	</AvailableActs>
 	<AvailableEmotions>
 		<EmotionSpecification name="Admiration" use="true" docu=""/>
@@ -71,7 +86,7 @@
 	</PersonalityRelations>
 	<RealtimeOutput enable="true" period="500">
 		<FileLog enable="false" file="docs/affect.log"/>
-		<ConsoleLog enable="true"/>
+		<ConsoleLog enable="false"/>
 	</RealtimeOutput>
-	<RuntimeInteractionMonitor enabled="true"/>
+	<RuntimeInteractionMonitor enabled="false"/>
 </AffectComputation>

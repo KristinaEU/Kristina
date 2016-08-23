@@ -1,0 +1,155 @@
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+<http://temp#78s5pou215c4chkfpulkpvtor1>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/context#TemporalAttribute> ;
+      rdf:predicate rdf:type ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_sleepTime#tempAttr1> .
+
+<http://temp#abthu0o8nggi798j1p4209bv2p>
+      a       <http://kristina-project.eu/ontologies/context-light#SleepTimeContext> .
+
+<http://temp#ltpgm04utkgaqlnfp0809ol1dh>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_sleepTime#time1> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#includes> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_sleepTime#sleepCtx1> .
+
+<http://temp#h0m4m1spu2c07u3i4us82euuag>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_sleepTime#Eugene> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#classifies> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_sleepTime#agent1> .
+
+<http://temp#s1014vkqvlcm4hcs1601489og8>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_sleepTime#Eugene> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#includes> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_sleepTime#sleepCtx1> .
+
+<http://temp#mca46m4a6iml0chfasoqfapkk7>
+      a       rdf:Statement ;
+      rdf:object "midnight" ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/onto#hasValue> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_sleepTime#time1> .
+
+<http://response-data>
+      a       owl:Ontology ;
+      owl:imports <http://kristina-project.eu/ontologies/responses> .
+
+<http://temp#5ho7jnohiemr6l2t2gp8jpmg3a>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/context#Context> ;
+      rdf:predicate rdf:type ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_sleepTime#context1> .
+
+<http://temp#p2tnpehggoeikm9un4oh6mkqao>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_sleepTime#context1> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#defines> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_sleepTime#sleepDesc1> .
+
+<http://temp#2fhoummtdg9ihtpf32aub93b19>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_sleepTime#agent1> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#defines> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_sleepTime#sleepDesc1> .
+
+<http://temp#ubpqhffb4luulktnhj86mlaeem>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_sleepTime#sleepDesc1> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#satisfies> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_sleepTime#sleepCtx1> .
+
+<http://temp#k83t44eu0260dj3rnb0ptvufo9>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_sleepTime#sleepCtx1> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/action#semanticContent> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_sleepTime#speechAct1> .
+
+<http://temp#bi6ao7o28eq9mt75rocq00qqn4>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_sleepTime#sleep1> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#includesEvent> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_sleepTime#sleepCtx1> .
+
+<http://temp#jfcclas1hf3vfq772s4mhmbpae>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/context#Situation> ;
+      rdf:predicate rdf:type ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_sleepTime#sleepCtx1> .
+
+<http://temp#f4j745neakpr4888educ4snpqe>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/onto#Sleep> ;
+      rdf:predicate rdf:type ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_sleepTime#sleep1> .
+
+<http://temp#5ddl573lfcgfo12cj1nkdhov12>
+      a       <http://kristina-project.eu/ontologies/responses#StatementResponse> ;
+      <http://kristina-project.eu/ontologies/responses#plausibility>
+              "1.0"^^xsd:double ;
+      <http://kristina-project.eu/ontologies/responses#rdf>
+              <http://temp#78s5pou215c4chkfpulkpvtor1> , <http://temp#3k4vcftq0jeai6oaebe3n115q0> , <http://temp#ltpgm04utkgaqlnfp0809ol1dh> , <http://temp#h0m4m1spu2c07u3i4us82euuag> , <http://temp#s1014vkqvlcm4hcs1601489og8> , <http://temp#mca46m4a6iml0chfasoqfapkk7> , <http://temp#piv46mpm520vkjro2gcrg609iv> , <http://temp#evb7qloik4j9671ckug8m0gcko> , <http://temp#5ho7jnohiemr6l2t2gp8jpmg3a> , <http://temp#p2tnpehggoeikm9un4oh6mkqao> , <http://temp#gh1e7mkodjrh20kdp86v939usk> , <http://temp#6ubjed3nj5570bobe7j9c0536c> , <http://temp#ubpqhffb4luulktnhj86mlaeem> , <http://temp#2fhoummtdg9ihtpf32aub93b19> , <http://temp#k83t44eu0260dj3rnb0ptvufo9> , <http://temp#mkha2aekdsuk3jb014o27hckiq> , <http://temp#bi6ao7o28eq9mt75rocq00qqn4> , <http://temp#jfcclas1hf3vfq772s4mhmbpae> , <http://temp#f4j745neakpr4888educ4snpqe> , <http://temp#obcum8shjoiq6odcvkd602cu1f> , <http://temp#1rrq6s7dsspj2dp1b3smphvni5> ;
+      <http://kristina-project.eu/ontologies/responses#responseType>
+              <http://kristina-project.eu/ontologies/responses#structured> .
+
+<http://temp#1rrq6s7dsspj2dp1b3smphvni5>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/context#Agent> ;
+      rdf:predicate rdf:type ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_sleepTime#agent1> .
+
+<http://temp#3k4vcftq0jeai6oaebe3n115q0>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/action#Inform> ;
+      rdf:predicate rdf:type ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_sleepTime#speechAct1> .
+
+<http://temp#bjq5ttj6raqshjjtn9vkbh7bro>
+      a       <http://kristina-project.eu/ontologies/responses#ResponseContainer> ;
+      <http://kristina-project.eu/ontologies/responses#containsResponse>
+              <http://temp#5ddl573lfcgfo12cj1nkdhov12> ;
+      <http://kristina-project.eu/ontologies/responses#conversationalContext>
+              <http://temp#abthu0o8nggi798j1p4209bv2p> ;
+      <http://kristina-project.eu/ontologies/responses#timestamp>
+              "2016-07-28T14:36:52.683Z"^^xsd:dateTime .
+
+<http://temp#piv46mpm520vkjro2gcrg609iv>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/onto#StartTime> ;
+      rdf:predicate rdf:type ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_sleepTime#time1> .
+
+<http://temp#evb7qloik4j9671ckug8m0gcko>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/context#ContextDescription> ;
+      rdf:predicate rdf:type ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_sleepTime#sleepDesc1> .
+
+<http://temp#6ubjed3nj5570bobe7j9c0536c>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_sleepTime#tempAttr1> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#defines> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_sleepTime#sleepDesc1> .
+
+<http://temp#gh1e7mkodjrh20kdp86v939usk>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/onto#CareRecipient> ;
+      rdf:predicate rdf:type ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_sleepTime#Eugene> .
+
+<http://temp#mkha2aekdsuk3jb014o27hckiq>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_sleepTime#time1> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#classifies> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_sleepTime#tempAttr1> .
+
+<http://temp#obcum8shjoiq6odcvkd602cu1f>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_sleepTime#sleep1> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#classifies> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_sleepTime#context1> .

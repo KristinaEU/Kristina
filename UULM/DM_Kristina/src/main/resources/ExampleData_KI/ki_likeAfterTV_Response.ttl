@@ -1,0 +1,746 @@
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+<http://temp#hamp03a1k0hspk12jvfhrtic84>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterTVGame#Eugene> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#classifies> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterTVGame#agent3> .
+
+<http://temp#9s5eg7s0dfr0lmltoccc3vc3o6>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/context#Agent> ;
+      rdf:predicate rdf:type ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterHair#agent3> .
+
+<http://temp#9lqhkkrerbnr9qag60rm7rcraj>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterHair#combCtx2> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#includes> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterHair#likeCtx1> .
+
+<http://temp#ue1h5139vo4oih8krfcbaqr7m5>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterTVGame#boardgame2> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#classifies> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterTVGame#theme2> .
+
+<http://temp#rrl9700t9l6h98l3jdce5lq3st>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/context#ContextDescription> ;
+      rdf:predicate rdf:type ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterTVGame#playDesc2> .
+
+<http://temp#159gopm8mf48ask4rgaghfmo7f>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/action#Inform> ;
+      rdf:predicate rdf:type ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterTVGame#speechAct1> .
+
+<http://temp#g0b6p887ld8c1v2g04mqs9qo16>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/onto#Like> ;
+      rdf:predicate rdf:type ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterHair#like1> .
+
+<http://temp#2it8dbp4lis9he9a72gbnlii69>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/context#Theme> ;
+      rdf:predicate rdf:type ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterHair#theme1> .
+
+<http://temp#huchqd3dh024hfh623thfcnl0h>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterHair#watchTV3> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#classifies> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterHair#context3> .
+
+<http://temp#fl54rdnlbdjbuml792rf9h7h8h>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/context#ContextDescription> ;
+      rdf:predicate rdf:type ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterHair#likeDesc1> .
+
+<http://temp#j1cmfbhnjaus9fetp15nd97j0m>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/onto#Watch> ;
+      rdf:predicate rdf:type ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterTVGame#watchTV3> .
+
+<http://temp#e440kn25r4k7coo73gosmvbukj>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/context#Context> ;
+      rdf:predicate rdf:type ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterTVGame#context1> .
+
+<http://temp#2h7dgp9hep9froddfm37cv5qag>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/context#Context> ;
+      rdf:predicate rdf:type ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterTVGame#context2> .
+
+<http://temp#8le6pu7t13hacqfik7uhid6jj2>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterTVGame#theme2> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#defines> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterTVGame#playDesc2> .
+
+<http://temp#6oqi4s1va9vvds1sblltka67pa>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterTVGame#Eugene> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#includes> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterTVGame#watchTVCtx3> .
+
+<http://temp#23l6s1d4tdu25a2p07pprbbk3r>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/context#Situation> ;
+      rdf:predicate rdf:type ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterHair#watchTVCtx3> .
+
+<http://temp#ev96sgul07v7iv2rhhfjhkktoj>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/context#Theme> ;
+      rdf:predicate rdf:type ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterHair#theme3> .
+
+<http://temp#vm4395k6fsu2fm4ad4i0s2q6to>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterHair#likeCtx1> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/action#semanticContent> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterHair#speechAct1> .
+
+<http://temp#khgdbpu0tlntuu5ms7br7ev495>
+      a       <http://kristina-project.eu/ontologies/responses#StatementResponse> ;
+      <http://kristina-project.eu/ontologies/responses#plausibility>
+              "1.0"^^xsd:double ;
+      <http://kristina-project.eu/ontologies/responses#rdf>
+              <http://temp#pfaltcv3jd63v53qeu99p26lfu> , <http://temp#hamp03a1k0hspk12jvfhrtic84> , <http://temp#ue1h5139vo4oih8krfcbaqr7m5> , <http://temp#ag1r9r1tnfvm18uhdqi6hvjmnq> , <http://temp#rrl9700t9l6h98l3jdce5lq3st> , <http://temp#159gopm8mf48ask4rgaghfmo7f> , <http://temp#f2oeohiaa9p0rv656iih3uh89v> , <http://temp#ohn32b5tn7e267tljn9d3uroqu> , <http://temp#uria1fs3fqb9kciaafb281dcc0> , <http://temp#j1cmfbhnjaus9fetp15nd97j0m> , <http://temp#sdtlnu777r8gbk1ith2fnjpc9s> , <http://temp#e440kn25r4k7coo73gosmvbukj> , <http://temp#2h7dgp9hep9froddfm37cv5qag> , <http://temp#cfee71evmiklk9a8qg8rs4ae5d> , <http://temp#oeb0hjtnga9mn1toglots3dcbj> , <http://temp#8le6pu7t13hacqfik7uhid6jj2> , <http://temp#6oqi4s1va9vvds1sblltka67pa> , <http://temp#k7fgsqp0mqssnfj6nk5i2qui34> , <http://temp#ek545kn4ghfc6q61ci1r8rvc6e> , <http://temp#u4knktpsurkkpm8a9q01m9cnf5> , <http://temp#uc6g3044h50srs3ut4bkc7r7as> , <http://temp#ktnjh3bi1tvsmhkvg94j7druok> , <http://temp#8mars7icr1arsmajsga8hsuu0u> , <http://temp#cksq0p8vime2cf5vaf3i17llkg> , <http://temp#d7631fasbom59th997qg5ntdnp> , <http://temp#qn0jcbfn0li7ugpp7r6psvfikr> , <http://temp#vjaar24cu50uvqmas7bue42h10> , <http://temp#84ugskasjdgq645lutat2l2jav> , <http://temp#6gnokl0sfdi0plbus6b2r2m56o> , <http://temp#2ub0i2b0pe367p58m3s7foi3qt> , <http://temp#qcqqn8th7apvlkujpm374mnu1v> , <http://temp#kh5ef22h7jc9aot0nelevgnlou> , <http://temp#5t1qfd899trg168pha7kcka539> , <http://temp#2ap0m57g7rorv30ts7fhplo97h> , <http://temp#kcib3q89kb37tb59uvscg9pkfl> , <http://temp#m4q7s93biq51fl56vlmnudng33> , <http://temp#1pofu2pm6u0hs8gn3cnk5kboci> , <http://temp#f2vm4oqujqi62qh0ugpiu6ifcd> , <http://temp#mdc022r55ticqo9lvdedc14mdr> , <http://temp#ooo2fjjqn16h79qpjef1bpv72c> , <http://temp#rmtmv9et3enab7ri364l5brvue> , <http://temp#bgfqftp1svs2e22cgil2aa7cq8> , <http://temp#fe1kvmj9j0ngajirah0kpn6kjn> , <http://temp#g8g0qaa7314p1j8ga4uq9uhuh4> , <http://temp#nj5j1cg75h5piah0pgfrkrug3l> , <http://temp#bo0ui7b3aseafj9m7jc4ti35f> , <http://temp#38f96edfhaq8aup87463snbfnd> , <http://temp#rr3r9h13oui1tdu823oht28qp4> , <http://temp#q1sum6l847riafp4ca2klrdahd> , <http://temp#r8iuljlnql27bdtkheson5muc8> , <http://temp#jsov9f8bb8fjd8pko77gbl3isv> , <http://temp#9iv4t190e6pg9bcpon00b9k9tj> , <http://temp#cj0h30ugd4ejdnckclob476ppm> , <http://temp#vfnpkre1f97vi9kj5ulvkkn88d> , <http://temp#urr1i1bs3orkp1t4cllpgg6kra> , <http://temp#jf17la5v7c0fl0hc72g0qhi1qi> , <http://temp#hhmklieoomubpev235v8docksk> , <http://temp#qbkes6esqitv05vbfl5cker0tl> ;
+      <http://kristina-project.eu/ontologies/responses#responseType>
+              <http://kristina-project.eu/ontologies/responses#structured> .
+
+<http://temp#nsgddn0hhb5gcphp8r8csegvbv>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterHair#agent2> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#defines> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterHair#combDesc2> .
+
+<http://temp#qljosagns0jv5gigqs540v13v4>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterHair#agent3> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#defines> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterHair#watchTVDesc3> .
+
+<http://temp#hcn6ss4ulisqkqm3sddcfof4b7>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/context#TemporalPattern> ;
+      rdf:predicate rdf:type ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterHair#tempPattern2> .
+
+<http://temp#e750qrjpoqtvlcsu23h9kd539p>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterHair#like1> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#includesEvent> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterHair#likeCtx1> .
+
+<http://temp#p6ab4fkot352m23c85754p68ah>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterHair#Eugene> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#includes> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterHair#watchTVCtx3> .
+
+<http://temp#pk58ud3v35fr3muvcs4dgb5lsf>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterHair#comb2> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#includesEvent> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterHair#combCtx2> .
+
+<http://temp#8mars7icr1arsmajsga8hsuu0u>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterTVGame#playDesc2> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#satisfies> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterTVGame#playCtx2> .
+
+<http://temp#ktnjh3bi1tvsmhkvg94j7druok>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/context#Situation> ;
+      rdf:predicate rdf:type ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterTVGame#playCtx2> .
+
+<http://temp#b86n0glbk21oadq8i7evdu7u3p>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/context#Context> ;
+      rdf:predicate rdf:type ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterHair#context2> .
+
+<http://temp#cksq0p8vime2cf5vaf3i17llkg>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterTVGame#likeDesc1> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#satisfies> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterTVGame#likeCtx1> .
+
+<http://temp#d7631fasbom59th997qg5ntdnp>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterTVGame#playCtx2> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#classifies> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterTVGame#theme1> .
+
+<http://temp#qn0jcbfn0li7ugpp7r6psvfikr>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterTVGame#agent3> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#defines> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterTVGame#watchTVDesc3> .
+
+<http://temp#84ugskasjdgq645lutat2l2jav>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterTVGame#watchTV3> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#includesEvent> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterTVGame#watchTVCtx3> .
+
+<http://temp#uehnmq4hp2n6t4uefoj9ls6k0o>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/context#ContextDescription> ;
+      rdf:predicate rdf:type ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterHair#combDesc2> .
+
+<http://temp#v0rnt3f8modjbl89ncgg1rrnub>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterHair#likeDesc1> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#satisfies> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterHair#likeCtx1> .
+
+<http://temp#2ub0i2b0pe367p58m3s7foi3qt>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterTVGame#likeCtx1> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/action#semanticContent> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterTVGame#speechAct1> .
+
+<http://temp#kh5ef22h7jc9aot0nelevgnlou>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterTVGame#boardgame2> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#includes> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterTVGame#playCtx2> .
+
+<http://temp#5t1qfd899trg168pha7kcka539>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterTVGame#Eugene> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#includes> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterTVGame#likeCtx1> .
+
+<http://temp#e4d6gqd97afmq9331adkd9g6th>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/context#Theme> ;
+      rdf:predicate rdf:type ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterHair#theme2> .
+
+<http://temp#2ap0m57g7rorv30ts7fhplo97h>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterTVGame#playCtx2> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#includes> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterTVGame#likeCtx1> .
+
+<http://temp#ukikt0aqadkillrob2q6kpqqb3>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/onto#TV> ;
+      rdf:predicate rdf:type ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterHair#tv3> .
+
+<http://temp#mke2p7lkbimqdqk3t6o306qdf3>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterHair#agent1> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#defines> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterHair#likeDesc1> .
+
+<http://temp#f2vm4oqujqi62qh0ugpiu6ifcd>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterTVGame#context1> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#defines> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterTVGame#likeDesc1> .
+
+<http://temp#1pofu2pm6u0hs8gn3cnk5kboci>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterTVGame#theme1> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#defines> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterTVGame#likeDesc1> .
+
+<http://temp#mdc022r55ticqo9lvdedc14mdr>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/context#TemporalPattern> ;
+      rdf:predicate rdf:type ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterTVGame#tempPattern2> .
+
+<http://temp#ooo2fjjqn16h79qpjef1bpv72c>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/context#ContextDescription> ;
+      rdf:predicate rdf:type ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterTVGame#likeDesc1> .
+
+<http://temp#7fsvpv1ajong83p13rhnjhierb>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterHair#combCtx2> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#classifies> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterHair#theme1> .
+
+<http://temp#75n8g9c8364mm621mjrt29ujoe>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterHair#after2> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#classifies> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterHair#tempPattern2> .
+
+<http://temp#rmtmv9et3enab7ri364l5brvue>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterTVGame#watchTV3> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#classifies> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterTVGame#context3> .
+
+<http://temp#fe1kvmj9j0ngajirah0kpn6kjn>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterTVGame#context2> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#defines> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterTVGame#playDesc2> .
+
+<http://temp#nj5j1cg75h5piah0pgfrkrug3l>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterTVGame#watchTVDesc3> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#satisfies> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterTVGame#watchTVCtx3> .
+
+<http://temp#hitncp8ulmqmt171hfmkc3dk6l>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/onto#Watch> ;
+      rdf:predicate rdf:type ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterHair#watchTV3> .
+
+<http://temp#7ulfv67flgb8jtm7t03cb756r2>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterHair#comb2> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#classifies> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterHair#context2> .
+
+<http://temp#38f96edfhaq8aup87463snbfnd>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/onto#Play> ;
+      rdf:predicate rdf:type ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterTVGame#play2> .
+
+<http://temp#fa0o2j0tdf4jhkmr4cd8oq268j>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterHair#watchTV3> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#includesEvent> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterHair#watchTVCtx3> .
+
+<http://temp#rr3r9h13oui1tdu823oht28qp4>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/context#Theme> ;
+      rdf:predicate rdf:type ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterTVGame#theme1> .
+
+<http://temp#n082ndgass3i0e1v12ukfbr44d>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterHair#person2> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#includes> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterHair#combCtx2> .
+
+<http://temp#q1sum6l847riafp4ca2klrdahd>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterTVGame#tv3> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#classifies> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterTVGame#theme3> .
+
+<http://temp#3ucc582uea133e95jv6051rpao>
+      a       <http://kristina-project.eu/ontologies/responses#ResponseContainer> ;
+      <http://kristina-project.eu/ontologies/responses#containsResponse>
+              <http://temp#khgdbpu0tlntuu5ms7br7ev495> , <http://temp#48feg70j43epi7v1ih3dck66pt> ;
+      <http://kristina-project.eu/ontologies/responses#conversationalContext>
+              <http://temp#l7op444g0pqlebnet0ct3kfh8c> ;
+      <http://kristina-project.eu/ontologies/responses#timestamp>
+              "2016-07-28T15:05:17.867Z"^^xsd:dateTime .
+
+<http://temp#onsgeiq54t7vtmo067u9tun63v>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterHair#context1> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#defines> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterHair#likeDesc1> .
+
+<http://temp#9iv4t190e6pg9bcpon00b9k9tj>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterTVGame#Eugene> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#classifies> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterTVGame#agent2> .
+
+<http://temp#7m21m51e36ur4i1s31hgbavlv>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterHair#watchTVDesc3> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#satisfies> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterHair#watchTVCtx3> .
+
+<http://temp#4nsnff7vus19je6t849fk893kt>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/onto#CareRecipient> ;
+      rdf:predicate rdf:type ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterHair#Eugene> .
+
+<http://temp#cj0h30ugd4ejdnckclob476ppm>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterTVGame#agent1> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#defines> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterTVGame#likeDesc1> .
+
+<http://temp#pjjn0r3bvg2j8jikonl93re80t>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterHair#watchTVCtx3> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#referenceContext> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterHair#after2> .
+
+<http://temp#ahd3poj0qmnht9lvhd1gj7bhbq>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterHair#Eugene> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#classifies> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterHair#agent3> .
+
+<http://temp#urr1i1bs3orkp1t4cllpgg6kra>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/context#Situation> ;
+      rdf:predicate rdf:type ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterTVGame#likeCtx1> .
+
+<http://temp#b5dgn3stt4d5f9k4s43ekvm50u>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterHair#context2> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#defines> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterHair#combDesc2> .
+
+<http://temp#r9jdi3kouke4332ve3jsjjc088>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/context#Context> ;
+      rdf:predicate rdf:type ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterHair#context1> .
+
+<http://temp#e9i8cbaadj9ssqi3fo43f2tind>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterHair#combDesc2> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#satisfies> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterHair#combCtx2> .
+
+<http://temp#e0bkna6g8q8esod74n4scb8rbe>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterHair#tv3> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#includes> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterHair#watchTVCtx3> .
+
+<http://temp#pfaltcv3jd63v53qeu99p26lfu>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/context#Agent> ;
+      rdf:predicate rdf:type ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterTVGame#agent1> .
+
+<http://temp#2lqrqvvst5n1cv1d2tnmas5nkm>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterHair#theme1> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#defines> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterHair#likeDesc1> .
+
+<http://temp#ag1r9r1tnfvm18uhdqi6hvjmnq>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterTVGame#play2> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#includesEvent> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterTVGame#playCtx2> .
+
+<http://temp#piuap217fqnla3c7mq7ipvq8g0>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterHair#after2> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#includes> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterHair#combCtx2> .
+
+<http://temp#5r3cl698rdh90sq61gar2tfhl9>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/context#Agent> ;
+      rdf:predicate rdf:type ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterHair#agent1> .
+
+<http://temp#unlsaoghr3kip5rudfsh2ebd19>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/onto#Hair> ;
+      rdf:predicate rdf:type ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterHair#hair2> .
+
+<http://temp#43v3t6ljcup6uu7gg5jmoq3r45>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterHair#like1> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#classifies> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterHair#context1> .
+
+<http://temp#f2oeohiaa9p0rv656iih3uh89v>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterTVGame#play2> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#classifies> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterTVGame#context2> .
+
+<http://temp#ohn32b5tn7e267tljn9d3uroqu>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/onto#Like> ;
+      rdf:predicate rdf:type ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterTVGame#like1> .
+
+<http://temp#dbdo8i6fp1csgs519m45rqq51s>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/context#Situation> ;
+      rdf:predicate rdf:type ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterHair#combCtx2> .
+
+<http://response-data>
+      a       owl:Ontology ;
+      owl:imports <http://kristina-project.eu/ontologies/responses> .
+
+<http://temp#uria1fs3fqb9kciaafb281dcc0>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterTVGame#watchTVCtx3> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#referenceContext> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterTVGame#after2> .
+
+<http://temp#d2bedutdaaeuhlm0rkn6cv5qu5>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterHair#person2> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#classifies> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterHair#agent2> .
+
+<http://temp#itcdq0gt4rmiav6o75oml3niqk>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/context#Context> ;
+      rdf:predicate rdf:type ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterHair#context3> .
+
+<http://temp#sdtlnu777r8gbk1ith2fnjpc9s>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/context#Context> ;
+      rdf:predicate rdf:type ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterTVGame#context3> .
+
+<http://temp#cfee71evmiklk9a8qg8rs4ae5d>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterTVGame#tempPattern2> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#defines> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterTVGame#playDesc2> .
+
+<http://temp#oeb0hjtnga9mn1toglots3dcbj>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterTVGame#like1> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#includesEvent> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterTVGame#likeCtx1> .
+
+<http://temp#k7fgsqp0mqssnfj6nk5i2qui34>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterTVGame#like1> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#classifies> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterTVGame#context1> .
+
+<http://temp#9nnnal533ednsvf7hhiq2rqbos>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterHair#theme3> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#defines> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterHair#watchTVDesc3> .
+
+<http://temp#ni6spno8r7eka21u0spsnr3q2d>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/context#ContextDescription> ;
+      rdf:predicate rdf:type ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterHair#watchTVDesc3> .
+
+<http://temp#ek545kn4ghfc6q61ci1r8rvc6e>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/onto#After> ;
+      rdf:predicate rdf:type ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterTVGame#after2> .
+
+<http://temp#tdkdke1mmcpdmfo75nnfok4e2u>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterHair#hair2> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#includes> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterHair#combCtx2> .
+
+<http://temp#4vdlh41uapek4sn819394vi1ht>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/onto#Person> ;
+      rdf:predicate rdf:type ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterHair#person2> .
+
+<http://temp#hnc3a2vdqdeul4e8cme9p9lqmo>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterHair#theme2> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#defines> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterHair#combDesc2> .
+
+<http://temp#u4knktpsurkkpm8a9q01m9cnf5>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/onto#CareRecipient> ;
+      rdf:predicate rdf:type ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterTVGame#Eugene> .
+
+<http://temp#hgu8nk2urvssc410rtam1kms44>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterHair#tempPattern2> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#defines> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterHair#combDesc2> .
+
+<http://temp#uc6g3044h50srs3ut4bkc7r7as>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/context#Agent> ;
+      rdf:predicate rdf:type ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterTVGame#agent3> .
+
+<http://temp#krd0ugak4nr7m8l07nj2tke3f9>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterHair#tv3> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#classifies> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterHair#theme3> .
+
+<http://temp#vjaar24cu50uvqmas7bue42h10>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/context#Agent> ;
+      rdf:predicate rdf:type ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterTVGame#agent2> .
+
+<http://temp#6gnokl0sfdi0plbus6b2r2m56o>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterTVGame#after2> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#includes> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterTVGame#playCtx2> .
+
+<http://temp#qcqqn8th7apvlkujpm374mnu1v>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/context#Situation> ;
+      rdf:predicate rdf:type ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterTVGame#watchTVCtx3> .
+
+<http://temp#1m3rshfvnb1k0rbg5h02sk3sl7>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterHair#hair2> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#classifies> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterHair#theme2> .
+
+<http://temp#2tbab2sn9jisobb8968nkct0to>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterHair#Eugene> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#classifies> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterHair#agent1> .
+
+<http://temp#3nbb6gs24qgg2vpmc14rs35bfu>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterHair#hair2> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/onto#hasBodyPart> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterHair#Eugene> .
+
+<http://temp#kcib3q89kb37tb59uvscg9pkfl>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterTVGame#agent2> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#defines> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterTVGame#playDesc2> .
+
+<http://temp#b6bhhutlniiagrl3klavt2iodb>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterHair#context3> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#defines> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterHair#watchTVDesc3> .
+
+<http://temp#48feg70j43epi7v1ih3dck66pt>
+      a       <http://kristina-project.eu/ontologies/responses#StatementResponse> ;
+      <http://kristina-project.eu/ontologies/responses#plausibility>
+              "1.0"^^xsd:double ;
+      <http://kristina-project.eu/ontologies/responses#rdf>
+              <http://temp#e0bkna6g8q8esod74n4scb8rbe> , <http://temp#9lqhkkrerbnr9qag60rm7rcraj> , <http://temp#2lqrqvvst5n1cv1d2tnmas5nkm> , <http://temp#9s5eg7s0dfr0lmltoccc3vc3o6> , <http://temp#unlsaoghr3kip5rudfsh2ebd19> , <http://temp#piuap217fqnla3c7mq7ipvq8g0> , <http://temp#5r3cl698rdh90sq61gar2tfhl9> , <http://temp#43v3t6ljcup6uu7gg5jmoq3r45> , <http://temp#g0b6p887ld8c1v2g04mqs9qo16> , <http://temp#2it8dbp4lis9he9a72gbnlii69> , <http://temp#huchqd3dh024hfh623thfcnl0h> , <http://temp#dbdo8i6fp1csgs519m45rqq51s> , <http://temp#fl54rdnlbdjbuml792rf9h7h8h> , <http://temp#d2bedutdaaeuhlm0rkn6cv5qu5> , <http://temp#itcdq0gt4rmiav6o75oml3niqk> , <http://temp#23l6s1d4tdu25a2p07pprbbk3r> , <http://temp#ev96sgul07v7iv2rhhfjhkktoj> , <http://temp#9nnnal533ednsvf7hhiq2rqbos> , <http://temp#vm4395k6fsu2fm4ad4i0s2q6to> , <http://temp#ni6spno8r7eka21u0spsnr3q2d> , <http://temp#tdkdke1mmcpdmfo75nnfok4e2u> , <http://temp#4vdlh41uapek4sn819394vi1ht> , <http://temp#hnc3a2vdqdeul4e8cme9p9lqmo> , <http://temp#qljosagns0jv5gigqs540v13v4> , <http://temp#hcn6ss4ulisqkqm3sddcfof4b7> , <http://temp#nsgddn0hhb5gcphp8r8csegvbv> , <http://temp#e750qrjpoqtvlcsu23h9kd539p> , <http://temp#p6ab4fkot352m23c85754p68ah> , <http://temp#hgu8nk2urvssc410rtam1kms44> , <http://temp#pk58ud3v35fr3muvcs4dgb5lsf> , <http://temp#b86n0glbk21oadq8i7evdu7u3p> , <http://temp#krd0ugak4nr7m8l07nj2tke3f9> , <http://temp#uehnmq4hp2n6t4uefoj9ls6k0o> , <http://temp#v0rnt3f8modjbl89ncgg1rrnub> , <http://temp#1m3rshfvnb1k0rbg5h02sk3sl7> , <http://temp#3nbb6gs24qgg2vpmc14rs35bfu> , <http://temp#e4d6gqd97afmq9331adkd9g6th> , <http://temp#2tbab2sn9jisobb8968nkct0to> , <http://temp#ukikt0aqadkillrob2q6kpqqb3> , <http://temp#b6bhhutlniiagrl3klavt2iodb> , <http://temp#mke2p7lkbimqdqk3t6o306qdf3> , <http://temp#iubr78jt4dncfka53jnnthm0q9> , <http://temp#7fsvpv1ajong83p13rhnjhierb> , <http://temp#75n8g9c8364mm621mjrt29ujoe> , <http://temp#7f4nhdqs32bcs7gt6shvsiqdqt> , <http://temp#hitncp8ulmqmt171hfmkc3dk6l> , <http://temp#7ulfv67flgb8jtm7t03cb756r2> , <http://temp#fa0o2j0tdf4jhkmr4cd8oq268j> , <http://temp#n082ndgass3i0e1v12ukfbr44d> , <http://temp#onsgeiq54t7vtmo067u9tun63v> , <http://temp#4nsnff7vus19je6t849fk893kt> , <http://temp#7m21m51e36ur4i1s31hgbavlv> , <http://temp#pjjn0r3bvg2j8jikonl93re80t> , <http://temp#ahd3poj0qmnht9lvhd1gj7bhbq> , <http://temp#b5dgn3stt4d5f9k4s43ekvm50u> , <http://temp#tniik2mil9kl3541ceb6cmiglh> , <http://temp#mebql0fto3o94omn4eno7tclgm> , <http://temp#m7ns2r1ob243c1rju1onr6nrso> , <http://temp#e9i8cbaadj9ssqi3fo43f2tind> , <http://temp#r9jdi3kouke4332ve3jsjjc088> ;
+      <http://kristina-project.eu/ontologies/responses#responseType>
+              <http://kristina-project.eu/ontologies/responses#structured> .
+
+<http://temp#m4q7s93biq51fl56vlmnudng33>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/onto#BoardGame> ;
+      rdf:predicate rdf:type ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterTVGame#boardgame2> .
+
+<http://temp#iubr78jt4dncfka53jnnthm0q9>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/onto#After> ;
+      rdf:predicate rdf:type ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterHair#after2> .
+
+<http://temp#7f4nhdqs32bcs7gt6shvsiqdqt>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterHair#Eugene> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#includes> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterHair#likeCtx1> .
+
+<http://temp#bgfqftp1svs2e22cgil2aa7cq8>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/context#Theme> ;
+      rdf:predicate rdf:type ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterTVGame#theme3> .
+
+<http://temp#g8g0qaa7314p1j8ga4uq9uhuh4>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/onto#TV> ;
+      rdf:predicate rdf:type ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterTVGame#tv3> .
+
+<http://temp#bo0ui7b3aseafj9m7jc4ti35f>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterTVGame#context3> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#defines> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterTVGame#watchTVDesc3> .
+
+<http://temp#r8iuljlnql27bdtkheson5muc8>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterTVGame#Eugene> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#classifies> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterTVGame#agent1> .
+
+<http://temp#jsov9f8bb8fjd8pko77gbl3isv>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/context#ContextDescription> ;
+      rdf:predicate rdf:type ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterTVGame#watchTVDesc3> .
+
+<http://temp#vfnpkre1f97vi9kj5ulvkkn88d>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterTVGame#Eugene> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#includes> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterTVGame#playCtx2> .
+
+<http://temp#l7op444g0pqlebnet0ct3kfh8c>
+      a       <http://kristina-project.eu/ontologies/context-light#LikesToDoAfterAnActivityContext> .
+
+<http://temp#mebql0fto3o94omn4eno7tclgm>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/context#Situation> ;
+      rdf:predicate rdf:type ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterHair#likeCtx1> .
+
+<http://temp#tniik2mil9kl3541ceb6cmiglh>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/onto#Comb> ;
+      rdf:predicate rdf:type ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterHair#comb2> .
+
+<http://temp#jf17la5v7c0fl0hc72g0qhi1qi>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterTVGame#tv3> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#includes> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterTVGame#watchTVCtx3> .
+
+<http://temp#m7ns2r1ob243c1rju1onr6nrso>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/action#Inform> ;
+      rdf:predicate rdf:type ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterHair#speechAct1> .
+
+<http://temp#qbkes6esqitv05vbfl5cker0tl>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterTVGame#theme3> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#defines> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterTVGame#watchTVDesc3> .
+
+<http://temp#hhmklieoomubpev235v8docksk>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterTVGame#after2> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#classifies> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_likeAfterTVGame#tempPattern2> .

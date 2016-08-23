@@ -1,0 +1,361 @@
+@prefix : <http://kristina-project.eu/ontologies/la/context#> .
+@prefix dul: <http://www.loa-cnr.it/ontologies/DUL.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://kristina-project.eu/ontologies/la/context> .
+
+<http://kristina-project.eu/ontologies/la/context> rdf:type owl:Ontology .
+
+
+#################################################################
+#
+#    Object Properties
+#
+#################################################################
+
+
+###  http://kristina-project.eu/ontologies/la/context#classifies
+
+:classifies rdf:type owl:ObjectProperty .
+
+
+
+###  http://kristina-project.eu/ontologies/la/context#defines
+
+:defines rdf:type owl:ObjectProperty .
+
+
+
+###  http://kristina-project.eu/ontologies/la/context#includes
+
+:includes rdf:type owl:ObjectProperty ,
+                   owl:TransitiveProperty .
+
+
+
+###  http://kristina-project.eu/ontologies/la/context#satisfies
+
+:satisfies rdf:type owl:ObjectProperty .
+
+
+
+
+
+#################################################################
+#
+#    Classes
+#
+#################################################################
+
+
+###  http://kristina-project.eu/ontologies/la/context#Agent
+
+:Agent rdf:type owl:Class ;
+       
+       owl:equivalentClass [ rdf:type owl:Class ;
+                             owl:oneOf ( :agent
+                                       )
+                           ] ;
+       
+       rdfs:subClassOf :ContextConcept .
+
+
+
+###  http://kristina-project.eu/ontologies/la/context#Attribute
+
+:Attribute rdf:type owl:Class ;
+           
+           rdfs:subClassOf :Entity .
+
+
+
+###  http://kristina-project.eu/ontologies/la/context#Concept
+
+:Concept rdf:type owl:Class .
+
+
+
+###  http://kristina-project.eu/ontologies/la/context#ContextConcept
+
+:ContextConcept rdf:type owl:Class ;
+                
+                rdfs:subClassOf :Concept .
+
+
+
+###  http://kristina-project.eu/ontologies/la/context#ContextDescription
+
+:ContextDescription rdf:type owl:Class ;
+                    
+                    rdfs:subClassOf :Description ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :defines ;
+                                      owl:someValuesFrom :ContextConcept
+                                    ] .
+
+
+
+###  http://kristina-project.eu/ontologies/la/context#ContextSituation
+
+:ContextSituation rdf:type owl:Class ;
+                  
+                  rdfs:subClassOf :Situation ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :satisfies ;
+                                    owl:someValuesFrom :ContextDescription
+                                  ] .
+
+
+
+###  http://kristina-project.eu/ontologies/la/context#Description
+
+:Description rdf:type owl:Class ;
+             
+             rdfs:subClassOf [ rdf:type owl:Restriction ;
+                               owl:onProperty :defines ;
+                               owl:someValuesFrom :Concept
+                             ] .
+
+
+
+###  http://kristina-project.eu/ontologies/la/context#EndTime
+
+:EndTime rdf:type owl:Class ;
+         
+         owl:equivalentClass [ rdf:type owl:Class ;
+                               owl:oneOf ( :endTime
+                                         )
+                             ] ;
+         
+         rdfs:subClassOf :Time .
+
+
+
+###  http://kristina-project.eu/ontologies/la/context#Entity
+
+:Entity rdf:type owl:Class .
+
+
+
+###  http://kristina-project.eu/ontologies/la/context#Event
+
+:Event rdf:type owl:Class ;
+       
+       rdfs:subClassOf :Entity .
+
+
+
+###  http://kristina-project.eu/ontologies/la/context#FNConcept
+
+:FNConcept rdf:type owl:Class ;
+           
+           rdfs:subClassOf :Concept .
+
+
+
+###  http://kristina-project.eu/ontologies/la/context#FrameDescription
+
+:FrameDescription rdf:type owl:Class ;
+                  
+                  rdfs:subClassOf :Description ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :defines ;
+                                    owl:someValuesFrom :LexicalUnit
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :defines ;
+                                    owl:someValuesFrom :FrameElement
+                                  ] .
+
+
+
+###  http://kristina-project.eu/ontologies/la/context#FrameElement
+
+:FrameElement rdf:type owl:Class ;
+              
+              rdfs:subClassOf :FNConcept .
+
+
+
+###  http://kristina-project.eu/ontologies/la/context#FrameSituation
+
+:FrameSituation rdf:type owl:Class ;
+                
+                rdfs:subClassOf :Situation ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :satisfies ;
+                                  owl:someValuesFrom :FrameDescription
+                                ] .
+
+
+
+###  http://kristina-project.eu/ontologies/la/context#GoToBedContext
+
+:GoToBedContext rdf:type owl:Class ;
+                
+                rdfs:subClassOf :ContextSituation .
+
+
+
+###  http://kristina-project.eu/ontologies/la/context#LexicalUnit
+
+:LexicalUnit rdf:type owl:Class ;
+             
+             rdfs:subClassOf :FNConcept .
+
+
+
+###  http://kristina-project.eu/ontologies/la/context#RequestDescription
+
+:RequestDescription rdf:type owl:Class ;
+                    
+                    rdfs:subClassOf :Description ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :defines ;
+                                      owl:someValuesFrom :RequestElement
+                                    ] .
+
+
+
+###  http://kristina-project.eu/ontologies/la/context#RequestElement
+
+:RequestElement rdf:type owl:Class ;
+                
+                owl:equivalentClass [ rdf:type owl:Class ;
+                                      owl:oneOf ( :requestElement
+                                                )
+                                    ] ;
+                
+                rdfs:subClassOf :Concept .
+
+
+
+###  http://kristina-project.eu/ontologies/la/context#Situation
+
+:Situation rdf:type owl:Class ;
+           
+           rdfs:subClassOf [ rdf:type owl:Restriction ;
+                             owl:onProperty :satisfies ;
+                             owl:someValuesFrom :Description
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :includes ;
+                             owl:someValuesFrom [ rdf:type owl:Class ;
+                                                  owl:unionOf ( :Entity
+                                                                :Situation
+                                                              )
+                                                ]
+                           ] .
+
+
+
+###  http://kristina-project.eu/ontologies/la/context#StartTime
+
+:StartTime rdf:type owl:Class ;
+           
+           owl:equivalentClass [ rdf:type owl:Class ;
+                                 owl:oneOf ( :startTime
+                                           )
+                               ] ;
+           
+           rdfs:subClassOf :Time .
+
+
+
+###  http://kristina-project.eu/ontologies/la/context#TemporalInterval
+
+:TemporalInterval rdf:type owl:Class ;
+                  
+                  rdfs:subClassOf :Entity .
+
+
+
+###  http://kristina-project.eu/ontologies/la/context#Time
+
+:Time rdf:type owl:Class ;
+      
+      rdfs:subClassOf :ContextConcept .
+
+
+
+###  http://kristina-project.eu/ontologies/la/context#WakeUpContext
+
+:WakeUpContext rdf:type owl:Class ;
+               
+               rdfs:subClassOf :ContextSituation .
+
+
+
+###  http://kristina-project.eu/ontologies/la/context#WakeUpFrameDescription
+
+:WakeUpFrameDescription rdf:type owl:Class ;
+                        
+                        rdfs:subClassOf :FrameDescription .
+
+
+
+###  http://kristina-project.eu/ontologies/la/context#WakeUpSituation
+
+:WakeUpSituation rdf:type owl:Class ;
+                 
+                 rdfs:subClassOf :FrameSituation .
+
+
+
+
+
+#################################################################
+#
+#    Individuals
+#
+#################################################################
+
+
+###  http://kristina-project.eu/ontologies/la/context#Sleeper.waking_up
+
+:Sleeper.waking_up rdf:type :FrameElement ,
+                            owl:NamedIndividual .
+
+
+
+###  http://kristina-project.eu/ontologies/la/context#agent
+
+:agent rdf:type :Agent ,
+                owl:NamedIndividual .
+
+
+
+###  http://kristina-project.eu/ontologies/la/context#endTime
+
+:endTime rdf:type :EndTime ,
+                  owl:NamedIndividual .
+
+
+
+###  http://kristina-project.eu/ontologies/la/context#requestElement
+
+:requestElement rdf:type :RequestElement ,
+                         owl:NamedIndividual .
+
+
+
+###  http://kristina-project.eu/ontologies/la/context#startTime
+
+:startTime rdf:type :StartTime ,
+                    owl:NamedIndividual .
+
+
+
+###  http://kristina-project.eu/ontologies/la/context#wake-up-v.waking_up
+
+:wake-up-v.waking_up rdf:type :LexicalUnit ,
+                              owl:NamedIndividual .
+
+
+
+
+###  Generated by the OWL API (version 3.5.1) http://owlapi.sourceforge.net
+

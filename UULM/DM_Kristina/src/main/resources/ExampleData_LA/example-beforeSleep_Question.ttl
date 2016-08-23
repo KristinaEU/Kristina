@@ -1,0 +1,249 @@
+@prefix : <http://kristina-project.eu/ontologies/la/exampledataQuestion#> .
+@prefix act: <http://kristina-project.eu/ontologies/la/action#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix onto: <http://kristina-project.eu/ontologies/la/onto#> .
+@prefix dialogue: <http://kristina-project.eu/ontologies/dialogue_actions#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://kristina-project.eu/ontologies/la/exampledataQuestion> .
+
+<http://kristina-project.eu/ontologies/la/exampledataQuestion> rdf:type owl:Ontology ;
+                                                               
+                                                               owl:imports <http://kristina-project.eu/ontologies/la/action> ,
+                                                                           <http://kristina-project.eu/ontologies/la/onto> .
+
+
+#################################################################
+#
+#    Classes
+#
+#################################################################
+
+
+###  http://kristina-project.eu/ontologies/la/context#Event
+
+<http://kristina-project.eu/ontologies/la/context#Event> rdf:type owl:Class .
+
+
+
+###  http://kristina-project.eu/ontologies/la/context#Time
+
+<http://kristina-project.eu/ontologies/la/context#Time> rdf:type owl:Class .
+
+
+
+
+
+#################################################################
+#
+#    Individuals
+#
+#################################################################
+
+
+###  http://kristina-project.eu/ontologies/la/exampledataQuestion#Eugene
+
+:Eugene rdf:type onto:CareRecipient ,
+                 owl:NamedIndividual .
+
+
+
+###  http://kristina-project.eu/ontologies/la/exampledataQuestion#action1
+
+:action1 rdf:type dialogue:UserAction ,
+                  owl:NamedIndividual ;
+         
+         act:contains :speechAct1 .
+
+
+
+###  http://kristina-project.eu/ontologies/la/exampledataQuestion#agent1
+
+:agent1 rdf:type <http://kristina-project.eu/ontologies/la/context#Agent> ,
+                 owl:NamedIndividual ;
+        
+        <http://kristina-project.eu/ontologies/la/context#classifies> :Eugene .
+
+
+
+###  http://kristina-project.eu/ontologies/la/exampledataQuestion#agent2
+
+:agent2 rdf:type <http://kristina-project.eu/ontologies/la/context#Agent> ,
+                 owl:NamedIndividual ;
+        
+        <http://kristina-project.eu/ontologies/la/context#classifies> :Eugene .
+
+
+
+###  http://kristina-project.eu/ontologies/la/exampledataQuestion#antecedent1
+
+:antecedent1 rdf:type <http://kristina-project.eu/ontologies/la/context#Antecedent> ,
+                      owl:NamedIndividual ;
+             
+             <http://kristina-project.eu/ontologies/la/context#classifies> :sleepCtx1 .
+
+
+
+###  http://kristina-project.eu/ontologies/la/exampledataQuestion#context1
+
+:context1 rdf:type <http://kristina-project.eu/ontologies/la/context#Context> ,
+                   owl:NamedIndividual ;
+          
+          <http://kristina-project.eu/ontologies/la/context#classifies> :sleep1 .
+
+
+
+###  http://kristina-project.eu/ontologies/la/exampledataQuestion#context2
+
+:context2 rdf:type <http://kristina-project.eu/ontologies/la/context#Context> ,
+                   owl:NamedIndividual ;
+          
+          <http://kristina-project.eu/ontologies/la/context#classifies> :event2 .
+
+
+
+###  http://kristina-project.eu/ontologies/la/exampledataQuestion#event2
+
+:event2 rdf:type <http://kristina-project.eu/ontologies/la/context#Event> ,
+                 owl:NamedIndividual .
+
+
+
+###  http://kristina-project.eu/ontologies/la/exampledataQuestion#eventCtx2
+
+:eventCtx2 rdf:type <http://kristina-project.eu/ontologies/la/context#ContextSituation> ,
+                    owl:NamedIndividual ;
+           
+           <http://kristina-project.eu/ontologies/la/context#includes> :Eugene ,
+                                                                       :event2 ;
+           
+           <http://kristina-project.eu/ontologies/la/context#satisfies> :eventDesc2 .
+
+
+
+###  http://kristina-project.eu/ontologies/la/exampledataQuestion#eventDesc2
+
+:eventDesc2 rdf:type <http://kristina-project.eu/ontologies/la/context#ContextDescription> ,
+                     owl:NamedIndividual ;
+            
+            <http://kristina-project.eu/ontologies/la/context#defines> :agent2 ,
+                                                                       :context2 .
+
+
+
+###  http://kristina-project.eu/ontologies/la/exampledataQuestion#precedent1
+
+:precedent1 rdf:type <http://kristina-project.eu/ontologies/la/context#Precedent> ,
+                     owl:NamedIndividual ;
+            
+            <http://kristina-project.eu/ontologies/la/context#classifies> :eventCtx2 .
+
+
+
+###  http://kristina-project.eu/ontologies/la/exampledataQuestion#requestDesc1
+
+:requestDesc1 rdf:type <http://kristina-project.eu/ontologies/la/context#RequestDescription> ,
+                       owl:NamedIndividual ;
+              
+              <http://kristina-project.eu/ontologies/la/context#defines> :requested1 .
+
+
+
+###  http://kristina-project.eu/ontologies/la/exampledataQuestion#requested1
+
+:requested1 rdf:type <http://kristina-project.eu/ontologies/la/context#RequestElement> ,
+                     owl:NamedIndividual ;
+            
+            <http://kristina-project.eu/ontologies/la/context#classifies> :eventCtx2 .
+
+
+
+###  http://kristina-project.eu/ontologies/la/exampledataQuestion#sleep1
+
+:sleep1 rdf:type onto:Sleep ,
+                 owl:NamedIndividual .
+
+
+
+###  http://kristina-project.eu/ontologies/la/exampledataQuestion#sleepCtx1
+
+:sleepCtx1 rdf:type <http://kristina-project.eu/ontologies/la/context#ContextSituation> ,
+                    owl:NamedIndividual ;
+           
+           <http://kristina-project.eu/ontologies/la/context#includes> :Eugene ,
+                                                                       :sleep1 ;
+           
+           <http://kristina-project.eu/ontologies/la/context#satisfies> :sleepDesc1 .
+
+
+
+###  http://kristina-project.eu/ontologies/la/exampledataQuestion#sleepDesc1
+
+:sleepDesc1 rdf:type <http://kristina-project.eu/ontologies/la/context#ContextDescription> ,
+                     owl:NamedIndividual ;
+            
+            <http://kristina-project.eu/ontologies/la/context#defines> :agent1 ,
+                                                                       :context1 .
+
+
+
+###  http://kristina-project.eu/ontologies/la/exampledataQuestion#speechAct1
+
+:speechAct1 rdf:type dialogue:Request ,
+                     owl:NamedIndividual ;
+            
+            act:textualContent "At what time does Eugene wake up?"^^xsd:string ;
+            
+            act:individualType "true"^^xsd:boolean ;
+            
+            act:semanticContent :sleepCtx1 .
+
+
+
+###  http://kristina-project.eu/ontologies/la/exampledataQuestion#startTime1
+
+:startTime1 rdf:type <http://kristina-project.eu/ontologies/la/context#StartTime> ,
+                     owl:NamedIndividual ;
+            
+            <http://kristina-project.eu/ontologies/la/context#classifies> :time1 .
+
+
+
+###  http://kristina-project.eu/ontologies/la/exampledataQuestion#temporalSequenceCtx3
+
+:temporalSequenceCtx3 rdf:type <http://kristina-project.eu/ontologies/la/context#Situation> ,
+                               owl:NamedIndividual ;
+                      
+                      <http://kristina-project.eu/ontologies/la/context#includes> :eventCtx2 ;
+                      
+                      <http://kristina-project.eu/ontologies/la/context#satisfies> :requestDesc1 ;
+                      
+                      <http://kristina-project.eu/ontologies/la/context#includes> :sleepCtx1 ;
+                      
+                      <http://kristina-project.eu/ontologies/la/context#satisfies> :temporalSequenceDesc1 .
+
+
+
+###  http://kristina-project.eu/ontologies/la/exampledataQuestion#temporalSequenceDesc1
+
+:temporalSequenceDesc1 rdf:type <http://kristina-project.eu/ontologies/la/context#TemporalSequence> ,
+                                owl:NamedIndividual ;
+                       
+                       <http://kristina-project.eu/ontologies/la/context#defines> :antecedent1 ,
+                                                                                  :precedent1 .
+
+
+
+###  http://kristina-project.eu/ontologies/la/exampledataQuestion#time1
+
+:time1 rdf:type <http://kristina-project.eu/ontologies/la/context#Time> ,
+                onto:Time ,
+                owl:NamedIndividual .
+
+
+
+
+###  Generated by the OWL API (version 3.5.1) http://owlapi.sourceforge.net
+

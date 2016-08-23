@@ -1,0 +1,167 @@
+@prefix : <http://kristina-project.eu/ontologies/la/example#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://kristina-project.eu/ontologies/la/example> .
+
+<http://kristina-project.eu/ontologies/la/example> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://kristina-project.eu/ontologies/la/act#contains
+<http://kristina-project.eu/ontologies/la/act#contains> rdf:type owl:ObjectProperty .
+
+
+###  http://kristina-project.eu/ontologies/la/context#classifies
+<http://kristina-project.eu/ontologies/la/context#classifies> rdf:type owl:ObjectProperty .
+
+
+###  http://kristina-project.eu/ontologies/la/context#defines
+<http://kristina-project.eu/ontologies/la/context#defines> rdf:type owl:ObjectProperty .
+
+
+###  http://kristina-project.eu/ontologies/la/context#includesEvent
+<http://kristina-project.eu/ontologies/la/context#includesEvent> rdf:type owl:ObjectProperty .
+
+
+###  http://kristina-project.eu/ontologies/la/context#inlcudes
+<http://kristina-project.eu/ontologies/la/context#inlcudes> rdf:type owl:ObjectProperty .
+
+
+###  http://kristina-project.eu/ontologies/la/context#satisfies
+<http://kristina-project.eu/ontologies/la/context#satisfies> rdf:type owl:ObjectProperty .
+
+
+###  http://kristina-project.eu/ontologies/la/context#semanticContent
+<http://kristina-project.eu/ontologies/la/context#semanticContent> rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://kristina-project.eu/ontologies/la/act#sentenceASRConfidence
+<http://kristina-project.eu/ontologies/la/act#sentenceASRConfidence> rdf:type owl:DatatypeProperty .
+
+
+###  http://kristina-project.eu/ontologies/la/act#textualContent
+<http://kristina-project.eu/ontologies/la/act#textualContent> rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://kristina-project.eu/ontologies/dialogue_actions#Request
+<http://kristina-project.eu/ontologies/dialogue_actions#Request> rdf:type owl:Class .
+
+
+###  http://kristina-project.eu/ontologies/dialogue_actions#UserAction
+<http://kristina-project.eu/ontologies/dialogue_actions#UserAction> rdf:type owl:Class .
+
+
+###  http://kristina-project.eu/ontologies/la/context#Argument1
+<http://kristina-project.eu/ontologies/la/context#Argument1> rdf:type owl:Class .
+
+
+###  http://kristina-project.eu/ontologies/la/context#Argument2
+<http://kristina-project.eu/ontologies/la/context#Argument2> rdf:type owl:Class .
+
+
+###  http://kristina-project.eu/ontologies/la/context#Context
+<http://kristina-project.eu/ontologies/la/context#Context> rdf:type owl:Class .
+
+
+###  http://kristina-project.eu/ontologies/la/context#ContextDescription
+<http://kristina-project.eu/ontologies/la/context#ContextDescription> rdf:type owl:Class .
+
+
+###  http://kristina-project.eu/ontologies/la/context#Situation
+<http://kristina-project.eu/ontologies/la/context#Situation> rdf:type owl:Class .
+
+
+###  http://kristina-project.eu/ontologies/la/onto#Article
+<http://kristina-project.eu/ontologies/la/onto#Article> rdf:type owl:Class .
+
+
+###  http://kristina-project.eu/ontologies/la/onto#Read
+<http://kristina-project.eu/ontologies/la/onto#Read> rdf:type owl:Class .
+
+
+###  http://kristina-project.eu/ontologies/la/onto#You
+<http://kristina-project.eu/ontologies/la/onto#You> rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://kristina-project.eu/ontologies/la/example#Argument19
+:Argument19 rdf:type owl:NamedIndividual ,
+                     <http://kristina-project.eu/ontologies/la/context#Argument1> ;
+            <http://kristina-project.eu/ontologies/la/context#classifies> :you3 .
+
+
+###  http://kristina-project.eu/ontologies/la/example#Argument210
+:Argument210 rdf:type owl:NamedIndividual ,
+                      <http://kristina-project.eu/ontologies/la/context#Argument2> ;
+             <http://kristina-project.eu/ontologies/la/context#classifies> :article5 .
+
+
+###  http://kristina-project.eu/ontologies/la/example#action1
+:action1 rdf:type owl:NamedIndividual ,
+                  <http://kristina-project.eu/ontologies/dialogue_actions#UserAction> ;
+         <http://kristina-project.eu/ontologies/la/act#contains> :speechAct2 ;
+         <http://kristina-project.eu/ontologies/la/act#sentenceASRConfidence> "0.8"^^xsd:float ;
+         <http://kristina-project.eu/ontologies/la/act#textualContent> "user sentence"^^xsd:string .
+
+
+###  http://kristina-project.eu/ontologies/la/example#article5
+:article5 rdf:type owl:NamedIndividual ,
+                   <http://kristina-project.eu/ontologies/la/onto#Article> .
+
+
+###  http://kristina-project.eu/ontologies/la/example#context8
+:context8 rdf:type owl:NamedIndividual ,
+                   <http://kristina-project.eu/ontologies/la/context#Context> ;
+          <http://kristina-project.eu/ontologies/la/context#classifies> :read4 .
+
+
+###  http://kristina-project.eu/ontologies/la/example#read4
+:read4 rdf:type owl:NamedIndividual ,
+                <http://kristina-project.eu/ontologies/la/onto#Read> .
+
+
+###  http://kristina-project.eu/ontologies/la/example#readCtx6
+:readCtx6 rdf:type owl:NamedIndividual ,
+                   <http://kristina-project.eu/ontologies/la/context#Situation> ;
+          <http://kristina-project.eu/ontologies/la/context#includesEvent> :read4 ;
+          <http://kristina-project.eu/ontologies/la/context#inlcudes> :article5 ,
+                                                                      :you3 ;
+          <http://kristina-project.eu/ontologies/la/context#satisfies> :readDesc7 .
+
+
+###  http://kristina-project.eu/ontologies/la/example#readDesc7
+:readDesc7 rdf:type owl:NamedIndividual ,
+                    <http://kristina-project.eu/ontologies/la/context#ContextDescription> ;
+           <http://kristina-project.eu/ontologies/la/context#defines> :Argument19 ,
+                                                                      :Argument210 ,
+                                                                      :context8 .
+
+
+###  http://kristina-project.eu/ontologies/la/example#speechAct2
+:speechAct2 rdf:type owl:NamedIndividual ,
+                     <http://kristina-project.eu/ontologies/dialogue_actions#Request> ;
+            <http://kristina-project.eu/ontologies/la/context#semanticContent> :readCtx6 .
+
+
+###  http://kristina-project.eu/ontologies/la/example#you3
+:you3 rdf:type owl:NamedIndividual ,
+               <http://kristina-project.eu/ontologies/la/onto#You> .
+
+
+###  Generated by the OWL API (version 4.2.5.20160517-0735) https://github.com/owlcs/owlapi

@@ -1,0 +1,441 @@
+@prefix : <http://kristina-project.eu/ontologies/dialogue_actions#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://kristina-project.eu/ontologies/dialogue_actions> a owl:Ontology .
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://kristina-project.eu/ontologies/dialogue_actions#containsSystemAct
+
+:containsSystemAct a owl:ObjectProperty .
+# 
+# http://kristina-project.eu/ontologies/dialogue_actions#startWith
+
+:startWith a owl:ObjectProperty .
+# 
+# http://kristina-project.eu/ontologies/dialogue_actions#containsSemantics
+
+<http://kristina-project.eu/ontologies/dialogue_actions#containsSemantics> a owl:ObjectProperty .
+# 
+# http://kristina-project.eu/ontologies/dialogue_actions#directness
+
+<http://kristina-project.eu/ontologies/dialogue_actions#directness> a owl:ObjectProperty .
+# 
+# http://kristina-project.eu/ontologies/dialogue_actions#followedBy
+
+<http://kristina-project.eu/ontologies/dialogue_actions#followedBy> a owl:ObjectProperty .
+# 
+# http://kristina-project.eu/ontologies/dialogue_actions#hasArousal
+
+<http://kristina-project.eu/ontologies/dialogue_actions#hasArousal> a owl:ObjectProperty .
+# 
+# http://kristina-project.eu/ontologies/dialogue_actions#hasValence
+
+<http://kristina-project.eu/ontologies/dialogue_actions#hasValence> a owl:ObjectProperty .
+# 
+# http://kristina-project.eu/ontologies/dialogue_actions#isAdvice
+
+<http://kristina-project.eu/ontologies/dialogue_actions#isAdvice> a owl:ObjectProperty .
+# 
+# http://kristina-project.eu/ontologies/dialogue_actions#isBelief
+
+<http://kristina-project.eu/ontologies/dialogue_actions#isBelief> a owl:ObjectProperty .
+# 
+# http://kristina-project.eu/ontologies/dialogue_actions#isFormal
+
+<http://kristina-project.eu/ontologies/dialogue_actions#isFormal> a owl:ObjectProperty .
+# 
+# http://kristina-project.eu/ontologies/dialogue_actions#verbosity
+
+<http://kristina-project.eu/ontologies/dialogue_actions#verbosity> a owl:ObjectProperty .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://kristina-project.eu/ontologies/dialogue_actions#AdressEmotion
+
+:AdressEmotion a owl:Class ;
+	rdfs:subClassOf :EmotionalSystemAction .
+# 
+# http://kristina-project.eu/ontologies/dialogue_actions#AfternoonGreet
+
+:AfternoonGreet a owl:Class ;
+	rdfs:subClassOf :Greet .
+# 
+# http://kristina-project.eu/ontologies/dialogue_actions#AfternoonSayGoodbye
+
+:AfternoonSayGoodbye a owl:Class ;
+	rdfs:subClassOf :SayGoodbye .
+# 
+# http://kristina-project.eu/ontologies/dialogue_actions#AnswerThank
+
+:AnswerThank a owl:Class ;
+	rdfs:subClassOf :Thank .
+# 
+# http://kristina-project.eu/ontologies/dialogue_actions#Apologise
+
+:Apologise a owl:Class ;
+	rdfs:subClassOf :IndependentDialogueAct .
+# 
+# http://kristina-project.eu/ontologies/dialogue_actions#AskMood
+
+:AskMood a owl:Class ;
+	rdfs:subClassOf :StartConversation .
+# 
+# http://kristina-project.eu/ontologies/dialogue_actions#AskPlans
+
+:AskPlans a owl:Class ;
+	rdfs:subClassOf :StartConversation .
+# 
+# http://kristina-project.eu/ontologies/dialogue_actions#AskTask
+
+:AskTask a owl:Class ;
+	rdfs:subClassOf :StartConversation .
+# 
+# http://kristina-project.eu/ontologies/dialogue_actions#AskTaskSuccess
+
+:AskTaskSuccess a owl:Class ;
+	rdfs:subClassOf :StartConversation .
+# 
+# http://kristina-project.eu/ontologies/dialogue_actions#AskWellBeing
+
+:AskWellBeing a owl:Class ;
+	rdfs:subClassOf :StartConversation .
+# 
+# http://kristina-project.eu/ontologies/dialogue_actions#CalmDown
+
+:CalmDown a owl:Class ;
+	rdfs:subClassOf :EmotionalSystemAction .
+# 
+# http://kristina-project.eu/ontologies/dialogue_actions#CheerUp
+
+:CheerUp a owl:Class ;
+	rdfs:subClassOf :EmotionalSystemAction .
+# 
+# http://kristina-project.eu/ontologies/dialogue_actions#Clarify
+
+:Clarify a owl:Class ;
+	rdfs:subClassOf :IndependentDialogueAct .
+# 
+# http://kristina-project.eu/ontologies/dialogue_actions#Console
+
+:Console a owl:Class ;
+	rdfs:subClassOf :EmotionalSystemAction .
+# 
+# http://kristina-project.eu/ontologies/dialogue_actions#EmotionalSystemAction
+
+:EmotionalSystemAction a owl:Class ;
+	rdfs:subClassOf :IndependentDialogueAct .
+# 
+# http://kristina-project.eu/ontologies/dialogue_actions#EveningGreet
+
+:EveningGreet a owl:Class ;
+	rdfs:subClassOf :Greet .
+# 
+# http://kristina-project.eu/ontologies/dialogue_actions#EveningSayGoodbye
+
+:EveningSayGoodbye a owl:Class ;
+	rdfs:subClassOf :SayGoodbye .
+# 
+# http://kristina-project.eu/ontologies/dialogue_actions#Greet
+
+:Greet a owl:Class ;
+	rdfs:subClassOf :IndependentDialogueAct .
+# 
+# http://kristina-project.eu/ontologies/dialogue_actions#GroupOrientedMotivate
+
+:GroupOrientedMotivate a owl:Class ;
+	rdfs:subClassOf :Motivate .
+# 
+# http://kristina-project.eu/ontologies/dialogue_actions#Incomprehensible
+
+:Incomprehensible a owl:Class ;
+	rdfs:subClassOf :IndependentDialogueAct .
+# 
+# http://kristina-project.eu/ontologies/dialogue_actions#IndependentDialogueAct
+
+:IndependentDialogueAct a owl:Class .
+# 
+# http://kristina-project.eu/ontologies/dialogue_actions#IndividualisticallyOrientedMotivate
+
+:IndividualisticallyOrientedMotivate a owl:Class ;
+	rdfs:subClassOf :Motivate .
+# 
+# http://kristina-project.eu/ontologies/dialogue_actions#KISpecificDialogueActs
+
+:KISpecificDialogueActs a owl:Class .
+# 
+# http://kristina-project.eu/ontologies/dialogue_actions#MeetAgainSayGoodbye
+
+:MeetAgainSayGoodbye a owl:Class ;
+	rdfs:subClassOf :SayGoodbye .
+# 
+# http://kristina-project.eu/ontologies/dialogue_actions#MorningGreet
+
+:MorningGreet a owl:Class ;
+	rdfs:subClassOf :Greet .
+# 
+# http://kristina-project.eu/ontologies/dialogue_actions#MorningSayGoodbye
+
+:MorningSayGoodbye a owl:Class ;
+	rdfs:subClassOf :SayGoodbye .
+# 
+# http://kristina-project.eu/ontologies/dialogue_actions#Motivate
+
+:Motivate a owl:Class ;
+	rdfs:subClassOf :IndependentDialogueAct .
+# 
+# http://kristina-project.eu/ontologies/dialogue_actions#OnHold
+
+:OnHold a owl:Class ;
+	rdfs:subClassOf :IndependentDialogueAct .
+# 
+# http://kristina-project.eu/ontologies/dialogue_actions#PersonalAnswerThank
+
+:PersonalAnswerThank a owl:Class ;
+	rdfs:subClassOf :Thank .
+# 
+# http://kristina-project.eu/ontologies/dialogue_actions#PersonalApologise
+
+:PersonalApologise a owl:Class ;
+	rdfs:subClassOf :Apologise .
+# 
+# http://kristina-project.eu/ontologies/dialogue_actions#PersonalGreet
+
+:PersonalGreet a owl:Class ;
+	rdfs:subClassOf :Greet .
+# 
+# http://kristina-project.eu/ontologies/dialogue_actions#PersonalMotivate
+
+:PersonalMotivate a owl:Class ;
+	rdfs:subClassOf :Motivate .
+# 
+# http://kristina-project.eu/ontologies/dialogue_actions#PersonalSayGoodbye
+
+:PersonalSayGoodbye a owl:Class ;
+	rdfs:subClassOf :SayGoodbye .
+# 
+# http://kristina-project.eu/ontologies/dialogue_actions#PersonalThank
+
+:PersonalThank a owl:Class ;
+	rdfs:subClassOf :Thank .
+# 
+# http://kristina-project.eu/ontologies/dialogue_actions#RequestNewspaper
+
+:RequestNewspaper a owl:Class ;
+	rdfs:subClassOf :KISpecificDialogueActs .
+# 
+# http://kristina-project.eu/ontologies/dialogue_actions#RequestPresenceEmotion
+
+:RequestPresenceEmotion a owl:Class ;
+	rdfs:subClassOf :EmotionalSystemAction .
+# 
+# http://kristina-project.eu/ontologies/dialogue_actions#RequestReasonForEmotion
+
+:RequestReasonForEmotion a owl:Class ;
+	rdfs:subClassOf :EmotionalSystemAction .
+# 
+# http://kristina-project.eu/ontologies/dialogue_actions#RequestRepeat
+
+:RequestRepeat a owl:Class ;
+	rdfs:subClassOf :Clarify .
+# 
+# http://kristina-project.eu/ontologies/dialogue_actions#RequestRephrase
+
+:RequestRephrase a owl:Class ;
+	rdfs:subClassOf :Clarify .
+# 
+# http://kristina-project.eu/ontologies/dialogue_actions#RequestWeather
+
+:RequestWeather a owl:Class ;
+	rdfs:subClassOf :KISpecificDialogueActs .
+# 
+# http://kristina-project.eu/ontologies/dialogue_actions#SayGoodbye
+
+:SayGoodbye a owl:Class ;
+	rdfs:subClassOf :IndependentDialogueAct .
+# 
+# http://kristina-project.eu/ontologies/dialogue_actions#ShareJoy
+
+:ShareJoy a owl:Class ;
+	rdfs:subClassOf :EmotionalSystemAction .
+# 
+# http://kristina-project.eu/ontologies/dialogue_actions#ShowWeather
+
+:ShowWeather a owl:Class ;
+	rdfs:subClassOf <http://kristina-project.eu/ontologies/dialogue_actions#Show> .
+# 
+# http://kristina-project.eu/ontologies/dialogue_actions#SimpleApologise
+
+:SimpleApologise a owl:Class ;
+	rdfs:subClassOf :Apologise .
+# 
+# http://kristina-project.eu/ontologies/dialogue_actions#SimpleGreet
+
+:SimpleGreet a owl:Class ;
+	rdfs:subClassOf :Greet .
+# 
+# http://kristina-project.eu/ontologies/dialogue_actions#SimpleMotivate
+
+:SimpleMotivate a owl:Class ;
+	rdfs:subClassOf :Motivate .
+# 
+# http://kristina-project.eu/ontologies/dialogue_actions#SimpleSayGoodbye
+
+:SimpleSayGoodbye a owl:Class ;
+	rdfs:subClassOf :SayGoodbye .
+# 
+# http://kristina-project.eu/ontologies/dialogue_actions#SimpleThank
+
+:SimpleThank a owl:Class ;
+	rdfs:subClassOf :Thank .
+# 
+# http://kristina-project.eu/ontologies/dialogue_actions#StartConversation
+
+:StartConversation a owl:Class ;
+	rdfs:subClassOf :IndependentDialogueAct .
+# 
+# http://kristina-project.eu/ontologies/dialogue_actions#StateMissingComprehension
+
+:StateMissingComprehension a owl:Class ;
+	rdfs:subClassOf :Clarify .
+# 
+# http://kristina-project.eu/ontologies/dialogue_actions#SystemAction
+
+:SystemAction a owl:Class .
+# 
+# http://kristina-project.eu/ontologies/dialogue_actions#Thank
+
+:Thank a owl:Class ;
+	rdfs:subClassOf :IndependentDialogueAct .
+# 
+# http://kristina-project.eu/ontologies/dialogue_actions#UserAction
+
+:UserAction a owl:Class .
+# 
+# http://kristina-project.eu/ontologies/dialogue_actions#WeekendSayGoodbye
+
+:WeekendSayGoodbye a owl:Class ;
+	rdfs:subClassOf :SayGoodbye .
+# 
+# http://kristina-project.eu/ontologies/dialogue_actions#Accept
+
+<http://kristina-project.eu/ontologies/dialogue_actions#Accept> a owl:Class ;
+	rdfs:subClassOf <http://kristina-project.eu/ontologies/dialogue_actions#Statement> .
+# 
+# http://kristina-project.eu/ontologies/dialogue_actions#Acknowledge
+
+<http://kristina-project.eu/ontologies/dialogue_actions#Acknowledge> a owl:Class ;
+	rdfs:subClassOf <http://kristina-project.eu/ontologies/dialogue_actions#Statement> .
+# 
+# http://kristina-project.eu/ontologies/dialogue_actions#Advise
+
+<http://kristina-project.eu/ontologies/dialogue_actions#Advise> a owl:Class ;
+	rdfs:subClassOf <http://kristina-project.eu/ontologies/dialogue_actions#Statement> .
+# 
+# http://kristina-project.eu/ontologies/dialogue_actions#Declare
+
+<http://kristina-project.eu/ontologies/dialogue_actions#Declare> a owl:Class ;
+	rdfs:subClassOf <http://kristina-project.eu/ontologies/dialogue_actions#Statement> .
+# 
+# http://kristina-project.eu/ontologies/dialogue_actions#DependentDialogueAct
+
+<http://kristina-project.eu/ontologies/dialogue_actions#DependentDialogueAct> a owl:Class .
+# 
+# http://kristina-project.eu/ontologies/dialogue_actions#ExplicitlyConfirmRecognisedInput
+
+<http://kristina-project.eu/ontologies/dialogue_actions#ExplicitlyConfirmRecognisedInput> a owl:Class ;
+	rdfs:subClassOf <http://kristina-project.eu/ontologies/dialogue_actions#RequestClarification> .
+# 
+# http://kristina-project.eu/ontologies/dialogue_actions#ImplicitlyConfirmRecognisedInput
+
+<http://kristina-project.eu/ontologies/dialogue_actions#ImplicitlyConfirmRecognisedInput> a owl:Class ;
+	rdfs:subClassOf <http://kristina-project.eu/ontologies/dialogue_actions#RequestClarification> .
+# 
+# http://kristina-project.eu/ontologies/dialogue_actions#Obligate
+
+<http://kristina-project.eu/ontologies/dialogue_actions#Obligate> a owl:Class ;
+	rdfs:subClassOf <http://kristina-project.eu/ontologies/dialogue_actions#Statement> .
+# 
+# http://kristina-project.eu/ontologies/dialogue_actions#Order
+
+<http://kristina-project.eu/ontologies/dialogue_actions#Order> a owl:Class ;
+	rdfs:subClassOf <http://kristina-project.eu/ontologies/dialogue_actions#Statement> .
+# 
+# http://kristina-project.eu/ontologies/dialogue_actions#ReadNewspaper
+
+<http://kristina-project.eu/ontologies/dialogue_actions#ReadNewspaper> a owl:Class ;
+	rdfs:subClassOf <http://kristina-project.eu/ontologies/dialogue_actions#Show> .
+# 
+# http://kristina-project.eu/ontologies/dialogue_actions#Reject
+
+<http://kristina-project.eu/ontologies/dialogue_actions#Reject> a owl:Class ;
+	rdfs:subClassOf <http://kristina-project.eu/ontologies/dialogue_actions#Statement> .
+# 
+# http://kristina-project.eu/ontologies/dialogue_actions#RepeatPreviousUtterance
+
+<http://kristina-project.eu/ontologies/dialogue_actions#RepeatPreviousUtterance> a owl:Class ;
+	rdfs:subClassOf <http://kristina-project.eu/ontologies/dialogue_actions#RequestClarification> .
+# 
+# http://kristina-project.eu/ontologies/dialogue_actions#RephrasePreviousUtterance
+
+<http://kristina-project.eu/ontologies/dialogue_actions#RephrasePreviousUtterance> a owl:Class ;
+	rdfs:subClassOf <http://kristina-project.eu/ontologies/dialogue_actions#RequestClarification> .
+# 
+# http://kristina-project.eu/ontologies/dialogue_actions#Request
+
+<http://kristina-project.eu/ontologies/dialogue_actions#Request> a owl:Class ;
+	rdfs:subClassOf <http://kristina-project.eu/ontologies/dialogue_actions#DependentDialogueAct> .
+# 
+# http://kristina-project.eu/ontologies/dialogue_actions#RequestAdditionalInformation
+
+<http://kristina-project.eu/ontologies/dialogue_actions#RequestAdditionalInformation> a owl:Class ;
+	rdfs:subClassOf <http://kristina-project.eu/ontologies/dialogue_actions#Request> .
+# 
+# http://kristina-project.eu/ontologies/dialogue_actions#RequestClarification
+
+<http://kristina-project.eu/ontologies/dialogue_actions#RequestClarification> a owl:Class ;
+	rdfs:subClassOf <http://kristina-project.eu/ontologies/dialogue_actions#Request> .
+# 
+# http://kristina-project.eu/ontologies/dialogue_actions#RequestMissingInformation
+
+<http://kristina-project.eu/ontologies/dialogue_actions#RequestMissingInformation> a owl:Class ;
+	rdfs:subClassOf <http://kristina-project.eu/ontologies/dialogue_actions#Request> .
+# 
+# http://kristina-project.eu/ontologies/dialogue_actions#Show
+
+<http://kristina-project.eu/ontologies/dialogue_actions#Show> a owl:Class ;
+	rdfs:subClassOf <http://kristina-project.eu/ontologies/dialogue_actions#DependentDialogueAct> .
+# 
+# http://kristina-project.eu/ontologies/dialogue_actions#ShowVideo
+
+<http://kristina-project.eu/ontologies/dialogue_actions#ShowVideo> a owl:Class ;
+	rdfs:subClassOf <http://kristina-project.eu/ontologies/dialogue_actions#Show> .
+# 
+# http://kristina-project.eu/ontologies/dialogue_actions#ShowWebpage
+
+<http://kristina-project.eu/ontologies/dialogue_actions#ShowWebpage> a owl:Class ;
+	rdfs:subClassOf <http://kristina-project.eu/ontologies/dialogue_actions#Show> .
+# 
+# http://kristina-project.eu/ontologies/dialogue_actions#Statement
+
+<http://kristina-project.eu/ontologies/dialogue_actions#Statement> a owl:Class ;
+	rdfs:subClassOf <http://kristina-project.eu/ontologies/dialogue_actions#DependentDialogueAct> .
+# 
+# Generated by the OWL API (version 4.2.5.20160517-0735) https://github.com/owlcs/owlapi

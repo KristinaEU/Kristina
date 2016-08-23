@@ -1,0 +1,156 @@
+@prefix : <http://kristina-project.eu/ontologies/la/exampledata#> .
+@prefix act: <http://kristina-project.eu/ontologies/la/action#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix onto: <http://kristina-project.eu/ontologies/la/onto#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://kristina-project.eu/ontologies/la/exampledata> .
+
+<http://kristina-project.eu/ontologies/la/exampledata> rdf:type owl:Ontology ;
+                                                       
+                                                       owl:imports <http://kristina-project.eu/ontologies/la/action> ,
+                                                                   <http://kristina-project.eu/ontologies/la/onto> .
+
+
+#################################################################
+#
+#    Individuals
+#
+#################################################################
+
+
+###  http://kristina-project.eu/ontologies/la/context#Sleeper.waking_up
+
+<http://kristina-project.eu/ontologies/la/context#Sleeper.waking_up> <http://kristina-project.eu/ontologies/la/context#classifies> :Eugene .
+
+
+
+###  http://kristina-project.eu/ontologies/la/context#agent
+
+<http://kristina-project.eu/ontologies/la/context#agent> <http://kristina-project.eu/ontologies/la/context#classifies> :Eugene .
+
+
+
+###  http://kristina-project.eu/ontologies/la/context#requestElement
+
+<http://kristina-project.eu/ontologies/la/context#requestElement> <http://kristina-project.eu/ontologies/la/context#classifies> :time1 .
+
+
+
+###  http://kristina-project.eu/ontologies/la/context#startTime
+
+<http://kristina-project.eu/ontologies/la/context#startTime> <http://kristina-project.eu/ontologies/la/context#classifies> :time1 .
+
+
+
+###  http://kristina-project.eu/ontologies/la/context#wake-up-v.waking_up
+
+<http://kristina-project.eu/ontologies/la/context#wake-up-v.waking_up> <http://kristina-project.eu/ontologies/la/context#classifies> :wakeUp1 .
+
+
+
+###  http://kristina-project.eu/ontologies/la/exampledata#Eugene
+
+:Eugene rdf:type onto:Person ,
+                 owl:NamedIndividual .
+
+
+
+###  http://kristina-project.eu/ontologies/la/exampledata#Time.waking_up
+
+:Time.waking_up rdf:type <http://kristina-project.eu/ontologies/la/context#FrameElement> ,
+                         owl:NamedIndividual ;
+                
+                <http://kristina-project.eu/ontologies/la/context#classifies> :time1 .
+
+
+
+###  http://kristina-project.eu/ontologies/la/exampledata#action1
+
+:action1 rdf:type act:UserAction ,
+                  owl:NamedIndividual ;
+         
+         act:contains :speechAct1 .
+
+
+
+###  http://kristina-project.eu/ontologies/la/exampledata#requestDesc1
+
+:requestDesc1 rdf:type <http://kristina-project.eu/ontologies/la/context#RequestDescription> ,
+                       owl:NamedIndividual ;
+              
+              <http://kristina-project.eu/ontologies/la/context#defines> <http://kristina-project.eu/ontologies/la/context#requestElement> .
+
+
+
+###  http://kristina-project.eu/ontologies/la/exampledata#speechAct1
+
+:speechAct1 rdf:type act:Request ,
+                     owl:NamedIndividual ;
+            
+            act:textualContent "At what time does Eugene wake up?"^^xsd:string ;
+            
+            act:individualType "true"^^xsd:boolean ;
+            
+            act:semanticContent :wakeUpCtx1 .
+
+
+
+###  http://kristina-project.eu/ontologies/la/exampledata#time1
+
+:time1 rdf:type <http://kristina-project.eu/ontologies/la/context#TemporalInterval> ,
+                owl:NamedIndividual .
+
+
+
+###  http://kristina-project.eu/ontologies/la/exampledata#wakeUp1
+
+:wakeUp1 rdf:type onto:WakeUp ,
+                  owl:NamedIndividual .
+
+
+
+###  http://kristina-project.eu/ontologies/la/exampledata#wakeUpCtx1
+
+:wakeUpCtx1 rdf:type <http://kristina-project.eu/ontologies/la/context#WakeUpContext> ,
+                     <http://kristina-project.eu/ontologies/la/context#WakeUpSituation> ,
+                     owl:NamedIndividual ;
+            
+            <http://kristina-project.eu/ontologies/la/context#includes> :Eugene ;
+            
+            <http://kristina-project.eu/ontologies/la/context#satisfies> :requestDesc1 ;
+            
+            <http://kristina-project.eu/ontologies/la/context#includes> :time1 ,
+                                                                        :wakeUp1 ;
+            
+            <http://kristina-project.eu/ontologies/la/context#satisfies> :wakeUpCtxDesc1 ,
+                                                                         :wakeUpFNDesc1 .
+
+
+
+###  http://kristina-project.eu/ontologies/la/exampledata#wakeUpCtxDesc1
+
+:wakeUpCtxDesc1 rdf:type <http://kristina-project.eu/ontologies/la/context#ContextDescription> ,
+                         owl:NamedIndividual ;
+                
+                <http://kristina-project.eu/ontologies/la/context#defines> <http://kristina-project.eu/ontologies/la/context#agent> ,
+                                                                           <http://kristina-project.eu/ontologies/la/context#startTime> .
+
+
+
+###  http://kristina-project.eu/ontologies/la/exampledata#wakeUpFNDesc1
+
+:wakeUpFNDesc1 rdf:type <http://kristina-project.eu/ontologies/la/context#WakeUpFrameDescription> ,
+                        owl:NamedIndividual ;
+               
+               <http://kristina-project.eu/ontologies/la/context#defines> <http://kristina-project.eu/ontologies/la/context#Sleeper.waking_up> ,
+                                                                          <http://kristina-project.eu/ontologies/la/context#wake-up-v.waking_up> ,
+                                                                          :Time.waking_up .
+
+
+
+
+###  Generated by the OWL API (version 3.5.1) http://owlapi.sourceforge.net
+

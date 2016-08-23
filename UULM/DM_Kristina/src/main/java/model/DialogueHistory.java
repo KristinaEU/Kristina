@@ -38,4 +38,8 @@ public class DialogueHistory {
 		}
 		return null;
 	}
+	
+	public static void restart(String user){
+		history.removeAll(history);
+	}
 }

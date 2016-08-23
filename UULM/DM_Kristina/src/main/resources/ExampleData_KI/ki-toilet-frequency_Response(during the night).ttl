@@ -1,0 +1,227 @@
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+<http://temp#e1rfntdb1k5vevev1rnnnu1ve5>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_toiletFrequencyNight#during1> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#classifies> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_toiletFrequencyNight#tempPattern1> .
+
+<http://temp#ca5n2o3t7ohc97sl7c1f6v0psv>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/context#Situation> ;
+      rdf:predicate rdf:type ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_toiletFrequencyNight#goCtx1> .
+
+<http://temp#62m83j3o02sm9274h494kj37pv>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/onto#Go> ;
+      rdf:predicate rdf:type ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_toiletFrequencyNight#go1> .
+
+<http://temp#ni5kkq5qkf2m4fj93qq8d42tjf>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/context#Destination> ;
+      rdf:predicate rdf:type ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_toiletFrequencyNight#destination1> .
+
+<http://temp#hkie1jcu5k27apl07kpmlocc3m>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_toiletFrequencyNight#go1> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#includesEvent> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_toiletFrequencyNight#goCtx1> .
+
+<http://temp#7ohs20bdi4oc5pm18ja0ftfkuh>
+      a       <http://kristina-project.eu/ontologies/responses#StatementResponse> ;
+      <http://kristina-project.eu/ontologies/responses#plausibility>
+              "1.0"^^xsd:double ;
+      <http://kristina-project.eu/ontologies/responses#rdf>
+              <http://temp#e1rfntdb1k5vevev1rnnnu1ve5> , <http://temp#ca5n2o3t7ohc97sl7c1f6v0psv> , <http://temp#62m83j3o02sm9274h494kj37pv> , <http://temp#ni5kkq5qkf2m4fj93qq8d42tjf> , <http://temp#hkie1jcu5k27apl07kpmlocc3m> , <http://temp#pndlk3353nsjkcmmcok57uputa> , <http://temp#34eh4852objhe1qh7p9e3untsb> , <http://temp#6octo4gdu3o7jaou5qq1c4csbs> , <http://temp#2kbj30v3958qcbmao2qv8krc2k> , <http://temp#mqvkst56eok381p9k37s9d0hc8> , <http://temp#3kphcaui31hc9ut6mr3fa1o13u> , <http://temp#p3uomkp0irp3ak8fr9k9en1hqv> , <http://temp#no6ut26ln5qgvp1ighb6pa2rvv> , <http://temp#3k5m38p0ckpar306bgjiainha4> , <http://temp#9hc9a6787pv50kjj8n3lmt9gad> , <http://temp#38p252bjbc254j1j70h46tarr0> , <http://temp#ddnhu3981a64ofe19gq5ujojc8> , <http://temp#tumqfpstgom8djlji41esnd28a> , <http://temp#h3v3k1jj1f5ucaf5sunjhlt9po> , <http://temp#admapfvmb6nla9b6jf7f85mr4k> , <http://temp#a06e3p5ds4se97bhen8jo1cvf4> , <http://temp#dsjkglahmgk61pv313mtgq308c> , <http://temp#r0ka3nd5i6g2j6t2qd6iv1psnr> , <http://temp#nlntnn7esdgfqk056g072gckf5> , <http://temp#6lilso6t7mdg8oh3l67g21t6ib> , <http://temp#oktvgmnsqa7k6enb8uvm9gi4ef> , <http://temp#b156h0mjrai5rdnhlmi4urh14a> , <http://temp#i6613t09t1m87uplud7vnr5h7j> , <http://temp#ihmi155dacgldqes5kubq0kedn> , <http://temp#o1mskq2ulb5tvdjkgt7iuefon9> , <http://temp#gq22qhqd5tfqqaeq0fa6j0ikrt> , <http://temp#td4g9hfcl8lvod0rv4209l9qej> , <http://temp#nn5lht27152dn8fuvs9lrskiic> ;
+      <http://kristina-project.eu/ontologies/responses#responseType>
+              <http://kristina-project.eu/ontologies/responses#structured> .
+
+<http://temp#pndlk3353nsjkcmmcok57uputa>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_toiletFrequencyNight#goCtx1> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/action#semanticContent> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_toiletFrequencyNight#speechAct1> .
+
+<http://temp#34eh4852objhe1qh7p9e3untsb>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_toiletFrequencyNight#agent1> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#defines> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_toiletFrequencyNight#goDesc1> .
+
+<http://temp#6octo4gdu3o7jaou5qq1c4csbs>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_toiletFrequencyNight#context1> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#defines> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_toiletFrequencyNight#goDesc1> .
+
+<http://response-data>
+      a       owl:Ontology ;
+      owl:imports <http://kristina-project.eu/ontologies/responses> .
+
+<http://temp#2kbj30v3958qcbmao2qv8krc2k>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_toiletFrequencyNight#destination1> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#defines> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_toiletFrequencyNight#goDesc1> .
+
+<http://temp#mqvkst56eok381p9k37s9d0hc8>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_toiletFrequencyNight#toilet1> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#includes> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_toiletFrequencyNight#goCtx1> .
+
+<http://temp#3kphcaui31hc9ut6mr3fa1o13u>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_toiletFrequencyNight#tempPattern1> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#defines> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_toiletFrequencyNight#goDesc1> .
+
+<http://temp#p3uomkp0irp3ak8fr9k9en1hqv>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_toiletFrequencyNight#Eugene> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#classifies> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_toiletFrequencyNight#agent1> .
+
+<http://temp#no6ut26ln5qgvp1ighb6pa2rvv>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/onto#Frequency> ;
+      rdf:predicate rdf:type ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_toiletFrequencyNight#frequency1> .
+
+<http://temp#epvnu5s6nd4evj3scdj2ldcn2j>
+      a       <http://kristina-project.eu/ontologies/responses#ResponseContainer> ;
+      <http://kristina-project.eu/ontologies/responses#containsResponse>
+              <http://temp#7ohs20bdi4oc5pm18ja0ftfkuh> ;
+      <http://kristina-project.eu/ontologies/responses#conversationalContext>
+              <http://temp#9lusvf13hfd272gk5up23trh4j> ;
+      <http://kristina-project.eu/ontologies/responses#timestamp>
+              "2016-07-28T14:35:57.519Z"^^xsd:dateTime .
+
+<http://temp#3k5m38p0ckpar306bgjiainha4>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_toiletFrequencyNight#frequency1> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#includes> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_toiletFrequencyNight#goCtx1> .
+
+<http://temp#9hc9a6787pv50kjj8n3lmt9gad>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_toiletFrequencyNight#freqAttr1> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#defines> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_toiletFrequencyNight#goDesc1> .
+
+<http://temp#38p252bjbc254j1j70h46tarr0>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/context#FrequencyAttribute> ;
+      rdf:predicate rdf:type ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_toiletFrequencyNight#freqAttr1> .
+
+<http://temp#ddnhu3981a64ofe19gq5ujojc8>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/context#Agent> ;
+      rdf:predicate rdf:type ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_toiletFrequencyNight#agent1> .
+
+<http://temp#tumqfpstgom8djlji41esnd28a>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_toiletFrequencyNight#night1> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#referenceContext> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_toiletFrequencyNight#during1> .
+
+<http://temp#h3v3k1jj1f5ucaf5sunjhlt9po>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/context#ContextDescription> ;
+      rdf:predicate rdf:type ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_toiletFrequencyNight#goDesc1> .
+
+<http://temp#admapfvmb6nla9b6jf7f85mr4k>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/context#Context> ;
+      rdf:predicate rdf:type ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_toiletFrequencyNight#context1> .
+
+<http://temp#a06e3p5ds4se97bhen8jo1cvf4>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_toiletFrequencyNight#frequency1> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#classifies> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_toiletFrequencyNight#freqAttr1> .
+
+<http://temp#dsjkglahmgk61pv313mtgq308c>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/action#Inform> ;
+      rdf:predicate rdf:type ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_toiletFrequencyNight#speechAct1> .
+
+<http://temp#r0ka3nd5i6g2j6t2qd6iv1psnr>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/onto#During> ;
+      rdf:predicate rdf:type ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_toiletFrequencyNight#during1> .
+
+<http://temp#nlntnn7esdgfqk056g072gckf5>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_toiletFrequencyNight#goDesc1> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#satisfies> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_toiletFrequencyNight#goCtx1> .
+
+<http://temp#6lilso6t7mdg8oh3l67g21t6ib>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/onto#Night> ;
+      rdf:predicate rdf:type ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_toiletFrequencyNight#night1> .
+
+<http://temp#oktvgmnsqa7k6enb8uvm9gi4ef>
+      a       rdf:Statement ;
+      rdf:object "once" ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/onto#hasValue> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_toiletFrequencyNight#frequency1> .
+
+<http://temp#b156h0mjrai5rdnhlmi4urh14a>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/onto#Toilet> ;
+      rdf:predicate rdf:type ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_toiletFrequencyNight#toilet1> .
+
+<http://temp#i6613t09t1m87uplud7vnr5h7j>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/context#TemporalPattern> ;
+      rdf:predicate rdf:type ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_toiletFrequencyNight#tempPattern1> .
+
+<http://temp#ihmi155dacgldqes5kubq0kedn>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_toiletFrequencyNight#go1> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#classifies> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_toiletFrequencyNight#context1> .
+
+<http://temp#gq22qhqd5tfqqaeq0fa6j0ikrt>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_toiletFrequencyNight#toilet1> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#classifies> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_toiletFrequencyNight#destination1> .
+
+<http://temp#o1mskq2ulb5tvdjkgt7iuefon9>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_toiletFrequencyNight#Eugene> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#includes> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_toiletFrequencyNight#goCtx1> .
+
+<http://temp#td4g9hfcl8lvod0rv4209l9qej>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/exampledataResponse_toiletFrequencyNight#during1> ;
+      rdf:predicate <http://kristina-project.eu/ontologies/la/context#includes> ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_toiletFrequencyNight#goCtx1> .
+
+<http://temp#nn5lht27152dn8fuvs9lrskiic>
+      a       rdf:Statement ;
+      rdf:object <http://kristina-project.eu/ontologies/la/onto#CareRecipient> ;
+      rdf:predicate rdf:type ;
+      rdf:subject <http://kristina-project.eu/ontologies/la/exampledataResponse_toiletFrequencyNight#Eugene> .
+
+<http://temp#9lusvf13hfd272gk5up23trh4j>
+      a       <http://kristina-project.eu/ontologies/context-light#ToiletFrequencyContext> , <http://kristina-project.eu/ontologies/context-light#ActivityOrderingContext> .

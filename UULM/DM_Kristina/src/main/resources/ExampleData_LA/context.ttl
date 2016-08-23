@@ -1,0 +1,286 @@
+@prefix : <http://kristina-project.eu/ontologies/la/context#> .
+@prefix dul: <http://www.loa-cnr.it/ontologies/DUL.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://kristina-project.eu/ontologies/la/context> .
+
+<http://kristina-project.eu/ontologies/la/context> rdf:type owl:Ontology .
+
+
+#################################################################
+#
+#    Object Properties
+#
+#################################################################
+
+
+###  http://kristina-project.eu/ontologies/la/context#after
+
+:after rdf:type owl:ObjectProperty ;
+       
+       owl:inverseOf :before ;
+       
+       rdfs:subPropertyOf owl:topObjectProperty .
+
+
+
+###  http://kristina-project.eu/ontologies/la/context#before
+
+:before rdf:type owl:ObjectProperty .
+
+
+
+###  http://kristina-project.eu/ontologies/la/context#classifies
+
+:classifies rdf:type owl:ObjectProperty .
+
+
+
+###  http://kristina-project.eu/ontologies/la/context#defines
+
+:defines rdf:type owl:ObjectProperty .
+
+
+
+###  http://kristina-project.eu/ontologies/la/context#includes
+
+:includes rdf:type owl:ObjectProperty ,
+                   owl:TransitiveProperty .
+
+
+
+###  http://kristina-project.eu/ontologies/la/context#includesEvent
+
+:includesEvent rdf:type owl:ObjectProperty ;
+               
+               rdfs:subPropertyOf owl:topObjectProperty ;
+               
+               owl:propertyChainAxiom ( :includes
+                                        :referenceContext
+                                        :includesEvent
+                                      ) .
+
+
+
+###  http://kristina-project.eu/ontologies/la/context#next
+
+:next rdf:type owl:ObjectProperty .
+
+
+
+###  http://kristina-project.eu/ontologies/la/context#referenceContext
+
+:referenceContext rdf:type owl:ObjectProperty ;
+                  
+                  rdfs:subPropertyOf owl:topObjectProperty .
+
+
+
+###  http://kristina-project.eu/ontologies/la/context#referenceEntity
+
+:referenceEntity rdf:type owl:ObjectProperty ;
+                 
+                 rdfs:subPropertyOf owl:topObjectProperty .
+
+
+
+###  http://kristina-project.eu/ontologies/la/context#satisfies
+
+:satisfies rdf:type owl:ObjectProperty .
+
+
+
+
+
+#################################################################
+#
+#    Data properties
+#
+#################################################################
+
+
+###  http://kristina-project.eu/ontologies/la/context#hasTruthValue
+
+:hasTruthValue rdf:type owl:DatatypeProperty .
+
+
+
+
+
+#################################################################
+#
+#    Classes
+#
+#################################################################
+
+
+###  http://kristina-project.eu/ontologies/la/context#Agent
+
+:Agent rdf:type owl:Class ;
+       
+       rdfs:subClassOf :ContextRole .
+
+
+
+###  http://kristina-project.eu/ontologies/la/context#Beneficiary
+
+:Beneficiary rdf:type owl:Class ;
+             
+             rdfs:subClassOf :ContextRole .
+
+
+
+###  http://kristina-project.eu/ontologies/la/context#Concept
+
+:Concept rdf:type owl:Class .
+
+
+
+###  http://kristina-project.eu/ontologies/la/context#Context
+
+:Context rdf:type owl:Class ;
+         
+         rdfs:subClassOf :ContextRole .
+
+
+
+###  http://kristina-project.eu/ontologies/la/context#ContextDescription
+
+:ContextDescription rdf:type owl:Class ;
+                    
+                    rdfs:subClassOf :Description ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :defines ;
+                                      owl:someValuesFrom :ContextRole
+                                    ] .
+
+
+
+###  http://kristina-project.eu/ontologies/la/context#ContextRole
+
+:ContextRole rdf:type owl:Class ;
+             
+             rdfs:subClassOf :Concept .
+
+
+
+###  http://kristina-project.eu/ontologies/la/context#ContextSituation
+
+:ContextSituation rdf:type owl:Class ;
+                  
+                  rdfs:subClassOf :Situation ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :satisfies ;
+                                    owl:someValuesFrom :ContextDescription
+                                  ] .
+
+
+
+###  http://kristina-project.eu/ontologies/la/context#Description
+
+:Description rdf:type owl:Class ;
+             
+             rdfs:subClassOf [ rdf:type owl:Restriction ;
+                               owl:onProperty :defines ;
+                               owl:someValuesFrom :Concept
+                             ] .
+
+
+
+###  http://kristina-project.eu/ontologies/la/context#Destination
+
+:Destination rdf:type owl:Class ;
+             
+             rdfs:subClassOf :ContextRole .
+
+
+
+###  http://kristina-project.eu/ontologies/la/context#FrequencyAttribute
+
+:FrequencyAttribute rdf:type owl:Class ;
+                    
+                    rdfs:subClassOf :ContextRole .
+
+
+
+###  http://kristina-project.eu/ontologies/la/context#NecessityPattern
+
+:NecessityPattern rdf:type owl:Class ;
+                  
+                  rdfs:subClassOf :ContextRole .
+
+
+
+###  http://kristina-project.eu/ontologies/la/context#RequestDescription
+
+:RequestDescription rdf:type owl:Class ;
+                    
+                    rdfs:subClassOf :Description ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :defines ;
+                                      owl:someValuesFrom :RequestElement
+                                    ] .
+
+
+
+###  http://kristina-project.eu/ontologies/la/context#RequestElement
+
+:RequestElement rdf:type owl:Class ;
+                
+                rdfs:subClassOf :Concept .
+
+
+
+###  http://kristina-project.eu/ontologies/la/context#RequestSituation
+
+:RequestSituation rdf:type owl:Class ;
+                  
+                  rdfs:subClassOf :Situation ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :satisfies ;
+                                    owl:someValuesFrom :RequestDescription
+                                  ] .
+
+
+
+###  http://kristina-project.eu/ontologies/la/context#Situation
+
+:Situation rdf:type owl:Class ;
+           
+           rdfs:subClassOf [ rdf:type owl:Restriction ;
+                             owl:onProperty :satisfies ;
+                             owl:someValuesFrom :Description
+                           ] .
+
+
+
+###  http://kristina-project.eu/ontologies/la/context#TemporalAttribute
+
+:TemporalAttribute rdf:type owl:Class ;
+                   
+                   rdfs:subClassOf :ContextRole .
+
+
+
+###  http://kristina-project.eu/ontologies/la/context#TemporalPattern
+
+:TemporalPattern rdf:type owl:Class ;
+                 
+                 rdfs:subClassOf :ContextRole .
+
+
+
+###  http://kristina-project.eu/ontologies/la/context#Theme
+
+:Theme rdf:type owl:Class ;
+       
+       rdfs:subClassOf :ContextRole .
+
+
+
+
+###  Generated by the OWL API (version 3.5.1) http://owlapi.sourceforge.net
+

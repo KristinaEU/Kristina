@@ -1,5 +1,7 @@
 package owlSpeak.kristina.emotion;
 
+import static de.affect.emotion.EmotionsPADRelation.getEmotionPADMapping;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
@@ -10,10 +12,14 @@ import org.apache.xmlbeans.XmlException;
 
 import com.sun.corba.se.spi.legacy.connection.GetEndPointInfoAgainException;
 
+import de.affect.appraisal.AppraisalVariables;
 import de.affect.emotion.Emotion;
+import de.affect.emotion.EmotionType;
 import de.affect.emotion.EmotionVector;
 import de.affect.manage.AffectManager;
+import de.affect.manage.CharacterManager;
 import de.affect.mood.Mood;
+import de.affect.xml.AffectComputationDocument.AffectComputation.MoodRelations;
 import emotionml.EmotionmlDocument;
 
 public class EmotionGenerator {
@@ -43,13 +49,17 @@ public class EmotionGenerator {
 			double intensity = 0;
 			int nrEmos = 0;
 			for (Emotion e : emos) {
-				Mood m = e.getPADValues();
+
+			    if (e.getIntensity() > e.getBaseline()) {
+				Mood m = (e.getType().equals(EmotionType.Physical)) ? e.getPADValues() : getEmotionPADMapping(e.getType());
+		        
 				if (m != null) {
 					nrEmos++;
 					pleasure += m.getPleasure() * e.getIntensity();
 					arousal += m.getArousal() * e.getIntensity();
 					intensity += (1 - e.getIntensity());
 				}
+			    }
 			}
 			if(nrEmos == 0){
 				intensity = 1;
@@ -73,7 +83,29 @@ public class EmotionGenerator {
 
 	public void processUserEmotion(KristinaEmotion emo) {try{
 		fAM.processPADInput(fAM.getCharacterByName(name),
-				new Mood(emo.getValence(), emo.getArousal(), 0), 1, UUID.randomUUID().toString());
+				new Mood(emo.getValence(), emo.getArousal(), 0), 0.3, "User Emotion "+UUID.randomUUID().toString());
+	}catch(Exception e){
+		e.printStackTrace();
+	}
+	}
+	
+	public void processSystemEmotion(KristinaEmotion emo) {try{
+		fAM.processPADInput(fAM.getCharacterByName(name),
+				new Mood(emo.getValence(), emo.getArousal(), 0), 1, "System Emotion "+UUID.randomUUID().toString());
+	}catch(Exception e){
+		e.printStackTrace();
+	}
+	}
+	
+	public void processSystemAction(String action) {try{		
+		fAM.processAct(action, 1, fAM.getCharacterByName("Kristina"), new CharacterManager[] {fAM.getCharacterByName("User")},new CharacterManager[0], "Action");
+	}catch(Exception e){
+		e.printStackTrace();
+	}
+	}
+	
+	public void processUserAction(String action) {try{
+		fAM.processAct(action, 1, fAM.getCharacterByName("User"), new CharacterManager[] {fAM.getCharacterByName("Kristina")},new CharacterManager[0], "Action");
 	}catch(Exception e){
 		e.printStackTrace();
 	}

@@ -24,6 +24,9 @@ import javax.ws.rs.WebApplicationException;
 
 
 
+
+import model.KristinaModel;
+
 import org.python.apache.commons.compress.utils.IOUtils;
 import org.semanticweb.owlapi.model.OWLOntologyCreationException;
 
@@ -66,9 +69,16 @@ public class KristinaDemo {
 	public synchronized String getWorkspace(){try{
 		String[] ws = KristinaPresenter.getWorkspace("user");
 
-		String selection = KristinaPresenter.getSystemMove("user");
+		String[] selection = KristinaPresenter.getSystemMove("user");
 		
-		String result = "{\"selection\":\""+selection+"\",\"workspace\":[";
+		String result = "{\"selection\":[";
+		if(selection.length>0){
+			result = result+"\""+selection[0]+"\"";
+			for(int i = 1; i<selection.length; i++){
+				result = result+",\""+selection[i]+"\"";
+			}
+		}
+		result = result +"],\"workspace\":[";
 		if(ws.length>0){
 			result = result+"\""+ws[0]+"\"";
 			for(int i = 1; i<ws.length; i++){
@@ -99,7 +109,7 @@ public class KristinaDemo {
 			}
 			r.close();
 
-			KristinaPresenter.performDemoDM(data,"user");
+			KristinaPresenter.performDM(0f,0f,data);
 
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
@@ -121,5 +131,17 @@ public class KristinaDemo {
 	@Path("sendVA")
 	public synchronized void setEmotion(@QueryParam("valence") String valence, @QueryParam("arousal") String arousal){
 		KristinaPresenter.setUserEmotion(new KristinaEmotion(Float.parseFloat(valence), Float.parseFloat(arousal)));
+	}
+	
+	@POST
+	@Path("sysAct")
+	public synchronized void setSystemAction(@QueryParam("action") String action){
+		KristinaModel.setSystemAction(action);
+	}
+	
+	@POST
+	@Path("usrAct")
+	public synchronized void setUserAction(@QueryParam("action") String action){
+		KristinaModel.setUserAction(action);
 	}
 }

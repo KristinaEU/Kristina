@@ -1,0 +1,52 @@
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+<http://temp#g7r0laj8vl6brp07lppnovcbgr>
+      a       <http://kristina-project.eu/ontologies/context-light#WeatherContext> .
+
+<http://temp#htalfoue8a30lqilgsgfp27pl1>
+      a       <http://kristina-project.eu/ontologies/responses#WeatherResponse> ;
+      <http://kristina-project.eu/ontologies/responses#plausibility>
+              "1.0"^^xsd:double ;
+      <http://kristina-project.eu/ontologies/responses#responseType>
+              <http://kristina-project.eu/ontologies/responses#free_text> ;
+      <http://kristina-project.eu/ontologies/responses#text>
+              """@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+<http://temp#13p2om0pkeevfc9kf8cq0ik8hh>
+      a       <http://kristina-project.eu/ontologies/weather#Forecast> ;
+      <http://kristina-project.eu/ontologies/weather#humidity>
+              \"58\"^^xsd:double ;
+      <http://kristina-project.eu/ontologies/weather#pressure>
+              \"725\"^^xsd:double ;
+      <http://kristina-project.eu/ontologies/weather#skyCondition>
+              \"partlyCloudySkyConditionRating\"^^xsd:string ;
+      <http://kristina-project.eu/ontologies/weather#temperature>
+              \"23\"^^xsd:double ;
+      <http://kristina-project.eu/ontologies/weather#windDirection>
+              \"WWindDirectionRating\"^^xsd:string ;
+      <http://kristina-project.eu/ontologies/weather#windSpeed>
+              \"3\"^^xsd:double .
+
+<http://response-data>
+      a       owl:Ontology ;
+      owl:imports <http://kristina-project.eu/ontologies/weather> .
+""" .
+
+<http://temp#k226f2lc7h8558h965ul38rcn2>
+      a       <http://kristina-project.eu/ontologies/responses#ResponseContainer> ;
+      <http://kristina-project.eu/ontologies/responses#containsResponse>
+              <http://temp#htalfoue8a30lqilgsgfp27pl1> ;
+      <http://kristina-project.eu/ontologies/responses#conversationalContext>
+              <http://temp#g7r0laj8vl6brp07lppnovcbgr> ;
+      <http://kristina-project.eu/ontologies/responses#timestamp>
+              "2016-07-28T12:04:44.293Z"^^xsd:dateTime .
+
+<http://response-data>
+      a       owl:Ontology ;
+      owl:imports <http://kristina-project.eu/ontologies/responses> .
