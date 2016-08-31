@@ -71,8 +71,8 @@ public class KristinaPresenter {
 		KristinaModel.init();
 
 		try {
-			handler = new FileHandler("log/user" + LocalDate.now()
-					+ LocalTime.now().toString().replace(':', '-'));
+			handler = new FileHandler("log/user_" + LocalDate.now()
+					+ "_"+LocalTime.now().toString().replace(':', '-')+".log");
 		} catch (SecurityException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -171,10 +171,11 @@ public class KristinaPresenter {
 			break;
 		}
 
+		handler.close();
 		logger.removeHandler(handler);
 		try {
-			handler = new FileHandler("log/" + user + LocalDate.now()
-					+ LocalTime.now().toString().replace(':', '-'));
+			handler = new FileHandler("log/" + user + "_"+currentScenario+"_"+LocalDate.now()
+					+ "_"+LocalTime.now().toString().replace(':', '-')+".log");
 			logger.addHandler(handler);
 		} catch (SecurityException e) {
 			// TODO Auto-generated catch block
@@ -320,6 +321,11 @@ public class KristinaPresenter {
 				}
 			}
 		}
+	}
+	
+	public static void close(){
+		handler.close();
+		KristinaModel.stop();
 	}
 
 	/* Functions needed for the demonstration */

@@ -42,7 +42,7 @@ public class LAConverter {
 
 	public static List<Resource> convertToMove(String rdf, String user, String act, String dialogue) {
 		Model model = ModelFactory.createDefaultModel();
-		model.read(new StringReader(rdf), null, "TURTLE");
+		model.read(new StringReader(rdf), null, "RDF/XML");
 
 		ResIterator tmp = model.listResourcesWithProperty(RDF.type,
 				model.getResource(dialogue + "UserAction"));
@@ -141,7 +141,7 @@ public class LAConverter {
 		}
 
 		ByteArrayOutputStream result = new ByteArrayOutputStream();
-		model.write(result, "TURTLE");
+		model.write(result, "RDF/XML");
 		return result.toString();
 	}
 
@@ -165,7 +165,7 @@ public class LAConverter {
 		model.createResource(moveName, model.getResource(dialogue + "Empty"));
 
 		ByteArrayOutputStream result = new ByteArrayOutputStream();
-		model.write(result, "TURTLE");
+		model.write(result, "RDF/XML");
 		return result.toString();
 	}
 	

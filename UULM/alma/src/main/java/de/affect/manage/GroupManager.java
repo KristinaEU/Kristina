@@ -104,7 +104,7 @@ public class GroupManager extends EntityManager implements EmotionMaintenanceLis
     fMoodComputationTimer = new Timer(true);
     fMoodComputationTimer.schedule(new MoodComputationTask(), fAc.moodReturnPeriod, fAc.moodReturnPeriod);
     // Setup affect monitoring
-    if (!sIntegratedDesktopMode) {
+    /*if (!sIntegratedDesktopMode) {
       Thread startAffectMonitor = new Thread() {
         public void run() {
           fGroupAffectMonitor =
@@ -117,7 +117,7 @@ public class GroupManager extends EntityManager implements EmotionMaintenanceLis
         }
       };
       startAffectMonitor.start();
-    }
+    }*/
   }
 
   /**

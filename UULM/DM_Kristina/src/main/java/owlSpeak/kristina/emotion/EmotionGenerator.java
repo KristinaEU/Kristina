@@ -114,5 +114,9 @@ public class EmotionGenerator {
 	public boolean isActive() {
 		return fAM == null ? false : true;
 	}
+	
+	public void stop(){
+		fAM.stopAll();
+	}
 
 }

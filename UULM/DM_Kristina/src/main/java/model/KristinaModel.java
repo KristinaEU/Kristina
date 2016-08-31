@@ -265,11 +265,33 @@ public class KristinaModel {
 						systemMoves.add(createCannedTextMove("Would you like me to read the newspaper for you?", user, dmOnto, manager, factory));
 					}else{
 						systemMoves = askKI(userMove, valence, arousal, user, dmOnto, manager, factory);
+						for(KristinaMove m: systemMoves){
+							if(m.getDialogueAction().equals(DialogueAction.UNKNOWN)){
+								systemMoves = new HashSet<KristinaMove>();
+								systemMoves.add(createCannedTextMove("I don't know about that.", user, dmOnto, manager, factory));
+							}
+						}
 					}
 					break;
 				case DialogueAction.REQUEST:
-					
-					if(userMove.hasTopic("Weather")){
+					if(userMove.hasTopic("Else")){
+						
+						Set<KristinaMove> tmp = askKI(DialogueHistory.getLastUserMove(), valence, arousal, user, dmOnto, manager, factory);
+						List<KristinaMove> lastMoves = DialogueHistory.getLastSystemMoves();
+						for(KristinaMove m: tmp){
+							if(!lastMoves.contains(m)){
+								systemMoves.add(m);
+							}
+							if(m.getDialogueAction().equals(DialogueAction.UNKNOWN)){
+								systemMoves = new HashSet<KristinaMove>();
+								systemMoves.add(createCannedTextMove("I don't know.", user, dmOnto, manager, factory));
+							}
+						}
+						if(systemMoves.isEmpty()){
+							systemMoves.add(createTypedKristinaMove("Reject", dmOnto, manager, factory));
+						}
+					}
+					else if(userMove.hasTopic("Weather")){
 						userMove.specify("RequestWeather");
 						systemMoves = askKI(userMove, valence, arousal, user, dmOnto, manager, factory);
 					}
@@ -292,6 +314,12 @@ public class KristinaModel {
 						systemMoves.add(createCannedTextMove("Tell me the headline of the article.", user, dmOnto, manager, factory));
 					}else{
 						systemMoves = askKI(userMove, valence, arousal, user, dmOnto, manager, factory);
+						for(KristinaMove m: systemMoves){
+							if(m.getDialogueAction().equals(DialogueAction.UNKNOWN)){
+								systemMoves = new HashSet<KristinaMove>();
+								systemMoves.add(createCannedTextMove("I don't know.", user, dmOnto, manager, factory));
+							}
+						}
 						//String rdfMoves = new KristinaModel().askDemoKI(userMove);
 						//systemMoves=KIConverter.convertToMove(rdfMoves, user, dmOnto, factory, manager, OntologyPrefix.onto, OntologyPrefix.dialogue);
 					}
@@ -485,6 +513,10 @@ public class KristinaModel {
 				KristinaPresenter.class.getResourceAsStream(sALMACOMP),
 				KristinaPresenter.class.getResourceAsStream(sALMADEF));
 
+	}
+	
+	public static void stop(){
+		emotionGenerator.stop();
 	}
 	
 	private static KristinaMove createTypedKristinaMove(String a, OWLOntology dmOnto, OWLOntologyManager manager, OWLDataFactory factory){

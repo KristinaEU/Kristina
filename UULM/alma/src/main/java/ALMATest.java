@@ -67,7 +67,6 @@ public class ALMATest implements AffectUpdateListener{
 	    aiInput.setPAD(pad);
 	    fAM.processSignal(aiInput);
 	    fAM.stopAll();
-	    fAM.getCharacterByName("Anne").
 	}
 
 	@Override

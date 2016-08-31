@@ -1,9 +1,12 @@
 package owlSpeak.servlet;
 
+import java.awt.Window;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 import javax.ws.rs.core.UriBuilder;
 
@@ -31,11 +34,13 @@ public class KristinaMain {
 	public static void main(final String args[]) {
 		
 			try {
+				
 				//Start the OwlDocumentServer
 				// Create the server
 				URI baseUriDoc = UriBuilder.fromUri("http://localhost/")
 						.port(8080).build();
 				ResourceConfig configDoc = new ResourceConfig(OwlDocumentServlet.class);
+				
 				final HttpServer serverDoc = JdkHttpServerFactory.createHttpServer(
 						baseUriDoc, configDoc);
 
@@ -56,12 +61,16 @@ public class KristinaMain {
 				config = config.registerClasses(KristinaDemo.class);
 				final HttpServer server = JdkHttpServerFactory.createHttpServer(
 						baseUri, config);
-
+				
 				reader.readLine();
 
 				// Abort the server
 				server.stop(0);
 				serverDoc.stop(0);
+				
+				KristinaPresenter.close();
+				
+
 			} catch (final Exception exc) {
 				exc.printStackTrace();
 			}			

@@ -114,4 +114,5 @@ public class DesktopHelper {
     resultCoords.setLocation(xpos, 0);
     return resultCoords;
   }
+  
 }

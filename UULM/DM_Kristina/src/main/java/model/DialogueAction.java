@@ -79,5 +79,6 @@ public class DialogueAction {
 	public static final String SIMPLE_MOTIVATE=OntologyPrefix.dialogue+"SimpleMotivate";
 	public static final String EMPTY=OntologyPrefix.dialogue+"Empty";
 	public static final String INCOMPREHENSIBLE=OntologyPrefix.dialogue+"Incomprehensible";
+	public static final String UNKNOWN=OntologyPrefix.dialogue+"Unknown";
 
 }

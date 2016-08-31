@@ -133,4 +133,37 @@ public class KristinaMove extends Move {
 		}
 		return result;
 	}
+	
+	@Override
+	public boolean equals(Object o){
+		if(o instanceof KristinaMove){
+			KristinaMove m = (KristinaMove) o;
+			if(m.getDialogueAction().equals(getDialogueAction())){
+				if(m.getText().equals(getText())){
+					List<ReifiedStatement> stmts1 = m.getStatements();
+					List<ReifiedStatement> stmts2 = m.getStatements();
+					boolean equal = true;
+					for(ReifiedStatement stmt1: stmts1){
+						Statement s1 = stmt1.getStatement();
+						boolean foundMatch = false;
+						for(ReifiedStatement stmt2: stmts2){
+							Statement s2 = stmt2.getStatement();
+							if(s1.getSubject().equals(s2.getSubject()) && s1.getObject().equals(s2.getObject()) && s1.getPredicate().equals(s2.getPredicate())){
+								foundMatch = true;
+								break;
+							}
+						}
+						if(!foundMatch){
+							equal =false;
+							break;
+						}
+					}
+					if(equal){
+						return true;
+					}
+				}
+			}
+		}
+		return false;
+	}
 }

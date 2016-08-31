@@ -93,7 +93,7 @@ public class CharacterManager extends EntityManager implements EmotionMaintenanc
     fMoodComputationTimer = new Timer(true);
     fMoodComputationTimer.schedule(new MoodComputationTask(), fAc.moodReturnPeriod, fAc.moodReturnPeriod);
     // Setup affect monitoring
-    if (!sIntegratedDesktopMode) {
+    /*if (!sIntegratedDesktopMode) {
       Thread startAffectMonitor = new Thread() {
         @Override
         public void run() {
@@ -102,7 +102,7 @@ public class CharacterManager extends EntityManager implements EmotionMaintenanc
         }
       };
       startAffectMonitor.start();
-    }
+    }*/
   }
 
   /**

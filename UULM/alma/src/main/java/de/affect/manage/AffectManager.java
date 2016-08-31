@@ -188,9 +188,10 @@ public class AffectManager extends AppraisalManager {
     // enable the static interface
     sInterface = new InterfaceHolder();
 
-    sDesktopHelper = new DesktopHelper(); //TODO static method which creats an instance
+    
 
     if (hasGUI) {
+    	sDesktopHelper = new DesktopHelper(); //TODO static method which creats an instance
       mALMAGUI = new AlmaGUI();
       
       System.setProperty("apple.laf.useScreenMenuBar", "true");
@@ -1462,8 +1463,11 @@ public class AffectManager extends AppraisalManager {
     for (Enumeration<String> cEnum = fNameToCharacter.keys(); cEnum.hasMoreElements();) {
       fNameToCharacter.get(cEnum.nextElement()).stopAll();
     }
-    System.exit(1);
-    //TODO stop Groups
+    //System.exit(1);
+
+    for (Enumeration<String> cEnum = fNameToGroup.keys(); cEnum.hasMoreElements();) {
+      fNameToGroup.get(cEnum.nextElement()).stopAll();
+    }
   }
 
   /**

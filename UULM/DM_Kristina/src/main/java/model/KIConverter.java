@@ -53,10 +53,9 @@ public class KIConverter {
 			}else if (node.hasProperty(RDF.type,model.getResource(onto+"AdditionalInformationRequest"))){
 				manager.addAxiom(dmOnto, factory.getOWLClassAssertionAxiom(factory.getOWLClass(IRI.create(dialogue+"AdditionalInformationRequest")), indi));
 			}else if (node.hasProperty(RDF.type,model.getResource(onto+"UnknownResponse"))){
-				manager.addAxiom(dmOnto, factory.getOWLClassAssertionAxiom(factory.getOWLClass(IRI.create(dialogue+"Empty")), indi));
+				manager.addAxiom(dmOnto, factory.getOWLClassAssertionAxiom(factory.getOWLClass(IRI.create(dialogue+"Unknown")), indi));
 			}
 			
-
 			SemanticsOntology.add(node, model, user);
 		}
 		
