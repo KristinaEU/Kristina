@@ -225,6 +225,22 @@ public class KristinaModel {
 					systemMoves.add(createTypedKristinaMove("SimpleSayGoodBye", dmOnto, manager, factory));
 					}
 					break;
+				case DialogueAction.FURTHER_INFORMATION:
+						Set<KristinaMove> lastWS = askKI(DialogueHistory.getLastUserMove(), valence, arousal, user, dmOnto, manager, factory);
+						List<KristinaMove> lastMoves = DialogueHistory.getLastSystemMoves();
+						for(KristinaMove m: lastWS){
+							if(!lastMoves.contains(m)){
+								systemMoves.add(m);
+							}
+							if(m.getDialogueAction().equals(DialogueAction.UNKNOWN)){
+								systemMoves = new HashSet<KristinaMove>();
+								systemMoves.add(createCannedTextMove("I don't know.", user, dmOnto, manager, factory));
+							}
+						}
+						if(systemMoves.isEmpty()){
+							systemMoves.add(createTypedKristinaMove("Reject", dmOnto, manager, factory));
+						}
+					break;
 				case DialogueAction.STATEMENT:
 				case DialogueAction.DECLARE:
 					if(userMove.hasTopic("GoOut")&&userMove.hasTopic("Want")){
@@ -274,24 +290,7 @@ public class KristinaModel {
 					}
 					break;
 				case DialogueAction.REQUEST:
-					if(userMove.hasTopic("Else")){
-						
-						Set<KristinaMove> tmp = askKI(DialogueHistory.getLastUserMove(), valence, arousal, user, dmOnto, manager, factory);
-						List<KristinaMove> lastMoves = DialogueHistory.getLastSystemMoves();
-						for(KristinaMove m: tmp){
-							if(!lastMoves.contains(m)){
-								systemMoves.add(m);
-							}
-							if(m.getDialogueAction().equals(DialogueAction.UNKNOWN)){
-								systemMoves = new HashSet<KristinaMove>();
-								systemMoves.add(createCannedTextMove("I don't know.", user, dmOnto, manager, factory));
-							}
-						}
-						if(systemMoves.isEmpty()){
-							systemMoves.add(createTypedKristinaMove("Reject", dmOnto, manager, factory));
-						}
-					}
-					else if(userMove.hasTopic("Weather")){
+					if(userMove.hasTopic("Weather")){
 						userMove.specify("RequestWeather");
 						systemMoves = askKI(userMove, valence, arousal, user, dmOnto, manager, factory);
 					}
