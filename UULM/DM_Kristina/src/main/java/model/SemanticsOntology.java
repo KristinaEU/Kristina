@@ -56,19 +56,25 @@ public class SemanticsOntology {
 
 	public static List<ReifiedStatement> getStatements(IRI id) {
 		Model onto = semantics.get(id);
+		
+		LinkedList<ReifiedStatement> list = new LinkedList<ReifiedStatement>();
+		if(onto != null){
 		NodeIterator it = onto.listObjectsOfProperty(
 				onto.getResource(id.toString()),
 				onto.getProperty(OntologyPrefix.onto + "rdf"));
-		LinkedList<ReifiedStatement> list = new LinkedList<ReifiedStatement>();
 		while (it.hasNext()) {
 			ReifiedStatement s = it.next().as(ReifiedStatement.class);
 			list.add(s);
+		}
 		}
 		return list;
 	}
 
 	public static String getProperty(IRI id, String property) {
 		Model onto = semantics.get(id);
+		if(onto==null){
+			return null;
+		}
 		Statement p = onto.getProperty(onto.getResource(id.toString()),
 				onto.getProperty(OntologyPrefix.onto + property));
 		if (p == null) {
@@ -80,6 +86,9 @@ public class SemanticsOntology {
 
 	public static boolean hasTopic(IRI id, String topic) {
 		Model onto = semantics.get(id);
+		if(onto==null){
+			return false;
+		}
 		ResIterator it = onto.listResourcesWithProperty(RDF.type,
 				onto.getResource(OntologyPrefix.ontoLA + topic));
 
@@ -88,6 +97,9 @@ public class SemanticsOntology {
 
 	public static Set<String> getTopics(IRI id) {
 		Model onto = semantics.get(id);
+		if(onto==null){
+			return null;
+		}
 		NodeIterator it = onto.listObjectsOfProperty(
 				onto.getResource(id.toString()),
 				onto.getProperty(OntologyPrefix.onto + "rdf"));
@@ -112,12 +124,15 @@ public class SemanticsOntology {
 
 	public static void specifyType(IRI id, String type) {
 		Model onto = semantics.get(id);
-		onto.add(onto.getResource(id.toString()), RDF.type,
-				onto.getResource(OntologyPrefix.dialogue + type));
+		if(onto!=null){
+			onto.add(onto.getResource(id.toString()), RDF.type,
+					onto.getResource(OntologyPrefix.dialogue + type));
+		}
 	}
 
 	public static float getConfidence(IRI id) {
 		Model onto = semantics.get(id);
+		
 		Statement s = onto
 				.getProperty(
 						onto.listResourcesWithProperty(
@@ -135,6 +150,9 @@ public class SemanticsOntology {
 
 	public static String getType(IRI id) {
 		Model onto = semantics.get(id);
+		if(onto==null){
+			return null;
+		}
 		NodeIterator it = onto.listObjectsOfProperty(
 				onto.getResource(id.toString()), RDF.type);
 		while (it.hasNext()) {
