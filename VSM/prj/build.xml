@@ -163,10 +163,22 @@
         </javadoc>
     </target>
     <!-- -->
-    <target name="tests">
-        <java classname="eu.kristina.vsm.test.RESTFulPipeTestSuite" fork="true">
+    <target name="test-pipeline">
+        <java classname="eu.kristina.vsm.test.PipelineTestSuite" fork="true">
             <classpath refid="clspath"/>
             <!--<arg line="http://172.31.26.245:11223"/>-->
+        </java>
+    </target> 
+    <!-- -->
+    <target name="test-merging">
+        <java classname="eu.kristina.vsm.test.MergingTestSuite" fork="true">
+            <classpath refid="clspath"/>
+        </java>
+    </target> 
+    <!-- -->
+    <target name="test-parsing">
+        <java classname="eu.kristina.vsm.test.ParsingTestSuite" fork="true">
+            <classpath refid="clspath"/>
         </java>
     </target> 
     <!-- Execute Project -->

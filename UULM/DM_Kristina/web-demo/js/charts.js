@@ -61,7 +61,7 @@ function drawScatterChart() {
 
     function updateEmotionPlot() {
 		
-		$.get("http://localhost:11153/emotion", function (data) {
+		$.get("http://172.31.26.245:11150/emotion", function (data) {
 			var v = data.valence;
 			var a = data.arousal;
 			

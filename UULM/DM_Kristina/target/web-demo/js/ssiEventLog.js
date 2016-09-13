@@ -15,7 +15,7 @@ function getEvents() {
         }
         updateList();
     });
-	$.get("http://localhost:11153/getDMEvents", function (data) {
+	$.get("http://172.31.26.245:11150/getDMEvents", function (data) {
         for (i = data.length - 1 ; i >= 0; i--) {
             var parsed = parseXML(data[i]);
             if (parsed != false) {

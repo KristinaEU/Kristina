@@ -27,8 +27,6 @@ import org.semanticweb.owlapi.reasoner.OWLReasoner;
 import org.semanticweb.owlapi.reasoner.structural.StructuralReasonerFactory;
 import org.semanticweb.owlapi.util.SimpleIRIMapper;
 
-import owlSpeak.kristina.util.InputOutputConverter;
-
 
 public class ontoTest {
 	

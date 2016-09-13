@@ -7,7 +7,7 @@ var selection;
 function getWorkspace() {
     var workSpaceList;
 	clearWorkspace();
-    $.get("http://localhost:11153/workspace", function (data) {
+    $.get("http://172.31.26.245:11150/workspace", function (data) {
 		selection = data.selection;
 		data = data.workspace;
         for (i = data.length - 1 ; i >= 0; i--) {

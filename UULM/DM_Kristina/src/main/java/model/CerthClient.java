@@ -14,11 +14,13 @@ import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
+import org.glassfish.jersey.filter.LoggingFilter;
+
 import owlSpeak.Move;
 
 public class CerthClient {
 	
-	static final String address = "http://160.40.50.196:8080/api/context/";
+	static final String address = "http://160.40.50.196:8080/kristina-j2ee-web/api/context/";
 
 	public static String get(String data) {
 		try {
@@ -42,11 +44,14 @@ public class CerthClient {
 	public static String post(String in)  {
 		try{
 			Client client = ClientBuilder.newClient();
-			WebTarget webTarget = client.target(address+"update").queryParam("frames", URLEncoder.encode(in, "utf-8")).queryParam("emotions", "fake");
+			client.register(new LoggingFilter());
+			
+			WebTarget webTarget = client.target(address+"update");
 			
 			Invocation.Builder ib = webTarget.request(MediaType.TEXT_PLAIN_TYPE);
 			
-			Response response = ib.post(Entity.entity("", MediaType.TEXT_PLAIN));
+			Response response = ib.post(Entity.entity("frames="+URLEncoder.encode(in, "utf-8"), "application/x-www-form-urlencoded"));
+
 			if(response.getStatus()!= 200){
 				String s = response.getStatusInfo().toString();
 				response.close();

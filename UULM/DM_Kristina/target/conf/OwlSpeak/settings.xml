@@ -5,7 +5,7 @@
   <!--The platform that is used to run the SDM [voxeo|tellme] -->
   <platform>voxeo</platform>
   <!--Main URL where the root ontology can be found (0=off,1=on) -->
-  <URI>http://localfiles/OwlSpeak/OwlSpeakOnto.owl</URI>
+  <URI>http://localhost:8080/OwlSpeakOnto.owl</URI>
   <!--Home directory-->
   <HomePath>./conf/OwlSpeak/</HomePath>
   <!--plugins-->

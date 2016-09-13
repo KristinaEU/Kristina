@@ -1,6 +1,7 @@
 package owlSpeak.servlet;
 
 import javax.ws.rs.Consumes;
+import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
@@ -42,7 +43,12 @@ public class KristinaServlet {
 
 		return result;
 	}
-
+	
+	@Path("restart")
+	@POST
+	public synchronized void restart(@QueryParam("user") String user, @QueryParam("scenario") String scenario){
+		KristinaPresenter.restart(user, scenario);
+	}
 
 }
 

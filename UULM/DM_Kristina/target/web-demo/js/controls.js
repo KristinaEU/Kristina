@@ -2,9 +2,9 @@ function sendVA(){
 	
 	var v = document.getElementById("val").value;
 	var a = document.getElementById("ar").value;
-	$.post("http://localhost:11153/sendVA?valence="+v+"&arousal="+a);
+	$.post("http://172.31.26.245:11150/sendVA?valence="+v+"&arousal="+a);
 };
 
 function sendRequestFluid(){
-	$.post("http://localhost:11153/sendRequestFluid");
+	$.post("http://172.31.26.245:11150/sendRequestFluid");
 };
