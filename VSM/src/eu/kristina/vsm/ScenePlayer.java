@@ -26,10 +26,10 @@ import eu.kristina.vsm.ssi.SSIEventNotifier;
 /**
  * @author Gregor Mehlmann
  */
-public final class VSMKristinaPlayer implements RunTimePlayer, SSIEventHandler {
+public final class ScenePlayer implements RunTimePlayer, SSIEventHandler {
 
     // The singelton player instance
-    public static VSMKristinaPlayer sInstance = null;
+    public static ScenePlayer sInstance = null;
     // The singelton logger instance
     private final LOGDefaultLogger mLogger
             = LOGDefaultLogger.getInstance();
@@ -57,9 +57,9 @@ public final class VSMKristinaPlayer implements RunTimePlayer, SSIEventHandler {
     private final Random mRandom = new Random();
 
     // Get the singelton player
-    public static synchronized VSMKristinaPlayer getInstance() {
+    public static synchronized ScenePlayer getInstance() {
         if (sInstance == null) {
-            sInstance = new VSMKristinaPlayer();
+            sInstance = new ScenePlayer();
         }
         return sInstance;
     }

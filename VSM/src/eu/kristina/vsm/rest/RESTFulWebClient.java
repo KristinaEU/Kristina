@@ -1,8 +1,8 @@
 package eu.kristina.vsm.rest;
 
+
 import com.sun.jersey.api.client.Client;
 import com.sun.jersey.api.client.ClientResponse;
-import com.sun.jersey.api.client.ClientResponse.Status;
 import com.sun.jersey.api.client.config.DefaultClientConfig;
 import de.dfki.vsm.util.log.LOGDefaultLogger;
 import java.security.SecureRandom;
@@ -11,6 +11,8 @@ import javax.net.ssl.HttpsURLConnection;
 import javax.net.ssl.SSLContext;
 import javax.net.ssl.TrustManager;
 import javax.net.ssl.X509TrustManager;
+import javax.ws.rs.core.Response.Status;
+
 
 /**
  * @author Gregor Mehlmann

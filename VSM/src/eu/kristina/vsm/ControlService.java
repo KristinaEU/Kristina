@@ -3,6 +3,7 @@ package eu.kristina.vsm;
 import com.sun.jersey.api.container.httpserver.HttpServerFactory;
 import com.sun.jersey.spi.resource.Singleton;
 import com.sun.net.httpserver.HttpServer;
+import de.dfki.vsm.editor.EditorInstance;
 import de.dfki.vsm.editor.project.EditorProject;
 import de.dfki.vsm.editor.project.ProjectEditor;
 import de.dfki.vsm.runtime.RunTimeInstance;
@@ -34,7 +35,7 @@ import javax.ws.rs.core.Response;
  */
 @Singleton
 @Path("")
-public final class VSMKristinaService {
+public final class ControlService {
 
     // The logger instance
     private static final LOGDefaultLogger sLogger
@@ -43,8 +44,8 @@ public final class VSMKristinaService {
     private static final RunTimeInstance sRunTime
             = RunTimeInstance.getInstance();
     // The graphics instance
-    //private final static EditorInstance sGraphics
-    //        = EditorInstance.getInstance();
+    private final static EditorInstance sGraphics
+            = EditorInstance.getInstance();
     // The project instance
     //private static RunTimeProject sProject = null;
     private static EditorProject sProject = null;
@@ -68,7 +69,7 @@ public final class VSMKristinaService {
             // Check if the project is null
             if (sProject != null) {
                 // Show the project editor 
-                //sEditor = sGraphics.showProject(sProject);
+                sEditor = sGraphics.showProject(sProject);
                 // return true at success
                 return true;
             } else {
@@ -97,7 +98,7 @@ public final class VSMKristinaService {
             // Check if the editor is null
             if (sEditor != null) {
                 // Hide the current editor 
-                //sGraphics.hideProject(sEditor);
+                sGraphics.hideProject(sEditor);
                 // And set the editor null
                 sEditor = null;
                 // Return true at success
@@ -500,9 +501,9 @@ public final class VSMKristinaService {
     /**
      * Construct the restful VSM server
      */
-    public VSMKristinaService() {
+    public ControlService(final TurnManager application) {
         // Print some information
-        sLogger.message("Constructing Kristina's VSM restful root resource class");
+        sLogger.message("Constructing Kristina's VSM restful root resource class with " + application);
     }
 
     /**
@@ -526,11 +527,11 @@ public final class VSMKristinaService {
         } else if (cmd.equalsIgnoreCase("unload")) {
             return result((unload() ? "SUCCESS" : "FAILURE"));
         } /*
-        else if (cmd.equalsIgnoreCase("show")) {
-            return result((show() ? "SUCCESS" : "FAILURE"));
-        } else if (cmd.equalsIgnoreCase("hide")) {
-            return result((hide() ? "SUCCESS" : "FAILURE"));
-        } 
+         else if (cmd.equalsIgnoreCase("show")) {
+         return result((show() ? "SUCCESS" : "FAILURE"));
+         } else if (cmd.equalsIgnoreCase("hide")) {
+         return result((hide() ? "SUCCESS" : "FAILURE"));
+         } 
          */ else if (cmd.equalsIgnoreCase("status")) {
             return result(status());
         } else if (cmd.equalsIgnoreCase("config")) {
@@ -561,17 +562,20 @@ public final class VSMKristinaService {
 
     //
     public static void main(final String args[]) {
+
         // Print information
         sLogger.message("Initializing VSM KRISTINA restful service");
         // Initialize the reader
         final BufferedReader reader = new BufferedReader(
                 new InputStreamReader(System.in));
+
         // The termination flag
         boolean done = false;
         // Start the HTTP server
         try {
             // Create the server
-            final HttpServer server = HttpServerFactory.create(args[0]);
+            final HttpServer server = HttpServerFactory.create(args[0], new TurnManager());
+
             // Get the executors
             final ExecutorService pool = Executors.newFixedThreadPool(1);
             // Set the executors
@@ -631,6 +635,7 @@ public final class VSMKristinaService {
             pool.shutdownNow();
             // Abort the server
             server.stop(0);
+
         } catch (final Exception exc) {
             sLogger.failure(exc.toString());
         }

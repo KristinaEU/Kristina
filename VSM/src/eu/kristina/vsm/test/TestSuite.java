@@ -1,17 +1,82 @@
 package eu.kristina.vsm.test;
 
+import de.dfki.vsm.util.log.LOGDefaultLogger;
 import eu.kristina.vsm.rest.RESTFulResource;
 import eu.kristina.vsm.rest.RESTFulWebClient;
 import eu.kristina.vsm.util.KristinaUtility;
+import org.json.JSONObject;
 
 /**
  * @author Gregor Mehlmann
  */
-public final class PipelineTestSuite {
+public final class TestSuite {
 
-    // Execute the rest test
+    private static LOGDefaultLogger sLogger = LOGDefaultLogger.getInstance();
+
+    ////////////////////////////////////////////////////////////////////////////
     public static final void main(final String args[]) {
-        // Create the client
+        if (args[0].equals("pipe")) {
+            testPipe(args);
+        } else if (args[0].equals("json")) {
+            testJSON(args);
+        } else if (args[0].equals("xml")) {
+            testXML(args);
+        } else {
+            sLogger.warning("Usage:");
+        }
+
+    }
+
+    ////////////////////////////////////////////////////////////////////////////
+    private static void testJSON(final String args[]) {
+        final String l1 = "{\"0\":\"l\"}";
+        final String r1 = "{\"0\":\"r\"}";
+        final String m1 = KristinaUtility.merge(l1, r1, 4);
+        System.out.println(l1);
+        System.out.println(r1);
+        System.out.println(m1);
+
+        final String l2 = "{\"0\":{\"1\":\"l\"}}";
+        final String r2 = "{\"0\":{\"2\":\"r\"}}";
+        final String m2 = KristinaUtility.merge(l2, r2, 4);
+        System.out.println(l2);
+        System.out.println(r2);
+        System.out.println(m2);
+
+        final String json_lg = KristinaUtility.read("res/exp/output_language_generation.txt");
+        final String json_ms = KristinaUtility.read("res/exp/output_mode_selection.txt");
+        final String merge = KristinaUtility.merge(json_lg, json_ms, 2);
+        System.out.println(merge);
+
+        final String l = KristinaUtility.read("src/eu/kristina/vsm/test/envelope.txt");
+        final String r = KristinaUtility.read("src/eu/kristina/vsm/test/envelope.txt");
+        final String m = KristinaUtility.merge(l, r, 2);
+        KristinaUtility.write(m, "src/eu/kristina/vsm/test/second.txt");
+    }
+
+    ////////////////////////////////////////////////////////////////////////////
+    private static void testXML(final String args[]) {
+        final String input = KristinaUtility.read("res/exp/output_language_analysis.txt");
+        final String encoded = KristinaUtility.encodeJSON(input);
+        System.out.println(encoded);
+        final String decoded = KristinaUtility.decodeJSON(encoded);
+        System.out.println(decoded);
+
+        final String x = KristinaUtility.decodeJSON("\"<rdf:RDF\\n    xmlns:rdf=\\\"http:\\/\\/www.w3.org\\/1999\\/02\\/22-rdf-syntax-ns#\\\"\\n    xmlns:j.0=\\\"http:\\/\\/kristina-project.eu\\/ontologies\\/dialogue_actions#\\\">\\n  <j.0:SystemAction rdf:about=\\\"http:\\/\\/kristina-project.eu\\/tmp#1163a855-d4a2-4f7b-b4a8-b9d2ce7aae06\\\">\\n    <j.0:startWith>\\n      <j.0:ShowWeather rdf:about=\\\"http:\\/\\/kristina-project.eu\\/tmp#85ae8fd3-4330-4410-a410-24ea79163eb0\\\">\\n        <j.0:text>@prefix xsd:     &lt;http:\\/\\/www.w3.org\\/2001\\/XMLSchema#&gt; . @prefix rdfs:    &lt;http:\\/\\/www.w3.org\\/2000\\/01\\/rdf-schema#&gt; . @prefix owl:     &lt;http:\\/\\/www.w3.org\\/2002\\/07\\/owl#&gt; . @prefix rdf:     &lt;http:\\/\\/www.w3.org\\/1999\\/02\\/22-rdf-syntax-ns#&gt; .  &lt;http:\\/\\/temp#13p2om0pkeevfc9kf8cq0ik8hh&gt;       a       &lt;http:\\/\\/kristina-project.eu\\/ontologies\\/weather#Forecast&gt; ;       &lt;http:\\/\\/kristina-project.eu\\/ontologies\\/weather#humidity&gt;               \\\\\\\"58\\\\\\\"^^xsd:double ;       &lt;http:\\/\\/kristina-project.eu\\/ontologies\\/weather#pressure&gt;               \\\\\\\"725\\\\\\\"^^xsd:double ;       &lt;http:\\/\\/kristina-project.eu\\/ontologies\\/weather#skyCondition&gt;               \\\\\\\"partlyCloudySkyConditionRating\\\\\\\"^^xsd:string ;       &lt;http:\\/\\/kristina-project.eu\\/ontologies\\/weather#temperature&gt;               \\\\\\\"23\\\\\\\"^^xsd:double ;       &lt;http:\\/\\/kristina-project.eu\\/ontologies\\/weather#windDirection&gt;               \\\\\\\"WWindDirectionRating\\\\\\\"^^xsd:string ;       &lt;http:\\/\\/kristina-project.eu\\/ontologies\\/weather#windSpeed&gt;               \\\\\\\"3\\\\\\\"^^xsd:double .  &lt;http:\\/\\/response-data&gt;       a       owl:Ontology ;       owl:imports &lt;http:\\/\\/kristina-project.eu\\/ontologies\\/weather&gt; . <\\/j.0:text>\\n      <\\/j.0:ShowWeather>\\n    <\\/j.0:startWith>\\n    <j.0:hasValence rdf:datatype=\\\"http:\\/\\/www.w3.org\\/2001\\/XMLSchema#float\\\"\\n    >0.0<\\/j.0:hasValence>\\n    <j.0:hasArousal rdf:datatype=\\\"http:\\/\\/www.w3.org\\/2001\\/XMLSchema#float\\\"\\n    >0.0<\\/j.0:hasArousal>\\n    <j.0:containsSystemAct rdf:resource=\\\"http:\\/\\/kristina-project.eu\\/tmp#85ae8fd3-4330-4410-a410-24ea79163eb0\\\"\\/>\\n  <\\/j.0:SystemAction>\\n<\\/rdf:RDF>\\n\"\n"
+                + "");
+        System.out.println(x);
+
+        final String y = KristinaUtility.decodeXML("@prefix xsd:     &lt;http://www.w3.org/2001/XMLSchema#&gt; . @prefix rdfs:    &lt;http://www.w3.org/2000/01/rdf-schema#&gt; . @prefix owl:     &lt;http://www.w3.org/2002/07/owl#&gt; . @prefix rdf:     &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .  &lt;http://temp#13p2om0pkeevfc9kf8cq0ik8hh&gt;       a       &lt;http://kristina-project.eu/ontologies/weather#Forecast&gt; ;       &lt;http://kristina-project.eu/ontologies/weather#humidity&gt;               \\\"58\\\"^^xsd:double ;       &lt;http://kristina-project.eu/ontologies/weather#pressure&gt;               \\\"725\\\"^^xsd:double ;       &lt;http://kristina-project.eu/ontologies/weather#skyCondition&gt;               \\\"partlyCloudySkyConditionRating\\\"^^xsd:string ;       &lt;http://kristina-project.eu/ontologies/weather#temperature&gt;               \\\"23\\\"^^xsd:double ;       &lt;http://kristina-project.eu/ontologies/weather#windDirection&gt;               \\\"WWindDirectionRating\\\"^^xsd:string ;       &lt;http://kristina-project.eu/ontologies/weather#windSpeed&gt;               \\\"3\\\"^^xsd:double .  &lt;http://response-data&gt;       a       owl:Ontology ;       owl:imports &lt;http://kristina-project.eu/ontologies/weather&gt;. ");
+        System.out.println(y);
+
+        final String a = KristinaUtility.read("res/exp/output_dialog_management.txt");
+        final String b = KristinaUtility.encodeJSON(a);
+        System.out.println(b);
+    }
+
+    ////////////////////////////////////////////////////////////////////////////
+    private static void testPipe(final String args[]) {
+        // Create the REST client
         final RESTFulWebClient client = new RESTFulWebClient();
         //testVSM();
         //testSSI();
@@ -19,24 +84,20 @@ public final class PipelineTestSuite {
         //testUPF(client);
         testAV(client);
         //testPipe(client);
-    }
-
-    private static void testPipe(final RESTFulWebClient client) {
-
         /*
-        // Create the listener
-        final SSIEventListener listener = new SSIEventListener(
-                new SSIEventHandler() {
-                    @Override
-                    public void handle(String event) {
+         // Create the listener
+         final SSIEventListener listener = new SSIEventListener(
+         new SSIEventHandler() {
+         @Override
+         public void handle(String event) {
                         
-                    }
-                },
-                "137.250.171.231", 11220,
-                "137.250.171.230", 11190,
-                false);
-        // Start the listener
-        listener.start();
+         }
+         },
+         "137.250.171.231", 11220,
+         "137.250.171.230", 11190,
+         false);
+         // Start the listener
+         listener.start();
          */
         // LANGUAGE ANALYSIS
         //final RESTFulResource la = new RESTFulResource(
@@ -170,11 +231,11 @@ public final class PipelineTestSuite {
 
         // Try executing a POST request
         final String params = "?id=" + "KRISTINA";
-        
+
         final String json_lg = KristinaUtility.read("res/exp/output_language_generation.txt");
         final String json_ms = KristinaUtility.read("res/exp/output_mode_selection.txt");
         final String payload = KristinaUtility.merge(json_lg, json_ms, 2);
-        
+
         final String result = client.post(av, params, payload);
 
     }

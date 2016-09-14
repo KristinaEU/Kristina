@@ -1,7 +1,7 @@
 package eu.kristina.vsm.ssi;
 
 import de.dfki.vsm.util.log.LOGDefaultLogger;
-import eu.kristina.vsm.VSMKristinaPlayer;
+import eu.kristina.vsm.ScenePlayer;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.InetSocketAddress;
@@ -35,7 +35,7 @@ public class SSIEventNotifier extends Thread {
 
     // Create the handler thread
     public SSIEventNotifier(
-            final VSMKristinaPlayer player,
+            final ScenePlayer player,
             final String lHost,
             final Integer lPort,
             final String rHost,
