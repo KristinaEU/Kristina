@@ -33,6 +33,7 @@ public final class KristinaUtility {
 
     private static LOGDefaultLogger sLogger = LOGDefaultLogger.getInstance();
 
+
     ////////////////////////////////////////////////////////////////////////////
     public final static String merge(
             final String lstr, final String rstr, final int indent) {
@@ -75,12 +76,6 @@ public final class KristinaUtility {
         return mmap;
     }
 
-     ////////////////////////////////////////////////////////////////////////////
-//     public final static JSONObject create() {
-//         final JSONObject object = new JSONObject();
-//         object.
-//     }
-     
     ////////////////////////////////////////////////////////////////////////////
     public final static String read(final String filename) {
         final StringBuffer buffer = new StringBuffer();
@@ -146,8 +141,8 @@ public final class KristinaUtility {
             return null;
         }
     }
-    
-       ////////////////////////////////////////////////////////////////////////////
+
+    ////////////////////////////////////////////////////////////////////////////
     public final static String encodeXML(final String input) {
         // Encode the output XML string
         final String xmlencoded = StringEscapeUtils.escapeXml10(input);

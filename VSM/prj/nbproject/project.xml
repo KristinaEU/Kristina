@@ -43,27 +43,29 @@ auxiliary.show.customizer.message=<message>
             </folders>
             <ide-actions>
                 <action name="build">
+                    <script>nbproject/nbjdk.xml</script>
                     <target>build</target>
                 </action>
                 <action name="clean">
+                    <script>nbproject/nbjdk.xml</script>
                     <target>clean</target>
                 </action>
                 <action name="javadoc">
+                    <script>nbproject/nbjdk.xml</script>
                     <target>jdocs</target>
                 </action>
-                <action name="rebuild">
-                    <target>clean</target>
-                    <target>build</target>
-                </action>
                 <action name="run">
-                    <target>run-vsm-project-editor</target>
+                    <script>nbproject/nbjdk.xml</script>
+                    <target>run-profiler</target>
                 </action>
                 <action name="test">
-                    <target>infos</target>
+                    <script>nbproject/nbjdk.xml</script>
+                    <target>test-json</target>
                 </action>
-                <action name="profile">
-                    <script>nbproject/ide-file-targets.xml</script>
-                    <target>profile-nb</target>
+                <action name="rebuild">
+                    <script>nbproject/nbjdk.xml</script>
+                    <target>clean</target>
+                    <target>build</target>
                 </action>
             </ide-actions>
             <view>
@@ -87,7 +89,6 @@ auxiliary.show.customizer.message=<message>
                     <ide-action name="javadoc"/>
                     <ide-action name="run"/>
                     <ide-action name="test"/>
-                    <ide-action name="profile"/>
                 </context-menu>
             </view>
             <subprojects/>
@@ -96,7 +97,7 @@ auxiliary.show.customizer.message=<message>
             <compilation-unit>
                 <package-root>../res</package-root>
                 <package-root>../src</package-root>
-                <classpath mode="compile">../lib/VisualSceneMaker.jar;../lib/javax.json-1.0.4.jar;../lib/jersey-bundle-1.19.jar;../lib/json-20160807.jar;../lib/commons-lang3-3.4.jar</classpath>
+                <classpath mode="compile">../lib/VisualSceneMaker.jar;../lib/commons-lang3-3.4.jar;../lib/javax.json-1.0.4.jar;../lib/jersey-bundle-1.19.jar;../lib/json-20160807.jar</classpath>
                 <source-level>1.8</source-level>
             </compilation-unit>
         </java-data>

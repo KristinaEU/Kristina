@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<SceneFlow id="KRISTINA" name="KRISTINA" comment="KRISTINA" hideLocalVar="false" hideGlobalVar="false" exhaustive="false" preserving="false" modifDate="Tue, 13 Sep 2016 10:47:55" start="S4;" context="" package="" xmlns="xml.sceneflow.dfki.de" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="xml.sceneflow.dfki.de res/xsd/sceneflow.xsd">
+<SceneFlow id="KRISTINA" name="KRISTINA" comment="KRISTINA" hideLocalVar="false" hideGlobalVar="false" exhaustive="false" preserving="false" modifDate="Do, 15 Sep 2016 17:39:10" start="S4;" context="" package="" xmlns="xml.sceneflow.dfki.de" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="xml.sceneflow.dfki.de res/xsd/sceneflow.xsd">
   <Define>
     <StructType name="StatusData">
       <Member type="Float" name ="Valence"/>
@@ -9,32 +9,35 @@
     </StructType>
   </Define>
   <Declare>
+    <Variable type="String" name ="MD">
+      <String>undefined</String>
+    </Variable>
     <Variable type="String" name ="TS">
-      <String><![CDATA[undefined]]></String>
+      <String>undefined</String>
     </Variable>
     <Variable type="String" name ="LA">
-      <String><![CDATA[undefined]]></String>
+      <String>undefined</String>
     </Variable>
     <Variable type="String" name ="DM">
-      <String><![CDATA[undefined]]></String>
+      <String>undefined</String>
     </Variable>
     <Variable type="String" name ="MN">
-      <String><![CDATA[undefined]]></String>
+      <String>undefined</String>
     </Variable>
     <Variable type="String" name ="MV">
-      <String><![CDATA[undefined]]></String>
+      <String>undefined</String>
     </Variable>
     <Variable type="String" name ="LG">
-      <String><![CDATA[undefined]]></String>
+      <String>undefined</String>
     </Variable>
     <Variable type="String" name ="AN">
-      <String><![CDATA[undefined]]></String>
+      <String>undefined</String>
     </Variable>
     <Variable type="String" name ="AV">
-      <String><![CDATA[undefined]]></String>
+      <String>undefined</String>
     </Variable>
     <Variable type="String" name ="AA">
-      <String><![CDATA[undefined]]></String>
+      <String>undefined</String>
     </Variable>
     <Variable type="Float" name ="UV">
       <Float value="0.0"/>
@@ -62,7 +65,7 @@
     <Commands>
     </Commands>
     <Graphics>
-      <Position x-pos="163" y-pos="233"/>
+      <Position x-pos="233" y-pos="23"/>
     </Graphics>
     <LocalVariableBadge>
       <Position x-pos="10" y-pos="10"/>
@@ -186,7 +189,7 @@
           </Graphics>
           <Neq>
             <Variable name="LA"/>
-            <String><![CDATA[undefined]]></String>
+            <String>undefined</String>
           </Neq>
         </IEdge>
         <Graphics>
@@ -491,19 +494,19 @@
             <Assign>
               <Variable name="LA"/>
               <Expression>
-                <String><![CDATA[undefined]]></String>
+                <String>undefined</String>
               </Expression>
             </Assign>
             <Assign>
               <Variable name="DM"/>
               <Expression>
-                <String><![CDATA[undefined]]></String>
+                <String>undefined</String>
               </Expression>
             </Assign>
             <Assign>
               <Variable name="MV"/>
               <Expression>
-                <String><![CDATA[undefined]]></String>
+                <String>undefined</String>
               </Expression>
             </Assign>
           </Commands>
@@ -733,7 +736,7 @@
               </Define>
               <Declare>
                 <Variable type="String" name ="Response">
-                  <String><![CDATA[]]></String>
+                  <String></String>
                 </Variable>
               </Declare>
               <Commands>
@@ -926,7 +929,7 @@
             <Assign>
               <Variable name="LA"/>
               <Expression>
-                <String><![CDATA[</timeout>]]></String>
+                <String>&lt;/timeout&gt;</String>
               </Expression>
             </Assign>
           </Commands>
@@ -959,11 +962,11 @@
             <And>
               <Neq>
                 <Variable name="LG"/>
-                <String><![CDATA[undefined]]></String>
+                <String>undefined</String>
               </Neq>
               <Neq>
                 <Variable name="MN"/>
-                <String><![CDATA[undefined]]></String>
+                <String>undefined</String>
               </Neq>
             </And>
           </IEdge>
@@ -1007,7 +1010,7 @@
               <UserCommand name="head">
                 <Float value="1.0"/>
                 <Float value="10.0"/>
-                <String><![CDATA[DOWN]]></String>
+                <String>DOWN</String>
               </UserCommand>
             </Commands>
             <TEdge target="N20" start="" timeout="2000">
@@ -1031,7 +1034,7 @@
               <UserCommand name="head">
                 <Float value="1.0"/>
                 <Float value="10.0"/>
-                <String><![CDATA[UP]]></String>
+                <String>UP</String>
               </UserCommand>
             </Commands>
             <TEdge target="N18" start="" timeout="2000">
@@ -1145,7 +1148,7 @@
                 <UserCommand name="gaze">
                   <Float value="1.0"/>
                   <Float value="20.0"/>
-                  <String><![CDATA[UPRIGHT]]></String>
+                  <String>UPRIGHT</String>
                 </UserCommand>
               </Commands>
               <TEdge target="N16" start="" timeout="1000">
@@ -1169,7 +1172,7 @@
                 <UserCommand name="gaze">
                   <Float value="1.0"/>
                   <Float value="0.0"/>
-                  <String><![CDATA[UPRIGHT]]></String>
+                  <String>UPRIGHT</String>
                 </UserCommand>
               </Commands>
               <Graphics>
@@ -1356,25 +1359,25 @@
                 <Assign>
                   <Variable name="LG"/>
                   <Expression>
-                    <String><![CDATA[undefined]]></String>
+                    <String>undefined</String>
                   </Expression>
                 </Assign>
                 <Assign>
                   <Variable name="MN"/>
                   <Expression>
-                    <String><![CDATA[undefined]]></String>
+                    <String>undefined</String>
                   </Expression>
                 </Assign>
                 <Assign>
                   <Variable name="AN"/>
                   <Expression>
-                    <String><![CDATA[undefined]]></String>
+                    <String>undefined</String>
                   </Expression>
                 </Assign>
                 <Assign>
                   <Variable name="AV"/>
                   <Expression>
-                    <String><![CDATA[undefined]]></String>
+                    <String>undefined</String>
                   </Expression>
                 </Assign>
               </Commands>
@@ -1387,7 +1390,7 @@
       </SuperNode>
     </SuperNode>
   </SuperNode>
-  <SuperNode id="S4" name="Tests" comment="" exhaustive="false" preserving="false" hideLocalVar="false" hideGlobalVar="false" start="S1;">
+  <SuperNode id="S4" name="Tests" comment="" exhaustive="false" preserving="false" hideLocalVar="false" hideGlobalVar="false" start="S16;">
     <Define>
     </Define>
     <Declare>
@@ -1395,7 +1398,7 @@
     <Commands>
     </Commands>
     <Graphics>
-      <Position x-pos="163" y-pos="303"/>
+      <Position x-pos="233" y-pos="93"/>
     </Graphics>
     <LocalVariableBadge>
       <Position x-pos="10" y-pos="10"/>
@@ -1411,7 +1414,7 @@
       <Commands>
       </Commands>
       <Graphics>
-        <Position x-pos="23" y-pos="233"/>
+        <Position x-pos="163" y-pos="93"/>
       </Graphics>
     </Node>
     <SuperNode id="S1" name="Idle" comment="" exhaustive="false" preserving="false" hideLocalVar="false" hideGlobalVar="false" start="S5;">
@@ -1422,7 +1425,7 @@
       <Commands>
       </Commands>
       <Graphics>
-        <Position x-pos="163" y-pos="233"/>
+        <Position x-pos="303" y-pos="93"/>
       </Graphics>
       <LocalVariableBadge>
         <Position x-pos="386" y-pos="66"/>
@@ -1479,7 +1482,7 @@
           </Define>
           <Declare>
             <Variable type="String" name ="Response">
-              <String><![CDATA[]]></String>
+              <String></String>
             </Variable>
           </Declare>
           <Commands>
@@ -1656,7 +1659,7 @@
           </Define>
           <Declare>
             <Variable type="String" name ="Response">
-              <String><![CDATA[]]></String>
+              <String></String>
             </Variable>
             <Variable type="Float" name ="Valence">
               <Float value="0.0"/>
@@ -1708,7 +1711,7 @@
           </Define>
           <Declare>
             <Variable type="String" name ="Response">
-              <String><![CDATA[]]></String>
+              <String></String>
             </Variable>
           </Declare>
           <Commands>
@@ -1778,7 +1781,7 @@
             <UserCommand name="head">
               <Float value="1.0"/>
               <Float value="10.0"/>
-              <String><![CDATA[]]></String>
+              <String></String>
             </UserCommand>
           </Commands>
           <TEdge target="N56" start="" timeout="5000">
@@ -1802,7 +1805,7 @@
             <UserCommand name="head">
               <Float value="1.0"/>
               <Float value="10.0"/>
-              <String><![CDATA[]]></String>
+              <String></String>
             </UserCommand>
           </Commands>
           <TEdge target="N55" start="" timeout="5000">
@@ -1854,7 +1857,7 @@
             <UserCommand name="eyes">
               <Float value="1.0"/>
               <Float value="10.0"/>
-              <String><![CDATA[]]></String>
+              <String></String>
             </UserCommand>
           </Commands>
           <TEdge target="N60" start="" timeout="1000">
@@ -1878,7 +1881,7 @@
             <UserCommand name="eyes">
               <Float value="1.0"/>
               <Float value="10.0"/>
-              <String><![CDATA[]]></String>
+              <String></String>
             </UserCommand>
           </Commands>
           <TEdge target="N59" start="" timeout="1000">
@@ -1928,9 +1931,9 @@
           </Declare>
           <Commands>
             <UserCommand name="anim">
-              <String><![CDATA[]]></String>
-              <String><![CDATA[]]></String>
-              <String><![CDATA[]]></String>
+              <String></String>
+              <String></String>
+              <String></String>
               <Float value="1.0"/>
             </UserCommand>
           </Commands>
@@ -2030,7 +2033,7 @@
             <UserCommand name="gaze">
               <Float value="1.0"/>
               <Float value="10.0"/>
-              <String><![CDATA[]]></String>
+              <String></String>
             </UserCommand>
           </Commands>
           <TEdge target="N67" start="" timeout="5000">
@@ -2054,7 +2057,7 @@
             <UserCommand name="gaze">
               <Float value="1.0"/>
               <Float value="10.0"/>
-              <String><![CDATA[]]></String>
+              <String></String>
             </UserCommand>
           </Commands>
           <TEdge target="N66" start="" timeout="5000">
@@ -2232,7 +2235,7 @@
       <Commands>
       </Commands>
       <Graphics>
-        <Position x-pos="163" y-pos="303"/>
+        <Position x-pos="303" y-pos="163"/>
       </Graphics>
       <LocalVariableBadge>
         <Position x-pos="10" y-pos="10"/>
@@ -2429,7 +2432,7 @@
               </Graphics>
               <Neq>
                 <Variable name="LA"/>
-                <String><![CDATA[undefined]]></String>
+                <String>undefined</String>
               </Neq>
             </CEdge>
             <TEdge target="N82" start="" timeout="60000">
@@ -3008,7 +3011,7 @@
             </Graphics>
             <Neq>
               <Variable name="LA"/>
-              <String><![CDATA[undefined]]></String>
+              <String>undefined</String>
             </Neq>
           </CEdge>
           <TEdge target="N107" start="" timeout="60000">
@@ -3323,7 +3326,7 @@
             </Graphics>
             <Neq>
               <Variable name="LA"/>
-              <String><![CDATA[undefined]]></String>
+              <String>undefined</String>
             </Neq>
           </CEdge>
           <TEdge target="N115" start="" timeout="60000">
@@ -3383,49 +3386,49 @@
             <Assign>
               <Variable name="TS"/>
               <Expression>
-                <String><![CDATA[undefined]]></String>
+                <String>undefined</String>
               </Expression>
             </Assign>
             <Assign>
               <Variable name="LA"/>
               <Expression>
-                <String><![CDATA[undefined]]></String>
+                <String>undefined</String>
               </Expression>
             </Assign>
             <Assign>
               <Variable name="DM"/>
               <Expression>
-                <String><![CDATA[undefined]]></String>
+                <String>undefined</String>
               </Expression>
             </Assign>
             <Assign>
               <Variable name="MN"/>
               <Expression>
-                <String><![CDATA[undefined]]></String>
+                <String>undefined</String>
               </Expression>
             </Assign>
             <Assign>
               <Variable name="MV"/>
               <Expression>
-                <String><![CDATA[undefined]]></String>
+                <String>undefined</String>
               </Expression>
             </Assign>
             <Assign>
               <Variable name="LG"/>
               <Expression>
-                <String><![CDATA[undefined]]></String>
+                <String>undefined</String>
               </Expression>
             </Assign>
             <Assign>
               <Variable name="AN"/>
               <Expression>
-                <String><![CDATA[undefined]]></String>
+                <String>undefined</String>
               </Expression>
             </Assign>
             <Assign>
               <Variable name="AV"/>
               <Expression>
-                <String><![CDATA[undefined]]></String>
+                <String>undefined</String>
               </Expression>
             </Assign>
           </Commands>
@@ -3435,79 +3438,232 @@
         </Node>
       </SuperNode>
     </SuperNode>
+    <SuperNode id="S16" name="JSON" comment="" exhaustive="false" preserving="false" hideLocalVar="false" hideGlobalVar="false" start="N30;">
+      <Define>
+      </Define>
+      <Declare>
+        <Variable type="String" name ="JSON">
+          <String></String>
+        </Variable>
+      </Declare>
+      <Commands>
+      </Commands>
+      <Graphics>
+        <Position x-pos="303" y-pos="233"/>
+      </Graphics>
+      <LocalVariableBadge>
+        <Position x-pos="24" y-pos="243"/>
+      </LocalVariableBadge>
+      <GlobalVariableBadge>
+        <Position x-pos="10" y-pos="10"/>
+      </GlobalVariableBadge>
+      <Node id="N28" name="History" exhaustive="false" preserving="false" history="true">
+        <Define>
+        </Define>
+        <Declare>
+        </Declare>
+        <Commands>
+        </Commands>
+        <Graphics>
+          <Position x-pos="233" y-pos="93"/>
+        </Graphics>
+      </Node>
+      <Node id="N30" name="Create" exhaustive="false" preserving="false" history="false">
+        <Define>
+        </Define>
+        <Declare>
+        </Declare>
+        <Commands>
+          <Assign>
+            <Variable name="JSON"/>
+            <Expression>
+              <UserCommand name="create">
+              </UserCommand>
+            </Expression>
+          </Assign>
+          <UserCommand name="print">
+            <Variable name="JSON"/>
+          </UserCommand>
+          <UserCommand name="print">
+            <String>{\&quot;language\&quot;:\&quot;pl\&quot;}</String>
+          </UserCommand>
+        </Commands>
+        <EEdge target="N33" start ="">
+        <Graphics>
+          <Arrow>
+            <Point x-pos="303" y-pos="198" control-x-pos="320" control-y-pos="198"/>
+            <Point x-pos="373" y-pos="198" control-x-pos="355" control-y-pos="198"/>
+          </Arrow>
+        </Graphics>
+        </EEdge>
+        <Graphics>
+          <Position x-pos="233" y-pos="163"/>
+        </Graphics>
+      </Node>
+      <Node id="N31" name="Insert" exhaustive="false" preserving="false" history="false">
+        <Define>
+        </Define>
+        <Declare>
+        </Declare>
+        <Commands>
+          <Assign>
+            <Variable name="JSON"/>
+            <Expression>
+              <UserCommand name="insert">
+                <Variable name="JSON"/>
+                <String>meta-data</String>
+                <Variable name="MD"/>
+              </UserCommand>
+            </Expression>
+          </Assign>
+          <UserCommand name="print">
+            <Variable name="JSON"/>
+          </UserCommand>
+        </Commands>
+        <Graphics>
+          <Position x-pos="653" y-pos="163"/>
+        </Graphics>
+      </Node>
+      <Node id="N32" name="Insert" exhaustive="false" preserving="false" history="false">
+        <Define>
+        </Define>
+        <Declare>
+        </Declare>
+        <Commands>
+          <Assign>
+            <Variable name="JSON"/>
+            <Expression>
+              <UserCommand name="insert">
+                <Variable name="JSON"/>
+                <String>meta-data</String>
+                <String>{\&quot;scaneario\&quot;:\&quot;babycare\&quot;}</String>
+              </UserCommand>
+            </Expression>
+          </Assign>
+        </Commands>
+        <Graphics>
+          <Position x-pos="233" y-pos="303"/>
+        </Graphics>
+      </Node>
+      <Node id="N33" name="Meta" exhaustive="false" preserving="false" history="false">
+        <Define>
+        </Define>
+        <Declare>
+        </Declare>
+        <Commands>
+        </Commands>
+        <CEdge target="N31" start="">
+          <Graphics>
+            <Arrow>
+              <Point x-pos="443" y-pos="198" control-x-pos="530" control-y-pos="198"/>
+              <Point x-pos="653" y-pos="198" control-x-pos="565" control-y-pos="198"/>
+            </Arrow>
+          </Graphics>
+          <Neq>
+            <Variable name="MD"/>
+            <String>undefined</String>
+          </Neq>
+        </CEdge>
+        <TEdge target="N33" start="" timeout="100">
+        <Graphics>
+          <Arrow>
+            <Point x-pos="417" y-pos="164" control-x-pos="435" control-y-pos="96"/>
+            <Point x-pos="438" y-pos="180" control-x-pos="498" control-y-pos="144"/>
+          </Arrow>
+        </Graphics>
+        </TEdge>
+        <Graphics>
+          <Position x-pos="373" y-pos="163"/>
+        </Graphics>
+      </Node>
+    </SuperNode>
   </SuperNode>
   <UserCommands>
-    <UserCommand name="mn" classname ="eu.kristina.vsm.VSMKristinaPlayer.sInstance" method="mn">
+    <UserCommand name="mn" classname ="eu.kristina.vsm.Player.sInstance" method="mn">
       <Argument name="Arg0" type="java.lang.String"/>
     </UserCommand>
-    <UserCommand name="nod" classname ="eu.kristina.vsm.VSMKristinaPlayer.sInstance" method="nod">
+    <UserCommand name="nod" classname ="eu.kristina.vsm.Player.sInstance" method="nod">
       <Argument name="Arg0" type="float"/>
       <Argument name="Arg1" type="int"/>
     </UserCommand>
-    <UserCommand name="randInt" classname ="eu.kristina.vsm.VSMKristinaPlayer.sInstance" method="randInt">
+    <UserCommand name="randInt" classname ="eu.kristina.vsm.Player.sInstance" method="randInt">
       <Argument name="Arg0" type="int"/>
     </UserCommand>
-    <UserCommand name="shake" classname ="eu.kristina.vsm.VSMKristinaPlayer.sInstance" method="shake">
+    <UserCommand name="shake" classname ="eu.kristina.vsm.Player.sInstance" method="shake">
       <Argument name="Arg0" type="float"/>
       <Argument name="Arg1" type="int"/>
     </UserCommand>
-    <UserCommand name="ssi" classname ="eu.kristina.vsm.VSMKristinaPlayer.sInstance" method="ssi">
+    <UserCommand name="ssi" classname ="eu.kristina.vsm.Player.sInstance" method="ssi">
       <Argument name="Arg0" type="java.lang.String"/>
     </UserCommand>
-    <UserCommand name="mv" classname ="eu.kristina.vsm.VSMKristinaPlayer.sInstance" method="mv">
+    <UserCommand name="mv" classname ="eu.kristina.vsm.Player.sInstance" method="mv">
       <Argument name="Arg0" type="java.lang.String"/>
     </UserCommand>
-    <UserCommand name="dm" classname ="eu.kristina.vsm.VSMKristinaPlayer.sInstance" method="dm">
+    <UserCommand name="dm" classname ="eu.kristina.vsm.Player.sInstance" method="dm">
       <Argument name="Arg0" type="float"/>
       <Argument name="Arg1" type="float"/>
       <Argument name="Arg2" type="java.lang.String"/>
     </UserCommand>
-    <UserCommand name="blink" classname ="eu.kristina.vsm.VSMKristinaPlayer.sInstance" method="blink">
+    <UserCommand name="insert" classname ="eu.kristina.vsm.Player.sInstance" method="insert">
+      <Argument name="Arg0" type="java.lang.String"/>
+      <Argument name="Arg1" type="java.lang.String"/>
+      <Argument name="Arg2" type="java.lang.String"/>
+    </UserCommand>
+    <UserCommand name="blink" classname ="eu.kristina.vsm.Player.sInstance" method="blink">
       <Argument name="Arg0" type="float"/>
     </UserCommand>
-    <UserCommand name="tilt" classname ="eu.kristina.vsm.VSMKristinaPlayer.sInstance" method="tilt">
+    <UserCommand name="tilt" classname ="eu.kristina.vsm.Player.sInstance" method="tilt">
       <Argument name="Arg0" type="float"/>
       <Argument name="Arg1" type="int"/>
     </UserCommand>
-    <UserCommand name="an" classname ="eu.kristina.vsm.VSMKristinaPlayer.sInstance" method="an">
+    <UserCommand name="an" classname ="eu.kristina.vsm.Player.sInstance" method="an">
       <Argument name="Arg0" type="java.lang.String"/>
     </UserCommand>
-    <UserCommand name="eyes" classname ="eu.kristina.vsm.VSMKristinaPlayer.sInstance" method="eyes">
+    <UserCommand name="eyes" classname ="eu.kristina.vsm.Player.sInstance" method="eyes">
       <Argument name="Arg0" type="float"/>
       <Argument name="Arg1" type="float"/>
       <Argument name="Arg2" type="java.lang.String"/>
     </UserCommand>
-    <UserCommand name="head" classname ="eu.kristina.vsm.VSMKristinaPlayer.sInstance" method="head">
+    <UserCommand name="remove" classname ="eu.kristina.vsm.Player.sInstance" method="remove">
+      <Argument name="Arg0" type="java.lang.String"/>
+      <Argument name="Arg1" type="java.lang.String"/>
+    </UserCommand>
+    <UserCommand name="head" classname ="eu.kristina.vsm.Player.sInstance" method="head">
       <Argument name="Arg0" type="float"/>
       <Argument name="Arg1" type="float"/>
       <Argument name="Arg2" type="java.lang.String"/>
     </UserCommand>
-    <UserCommand name="face" classname ="eu.kristina.vsm.VSMKristinaPlayer.sInstance" method="face">
+    <UserCommand name="face" classname ="eu.kristina.vsm.Player.sInstance" method="face">
       <Argument name="Arg0" type="float"/>
       <Argument name="Arg1" type="float"/>
       <Argument name="Arg2" type="float"/>
     </UserCommand>
-    <UserCommand name="speech" classname ="eu.kristina.vsm.VSMKristinaPlayer.sInstance" method="speech">
+    <UserCommand name="print" classname ="java.lang.System.err" method="println">
+      <Argument name="text" type="java.lang.String"/>
+    </UserCommand>
+    <UserCommand name="speech" classname ="eu.kristina.vsm.Player.sInstance" method="speech">
       <Argument name="Arg0" type="java.lang.String"/>
     </UserCommand>
-    <UserCommand name="av" classname ="eu.kristina.vsm.VSMKristinaPlayer.sInstance" method="av">
+    <UserCommand name="av" classname ="eu.kristina.vsm.Player.sInstance" method="av">
       <Argument name="Arg0" type="java.lang.String"/>
     </UserCommand>
-    <UserCommand name="gaze" classname ="eu.kristina.vsm.VSMKristinaPlayer.sInstance" method="gaze">
+    <UserCommand name="gaze" classname ="eu.kristina.vsm.Player.sInstance" method="gaze">
       <Argument name="Arg0" type="float"/>
       <Argument name="Arg1" type="float"/>
       <Argument name="Arg2" type="java.lang.String"/>
     </UserCommand>
-    <UserCommand name="lg" classname ="eu.kristina.vsm.VSMKristinaPlayer.sInstance" method="lg">
+    <UserCommand name="create" classname ="eu.kristina.vsm.Player.sInstance" method="create">
+    </UserCommand>
+    <UserCommand name="lg" classname ="eu.kristina.vsm.Player.sInstance" method="lg">
       <Argument name="Arg0" type="java.lang.String"/>
     </UserCommand>
-    <UserCommand name="anim" classname ="eu.kristina.vsm.VSMKristinaPlayer.sInstance" method="anim">
+    <UserCommand name="anim" classname ="eu.kristina.vsm.Player.sInstance" method="anim">
       <Argument name="Arg0" type="java.lang.String"/>
       <Argument name="Arg1" type="java.lang.String"/>
       <Argument name="Arg2" type="java.lang.String"/>
       <Argument name="Arg3" type="float"/>
     </UserCommand>
-    <UserCommand name="randFloat" classname ="eu.kristina.vsm.VSMKristinaPlayer.sInstance" method="randFloat">
+    <UserCommand name="randFloat" classname ="eu.kristina.vsm.Player.sInstance" method="randFloat">
       <Argument name="Arg0" type="float"/>
       <Argument name="Arg1" type="float"/>
     </UserCommand>

@@ -4,7 +4,7 @@
 <comment/>
 <entry key="autohidebottombar">true</entry>
 <entry key="num_magnets">8</entry>
-<entry key="grid">true</entry>
+<entry key="grid">false</entry>
 <entry key="node_width">70</entry>
 <entry key="showvariables">true</entry>
 <entry key="frame_posy">0</entry>

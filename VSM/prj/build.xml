@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="KBM" default="build" basedir="..">
+<project name="KristinaBehaviorManager" default="build" basedir="..">
     <!-- Define Binary Directory -->
     <property name="bindir" value="${basedir}${file.separator}bin"/>
     <!-- Define Build Directory -->
@@ -191,12 +191,28 @@
         </java>
     </target> 
     <!-- -->
-    <target name="run-vsm-kristina-service">
-        <java classname="eu.kristina.vsm.VSMKristinaService" fork="true">
+    <target name="run-service">
+        <java classname="eu.kristina.vsm.Service" fork="true">
             <classpath refid="clspath"/>
-            <arg line="http://172.31.26.245:11223/"/>
+            <!--<arg line="http://172.31.26.245:11223/"/>-->
+            <arg line="http://127.0.0.1:11223/"/>
         </java>
-    </target>     
+    </target>  
+    <!-- -->
+    <target name="run-profiler" depends="build" description="Profile Service">
+        <fail unless="netbeans.home">
+            This target can only run inside the NetBeans IDE.
+        </fail>
+        <nbprofiledirect>
+            <classpath refid="clspath"/>
+        </nbprofiledirect>
+        <java classname="eu.kristina.vsm.Service" fork="true">
+            <jvmarg value="${profiler.info.jvmargs.agent}"/>
+            <!--<jvmarg line="${profiler.info.jvmargs}"/>-->
+            <classpath refid="clspath"/>
+            <arg line="http://127.0.0.1:11223/"/>
+        </java>
+    </target>   
     <!-- -->
     <target name="run-ssi-handler-terminal">
         <java classname="eu.kristina.vsm.ssi.SSIHandlerTerminal" fork="true">
