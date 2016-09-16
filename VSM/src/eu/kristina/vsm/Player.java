@@ -1,14 +1,14 @@
 package eu.kristina.vsm;
 
-import eu.kristina.vsm.rest.RESTFulWebClient;
-import eu.kristina.vsm.gti.GTIActionFactory;
+import eu.kristina.vsm.rest.WebClient;
+import eu.kristina.vsm.gti.ActionFactory;
 import de.dfki.vsm.model.project.PlayerConfig;
 import de.dfki.vsm.runtime.RunTimeInstance;
 import de.dfki.vsm.runtime.project.RunTimeProject;
 import de.dfki.vsm.runtime.values.AbstractValue;
 import de.dfki.vsm.runtime.players.RunTimePlayer;
 import de.dfki.vsm.util.log.LOGDefaultLogger;
-import eu.kristina.vsm.rest.RESTFulResource;
+import eu.kristina.vsm.rest.Resource;
 import eu.kristina.vsm.ssi.SSIEventFactory;
 import eu.kristina.vsm.ssi.SSIEventListener;
 import java.io.ByteArrayInputStream;
@@ -22,7 +22,6 @@ import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 import eu.kristina.vsm.ssi.SSIEventHandler;
 import eu.kristina.vsm.ssi.SSIEventNotifier;
-import eu.kristina.vsm.util.KristinaUtility;
 import org.json.JSONObject;
 
 /**
@@ -48,13 +47,9 @@ public final class Player implements RunTimePlayer, SSIEventHandler {
     private SSIEventListener mSSIListener;
     private SSIEventNotifier mSSINotifier;
     // The rest service client
-    private RESTFulWebClient mRestClient;
-    // The kristina avatar id
-    private String mAvatarID = "KRISTINA";
-    // The language parameter 
-    private String mLanguage = "de";
+    private WebClient mRestClient;
     // The  rest service urls
-    private final HashMap<String, RESTFulResource> mResourceMap = new HashMap();
+    private final HashMap<String, Resource> mResourceMap = new HashMap();
     // A random number generator
     private final Random mRandom = new Random();
 
@@ -84,7 +79,7 @@ public final class Player implements RunTimePlayer, SSIEventHandler {
             final String cons = mPlayerConfig.getProperty("restful.resource." + i + ".cons");
             final String prod = mPlayerConfig.getProperty("restful.resource." + i + ".prod");
             // Create the service data
-            final RESTFulResource resource = new RESTFulResource(host, name, path, cons, prod);
+            final Resource resource = new Resource(host, name, path, cons, prod);
             // Print some information
             //mLogger.message("Registering RESTful service resource '" + resource + "'" + "\r\n");
             // Add the new service then
@@ -117,9 +112,9 @@ public final class Player implements RunTimePlayer, SSIEventHandler {
                 + "SSI Notifier Remote Port : '" + ssinrport + "'" + "\r\n"
                 + "SSI Notifier Remote Flag : '" + ssinrflag + "'" + "\r\n");
         // Initialize the avatar identifier
-        mAvatarID = mPlayerConfig.getProperty("kristina.gti.avatar.id");
+        //mAvatarID = mPlayerConfig.getProperty("kristina.gti.avatar.id");
         // Initialize the language parameter
-        mLanguage = mPlayerConfig.getProperty("kristina.conf.lang.out");
+        //mLanguage = mPlayerConfig.getProperty("kristina.conf.lang.out");
         // Initialize the SSI notifier
         mSSINotifier = new SSIEventNotifier(this,
                 ssinlhost, Integer.parseInt(ssinlport),
@@ -127,7 +122,7 @@ public final class Player implements RunTimePlayer, SSIEventHandler {
                 Boolean.parseBoolean(ssinrflag));
         mSSINotifier.start();
         // Initialize the rest client
-        mRestClient = new RESTFulWebClient();
+        mRestClient = new WebClient();
         // Initialize the SSI listener
         mSSIListener = new SSIEventListener(this,
                 ssillhost, Integer.parseInt(ssillport),
@@ -174,65 +169,61 @@ public final class Player implements RunTimePlayer, SSIEventHandler {
     ////////////////////////////////////////////////////////////////////////////
     public final String blink() {
         // Get the resource
-        final RESTFulResource resource = mResourceMap.get("Avatar-Idle");
+        final Resource resource = mResourceMap.get("Avatar-Idle");
         // Get the command
-        final String command = GTIActionFactory.blink(1.0f);
+        final String data = ActionFactory.blink(1.0f);
+        // Get the command
+        final String command = create("idle", "{ }");
+        //
+        put(command, "data", data);
         // Execute POST request
-        return mRestClient.post(resource, "?id=" + mAvatarID, command);
+        return mRestClient.post(resource, "", command);
     }
 
     public final String blink(
             final float duration) {
         // Get the resource
-        final RESTFulResource resource = mResourceMap.get("Avatar-Idle");
+        final Resource resource = mResourceMap.get("Avatar-Idle");
         // Get the command
-        final String command = GTIActionFactory.blink(duration);
+        final JSONObject object = new JSONObject();
+        // Produce the initial object
+        object.put("uuid", id());
+        object.put("type", "idle");
+        object.put("meta", new JSONObject("{\"avatar\":\"KRISTINA\"}"));
+        object.put("data", new JSONObject(ActionFactory.blink(duration)));
         // Execute POST request
-        return mRestClient.post(resource, "?id=" + mAvatarID, command);
+        return mRestClient.post(resource, "", object.toString(2));
     }
-
-    public final String blink(
-            final String id) {
-        // Get the resource
-        final RESTFulResource resource = mResourceMap.get("Avatar-Idle");
-        // Get the command
-        final String command = GTIActionFactory.blink(1.0f);
-        // Execute POST request
-        return mRestClient.post(resource, "?id=" + id, command);
-    }
-
-    public final String blink(
-            final String id,
-            final float duration) {
-        // Get the resource
-        final RESTFulResource resource = mResourceMap.get("Avatar-Idle");
-        // Get the command
-        final String command = GTIActionFactory.blink(duration);
-        // Execute POST request
-        return mRestClient.post(resource, "?id=" + id, command);
-    }
-
+  
     ////////////////////////////////////////////////////////////////////////////
     ////////////////////////////////////////////////////////////////////////////
     ////////////////////////////////////////////////////////////////////////////
     public final String face() {
         // Get the resource
-        final RESTFulResource resource = mResourceMap.get("Avatar-Idle");
+        final Resource resource = mResourceMap.get("Avatar-Idle");
         // Get the command
-        final String command = GTIActionFactory.face(0.0f, 0.0f, 1.0f);
+        final String data = ActionFactory.face(0.0f, 0.0f, 1.0f);
+        // Get the command
+        final String command = create("idle", "{ }");
+        //
+        put(command, "data", data);
         // Execute POST request
-        return mRestClient.post(resource, "?id=" + mAvatarID, command);
+        return mRestClient.post(resource, "", command);
     }
 
     public final String face(
             final float valence,
             final float arousal) {
         // Get the resource
-        final RESTFulResource resource = mResourceMap.get("Avatar-Idle");
+        final Resource resource = mResourceMap.get("Avatar-Idle");
         // Get the command
-        final String command = GTIActionFactory.face(valence, arousal, 1.0f);
+        final String data = ActionFactory.face(valence, arousal, 1.0f);
+        // Get the command
+        final String command = create("idle", "{ }");
+        //
+        put(command, "data", data);
         // Execute POST request
-        return mRestClient.post(resource, "?id=" + mAvatarID, command);
+        return mRestClient.post(resource, "", command);
     }
 
     public final String face(
@@ -240,48 +231,18 @@ public final class Player implements RunTimePlayer, SSIEventHandler {
             final float arousal,
             final float duration) {
         // Get the resource
-        final RESTFulResource resource = mResourceMap.get("Avatar-Idle");
+        final Resource resource = mResourceMap.get("Avatar-Idle");
         // Get the command
-        final String command = GTIActionFactory.face(valence, arousal, duration);
-        // Execute POST request
-        return mRestClient.post(resource, "?id=" + mAvatarID, command);
-    }
-
-    public final String face(
-            final String id) {
-        // Get the resource
-        final RESTFulResource resource = mResourceMap.get("Avatar-Idle");
+        final String data = ActionFactory.face(valence, arousal, duration);
         // Get the command
-        final String command = GTIActionFactory.face(0.0f, 0.0f, 1.0f);
+        final String command = create("idle", "{ }");
+        //
+        put(command, "data", data);
         // Execute POST request
-        return mRestClient.post(resource, "?id=" + id, command);
-    }
+        return mRestClient.post(resource, "", command);
+    } 
 
-    public final String face(
-            final String id,
-            final float valence,
-            final float arousal) {
-        // Get the resource
-        final RESTFulResource resource = mResourceMap.get("Avatar-Idle");
-        // Get the command
-        final String command = GTIActionFactory.face(valence, arousal, 1.0f);
-        // Execute POST request
-        return mRestClient.post(resource, "?id=" + id, command);
-    }
-
-    public final String face(
-            final String id,
-            final float valence,
-            final float arousal,
-            final float duration) {
-        // Get the resource
-        final RESTFulResource resource = mResourceMap.get("Avatar-Idle");
-        // Get the command
-        final String command = GTIActionFactory.face(valence, arousal, duration);
-        // Execute POST request
-        return mRestClient.post(resource, "?id=" + id, command);
-    }
-
+    /*
     ////////////////////////////////////////////////////////////////////////////
     ////////////////////////////////////////////////////////////////////////////
     ////////////////////////////////////////////////////////////////////////////
@@ -290,11 +251,11 @@ public final class Player implements RunTimePlayer, SSIEventHandler {
             final float angle,
             final String direction) {
         // Get the resource
-        final RESTFulResource resource = mResourceMap.get("Avatar-Idle");
+        final Resource resource = mResourceMap.get("Avatar-Idle");
         // Get the command
-        final String command = GTIActionFactory.eyes(speed, angle, direction);
+        final String data = ActionFactory.eyes(speed, angle, direction);
         // Execute POST request
-        return mRestClient.post(resource, "?id=" + mAvatarID, command);
+        return mRestClient.post(resource, "", command);
     }
 
     public final String eyes(
@@ -303,11 +264,11 @@ public final class Player implements RunTimePlayer, SSIEventHandler {
             final float angle,
             final String direction) {
         // Get the resource
-        final RESTFulResource resource = mResourceMap.get("Avatar-Idle");
+        final Resource resource = mResourceMap.get("Avatar-Idle");
         // Get the command
-        final String command = GTIActionFactory.eyes(speed, angle, direction);
+        final String data = ActionFactory.eyes(speed, angle, direction);
         // Execute POST request
-        return mRestClient.post(resource, "?id=" + id, command);
+        return mRestClient.post(resource, "", command);
     }
 
     ////////////////////////////////////////////////////////////////////////////
@@ -318,11 +279,11 @@ public final class Player implements RunTimePlayer, SSIEventHandler {
             final float angle,
             final String direction) {
         // Get the resource
-        final RESTFulResource resource = mResourceMap.get("Avatar-Idle");
+        final Resource resource = mResourceMap.get("Avatar-Idle");
         // Get the command
-        final String command = GTIActionFactory.gaze(speed, angle, direction);
+        final String data = ActionFactory.gaze(speed, angle, direction);
         // Execute POST request
-        return mRestClient.post(resource, "?id=" + mAvatarID, command);
+        return mRestClient.post(resource, "", command);
     }
 
     public final String gaze(
@@ -331,11 +292,11 @@ public final class Player implements RunTimePlayer, SSIEventHandler {
             final float angle,
             final String direction) {
         // Get the resource
-        final RESTFulResource resource = mResourceMap.get("Avatar-Idle");
+        final Resource resource = mResourceMap.get("Avatar-Idle");
         // Get the command
-        final String command = GTIActionFactory.gaze(speed, angle, direction);
+        final String data = ActionFactory.gaze(speed, angle, direction);
         // Execute POST request
-        return mRestClient.post(resource, "?id=" + id, command);
+        return mRestClient.post(resource, "", command);
     }
 
     ////////////////////////////////////////////////////////////////////////////
@@ -346,11 +307,11 @@ public final class Player implements RunTimePlayer, SSIEventHandler {
             final float angle,
             final String direction) {
         // Get the resource
-        final RESTFulResource resource = mResourceMap.get("Avatar-Idle");
+        final Resource resource = mResourceMap.get("Avatar-Idle");
         // Get the command
-        final String command = GTIActionFactory.head(speed, angle, direction);
+        final String data = ActionFactory.head(speed, angle, direction);
         // Execute POST request
-        return mRestClient.post(resource, "?id=" + mAvatarID, command);
+        return mRestClient.post(resource, "", command);
     }
 
     public final String head(
@@ -359,11 +320,11 @@ public final class Player implements RunTimePlayer, SSIEventHandler {
             final float angle,
             final String direction) {
         // Get the resource
-        final RESTFulResource resource = mResourceMap.get("Avatar-Idle");
+        final Resource resource = mResourceMap.get("Avatar-Idle");
         // Get the command
-        final String command = GTIActionFactory.head(speed, angle, direction);
+        final String data = ActionFactory.head(speed, angle, direction);
         // Execute POST request
-        return mRestClient.post(resource, "?id=" + id, command);
+        return mRestClient.post(resource, "", command);
     }
 
     ////////////////////////////////////////////////////////////////////////////
@@ -373,11 +334,11 @@ public final class Player implements RunTimePlayer, SSIEventHandler {
             final float amount,
             final int repetition) {
         // Get the resource
-        final RESTFulResource resource = mResourceMap.get("Avatar-Idle");
+        final Resource resource = mResourceMap.get("Avatar-Idle");
         // Get the command
-        final String command = GTIActionFactory.nod(amount, repetition);
+        final String data = ActionFactory.nod(amount, repetition);
         // Execute POST request
-        return mRestClient.post(resource, "?id=" + mAvatarID, command);
+        return mRestClient.post(resource, "", command);
     }
 
     public final String nod(
@@ -385,11 +346,11 @@ public final class Player implements RunTimePlayer, SSIEventHandler {
             final float amount,
             final int repetition) {
         // Get the resource
-        final RESTFulResource resource = mResourceMap.get("Avatar-Idle");
+        final Resource resource = mResourceMap.get("Avatar-Idle");
         // Get the command
-        final String command = GTIActionFactory.nod(amount, repetition);
+        final String data = ActionFactory.nod(amount, repetition);
         // Execute POST request
-        return mRestClient.post(resource, "?id=" + id, command);
+        return mRestClient.post(resource, "", command);
     }
 
     ////////////////////////////////////////////////////////////////////////////
@@ -399,11 +360,11 @@ public final class Player implements RunTimePlayer, SSIEventHandler {
             final float amount,
             final int repetition) {
         // Get the resource
-        final RESTFulResource resource = mResourceMap.get("Avatar-Idle");
+        final Resource resource = mResourceMap.get("Avatar-Idle");
         // Get the command
-        final String command = GTIActionFactory.shake(amount, repetition);
+        final String data = ActionFactory.shake(amount, repetition);
         // Execute POST request
-        return mRestClient.post(resource, "?id=" + mAvatarID, command);
+        return mRestClient.post(resource, "", command);
     }
 
     public final String shake(
@@ -411,11 +372,11 @@ public final class Player implements RunTimePlayer, SSIEventHandler {
             final float amount,
             final int repetition) {
         // Get the resource
-        final RESTFulResource resource = mResourceMap.get("Avatar-Idle");
+        final Resource resource = mResourceMap.get("Avatar-Idle");
         // Get the command
-        final String command = GTIActionFactory.shake(amount, repetition);
+        final String data = ActionFactory.shake(amount, repetition);
         // Execute POST request
-        return mRestClient.post(resource, "?id=" + id, command);
+        return mRestClient.post(resource, "", command);
     }
 
     ////////////////////////////////////////////////////////////////////////////
@@ -425,11 +386,11 @@ public final class Player implements RunTimePlayer, SSIEventHandler {
             final float amount,
             final int repetition) {
         // Get the resource
-        final RESTFulResource resource = mResourceMap.get("Avatar-Idle");
+        final Resource resource = mResourceMap.get("Avatar-Idle");
         // Get the command
-        final String command = GTIActionFactory.tilt(amount, repetition);
+        final String data = ActionFactory.tilt(amount, repetition);
         // Execute POST request
-        return mRestClient.post(resource, "?id=" + mAvatarID, command);
+        return mRestClient.post(resource, "", command);
     }
 
     public final String tilt(
@@ -437,138 +398,76 @@ public final class Player implements RunTimePlayer, SSIEventHandler {
             final float amount,
             final int repetition) {
         // Get the resource
-        final RESTFulResource resource = mResourceMap.get("Avatar-Idle");
+        final Resource resource = mResourceMap.get("Avatar-Idle");
         // Get the command
-        final String command = GTIActionFactory.tilt(amount, repetition);
+        final String data = ActionFactory.tilt(amount, repetition);
         // Execute POST request
         return mRestClient.post(resource, "?id=" + id, command);
     }
+    */
+    ////////////////////////////////////////////////////////////////////////////
+    // The static command id
+    private static volatile long sId = 0;
+
+    // Get a new command id
+    private static synchronized long id() {
+        return ++sId;
+    }
+
+    // Produce an inital envelope
+    public final String create(final String type, final String meta) {
+        final JSONObject object = new JSONObject();
+        // Produce the initial object
+        object.put("uuid", id());
+        object.put("type", type);
+        object.put("meta", new JSONObject(meta));
+        object.put("data", new JSONObject());
+        // Return the initial object
+        return object.toString(2);
+    }
+
+    public final String put(final String obj, final String key, final String val) {
+        // Create the final object
+        final JSONObject object = new JSONObject(obj);
+        // Initialize temporaries
+        int index;
+        String path = key;
+        JSONObject member = object;
+        // Recursively insert now
+        while ((index = path.indexOf(".")) != -1) {
+            // Eventually insert
+            if (!member.has(path.substring(0, index))) {
+                member.put(path.substring(0, index), new JSONObject());
+            }
+            // Update the member
+            member = member.getJSONObject(path.substring(0, index));
+            // Update the path
+            path = path.substring(index + 1);
+
+        }
+        // Insert key value pair
+        member.put(path, val);
+        // Return the final object        
+        return object.toString();
+
+    }
 
     ////////////////////////////////////////////////////////////////////////////
-    ////////////////////////////////////////////////////////////////////////////
-    ////////////////////////////////////////////////////////////////////////////
-    public final String anim(
-            final String id,
-            final String name,
-            final String mode,
-            final float speed) {
+    public final String post(final String name, final String content) {
         // Get the resource
-        final RESTFulResource resource = mResourceMap.get("Avatar-Idle");
-        // Get the command
-        final String command = GTIActionFactory.anim(name, mode, speed);
-        // Execute POST request
-        return mRestClient.post(resource, "?id=" + id, command);
-    }
-
-    ////////////////////////////////////////////////////////////////////////////
-    ////////////////////////////////////////////////////////////////////////////
-    ////////////////////////////////////////////////////////////////////////////
-    public final String speech(final String id) {
-        // Get the resource
-        final RESTFulResource resource = mResourceMap.get("Avatar-Verbal");
-        // Get the command
-        final String command = GTIActionFactory.speech();
-        // Execute POST request
-        return mRestClient.post(resource, "?id=" + id, command);
-
-    }
-
-    ////////////////////////////////////////////////////////////////////////////
-    ////////////////////////////////////////////////////////////////////////////
-    ////////////////////////////////////////////////////////////////////////////
-    ////////////////////////////////////////////////////////////////////////////
-    public final static String create() {
-        return /*new JSONObject(*/"{\"id\":\"" + 0 + "\"}";//).toString();
-    }
-
-    public final static String insert(final String obj, final String key, final String val) {
-        System.err.println(obj);
-        System.err.println(key);
-        System.err.println(val);
-
-        final JSONObject o = new JSONObject(obj);
-        final JSONObject v = new JSONObject(val);
-        final JSONObject r = o.put(key, v);
-        return r.toString();
-    }
-
-    public final static String remove(final String obj, final String key) {
-        return new JSONObject(obj).remove(key).toString();
-    }
-
-    ////////////////////////////////////////////////////////////////////////////
-    ////////////////////////////////////////////////////////////////////////////
-    ////////////////////////////////////////////////////////////////////////////
-    public final String dm(
-            final float valence,
-            final float arousal,
-            final String content) {
-        // Get the resource
-        final RESTFulResource resource = mResourceMap.get("Dialog-Management");
+        final Resource resource = mResourceMap.get(name);
+        // Create a JSON object 
+        final JSONObject object = new JSONObject(content);
+        // Create the payload
+        final String payload = object.toString(2);
         // Print some information
-        //mLogger.message("Resource is\n'" + resource + "'");
-        // Get the query data
-        final String query = "?valence=" + valence + "&arousal=" + arousal;
+        mLogger.message("Resource:\n" + resource);
+        mLogger.message("Payload:\n" + payload);
         // Execute POST request
-        return mRestClient.post(resource, query, content);
+        //return mRestClient.post(resource, "", payload);
+        return name;
     }
 
-    public final String mv(
-            final String content) {
-        // Get the resource
-        final RESTFulResource resource = mResourceMap.get("Mode-Selection");
-        // Print some information
-        //mLogger.message("Resource is\n'" + resource + "'");
-        // Execute POST request
-        return mRestClient.post(resource, "?mode=verbal", content);
-    }
-
-    public final String mn(
-            final String content) {
-        // Get the resource
-        final RESTFulResource resource = mResourceMap.get("Mode-Selection");
-        // Print some information
-        //mLogger.message("Resource is\n'" + resource + "'");
-        // Execute POST request
-        return mRestClient.post(resource, "?mode=non_verbal", content);
-    }
-
-    public final String lg(
-            final String content) {
-        // Get the resource
-        final RESTFulResource resource = mResourceMap.get("Language-Generation");
-        // Print some information
-        //mLogger.message("Resource is\n'" + resource + "'");
-        // Get the query data
-        final String query = "";
-        // The new query with language parameter?
-        //final String query = "?lang=" + mAvatarID;
-        // Execute POST request
-        return mRestClient.post(resource, query, content);
-    }
-
-    public final String av(
-            final String content) {
-        // Get the resource
-        final RESTFulResource resource = mResourceMap.get("Avatar-Verbal");
-        // Print some information
-        //mLogger.message("Resource is\n'" + resource + "'");
-        // Execute POST request
-        return mRestClient.post(resource, "?id=" + mAvatarID, content);
-    }
-
-    public final String an(
-            final String content) {
-        // Get the resource
-        final RESTFulResource resource = mResourceMap.get("Avatar-Nonverbal");
-        // Print some information
-        //mLogger.message("Resource is\n'" + resource + "'");
-        // Execute POST request
-        return mRestClient.post(resource, "?id=" + mAvatarID, content);
-    }
-
-    ////////////////////////////////////////////////////////////////////////////
-    ////////////////////////////////////////////////////////////////////////////
     ////////////////////////////////////////////////////////////////////////////
     // Get a random float 
     public final float randFloat(final float scale, final float shift) {
@@ -581,90 +480,11 @@ public final class Player implements RunTimePlayer, SSIEventHandler {
     }
 
     ////////////////////////////////////////////////////////////////////////////
-    ////////////////////////////////////////////////////////////////////////////
-    ////////////////////////////////////////////////////////////////////////////
-    // Set a string variable via runtime
-    public final void set(final String name, final String value) {
-        if (mRunTime.hasVariable(mProject, name)) {
-            mRunTime.setVariable(mProject, name, value);
-        } else {
-            //mLogger.failure("Error: Variable '" + name + "' does not exist");
-        }
-    }
-
-    // Set a string variable via runtime
-    public final void set(final String name, final Float value) {
-        if (mRunTime.hasVariable(mProject, name)) {
-            mRunTime.setVariable(mProject, name, value);
-        } else {
-            //mLogger.failure("Error: Variable '" + name + "' does not exist");
-        }
-    }
-
-    // Set a boolean variable via runtime
-    public final void set(final String name, final Integer value) {
-        if (mRunTime.hasVariable(mProject, name)) {
-            mRunTime.setVariable(mProject, name, value);
-        } else {
-            //mLogger.failure("Error: Variable '" + name + "' does not exist");
-        }
-    }
-
-    // Set a boolean variable via runtime
-    public final void set(final String name, final Boolean value) {
-        if (mRunTime.hasVariable(mProject, name)) {
-            mRunTime.setVariable(mProject, name, value);
-        } else {
-            //mLogger.failure("Error: Variable '" + name + "' does not exist");
-        }
-    }
-
-    // Set a record variable via runtime
-    public final void set(final String name, final String member, final String value) {
-        if (mRunTime.hasVariable(mProject, name, member)) {
-            mRunTime.setVariable(mProject, name, member, value);
-        } else {
-            //mLogger.failure("Error: Variable '" + name + "." + member + "' does not exist");
-        }
-    }
-
-    // Set a record variable via runtime
-    public final void set(final String name, final String member, final Float value) {
-        if (mRunTime.hasVariable(mProject, name, member)) {
-            mRunTime.setVariable(mProject, name, member, value);
-        } else {
-            //mLogger.failure("Error: Variable '" + name + "." + member + "' does not exist");
-        }
-    }
-
-    // Set a record variable via runtime
-    public final void set(final String name, final String member, final Integer value) {
-        if (mRunTime.hasVariable(mProject, name, member)) {
-            mRunTime.setVariable(mProject, name, member, value);
-        } else {
-            //mLogger.failure("Error: Variable '" + name + "." + member + "' does not exist");
-        }
-    }
-
-    // Set a record variable via runtime
-    public final void set(final String name, final String member, final Boolean value) {
-        if (mRunTime.hasVariable(mProject, name, member)) {
-            mRunTime.setVariable(mProject, name, member, value);
-        } else {
-            //mLogger.failure("Error: Variable '" + name + "." + member + "' does not exist");
-        }
-    }
-
-    ////////////////////////////////////////////////////////////////////////////
-    ////////////////////////////////////////////////////////////////////////////
-    ////////////////////////////////////////////////////////////////////////////
     @Override
     public final void play(final String name, final LinkedList<AbstractValue> args) {
         // Do nothing here ...
     }
 
-    ////////////////////////////////////////////////////////////////////////////
-    ////////////////////////////////////////////////////////////////////////////
     ////////////////////////////////////////////////////////////////////////////
     // Handle an SSI event 
     @Override
@@ -802,6 +622,43 @@ public final class Player implements RunTimePlayer, SSIEventHandler {
             // Print some information
             mLogger.failure(exc.toString());
             exc.printStackTrace();
+        }
+    }
+
+    ////////////////////////////////////////////////////////////////////////////
+    // 
+    public final void set(final String name, final String value) {
+        if (mRunTime.hasVariable(mProject, name)) {
+            mRunTime.setVariable(mProject, name, value);
+        } else {
+            mLogger.failure("Variable '" + name + "' does not exist");
+        }
+    }
+
+    // 
+    public final void set(final String name, final Float value) {
+        if (mRunTime.hasVariable(mProject, name)) {
+            mRunTime.setVariable(mProject, name, value);
+        } else {
+            mLogger.failure("Variable '" + name + "' does not exist");
+        }
+    }
+
+    // 
+    public final void set(final String name, final Integer value) {
+        if (mRunTime.hasVariable(mProject, name)) {
+            mRunTime.setVariable(mProject, name, value);
+        } else {
+            mLogger.failure("Variable '" + name + "' does not exist");
+        }
+    }
+
+    // 
+    public final void set(final String name, final Boolean value) {
+        if (mRunTime.hasVariable(mProject, name)) {
+            mRunTime.setVariable(mProject, name, value);
+        } else {
+            mLogger.failure("Variable '" + name + "' does not exist");
         }
     }
 }

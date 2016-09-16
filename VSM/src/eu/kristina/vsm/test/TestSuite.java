@@ -1,9 +1,10 @@
 package eu.kristina.vsm.test;
 
 import de.dfki.vsm.util.log.LOGDefaultLogger;
-import eu.kristina.vsm.rest.RESTFulResource;
-import eu.kristina.vsm.rest.RESTFulWebClient;
-import eu.kristina.vsm.util.KristinaUtility;
+import eu.kristina.vsm.rest.Resource;
+import eu.kristina.vsm.rest.WebClient;
+import eu.kristina.vsm.util.Utilities;
+import org.apache.commons.lang3.StringEscapeUtils;
 import org.json.JSONObject;
 
 /**
@@ -15,12 +16,34 @@ public final class TestSuite {
 
     ////////////////////////////////////////////////////////////////////////////
     public static final void main(final String args[]) {
+        final String x = "<rdf:RDF\n"
+                + "    xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\"\n"
+                + "    xmlns:j.0=\"http://kristina-project.eu/ontologies/dialogue_actions#\">\n"
+                + "    <rdf:Description rdf:about=\"http://kristina-project.eu/tmp#17614db9-27b9-4985-971b-57c103304cc6\">\n"
+                + "        <j.0:containsSystemAct rdf:resource=\"http://kristina-project.eu/tmp#4e4ed404-4868-468c-8ae1-f18c64d7acc3\"/>\n"
+                + "        <j.0:startWith rdf:resource=\"http://kristina-project.eu/tmp#153a78e8-3082-4a41-b0a1-28d64fd18c3b\"/>\n"
+                + "        <j.0:containsSystemAct rdf:resource=\"http://kristina-project.eu/tmp#153a78e8-3082-4a41-b0a1-28d64fd18c3b\"/>\n"
+                + "        <j.0:hasArousal rdf:datatype=\"http://www.w3.org/2001/XMLSchema#double\">0.14100000000000001</j.0:hasArousal>\n"
+                + "        <j.0:hasValence rdf:datatype=\"http://www.w3.org/2001/XMLSchema#double\">0.04000000000000001</j.0:hasValence>\n"
+                + "        <rdf:type rdf:resource=\"http://kristina-project.eu/ontologies/dialogue_actions#SystemAction\"/>\n"
+                + "    </rdf:Description>\n"
+                + "    <rdf:Description rdf:about=\"http://kristina-project.eu/tmp#153a78e8-3082-4a41-b0a1-28d64fd18c3b\">\n"
+                + "        <j.0:followedBy rdf:resource=\"http://kristina-project.eu/tmp#4e4ed404-4868-468c-8ae1-f18c64d7acc3\"/>\n"
+                + "        <rdf:type rdf:resource=\"http://kristina-project.eu/ontologies/dialogue_actions#Accept\"/>\n"
+                + "    </rdf:Description>\n"
+                + "    <rdf:Description rdf:about=\"http://kristina-project.eu/tmp#4e4ed404-4868-468c-8ae1-f18c64d7acc3\">\n"
+                + "        <j.0:text>Tell me the headline of the article.</j.0:text>\n"
+                + "        <rdf:type rdf:resource=\"http://kristina-project.eu/ontologies/dialogue_actions#Canned\"/>\n"
+                + "    </rdf:Description>\n"
+                + "</rdf:RDF>";
+        System.err.println("Original:\n" + x);
+                System.err.println(StringEscapeUtils.escapeJava(x));
+        System.err.println(Utilities.encodeJSON(x));
+
         if (args[0].equals("pipe")) {
             testPipe(args);
         } else if (args[0].equals("json")) {
             testJSON(args);
-        } else if (args[0].equals("xml")) {
-            testXML(args);
         } else {
             sLogger.warning("Usage:");
         }
@@ -31,53 +54,47 @@ public final class TestSuite {
     private static void testJSON(final String args[]) {
         final String l1 = "{\"0\":\"l\"}";
         final String r1 = "{\"0\":\"r\"}";
-        final String m1 = KristinaUtility.merge(l1, r1, 4);
+        final String m1 = Utilities.merge(l1, r1, 4);
         System.out.println(l1);
         System.out.println(r1);
         System.out.println(m1);
 
         final String l2 = "{\"0\":{\"1\":\"l\"}}";
         final String r2 = "{\"0\":{\"2\":\"r\"}}";
-        final String m2 = KristinaUtility.merge(l2, r2, 4);
+        final String m2 = Utilities.merge(l2, r2, 4);
         System.out.println(l2);
         System.out.println(r2);
         System.out.println(m2);
 
-        final String json_lg = KristinaUtility.read("res/exp/output_language_generation.txt");
-        final String json_ms = KristinaUtility.read("res/exp/output_mode_selection.txt");
-        final String merge = KristinaUtility.merge(json_lg, json_ms, 2);
+        final String json_lg = Utilities.read("res/exp/output_language_generation.txt");
+        final String json_ms = Utilities.read("res/exp/output_mode_selection.txt");
+        final String merge = Utilities.merge(json_lg, json_ms, 2);
         System.out.println(merge);
 
-        final String l = KristinaUtility.read("src/eu/kristina/vsm/test/envelope.txt");
-        final String r = KristinaUtility.read("src/eu/kristina/vsm/test/envelope.txt");
-        final String m = KristinaUtility.merge(l, r, 2);
-        KristinaUtility.write(m, "src/eu/kristina/vsm/test/second.txt");
-    }
+        final String l = Utilities.read("src/eu/kristina/vsm/test/envelope.txt");
+        final String r = Utilities.read("src/eu/kristina/vsm/test/envelope.txt");
+        final String m = Utilities.merge(l, r, 2);
+        Utilities.write(m, "src/eu/kristina/vsm/test/second.txt");
 
-    ////////////////////////////////////////////////////////////////////////////
-    private static void testXML(final String args[]) {
-        final String input = KristinaUtility.read("res/exp/output_language_analysis.txt");
-        final String encoded = KristinaUtility.encodeJSON(input);
+        final String input = Utilities.read("res/exp/output_language_analysis.txt");
+        final String encoded = Utilities.encodeJSON(input);
         System.out.println(encoded);
-        final String decoded = KristinaUtility.decodeJSON(encoded);
+        final String decoded = Utilities.decodeJSON(encoded);
         System.out.println(decoded);
 
-        final String x = KristinaUtility.decodeJSON("\"<rdf:RDF\\n    xmlns:rdf=\\\"http:\\/\\/www.w3.org\\/1999\\/02\\/22-rdf-syntax-ns#\\\"\\n    xmlns:j.0=\\\"http:\\/\\/kristina-project.eu\\/ontologies\\/dialogue_actions#\\\">\\n  <j.0:SystemAction rdf:about=\\\"http:\\/\\/kristina-project.eu\\/tmp#1163a855-d4a2-4f7b-b4a8-b9d2ce7aae06\\\">\\n    <j.0:startWith>\\n      <j.0:ShowWeather rdf:about=\\\"http:\\/\\/kristina-project.eu\\/tmp#85ae8fd3-4330-4410-a410-24ea79163eb0\\\">\\n        <j.0:text>@prefix xsd:     &lt;http:\\/\\/www.w3.org\\/2001\\/XMLSchema#&gt; . @prefix rdfs:    &lt;http:\\/\\/www.w3.org\\/2000\\/01\\/rdf-schema#&gt; . @prefix owl:     &lt;http:\\/\\/www.w3.org\\/2002\\/07\\/owl#&gt; . @prefix rdf:     &lt;http:\\/\\/www.w3.org\\/1999\\/02\\/22-rdf-syntax-ns#&gt; .  &lt;http:\\/\\/temp#13p2om0pkeevfc9kf8cq0ik8hh&gt;       a       &lt;http:\\/\\/kristina-project.eu\\/ontologies\\/weather#Forecast&gt; ;       &lt;http:\\/\\/kristina-project.eu\\/ontologies\\/weather#humidity&gt;               \\\\\\\"58\\\\\\\"^^xsd:double ;       &lt;http:\\/\\/kristina-project.eu\\/ontologies\\/weather#pressure&gt;               \\\\\\\"725\\\\\\\"^^xsd:double ;       &lt;http:\\/\\/kristina-project.eu\\/ontologies\\/weather#skyCondition&gt;               \\\\\\\"partlyCloudySkyConditionRating\\\\\\\"^^xsd:string ;       &lt;http:\\/\\/kristina-project.eu\\/ontologies\\/weather#temperature&gt;               \\\\\\\"23\\\\\\\"^^xsd:double ;       &lt;http:\\/\\/kristina-project.eu\\/ontologies\\/weather#windDirection&gt;               \\\\\\\"WWindDirectionRating\\\\\\\"^^xsd:string ;       &lt;http:\\/\\/kristina-project.eu\\/ontologies\\/weather#windSpeed&gt;               \\\\\\\"3\\\\\\\"^^xsd:double .  &lt;http:\\/\\/response-data&gt;       a       owl:Ontology ;       owl:imports &lt;http:\\/\\/kristina-project.eu\\/ontologies\\/weather&gt; . <\\/j.0:text>\\n      <\\/j.0:ShowWeather>\\n    <\\/j.0:startWith>\\n    <j.0:hasValence rdf:datatype=\\\"http:\\/\\/www.w3.org\\/2001\\/XMLSchema#float\\\"\\n    >0.0<\\/j.0:hasValence>\\n    <j.0:hasArousal rdf:datatype=\\\"http:\\/\\/www.w3.org\\/2001\\/XMLSchema#float\\\"\\n    >0.0<\\/j.0:hasArousal>\\n    <j.0:containsSystemAct rdf:resource=\\\"http:\\/\\/kristina-project.eu\\/tmp#85ae8fd3-4330-4410-a410-24ea79163eb0\\\"\\/>\\n  <\\/j.0:SystemAction>\\n<\\/rdf:RDF>\\n\"\n"
+        final String x = Utilities.decodeJSON("\"<rdf:RDF\\n    xmlns:rdf=\\\"http:\\/\\/www.w3.org\\/1999\\/02\\/22-rdf-syntax-ns#\\\"\\n    xmlns:j.0=\\\"http:\\/\\/kristina-project.eu\\/ontologies\\/dialogue_actions#\\\">\\n  <j.0:SystemAction rdf:about=\\\"http:\\/\\/kristina-project.eu\\/tmp#1163a855-d4a2-4f7b-b4a8-b9d2ce7aae06\\\">\\n    <j.0:startWith>\\n      <j.0:ShowWeather rdf:about=\\\"http:\\/\\/kristina-project.eu\\/tmp#85ae8fd3-4330-4410-a410-24ea79163eb0\\\">\\n        <j.0:text>@prefix xsd:     &lt;http:\\/\\/www.w3.org\\/2001\\/XMLSchema#&gt; . @prefix rdfs:    &lt;http:\\/\\/www.w3.org\\/2000\\/01\\/rdf-schema#&gt; . @prefix owl:     &lt;http:\\/\\/www.w3.org\\/2002\\/07\\/owl#&gt; . @prefix rdf:     &lt;http:\\/\\/www.w3.org\\/1999\\/02\\/22-rdf-syntax-ns#&gt; .  &lt;http:\\/\\/temp#13p2om0pkeevfc9kf8cq0ik8hh&gt;       a       &lt;http:\\/\\/kristina-project.eu\\/ontologies\\/weather#Forecast&gt; ;       &lt;http:\\/\\/kristina-project.eu\\/ontologies\\/weather#humidity&gt;               \\\\\\\"58\\\\\\\"^^xsd:double ;       &lt;http:\\/\\/kristina-project.eu\\/ontologies\\/weather#pressure&gt;               \\\\\\\"725\\\\\\\"^^xsd:double ;       &lt;http:\\/\\/kristina-project.eu\\/ontologies\\/weather#skyCondition&gt;               \\\\\\\"partlyCloudySkyConditionRating\\\\\\\"^^xsd:string ;       &lt;http:\\/\\/kristina-project.eu\\/ontologies\\/weather#temperature&gt;               \\\\\\\"23\\\\\\\"^^xsd:double ;       &lt;http:\\/\\/kristina-project.eu\\/ontologies\\/weather#windDirection&gt;               \\\\\\\"WWindDirectionRating\\\\\\\"^^xsd:string ;       &lt;http:\\/\\/kristina-project.eu\\/ontologies\\/weather#windSpeed&gt;               \\\\\\\"3\\\\\\\"^^xsd:double .  &lt;http:\\/\\/response-data&gt;       a       owl:Ontology ;       owl:imports &lt;http:\\/\\/kristina-project.eu\\/ontologies\\/weather&gt; . <\\/j.0:text>\\n      <\\/j.0:ShowWeather>\\n    <\\/j.0:startWith>\\n    <j.0:hasValence rdf:datatype=\\\"http:\\/\\/www.w3.org\\/2001\\/XMLSchema#float\\\"\\n    >0.0<\\/j.0:hasValence>\\n    <j.0:hasArousal rdf:datatype=\\\"http:\\/\\/www.w3.org\\/2001\\/XMLSchema#float\\\"\\n    >0.0<\\/j.0:hasArousal>\\n    <j.0:containsSystemAct rdf:resource=\\\"http:\\/\\/kristina-project.eu\\/tmp#85ae8fd3-4330-4410-a410-24ea79163eb0\\\"\\/>\\n  <\\/j.0:SystemAction>\\n<\\/rdf:RDF>\\n\"\n"
                 + "");
         System.out.println(x);
 
-        final String y = KristinaUtility.decodeXML("@prefix xsd:     &lt;http://www.w3.org/2001/XMLSchema#&gt; . @prefix rdfs:    &lt;http://www.w3.org/2000/01/rdf-schema#&gt; . @prefix owl:     &lt;http://www.w3.org/2002/07/owl#&gt; . @prefix rdf:     &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .  &lt;http://temp#13p2om0pkeevfc9kf8cq0ik8hh&gt;       a       &lt;http://kristina-project.eu/ontologies/weather#Forecast&gt; ;       &lt;http://kristina-project.eu/ontologies/weather#humidity&gt;               \\\"58\\\"^^xsd:double ;       &lt;http://kristina-project.eu/ontologies/weather#pressure&gt;               \\\"725\\\"^^xsd:double ;       &lt;http://kristina-project.eu/ontologies/weather#skyCondition&gt;               \\\"partlyCloudySkyConditionRating\\\"^^xsd:string ;       &lt;http://kristina-project.eu/ontologies/weather#temperature&gt;               \\\"23\\\"^^xsd:double ;       &lt;http://kristina-project.eu/ontologies/weather#windDirection&gt;               \\\"WWindDirectionRating\\\"^^xsd:string ;       &lt;http://kristina-project.eu/ontologies/weather#windSpeed&gt;               \\\"3\\\"^^xsd:double .  &lt;http://response-data&gt;       a       owl:Ontology ;       owl:imports &lt;http://kristina-project.eu/ontologies/weather&gt;. ");
-        System.out.println(y);
-
-        final String a = KristinaUtility.read("res/exp/output_dialog_management.txt");
-        final String b = KristinaUtility.encodeJSON(a);
+        final String a = Utilities.read("res/exp/output_dialog_management.txt");
+        final String b = Utilities.encodeJSON(a);
         System.out.println(b);
     }
 
     ////////////////////////////////////////////////////////////////////////////
     private static void testPipe(final String args[]) {
         // Create the REST client
-        final RESTFulWebClient client = new RESTFulWebClient();
+        final WebClient client = new WebClient();
         //testVSM();
         //testSSI();
         testDM(client);
@@ -100,39 +117,39 @@ public final class TestSuite {
          listener.start();
          */
         // LANGUAGE ANALYSIS
-        //final RESTFulResource la = new RESTFulResource(
+        //final Resource la = new Resource(
         //        "UPF-TALN", "Language Analysis",
         //        "http://kristina.taln.upf.edu/services/language_analysis",
         //        "application/x-www-form-urlencoded", "application/xml");
         //final String _la = client.post(la, "", "");
         final String _la = "</timeout>";
         // DIALOG MANAGEMENT
-        final RESTFulResource dm = new RESTFulResource(
+        final Resource dm = new Resource(
                 "UULM-OWL", "Dialog Management",
                 "http://172.31.26.245:11150",
                 "*/*", "*/*");
         final String _dm = client.post(dm, "?valence=" + 0.5f + "&arousal=" + 0.5f, _la);
         // MODE SELECTION
-        final RESTFulResource ms = new RESTFulResource(
+        final Resource ms = new Resource(
                 "UPF-TALN", "Mode Selection",
                 "http://kristina.taln.upf.edu/services/mode_selection",
                 "application/x-www-form-urlencoded", "application/json");
         final String _ms_v = client.post(ms, "?mode=verbal&lang=pl", _dm);
         final String _ms_n = client.post(ms, "?mode=non_verbal&lang=pl", _dm);
         // LANGUAGE GENERATION
-        final RESTFulResource lg = new RESTFulResource(
+        final Resource lg = new Resource(
                 "UPF-TALN", "Language Generation",
                 "http://kristina.taln.upf.edu/services/language_generation",
                 "application/x-www-form-urlencoded", "application/json");
         final String _lg = client.post(lg, "", _ms_v);
         // CHARACTER ENGINE 
-        final RESTFulResource ce_v = new RESTFulResource(
+        final Resource ce_v = new Resource(
                 "UPF-GTI", "Character Engine",
                 "http://webglstudio.org:8080/verbal",
                 "application/json", "*/*");
         final String _ce_v = client.post(ce_v, "?id=KRISTINA", _lg);
         // CHARACTER ENGINE 
-        final RESTFulResource ce_n = new RESTFulResource(
+        final Resource ce_n = new Resource(
                 "UPF-GTI", "Character Engine",
                 "http://webglstudio.org:8080/non_verbal",
                 "application/xml", "*/*");
@@ -140,27 +157,27 @@ public final class TestSuite {
 
     }
 
-    private static void testSSI(final RESTFulWebClient client) {
+    private static void testSSI(final WebClient client) {
         // Build the SSI service config
-        final RESTFulResource ssiweb = new RESTFulResource(
+        final Resource ssiweb = new Resource(
                 "UAU-SSI", "Status Website",
                 "http://137.250.171.230:11193",
                 "*/*", "text/html");
         client.get(ssiweb, "");
         // Build the SSI service config
-        final RESTFulResource ssiget = new RESTFulResource(
+        final Resource ssiget = new Resource(
                 "UAU-SSI", "Fusion Status",
                 "http://137.250.171.230:11193",
                 "*/*", "application/json");
         client.get(ssiget, "/Fusion/Service.svc/getStatus");
         // Build the SSI service config
-        final RESTFulResource ssiemo = new RESTFulResource(
+        final Resource ssiemo = new Resource(
                 "UAU-SSI", "Fusion Emotion",
                 "http://137.250.171.230:11193",
                 "*/*", "application/json");
         client.get(ssiemo, "/Fusion/Service.svc/getEmotion");
         // Build the SSI service config
-        final RESTFulResource ssicmd = new RESTFulResource(
+        final Resource ssicmd = new Resource(
                 "UAU-SSI", "Fusion Control",
                 "http://137.250.171.230:11193",
                 "application/json", "application/json");
@@ -169,9 +186,9 @@ public final class TestSuite {
                 "{\"Target\":\"SSI\",\"Command\":\"restart\"}");
     }
 
-    private static void testVSM(final RESTFulWebClient client) {
+    private static void testVSM(final WebClient client) {
         // Build the VSM service config
-        final RESTFulResource vsmall = new RESTFulResource(
+        final Resource vsmall = new Resource(
                 "UAU-VSM", "Turn Management",
                 "http://137.250.171.231:11223",
                 "*/*", "application/xml");
@@ -181,30 +198,30 @@ public final class TestSuite {
         client.post(vsmall, "", "Hello World!");
     }
 
-    private static void testDM(final RESTFulWebClient client) {
+    private static void testDM(final WebClient client) {
         // Build the DM service config
-        final RESTFulResource dm = new RESTFulResource(
+        final Resource dm = new Resource(
                 "UULM-OWL", "Dialog-Management",
                 "http://172.31.26.245:11150",
                 "text/plain", "text/plain");
         // Try executing a POST request
         final String params = "?valence=" + 0.5f + "&arousal=" + 0.5f;
-        final String payload = KristinaUtility.read("res/exp/output_language_analysis.txt");
+        final String payload = Utilities.read("res/exp/output_language_analysis.txt");
         final String result = client.post(dm, params, payload);
         System.out.println(result);
     }
 
-    private static void testUPF(final RESTFulWebClient client) {
+    private static void testUPF(final WebClient client) {
         // Build the UPF service configs
-        final RESTFulResource la = new RESTFulResource(
+        final Resource la = new Resource(
                 "UPF-TALN", "Language Analysis",
                 "http://kristina.taln.upf.edu/services/language_analysis",
                 "application/x-www-form-urlencoded", "application/xml");
-        final RESTFulResource lg = new RESTFulResource(
+        final Resource lg = new Resource(
                 "UPF-TALN", "Language Generation",
                 "http://kristina.taln.upf.edu/services/language_generation",
                 "application/x-www-form-urlencoded", "application/json");
-        final RESTFulResource ms = new RESTFulResource(
+        final Resource ms = new Resource(
                 "UPF-TALN", "Mode Selection",
                 "http://kristina.taln.upf.edu/services/mode_selection",
                 "application/x-www-form-urlencoded", "application/xml");
@@ -223,8 +240,8 @@ public final class TestSuite {
         client.post(ms, "", "Hello World!");
     }
 
-    private static void testAV(final RESTFulWebClient client) {
-        final RESTFulResource av = new RESTFulResource(
+    private static void testAV(final WebClient client) {
+        final Resource av = new Resource(
                 "UPF-GTI", "Avatar-Taln",
                 "https://webglstudio.org:8080/taln",
                 "application/json", "application/json");
@@ -232,9 +249,9 @@ public final class TestSuite {
         // Try executing a POST request
         final String params = "?id=" + "KRISTINA";
 
-        final String json_lg = KristinaUtility.read("res/exp/output_language_generation.txt");
-        final String json_ms = KristinaUtility.read("res/exp/output_mode_selection.txt");
-        final String payload = KristinaUtility.merge(json_lg, json_ms, 2);
+        final String json_lg = Utilities.read("res/exp/output_language_generation.txt");
+        final String json_ms = Utilities.read("res/exp/output_mode_selection.txt");
+        final String payload = Utilities.merge(json_lg, json_ms, 2);
 
         final String result = client.post(av, params, payload);
 

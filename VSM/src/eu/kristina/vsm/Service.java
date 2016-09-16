@@ -1,566 +1,127 @@
 package eu.kristina.vsm;
 
-import com.sun.jersey.api.container.httpserver.HttpServerFactory;
-import com.sun.net.httpserver.HttpServer;
-import de.dfki.vsm.editor.EditorInstance;
-import de.dfki.vsm.editor.project.EditorProject;
-import de.dfki.vsm.editor.project.ProjectEditor;
-import de.dfki.vsm.runtime.RunTimeInstance;
-import de.dfki.vsm.runtime.symbol.SymbolEntry;
-import de.dfki.vsm.runtime.values.StringValue;
-import de.dfki.vsm.util.ios.IOSIndentWriter;
+import com.sun.jersey.spi.resource.Singleton;
 import de.dfki.vsm.util.log.LOGDefaultLogger;
-import de.dfki.vsm.util.tpl.TPLTriple;
-import de.dfki.vsm.util.xml.XMLWriteError;
-import eu.kristina.vsm.util.KristinaUtility;
-import java.io.BufferedReader;
-import java.io.ByteArrayOutputStream;
-import java.io.File;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.UnsupportedEncodingException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
+import javax.ws.rs.Consumes;
+import javax.ws.rs.POST;
+import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
 import org.json.JSONObject;
 
 /**
  * @author Gregor Mehlmann
  */
-public final class Service {//extends DefaultResourceConfig {
+@Singleton
+@Path("")
+public final class Service {
 
-    // The singelton service
-    private static Service sInstance = null;
-
-    // Create the singelton
-    public static synchronized Service getInstance() {
-        if (sInstance == null) {
-            sInstance = new Service();
-        }
-        return sInstance;
-    }
-
-    // The restful resource
-    //private Resource mResource = null;
-    private Service() {
-        // Print some information
-        mLogger.message("Constructing service '" + this + "'");
-        // Initialize the resource
-        //mResource = new Resource(this);
-    }
-
-    // Get the singelton services
-    //@Override
-    // public synchronized Set<Object> getSingletons() {
-    //     final Set<Object> objects = new HashSet<>();
-    //     objects.add(mResource);
-    //     return objects;
-    //}
     // The logger instance
     private final LOGDefaultLogger mLogger
             = LOGDefaultLogger.getInstance();
-    // The runtime instance
-    private final RunTimeInstance mRunTime
-            = RunTimeInstance.getInstance();
-    // The editor instance
-    private final EditorInstance mWindow
-            = EditorInstance.getInstance();
+    // The restful server
+    private final Server mServer;
 
-    // The project instance
-    private EditorProject mProject = null;
-    private ProjectEditor mEditor = null;
-
-    // The termination flag    
-    private boolean mDone = false;
-    // The http server
-    private HttpServer mServer = null;
-    // The executor pool
-    private ExecutorService mPool = null;
-    // The inpout reader
-    private BufferedReader mReader = null;
-
-    // The status types
-    private enum Status {
-
-        NULLED,
-        LOADED,
-        ACTIVE
+    // Construct the service
+    public Service() {
+        // Initialize the server
+        mServer = Server.getInstance();
+        // Print some information
+        mLogger.message("Constructing service '" + this + "'");
     }
 
-    // Run the restful server
-    public final void run(final String args[]) {
-        // Print information
-        mLogger.message("Starting '" + this + "' on '" + args[0] + "'");
-        // Start the server
-        try {
-            // Create the server
-            mServer = HttpServerFactory.create(args[0]/*, this*/);
-            // Get the executors
-            mPool = Executors.newFixedThreadPool(1);
-            // Set the executors
-            mServer.setExecutor(mPool);
-            // Start the server
-            mServer.start();
-            // Create input reader
-            mReader = new BufferedReader(
-                    new InputStreamReader(System.in));
-            // Accept commands
-            while (!mDone) {
-                // Read a command from the console
-                final String in = mReader.readLine();
-                // Check the user's last command
-                if (in != null) {
-                    if (in.equals("exit")) {
-                        // Exit the service
-                        exit();
-                    } else if (in.startsWith("load")) {
-                        // Get project path
-                        final String path = in.substring(4).trim();
-                        // Load the project
-                        load(path);
-                    } else if (in.startsWith("unload")) {
-                        // Unload the project
-                        unload();
-                    } else if (in.equals("start")) {
-                        // Start the project
-                        start();
-                    } else if (in.equals("stop")) {
-                        // Stop the project
-                        stop();
-                    } else if (in.equals("show")) {
-                        // Show the editor
-                        show();
-                    } else if (in.equals("hide")) {
-                        // Hide the editor
-                        hide();
-                    } else if (in.equals("config")) {
-                        // Get the config
-                        mLogger.success(config());
-                    } else if (in.equals("states")) {
-                        // Get the states
-                        mLogger.success(states());
-                    } else if (in.equals("status")) {
-                        // Get the status
-                        mLogger.success(status());
-                    } else {
-                        // Print warning
-                        mLogger.warning("Unknown command '" + in + "'");
-                    }
-                }
-            }
-            // Kill the executors
-            mPool.shutdownNow();
-            // Abort the mServer
-            mServer.stop(0);
-            // Print information
-            mLogger.message("Stopping '" + this + "' on '" + args[0] + "'");
-        } catch (final IOException exc) {
-            mLogger.failure(exc.toString());
-        } catch (final IllegalArgumentException exc) {
-            mLogger.failure(exc.toString());
-        }
-    }
-
-    // Load the VSM project
-    public synchronized boolean load(final String path) {
-        try {
-            // Load the new project
-            if (mProject == null) {
-                // Create the project file
-                final File file = new File(path);
-                // Print information
-                mLogger.message("Trying to load file '" + file.getAbsolutePath() + "'");
-                // Check if the file exists
-                if (file.exists() && file.isDirectory()) {
-                    // Create new project
-                    mProject = new EditorProject();
-                    // Parse the project
-                    if (mProject.parse(file.getAbsolutePath())) {
-                        // Load the runtime project
-                        if (mRunTime.load(mProject)) {
-                            // Print some information
-                            mLogger.success("Successfully loaded project '" + mProject.getProjectPath() + "'");
-                            // Return true at success
-                            return true;
-                        } else {
-                            // Print some information
-                            mLogger.failure("Cannot load file '" + file.getAbsolutePath() + "'");
-                        }
-                    } else {
-                        // Print some information
-                        mLogger.failure("Cannot open file '" + file.getAbsolutePath() + "'");
-                    }
-                } else {
-                    // Print some information
-                    mLogger.failure("Cannot find file '" + file.getAbsolutePath() + "'");
-                }
+    // Handle a POST request
+    @POST
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
+    public synchronized Response post(final String object) {
+        // Create the response
+        final JSONObject response = new JSONObject();
+        // Create the request
+        final JSONObject request = new JSONObject(object);
+        // Parse the command
+        final String cmd = request.getString("cmd");
+        // Switch on command
+        if (cmd.equalsIgnoreCase("load")) {
+            // Parse the argument
+            final String arg = request.getString("arg");
+            // Switch on argument
+            if (mServer.load(arg)) {
+                response.put("status", "success");
+                response.put("message", "Loaded project '" + arg + "'");
             } else {
-                mLogger.failure("Cannot load project because a project is already loaded!");
+                response.put("status", "failure");
+                response.put("message", "Cannot load project '" + arg + "'");
             }
-        } catch (final Exception exc) {
-            // Print some information
-            mLogger.failure(exc.toString());
-        }
-        // Return false at failure
-        return false;
-    }
-
-    // Unload the VSM project
-    public synchronized boolean unload() {
-        try {
-            // Check if project is loaded        
-            if (mProject != null) {
-                if (!mRunTime.isRunning(mProject)) {
-                    // Print some information
-                    mLogger.success("Successfully unloaded project '" + mProject.getProjectPath() + "'");
-                    // Set the project null
-                    mProject = null;
-                    // Return true at success
-                    return true;
-                } else {
-                    // Print some information
-                    mLogger.failure("Cannot unload project because the project is still running!");
-                }
+        } else if (cmd.equalsIgnoreCase("start")) {
+            if (mServer.start()) {
+                response.put("status", "success");
+                response.put("message", "Started project");
             } else {
-                // Print some information
-                mLogger.failure("Cannot unload project because a project is not yet loaded!");
+                response.put("status", "failure");
+                response.put("message", "Cannot not start project");
             }
-        } catch (final Exception exc) {
-            // Print some information
-            mLogger.failure(exc.toString());
-        }
-        // Return false at failure
-        return false;
-    }
-
-    // Start the VSM project
-    public synchronized boolean start() {
-        try {
-            // Check if project is loaded        
-            if (mProject != null) {
-                // Check if project is running
-                if (!mRunTime.isRunning(mProject)) {
-                    // Then launch the project now
-                    if (mRunTime.launch(mProject)) {
-                        // And then start the project
-                        if (mRunTime.start(mProject)) {
-                            // Print some information
-                            mLogger.success("Successfully started project '" + mProject.getProjectName() + "'");
-                            // Return true at success
-                            return true;
-                        } else {
-                            // Print some information
-                            mLogger.failure("Cannot start project '" + mProject.getProjectName() + "'");
-                        }
-                    } else {
-                        // Print some information
-                        mLogger.failure("Cannot launch project '" + mProject.getProjectName() + "'");
-                    }
-                } else {
-                    // Print some information
-                    mLogger.failure("Cannot start project because the project is already running!");
-                }
+        } else if (cmd.equalsIgnoreCase("stop")) {
+            if (mServer.stop()) {
+                response.put("status", "success");
+                response.put("message", "Stopped project");
             } else {
-                // Print some information
-                mLogger.failure("Cannot start project because the project is not yet loaded!");
+                response.put("status", "failure");
+                response.put("message", "Cannot not stop project");
             }
-        } catch (final Exception exc) {
-            // Print some information
-            mLogger.failure(exc.toString());
-        }
-        // Return false at failure
-        return false;
-    }
-
-    /**
-     * Stop the VSM runtime project instance for KRISTINA
-     *
-     * @return A boolean flag indicating success or failure
-     */
-    public synchronized boolean stop() {
-        try {
-            // Check if project is loaded
-            if (mProject != null) {
-                // Check if project is running
-                if (mRunTime.isRunning(mProject)) {
-                    // Then abort the running project
-                    if (mRunTime.abort(mProject)) {
-                        // And unload the project then
-                        if (mRunTime.unload(mProject)) {
-                            // Print some information
-                            mLogger.success("Successfully stopped project '" + mProject.getProjectPath() + "'");
-                            // Return true at success
-                            return true;
-                        } else {
-                            // Print some information
-                            mLogger.failure("Cannot unload project '" + mProject.getProjectPath() + "'");
-                        }
-                    } else {
-                        // Print some information
-                        mLogger.failure("Cannot abort project '" + mProject.getProjectPath() + "'");
-                    }
-                } else {
-                    // Print some information
-                    mLogger.failure("Cannot stop project because the project is not yet running!");
-                }
+        } else if (cmd.equalsIgnoreCase("unload")) {
+            if (mServer.unload()) {
+                response.put("status", "success");
+                response.put("message", "Unloaded project");
             } else {
-                // Print some information
-                mLogger.failure("Cannot stop project because the project is not yet loaded!");
+                response.put("status", "failure");
+                response.put("message", "Cannot not unload project");
             }
-        } catch (final Exception exc) {
-            // Print some information
-            mLogger.failure(exc.toString());
-        }
-        // Return false at failure
-        return false;
-    }
-
-    // Show the VSM editor
-    public synchronized boolean show() {
-        try {
-            // Check if the project is null
-            if (mProject != null) {
-                if (mEditor == null) {
-                    // Show the project editor 
-                    mEditor = mWindow.showProject(mProject);
-                    // Hide some editor elements
-                    mEditor.getAuxiliaryEditor().setVisible(false);
-                    //mEditor.getSceneFlowEditor().getToolBar().setVisible(false);
-                    // Print some information
-                    mLogger.message("Successfully showed project '" + mProject.getProjectPath() + "'");
-                    // return true at success
-                    return true;
-                } else {
-                    // Print some information
-                    mLogger.failure("Cannot show editor because the editor is already shown!");
-                }
+        } else if (cmd.equalsIgnoreCase("show")) {
+            if (mServer.show()) {
+                response.put("status", "success");
+                response.put("message", "Showing project");
             } else {
-                // Print some information
-                mLogger.failure("Cannot show editor because the project is not yet loaded!");
+                response.put("status", "failure");
+                response.put("message", "Cannot not show project");
             }
-        } catch (final Exception exc) {
-            // Print some information
-            mLogger.failure(exc.toString());
-        }
-        // Return false at failure
-        return false;
-    }
-
-    // Hide the VSM editor
-    public synchronized boolean hide() {
-        try {
-            // Check if the project is null
-            if (mProject != null) {
-                // Check if the editor is null
-                if (mEditor != null) {
-                    // Hide the current editor 
-                    mWindow.hideProject(mEditor);
-                    // And set the editor null
-                    mEditor = null;
-                    // Print some information
-                    mLogger.message("Successfully hided project '" + mProject.getProjectPath() + "'");
-                    // Return true at success
-                    return true;
-                } else {
-                    // Print some information
-                    mLogger.failure("Cannot hide editor because the editor is not yet shown!");
-                }
+        } else if (cmd.equalsIgnoreCase("hide")) {
+            if (mServer.hide()) {
+                response.put("status", "success");
+                response.put("message", "Hiding project");
             } else {
-                // Print some information
-                mLogger.failure("Cannot hide editor because the project is not yet loaded!");
+                response.put("status", "failure");
+                response.put("message", "Cannot not hide project");
             }
-        } catch (final Exception exc) {
-            // Print some information
-            mLogger.failure(exc.toString());
-        }   // Return false at failure
-        return false;
-    }
-
-    // Load the VSM project
-    public synchronized boolean exit() {
-        try {
-            if (mProject == null && mEditor == null) {
-                // Abort the mServer
-                mDone = true;
+        } else if (cmd.equalsIgnoreCase("status")) {
+            response.put("status", mServer.status());
+        } else if (cmd.equalsIgnoreCase("config")) {
+            response.put("config", mServer.config());
+        } else if (cmd.equalsIgnoreCase("states")) {
+            response.put("states", mServer.states());
+        } else if (cmd.equalsIgnoreCase("set")) {
+            // Parse key value pair
+            final JSONObject arg = request.getJSONObject("arg");
+            final String var = arg.getString("var");
+            final String val = arg.getString("val");
+            // Set the variable
+            if (mServer.set(var, val)) {
+                response.put("status", "success");
+                response.put("message", "Setting variable '" + var + "' to value '" + val + "'");
             } else {
-                // Print some information
-                mLogger.failure("Cannot exit service!");
+                response.put("status", "failure");
+                response.put("message", "Cannot set variable '" + var + "' to value '" + val + "'");
             }
-        } catch (final Exception exc) {
-            // Print some information
-            mLogger.failure(exc.toString());
+        } else {
+            response.put("status", "failure");
+            response.put("message", "Unknown command '" + cmd + "'");
         }
-        // Return false at failure
-        return false;
-    }
-
-    // Construct status message
-    public synchronized boolean set(final String var, final String val) {
-        try {
-            if (mProject != null) {
-                // Check if project is running
-                if (mRunTime.isRunning(mProject)) {
-                    if (mRunTime.setVariable(mProject, var, val)) {
-                        // Print some information
-                        mLogger.success("Setting variable '" + var + "' to value '" + val + "'");
-                        // Return true at success
-                        return true;
-                    } else {
-                        // Print some information
-                        mLogger.failure("Cannot set variable '" + var + "' to value '" + val + "' because the project is not running!");
-                    }
-                } else {
-                    // Print some information
-                    mLogger.failure("Cannot set variable '" + var + "' to value '" + val + "' because the project is not yet loaded!");
-                }
-            } else {
-                // Print some information
-                mLogger.failure("Cannot set data because the project is not yet loaded!");
-            }
-        } catch (final Exception exc) {
-            // Print some information
-            mLogger.failure(exc.toString());
-        }
-        // Return false at failure
-        return false;
-    }
-
-    // Construct status message
-    public synchronized String status() {
-        try {
-            if (mProject != null) {
-                if (mRunTime.isRunning(mProject)) {
-                    return Status.ACTIVE.name();
-                } else {
-                    // Project already loaded
-                    return Status.LOADED.name();
-                }
-            } else {
-                // Project is not yet loaded
-                return Status.NULLED.name();
-            }
-        } catch (final Exception exc) {
-            // Print some information
-            mLogger.failure(exc.toString());
-        }
-        // Return null at failure
-        return null;
-    }
-
-    // Construct config message
-    public synchronized String config() {
-        try {
-            // Create a byte array output stream
-            final ByteArrayOutputStream stream = new ByteArrayOutputStream();
-            // Open the stream with an indent writer
-            final IOSIndentWriter writer = new IOSIndentWriter(stream);
-            // Check the project state 
-            if (mProject != null) {
-                // Open the response element 
-                writer.println("<Config>").push();
-                // Check the project state 
-                if (mProject != null) {
-                    // Write scene player config
-                    mProject.getDefaultScenePlayerConfig().writeXML(writer);
-                }
-                // Close the response element 
-                writer.pop().print("</Config>");
-                // Flush and close the writer and the stream
-                writer.flush();
-                writer.close();
-            } else {
-                // Print some information
-                mLogger.failure("Cannot build config because the project is not yet loaded!");
-            }
-            // Return xml if writing was successfull
-            return stream.toString("UTF-8");
-        } catch (final XMLWriteError exc) {
-            // Print some information
-            mLogger.failure(exc.toString());
-        } catch (final UnsupportedEncodingException exc) {
-            // Print some information
-            mLogger.failure(exc.toString());
-        }
-        // Return null at failure
-        return null;
-    }
-
-    // Construct states
-    public synchronized String states() {
-        try {
-            // Create a byte array output stream
-            final ByteArrayOutputStream stream = new ByteArrayOutputStream();
-            // Open the stream with an indent writer
-            final IOSIndentWriter writer = new IOSIndentWriter(stream);
-            // Check the project state 
-            if (mProject != null) {
-                // Get the configuration
-                if (mRunTime.isRunning(mProject)) {
-                    // Open the states element 
-                    writer.println("<States>").push();
-                    // Get the active state list
-                    final ArrayList states = mRunTime.listActiveStates(mProject);
-                    // Write the state list here
-                    for (final Object state : states) {
-                        final TPLTriple triple = (TPLTriple) state;
-                        final String threadid = (String) triple.getFirst();
-                        final String nodename = (String) triple.getSecond();
-                        final HashMap table = (HashMap) triple.getThird();
-                        // Open the states element 
-                        writer.println("<State threadid=\"" + threadid + "\" nodename=\"" + nodename + "\">").push();
-                        // Open the values element 
-                        writer.println("<Variables>").push();
-                        // List all variable values
-                        for (final Object object : table.entrySet()) {
-                            final Map.Entry entry = (Map.Entry) object;
-                            //
-                            final String name = entry.getKey().toString();
-                            //
-                            final SymbolEntry symbol = (SymbolEntry) entry.getValue();
-                            // Write the value element 
-                            writer.println("<Variable name=\"" + name + "\">").push();
-                            writer.println(symbol.getValue().getConcreteSyntax());
-                            writer.pop().println("</Variable>");
-
-                        }
-                        // Close the values element 
-                        writer.pop().println("</Variables>");
-                        // Close the state element 
-                        writer.pop().println("</State>");
-                    }
-                    // Close the states element 
-                    writer.pop().print("</States>");
-                    // Flush and close the writer and the stream
-                    writer.flush();
-                    writer.close();
-                } else {
-                    // Print some information
-                    mLogger.failure("Cannot build states because the project is not running!");
-                }
-            } else {
-                // Print some information
-                mLogger.failure("Cannot build states because the project is not yet loaded!");
-            }
-            // Return xml if writing was successfull
-            return stream.toString("UTF-8");
-        } catch (final Exception exc) {
-            // Print some information
-            mLogger.failure(exc.toString());
-        }
-        // Return null at failure
-        return null;
-    }
-
-    // Run the restful mServer
-    public static void main(final String args[]) {
-        JSONObject obj = new JSONObject("{\"language\":\"pl\"}");
-        System.err.println(new StringValue("{\"language\":\"pl\"}").toString());
-        System.err.println(obj.toString());
-        // Create the singelton service
-        final Service service = Service.getInstance();
-        // Run the singelton service now
-        service.run(args);
+        // Return the response
+        return Response
+                .status(Response.Status.OK)
+                .type(MediaType.APPLICATION_JSON)
+                .entity(response.toString(4))
+                .build();
     }
 }

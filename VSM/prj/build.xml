@@ -176,30 +176,23 @@
             <arg line="json"/>
         </java>
     </target> 
-    <!-- -->
-    <target name="test-xml">
-        <java classname="eu.kristina.vsm.test.TestSuite" fork="true">
-            <classpath refid="clspath"/>
-            <arg line="xml"/>
-        </java>
-    </target> 
     <!-- Execute Project -->
-    <target name="run-vsm-project-editor">
+    <target name="run-editor">
         <java classname="de.dfki.vsm.SceneMaker3" fork="true">
             <classpath refid="clspath"/>
             <arg line="editor res/prj/vsm"/>
         </java>
     </target> 
     <!-- -->
-    <target name="run-service">
-        <java classname="eu.kristina.vsm.Service" fork="true">
+    <target name="run-server">
+        <java classname="eu.kristina.vsm.Server" fork="true">
             <classpath refid="clspath"/>
             <!--<arg line="http://172.31.26.245:11223/"/>-->
             <arg line="http://127.0.0.1:11223/"/>
         </java>
     </target>  
     <!-- -->
-    <target name="run-profiler" depends="build" description="Profile Service">
+    <target name="run-profile" depends="build" description="Profile Service">
         <fail unless="netbeans.home">
             This target can only run inside the NetBeans IDE.
         </fail>
@@ -214,32 +207,10 @@
         </java>
     </target>   
     <!-- -->
-    <target name="run-ssi-handler-terminal">
+    <target name="run-handler">
         <java classname="eu.kristina.vsm.ssi.SSIHandlerTerminal" fork="true">
             <classpath refid="clspath"/>
             <arg line="137.250.171.231 11220 137.250.171.230 11190 false"/>
         </java>
     </target>
-    <!-- -->
-    <target name="run-ssi-service-terminal">
-        <java classname="eu.kristina.vsm.ssi.SSIServiceTerminal" fork="true">
-            <classpath refid="clspath"/>
-            <arg line="http://137.250.171.230:11193"/>
-        </java>
-    </target>   
-    <!-- 
-    <target name="prf-vsm-restful-service" depends="build" description="Profile Project">
-        <fail unless="netbeans.home">
-            This target can only run inside the NetBeans IDE.
-        </fail>
-        <nbprofiledirect>
-            <classpath refid="clspath"/>
-        </nbprofiledirect>
-        <java classname="eu.kristina.vsm.VSMRestFulServer" fork="true">
-            <classpath refid="clspath"/>
-            <arg line="http://137.250.171.231:11223/"/>
-            <jvmarg line="${agent.jvmargs}"/>
-        </java>
-    </target>  
-    --> 
 </project>
