@@ -32,8 +32,10 @@ public class SemanticsOntology {
 
 	public static void restart(String user) {
 		LinkedList<IRI> rmList = userMap.get(user);
+		if(rmList != null){
 		for (IRI entry : rmList) {
 			semantics.remove(entry);
+		}
 		}
 		userMap.remove(user);
 	}

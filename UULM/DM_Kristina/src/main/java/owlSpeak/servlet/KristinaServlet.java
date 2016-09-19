@@ -1,5 +1,12 @@
 package owlSpeak.servlet;
 
+import java.io.StringReader;
+import java.util.ListIterator;
+
+import javax.json.Json;
+import javax.json.JsonArray;
+import javax.json.JsonObject;
+import javax.json.JsonReader;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
@@ -9,6 +16,7 @@ import javax.ws.rs.QueryParam;
 import javax.ws.rs.WebApplicationException;
 import javax.ws.rs.core.MediaType;
 
+import org.apache.commons.lang3.StringEscapeUtils;
 import org.semanticweb.owlapi.model.OWLOntologyCreationException;
 import org.semanticweb.owlapi.model.OWLOntologyStorageException;
 
@@ -21,13 +29,25 @@ public class KristinaServlet {
 	
 	@POST
 	@Produces(MediaType.TEXT_PLAIN)
-	@Consumes(MediaType.TEXT_PLAIN)
-	public synchronized String post(@QueryParam("valence") String valence, @QueryParam("arousal") String arousal, final String content) {
+	@Consumes(MediaType.APPLICATION_JSON)
+	public synchronized String post(final String json) {
 
 		System.out.println("received POST");
+
+		JsonReader jsonReader = Json.createReader(new StringReader(json));
+		JsonObject j = jsonReader.readObject();
+		
+		String valence = StringEscapeUtils.unescapeEcmaScript(j.getJsonObject("data").getJsonObject("fusion").getString("valence"));
+		String arousal = StringEscapeUtils.unescapeEcmaScript(j.getJsonObject("data").getJsonObject("fusion").getString("arousal"));
+
+		String content = StringEscapeUtils.unescapeEcmaScript(j.getJsonObject("data").getString("language-analysis"));
+		
+		String user = StringEscapeUtils.unescapeEcmaScript(j.getJsonObject("meta").getString("user"));
+		String scenario = StringEscapeUtils.unescapeEcmaScript(j.getJsonObject("meta").getJsonObject("scenario").getString("name"));
+		
 		String result;
 		try {
-			result = KristinaPresenter.performDM(Float.parseFloat(valence), Float.parseFloat(arousal), content);
+			result = KristinaPresenter.performDM(Float.parseFloat(valence), Float.parseFloat(arousal), content, user, scenario);
 			
 		} catch (OWLOntologyCreationException e) {
 			// TODO Auto-generated catch block
@@ -41,13 +61,7 @@ public class KristinaServlet {
 
 		System.out.println("DM done");
 
-		return result;
-	}
-	
-	@Path("restart")
-	@POST
-	public synchronized void restart(@QueryParam("user") String user, @QueryParam("scenario") String scenario){
-		KristinaPresenter.restart(user, scenario);
+		return StringEscapeUtils.escapeEcmaScript(result);
 	}
 
 }

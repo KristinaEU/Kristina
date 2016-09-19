@@ -85,8 +85,13 @@ public class KristinaPresenter {
 	}
 
 	public static String performDM(float valence, float arousal,
-			String content) throws OWLOntologyCreationException,
+			String content, String user, String scenario) throws OWLOntologyCreationException,
 			OWLOntologyStorageException {
+		
+		if(!KristinaPresenter.user.equals(user) || !KristinaPresenter.currentScenario.equals(scenario)){
+			restart(user, scenario);
+		}
+		
 
 		logger.info("\n----------------------------\nInput LA\n----------------------------\n"
 				+ content);
@@ -149,9 +154,10 @@ public class KristinaPresenter {
 	}
 
 	public static void restart(String u, String scenario) {
+		try{
 		user = u;
 		switch (scenario) {
-		case "baby":
+		case "babycare":
 			currentScenario = Scenario.BABY;
 			break;
 		case "sleep":
@@ -187,6 +193,9 @@ public class KristinaPresenter {
 
 		OwlSpeakServlet.reset(owlEngine, "", user);
 		KristinaModel.restart(user);
+		}catch(Exception e){
+			e.printStackTrace();
+		}
 	}
 
 	public static boolean hasExtremeEmotion() {
