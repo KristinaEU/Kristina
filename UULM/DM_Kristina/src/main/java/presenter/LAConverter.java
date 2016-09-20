@@ -2,6 +2,7 @@ package presenter;
 
 import java.io.ByteArrayOutputStream;
 import java.io.StringReader;
+import java.io.UnsupportedEncodingException;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.LinkedList;
@@ -142,6 +143,12 @@ public class LAConverter {
 
 		ByteArrayOutputStream result = new ByteArrayOutputStream();
 		model.write(result, "RDF/XML");
+		try {
+			return result.toString("UTF-8");
+		} catch (UnsupportedEncodingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		return result.toString();
 	}
 
@@ -166,6 +173,12 @@ public class LAConverter {
 
 		ByteArrayOutputStream result = new ByteArrayOutputStream();
 		model.write(result, "RDF/XML");
+		try {
+			return result.toString("UTF-8");
+		} catch (UnsupportedEncodingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		return result.toString();
 	}
 	
