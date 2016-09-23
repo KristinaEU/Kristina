@@ -88,7 +88,8 @@ public class KristinaPresenter {
 			String content, String user, String scenario) throws OWLOntologyCreationException,
 			OWLOntologyStorageException {
 		
-		if(!KristinaPresenter.user.equals(user) || !KristinaPresenter.currentScenario.equals(scenario)){
+		if(!KristinaPresenter.user.equals(user) || !KristinaPresenter.currentScenario.equals(KristinaModel.getScenario(scenario))){
+			
 			restart(user, scenario);
 		}
 		
@@ -156,26 +157,7 @@ public class KristinaPresenter {
 	public static void restart(String u, String scenario) {
 		try{
 		user = u;
-		switch (scenario) {
-		case "babycare":
-			currentScenario = Scenario.BABY;
-			break;
-		case "sleep":
-			currentScenario = Scenario.SLEEP;
-			break;
-		case "pain":
-			currentScenario = Scenario.PAIN;
-			break;
-		case "weather":
-			currentScenario = Scenario.WEATHER;
-			break;
-		case "newspaper":
-			currentScenario = Scenario.NEWSPAPER;
-			break;
-		default:
-			currentScenario = Scenario.UNDEFINED;
-			break;
-		}
+		currentScenario = KristinaModel.getScenario(scenario);
 
 		handler.close();
 		logger.removeHandler(handler);
@@ -235,7 +217,7 @@ public class KristinaPresenter {
 				result.add(KristinaModel.getCannedTextMove("He often watches TV. His favourite show is broadcasted very late.", user, owlEngine));
 			}else if(move.hasTopic("TV")&&UserModel.isConcise(user)){
 				result.add(KristinaModel.getCannedTextMove("Watching TV.", user, owlEngine));
-			}else if(move.getDialogueAction().equals(DialogueAction.REJECT)&&currentScenario.equals(Scenario.SLEEP)&&(UserModel.isIndirect(user)||UserModel.isVerbose(user))){
+			}else if(!DialogueHistory.getLastUserMove().getDialogueAction().equals(DialogueAction.FURTHER_INFORMATION)&&move.getDialogueAction().equals(DialogueAction.REJECT)&&currentScenario.equals(Scenario.SLEEP)&&(UserModel.isIndirect(user)||UserModel.isVerbose(user))){
 				if(UserModel.isIndirect(user)&&UserModel.isVerbose(user)){
 					if(Math.random()<0.5){
 						result.add(KristinaModel.getCannedTextMove("No, he sleeps well without medication.", user, owlEngine));
@@ -392,8 +374,9 @@ public class KristinaPresenter {
 		for (Set<KristinaMove> set : ws) {
 			int strategy = (int) (Math.random() * set.size());
 			for (KristinaMove move : set) {
+				
 				if (strategy == 0) {
-					if (!move.getDialogueAction().equals(DialogueAction.EMPTY)) {
+					if (move != null && !move.getDialogueAction().equals(DialogueAction.EMPTY)) {
 						moves.add(move);
 						DialogueHistory.add(move, Participant.SYSTEM);
 					}

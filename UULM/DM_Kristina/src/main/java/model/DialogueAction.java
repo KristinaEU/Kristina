@@ -81,5 +81,6 @@ public class DialogueAction {
 	public static final String INCOMPREHENSIBLE=OntologyPrefix.dialogue+"Incomprehensible";
 	public static final String UNKNOWN=OntologyPrefix.dialogue+"Unknown";
 	public static final String FURTHER_INFORMATION=OntologyPrefix.dialogue+"RequestFurtherInformation";
-
+	public static final String BOOL_REQUEST=OntologyPrefix.dialogue+"BooleanRequest";
+	
 }

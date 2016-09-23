@@ -62,8 +62,25 @@ public class KristinaMove extends Move {
 				|| this.isDialogueAction(DialogueAction.STATEMENT)
 				|| this.isDialogueAction(DialogueAction.REQUEST)
 				|| this.isDialogueAction(DialogueAction.REQUEST_ADDITIONAL)
-				|| this.isDialogueAction(DialogueAction.REQUEST_MISSING)) {
+				|| this.isDialogueAction(DialogueAction.REQUEST_MISSING)
+				|| this.isDialogueAction(DialogueAction.BOOL_REQUEST)) {
 			return SemanticsOntology.hasTopic(indi.asOWLNamedIndividual()
+					.getIRI(), topic);
+		}
+		return false;
+	}
+	
+	public boolean hasNegatedTopic(String topic) {
+		if (this.isDialogueAction(DialogueAction.ADVISE)
+				|| this.isDialogueAction(DialogueAction.DECLARE)
+				|| this.isDialogueAction(DialogueAction.ORDER)
+				|| this.isDialogueAction(DialogueAction.OBLIGATE)
+				|| this.isDialogueAction(DialogueAction.STATEMENT)
+				|| this.isDialogueAction(DialogueAction.REQUEST)
+				|| this.isDialogueAction(DialogueAction.REQUEST_ADDITIONAL)
+				|| this.isDialogueAction(DialogueAction.REQUEST_MISSING)
+				|| this.isDialogueAction(DialogueAction.BOOL_REQUEST)) {
+			return SemanticsOntology.hasNegatedTopic(indi.asOWLNamedIndividual()
 					.getIRI(), topic);
 		}
 		return false;
@@ -116,9 +133,10 @@ public class KristinaMove extends Move {
 				|| this.isDialogueAction(DialogueAction.STATEMENT)
 				|| this.isDialogueAction(DialogueAction.REQUEST)
 				|| this.isDialogueAction(DialogueAction.REQUEST_ADDITIONAL)
-				|| this.isDialogueAction(DialogueAction.REQUEST_MISSING)) {
+				|| this.isDialogueAction(DialogueAction.REQUEST_MISSING)
+				|| this.isDialogueAction(DialogueAction.BOOL_REQUEST)) {
 			Iterator<String> topics = getTopics().iterator();
-			if(topics != null && !topics.hasNext()){
+			if(topics != null && topics.hasNext()){
 				String tmp = topics.next();
 				tmp = tmp.substring(tmp.indexOf('#')+1);
 				result = result+": "+tmp;
@@ -135,12 +153,13 @@ public class KristinaMove extends Move {
 	}
 	
 	@Override
+	//TODO: works only for moves from KI, not LA
 	public boolean equals(Object o){
 		if(o instanceof KristinaMove){
 			KristinaMove m = (KristinaMove) o;
 			if(m.getDialogueAction().equals(getDialogueAction())){
 				if(m.getText().equals(getText())){
-					List<ReifiedStatement> stmts1 = m.getStatements();
+					List<ReifiedStatement> stmts1 = this.getStatements();
 					List<ReifiedStatement> stmts2 = m.getStatements();
 					boolean equal = true;
 					for(ReifiedStatement stmt1: stmts1){

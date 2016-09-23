@@ -16,6 +16,8 @@ import javax.ws.rs.QueryParam;
 import javax.ws.rs.WebApplicationException;
 import javax.ws.rs.core.MediaType;
 
+import model.CerthClient;
+
 import org.apache.commons.lang3.StringEscapeUtils;
 import org.semanticweb.owlapi.model.OWLOntologyCreationException;
 import org.semanticweb.owlapi.model.OWLOntologyStorageException;
@@ -44,6 +46,8 @@ public class KristinaServlet {
 		
 		String user = StringEscapeUtils.unescapeEcmaScript(j.getJsonObject("meta").getString("user"));
 		String scenario = StringEscapeUtils.unescapeEcmaScript(j.getJsonObject("meta").getJsonObject("scenario").getString("name"));
+		
+		//CerthClient.setPath(j.getString("path"));
 		
 		String result;
 		try {

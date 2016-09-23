@@ -96,7 +96,31 @@ public class SemanticsOntology {
 
 		return it.hasNext();
 	}
+	
+	public static boolean hasNegatedTopic(IRI id, String topic) {
+		
+		Model onto = semantics.get(id);
+		if(onto==null){
+			return false;
+		}
+		ResIterator it = onto.listResourcesWithProperty(RDF.type,
+				onto.getResource(OntologyPrefix.ontoLA + topic));
+		while(it.hasNext()){
+			Resource r = it.next();
+			ResIterator it2 = onto.listResourcesWithProperty(onto.getProperty(OntologyPrefix.context+"includes"),
+					r);
+			while(it2.hasNext()){
+				Resource r2 = it2.next();
+				if(onto.contains(onto.createLiteralStatement(r2, onto.getProperty(OntologyPrefix.context+"hasTruthValue"), false))){
+					return true;
+				}
+			}
+		}
+		return false;
+		
+	}
 
+	//TODO: this works only for KristinaMoves from KI, not LA. Furthermore, since the type is not explicit in the ontology, it is not found by this method
 	public static Set<String> getTopics(IRI id) {
 		Model onto = semantics.get(id);
 		if(onto==null){

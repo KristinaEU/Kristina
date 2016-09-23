@@ -17,13 +17,31 @@ public class DialogueHistory {
 	
 	public static void add(KristinaMove move, Participant p){
 		history.add(new ImmutablePair<KristinaMove,Participant>(move,p));
+		
+		Iterator<Pair<KristinaMove,Participant>> it = history.descendingIterator();
 	}
 	
 	public static KristinaMove getLastUserMove(){
 		Iterator<Pair<KristinaMove,Participant>> it = history.descendingIterator();
 		while(it.hasNext()){
 			Pair<KristinaMove,Participant> p = it.next();
-			if(p.getRight()==Participant.USER){
+			
+			if( p.getRight()==Participant.USER){
+				return p.getLeft();
+			}
+		}
+		return null;
+	}
+	
+	public static KristinaMove getPreviousUserMove(){
+		Iterator<Pair<KristinaMove,Participant>> it = history.descendingIterator();
+		boolean start = false;
+		while(it.hasNext()){
+			Pair<KristinaMove,Participant> p = it.next();
+			if(p.getRight()==Participant.SYSTEM){
+				start = true;
+			}
+			if(start && p.getRight()==Participant.USER){
 				return p.getLeft();
 			}
 		}
