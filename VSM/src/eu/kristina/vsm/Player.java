@@ -1,7 +1,7 @@
 package eu.kristina.vsm;
 
 import eu.kristina.vsm.rest.WebClient;
-import eu.kristina.vsm.gti.ActionFactory;
+import eu.kristina.vsm.bml.ActionFactory;
 import de.dfki.vsm.model.project.PlayerConfig;
 import de.dfki.vsm.runtime.RunTimeInstance;
 import de.dfki.vsm.runtime.project.RunTimeProject;
@@ -22,6 +22,7 @@ import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 import eu.kristina.vsm.ssi.SSIEventHandler;
 import eu.kristina.vsm.ssi.SSIEventNotifier;
+import eu.kristina.vsm.util.Utilities;
 import org.json.JSONObject;
 
 /**
@@ -194,7 +195,7 @@ public final class Player implements RunTimePlayer, SSIEventHandler {
         // Execute POST request
         return mRestClient.post(resource, "", object.toString(2));
     }
-  
+
     ////////////////////////////////////////////////////////////////////////////
     ////////////////////////////////////////////////////////////////////////////
     ////////////////////////////////////////////////////////////////////////////
@@ -240,178 +241,15 @@ public final class Player implements RunTimePlayer, SSIEventHandler {
         put(command, "data", data);
         // Execute POST request
         return mRestClient.post(resource, "", command);
-    } 
-
-    /*
-    ////////////////////////////////////////////////////////////////////////////
-    ////////////////////////////////////////////////////////////////////////////
-    ////////////////////////////////////////////////////////////////////////////
-    public final String eyes(
-            final float speed,
-            final float angle,
-            final String direction) {
-        // Get the resource
-        final Resource resource = mResourceMap.get("Avatar-Idle");
-        // Get the command
-        final String data = ActionFactory.eyes(speed, angle, direction);
-        // Execute POST request
-        return mRestClient.post(resource, "", command);
     }
 
-    public final String eyes(
-            final String id,
-            final float speed,
-            final float angle,
-            final String direction) {
-        // Get the resource
-        final Resource resource = mResourceMap.get("Avatar-Idle");
-        // Get the command
-        final String data = ActionFactory.eyes(speed, angle, direction);
-        // Execute POST request
-        return mRestClient.post(resource, "", command);
-    }
-
-    ////////////////////////////////////////////////////////////////////////////
-    ////////////////////////////////////////////////////////////////////////////
-    ////////////////////////////////////////////////////////////////////////////
-    public final String gaze(
-            final float speed,
-            final float angle,
-            final String direction) {
-        // Get the resource
-        final Resource resource = mResourceMap.get("Avatar-Idle");
-        // Get the command
-        final String data = ActionFactory.gaze(speed, angle, direction);
-        // Execute POST request
-        return mRestClient.post(resource, "", command);
-    }
-
-    public final String gaze(
-            final String id,
-            final float speed,
-            final float angle,
-            final String direction) {
-        // Get the resource
-        final Resource resource = mResourceMap.get("Avatar-Idle");
-        // Get the command
-        final String data = ActionFactory.gaze(speed, angle, direction);
-        // Execute POST request
-        return mRestClient.post(resource, "", command);
-    }
-
-    ////////////////////////////////////////////////////////////////////////////
-    ////////////////////////////////////////////////////////////////////////////
-    ////////////////////////////////////////////////////////////////////////////
-    public final String head(
-            final float speed,
-            final float angle,
-            final String direction) {
-        // Get the resource
-        final Resource resource = mResourceMap.get("Avatar-Idle");
-        // Get the command
-        final String data = ActionFactory.head(speed, angle, direction);
-        // Execute POST request
-        return mRestClient.post(resource, "", command);
-    }
-
-    public final String head(
-            final String id,
-            final float speed,
-            final float angle,
-            final String direction) {
-        // Get the resource
-        final Resource resource = mResourceMap.get("Avatar-Idle");
-        // Get the command
-        final String data = ActionFactory.head(speed, angle, direction);
-        // Execute POST request
-        return mRestClient.post(resource, "", command);
-    }
-
-    ////////////////////////////////////////////////////////////////////////////
-    ////////////////////////////////////////////////////////////////////////////
-    ////////////////////////////////////////////////////////////////////////////
-    public final String nod(
-            final float amount,
-            final int repetition) {
-        // Get the resource
-        final Resource resource = mResourceMap.get("Avatar-Idle");
-        // Get the command
-        final String data = ActionFactory.nod(amount, repetition);
-        // Execute POST request
-        return mRestClient.post(resource, "", command);
-    }
-
-    public final String nod(
-            final String id,
-            final float amount,
-            final int repetition) {
-        // Get the resource
-        final Resource resource = mResourceMap.get("Avatar-Idle");
-        // Get the command
-        final String data = ActionFactory.nod(amount, repetition);
-        // Execute POST request
-        return mRestClient.post(resource, "", command);
-    }
-
-    ////////////////////////////////////////////////////////////////////////////
-    ////////////////////////////////////////////////////////////////////////////
-    ////////////////////////////////////////////////////////////////////////////
-    public final String shake(
-            final float amount,
-            final int repetition) {
-        // Get the resource
-        final Resource resource = mResourceMap.get("Avatar-Idle");
-        // Get the command
-        final String data = ActionFactory.shake(amount, repetition);
-        // Execute POST request
-        return mRestClient.post(resource, "", command);
-    }
-
-    public final String shake(
-            final String id,
-            final float amount,
-            final int repetition) {
-        // Get the resource
-        final Resource resource = mResourceMap.get("Avatar-Idle");
-        // Get the command
-        final String data = ActionFactory.shake(amount, repetition);
-        // Execute POST request
-        return mRestClient.post(resource, "", command);
-    }
-
-    ////////////////////////////////////////////////////////////////////////////
-    ////////////////////////////////////////////////////////////////////////////
-    ////////////////////////////////////////////////////////////////////////////
-    public final String tilt(
-            final float amount,
-            final int repetition) {
-        // Get the resource
-        final Resource resource = mResourceMap.get("Avatar-Idle");
-        // Get the command
-        final String data = ActionFactory.tilt(amount, repetition);
-        // Execute POST request
-        return mRestClient.post(resource, "", command);
-    }
-
-    public final String tilt(
-            final String id,
-            final float amount,
-            final int repetition) {
-        // Get the resource
-        final Resource resource = mResourceMap.get("Avatar-Idle");
-        // Get the command
-        final String data = ActionFactory.tilt(amount, repetition);
-        // Execute POST request
-        return mRestClient.post(resource, "?id=" + id, command);
-    }
-    */
     ////////////////////////////////////////////////////////////////////////////
     // The static command id
-    private static volatile long sId = 0;
+    private volatile long mId = 0;
 
     // Get a new command id
-    private static synchronized long id() {
-        return ++sId;
+    public synchronized long id() {
+        return ++mId;
     }
 
     // Produce an inital envelope
@@ -427,29 +265,7 @@ public final class Player implements RunTimePlayer, SSIEventHandler {
     }
 
     public final String put(final String obj, final String key, final String val) {
-        // Create the final object
-        final JSONObject object = new JSONObject(obj);
-        // Initialize temporaries
-        int index;
-        String path = key;
-        JSONObject member = object;
-        // Recursively insert now
-        while ((index = path.indexOf(".")) != -1) {
-            // Eventually insert
-            if (!member.has(path.substring(0, index))) {
-                member.put(path.substring(0, index), new JSONObject());
-            }
-            // Update the member
-            member = member.getJSONObject(path.substring(0, index));
-            // Update the path
-            path = path.substring(index + 1);
-
-        }
-        // Insert key value pair
-        member.put(path, val);
-        // Return the final object        
-        return object.toString();
-
+        return Utilities.put(obj, key, val);
     }
 
     ////////////////////////////////////////////////////////////////////////////
@@ -464,8 +280,8 @@ public final class Player implements RunTimePlayer, SSIEventHandler {
         mLogger.message("Resource:\n" + resource);
         mLogger.message("Payload:\n" + payload);
         // Execute POST request
-        //return mRestClient.post(resource, "", payload);
-        return name;
+        return mRestClient.post(resource, "", payload);
+        //return name;
     }
 
     ////////////////////////////////////////////////////////////////////////////

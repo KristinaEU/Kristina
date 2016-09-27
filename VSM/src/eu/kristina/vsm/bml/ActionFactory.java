@@ -1,4 +1,4 @@
-package eu.kristina.vsm.gti;
+package eu.kristina.vsm.bml;
 
 /**
  * @author Gregor Mehlmann

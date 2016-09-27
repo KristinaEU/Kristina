@@ -29,7 +29,7 @@
       <Feature key="restful.resource.4.name" value="Dialog-Management"/>
       <Feature key="restful.resource.4.path" value="http://172.31.26.245:11150"/>
       <Feature key="restful.resource.4.cons" value="application/json"/>
-      <Feature key="restful.resource.4.prod" value="application/json"/>
+      <Feature key="restful.resource.4.prod" value="text/plain"/>
       <Feature key="restful.resource.5.host" value="UPF-TALN"/>
       <Feature key="restful.resource.5.name" value="Language-Analysis"/>
       <Feature key="restful.resource.5.path" value="http://kristina.taln.upf.edu/services/language_analysis"/>
@@ -39,17 +39,17 @@
       <Feature key="restful.resource.6.name" value="Language-Generation"/>
       <Feature key="restful.resource.6.path" value="http://kristina.taln.upf.edu/services/language_generation"/>
       <Feature key="restful.resource.6.cons" value="application/json"/>
-      <Feature key="restful.resource.6.prod" value="application/json"/>
+      <Feature key="restful.resource.6.prod" value="text/plain"/>
       <Feature key="restful.resource.7.host" value="UPF-TALN"/>
       <Feature key="restful.resource.7.name" value="Mode-Selection-Verbal"/>
       <Feature key="restful.resource.7.path" value="http://kristina.taln.upf.edu/services/mode_selection/verbal"/>
       <Feature key="restful.resource.7.cons" value="application/json"/>
-      <Feature key="restful.resource.7.prod" value="application/json"/>
+      <Feature key="restful.resource.7.prod" value="text/plain"/>
       <Feature key="restful.resource.7.host" value="UPF-TALN"/>
       <Feature key="restful.resource.7.name" value="Mode-Selection-Nonverbal"/>
       <Feature key="restful.resource.7.path" value="http://kristina.taln.upf.edu/services/mode_selection/nonverbal"/>
       <Feature key="restful.resource.7.cons" value="application/json"/>
-      <Feature key="restful.resource.7.prod" value="application/json"/>
+      <Feature key="restful.resource.7.prod" value="text/plain"/>
       <Feature key="restful.resource.9.host" value="UPF-GTI"/>
       <Feature key="restful.resource.9.name" value="Avatar-Idle"/>
       <Feature key="restful.resource.9.path" value="https://webglstudio.org:8080/idle"/>

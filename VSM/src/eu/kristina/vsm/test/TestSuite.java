@@ -4,46 +4,35 @@ import de.dfki.vsm.util.log.LOGDefaultLogger;
 import eu.kristina.vsm.rest.Resource;
 import eu.kristina.vsm.rest.WebClient;
 import eu.kristina.vsm.util.Utilities;
-import org.apache.commons.lang3.StringEscapeUtils;
-import org.json.JSONObject;
 
 /**
  * @author Gregor Mehlmann
  */
 public final class TestSuite {
 
+    // Create the REST client
+    private final static WebClient sClient = new WebClient();
+    // Dialog Management
+    private final static Resource sDM = new Resource(
+            "UULM-OWL", "Dialog Management",
+            "http://172.31.26.245:11150",
+            "application/json", "text/plain");
+    private final static Resource sMV = new Resource(
+            "UPF-TALN", "Mode-Selection-Verbal",
+            "http://kristina.taln.upf.edu/services/mode_selection/verbal",
+            "application/json", "text/plain");
+    private final static Resource sMN = new Resource(
+            "UPF-TALN", "Mode-Selection-Nonverbal",
+            "http://kristina.taln.upf.edu/services/mode_selection/nonverbal",
+            "application/json", "text/plain");
+
     private static LOGDefaultLogger sLogger = LOGDefaultLogger.getInstance();
 
     ////////////////////////////////////////////////////////////////////////////
     public static final void main(final String args[]) {
-        final String x = "<rdf:RDF\n"
-                + "    xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\"\n"
-                + "    xmlns:j.0=\"http://kristina-project.eu/ontologies/dialogue_actions#\">\n"
-                + "    <rdf:Description rdf:about=\"http://kristina-project.eu/tmp#17614db9-27b9-4985-971b-57c103304cc6\">\n"
-                + "        <j.0:containsSystemAct rdf:resource=\"http://kristina-project.eu/tmp#4e4ed404-4868-468c-8ae1-f18c64d7acc3\"/>\n"
-                + "        <j.0:startWith rdf:resource=\"http://kristina-project.eu/tmp#153a78e8-3082-4a41-b0a1-28d64fd18c3b\"/>\n"
-                + "        <j.0:containsSystemAct rdf:resource=\"http://kristina-project.eu/tmp#153a78e8-3082-4a41-b0a1-28d64fd18c3b\"/>\n"
-                + "        <j.0:hasArousal rdf:datatype=\"http://www.w3.org/2001/XMLSchema#double\">0.14100000000000001</j.0:hasArousal>\n"
-                + "        <j.0:hasValence rdf:datatype=\"http://www.w3.org/2001/XMLSchema#double\">0.04000000000000001</j.0:hasValence>\n"
-                + "        <rdf:type rdf:resource=\"http://kristina-project.eu/ontologies/dialogue_actions#SystemAction\"/>\n"
-                + "    </rdf:Description>\n"
-                + "    <rdf:Description rdf:about=\"http://kristina-project.eu/tmp#153a78e8-3082-4a41-b0a1-28d64fd18c3b\">\n"
-                + "        <j.0:followedBy rdf:resource=\"http://kristina-project.eu/tmp#4e4ed404-4868-468c-8ae1-f18c64d7acc3\"/>\n"
-                + "        <rdf:type rdf:resource=\"http://kristina-project.eu/ontologies/dialogue_actions#Accept\"/>\n"
-                + "    </rdf:Description>\n"
-                + "    <rdf:Description rdf:about=\"http://kristina-project.eu/tmp#4e4ed404-4868-468c-8ae1-f18c64d7acc3\">\n"
-                + "        <j.0:text>Tell me the headline of the article.</j.0:text>\n"
-                + "        <rdf:type rdf:resource=\"http://kristina-project.eu/ontologies/dialogue_actions#Canned\"/>\n"
-                + "    </rdf:Description>\n"
-                + "</rdf:RDF>";
-        System.err.println("Original:\n" + x);
-                System.err.println(StringEscapeUtils.escapeJava(x));
-        System.err.println(Utilities.encodeJSON(x));
 
         if (args[0].equals("pipe")) {
             testPipe(args);
-        } else if (args[0].equals("json")) {
-            testJSON(args);
         } else {
             sLogger.warning("Usage:");
         }
@@ -93,70 +82,119 @@ public final class TestSuite {
 
     ////////////////////////////////////////////////////////////////////////////
     private static void testPipe(final String args[]) {
-        // Create the REST client
-        final WebClient client = new WebClient();
-        //testVSM();
-        //testSSI();
-        testDM(client);
-        //testUPF(client);
-        testAV(client);
-        //testPipe(client);
-        /*
-         // Create the listener
-         final SSIEventListener listener = new SSIEventListener(
-         new SSIEventHandler() {
-         @Override
-         public void handle(String event) {
-                        
-         }
-         },
-         "137.250.171.231", 11220,
-         "137.250.171.230", 11190,
-         false);
-         // Start the listener
-         listener.start();
-         */
-        // LANGUAGE ANALYSIS
-        //final Resource la = new Resource(
-        //        "UPF-TALN", "Language Analysis",
-        //        "http://kristina.taln.upf.edu/services/language_analysis",
-        //        "application/x-www-form-urlencoded", "application/xml");
-        //final String _la = client.post(la, "", "");
-        final String _la = "</timeout>";
-        // DIALOG MANAGEMENT
-        final Resource dm = new Resource(
-                "UULM-OWL", "Dialog Management",
-                "http://172.31.26.245:11150",
-                "*/*", "*/*");
-        final String _dm = client.post(dm, "?valence=" + 0.5f + "&arousal=" + 0.5f, _la);
-        // MODE SELECTION
-        final Resource ms = new Resource(
-                "UPF-TALN", "Mode Selection",
-                "http://kristina.taln.upf.edu/services/mode_selection",
-                "application/x-www-form-urlencoded", "application/json");
-        final String _ms_v = client.post(ms, "?mode=verbal&lang=pl", _dm);
-        final String _ms_n = client.post(ms, "?mode=non_verbal&lang=pl", _dm);
-        // LANGUAGE GENERATION
-        final Resource lg = new Resource(
-                "UPF-TALN", "Language Generation",
-                "http://kristina.taln.upf.edu/services/language_generation",
-                "application/x-www-form-urlencoded", "application/json");
-        final String _lg = client.post(lg, "", _ms_v);
-        // CHARACTER ENGINE 
-        final Resource ce_v = new Resource(
-                "UPF-GTI", "Character Engine",
-                "http://webglstudio.org:8080/verbal",
-                "application/json", "*/*");
-        final String _ce_v = client.post(ce_v, "?id=KRISTINA", _lg);
-        // CHARACTER ENGINE 
-        final Resource ce_n = new Resource(
-                "UPF-GTI", "Character Engine",
-                "http://webglstudio.org:8080/non_verbal",
-                "application/xml", "*/*");
-        final String _ce_n = client.post(ce_n, "?id=KRISTINA", _ms_n);
+        String payload, response = null;
+
+        // DM 
+        payload = "{\n"
+                + "  \"data\":{" + "\n"
+                + "    \"fusion\":{" + "\n"
+                + "      \"valence\":\"0.5\"" + "," + "\n"
+                + "      \"arousal\":\"0.25\"" + "\n"
+                + "    }" + "," + "\n"
+                + "    \"language-analysis\":\"" + Utilities.encodeJSON(Utilities.read("res/test/output_language_analysis.txt")) + "\"" + "\n"
+                + "  }" + "," + "\n"
+                + "  \"meta\":{" + "\n"
+                + "    \"user\":\"Anna\"" + "," + "\n"
+                + "    \"scenario\":{" + "\n"
+                + "      \"name\":\"babycare\"" + "\n"
+                + "    }" + "\n"
+                + "  }" + "\n"
+                + "}";
+        System.err.println(payload);
+        response = sClient.post(sDM, "", payload);
+        System.err.println(response);
+
+        // MV
+        payload = "{\n"
+                + "  \"data\":{" + "\n"
+                + "    \"fusion\":{" + "\n"
+                + "      \"valence\":\"0.5\"" + "," + "\n"
+                + "      \"arousal\":\"0.25\"" + "\n"
+                + "    }" + "," + "\n"
+                + "    \"language-analysis\":\"" + Utilities.encodeJSON(Utilities.read("res/test/output_language_analysis.txt")) + "\"" + "," + "\n"
+                + "    \"dialog-management\":\"" + Utilities.encodeJSON(Utilities.read("res/test/output_dialog_management.txt")) + "\"" + "\n"
+                + "  }" + "," + "\n"
+                + "  \"meta\":{" + "\n"
+                + "    \"user\":\"Anna\"" + "," + "\n"
+                + "    \"scenario\":{" + "\n"
+                + "      \"name\":\"babycare\"" + "\n"
+                + "    }" + "\n"
+                + "  }" + "\n"
+                + "}";
+        System.err.println(payload);
+        response = sClient.post(sMV, "", payload);
+        System.err.println(response);
+        response = sClient.post(sMN, "", payload);
+        System.err.println(response);
+    }
+
+    ////////////////////////////////////////////////////////////////////////////
+    private static void testDM(final String args[]) {
 
     }
 
+    ////////////////////////////////////////////////////////////////////////////
+    //private static void testPipe(final String args[]) {
+        //testVSM();
+    //testSSI();
+    //testDM(client);
+    //testUPF(client);
+    //testAV(client);
+    //testPipe(client);
+        /*
+     // Create the listener
+     final SSIEventListener listener = new SSIEventListener(
+     new SSIEventHandler() {
+     @Override
+     public void handle(String event) {
+                        
+     }
+     },
+     "137.250.171.231", 11220,
+     "137.250.171.230", 11190,
+     false);
+     // Start the listener
+     listener.start();
+     */
+        // LANGUAGE ANALYSIS
+    //final Resource la = new Resource(
+    //        "UPF-TALN", "Language Analysis",
+    //        "http://kristina.taln.upf.edu/services/language_analysis",
+    //        "application/x-www-form-urlencoded", "application/xml");
+    //final String _la = client.post(la, "", "");
+//        final String _la = "</timeout>";
+//        // DIALOG MANAGEMENT
+//        final Resource dm = new Resource(
+//                "UULM-OWL", "Dialog Management",
+//                "http://172.31.26.245:11150",
+//                "*/*", "*/*");
+//        final String _dm = client.post(dm, "?valence=" + 0.5f + "&arousal=" + 0.5f, _la);
+//        // MODE SELECTION
+//        final Resource ms = new Resource(
+//                "UPF-TALN", "Mode Selection",
+//                "http://kristina.taln.upf.edu/services/mode_selection",
+//                "application/x-www-form-urlencoded", "application/json");
+//        final String _ms_v = client.post(ms, "?mode=verbal&lang=pl", _dm);
+//        final String _ms_n = client.post(ms, "?mode=non_verbal&lang=pl", _dm);
+//        // LANGUAGE GENERATION
+//        final Resource lg = new Resource(
+//                "UPF-TALN", "Language Generation",
+//                "http://kristina.taln.upf.edu/services/language_generation",
+//                "application/x-www-form-urlencoded", "application/json");
+//        final String _lg = client.post(lg, "", _ms_v);
+//        // CHARACTER ENGINE 
+//        final Resource ce_v = new Resource(
+//                "UPF-GTI", "Character Engine",
+//                "http://webglstudio.org:8080/verbal",
+//                "application/json", "*/*");
+//        final String _ce_v = client.post(ce_v, "?id=KRISTINA", _lg);
+//        // CHARACTER ENGINE 
+//        final Resource ce_n = new Resource(
+//                "UPF-GTI", "Character Engine",
+//                "http://webglstudio.org:8080/non_verbal",
+//                "application/xml", "*/*");
+//        final String _ce_n = client.post(ce_n, "?id=KRISTINA", _ms_n);
+    //}
     private static void testSSI(final WebClient client) {
         // Build the SSI service config
         final Resource ssiweb = new Resource(
@@ -196,19 +234,6 @@ public final class TestSuite {
         client.get(vsmall, "?cmd=load&arg=res/prj/vsm");
         client.get(vsmall, "?cmd=config");
         client.post(vsmall, "", "Hello World!");
-    }
-
-    private static void testDM(final WebClient client) {
-        // Build the DM service config
-        final Resource dm = new Resource(
-                "UULM-OWL", "Dialog-Management",
-                "http://172.31.26.245:11150",
-                "text/plain", "text/plain");
-        // Try executing a POST request
-        final String params = "?valence=" + 0.5f + "&arousal=" + 0.5f;
-        final String payload = Utilities.read("res/exp/output_language_analysis.txt");
-        final String result = client.post(dm, params, payload);
-        System.out.println(result);
     }
 
     private static void testUPF(final WebClient client) {

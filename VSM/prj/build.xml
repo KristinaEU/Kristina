@@ -170,12 +170,6 @@
         </java>
     </target> 
     <!-- -->
-    <target name="test-json">
-        <java classname="eu.kristina.vsm.test.TestSuite" fork="true">
-            <classpath refid="clspath"/>
-            <arg line="json"/>
-        </java>
-    </target> 
     <!-- Execute Project -->
     <target name="run-editor">
         <java classname="de.dfki.vsm.SceneMaker3" fork="true">

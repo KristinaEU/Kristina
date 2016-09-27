@@ -33,7 +33,6 @@ public final class Utilities {
 
     private static LOGDefaultLogger sLogger = LOGDefaultLogger.getInstance();
 
-
     ////////////////////////////////////////////////////////////////////////////
     public final static String merge(
             final String lstr, final String rstr, final int indent) {
@@ -74,6 +73,32 @@ public final class Utilities {
             }
         }
         return mmap;
+    }
+
+    ////////////////////////////////////////////////////////////////////////////
+    public final static String put(final String obj, final String key, final String val) {
+        // Create the final object
+        final JSONObject object = new JSONObject(obj);
+        // Initialize temporaries
+        int index;
+        String path = key;
+        JSONObject member = object;
+        // Recursively insert now
+        while ((index = path.indexOf(".")) != -1) {
+            // Eventually insert
+            if (!member.has(path.substring(0, index))) {
+                member.put(path.substring(0, index), new JSONObject());
+            }
+            // Update the member
+            member = member.getJSONObject(path.substring(0, index));
+            // Update the path
+            path = path.substring(index + 1);
+
+        }
+        // Insert key value pair
+        member.put(path, val);
+        // Return the final object        
+        return object.toString();
     }
 
     ////////////////////////////////////////////////////////////////////////////
