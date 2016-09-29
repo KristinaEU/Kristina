@@ -1,0 +1,14 @@
+{
+    "type": "turn",
+    "uuid": 100,
+    "meta": {
+        "scenario": "sleep",
+        "language": "pl"
+    },
+    "data": {
+        "vocapia-data": {
+            "text": "Kiedy Pan Eugeniusz zazwyczaj chodzi spać?",
+            "confidence": 0.9
+        }
+    }
+}

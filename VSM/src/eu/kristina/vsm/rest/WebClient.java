@@ -1,6 +1,5 @@
 package eu.kristina.vsm.rest;
 
-
 import com.sun.jersey.api.client.Client;
 import com.sun.jersey.api.client.ClientResponse;
 import com.sun.jersey.api.client.config.DefaultClientConfig;
@@ -12,7 +11,6 @@ import javax.net.ssl.SSLContext;
 import javax.net.ssl.TrustManager;
 import javax.net.ssl.X509TrustManager;
 import javax.ws.rs.core.Response.Status;
-
 
 /**
  * @author Gregor Mehlmann
@@ -87,6 +85,7 @@ public final class WebClient {
                     .accept(resource.getProd())
                     .type(resource.getCons())
                     .post(ClientResponse.class, content);
+
             // Check the response status
             if (response.getStatus() == Status.OK.getStatusCode()) {
                 // Get the mime type name

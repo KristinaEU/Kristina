@@ -76,7 +76,11 @@ public final class Utilities {
     }
 
     ////////////////////////////////////////////////////////////////////////////
-    public final static String put(final String obj, final String key, final String val) {
+    public final static String put(
+            final String obj,
+            final String key,
+            final String val,
+            final boolean json) {
         // Create the final object
         final JSONObject object = new JSONObject(obj);
         // Initialize temporaries
@@ -96,7 +100,11 @@ public final class Utilities {
 
         }
         // Insert key value pair
-        member.put(path, val);
+        if (json) {
+            member.put(path, new JSONObject(val));
+        } else {
+            member.put(path, val);
+        }
         // Return the final object        
         return object.toString();
     }

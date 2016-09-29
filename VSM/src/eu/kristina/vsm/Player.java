@@ -49,7 +49,7 @@ public final class Player implements RunTimePlayer, SSIEventHandler {
     private SSIEventNotifier mSSINotifier;
     // The rest service client
     private WebClient mRestClient;
-    // The  rest service urls
+    // The rest service urls
     private final HashMap<String, Resource> mResourceMap = new HashMap();
     // A random number generator
     private final Random mRandom = new Random();
@@ -82,7 +82,7 @@ public final class Player implements RunTimePlayer, SSIEventHandler {
             // Create the service data
             final Resource resource = new Resource(host, name, path, cons, prod);
             // Print some information
-            //mLogger.message("Registering RESTful service resource '" + resource + "'" + "\r\n");
+            mLogger.message("Registering RESTful service resource '" + resource + "'" + "\r\n");
             // Add the new service then
             mResourceMap.put(name, resource);
         }
@@ -112,18 +112,14 @@ public final class Player implements RunTimePlayer, SSIEventHandler {
                 + "SSI Notifier Remote Host : '" + ssinrhost + "'" + "\r\n"
                 + "SSI Notifier Remote Port : '" + ssinrport + "'" + "\r\n"
                 + "SSI Notifier Remote Flag : '" + ssinrflag + "'" + "\r\n");
-        // Initialize the avatar identifier
-        //mAvatarID = mPlayerConfig.getProperty("kristina.gti.avatar.id");
-        // Initialize the language parameter
-        //mLanguage = mPlayerConfig.getProperty("kristina.conf.lang.out");
+        // Initialize the rest client
+        mRestClient = new WebClient();
         // Initialize the SSI notifier
         mSSINotifier = new SSIEventNotifier(this,
                 ssinlhost, Integer.parseInt(ssinlport),
                 ssinrhost, Integer.parseInt(ssinrport),
                 Boolean.parseBoolean(ssinrflag));
         mSSINotifier.start();
-        // Initialize the rest client
-        mRestClient = new WebClient();
         // Initialize the SSI listener
         mSSIListener = new SSIEventListener(this,
                 ssillhost, Integer.parseInt(ssillport),
@@ -131,7 +127,7 @@ public final class Player implements RunTimePlayer, SSIEventHandler {
                 Boolean.parseBoolean(ssilrflag));
         mSSIListener.start();
         // Print some information
-        //mLogger.message("Launching KRISTINA scene player '" + this + "' with configuration:\n" + mPlayerConfig);
+        mLogger.message("Launching KRISTINA scene player '" + this + "' with configuration:\n" + mPlayerConfig);
         // Return true at success
         return true;
     }
@@ -158,16 +154,6 @@ public final class Player implements RunTimePlayer, SSIEventHandler {
     ////////////////////////////////////////////////////////////////////////////
     ////////////////////////////////////////////////////////////////////////////
     ////////////////////////////////////////////////////////////////////////////
-    public final void ssi(final String content) {
-        // Create the SSI event
-        final String event = SSIEventFactory.createEvent(content);
-        // Send the SSI event
-        mSSINotifier.sendString(event);
-    }
-
-    ////////////////////////////////////////////////////////////////////////////
-    ////////////////////////////////////////////////////////////////////////////
-    ////////////////////////////////////////////////////////////////////////////
     public final String blink() {
         // Get the resource
         final Resource resource = mResourceMap.get("Avatar-Idle");
@@ -176,7 +162,7 @@ public final class Player implements RunTimePlayer, SSIEventHandler {
         // Get the command
         final String command = create("idle", "{ }");
         //
-        put(command, "data", data);
+        put(command, "data", data, true);
         // Execute POST request
         return mRestClient.post(resource, "", command);
     }
@@ -207,7 +193,7 @@ public final class Player implements RunTimePlayer, SSIEventHandler {
         // Get the command
         final String command = create("idle", "{ }");
         //
-        put(command, "data", data);
+        put(command, "data", data, true);
         // Execute POST request
         return mRestClient.post(resource, "", command);
     }
@@ -222,7 +208,7 @@ public final class Player implements RunTimePlayer, SSIEventHandler {
         // Get the command
         final String command = create("idle", "{ }");
         //
-        put(command, "data", data);
+        put(command, "data", data, true);
         // Execute POST request
         return mRestClient.post(resource, "", command);
     }
@@ -238,18 +224,9 @@ public final class Player implements RunTimePlayer, SSIEventHandler {
         // Get the command
         final String command = create("idle", "{ }");
         //
-        put(command, "data", data);
+        put(command, "data", data, true);
         // Execute POST request
         return mRestClient.post(resource, "", command);
-    }
-
-    ////////////////////////////////////////////////////////////////////////////
-    // The static command id
-    private volatile long mId = 0;
-
-    // Get a new command id
-    public synchronized long id() {
-        return ++mId;
     }
 
     // Produce an inital envelope
@@ -264,24 +241,29 @@ public final class Player implements RunTimePlayer, SSIEventHandler {
         return object.toString(2);
     }
 
-    public final String put(final String obj, final String key, final String val) {
-        return Utilities.put(obj, key, val);
+    // Put a value at some path in the JSON string
+    public final String put(
+            final String obj,
+            final String key,
+            final String val,
+            final boolean json) {
+        return Utilities.put(obj, key, val, json);
     }
 
-    ////////////////////////////////////////////////////////////////////////////
-    public final String post(final String name, final String content) {
+    // Post some request to a specific service
+    public final String post(
+            final String service,
+            final String content) {
         // Get the resource
-        final Resource resource = mResourceMap.get(name);
+        final Resource resource = mResourceMap.get(service);
         // Create a JSON object 
         final JSONObject object = new JSONObject(content);
         // Create the payload
-        final String payload = object.toString(2);
-        // Print some information
-        mLogger.message("Resource:\n" + resource);
-        mLogger.message("Payload:\n" + payload);
+        final String payload = object.toString(4);
         // Execute POST request
-        return mRestClient.post(resource, "", payload);
-        //return name;
+        final String response = mRestClient.post(resource, "", payload);
+        // Return the result
+        return response;
     }
 
     ////////////////////////////////////////////////////////////////////////////
@@ -296,13 +278,6 @@ public final class Player implements RunTimePlayer, SSIEventHandler {
     }
 
     ////////////////////////////////////////////////////////////////////////////
-    @Override
-    public final void play(final String name, final LinkedList<AbstractValue> args) {
-        // Do nothing here ...
-    }
-
-    ////////////////////////////////////////////////////////////////////////////
-    // Handle an SSI event 
     @Override
     public final void handle(final String message) {
         // Print some information
@@ -324,7 +299,6 @@ public final class Player implements RunTimePlayer, SSIEventHandler {
                     // Process the indvidual SSI events
                     for (int i = 0; i < eventList.getLength(); i++) {
                         final Element event = ((Element) eventList.item(i));
-
                         // Get the event attributes
                         final String mode = event.getAttribute("sender");
                         final String name = event.getAttribute("event");
@@ -334,18 +308,17 @@ public final class Player implements RunTimePlayer, SSIEventHandler {
                         final Integer from = Integer.parseInt(event.getAttribute("from"));
                         final Integer dur = Integer.parseInt(event.getAttribute("dur"));
                         final Double prob = Double.parseDouble(event.getAttribute("prob"));
-
                         // Process the event features
                         if (mode.equalsIgnoreCase("audio")) {
                             if (name.equalsIgnoreCase("vad")) {
                                 if (state.equalsIgnoreCase("completed")) {
                                     // User stopped speaking
                                     mLogger.success("User stopped speaking");
-                                    set("US", false);
+                                    set("UserTalking", false);
                                 } else if (state.equalsIgnoreCase("continued")) {
                                     // User started speaking
                                     mLogger.success("User started speaking");
-                                    set("US", true);
+                                    set("UserTalking", true);
                                 } else {
                                     // Cannot process this
                                 }
@@ -367,9 +340,9 @@ public final class Player implements RunTimePlayer, SSIEventHandler {
                                             // Set the variable value
                                             //mLogger.message(key + "=" + String.format(Locale.US, "%.6f", val));
                                             if (key.equalsIgnoreCase("valence")) {
-                                                set("UV", val.floatValue());
+                                                set("UserValence", val.floatValue());
                                             } else if (key.equalsIgnoreCase("arousal")) {
-                                                set("UA", val.floatValue());
+                                                set("UserArousal", val.floatValue());
                                             } else {
                                                 // Cannot process this  
                                             }
@@ -385,37 +358,37 @@ public final class Player implements RunTimePlayer, SSIEventHandler {
                             } else {
                                 // Cannot process this
                             }
-                        } else if (mode.equalsIgnoreCase("upf")) {
-                            if (name.equalsIgnoreCase("la")) {
-                                if (state.equalsIgnoreCase("completed")) {
-                                    if (type.equalsIgnoreCase("string")) {
-                                        // Just get the content
-                                        final String text = event.getTextContent();
-                                        // User said something
-                                        mLogger.success("User speech act is\n" + text + "");
-                                        // Set the variable value
-                                        set("LA", text);
-                                    } else {
-                                        // Cannot process this    
-                                    }
-                                } else if (state.equalsIgnoreCase("continued")) {
-                                    // Cannot process this
-                                } else {
-                                    // Cannot process this
-                                }
-                            } else {
-                                // Cannot process this
-                            }
-                        } else if (mode.equalsIgnoreCase("vocapia")) {
+                        } /*else if (mode.equalsIgnoreCase("upf")) {                            
+                         if (name.equalsIgnoreCase("la")) {
+                         if (state.equalsIgnoreCase("completed")) {
+                         if (type.equalsIgnoreCase("string")) {
+                         // Just get the content
+                         final String text = event.getTextContent();
+                         // User said something
+                         mLogger.success("User speech act is\n" + text + "");
+                         // Set the variable value
+                         set("StartData", text);
+                         } else {
+                         // Cannot process this    
+                         }
+                         } else if (state.equalsIgnoreCase("continued")) {
+                         // Cannot process this
+                         } else {
+                         // Cannot process this
+                         }
+                         } else {
+                         // Cannot process this
+                         }
+                         }*/ else if (mode.equalsIgnoreCase("vocapia")) {
                             if (name.equalsIgnoreCase("transcript")) {
                                 if (state.equalsIgnoreCase("completed")) {
                                     if (type.equalsIgnoreCase("string")) {
                                         // Just get the content
-                                        final String text = event.getTextContent();
+                                        final String text = event.getTextContent().trim();
                                         // User said something
                                         mLogger.success("User utterance is\n" + text + "'");
-                                        // Set the variable value
-                                        set("TS", text);
+                                        // Set the variable value         
+                                        set("UserSpeech", text);
                                     } else {
                                         // Cannot process this    
                                     }
@@ -430,19 +403,16 @@ public final class Player implements RunTimePlayer, SSIEventHandler {
                         } else {
                             // Cannot process this
                         }
-
                     }
                 }
             }
         } catch (final Exception exc) {
             // Print some information
             mLogger.failure(exc.toString());
-            exc.printStackTrace();
         }
     }
 
     ////////////////////////////////////////////////////////////////////////////
-    // 
     public final void set(final String name, final String value) {
         if (mRunTime.hasVariable(mProject, name)) {
             mRunTime.setVariable(mProject, name, value);
@@ -451,7 +421,6 @@ public final class Player implements RunTimePlayer, SSIEventHandler {
         }
     }
 
-    // 
     public final void set(final String name, final Float value) {
         if (mRunTime.hasVariable(mProject, name)) {
             mRunTime.setVariable(mProject, name, value);
@@ -460,8 +429,7 @@ public final class Player implements RunTimePlayer, SSIEventHandler {
         }
     }
 
-    // 
-    public final void set(final String name, final Integer value) {
+    public final void set(final String name, final Boolean value) {
         if (mRunTime.hasVariable(mProject, name)) {
             mRunTime.setVariable(mProject, name, value);
         } else {
@@ -469,12 +437,25 @@ public final class Player implements RunTimePlayer, SSIEventHandler {
         }
     }
 
-    // 
-    public final void set(final String name, final Boolean value) {
-        if (mRunTime.hasVariable(mProject, name)) {
-            mRunTime.setVariable(mProject, name, value);
-        } else {
-            mLogger.failure("Variable '" + name + "' does not exist");
-        }
+    ////////////////////////////////////////////////////////////////////////////
+    public final void ssi(final String content) {
+        // Create the SSI event
+        final String event = SSIEventFactory.createEvent(content);
+        // Send the SSI event
+        mSSINotifier.sendString(event);
+    }
+
+    ////////////////////////////////////////////////////////////////////////////
+    private volatile long mId = 0;
+
+    // Get a new command id
+    public synchronized long id() {
+        return ++mId;
+    }
+
+    ////////////////////////////////////////////////////////////////////////////
+    @Override
+    public final void play(final String name, final LinkedList<AbstractValue> args) {
+        // Do nothing here ...
     }
 }
