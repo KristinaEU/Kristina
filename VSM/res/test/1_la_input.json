@@ -2,10 +2,16 @@
     "type": "turn",
     "uuid": 100,
     "meta": {
+        "user": "Iwona",
+        "avatar": "KRISTINA",
         "scenario": "sleep",
         "language": "pl"
     },
     "data": {
+        "fusion": {
+            "valence": "0.5",
+            "arousal": "0.25"
+        },
         "vocapia-data": {
             "text": "Kiedy Pan Eugeniusz zazwyczaj chodzi spać?",
             "confidence": 0.9

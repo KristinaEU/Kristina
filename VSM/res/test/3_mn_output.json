@@ -1,0 +1,3 @@
+{
+    "1": "<rdf:RDF\n    xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\"\n    xmlns:j.0=\"http://kristina-project.eu/ontologies/dialogue_actions#\" > \n  <rdf:Description rdf:about=\"http://kristina-project.eu/msins0\">\n    <j.0:hasOrder rdf:datatype=\"http://www.w3.org/2001/XMLSchema#int\">1</j.0:hasOrder>\n    <j.0:hasValence rdf:datatype=\"http://www.w3.org/2001/XMLSchema#float\">0.5</j.0:hasValence>\n    <j.0:hasArousal rdf:datatype=\"http://www.w3.org/2001/XMLSchema#float\">0.5</j.0:hasArousal>\n    <rdf:type rdf:resource=\"http://kristina-project.eu/ontologies/dialogue_actions#SimpleSayGoodbye\"/>\n  </rdf:Description>\n</rdf:RDF>\n"
+}
