@@ -1,6 +1,8 @@
 package owlSpeak.servlet;
 
 import java.io.StringReader;
+import java.net.URLDecoder;
+import java.net.URLEncoder;
 import java.util.ListIterator;
 
 import javax.json.Json;
@@ -33,6 +35,7 @@ public class KristinaServlet {
 	@Produces(MediaType.TEXT_PLAIN)
 	@Consumes(MediaType.APPLICATION_JSON)
 	public synchronized String post(final String json) {
+		try{
 
 		System.out.println("received POST");
 
@@ -45,7 +48,7 @@ public class KristinaServlet {
 		String content = StringEscapeUtils.unescapeEcmaScript(j.getJsonObject("data").getString("language-analysis"));
 		
 		String user = StringEscapeUtils.unescapeEcmaScript(j.getJsonObject("meta").getString("user"));
-		String scenario = StringEscapeUtils.unescapeEcmaScript(j.getJsonObject("meta").getJsonObject("scenario").getString("name"));
+		String scenario = StringEscapeUtils.unescapeEcmaScript(j.getJsonObject("meta").getString("scenario"));
 		
 		//CerthClient.setPath(j.getString("path"));
 		
@@ -66,6 +69,10 @@ public class KristinaServlet {
 		System.out.println("DM done");
 
 		return StringEscapeUtils.escapeEcmaScript(result);
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+		return null;
 	}
 
 }

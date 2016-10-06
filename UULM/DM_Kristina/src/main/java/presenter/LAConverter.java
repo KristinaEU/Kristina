@@ -1,8 +1,11 @@
 package presenter;
 
+import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
+import java.io.InputStream;
 import java.io.StringReader;
 import java.io.UnsupportedEncodingException;
+import java.nio.charset.StandardCharsets;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.LinkedList;
@@ -43,8 +46,8 @@ public class LAConverter {
 
 	public static List<Resource> convertToMove(String rdf, String user, String act, String dialogue) {
 		Model model = ModelFactory.createDefaultModel();
-		model.read(new StringReader(rdf), null, "RDF/XML");
-
+		model.read(new ByteArrayInputStream(rdf.getBytes(StandardCharsets.UTF_8)), null, "RDF/XML");
+		
 		ResIterator tmp = model.listResourcesWithProperty(RDF.type,
 				model.getResource(dialogue + "UserAction"));
 
@@ -140,7 +143,6 @@ public class LAConverter {
 				break;
 			}
 		}
-
 		ByteArrayOutputStream result = new ByteArrayOutputStream();
 		model.write(result, "RDF/XML");
 		/*try {

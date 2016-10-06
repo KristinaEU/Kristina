@@ -39,8 +39,7 @@ public class EmotionGenerator {
 
 	}
 
-	public KristinaEmotion getCurrentEmotion() {
-		try {
+	public KristinaEmotion getCurrentEmotion() throws Exception{
 			EmotionVector emo = fAM.getCharacterByName(name)
 					.getCurrentEmotions();
 			List<Emotion> emos = emo.getEmotions();
@@ -75,10 +74,7 @@ public class EmotionGenerator {
 			 * Mood m = fAM.getCharacterByName(name).getCurrentMood(); return
 			 * new KristinaEmotion(m.getPleasure(), m.getArousal());
 			 */
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		return null;
+		
 	}
 
 	public void processUserEmotion(KristinaEmotion emo) {try{

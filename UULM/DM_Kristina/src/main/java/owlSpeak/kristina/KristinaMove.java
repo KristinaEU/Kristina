@@ -63,7 +63,8 @@ public class KristinaMove extends Move {
 				|| this.isDialogueAction(DialogueAction.REQUEST)
 				|| this.isDialogueAction(DialogueAction.REQUEST_ADDITIONAL)
 				|| this.isDialogueAction(DialogueAction.REQUEST_MISSING)
-				|| this.isDialogueAction(DialogueAction.BOOL_REQUEST)) {
+				|| this.isDialogueAction(DialogueAction.BOOL_REQUEST)
+				|| this.isDialogueAction(DialogueAction.ACKNOWLEDGE)) {
 			return SemanticsOntology.hasTopic(indi.asOWLNamedIndividual()
 					.getIRI(), topic);
 		}
@@ -119,7 +120,18 @@ public class KristinaMove extends Move {
 	
 
 	public Set<String> getTopics() {
-		return SemanticsOntology.getTopics(indi.asOWLNamedIndividual().getIRI());
+		if (this.isDialogueAction(DialogueAction.ADVISE)
+				|| this.isDialogueAction(DialogueAction.DECLARE)
+				|| this.isDialogueAction(DialogueAction.ORDER)
+				|| this.isDialogueAction(DialogueAction.OBLIGATE)
+				|| this.isDialogueAction(DialogueAction.STATEMENT)
+				|| this.isDialogueAction(DialogueAction.REQUEST)
+				|| this.isDialogueAction(DialogueAction.REQUEST_ADDITIONAL)
+				|| this.isDialogueAction(DialogueAction.REQUEST_MISSING)
+				|| this.isDialogueAction(DialogueAction.BOOL_REQUEST)) {
+			return SemanticsOntology.getTopics(indi.asOWLNamedIndividual().getIRI());
+		}
+		return null;
 	}
 
 	@Override

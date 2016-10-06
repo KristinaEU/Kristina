@@ -72,7 +72,7 @@ public class KristinaModel {
 	public static List<Set<KristinaMove>> performUpdate(
 			List<Resource> userMoves, String user, Scenario scenario, double valence,
 			double arousal, ServletEngine owlEngine)
-			throws OWLOntologyCreationException {
+			throws Exception {
 
 		OwlSpeakOntology ontoOfLastAgenda = owlEngine.systemCore.ontologies
 				.get(0);
@@ -97,6 +97,7 @@ public class KristinaModel {
 
 			DialogueHistory.add(userMove, Participant.USER);
 			usrmv.add(userMove);
+			
 		}
 
 		float confidence = usrmv.getFirst().getConfidence();
@@ -147,7 +148,7 @@ public class KristinaModel {
 
 			for (KristinaMove userMove : usrmv) {
 				Set<KristinaMove> systemMoves = new HashSet<KristinaMove>();
-				System.out.println("UserMove : "+userMove.getDialogueAction());
+				System.out.println("UserMove : "+userMove);
 				switch (userMove.getDialogueAction()) {
 				case DialogueAction.INCOMPREHENSIBLE:
 					setUserAction("Incomprehensible");
@@ -159,7 +160,9 @@ public class KristinaModel {
 					workspace.add(systemMoves);
 					
 					systemMoves = new HashSet<KristinaMove>();
+					systemMoves.add(createTypedKristinaMove("RequestRepeat", dmOnto, manager, factory));
 					systemMoves.add(createTypedKristinaMove("RequestRephrase", dmOnto, manager, factory));
+					systemMoves.add(createTypedKristinaMove("StateMissingComprehension", dmOnto, manager, factory));
 					break;
 				case DialogueAction.GREETING:
 					setUserAction("Greet");
@@ -191,7 +194,7 @@ public class KristinaModel {
 					//TODO ergänzen
 					systemMoves.add(createTypedKristinaMove("MeetAgainSayGoodbye", dmOnto, manager, factory));
 					systemMoves.add(createTypedKristinaMove("PersonalSayGoodbye", dmOnto, manager, factory));
-					systemMoves.add(createTypedKristinaMove("SimpleSayGoodBye", dmOnto, manager, factory));
+					systemMoves.add(createTypedKristinaMove("SimpleSayGoodbye", dmOnto, manager, factory));
 					
 					break;
 				case DialogueAction.THANK:
@@ -204,11 +207,11 @@ public class KristinaModel {
 					break;
 				case DialogueAction.ACCEPT:
 					KristinaMove lastMove = (KristinaMove) DialogueHistory.getLastSystemMove();
-					if(lastMove!= null&&lastMove.getText().contains("Weather")){
+					if(lastMove!= null&&lastMove.getText().contains("weather")){
 						userMove.specify("RequestWeather");
 						systemMoves = askKI(userMove, valence, arousal, user, dmOnto, manager, factory);
 					}
-					else if(lastMove!= null&&lastMove.getText().contains("Newspaper")){
+					else if(lastMove!= null&&lastMove.getText().contains("newspaper")){
 						systemMoves.add(createCannedTextMove("Tell me the headline of the article.", user, dmOnto, manager, factory));
 					}else if(lastMove!= null&&lastMove.getText().contains("like")){
 						systemMoves.add(createCannedTextMove("Is there another article you would like me to read out loud?", user, dmOnto, manager, factory));
@@ -217,13 +220,13 @@ public class KristinaModel {
 					break;
 				case DialogueAction.REJECT:
 					KristinaMove tmp2 = (KristinaMove) DialogueHistory.getLastSystemMove();
-					if(tmp2!= null&&tmp2.getText().contains("like")){
+					if(tmp2!= null&&tmp2.getText().contains("Did you like the article?")){
 					systemMoves.add(createCannedTextMove("Is there anything else I can do for you?", user,dmOnto, manager, factory));
 					
 					}else{
 					systemMoves.add(createTypedKristinaMove("MeetAgainSayGoodbye", dmOnto, manager, factory));
 					systemMoves.add(createTypedKristinaMove("PersonalSayGoodbye", dmOnto, manager, factory));
-					systemMoves.add(createTypedKristinaMove("SimpleSayGoodBye", dmOnto, manager, factory));
+					systemMoves.add(createTypedKristinaMove("SimpleSayGoodbye", dmOnto, manager, factory));
 					}
 					break;
 				case DialogueAction.FURTHER_INFORMATION:
@@ -235,7 +238,7 @@ public class KristinaModel {
 							if(!lastMoves.contains(m)){
 								systemMoves.add(m);
 							}
-							if(m.getDialogueAction().equals(DialogueAction.UNKNOWN)){
+							if(m.isDialogueAction(DialogueAction.UNKNOWN)){
 								systemMoves = new HashSet<KristinaMove>();
 								systemMoves.add(createTypedKristinaMove("PersonalApologise", dmOnto, manager, factory));
 								systemMoves.add(createTypedKristinaMove("SimpleApologise", dmOnto, manager, factory));
@@ -252,10 +255,10 @@ public class KristinaModel {
 					break;
 				case DialogueAction.STATEMENT:
 				case DialogueAction.DECLARE:
-					if(userMove.hasTopic("GoOut")&&userMove.hasTopic("Want")){
+					if(userMove.hasTopic("Out")&&userMove.hasTopic("Go")){
 						
 						systemMoves.add(createCannedTextMove("You can go for a walk.", user, dmOnto, manager, factory));
-					}else if(userMove.hasTopic("GoForWalk")&&userMove.hasTopic("Like")){
+					}else if(userMove.hasTopic("Walk")&&userMove.hasTopic("Today")){
 						systemMoves.add(createTypedKristinaMove("SimpleMotivate", dmOnto, manager, factory));
 						workspace.add(systemMoves);
 						
@@ -286,12 +289,16 @@ public class KristinaModel {
 							systemMoves.add(createTypedKristinaMove("AskTask", dmOnto, manager, factory));
 						}
 					
+					}else if(userMove.hasTopic("Boring")){
+						systemMoves.add(createCannedTextMove("Is there anything else I can do for you?", user,dmOnto, manager, factory));
 					}else if(userMove.hasTopic("Newspaper")){
 						systemMoves.add(createCannedTextMove("Would you like me to read the newspaper for you?", user, dmOnto, manager, factory));
+					}else if(userMove.hasTopic("Take")&&userMove.getTopics().size() <= 2){
+						//This is part of an acknowledgement, nothing needs to be done.
 					}else{
 						systemMoves = askKI(userMove, valence, arousal, user, dmOnto, manager, factory);
 						for(KristinaMove m: systemMoves){
-							if(m.getDialogueAction().equals(DialogueAction.UNKNOWN)){
+							if(m.isDialogueAction(DialogueAction.UNKNOWN)){
 
 								systemMoves = new HashSet<KristinaMove>();
 								systemMoves.add(createTypedKristinaMove("PersonalApologise", dmOnto, manager, factory));
@@ -333,7 +340,7 @@ public class KristinaModel {
 					}else{
 						systemMoves = askKI(userMove, valence, arousal, user, dmOnto, manager, factory);
 						for(KristinaMove m: systemMoves){
-							if(m.getDialogueAction().equals(DialogueAction.UNKNOWN)){
+							if(m.isDialogueAction(DialogueAction.UNKNOWN)){
 								systemMoves = new HashSet<KristinaMove>();
 								systemMoves.add(createTypedKristinaMove("PersonalApologise", dmOnto, manager, factory));
 								systemMoves.add(createTypedKristinaMove("SimpleApologise", dmOnto, manager, factory));
@@ -351,14 +358,15 @@ public class KristinaModel {
 					break;
 				case DialogueAction.ACKNOWLEDGE:
 					KristinaMove tmp = (KristinaMove) DialogueHistory.getLastSystemMove();
-					KristinaMove tmp3 = (KristinaMove) DialogueHistory.getPreviousUserMove();
+					KristinaMove tmp3 = (KristinaMove) DialogueHistory.getLastUserMove();
+					
 					if(tmp!=null&&tmp.getText().contains("walk")){
 						systemMoves.add(createTypedKristinaMove("SimpleMotivate", dmOnto, manager, factory));
 						workspace.add(systemMoves);
 						
 						systemMoves = new HashSet<KristinaMove>();
 						systemMoves.add(createCannedTextMove("Remember to take your umbrella.", user, dmOnto, manager, factory));
-					}else if(tmp!=null&&tmp.getDialogueAction()==DialogueAction.SHOW_WEATHER && tmp3!=null&&tmp3.hasTopic("Walk")){
+					}else if(tmp!=null&&tmp.isDialogueAction(DialogueAction.SHOW_WEATHER) && tmp3!=null&&tmp3.hasTopic("Walk")){
 						systemMoves.add(createTypedKristinaMove("Acknowledge", dmOnto, manager, factory));
 						workspace.add(systemMoves);
 						
@@ -401,7 +409,7 @@ public class KristinaModel {
 			System.out.println("[");
 			for(KristinaMove m: l){
 				if(m != null)
-				System.out.println(m.getDialogueAction());
+				System.out.println(m);
 			}
 			System.out.println("]");
 		}
@@ -410,12 +418,13 @@ public class KristinaModel {
 		return workspace;
 	}
 	
-	private static Set<KristinaMove> askKI(KristinaMove userMove, double valence, double arousal,String user, OWLOntology dmOnto, OWLOntologyManager manager, OWLDataFactory factory){
+	private static Set<KristinaMove> askKI(KristinaMove userMove, double valence, double arousal,String user, OWLOntology dmOnto, OWLOntologyManager manager, OWLDataFactory factory)throws Exception{
 		if(!sent){
 			sent = true;
 		ByteArrayOutputStream input = new ByteArrayOutputStream();
+
 		userMove.getModel().write(input, "TURTLE");
-		String rdfMoves = CerthClient.post(input.toString(),
+		String rdfMoves = CerthClient.post(input.toString("UTF-8"),
 				valence, arousal, user);
 		// String rdfMoves = askDemoKI(null);
 
@@ -429,10 +438,16 @@ public class KristinaModel {
 	}
 
 	public static boolean hasExtremeEmotion() {
-		return emotionGenerator.getCurrentEmotion().isExtremeEmotion();
+		try {
+			return emotionGenerator.getCurrentEmotion().isExtremeEmotion();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return false;
+		}
 	}
 
-	public static KristinaEmotion getCurrentEmotion() {
+	public static KristinaEmotion getCurrentEmotion() throws Exception {
 		return emotionGenerator.getCurrentEmotion();
 	}
 
@@ -586,6 +601,16 @@ public class KristinaModel {
 		OWLOntologyManager manager = ontoOfLastAgenda.factory.manager;
 		
 		return createCannedTextMove(text, user, dmOnto, manager, factory);
+	}
+	
+	public static KristinaMove getTypedKristinaMove(String a, String user, ServletEngine owlEngine){
+		OwlSpeakOntology ontoOfLastAgenda = owlEngine.systemCore.ontologies
+				.get(0);
+		OWLOntology dmOnto = ontoOfLastAgenda.factory.onto;
+		OWLDataFactory factory = ontoOfLastAgenda.factory.factory;
+		OWLOntologyManager manager = ontoOfLastAgenda.factory.manager;
+		
+		return createTypedKristinaMove(a, dmOnto, manager, factory);
 	}
 	
 	public static Scenario getScenario(String s){

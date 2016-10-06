@@ -2,12 +2,14 @@ package model;
 
 import java.io.StringReader;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 import java.util.UUID;
 
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.ModelFactory;
 import org.apache.jena.rdf.model.NodeIterator;
+import org.apache.jena.rdf.model.RDFNode;
 import org.apache.jena.rdf.model.ResIterator;
 import org.apache.jena.rdf.model.Resource;
 import org.apache.jena.util.ResourceUtils;
@@ -35,6 +37,7 @@ public class KIConverter {
 		while(start.hasNext()){
 			Resource r = start.next();
 			NodeIterator ns = model.listObjectsOfProperty(r, model.getProperty(onto+"containsResponse"));
+			List<RDFNode> context = model.listObjectsOfProperty(r, model.getProperty(onto+"conversationalContext")).toList();
 		
 		while(ns.hasNext()){
 			Resource node = ns.next().asResource();
@@ -44,7 +47,11 @@ public class KIConverter {
 			manager.addAxiom(dmOnto, factory.getOWLDeclarationAxiom(indi));
 			if(node.hasProperty(RDF.type,model.getResource(onto+"StatementResponse"))){
 				if(node.hasProperty(model.getProperty(onto+"responseType"),model.getResource(onto+"free_text"))){
-					manager.addAxiom(dmOnto, factory.getOWLClassAssertionAxiom(factory.getOWLClass(IRI.create(dialogue+"ReadNewspaper")), indi));
+					if(context.contains(model.getResource(OntologyPrefix.ontoContext+"NewspaperContext"))){
+						manager.addAxiom(dmOnto, factory.getOWLClassAssertionAxiom(factory.getOWLClass(IRI.create(dialogue+"ReadNewspaper")), indi));
+					}else{
+						manager.addAxiom(dmOnto, factory.getOWLClassAssertionAxiom(factory.getOWLClass(IRI.create(dialogue+"Canned")), indi));
+					}
 				}else if(node.hasProperty(model.getProperty(onto+"responseType"),model.getResource(onto+"structured"))){
 					manager.addAxiom(dmOnto, factory.getOWLClassAssertionAxiom(factory.getOWLClass(IRI.create(dialogue+"Declare")), indi));
 				}

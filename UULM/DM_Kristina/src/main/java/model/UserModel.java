@@ -8,11 +8,11 @@ public class UserModel {
 	private static Map<String, String> cultureMap = new HashMap<String, String>();
 	
 	public static void init(){
-		cultureMap.put("Elisabeth", Culture.POLISH);
-		cultureMap.put("Eugene", Culture.GERMAN);
-		cultureMap.put("George", Culture.SPANISH);
+		cultureMap.put("Elisabeth", Culture.GERMAN);
+		cultureMap.put("Hans", Culture.GERMAN);
+		cultureMap.put("Iwona", Culture.POLISH);
 		cultureMap.put("Maria", Culture.SPANISH);
-		cultureMap.put("Anna", Culture.GERMAN);
+		cultureMap.put("Juan", Culture.SPANISH);
 	}
 	
 	public static boolean isVerbose(String user){

@@ -7,6 +7,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URLEncoder;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.time.LocalDate;
@@ -36,8 +37,7 @@ public class CerthClient {
 	private static Handler handler;
 	private static String path = "";
 	
-	public static String get(String data) {
-		try {
+	public static String get(String data) throws Exception {
 			Client client = ClientBuilder.newClient();
 			WebTarget webTarget = client.target(address+"query").queryParam("query", data);
 			
@@ -50,13 +50,9 @@ public class CerthClient {
 				throw new IOException(s);
 			}
 			return response.readEntity(String.class);
-		} catch (Exception e) {
-			return "";
-		}
 	}
 
-	public static String post(String in, double valence, double arousal, String user)  {
-		try{
+	public static String post(String in, double valence, double arousal, String user)  throws Exception{
 			Client client = ClientBuilder.newClient();
 			
 			WebTarget webTarget = client.target(address+"update");
@@ -65,8 +61,8 @@ public class CerthClient {
 			
 			/*List<String> l2 = new LinkedList<String>();
 			l2.add(in);
-			Files.write(Paths.get("src/main/resources/results/DM2KI/"+ path.replace("la", "dm2ki").replace("owl","ttl")), l2);*/
-			
+			Files.write(Paths.get("src/main/resources/results/DM2KI/"+ path.replace("la", "dm2ki").replace("owl","ttl")), l2,StandardCharsets.UTF_8);
+			*/
 			
 			Response response = ib.post(Entity.entity("frames="+URLEncoder.encode(in, "utf-8")+"\n&emotions="+URLEncoder.encode("{valence:"+valence+",arousal:"+arousal+"}", "utf-8")+"\n&username="+URLEncoder.encode(user, "utf-8"), "application/x-www-form-urlencoded"));
 
@@ -81,19 +77,15 @@ public class CerthClient {
 			
 			/*List<String> l = new LinkedList<String>();
 			l.add(result);
-			Files.write(Paths.get("src/main/resources/results/KI2DM/"+ path.replace("la", "ki").replace("owl","ttl")), l);*/
+			Files.write(Paths.get("src/main/resources/results/KI2DM/"+ path.replace("la", "ki").replace("owl","ttl")), l, StandardCharsets.UTF_8);*/
 			return result;
 			
-		}catch(Exception e){
-			e.printStackTrace();
-			return "";
-		}
 	}
 	
-	/*public static void setPath(String p){
+	public static void setPath(String p){
 		
 		
 		path = p;
-	}*/
+	}
 
 }

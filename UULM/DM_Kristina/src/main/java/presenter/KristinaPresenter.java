@@ -80,6 +80,7 @@ public class KristinaPresenter {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		logger.setUseParentHandlers(false);
 		logger.addHandler(handler);
 
 	}
@@ -87,7 +88,7 @@ public class KristinaPresenter {
 	public static String performDM(float valence, float arousal,
 			String content, String user, String scenario) throws OWLOntologyCreationException,
 			OWLOntologyStorageException {
-		
+		try{
 		if(!KristinaPresenter.user.equals(user) || !KristinaPresenter.currentScenario.equals(KristinaModel.getScenario(scenario))){
 			
 			restart(user, scenario);
@@ -112,18 +113,13 @@ public class KristinaPresenter {
 		} else {
 			String output = "";
 			List<Resource> userMove = null;
-			try {
-				userMove = LAConverter.convertToMove(content, user,
+			userMove = LAConverter.convertToMove(content, user,
 						OntologyPrefix.act, OntologyPrefix.dialogue);
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
 
 			// TODO: tmp solution
 			if (!content.isEmpty()) {
 				// perform dialogue state update
 
-				try {
 					ws = KristinaModel.performUpdate(
 							userMove, user, currentScenario, valence,
 							arousal, owlEngine);
@@ -135,11 +131,7 @@ public class KristinaPresenter {
 					KristinaEmotion emo = KristinaModel.getCurrentEmotion();
 					output = LAConverter.convertFromMove(systemMove,
 							emo.getValence(), emo.getArousal(), OntologyPrefix.dialogue);
-				} catch (OWLOntologyDocumentAlreadyExistsException e1) {
-					System.err.println(e1.getOntologyDocumentIRI());
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
+				
 			} else {
 
 				KristinaEmotion emo = KristinaModel.getCurrentEmotion();
@@ -151,6 +143,31 @@ public class KristinaPresenter {
 			createEvent("Sending System Move");
 
 			return output;
+		}
+		}catch(Exception e){
+			e.printStackTrace();
+			
+			KristinaModel.setSystemEmotion(new KristinaEmotion(valence,0.25));
+			LinkedList<KristinaMove> list = new LinkedList<KristinaMove>();
+			list.add(KristinaModel.getTypedKristinaMove("StateMissingComprehension", user, owlEngine));
+			try {
+				KristinaModel.setSystemEmotion(new KristinaEmotion(KristinaModel.getCurrentEmotion().getValence(), 0.25));
+			} catch (Exception e1) {
+				e1.printStackTrace();
+				KristinaModel.setSystemEmotion(new KristinaEmotion(0, 0.25));
+			}
+			KristinaEmotion emo;
+			try {
+				emo = KristinaModel.getCurrentEmotion();
+
+				return LAConverter.convertFromMove(list, emo.getValence(), emo.getArousal(),
+						OntologyPrefix.dialogue);
+			} catch (Exception e1) {
+				e1.printStackTrace();
+
+				return LAConverter.convertFromMove(list, 0, 0,
+						OntologyPrefix.dialogue);
+			}
 		}
 	}
 
@@ -192,14 +209,14 @@ public class KristinaPresenter {
 			}else if (move.hasTopic("StartTime")&&move.hasTopic("Sleep")&&(UserModel.isIndirect(user)||UserModel.isVerbose(user))){
 				if(UserModel.isIndirect(user)&&UserModel.isVerbose(user)){
 					if(Math.random()<0.5){
-						result.add(KristinaModel.getCannedTextMove("Eugene ususally goes to bed at midnight. He watches TV before that.", user, owlEngine));
+						result.add(KristinaModel.getCannedTextMove("Eugene usually goes to bed at midnight. He watches TV before that.", user, owlEngine));
 					}else{
 						result.add(KristinaModel.getCannedTextMove("He watches TV until midnight.", user, owlEngine));
 					}
 				}else if(UserModel.isIndirect(user)){
 					result.add(KristinaModel.getCannedTextMove("He watches TV until midnight.", user, owlEngine));
 				}else{
-					result.add(KristinaModel.getCannedTextMove("Eugene ususally goes to bed at midnight. He watches TV before that.", user, owlEngine));
+					result.add(KristinaModel.getCannedTextMove("Eugene usually goes to bed at midnight. He watches TV before that.", user, owlEngine));
 				}
 			}else if(move.hasTopic("TV")&&move.hasTopic("EndTime")&&(UserModel.isIndirect(user)||UserModel.isVerbose(user))){
 				if(UserModel.isIndirect(user)&&UserModel.isVerbose(user)){
@@ -252,7 +269,7 @@ public class KristinaPresenter {
 					result.add(KristinaModel.getCannedTextMove("You should comb his hair.", user, owlEngine));
 				}
 			}else if(move.hasTopic("BoardGame")&&UserModel.isVerbose(user)){
-				result.add(KristinaModel.getCannedTextMove("He often plays Lude and Morris. It is played by two people and the goal is to...", user, owlEngine));
+				result.add(KristinaModel.getCannedTextMove("He often plays Morris. It is a strategy board game played by two people.", user, owlEngine));
 			}else if(move.hasTopic("Toilet")&&move.hasTopic("Frequency")&&UserModel.isConcise(user)){
 				result.add(KristinaModel.getCannedTextMove("Just once.", user, owlEngine));
 			}else{
@@ -263,6 +280,7 @@ public class KristinaPresenter {
 	}
 	
 	private static void updateSystemEmotion(List<KristinaMove> systemActions){
+		try{
 		for(KristinaMove action: systemActions){
 			String dialogueAction = action.getDialogueAction();
 			switch(dialogueAction){
@@ -312,6 +330,10 @@ public class KristinaPresenter {
 				}
 			}
 		}
+		}catch(Exception e){
+			System.err.println("Something went wrong when updating System Emotion:");
+			e.printStackTrace();
+		}
 	}
 	
 	public static void close(){
@@ -322,7 +344,13 @@ public class KristinaPresenter {
 	/* Functions needed for the demonstration */
 
 	public static KristinaEmotion getCurrentEmotion() {
-		return KristinaModel.getCurrentEmotion();
+		try {
+			return KristinaModel.getCurrentEmotion();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return new KristinaEmotion(0, 0);
+		}
 	}
 
 	public static int getGenerationStatus() {
@@ -371,23 +399,37 @@ public class KristinaPresenter {
 	private static List<KristinaMove> selectSystemMove(
 			List<Set<KristinaMove>> ws) {
 		LinkedList<KristinaMove> moves = new LinkedList<KristinaMove>();
+		boolean end = false;
 		for (Set<KristinaMove> set : ws) {
 			int strategy = (int) (Math.random() * set.size());
 			for (KristinaMove move : set) {
 				
 				if (strategy == 0) {
-					if (move != null && !move.getDialogueAction().equals(DialogueAction.EMPTY)) {
+					if (move != null && !move.getDialogueAction().equals(DialogueAction.EMPTY) && !moves.contains(move)) {
 						moves.add(move);
 						DialogueHistory.add(move, Participant.SYSTEM);
+						if(move.getDialogueAction().equals(DialogueAction.PERSONAL_GOODBYE)||move.getDialogueAction().equals(DialogueAction.SIMPLE_GOODBYE)||move.getDialogueAction().equals(DialogueAction.MEET_AGAIN)){
+							end = true;
+						}
+						break;
 					}
 				}
 				strategy = strategy - 1;
+			}
+			if(end){
+				break;
 			}
 		}
 		if (moves.isEmpty()) {
 			moves.add(KristinaModel.getEmptyMove(owlEngine));
 		}else{
-			KristinaModel.setSystemEmotion(new KristinaEmotion(KristinaModel.getCurrentEmotion().getArousal(),0.25));
+			try {
+				KristinaModel.setSystemEmotion(new KristinaEmotion(KristinaModel.getCurrentEmotion().getArousal(),0.25));
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				KristinaModel.setSystemEmotion(new KristinaEmotion(0,0.25));
+			}
 		}
 
 		return moves;
