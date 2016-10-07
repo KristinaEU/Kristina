@@ -1,6 +1,7 @@
 package model;
 
 import java.io.StringReader;
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -47,10 +48,11 @@ public class KIConverter {
 			manager.addAxiom(dmOnto, factory.getOWLDeclarationAxiom(indi));
 			if(node.hasProperty(RDF.type,model.getResource(onto+"StatementResponse"))){
 				if(node.hasProperty(model.getProperty(onto+"responseType"),model.getResource(onto+"free_text"))){
-					if(context.contains(model.getResource(OntologyPrefix.ontoContext+"NewspaperContext"))){
+					if(!Collections.disjoint(context,model.listResourcesWithProperty(RDF.type,model.getResource(OntologyPrefix.ontoContext+"ReadNewspaperContext")).toList())){
 						manager.addAxiom(dmOnto, factory.getOWLClassAssertionAxiom(factory.getOWLClass(IRI.create(dialogue+"ReadNewspaper")), indi));
 					}else{
-						manager.addAxiom(dmOnto, factory.getOWLClassAssertionAxiom(factory.getOWLClass(IRI.create(dialogue+"Canned")), indi));
+						//TODO: change this to IRResponse after first prototype, introduce IRResponse to the remaining code
+						manager.addAxiom(dmOnto, factory.getOWLClassAssertionAxiom(factory.getOWLClass(IRI.create(dialogue+"ReadNewspaper")), indi));
 					}
 				}else if(node.hasProperty(model.getProperty(onto+"responseType"),model.getResource(onto+"structured"))){
 					manager.addAxiom(dmOnto, factory.getOWLClassAssertionAxiom(factory.getOWLClass(IRI.create(dialogue+"Declare")), indi));

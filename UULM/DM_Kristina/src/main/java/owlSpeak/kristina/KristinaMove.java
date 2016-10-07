@@ -158,7 +158,7 @@ public class KristinaMove extends Move {
 					result = result+", "+tmp;
 				}
 			}
-		}else if(this.isDialogueAction(DialogueAction.CANNED)){
+		}else if(this.isDialogueAction(DialogueAction.CANNED)||this.isDialogueAction(DialogueAction.READ_NEWSPAPER)){
 			result = result+": "+getText();
 		}
 		return result;

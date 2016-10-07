@@ -52,6 +52,7 @@ public class KristinaServlet {
 		
 		//CerthClient.setPath(j.getString("path"));
 		
+		
 		String result;
 		try {
 			result = KristinaPresenter.performDM(Float.parseFloat(valence), Float.parseFloat(arousal), content, user, scenario);

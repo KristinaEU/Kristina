@@ -6,6 +6,7 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.net.URLDecoder;
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
@@ -62,10 +63,9 @@ public class CerthClient {
 			/*List<String> l2 = new LinkedList<String>();
 			l2.add(in);
 			Files.write(Paths.get("src/main/resources/results/DM2KI/"+ path.replace("la", "dm2ki").replace("owl","ttl")), l2,StandardCharsets.UTF_8);
-			*/
-			
+		*/
 			Response response = ib.post(Entity.entity("frames="+URLEncoder.encode(in, "utf-8")+"\n&emotions="+URLEncoder.encode("{valence:"+valence+",arousal:"+arousal+"}", "utf-8")+"\n&username="+URLEncoder.encode(user, "utf-8"), "application/x-www-form-urlencoded"));
-
+			
 			if(response.getStatus()!= 200){
 				String s = response.getStatusInfo().toString();
 				response.close();
@@ -77,7 +77,8 @@ public class CerthClient {
 			
 			/*List<String> l = new LinkedList<String>();
 			l.add(result);
-			Files.write(Paths.get("src/main/resources/results/KI2DM/"+ path.replace("la", "ki").replace("owl","ttl")), l, StandardCharsets.UTF_8);*/
+			Files.write(Paths.get("src/main/resources/results/KI2DM/"+ path.replace("la", "ki").replace("owl","ttl")), l, StandardCharsets.UTF_8);
+			*/
 			return result;
 			
 	}

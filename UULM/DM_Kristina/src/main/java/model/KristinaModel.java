@@ -6,6 +6,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.StringReader;
+import java.net.URLEncoder;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -422,7 +423,14 @@ public class KristinaModel {
 		if(!sent){
 			sent = true;
 		ByteArrayOutputStream input = new ByteArrayOutputStream();
-
+		
+		Model model = userMove.getModel();
+		List<Statement> stmts = model.listStatements(null, model.getProperty(OntologyPrefix.act+"textualContent"),(String) null).toList();
+		for(Statement s: stmts){
+			model.add(s.getSubject(), s.getPredicate(), URLEncoder.encode(s.getString(),"utf-8"));
+			model.remove(s);
+		}
+		
 		userMove.getModel().write(input, "TURTLE");
 		String rdfMoves = CerthClient.post(input.toString("UTF-8"),
 				valence, arousal, user);
