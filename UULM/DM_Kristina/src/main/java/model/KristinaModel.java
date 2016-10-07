@@ -210,7 +210,7 @@ public class KristinaModel {
 					KristinaMove lastMove = (KristinaMove) DialogueHistory.getLastSystemMove();
 					if(lastMove!= null&&lastMove.getText().contains("weather")){
 						userMove.specify("RequestWeather");
-						systemMoves = askKI(userMove, valence, arousal, user, dmOnto, manager, factory);
+						systemMoves = askKI(userMove, valence, arousal, user,getScenarioString(scenario), dmOnto, manager, factory);
 					}
 					else if(lastMove!= null&&lastMove.getText().contains("newspaper")){
 						systemMoves.add(createCannedTextMove("Tell me the headline of the article.", user, dmOnto, manager, factory));
@@ -231,7 +231,7 @@ public class KristinaModel {
 					}
 					break;
 				case DialogueAction.FURTHER_INFORMATION:
-						Set<KristinaMove> lastWS = askKI(DialogueHistory.getPreviousUserMove(), valence, arousal, user, dmOnto, manager, factory);
+						Set<KristinaMove> lastWS = askKI(DialogueHistory.getPreviousUserMove(), valence, arousal, user, getScenarioString(scenario),dmOnto, manager, factory);
 						
 						List<KristinaMove> lastMoves = DialogueHistory.getLastSystemMoves();
 						
@@ -297,7 +297,7 @@ public class KristinaModel {
 					}else if(userMove.hasTopic("Take")&&userMove.getTopics().size() <= 2){
 						//This is part of an acknowledgement, nothing needs to be done.
 					}else{
-						systemMoves = askKI(userMove, valence, arousal, user, dmOnto, manager, factory);
+						systemMoves = askKI(userMove, valence, arousal, user, getScenarioString(scenario), dmOnto, manager, factory);
 						for(KristinaMove m: systemMoves){
 							if(m.isDialogueAction(DialogueAction.UNKNOWN)){
 
@@ -317,7 +317,7 @@ public class KristinaModel {
 				case DialogueAction.BOOL_REQUEST:
 					if(userMove.hasTopic("Weather")){
 						userMove.specify("RequestWeather");
-						systemMoves = askKI(userMove, valence, arousal, user, dmOnto, manager, factory);
+						systemMoves = askKI(userMove, valence, arousal, user,getScenarioString(scenario), dmOnto, manager, factory);
 					}
 					else if(userMove.hasTopic("Article")){
 						//TODO: BoooleanRequest?
@@ -326,7 +326,7 @@ public class KristinaModel {
 						
 						systemMoves = new HashSet<KristinaMove>();
 						userMove.specify("RequestNewspaper");
-						systemMoves = askKI(userMove, valence, arousal, user, dmOnto, manager, factory);
+						systemMoves = askKI(userMove, valence, arousal, user, getScenarioString(scenario),dmOnto, manager, factory);
 						workspace.add(systemMoves);
 						
 						systemMoves = new HashSet<KristinaMove>();
@@ -339,7 +339,7 @@ public class KristinaModel {
 						systemMoves = new HashSet<KristinaMove>();
 						systemMoves.add(createCannedTextMove("Tell me the headline of the article.", user, dmOnto, manager, factory));
 					}else{
-						systemMoves = askKI(userMove, valence, arousal, user, dmOnto, manager, factory);
+						systemMoves = askKI(userMove, valence, arousal, user, getScenarioString(scenario),dmOnto, manager, factory);
 						for(KristinaMove m: systemMoves){
 							if(m.isDialogueAction(DialogueAction.UNKNOWN)){
 								systemMoves = new HashSet<KristinaMove>();
@@ -419,7 +419,7 @@ public class KristinaModel {
 		return workspace;
 	}
 	
-	private static Set<KristinaMove> askKI(KristinaMove userMove, double valence, double arousal,String user, OWLOntology dmOnto, OWLOntologyManager manager, OWLDataFactory factory)throws Exception{
+	private static Set<KristinaMove> askKI(KristinaMove userMove, double valence, double arousal,String user,String scenario, OWLOntology dmOnto, OWLOntologyManager manager, OWLDataFactory factory)throws Exception{
 		if(!sent){
 			sent = true;
 		ByteArrayOutputStream input = new ByteArrayOutputStream();
@@ -433,7 +433,7 @@ public class KristinaModel {
 		
 		userMove.getModel().write(input, "TURTLE");
 		String rdfMoves = CerthClient.post(input.toString("UTF-8"),
-				valence, arousal, user);
+				valence, arousal, user, scenario);
 		// String rdfMoves = askDemoKI(null);
 
 		logger.info("\n----------------------------\nInput KI\n----------------------------\n"
@@ -635,6 +635,23 @@ public class KristinaModel {
 			return Scenario.NEWSPAPER;
 		default:
 			return Scenario.UNDEFINED;
+		}
+	}
+	
+	public static String getScenarioString(Scenario s){
+		switch (s) {
+		case BABY:
+			return "babycare";
+		case SLEEP:
+			return "sleep";
+		case PAIN:
+			return "pain";
+		case WEATHER:
+			return "weather";
+		case NEWSPAPER:
+			return "newspaper";
+		default:
+			return "undefined";
 		}
 	}
 }

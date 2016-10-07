@@ -53,18 +53,18 @@ public class CerthClient {
 			return response.readEntity(String.class);
 	}
 
-	public static String post(String in, double valence, double arousal, String user)  throws Exception{
+	public static String post(String in, double valence, double arousal, String user, String scenario)  throws Exception{
 			Client client = ClientBuilder.newClient();
 			
 			WebTarget webTarget = client.target(address+"update");
 			
 			Invocation.Builder ib = webTarget.request(MediaType.TEXT_PLAIN_TYPE);
 			
-			/*List<String> l2 = new LinkedList<String>();
+			List<String> l2 = new LinkedList<String>();
 			l2.add(in);
 			Files.write(Paths.get("src/main/resources/results/DM2KI/"+ path.replace("la", "dm2ki").replace("owl","ttl")), l2,StandardCharsets.UTF_8);
-		*/
-			Response response = ib.post(Entity.entity("frames="+URLEncoder.encode(in, "utf-8")+"\n&emotions="+URLEncoder.encode("{valence:"+valence+",arousal:"+arousal+"}", "utf-8")+"\n&username="+URLEncoder.encode(user, "utf-8"), "application/x-www-form-urlencoded"));
+		
+			Response response = ib.post(Entity.entity("frames="+URLEncoder.encode(in, "utf-8")+"\n&emotions="+URLEncoder.encode("{valence:"+valence+",arousal:"+arousal+"}", "utf-8")+"\n&username="+URLEncoder.encode(user, "utf-8")+"\n&scenario="+URLEncoder.encode(scenario, "utf-8"), "application/x-www-form-urlencoded"));
 			
 			if(response.getStatus()!= 200){
 				String s = response.getStatusInfo().toString();
@@ -75,10 +75,10 @@ public class CerthClient {
 			String result = response.readEntity(String.class);
 			
 			
-			/*List<String> l = new LinkedList<String>();
+			List<String> l = new LinkedList<String>();
 			l.add(result);
 			Files.write(Paths.get("src/main/resources/results/KI2DM/"+ path.replace("la", "ki").replace("owl","ttl")), l, StandardCharsets.UTF_8);
-			*/
+			
 			return result;
 			
 	}

@@ -50,7 +50,7 @@ public class KristinaServlet {
 		String user = StringEscapeUtils.unescapeEcmaScript(j.getJsonObject("meta").getString("user"));
 		String scenario = StringEscapeUtils.unescapeEcmaScript(j.getJsonObject("meta").getString("scenario"));
 		
-		//CerthClient.setPath(j.getString("path"));
+		CerthClient.setPath(j.getString("path"));
 		
 		
 		String result;
