@@ -162,7 +162,7 @@ public final class Player implements RunTimePlayer, SSIEventHandler {
         // Get the command
         final String command = create("idle", "{ }");
         //
-        put(command, "data", data, true);
+        put(command, "data", data, "OBJECT");
         // Execute POST request
         return mRestClient.post(resource, "", command);
     }
@@ -193,7 +193,7 @@ public final class Player implements RunTimePlayer, SSIEventHandler {
         // Get the command
         final String command = create("idle", "{ }");
         //
-        put(command, "data", data, true);
+        put(command, "data", data, "OBJECT");
         // Execute POST request
         return mRestClient.post(resource, "", command);
     }
@@ -208,7 +208,7 @@ public final class Player implements RunTimePlayer, SSIEventHandler {
         // Get the command
         final String command = create("idle", "{ }");
         //
-        put(command, "data", data, true);
+        put(command, "data", data, "OBJECT");
         // Execute POST request
         return mRestClient.post(resource, "", command);
     }
@@ -224,7 +224,7 @@ public final class Player implements RunTimePlayer, SSIEventHandler {
         // Get the command
         final String command = create("idle", "{ }");
         //
-        put(command, "data", data, true);
+        put(command, "data", data, "OBJECT");
         // Execute POST request
         return mRestClient.post(resource, "", command);
     }
@@ -246,8 +246,8 @@ public final class Player implements RunTimePlayer, SSIEventHandler {
             final String obj,
             final String key,
             final String val,
-            final boolean json) {
-        return Utilities.put(obj, key, val, json);
+            final String typ) {
+        return Utilities.put(obj, key, val, typ);
     }
 
     // Post some request to a specific service
