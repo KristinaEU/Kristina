@@ -49,20 +49,20 @@ public class KIConverter {
 			if(node.hasProperty(RDF.type,model.getResource(onto+"StatementResponse"))){
 				if(node.hasProperty(model.getProperty(onto+"responseType"),model.getResource(onto+"free_text"))){
 					if(!Collections.disjoint(context,model.listResourcesWithProperty(RDF.type,model.getResource(OntologyPrefix.ontoContext+"ReadNewspaperContext")).toList())){
-						manager.addAxiom(dmOnto, factory.getOWLClassAssertionAxiom(factory.getOWLClass(IRI.create(dialogue+"ReadNewspaper")), indi));
+						manager.addAxiom(dmOnto, factory.getOWLClassAssertionAxiom(factory.getOWLClass(IRI.create(DialogueAction.READ_NEWSPAPER)), indi));
 					}else{
 						//TODO: change this to IRResponse after first prototype, introduce IRResponse to the remaining code
-						manager.addAxiom(dmOnto, factory.getOWLClassAssertionAxiom(factory.getOWLClass(IRI.create(dialogue+"ReadNewspaper")), indi));
+						manager.addAxiom(dmOnto, factory.getOWLClassAssertionAxiom(factory.getOWLClass(IRI.create(DialogueAction.READ_NEWSPAPER)), indi));
 					}
 				}else if(node.hasProperty(model.getProperty(onto+"responseType"),model.getResource(onto+"structured"))){
-					manager.addAxiom(dmOnto, factory.getOWLClassAssertionAxiom(factory.getOWLClass(IRI.create(dialogue+"Declare")), indi));
+					manager.addAxiom(dmOnto, factory.getOWLClassAssertionAxiom(factory.getOWLClass(IRI.create(DialogueAction.DECLARE)), indi));
 				}
 			}else if (node.hasProperty(RDF.type,model.getResource(onto+"WeatherResponse"))){
-				manager.addAxiom(dmOnto, factory.getOWLClassAssertionAxiom(factory.getOWLClass(IRI.create(dialogue+"ShowWeather")), indi));
+				manager.addAxiom(dmOnto, factory.getOWLClassAssertionAxiom(factory.getOWLClass(IRI.create(DialogueAction.SHOW_WEATHER)), indi));
 			}else if (node.hasProperty(RDF.type,model.getResource(onto+"AdditionalInformationRequest"))){
-				manager.addAxiom(dmOnto, factory.getOWLClassAssertionAxiom(factory.getOWLClass(IRI.create(dialogue+"AdditionalInformationRequest")), indi));
+				manager.addAxiom(dmOnto, factory.getOWLClassAssertionAxiom(factory.getOWLClass(IRI.create(DialogueAction.REQUEST_ADDITIONAL)), indi));
 			}else if (node.hasProperty(RDF.type,model.getResource(onto+"UnknownResponse"))){
-				manager.addAxiom(dmOnto, factory.getOWLClassAssertionAxiom(factory.getOWLClass(IRI.create(dialogue+"Unknown")), indi));
+				manager.addAxiom(dmOnto, factory.getOWLClassAssertionAxiom(factory.getOWLClass(IRI.create(DialogueAction.UNKNOWN)), indi));
 			}
 			
 			SemanticsOntology.add(node, model, user);

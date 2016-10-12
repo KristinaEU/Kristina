@@ -6,6 +6,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
 
+import org.apache.jena.datatypes.RDFDatatype;
 import org.apache.jena.rdf.model.InfModel;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.ModelFactory;
@@ -84,7 +85,11 @@ public class SemanticsOntology {
 		if (p == null) {
 			return "";
 		} else {
-			return p.getObject().toString();
+			if(p.getObject().isLiteral()){
+				return p.getObject().asLiteral().getValue().toString();
+			}else{
+				return p.getObject().toString();
+			}
 		}
 	}
 

@@ -41,16 +41,28 @@ public class KristinaServlet {
 
 		JsonReader jsonReader = Json.createReader(new StringReader(json));
 		JsonObject j = jsonReader.readObject();
-		
-		String valence = StringEscapeUtils.unescapeEcmaScript(j.getJsonObject("data").getJsonObject("fusion").getString("valence"));
-		String arousal = StringEscapeUtils.unescapeEcmaScript(j.getJsonObject("data").getJsonObject("fusion").getString("arousal"));
+		String valence = "0";
+		try{
+			valence = StringEscapeUtils.unescapeEcmaScript(j.getJsonObject("data").getJsonObject("fusion").getString("valence"));
+		}catch(ClassCastException e){
+			valence = StringEscapeUtils.unescapeEcmaScript(j.getJsonObject("data").getJsonObject("fusion").getJsonNumber("valence").toString());
+		}
+		String arousal = "0";
+		try{
+			arousal = StringEscapeUtils.unescapeEcmaScript(j.getJsonObject("data").getJsonObject("fusion").getString("arousal"));
+		}catch(ClassCastException e){
+			arousal = StringEscapeUtils.unescapeEcmaScript(j.getJsonObject("data").getJsonObject("fusion").getJsonNumber("arousal").toString());
+		}
 
 		String content = StringEscapeUtils.unescapeEcmaScript(j.getJsonObject("data").getString("language-analysis"));
 		
 		String user = StringEscapeUtils.unescapeEcmaScript(j.getJsonObject("meta").getString("user"));
 		String scenario = StringEscapeUtils.unescapeEcmaScript(j.getJsonObject("meta").getString("scenario"));
-		
+		/*try{
 		CerthClient.setPath(j.getString("path"));
+		}catch(Exception e){
+			
+		}*/
 		
 		
 		String result;

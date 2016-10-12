@@ -36,6 +36,7 @@ import owlSpeak.Move;
 public class KristinaMove extends Move {
 
 	private static final String textProperty = "text";
+	private static final String plausibilityProperty = "plausibility";
 
 	public KristinaMove(OWLIndividual indi, OWLOntology onto,
 			OWLDataFactory factory, OWLOntologyManager manager) {
@@ -52,6 +53,12 @@ public class KristinaMove extends Move {
 		String text = SemanticsOntology.getProperty(indi.asOWLNamedIndividual()
 				.getIRI(), textProperty);
 		return text == null ? "" : text;
+	}
+	
+	public float getPlausibility(){
+		 String text = SemanticsOntology.getProperty(indi.asOWLNamedIndividual()
+				.getIRI(), plausibilityProperty);
+		return text == null || text.isEmpty() ? 0 : Float.parseFloat(text);
 	}
 
 	public boolean hasTopic(String topic) {

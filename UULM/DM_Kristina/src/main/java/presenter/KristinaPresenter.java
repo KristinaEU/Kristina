@@ -400,7 +400,23 @@ public class KristinaPresenter {
 			List<Set<KristinaMove>> ws) {
 		LinkedList<KristinaMove> moves = new LinkedList<KristinaMove>();
 		boolean end = false;
+		
 		for (Set<KristinaMove> set : ws) {
+			float max = 0;
+			Set<KristinaMove> likelyResponses = new HashSet<KristinaMove>();
+			
+			for (KristinaMove move : set) {
+				float tmp = move != null ? move.getPlausibility():0;
+				if(tmp > max){
+					max = tmp;
+					likelyResponses.removeAll(likelyResponses);
+					likelyResponses.add(move);
+				}else if(tmp == max){
+					likelyResponses.add(move);
+				}
+			}
+			set = likelyResponses;
+			
 			int strategy = (int) (Math.random() * set.size());
 			for (KristinaMove move : set) {
 				
