@@ -320,17 +320,31 @@ public class KristinaModel {
 						systemMoves = askKI(userMove, valence, arousal, user,getScenarioString(scenario), dmOnto, manager, factory);
 					}
 					else if(userMove.hasTopic("Article")){
-						//TODO: BoooleanRequest?
-						systemMoves.add(createTypedKristinaMove("Accept", dmOnto, manager, factory));
-						workspace.add(systemMoves);
+						//TODO: BooleanRequest?
 						
-						systemMoves = new HashSet<KristinaMove>();
 						userMove.specify("RequestNewspaper");
 						systemMoves = askKI(userMove, valence, arousal, user, getScenarioString(scenario),dmOnto, manager, factory);
-						workspace.add(systemMoves);
 						
-						systemMoves = new HashSet<KristinaMove>();
-						systemMoves.add(createCannedTextMove("Did you like the article?", user, dmOnto, manager, factory));
+						boolean notFound = true;
+						for(KristinaMove m: systemMoves){
+							if(!m.getText().isEmpty()){
+								notFound = false;
+							}
+						}
+						if(notFound){
+							systemMoves = new HashSet<KristinaMove>();
+							systemMoves.add(createCannedTextMove("I can't find that article.", user, dmOnto, manager, factory));
+						}else{
+							HashSet<KristinaMove> tmpMoves = new HashSet<KristinaMove>();
+							tmpMoves.add(createTypedKristinaMove("Accept", dmOnto, manager, factory));
+							workspace.add(tmpMoves);
+							
+							workspace.add(systemMoves);
+							
+							systemMoves = new HashSet<KristinaMove>();
+							systemMoves.add(createCannedTextMove("Did you like the article?", user, dmOnto, manager, factory));
+						}
+						
 					}else if(userMove.hasTopic("Newspaper")){
 						//TODO: BoooleanRequest?
 						systemMoves.add(createTypedKristinaMove("Accept", dmOnto, manager, factory));
@@ -427,8 +441,8 @@ public class KristinaModel {
 		Model model = userMove.getModel();
 		List<Statement> stmts = model.listStatements(null, model.getProperty(OntologyPrefix.act+"textualContent"),(String) null).toList();
 		for(Statement s: stmts){
-			model.add(s.getSubject(), s.getPredicate(), URLEncoder.encode(s.getString(),"utf-8"));
 			model.remove(s);
+			model.add(s.getSubject(), s.getPredicate(), URLEncoder.encode(s.getString(),"utf-8"));
 		}
 		
 		userMove.getModel().write(input, "TURTLE");
