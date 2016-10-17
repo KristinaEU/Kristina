@@ -27,33 +27,183 @@
     
 
 
-    <!-- c:/OwlSpeak/empty.owl#History1660427533 -->
+    <!-- c:/OwlSpeak/empty.owl#ElisabethBeliefspace -->
 
-    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#History1660427533">
-        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#History"/>
-        <p1:addTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</p1:addTime>
-        <p1:agendaPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">150</p1:agendaPriority>
-        <p1:forAgenda rdf:resource="c:/OwlSpeak/empty.owl#agenda_Express_Joy"/>
-        <p1:inWorkspace rdf:resource="c:/OwlSpeak/empty.owl#userWorkspace"/>
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#ElisabethBeliefspace">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#BeliefSpace"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- c:/OwlSpeak/empty.owl#History2077559305 -->
+    <!-- c:/OwlSpeak/empty.owl#ElisabethWorkspace -->
 
-    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#History2077559305">
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#ElisabethWorkspace">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#WorkSpace"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_Calm_Down"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_Cheer_Up"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_Express_Commiseration"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_Express_Joy"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_Request_Repeat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#HansBeliefspace -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#HansBeliefspace">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#BeliefSpace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#HansWorkspace -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#HansWorkspace">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#WorkSpace"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_Calm_Down"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_Cheer_Up"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_Express_Commiseration"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_Express_Joy"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_Request_Repeat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#History-1316398836 -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#History-1316398836">
         <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#History"/>
         <p1:addTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</p1:addTime>
         <p1:agendaPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">80</p1:agendaPriority>
+        <p1:inWorkspace rdf:resource="c:/OwlSpeak/empty.owl#MariaWorkspace"/>
         <p1:forAgenda rdf:resource="c:/OwlSpeak/empty.owl#agenda_Calm_Down"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#History-1367243878 -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#History-1367243878">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#History"/>
+        <p1:addTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</p1:addTime>
+        <p1:agendaPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">150</p1:agendaPriority>
+        <p1:inWorkspace rdf:resource="c:/OwlSpeak/empty.owl#ElisabethWorkspace"/>
+        <p1:forAgenda rdf:resource="c:/OwlSpeak/empty.owl#agenda_Express_Joy"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#History-1434375391 -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#History-1434375391">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#History"/>
+        <p1:addTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</p1:addTime>
+        <p1:agendaPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">150</p1:agendaPriority>
+        <p1:inWorkspace rdf:resource="c:/OwlSpeak/empty.owl#MariaWorkspace"/>
+        <p1:forAgenda rdf:resource="c:/OwlSpeak/empty.owl#agenda_Express_Joy"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#History-1464937292 -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#History-1464937292">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#History"/>
+        <p1:addTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</p1:addTime>
+        <p1:agendaPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">200</p1:agendaPriority>
+        <p1:inWorkspace rdf:resource="c:/OwlSpeak/empty.owl#HansWorkspace"/>
+        <p1:forAgenda rdf:resource="c:/OwlSpeak/empty.owl#agenda_Cheer_Up"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#History-1547153205 -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#History-1547153205">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#History"/>
+        <p1:addTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</p1:addTime>
+        <p1:agendaPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">150</p1:agendaPriority>
+        <p1:inWorkspace rdf:resource="c:/OwlSpeak/empty.owl#MariaWorkspace"/>
+        <p1:forAgenda rdf:resource="c:/OwlSpeak/empty.owl#agenda_Express_Commiseration"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#History-1653909987 -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#History-1653909987">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#History"/>
+        <p1:addTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</p1:addTime>
+        <p1:agendaPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">200</p1:agendaPriority>
+        <p1:forAgenda rdf:resource="c:/OwlSpeak/empty.owl#agenda_Cheer_Up"/>
         <p1:inWorkspace rdf:resource="c:/OwlSpeak/empty.owl#userWorkspace"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- c:/OwlSpeak/empty.owl#History258716893 -->
+    <!-- c:/OwlSpeak/empty.owl#History-1805574010 -->
 
-    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#History258716893">
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#History-1805574010">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#History"/>
+        <p1:addTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</p1:addTime>
+        <p1:agendaPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">150</p1:agendaPriority>
+        <p1:inWorkspace rdf:resource="c:/OwlSpeak/empty.owl#IwonaWorkspace"/>
+        <p1:forAgenda rdf:resource="c:/OwlSpeak/empty.owl#agenda_Express_Commiseration"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#History-1975440829 -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#History-1975440829">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#History"/>
+        <p1:addTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</p1:addTime>
+        <p1:agendaPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">200</p1:agendaPriority>
+        <p1:inWorkspace rdf:resource="c:/OwlSpeak/empty.owl#MariaWorkspace"/>
+        <p1:forAgenda rdf:resource="c:/OwlSpeak/empty.owl#agenda_Request_Repeat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#History-1981308653 -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#History-1981308653">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#History"/>
+        <p1:addTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</p1:addTime>
+        <p1:agendaPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">150</p1:agendaPriority>
+        <p1:inWorkspace rdf:resource="c:/OwlSpeak/empty.owl#JuanWorkspace"/>
+        <p1:forAgenda rdf:resource="c:/OwlSpeak/empty.owl#agenda_Express_Commiseration"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#History-248441243 -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#History-248441243">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#History"/>
+        <p1:addTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</p1:addTime>
+        <p1:agendaPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">200</p1:agendaPriority>
+        <p1:inWorkspace rdf:resource="c:/OwlSpeak/empty.owl#IwonaWorkspace"/>
+        <p1:forAgenda rdf:resource="c:/OwlSpeak/empty.owl#agenda_Request_Repeat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#History-33337777 -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#History-33337777">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#History"/>
+        <p1:addTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</p1:addTime>
+        <p1:agendaPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">80</p1:agendaPriority>
+        <p1:inWorkspace rdf:resource="c:/OwlSpeak/empty.owl#ElisabethWorkspace"/>
+        <p1:forAgenda rdf:resource="c:/OwlSpeak/empty.owl#agenda_Calm_Down"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#History-625421973 -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#History-625421973">
         <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#History"/>
         <p1:addTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</p1:addTime>
         <p1:agendaPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">200</p1:agendaPriority>
@@ -63,9 +213,33 @@
     
 
 
-    <!-- c:/OwlSpeak/empty.owl#History455049349 -->
+    <!-- c:/OwlSpeak/empty.owl#History1182698379 -->
 
-    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#History455049349">
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#History1182698379">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#History"/>
+        <p1:addTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</p1:addTime>
+        <p1:agendaPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">80</p1:agendaPriority>
+        <p1:inWorkspace rdf:resource="c:/OwlSpeak/empty.owl#IwonaWorkspace"/>
+        <p1:forAgenda rdf:resource="c:/OwlSpeak/empty.owl#agenda_Calm_Down"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#History1246536088 -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#History1246536088">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#History"/>
+        <p1:addTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</p1:addTime>
+        <p1:agendaPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">200</p1:agendaPriority>
+        <p1:inWorkspace rdf:resource="c:/OwlSpeak/empty.owl#MariaWorkspace"/>
+        <p1:forAgenda rdf:resource="c:/OwlSpeak/empty.owl#agenda_Cheer_Up"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#History1291744092 -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#History1291744092">
         <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#History"/>
         <p1:addTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</p1:addTime>
         <p1:agendaPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">150</p1:agendaPriority>
@@ -75,14 +249,245 @@
     
 
 
-    <!-- c:/OwlSpeak/empty.owl#History872280410 -->
+    <!-- c:/OwlSpeak/empty.owl#History1575213531 -->
 
-    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#History872280410">
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#History1575213531">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#History"/>
+        <p1:addTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</p1:addTime>
+        <p1:agendaPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">150</p1:agendaPriority>
+        <p1:inWorkspace rdf:resource="c:/OwlSpeak/empty.owl#HansWorkspace"/>
+        <p1:forAgenda rdf:resource="c:/OwlSpeak/empty.owl#agenda_Express_Commiseration"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#History1740227342 -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#History1740227342">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#History"/>
+        <p1:addTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</p1:addTime>
+        <p1:agendaPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">80</p1:agendaPriority>
+        <p1:inWorkspace rdf:resource="c:/OwlSpeak/empty.owl#JuanWorkspace"/>
+        <p1:forAgenda rdf:resource="c:/OwlSpeak/empty.owl#agenda_Calm_Down"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#History187585963 -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#History187585963">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#History"/>
+        <p1:addTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</p1:addTime>
+        <p1:agendaPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">150</p1:agendaPriority>
+        <p1:inWorkspace rdf:resource="c:/OwlSpeak/empty.owl#ElisabethWorkspace"/>
+        <p1:forAgenda rdf:resource="c:/OwlSpeak/empty.owl#agenda_Express_Commiseration"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#History1893732450 -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#History1893732450">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#History"/>
+        <p1:addTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</p1:addTime>
+        <p1:agendaPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">150</p1:agendaPriority>
+        <p1:inWorkspace rdf:resource="c:/OwlSpeak/empty.owl#JuanWorkspace"/>
+        <p1:forAgenda rdf:resource="c:/OwlSpeak/empty.owl#agenda_Express_Joy"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#History1932373437 -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#History1932373437">
         <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#History"/>
         <p1:addTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</p1:addTime>
         <p1:agendaPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">200</p1:agendaPriority>
+        <p1:inWorkspace rdf:resource="c:/OwlSpeak/empty.owl#HansWorkspace"/>
+        <p1:forAgenda rdf:resource="c:/OwlSpeak/empty.owl#agenda_Request_Repeat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#History19712332 -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#History19712332">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#History"/>
+        <p1:addTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</p1:addTime>
+        <p1:agendaPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">200</p1:agendaPriority>
+        <p1:inWorkspace rdf:resource="c:/OwlSpeak/empty.owl#JuanWorkspace"/>
         <p1:forAgenda rdf:resource="c:/OwlSpeak/empty.owl#agenda_Cheer_Up"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#History2034402627 -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#History2034402627">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#History"/>
+        <p1:addTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</p1:addTime>
+        <p1:agendaPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">150</p1:agendaPriority>
+        <p1:inWorkspace rdf:resource="c:/OwlSpeak/empty.owl#HansWorkspace"/>
+        <p1:forAgenda rdf:resource="c:/OwlSpeak/empty.owl#agenda_Express_Joy"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#History2053219719 -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#History2053219719">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#History"/>
+        <p1:addTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</p1:addTime>
+        <p1:agendaPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">200</p1:agendaPriority>
+        <p1:inWorkspace rdf:resource="c:/OwlSpeak/empty.owl#ElisabethWorkspace"/>
+        <p1:forAgenda rdf:resource="c:/OwlSpeak/empty.owl#agenda_Cheer_Up"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#History2129226634 -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#History2129226634">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#History"/>
+        <p1:addTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</p1:addTime>
+        <p1:agendaPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">200</p1:agendaPriority>
+        <p1:inWorkspace rdf:resource="c:/OwlSpeak/empty.owl#ElisabethWorkspace"/>
+        <p1:forAgenda rdf:resource="c:/OwlSpeak/empty.owl#agenda_Request_Repeat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#History334530816 -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#History334530816">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#History"/>
+        <p1:addTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</p1:addTime>
+        <p1:agendaPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">80</p1:agendaPriority>
+        <p1:forAgenda rdf:resource="c:/OwlSpeak/empty.owl#agenda_Calm_Down"/>
         <p1:inWorkspace rdf:resource="c:/OwlSpeak/empty.owl#userWorkspace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#History345154046 -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#History345154046">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#History"/>
+        <p1:addTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</p1:addTime>
+        <p1:agendaPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">150</p1:agendaPriority>
+        <p1:inWorkspace rdf:resource="c:/OwlSpeak/empty.owl#IwonaWorkspace"/>
+        <p1:forAgenda rdf:resource="c:/OwlSpeak/empty.owl#agenda_Express_Joy"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#History420748357 -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#History420748357">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#History"/>
+        <p1:addTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</p1:addTime>
+        <p1:agendaPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">80</p1:agendaPriority>
+        <p1:inWorkspace rdf:resource="c:/OwlSpeak/empty.owl#HansWorkspace"/>
+        <p1:forAgenda rdf:resource="c:/OwlSpeak/empty.owl#agenda_Calm_Down"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#History56001778 -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#History56001778">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#History"/>
+        <p1:addTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</p1:addTime>
+        <p1:agendaPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">200</p1:agendaPriority>
+        <p1:inWorkspace rdf:resource="c:/OwlSpeak/empty.owl#IwonaWorkspace"/>
+        <p1:forAgenda rdf:resource="c:/OwlSpeak/empty.owl#agenda_Cheer_Up"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#History751013545 -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#History751013545">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#History"/>
+        <p1:addTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</p1:addTime>
+        <p1:agendaPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">200</p1:agendaPriority>
+        <p1:inWorkspace rdf:resource="c:/OwlSpeak/empty.owl#JuanWorkspace"/>
+        <p1:forAgenda rdf:resource="c:/OwlSpeak/empty.owl#agenda_Request_Repeat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#History798237271 -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#History798237271">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#History"/>
+        <p1:addTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</p1:addTime>
+        <p1:agendaPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">150</p1:agendaPriority>
+        <p1:forAgenda rdf:resource="c:/OwlSpeak/empty.owl#agenda_Express_Joy"/>
+        <p1:inWorkspace rdf:resource="c:/OwlSpeak/empty.owl#userWorkspace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#IwonaBeliefspace -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#IwonaBeliefspace">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#BeliefSpace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#IwonaWorkspace -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#IwonaWorkspace">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#WorkSpace"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_Calm_Down"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_Cheer_Up"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_Express_Commiseration"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_Express_Joy"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_Request_Repeat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#JuanBeliefspace -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#JuanBeliefspace">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#BeliefSpace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#JuanWorkspace -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#JuanWorkspace">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#WorkSpace"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_Calm_Down"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_Cheer_Up"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_Express_Commiseration"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_Express_Joy"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_Request_Repeat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#MariaBeliefspace -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#MariaBeliefspace">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#BeliefSpace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#MariaWorkspace -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#MariaWorkspace">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#WorkSpace"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_Calm_Down"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_Cheer_Up"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_Express_Commiseration"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_Express_Joy"/>
+        <p1:next rdf:resource="c:/OwlSpeak/empty.owl#agenda_Request_Repeat"/>
     </owl:NamedIndividual>
     
 
