@@ -27,7 +27,7 @@
       <Feature key="restful.resource.3.prod" value="application/json"/>
       <Feature key="restful.resource.4.host" value="UULM-OWL"/>
       <Feature key="restful.resource.4.name" value="Dialog-Management"/>
-      <Feature key="restful.resource.4.path" value="http://52.29.254.9:11150"/>
+      <Feature key="restful.resource.4.path" value="http://172.31.26.245:11150"/>
       <Feature key="restful.resource.4.cons" value="application/json"/>
       <Feature key="restful.resource.4.prod" value="application/rdf+xml"/>
       <Feature key="restful.resource.5.host" value="UPF-TALN"/>

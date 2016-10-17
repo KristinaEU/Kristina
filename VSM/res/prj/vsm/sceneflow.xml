@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<SceneFlow id="KRISTINA" name="KRISTINA" comment="KRISTINA" hideLocalVar="false" hideGlobalVar="false" exhaustive="false" preserving="false" modifDate="Mo, 10 Okt 2016 17:17:51" start="S17;" context="" package="" xmlns="xml.sceneflow.dfki.de" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="xml.sceneflow.dfki.de res/xsd/sceneflow.xsd">
+<SceneFlow id="KRISTINA" name="KRISTINA" comment="KRISTINA" hideLocalVar="false" hideGlobalVar="false" exhaustive="false" preserving="false" modifDate="Fri, 14 Oct 2016 08:45:11" start="S17;" context="" package="" xmlns="xml.sceneflow.dfki.de" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="xml.sceneflow.dfki.de res/xsd/sceneflow.xsd">
   <Define>
   </Define>
   <Declare>
@@ -28,7 +28,7 @@
   <Commands>
   </Commands>
   <LocalVariableBadge>
-    <Position x-pos="28" y-pos="209"/>
+    <Position x-pos="15" y-pos="64"/>
   </LocalVariableBadge>
   <GlobalVariableBadge>
     <Position x-pos="469" y-pos="176"/>
@@ -1064,7 +1064,7 @@
       </GlobalVariableBadge>
       <Comment>
         <Graphics>
-          <Rect x-pos="197" y-pos="236" width="148" height="50"/>
+          <Rect x-pos="197" y-pos="236" width="140" height="50"/>
         </Graphics>
         <Text style="color:blue">
           <html>
@@ -1084,7 +1084,7 @@
       </Comment>
       <Comment>
         <Graphics>
-          <Rect x-pos="406" y-pos="236" width="157" height="52"/>
+          <Rect x-pos="406" y-pos="236" width="150" height="50"/>
         </Graphics>
         <Text style="color:blue">
           <html>
@@ -1354,7 +1354,7 @@
           </SuperNode>
         </SuperNode>
       </SuperNode>
-      <SuperNode id="S31" name="Speaker" comment="" exhaustive="false" preserving="false" hideLocalVar="false" hideGlobalVar="false" start="S35;">
+      <SuperNode id="S31" name="Speaker" comment="" exhaustive="false" preserving="false" hideLocalVar="false" hideGlobalVar="false" start="S35;S37;">
         <Define>
         </Define>
         <Declare>
@@ -1567,6 +1567,189 @@
             </Graphics>
           </Node>
         </SuperNode>
+        <SuperNode id="S37" name="Blink" comment="" exhaustive="false" preserving="false" hideLocalVar="false" hideGlobalVar="false" start="N79;">
+          <Define>
+          </Define>
+          <Declare>
+            <Variable type="Int" name ="Interval">
+              <Int value="1000"/>
+            </Variable>
+            <Variable type="Float" name ="Duration">
+              <Float value="0.0"/>
+            </Variable>
+          </Declare>
+          <Commands>
+          </Commands>
+          <Graphics>
+            <Position x-pos="373" y-pos="93"/>
+          </Graphics>
+          <LocalVariableBadge>
+            <Position x-pos="411" y-pos="270"/>
+          </LocalVariableBadge>
+          <GlobalVariableBadge>
+            <Position x-pos="10" y-pos="10"/>
+          </GlobalVariableBadge>
+          <Node id="N74" name="History" exhaustive="false" preserving="false" history="true">
+            <Define>
+            </Define>
+            <Declare>
+            </Declare>
+            <Commands>
+            </Commands>
+            <Graphics>
+              <Position x-pos="233" y-pos="93"/>
+            </Graphics>
+          </Node>
+          <Node id="N76" name="Blink" exhaustive="false" preserving="false" history="false">
+            <Define>
+            </Define>
+            <Declare>
+              <Variable type="String" name ="Response">
+                <String></String>
+              </Variable>
+            </Declare>
+            <Commands>
+              <Assign>
+                <Variable name="Response"/>
+                <Expression>
+                  <UserCommand name="blink">
+                    <Variable name="Duration"/>
+                  </UserCommand>
+                </Expression>
+              </Assign>
+            </Commands>
+            <EEdge target="N79" start ="">
+            <Graphics>
+              <Arrow>
+                <Point x-pos="443" y-pos="338" control-x-pos="390" control-y-pos="338"/>
+                <Point x-pos="303" y-pos="338" control-x-pos="355" control-y-pos="338"/>
+              </Arrow>
+            </Graphics>
+            </EEdge>
+            <Graphics>
+              <Position x-pos="443" y-pos="303"/>
+            </Graphics>
+          </Node>
+          <Node id="N77" name="N41" exhaustive="false" preserving="false" history="false">
+            <Define>
+            </Define>
+            <Declare>
+            </Declare>
+            <Commands>
+              <Assign>
+                <Variable name="Duration"/>
+                <Expression>
+                  <Add>
+                    <Float value="0.025"/>
+                    <UserCommand name="randFloat">
+                      <Float value="0.1"/>
+                      <Float value="0.0"/>
+                    </UserCommand>
+                  </Add>
+                </Expression>
+              </Assign>
+            </Commands>
+            <EEdge target="N76" start ="">
+            <Graphics>
+              <Arrow>
+                <Point x-pos="478" y-pos="233" control-x-pos="478" control-y-pos="250"/>
+                <Point x-pos="478" y-pos="303" control-x-pos="478" control-y-pos="285"/>
+              </Arrow>
+            </Graphics>
+            </EEdge>
+            <Graphics>
+              <Position x-pos="443" y-pos="163"/>
+            </Graphics>
+          </Node>
+          <Node id="N79" name="Reset" exhaustive="false" preserving="false" history="false">
+            <Define>
+            </Define>
+            <Declare>
+            </Declare>
+            <Commands>
+              <Assign>
+                <Variable name="Interval"/>
+                <Expression>
+                  <Add>
+                    <Int value="1000"/>
+                    <UserCommand name="randInt">
+                      <Int value="5000"/>
+                    </UserCommand>
+                  </Add>
+                </Expression>
+              </Assign>
+            </Commands>
+            <EEdge target="S38" start ="">
+            <Graphics>
+              <Arrow>
+                <Point x-pos="268" y-pos="303" control-x-pos="268" control-y-pos="285"/>
+                <Point x-pos="268" y-pos="233" control-x-pos="268" control-y-pos="250"/>
+              </Arrow>
+            </Graphics>
+            </EEdge>
+            <Graphics>
+              <Position x-pos="233" y-pos="303"/>
+            </Graphics>
+          </Node>
+          <SuperNode id="S38" name="Wait" comment="" exhaustive="false" preserving="false" hideLocalVar="false" hideGlobalVar="false" start="N83;">
+            <Define>
+            </Define>
+            <Declare>
+            </Declare>
+            <Commands>
+            </Commands>
+            <IEdge target="N77" start="">
+              <Graphics>
+                <Arrow>
+                  <Point x-pos="303" y-pos="198" control-x-pos="355" control-y-pos="198"/>
+                  <Point x-pos="443" y-pos="198" control-x-pos="390" control-y-pos="198"/>
+                </Arrow>
+              </Graphics>
+              <TimeoutCondition>
+              <Variable name="Interval"/>
+              </TimeoutCondition>
+            </IEdge>
+            <Graphics>
+              <Position x-pos="233" y-pos="163"/>
+            </Graphics>
+            <LocalVariableBadge>
+              <Position x-pos="337" y-pos="340"/>
+            </LocalVariableBadge>
+            <GlobalVariableBadge>
+              <Position x-pos="10" y-pos="10"/>
+            </GlobalVariableBadge>
+            <Node id="N80" name="History" exhaustive="false" preserving="false" history="true">
+              <Define>
+              </Define>
+              <Declare>
+              </Declare>
+              <Commands>
+              </Commands>
+              <Graphics>
+                <Position x-pos="93" y-pos="233"/>
+              </Graphics>
+            </Node>
+            <Node id="N83" name="Wait" exhaustive="false" preserving="false" history="false">
+              <Define>
+              </Define>
+              <Declare>
+              </Declare>
+              <Commands>
+              </Commands>
+              <TEdge target="N83" start="" timeout="60000">
+              <Graphics>
+                <Arrow>
+                  <Point x-pos="277" y-pos="234" control-x-pos="295" control-y-pos="166"/>
+                  <Point x-pos="298" y-pos="250" control-x-pos="358" control-y-pos="214"/>
+                </Arrow>
+              </Graphics>
+              </TEdge>
+              <Graphics>
+                <Position x-pos="233" y-pos="233"/>
+              </Graphics>
+            </Node>
+          </SuperNode>
+        </SuperNode>
       </SuperNode>
     </SuperNode>
   </SuperNode>
@@ -1594,7 +1777,7 @@
       <Commands>
       </Commands>
       <Graphics>
-        <Position x-pos="163" y-pos="93"/>
+        <Position x-pos="233" y-pos="93"/>
       </Graphics>
     </Node>
     <SuperNode id="S1" name="Idle" comment="" exhaustive="false" preserving="false" hideLocalVar="false" hideGlobalVar="false" start="S5;">
@@ -1605,7 +1788,7 @@
       <Commands>
       </Commands>
       <Graphics>
-        <Position x-pos="303" y-pos="93"/>
+        <Position x-pos="233" y-pos="163"/>
       </Graphics>
       <LocalVariableBadge>
         <Position x-pos="386" y-pos="66"/>
