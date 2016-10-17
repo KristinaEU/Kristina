@@ -4,6 +4,12 @@ IP: 52.29.254.9
 Username: Administrator
 Password:  C?Xu.@a2$uj
 
+Ip Amazon Server:
+52.29.254.9
+
+Google Drive Test Cases:
+https://drive.google.com/drive/folders/0B1ye-HPWcepgQVVoVUxxb0tMN0U?usp=sharing
+
 BML Wiki:
 http://www.mindmakers.org/projects/bml-1-0/wiki/
 
@@ -16,7 +22,7 @@ https://webglstudio.org/latest/player.html?url=fileserver/files/gerard/scenes/om
 
 
 Meta-Data:
-"{ \"avatar\": \"KRISTINA\", \"scenario\": \"sleep\", \"language\": \"pl\" }"
+"{ \"user\": \"Iwona\", \"avatar\": \"KRISTINA\", \"scenario\": \"sleep\", \"language\": \"pl\" }"
 User-Speech:
 "{ \"text\": \"Kiedy Pan Eugeniusz zazwyczaj chodzi spać?\", \"confidence\": 0.9 }"
 LA-Data

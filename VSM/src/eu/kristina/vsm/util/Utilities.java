@@ -80,7 +80,7 @@ public final class Utilities {
             final String obj,
             final String key,
             final String val,
-            final boolean json) {
+            final String typ) {
         // Create the final object
         final JSONObject object = new JSONObject(obj);
         // Initialize temporaries
@@ -100,10 +100,15 @@ public final class Utilities {
 
         }
         // Insert key value pair
-        if (json) {
+        if (typ.equals("OBJECT")) {
             member.put(path, new JSONObject(val));
-        } else {
+        } else if(typ.equals("DOUBLE")) {
+            final Double value = Double.parseDouble(val);
+            member.put(path,  value);
+        }else if (typ.equals("STRING")){
             member.put(path, val);
+        } else {
+        
         }
         // Return the final object        
         return object.toString();
