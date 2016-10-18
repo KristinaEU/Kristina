@@ -1,9 +1,15 @@
 package owlSpeak.servlet;
 
+import java.io.IOException;
 import java.io.StringReader;
 import java.net.URLDecoder;
 import java.net.URLEncoder;
+import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.ListIterator;
+import java.util.logging.FileHandler;
+import java.util.logging.Handler;
+import java.util.logging.Logger;
 
 import javax.json.Json;
 import javax.json.JsonArray;
@@ -35,10 +41,34 @@ public class KristinaServlet {
 	@Produces(MediaType.TEXT_PLAIN)
 	@Consumes(MediaType.APPLICATION_JSON)
 	public synchronized String post(final String json) {
-		try{
 
 		System.out.println("received POST");
+		try{
+			
+		long start = System.currentTimeMillis();
+		
+		//set up logger for evaluation and debugging
+		Handler handler = null;
+		try {
+			LocalTime t = LocalTime.now();
+			handler = new FileHandler("log/" + LocalDate.now()
+					+ "_"+t.getHour()+"_"+t.getMinute()+"_"+t.getSecond()+"_"+t.getNano()+".log");
+			handler.setEncoding("utf-8");
 
+		} catch (SecurityException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		//read json input
+		Logger log1 = Logger.getLogger("VSM2DM");
+
+		log1.setUseParentHandlers(false);
+		log1.addHandler(handler);
+		log1.info(json);
 		JsonReader jsonReader = Json.createReader(new StringReader(json));
 		JsonObject j = jsonReader.readObject();
 		String valence = "0";
@@ -65,22 +95,26 @@ public class KristinaServlet {
 		}*/
 		
 		
-		String result;
-		try {
-			result = KristinaPresenter.performDM(Float.parseFloat(valence), Float.parseFloat(arousal), content, user, scenario);
+		String result = KristinaPresenter.performDM(Float.parseFloat(valence), Float.parseFloat(arousal), content, user, scenario, handler);
 			
-		} catch (OWLOntologyCreationException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-			throw new WebApplicationException();
-		} catch (OWLOntologyStorageException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-			throw new WebApplicationException();
-		}
 
 		System.out.println("DM done");
+		long end = System.currentTimeMillis();
+		
+		Logger log2 = Logger.getLogger("DM2VSM");
+		log2.setUseParentHandlers(false);
+		log2.addHandler(handler);
 
+		Logger log3 = Logger.getLogger("runtime");
+		log3.setUseParentHandlers(false);
+		log3.addHandler(handler);
+		
+		log2.info(StringEscapeUtils.escapeEcmaScript(result));
+		log3.info(Long.toString(end-start));
+		Handler[] arr = log3.getHandlers();
+		for(int i = 0; i < arr.length; i++){
+			arr[i].close();
+		}
 		return StringEscapeUtils.escapeEcmaScript(result);
 		}catch(Exception e){
 			e.printStackTrace();

@@ -48,9 +48,6 @@ import owlSpeak.servlet.OwlSpeakServlet;
 
 public class KristinaPresenter {
 
-	private final static Logger logger = Logger.getLogger("LoggerDM");
-	private static Handler handler;
-
 	private static ServletEngine owlEngine;
 
 	private static String user = "user";
@@ -70,33 +67,19 @@ public class KristinaPresenter {
 
 		KristinaModel.init();
 
-		try {
-			handler = new FileHandler("log/user_" + LocalDate.now()
-					+ "_"+LocalTime.now().toString().replace(':', '-')+".log");
-		} catch (SecurityException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		logger.setUseParentHandlers(false);
-		logger.addHandler(handler);
-
 	}
 
 	public static String performDM(float valence, float arousal,
-			String content, String user, String scenario) throws OWLOntologyCreationException,
+			String content, String user, String scenario, Handler handler) throws OWLOntologyCreationException,
 			OWLOntologyStorageException {
+
 		try{
+
+			
 		if(!KristinaPresenter.user.equals(user) || !KristinaPresenter.currentScenario.equals(KristinaModel.getScenario(scenario))){
 			
 			restart(user, scenario);
 		}
-		
-
-		logger.info("\n----------------------------\nInput LA\n----------------------------\n"
-				+ content);
 		
 
 		KristinaModel.setUserEmotion(new KristinaEmotion(valence, arousal));
@@ -122,11 +105,17 @@ public class KristinaPresenter {
 
 					ws = KristinaModel.performUpdate(
 							userMove, user, currentScenario, valence,
-							arousal, owlEngine);
+							arousal, owlEngine, handler);
 
 					systemMove = selectSystemMove(ws);
 					updateSystemEmotion(systemMove);
 					systemMove = realiseCommunicationStyle(systemMove, user);
+					
+
+					Logger log = Logger.getLogger("sysmv");
+					log.setUseParentHandlers(false);
+					log.addHandler(handler);
+					log.info("System: "+systemMove.toString());
 
 					KristinaEmotion emo = KristinaModel.getCurrentEmotion();
 					output = LAConverter.convertFromMove(systemMove,
@@ -145,7 +134,10 @@ public class KristinaPresenter {
 			return output;
 		}
 		}catch(Exception e){
-			e.printStackTrace();
+			Logger log1 = Logger.getLogger("exception");
+			log1.setUseParentHandlers(false);
+			log1.addHandler(handler);
+			log1.severe(e.toString()+"\n"+e.fillInStackTrace());
 			
 			KristinaModel.setSystemEmotion(new KristinaEmotion(valence,0.25));
 			LinkedList<KristinaMove> list = new LinkedList<KristinaMove>();
@@ -164,7 +156,7 @@ public class KristinaPresenter {
 						OntologyPrefix.dialogue);
 			} catch (Exception e1) {
 				e1.printStackTrace();
-
+				
 				return LAConverter.convertFromMove(list, 0, 0,
 						OntologyPrefix.dialogue);
 			}
@@ -175,20 +167,6 @@ public class KristinaPresenter {
 		try{
 		user = u;
 		currentScenario = KristinaModel.getScenario(scenario);
-
-		handler.close();
-		logger.removeHandler(handler);
-		try {
-			handler = new FileHandler("log/" + user + "_"+currentScenario+"_"+LocalDate.now()
-					+ "_"+LocalTime.now().toString().replace(':', '-')+".log");
-			logger.addHandler(handler);
-		} catch (SecurityException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 
 		OwlSpeakServlet.reset(owlEngine, "", user);
 		KristinaModel.restart(user);
@@ -337,7 +315,6 @@ public class KristinaPresenter {
 	}
 	
 	public static void close(){
-		handler.close();
 		KristinaModel.stop();
 	}
 

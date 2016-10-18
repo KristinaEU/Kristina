@@ -14,6 +14,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
 import java.util.UUID;
+import java.util.logging.Handler;
 import java.util.logging.Logger;
 
 import model.DialogueHistory.Participant;
@@ -49,8 +50,6 @@ import uk.ac.manchester.cs.owl.owlapi.OWLNamedIndividualImpl;
 
 public class KristinaModel {
 
-	private static Logger logger = Logger.getLogger("LoggerDM");
-
 	private static EmotionGenerator emotionGenerator;
 	// ALMA configuration files
 	private final static String sALMACOMP = "/EmotionGeneration/AffectComputation.aml";
@@ -72,9 +71,10 @@ public class KristinaModel {
 	// implementation for the first prototype ____________________________
 	public static List<Set<KristinaMove>> performUpdate(
 			List<Resource> userMoves, String user, Scenario scenario, double valence,
-			double arousal, ServletEngine owlEngine)
+			double arousal, ServletEngine owlEngine, Handler handler)
 			throws Exception {
-
+		
+		
 		OwlSpeakOntology ontoOfLastAgenda = owlEngine.systemCore.ontologies
 				.get(0);
 		OWLOntology dmOnto = ontoOfLastAgenda.factory.onto;
@@ -147,7 +147,13 @@ public class KristinaModel {
 				workspace.add(systemMoves);
 			}
 
+			Logger log = Logger.getLogger("usrmv");
+			log.setUseParentHandlers(false);
+			log.addHandler(handler);
+			
 			for (KristinaMove userMove : usrmv) {
+				log.info(user+": "+userMove.toString());
+				
 				Set<KristinaMove> systemMoves = new HashSet<KristinaMove>();
 				System.out.println("UserMove : "+userMove);
 				switch (userMove.getDialogueAction()) {
@@ -210,7 +216,7 @@ public class KristinaModel {
 					KristinaMove lastMove = (KristinaMove) DialogueHistory.getLastSystemMove();
 					if(lastMove!= null&&lastMove.getText().contains("weather")){
 						userMove.specify("RequestWeather");
-						systemMoves = askKI(userMove, valence, arousal, user,getScenarioString(scenario), dmOnto, manager, factory);
+						systemMoves = askKI(userMove, valence, arousal, user,getScenarioString(scenario), dmOnto, manager, factory, handler);
 					}
 					else if(lastMove!= null&&lastMove.getText().contains("newspaper")){
 						systemMoves.add(createCannedTextMove("Tell me the headline of the article.", user, dmOnto, manager, factory));
@@ -231,7 +237,7 @@ public class KristinaModel {
 					}
 					break;
 				case DialogueAction.FURTHER_INFORMATION:
-						Set<KristinaMove> lastWS = askKI(DialogueHistory.getPreviousUserMove(), valence, arousal, user, getScenarioString(scenario),dmOnto, manager, factory);
+						Set<KristinaMove> lastWS = askKI(DialogueHistory.getPreviousUserMove(), valence, arousal, user, getScenarioString(scenario),dmOnto, manager, factory, handler);
 						
 						List<KristinaMove> lastMoves = DialogueHistory.getLastSystemMoves();
 						
@@ -297,7 +303,7 @@ public class KristinaModel {
 					}else if(userMove.hasTopic("Take")&&userMove.getTopics().size() <= 2){
 						//This is part of an acknowledgement, nothing needs to be done.
 					}else{
-						systemMoves = askKI(userMove, valence, arousal, user, getScenarioString(scenario), dmOnto, manager, factory);
+						systemMoves = askKI(userMove, valence, arousal, user, getScenarioString(scenario), dmOnto, manager, factory, handler);
 						for(KristinaMove m: systemMoves){
 							if(m.isDialogueAction(DialogueAction.UNKNOWN)){
 
@@ -317,13 +323,13 @@ public class KristinaModel {
 				case DialogueAction.BOOL_REQUEST:
 					if(userMove.hasTopic("Weather")){
 						userMove.specify("RequestWeather");
-						systemMoves = askKI(userMove, valence, arousal, user,getScenarioString(scenario), dmOnto, manager, factory);
+						systemMoves = askKI(userMove, valence, arousal, user,getScenarioString(scenario), dmOnto, manager, factory, handler);
 					}
 					else if(userMove.hasTopic("Article")){
 						//TODO: BooleanRequest?
 						
 						userMove.specify("RequestNewspaper");
-						systemMoves = askKI(userMove, valence, arousal, user, getScenarioString(scenario),dmOnto, manager, factory);
+						systemMoves = askKI(userMove, valence, arousal, user, getScenarioString(scenario),dmOnto, manager, factory, handler);
 						
 						boolean notFound = true;
 						for(KristinaMove m: systemMoves){
@@ -353,7 +359,7 @@ public class KristinaModel {
 						systemMoves = new HashSet<KristinaMove>();
 						systemMoves.add(createCannedTextMove("Tell me the headline of the article.", user, dmOnto, manager, factory));
 					}else{
-						systemMoves = askKI(userMove, valence, arousal, user, getScenarioString(scenario),dmOnto, manager, factory);
+						systemMoves = askKI(userMove, valence, arousal, user, getScenarioString(scenario),dmOnto, manager, factory, handler);
 						for(KristinaMove m: systemMoves){
 							if(m.isDialogueAction(DialogueAction.UNKNOWN)){
 								systemMoves = new HashSet<KristinaMove>();
@@ -419,22 +425,30 @@ public class KristinaModel {
 
 			workspace.add(systemMoves);
 		}
-		System.out.println("{");
+		String ws = "{\n";
 		for(Set<KristinaMove> l: workspace){
-			System.out.println("[");
+			ws = ws+"[\n";
 			for(KristinaMove m: l){
 				if(m != null)
-				System.out.println(m);
+				ws = ws+m+"\n";
 			}
-			System.out.println("]");
+			ws = "]\n";
 		}
-		System.out.println("}");
+		ws  ="}\n";
+		System.out.println(ws);
+		
+
+		Logger log = Logger.getLogger("workspace");
+		log.setUseParentHandlers(false);
+		log.addHandler(handler);
+		log.info(ws);
 		
 		return workspace;
 	}
 	
-	private static Set<KristinaMove> askKI(KristinaMove userMove, double valence, double arousal,String user,String scenario, OWLOntology dmOnto, OWLOntologyManager manager, OWLDataFactory factory)throws Exception{
+	private static Set<KristinaMove> askKI(KristinaMove userMove, double valence, double arousal,String user,String scenario, OWLOntology dmOnto, OWLOntologyManager manager, OWLDataFactory factory, Handler handler)throws Exception{
 		if(!sent){
+			
 			sent = true;
 		ByteArrayOutputStream input = new ByteArrayOutputStream();
 		
@@ -445,13 +459,19 @@ public class KristinaModel {
 			model.add(s.getSubject(), s.getPredicate(), URLEncoder.encode(s.getString(),"utf-8"));
 		}
 		
+		Logger log1 = Logger.getLogger("DM2KI");
+		log1.setUseParentHandlers(false);
+		log1.addHandler(handler);
+		
 		userMove.getModel().write(input, "TURTLE");
+		log1.info(input.toString("UTF-8"));
 		String rdfMoves = CerthClient.post(input.toString("UTF-8"),
 				valence, arousal, user, scenario);
 		// String rdfMoves = askDemoKI(null);
-
-		logger.info("\n----------------------------\nInput KI\n----------------------------\n"
-				+ rdfMoves);
+		Logger log2 = Logger.getLogger("KI2DM");
+		log2.setUseParentHandlers(false);
+		log2.addHandler(handler);
+		log2.info(rdfMoves);
 
 		return KIConverter.convertToMove(rdfMoves, user,
 				dmOnto, factory, manager, OntologyPrefix.onto, OntologyPrefix.dialogue);
