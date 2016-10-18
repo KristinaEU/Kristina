@@ -174,7 +174,7 @@ public class KristinaModel {
 				case DialogueAction.GREETING:
 					setUserAction("Greet");
 
-					//TODO ergänzen
+					//TODO complete
 					systemMoves.add(createTypedKristinaMove("SimpleGreet", dmOnto, manager, factory));
 					systemMoves.add(createTypedKristinaMove("PersonalGreet", dmOnto, manager, factory));
 					
@@ -198,7 +198,7 @@ public class KristinaModel {
 					break;
 				case DialogueAction.SAY_GOODBYE:
 					setUserAction("Goodbye");
-					//TODO ergänzen
+					//TODO complete
 					systemMoves.add(createTypedKristinaMove("MeetAgainSayGoodbye", dmOnto, manager, factory));
 					systemMoves.add(createTypedKristinaMove("PersonalSayGoodbye", dmOnto, manager, factory));
 					systemMoves.add(createTypedKristinaMove("SimpleSayGoodbye", dmOnto, manager, factory));
@@ -207,7 +207,7 @@ public class KristinaModel {
 				case DialogueAction.THANK:
 
 					setUserAction("Thank");
-					//TODO ergänzen
+					//TODO complete
 					systemMoves.add(createTypedKristinaMove("AnswerThank", dmOnto, manager, factory));
 					//systemMoves.add(createTypedKristinaMove("Empty", dmOnto, manager, factory));
 					
@@ -432,9 +432,9 @@ public class KristinaModel {
 				if(m != null)
 				ws = ws+m+"\n";
 			}
-			ws = "]\n";
+			ws = ws+"]\n";
 		}
-		ws  ="}\n";
+		ws  =ws+"}\n";
 		System.out.println(ws);
 		
 

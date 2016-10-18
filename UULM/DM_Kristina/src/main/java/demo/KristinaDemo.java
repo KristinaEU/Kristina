@@ -8,7 +8,11 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.net.URISyntaxException;
+import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.List;
+import java.util.logging.FileHandler;
+import java.util.logging.Handler;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
@@ -17,6 +21,7 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 import javax.ws.rs.WebApplicationException;
+
 
 
 
@@ -100,7 +105,7 @@ public class KristinaDemo {
 		
 		try {
 			r = new BufferedReader(new InputStreamReader(
-					getClass().getResourceAsStream("/Example_Input_Output/inform.ttl")));
+					getClass().getResourceAsStream("/ExampleData_LA/articles/la-article_1.owl")));
 			String data = "";
 			String tmp = r.readLine();
 			while(tmp != null){
@@ -108,8 +113,23 @@ public class KristinaDemo {
 				tmp = r.readLine();
 			}
 			r.close();
+			
+			Handler handler = null;
+			try {
+				LocalTime t = LocalTime.now();
+				handler = new FileHandler("log/" + LocalDate.now()
+						+ "_"+t.getHour()+"_"+t.getMinute()+"_"+t.getSecond()+"_"+t.getNano()+".log");
+				handler.setEncoding("utf-8");
 
-			KristinaPresenter.performDM(0f,0f,data);
+			} catch (SecurityException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+
+			KristinaPresenter.performDM(0f,0f,data, "Iwona", "newspaper", handler);
 
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
