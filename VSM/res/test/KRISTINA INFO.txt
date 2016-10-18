@@ -22,6 +22,7 @@ https://webglstudio.org/latest/player.html?url=fileserver/files/gerard/scenes/om
 
 https://ec2-52-29-254-9.eu-central-1.compute.amazonaws.com/web-gui/
 
+http://172.31.26.245:11220
 
 Meta-Data:
 "{ \"user\": \"Iwona\", \"avatar\": \"KRISTINA\", \"scenario\": \"sleep\", \"language\": \"pl\" }"

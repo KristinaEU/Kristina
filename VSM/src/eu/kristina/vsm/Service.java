@@ -60,7 +60,7 @@ public final class Service {
                 response.put("message", "Started project");
             } else {
                 response.put("status", "failure");
-                response.put("message", "Cannot not start project");
+                response.put("message", "Cannot start project");
             }
         } else if (cmd.equalsIgnoreCase("stop")) {
             if (mServer.stop()) {
@@ -68,7 +68,7 @@ public final class Service {
                 response.put("message", "Stopped project");
             } else {
                 response.put("status", "failure");
-                response.put("message", "Cannot not stop project");
+                response.put("message", "Cannot stop project");
             }
         } else if (cmd.equalsIgnoreCase("unload")) {
             if (mServer.unload()) {
@@ -76,7 +76,31 @@ public final class Service {
                 response.put("message", "Unloaded project");
             } else {
                 response.put("status", "failure");
-                response.put("message", "Cannot not unload project");
+                response.put("message", "Cannot unload project");
+            }
+        } else if (cmd.equalsIgnoreCase("reset")) {
+            if (mServer.reset()) {
+                response.put("status", "success");
+                response.put("message", "Reloading project");
+            } else {
+                response.put("status", "failure");
+                response.put("message", "Cannot reset project");
+            }
+        } else if (cmd.equalsIgnoreCase("reset")) {
+            if (mServer.reset()) {
+                response.put("status", "success");
+                response.put("message", "Reloading project");
+            } else {
+                response.put("status", "failure");
+                response.put("message", "Cannot reset project");
+            }
+        }  else if (cmd.equalsIgnoreCase("hide")) {
+            if (mServer.hide()) {
+                response.put("status", "success");
+                response.put("message", "Hiding project");
+            } else {
+                response.put("status", "failure");
+                response.put("message", "Cannot hide project");
             }
         } else if (cmd.equalsIgnoreCase("show")) {
             if (mServer.show()) {
@@ -84,15 +108,7 @@ public final class Service {
                 response.put("message", "Showing project");
             } else {
                 response.put("status", "failure");
-                response.put("message", "Cannot not show project");
-            }
-        } else if (cmd.equalsIgnoreCase("hide")) {
-            if (mServer.hide()) {
-                response.put("status", "success");
-                response.put("message", "Hiding project");
-            } else {
-                response.put("status", "failure");
-                response.put("message", "Cannot not hide project");
+                response.put("message", "Cannot show project");
             }
         } else if (cmd.equalsIgnoreCase("status")) {
             response.put("status", mServer.status());

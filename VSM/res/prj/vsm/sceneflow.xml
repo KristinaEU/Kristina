@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<SceneFlow id="KRISTINA" name="KRISTINA" comment="KRISTINA" hideLocalVar="false" hideGlobalVar="false" exhaustive="false" preserving="false" modifDate="Mon, 17 Oct 2016 12:12:35" start="S17;" context="" package="" xmlns="xml.sceneflow.dfki.de" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="xml.sceneflow.dfki.de res/xsd/sceneflow.xsd">
+<SceneFlow id="KRISTINA" name="KRISTINA" comment="KRISTINA" hideLocalVar="false" hideGlobalVar="false" exhaustive="false" preserving="false" modifDate="Tue, 18 Oct 2016 12:51:07" start="S17;" context="" package="" xmlns="xml.sceneflow.dfki.de" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="xml.sceneflow.dfki.de res/xsd/sceneflow.xsd">
   <Define>
   </Define>
   <Declare>
+    <Variable type="String" name ="CntrlCmd">
+      <String>undefined</String>
+    </Variable>
     <Variable type="String" name ="MetaData">
       <String>undefined</String>
     </Variable>
@@ -28,30 +31,11 @@
   <Commands>
   </Commands>
   <LocalVariableBadge>
-    <Position x-pos="15" y-pos="64"/>
+    <Position x-pos="1" y-pos="1"/>
   </LocalVariableBadge>
   <GlobalVariableBadge>
     <Position x-pos="469" y-pos="176"/>
   </GlobalVariableBadge>
-  <Node id="N7" name="N7" exhaustive="false" preserving="false" history="false">
-    <Define>
-    </Define>
-    <Declare>
-    </Declare>
-    <Commands>
-    </Commands>
-    <TEdge target="N7" start="" timeout="100">
-    <Graphics>
-      <Arrow>
-        <Point x-pos="277" y-pos="164" control-x-pos="295" control-y-pos="96"/>
-        <Point x-pos="298" y-pos="180" control-x-pos="358" control-y-pos="144"/>
-      </Arrow>
-    </Graphics>
-    </TEdge>
-    <Graphics>
-      <Position x-pos="233" y-pos="163"/>
-    </Graphics>
-  </Node>
   <SuperNode id="S27" name="Run" comment="" exhaustive="false" preserving="false" hideLocalVar="false" hideGlobalVar="false" start="S56;S60;">
     <Define>
     </Define>
@@ -59,6 +43,18 @@
     </Declare>
     <Commands>
     </Commands>
+    <IEdge target="S17" start="">
+      <Graphics>
+        <Arrow>
+          <Point x-pos="408" y-pos="93" control-x-pos="409" control-y-pos="159"/>
+          <Point x-pos="268" y-pos="93" control-x-pos="268" control-y-pos="159"/>
+        </Arrow>
+      </Graphics>
+      <Eq>
+        <Variable name="CntrlCmd"/>
+        <String>Reset</String>
+      </Eq>
+    </IEdge>
     <Graphics>
       <Position x-pos="373" y-pos="23"/>
     </Graphics>
@@ -2628,6 +2624,30 @@
     <Declare>
     </Declare>
     <Commands>
+      <Assign>
+        <Variable name="CntrlCmd"/>
+        <Expression>
+          <String>undefined</String>
+        </Expression>
+      </Assign>
+      <Assign>
+        <Variable name="MetaData"/>
+        <Expression>
+          <String>undefined</String>
+        </Expression>
+      </Assign>
+      <Assign>
+        <Variable name="PipeData"/>
+        <Expression>
+          <String>undefined</String>
+        </Expression>
+      </Assign>
+      <Assign>
+        <Variable name="UserSpeech"/>
+        <Expression>
+          <String>undefined</String>
+        </Expression>
+      </Assign>
     </Commands>
     <EEdge target="S27" start ="">
     <Graphics>
@@ -2717,7 +2737,7 @@
           <String>undefined</String>
         </Neq>
       </CEdge>
-      <TEdge target="N35" start="" timeout="60000">
+      <TEdge target="N35" start="" timeout="1000">
       <Graphics>
         <Arrow>
           <Point x-pos="277" y-pos="164" control-x-pos="295" control-y-pos="96"/>
@@ -2748,43 +2768,6 @@
     </Node>
   </SuperNode>
   <UserCommands>
-    <UserCommand name="nod" classname ="eu.kristina.vsm.Player.sInstance" method="nod">
-      <Argument name="Arg0" type="float"/>
-      <Argument name="Arg1" type="int"/>
-    </UserCommand>
-    <UserCommand name="randInt" classname ="eu.kristina.vsm.Player.sInstance" method="randInt">
-      <Argument name="Arg0" type="int"/>
-    </UserCommand>
-    <UserCommand name="shake" classname ="eu.kristina.vsm.Player.sInstance" method="shake">
-      <Argument name="Arg0" type="float"/>
-      <Argument name="Arg1" type="int"/>
-    </UserCommand>
-    <UserCommand name="ssi" classname ="eu.kristina.vsm.Player.sInstance" method="ssi">
-      <Argument name="Arg0" type="java.lang.String"/>
-    </UserCommand>
-    <UserCommand name="blink" classname ="eu.kristina.vsm.Player.sInstance" method="blink">
-      <Argument name="Arg0" type="float"/>
-    </UserCommand>
-    <UserCommand name="tilt" classname ="eu.kristina.vsm.Player.sInstance" method="tilt">
-      <Argument name="Arg0" type="float"/>
-      <Argument name="Arg1" type="int"/>
-    </UserCommand>
-    <UserCommand name="eyes" classname ="eu.kristina.vsm.Player.sInstance" method="eyes">
-      <Argument name="Arg0" type="float"/>
-      <Argument name="Arg1" type="float"/>
-      <Argument name="Arg2" type="java.lang.String"/>
-    </UserCommand>
-    <UserCommand name="put" classname ="eu.kristina.vsm.Player.sInstance" method="put">
-      <Argument name="Arg0" type="java.lang.String"/>
-      <Argument name="Arg1" type="java.lang.String"/>
-      <Argument name="Arg2" type="java.lang.String"/>
-      <Argument name="Arg3" type="java.lang.String"/>
-    </UserCommand>
-    <UserCommand name="head" classname ="eu.kristina.vsm.Player.sInstance" method="head">
-      <Argument name="Arg0" type="float"/>
-      <Argument name="Arg1" type="float"/>
-      <Argument name="Arg2" type="java.lang.String"/>
-    </UserCommand>
     <UserCommand name="face" classname ="eu.kristina.vsm.Player.sInstance" method="face">
       <Argument name="Arg0" type="float"/>
       <Argument name="Arg1" type="float"/>
@@ -2793,31 +2776,32 @@
     <UserCommand name="print" classname ="java.lang.System.err" method="println">
       <Argument name="text" type="java.lang.String"/>
     </UserCommand>
+    <UserCommand name="randInt" classname ="eu.kristina.vsm.Player.sInstance" method="randInt">
+      <Argument name="Arg0" type="int"/>
+    </UserCommand>
     <UserCommand name="post" classname ="eu.kristina.vsm.Player.sInstance" method="post">
       <Argument name="Arg0" type="java.lang.String"/>
       <Argument name="Arg1" type="java.lang.String"/>
     </UserCommand>
-    <UserCommand name="speech" classname ="eu.kristina.vsm.Player.sInstance" method="speech">
+    <UserCommand name="ssi" classname ="eu.kristina.vsm.Player.sInstance" method="ssi">
       <Argument name="Arg0" type="java.lang.String"/>
-    </UserCommand>
-    <UserCommand name="gaze" classname ="eu.kristina.vsm.Player.sInstance" method="gaze">
-      <Argument name="Arg0" type="float"/>
-      <Argument name="Arg1" type="float"/>
-      <Argument name="Arg2" type="java.lang.String"/>
     </UserCommand>
     <UserCommand name="create" classname ="eu.kristina.vsm.Player.sInstance" method="create">
       <Argument name="Arg0" type="java.lang.String"/>
       <Argument name="Arg1" type="java.lang.String"/>
     </UserCommand>
-    <UserCommand name="anim" classname ="eu.kristina.vsm.Player.sInstance" method="anim">
-      <Argument name="Arg0" type="java.lang.String"/>
-      <Argument name="Arg1" type="java.lang.String"/>
-      <Argument name="Arg2" type="java.lang.String"/>
-      <Argument name="Arg3" type="float"/>
+    <UserCommand name="blink" classname ="eu.kristina.vsm.Player.sInstance" method="blink">
+      <Argument name="Arg0" type="float"/>
     </UserCommand>
     <UserCommand name="randFloat" classname ="eu.kristina.vsm.Player.sInstance" method="randFloat">
       <Argument name="Arg0" type="float"/>
       <Argument name="Arg1" type="float"/>
+    </UserCommand>
+    <UserCommand name="put" classname ="eu.kristina.vsm.Player.sInstance" method="put">
+      <Argument name="Arg0" type="java.lang.String"/>
+      <Argument name="Arg1" type="java.lang.String"/>
+      <Argument name="Arg2" type="java.lang.String"/>
+      <Argument name="Arg3" type="java.lang.String"/>
     </UserCommand>
   </UserCommands>
   <ClassPath>

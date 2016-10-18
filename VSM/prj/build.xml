@@ -181,8 +181,9 @@
     <target name="run-server">
         <java classname="eu.kristina.vsm.Server" fork="true">
             <classpath refid="clspath"/>
-            <!--<arg line="http://172.31.26.245:11223/"/>-->
-            <arg line="http://127.0.0.1:11223/"/>
+            <arg line="http://ec2-52-29-254-9.eu-central-1.compute.amazonaws.com:11220/"/>
+            <!--<arg line="http://172.31.26.245:11220/"/>-->
+            <!--<arg line="http://127.0.0.1:11223/"/>-->
         </java>
     </target>  
     <!-- -->

@@ -63,10 +63,12 @@ public final class Server {//extends DefaultResourceConfig {
             = RunTimeInstance.getInstance();
     // The editor instance
     private final EditorInstance mWindow
-            = EditorInstance.getInstance();
+            = EditorInstance.getVisualizer();
     // The project instance
     private EditorProject mProject = null;
     private ProjectEditor mEditor = null;
+    //
+    private String mLastPath = null;
     // The termination flag    
     private boolean mDone = false;
     // The http server
@@ -105,6 +107,8 @@ public final class Server {//extends DefaultResourceConfig {
             while (!mDone) {
                 // Read a command from the console
                 final String in = mReader.readLine();
+                  // Print information
+                mLogger.message("Command '" + in + "'");
                 // Check the user's last command
                 if (in != null) {
                     if (in.equals("exit")) {
@@ -118,6 +122,9 @@ public final class Server {//extends DefaultResourceConfig {
                     } else if (in.startsWith("unload")) {
                         // Unload the project
                         unload();
+                    } else if (in.startsWith("reset")) {
+                        // Reset the project
+                        reset();
                     } else if (in.equals("start")) {
                         // Start the project
                         start();
@@ -151,11 +158,11 @@ public final class Server {//extends DefaultResourceConfig {
             mServer.stop(0);
             // Print information
             mLogger.message("Stopping '" + this + "' on '" + args[0] + "'");
-        } catch (final IOException exc) {
-            mLogger.failure(exc.toString());
-        } catch (final IllegalArgumentException exc) {
+        } catch (final IOException | IllegalArgumentException exc) {
             mLogger.failure(exc.toString());
         }
+        // ... and exit then
+        System.exit(0);
     }
 
     // Load the VSM project
@@ -177,6 +184,8 @@ public final class Server {//extends DefaultResourceConfig {
                         if (mRunTime.load(mProject)) {
                             // Print some information
                             mLogger.success("Successfully loaded project '" + mProject.getProjectPath() + "'");
+                            // Remeber the last path
+                            mLastPath = path;
                             // Return true at success
                             return true;
                         } else {
@@ -269,11 +278,7 @@ public final class Server {//extends DefaultResourceConfig {
         return false;
     }
 
-    /**
-     * Stop the VSM runtime project instance for KRISTINA
-     *
-     * @return A boolean flag indicating success or failure
-     */
+    // Stop the VSM project   
     public synchronized boolean stop() {
         try {
             // Check if project is loaded
@@ -320,9 +325,6 @@ public final class Server {//extends DefaultResourceConfig {
                 if (mEditor == null) {
                     // Show the project editor 
                     mEditor = mWindow.showProject(mProject);
-                    // Hide some editor elements
-                    mEditor.getAuxiliaryEditor().setVisible(false);
-                    //mEditor.getSceneFlowEditor().getToolBar().setVisible(false);
                     // Print some information
                     mLogger.message("Successfully showed project '" + mProject.getProjectPath() + "'");
                     // return true at success
@@ -373,12 +375,83 @@ public final class Server {//extends DefaultResourceConfig {
         return false;
     }
 
-    // Load the VSM project
+    // Reset the VSM project
+    public synchronized boolean reset() {
+        try {
+            if (hide()) {
+                // Print some information
+                mLogger.message("Successfully hiding editor for reset");
+            } else {
+                // Print some information
+                mLogger.failure("Cannot hide project for a hard reset");
+            }
+
+            if (stop()) {
+                // Print some information
+                mLogger.message("Successfully stopping project for reset");
+            } else {
+                // Print some information
+                mLogger.failure("Cannot stop project for a hard reset");
+            }
+
+            if (unload()) {// Print some information
+                mLogger.message("Successfully unloading project for reset");
+            } else {
+                // Print some information
+                mLogger.failure("Cannot unload project for a hard reset");
+            }
+
+            if (mLastPath != null) {
+                // Print some information
+                mLogger.success("Remembering project '" + mLastPath + "'for reset");
+                if (load(mLastPath)) {
+                    if (start()) {
+                        // Print some information
+                        mLogger.message("Successfully restarted project for a reset");
+                        if (show()) {
+                            // Print some information
+                            mLogger.message("Successfully showing editor for a reset");
+                            // Return true at success
+                            return true;
+                        } else {
+                            // Print some information
+                            mLogger.failure("Cannot start project for a reset");
+                        }
+                    } else {
+                        // Print some information
+                        mLogger.failure("Cannot start project for a reset");
+                    }
+                } else {
+                    // Print some information
+                    mLogger.failure("Cannot load project for a reset");
+                }
+            } else {
+                // Print some information
+                mLogger.failure("Cannot remember a project for a reset");
+            }
+
+        } catch (final Exception exc) {
+            // Print some information
+            mLogger.failure(exc.toString());
+        }
+        // Return false at failure
+        return false;
+    }
+
+    // Exit the VSM project
     public synchronized boolean exit() {
         try {
             if (mProject == null && mEditor == null) {
+                // Print some information
+                mLogger.message("Requesting exiting!");
                 // Abort the mServer
                 mDone = true;
+                // Interrupt the main thread
+                mReader.close();
+                 // Print some information
+                mLogger.message("Closing input reader");
+                // Return true at success
+                return true;
             } else {
                 // Print some information
                 mLogger.failure("Cannot exit service!");
@@ -549,7 +622,7 @@ public final class Server {//extends DefaultResourceConfig {
     }
 
     // Run the restful mServer
-    public static void main(final String args[]) {        
+    public static void main(final String args[]) {
         // Create the singelton server
         final Server server = Server.getInstance();
         // Run the singelton server now
