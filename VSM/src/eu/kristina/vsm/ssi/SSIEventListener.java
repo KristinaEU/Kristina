@@ -56,7 +56,7 @@ public final class SSIEventListener extends Thread {
         mLAddr = new InetSocketAddress(mLHost, mLPort);
         mRAddr = new InetSocketAddress(mRHost, mRPort);
         // Print some information
-        //mLogger.message("Creating SSI event listener " + mLAddr + " " + mRAddr);
+        mLogger.message("Creating SSI event listener " + mLAddr + " " + mRAddr);
     }
 
     // Start the handler thread
@@ -65,7 +65,7 @@ public final class SSIEventListener extends Thread {
         try {
             // Create the server socket
             mSocket = new DatagramSocket(mLAddr);
-           
+
             // Connect the server socket
             if (mRFlag) {
                 //
@@ -74,7 +74,7 @@ public final class SSIEventListener extends Thread {
                 mSocket.connect(mRAddr);
             }
             // Print some information
-            //mLogger.message("Starting SSI event listener " + mLAddr + " " + mRAddr);
+            mLogger.message("Starting SSI event listener " + mLAddr + " " + mRAddr);
             // Start the server thread
             super.start();
         } catch (final SocketException exc) {
@@ -93,7 +93,7 @@ public final class SSIEventListener extends Thread {
         // Interrupt it if sleeping
         interrupt();
         // Print some information
-        //mLogger.message("Aborting SSI event listener " + mLAddr + " " + mRAddr);
+        mLogger.message("Aborting SSI event listener " + mLAddr + " " + mRAddr);
     }
 
     // Execute the handler thread
@@ -101,8 +101,12 @@ public final class SSIEventListener extends Thread {
     public final void run() {
         // Receive while not done 
         while (!mDone) {
+            // Print some information
+            //mLogger.message("Awaiting SSI event listener input ...");
             // Receive new SSI event
             final String event = recvString();
+            // Print some information
+            //mLogger.message("Received SSI event listener input '" + event + "'");
             // Check message content
             if (event != null) {
                 // Handle the SSI event
@@ -110,7 +114,7 @@ public final class SSIEventListener extends Thread {
             }
         }
         // Print some information
-        //mLogger.message("Aborting SSI event listener " + mLAddr + " " + mRAddr);
+        mLogger.message("Aborting SSI event listener " + mLAddr + " " + mRAddr);
     }
 
     // Receive a sized byte array
@@ -121,8 +125,12 @@ public final class SSIEventListener extends Thread {
             // Construct an UDP packet
             final DatagramPacket packet
                     = new DatagramPacket(buffer, buffer.length);
+            //
+            //mLogger.message("Awaiting datagram packet");
             // Receive the UDP packet
             mSocket.receive(packet);
+            // Print some information
+            //mLogger.message("Receiving datagram packet '" + packet.toString() + "'");
             // Return the buffer now
             return Arrays.copyOf(buffer, packet.getLength());
         } catch (final IOException exc) {

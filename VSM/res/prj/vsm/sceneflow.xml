@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<SceneFlow id="KRISTINA" name="KRISTINA" comment="KRISTINA" hideLocalVar="false" hideGlobalVar="false" exhaustive="false" preserving="false" modifDate="Fri, 14 Oct 2016 08:45:11" start="S17;" context="" package="" xmlns="xml.sceneflow.dfki.de" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="xml.sceneflow.dfki.de res/xsd/sceneflow.xsd">
+<SceneFlow id="KRISTINA" name="KRISTINA" comment="KRISTINA" hideLocalVar="false" hideGlobalVar="false" exhaustive="false" preserving="false" modifDate="Mon, 17 Oct 2016 12:12:35" start="S17;" context="" package="" xmlns="xml.sceneflow.dfki.de" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="xml.sceneflow.dfki.de res/xsd/sceneflow.xsd">
   <Define>
   </Define>
   <Declare>
@@ -33,6 +33,25 @@
   <GlobalVariableBadge>
     <Position x-pos="469" y-pos="176"/>
   </GlobalVariableBadge>
+  <Node id="N7" name="N7" exhaustive="false" preserving="false" history="false">
+    <Define>
+    </Define>
+    <Declare>
+    </Declare>
+    <Commands>
+    </Commands>
+    <TEdge target="N7" start="" timeout="100">
+    <Graphics>
+      <Arrow>
+        <Point x-pos="277" y-pos="164" control-x-pos="295" control-y-pos="96"/>
+        <Point x-pos="298" y-pos="180" control-x-pos="358" control-y-pos="144"/>
+      </Arrow>
+    </Graphics>
+    </TEdge>
+    <Graphics>
+      <Position x-pos="233" y-pos="163"/>
+    </Graphics>
+  </Node>
   <SuperNode id="S27" name="Run" comment="" exhaustive="false" preserving="false" hideLocalVar="false" hideGlobalVar="false" start="S56;S60;">
     <Define>
     </Define>
@@ -51,7 +70,7 @@
     </GlobalVariableBadge>
     <Comment>
       <Graphics>
-        <Rect x-pos="456" y-pos="101" width="272" height="60"/>
+        <Rect x-pos="452" y-pos="27" width="272" height="60"/>
       </Graphics>
       <Text style="color:blue">
         <html>
@@ -78,7 +97,7 @@
       <Commands>
       </Commands>
       <Graphics>
-        <Position x-pos="233" y-pos="93"/>
+        <Position x-pos="233" y-pos="23"/>
       </Graphics>
     </Node>
     <SuperNode id="S56" name="Dialog" comment="" exhaustive="false" preserving="false" hideLocalVar="false" hideGlobalVar="false" start="S32;">
@@ -89,7 +108,7 @@
       <Commands>
       </Commands>
       <Graphics>
-        <Position x-pos="373" y-pos="163"/>
+        <Position x-pos="373" y-pos="93"/>
       </Graphics>
       <LocalVariableBadge>
         <Position x-pos="10" y-pos="10"/>
@@ -97,28 +116,6 @@
       <GlobalVariableBadge>
         <Position x-pos="10" y-pos="10"/>
       </GlobalVariableBadge>
-      <Comment>
-        <Graphics>
-          <Rect x-pos="372" y-pos="259" width="215" height="110"/>
-        </Graphics>
-        <Text style="color:blue">
-          <html>
-            <head>
-              <style type="text/css">
-                <!--
-                  body { font-family: SansSerif; font-size: 12pt }
-                -->
-              </style>
-              
-            </head>
-            <body>
-              Create a new pipeline data for the next turn. Here we use the initial meta 
-              data for each turn. This method puts the meta-data as JSON object to the 
-              pipeline data and assigns a new id to the turn.
-            </body>
-          </html>
-        </Text>
-      </Comment>
       <Node id="N149" name="History" exhaustive="false" preserving="false" history="true">
         <Define>
         </Define>
@@ -127,7 +124,7 @@
         <Commands>
         </Commands>
         <Graphics>
-          <Position x-pos="233" y-pos="93"/>
+          <Position x-pos="233" y-pos="23"/>
         </Graphics>
       </Node>
       <SuperNode id="S25" name="Speaker" comment="" exhaustive="false" preserving="false" hideLocalVar="false" hideGlobalVar="false" start="S16;">
@@ -136,27 +133,18 @@
         <Declare>
         </Declare>
         <Commands>
-          <Assign>
-            <Variable name="PipeData"/>
-            <Expression>
-              <UserCommand name="create">
-                <String>turn</String>
-                <Variable name="MetaData"/>
-              </UserCommand>
-            </Expression>
-          </Assign>
         </Commands>
         <IEdge target="S32" start="">
           <Graphics>
             <Arrow>
-              <Point x-pos="443" y-pos="207" control-x-pos="390" control-y-pos="220"/>
-              <Point x-pos="303" y-pos="207" control-x-pos="355" control-y-pos="220"/>
+              <Point x-pos="583" y-pos="67" control-x-pos="530" control-y-pos="80"/>
+              <Point x-pos="443" y-pos="67" control-x-pos="495" control-y-pos="80"/>
             </Arrow>
           </Graphics>
           <Variable name="UserTalking"/>
         </IEdge>
         <Graphics>
-          <Position x-pos="443" y-pos="163"/>
+          <Position x-pos="583" y-pos="23"/>
         </Graphics>
         <LocalVariableBadge>
           <Position x-pos="10" y-pos="10"/>
@@ -164,6 +152,28 @@
         <GlobalVariableBadge>
           <Position x-pos="10" y-pos="10"/>
         </GlobalVariableBadge>
+        <Comment>
+          <Graphics>
+            <Rect x-pos="230" y-pos="200" width="204" height="105"/>
+          </Graphics>
+          <Text style="color:blue">
+            <html>
+              <head>
+                <style type="text/css">
+                  <!--
+                    body { font-family: SansSerif; font-size: 12pt }
+                  -->
+                </style>
+                
+              </head>
+              <body>
+                Create a new pipeline data for the next turn. Here we use the initial meta 
+                data for each turn. This method puts the meta-data as JSON object to the 
+                pipeline data and assigns a new id to the turn.
+              </body>
+            </html>
+          </Text>
+        </Comment>
         <Node id="N3" name="History" exhaustive="false" preserving="false" history="true">
           <Define>
           </Define>
@@ -172,7 +182,7 @@
           <Commands>
           </Commands>
           <Graphics>
-            <Position x-pos="233" y-pos="93"/>
+            <Position x-pos="233" y-pos="23"/>
           </Graphics>
         </Node>
         <SuperNode id="S15" name="Speaking" comment="" exhaustive="false" preserving="false" hideLocalVar="false" hideGlobalVar="false" start="N45;">
@@ -200,13 +210,13 @@
           <EEdge target="S16" start ="">
           <Graphics>
             <Arrow>
-              <Point x-pos="373" y-pos="338" control-x-pos="326" control-y-pos="338"/>
-              <Point x-pos="268" y-pos="233" control-x-pos="268" control-y-pos="279"/>
+              <Point x-pos="513" y-pos="198" control-x-pos="466" control-y-pos="198"/>
+              <Point x-pos="408" y-pos="93" control-x-pos="408" control-y-pos="139"/>
             </Arrow>
           </Graphics>
           </EEdge>
           <Graphics>
-            <Position x-pos="373" y-pos="303"/>
+            <Position x-pos="513" y-pos="163"/>
           </Graphics>
           <LocalVariableBadge>
             <Position x-pos="237" y-pos="13"/>
@@ -238,6 +248,7 @@
                     <Variable name="PipeData"/>
                     <String>data.avatar-turn</String>
                     <Variable name="Response"/>
+                    <String>OBJECT</String>
                   </UserCommand>
                 </Expression>
               </Assign>
@@ -287,6 +298,21 @@
                 <String>awaiting</String>
               </Expression>
             </Assign>
+            <Assign>
+              <Variable name="UserSpeech"/>
+              <Expression>
+                <String>undefined</String>
+              </Expression>
+            </Assign>
+            <Assign>
+              <Variable name="PipeData"/>
+              <Expression>
+                <UserCommand name="create">
+                  <String>turn</String>
+                  <Variable name="MetaData"/>
+                </UserCommand>
+              </Expression>
+            </Assign>
             <UserCommand name="print">
               <Add>
                 <String>Pipeline-Data:\n</String>
@@ -297,13 +323,13 @@
           <EEdge target="S29" start ="">
           <Graphics>
             <Arrow>
-              <Point x-pos="303" y-pos="198" control-x-pos="390" control-y-pos="198"/>
-              <Point x-pos="513" y-pos="198" control-x-pos="425" control-y-pos="198"/>
+              <Point x-pos="443" y-pos="58" control-x-pos="530" control-y-pos="58"/>
+              <Point x-pos="653" y-pos="58" control-x-pos="565" control-y-pos="58"/>
             </Arrow>
           </Graphics>
           </EEdge>
           <Graphics>
-            <Position x-pos="233" y-pos="163"/>
+            <Position x-pos="373" y-pos="23"/>
           </Graphics>
           <LocalVariableBadge>
             <Position x-pos="10" y-pos="10"/>
@@ -319,7 +345,7 @@
             <Commands>
             </Commands>
             <Graphics>
-              <Position x-pos="233" y-pos="93"/>
+              <Position x-pos="233" y-pos="23"/>
             </Graphics>
           </Node>
           <SuperNode id="S28" name="TS" comment="" exhaustive="false" preserving="false" hideLocalVar="false" hideGlobalVar="false" start="N88;">
@@ -328,15 +354,9 @@
             <Declare>
             </Declare>
             <Commands>
-              <Assign>
-                <Variable name="UserSpeech"/>
-                <Expression>
-                  <String>undefined</String>
-                </Expression>
-              </Assign>
             </Commands>
             <Graphics>
-              <Position x-pos="233" y-pos="163"/>
+              <Position x-pos="373" y-pos="23"/>
             </Graphics>
             <LocalVariableBadge>
               <Position x-pos="10" y-pos="10"/>
@@ -387,15 +407,26 @@
                   <Expression>
                     <UserCommand name="put">
                       <Variable name="PipeData"/>
-                      <String>data.vocapia-data</String>
+                      <String>data.vocapia-data.text</String>
                       <Variable name="UserSpeech"/>
-                      <String>OBJECT</String>
+                      <String>STRING</String>
+                    </UserCommand>
+                  </Expression>
+                </Assign>
+                <Assign>
+                  <Variable name="PipeData"/>
+                  <Expression>
+                    <UserCommand name="put">
+                      <Variable name="PipeData"/>
+                      <String>data.vocapia-data.confidence</String>
+                      <String>1.0</String>
+                      <String>DOUBLE</String>
                     </UserCommand>
                   </Expression>
                 </Assign>
               </Commands>
               <Graphics>
-                <Position x-pos="513" y-pos="163"/>
+                <Position x-pos="583" y-pos="163"/>
               </Graphics>
             </Node>
             <Node id="N88" name="Await" exhaustive="false" preserving="false" history="false">
@@ -409,7 +440,7 @@
                 <Graphics>
                   <Arrow>
                     <Point x-pos="303" y-pos="198" control-x-pos="530" control-y-pos="198"/>
-                    <Point x-pos="513" y-pos="198" control-x-pos="285" control-y-pos="198"/>
+                    <Point x-pos="583" y-pos="198" control-x-pos="355" control-y-pos="198"/>
                   </Arrow>
                 </Graphics>
                 <Neq>
@@ -453,13 +484,13 @@
           <EEdge target="S15" start ="">
           <Graphics>
             <Arrow>
-              <Point x-pos="548" y-pos="233" control-x-pos="548" control-y-pos="279"/>
-              <Point x-pos="443" y-pos="338" control-x-pos="489" control-y-pos="338"/>
+              <Point x-pos="688" y-pos="93" control-x-pos="688" control-y-pos="139"/>
+              <Point x-pos="583" y-pos="198" control-x-pos="629" control-y-pos="198"/>
             </Arrow>
           </Graphics>
           </EEdge>
           <Graphics>
-            <Position x-pos="513" y-pos="163"/>
+            <Position x-pos="653" y-pos="23"/>
           </Graphics>
           <LocalVariableBadge>
             <Position x-pos="10" y-pos="10"/>
@@ -965,8 +996,8 @@
         <IEdge target="S25" start="">
           <Graphics>
             <Arrow>
-              <Point x-pos="303" y-pos="189" control-x-pos="355" control-y-pos="175"/>
-              <Point x-pos="443" y-pos="189" control-x-pos="390" control-y-pos="175"/>
+              <Point x-pos="443" y-pos="49" control-x-pos="495" control-y-pos="35"/>
+              <Point x-pos="583" y-pos="49" control-x-pos="530" control-y-pos="35"/>
             </Arrow>
           </Graphics>
           <Not>
@@ -974,7 +1005,7 @@
           </Not>
         </IEdge>
         <Graphics>
-          <Position x-pos="233" y-pos="163"/>
+          <Position x-pos="373" y-pos="23"/>
         </Graphics>
         <LocalVariableBadge>
           <Position x-pos="10" y-pos="10"/>
@@ -1054,7 +1085,7 @@
       <Commands>
       </Commands>
       <Graphics>
-        <Position x-pos="373" y-pos="93"/>
+        <Position x-pos="373" y-pos="23"/>
       </Graphics>
       <LocalVariableBadge>
         <Position x-pos="10" y-pos="10"/>
@@ -1064,7 +1095,7 @@
       </GlobalVariableBadge>
       <Comment>
         <Graphics>
-          <Rect x-pos="197" y-pos="236" width="140" height="50"/>
+          <Rect x-pos="333" y-pos="96" width="140" height="50"/>
         </Graphics>
         <Text style="color:blue">
           <html>
@@ -1084,7 +1115,7 @@
       </Comment>
       <Comment>
         <Graphics>
-          <Rect x-pos="406" y-pos="236" width="150" height="50"/>
+          <Rect x-pos="538" y-pos="96" width="150" height="50"/>
         </Graphics>
         <Text style="color:blue">
           <html>
@@ -1110,7 +1141,7 @@
         <Commands>
         </Commands>
         <Graphics>
-          <Position x-pos="233" y-pos="93"/>
+          <Position x-pos="233" y-pos="23"/>
         </Graphics>
       </Node>
       <SuperNode id="S61" name="Listener" comment="" exhaustive="false" preserving="false" hideLocalVar="false" hideGlobalVar="false" start="N14;S20;">
@@ -1123,8 +1154,8 @@
         <IEdge target="S31" start="">
           <Graphics>
             <Arrow>
-              <Point x-pos="303" y-pos="189" control-x-pos="355" control-y-pos="175"/>
-              <Point x-pos="443" y-pos="189" control-x-pos="390" control-y-pos="175"/>
+              <Point x-pos="443" y-pos="49" control-x-pos="495" control-y-pos="35"/>
+              <Point x-pos="583" y-pos="49" control-x-pos="530" control-y-pos="35"/>
             </Arrow>
           </Graphics>
           <Not>
@@ -1132,7 +1163,7 @@
           </Not>
         </IEdge>
         <Graphics>
-          <Position x-pos="233" y-pos="163"/>
+          <Position x-pos="373" y-pos="23"/>
         </Graphics>
         <LocalVariableBadge>
           <Position x-pos="10" y-pos="10"/>
@@ -1364,14 +1395,14 @@
         <IEdge target="S61" start="">
           <Graphics>
             <Arrow>
-              <Point x-pos="443" y-pos="207" control-x-pos="390" control-y-pos="220"/>
-              <Point x-pos="303" y-pos="207" control-x-pos="355" control-y-pos="220"/>
+              <Point x-pos="583" y-pos="67" control-x-pos="530" control-y-pos="80"/>
+              <Point x-pos="443" y-pos="67" control-x-pos="495" control-y-pos="80"/>
             </Arrow>
           </Graphics>
           <Variable name="UserTalking"/>
         </IEdge>
         <Graphics>
-          <Position x-pos="443" y-pos="163"/>
+          <Position x-pos="583" y-pos="23"/>
         </Graphics>
         <LocalVariableBadge>
           <Position x-pos="10" y-pos="10"/>

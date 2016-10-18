@@ -23,6 +23,7 @@ import org.w3c.dom.NodeList;
 import eu.kristina.vsm.ssi.SSIEventHandler;
 import eu.kristina.vsm.ssi.SSIEventNotifier;
 import eu.kristina.vsm.util.Utilities;
+import java.util.Locale;
 import org.json.JSONObject;
 
 /**
@@ -281,7 +282,7 @@ public final class Player implements RunTimePlayer, SSIEventHandler {
     @Override
     public final void handle(final String message) {
         // Print some information
-        //mLogger.message("Receiving SSI event:\n" + message + "");
+        //mLogger.warning("Receiving SSI event:\n" + message + "");
         try {
             // Parse the received XML string
             final ByteArrayInputStream stream = new ByteArrayInputStream(message.getBytes("UTF-8"));
@@ -417,7 +418,7 @@ public final class Player implements RunTimePlayer, SSIEventHandler {
         if (mRunTime.hasVariable(mProject, name)) {
             mRunTime.setVariable(mProject, name, value);
         } else {
-            mLogger.failure("Variable '" + name + "' does not exist");
+            //mLogger.failure("Variable '" + name + "' does not exist");
         }
     }
 
@@ -425,7 +426,7 @@ public final class Player implements RunTimePlayer, SSIEventHandler {
         if (mRunTime.hasVariable(mProject, name)) {
             mRunTime.setVariable(mProject, name, value);
         } else {
-            mLogger.failure("Variable '" + name + "' does not exist");
+            //mLogger.failure("Variable '" + name + "' does not exist");
         }
     }
 
@@ -433,7 +434,7 @@ public final class Player implements RunTimePlayer, SSIEventHandler {
         if (mRunTime.hasVariable(mProject, name)) {
             mRunTime.setVariable(mProject, name, value);
         } else {
-            mLogger.failure("Variable '" + name + "' does not exist");
+            //mLogger.failure("Variable '" + name + "' does not exist");
         }
     }
 

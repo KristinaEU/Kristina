@@ -1,5 +1,6 @@
 package eu.kristina.vsm.util;
 
+import com.sun.jersey.json.impl.JSONHelper;
 import de.dfki.vsm.util.log.LOGDefaultLogger;
 import java.io.BufferedReader;
 import java.io.ByteArrayInputStream;
@@ -22,6 +23,7 @@ import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 import org.apache.commons.lang3.StringEscapeUtils;
+import org.json.JSONException;
 import org.json.JSONObject;
 import org.w3c.dom.Document;
 import org.xml.sax.SAXException;
@@ -101,14 +103,37 @@ public final class Utilities {
         }
         // Insert key value pair
         if (typ.equals("OBJECT")) {
-            member.put(path, new JSONObject(val));
-        } else if(typ.equals("DOUBLE")) {
-            final Double value = Double.parseDouble(val);
-            member.put(path,  value);
-        }else if (typ.equals("STRING")){
-            member.put(path, val);
+            try {
+                // Insert parsed value
+                member.put(path, new JSONObject(val));
+            } catch (final JSONException exc) {
+                // Print some information
+                sLogger.failure(exc.toString());
+                // Insert default value
+                member.put(path, new JSONObject());
+            }
+        } else if (typ.equals("DOUBLE")) {
+            try {
+                // Insert parsed value
+                member.put(path, Double.parseDouble(val));
+            } catch (final JSONException | NumberFormatException exc) {
+                // Print some information
+                sLogger.failure(exc.toString());
+                // Insert default value
+                member.put(path, 0.0);
+            }
+        } else if (typ.equals("STRING")) {
+            try {
+                // Insert parsed value
+                member.put(path, val);
+            } catch (final JSONException exc) {
+                // Print some information
+                sLogger.failure(exc.toString());
+                // Insert default value
+                member.put(path, "");
+            }
         } else {
-        
+
         }
         // Return the final object        
         return object.toString();
