@@ -5,6 +5,11 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.LinkedList;
+import java.util.List;
 
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientBuilder;
@@ -13,6 +18,13 @@ import javax.ws.rs.client.Invocation;
 import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+
+import model.CerthClient;
+import model.KristinaModel;
+
+import org.apache.commons.lang3.StringEscapeUtils;
+import org.apache.jena.util.FileUtils;
+import org.python.core.util.StringUtil;
 
 public class KristinaTest {
 
@@ -25,14 +37,14 @@ public class KristinaTest {
 			Client client = ClientBuilder.newClient();
 			final BufferedReader reader = new BufferedReader(new InputStreamReader(
 					System.in));
-			File folder = new File("./src/main/resources/ExampleData_LA/08-10-16/");
+			File folder = new File("./src/main/resources/ExampleData_LA/articles/");
 			for (File entry : folder.listFiles()) {
-				if ( entry.getName().startsWith("la")) {
+				if ( entry.getName().startsWith("")) {
 
 					BufferedReader r = new BufferedReader(
 							new InputStreamReader(KristinaTest.class
-									.getResourceAsStream("/ExampleData_LA/08-10-16/"
-											+ entry.getName())));
+									.getResourceAsStream("/ExampleData_LA/articles/"
+											+ entry.getName()), StandardCharsets.UTF_8));
 
 					String data = "";
 					String tmp = r.readLine();
@@ -41,22 +53,36 @@ public class KristinaTest {
 						tmp = r.readLine();
 					}
 					r.close();
+					String v = "0";
+					String a = "0.25";
+					/*if(entry.getName().equals("la-output_3.owl")){
+						v = "-0.5";
+						a = "-0.25";
+					}*/
+				
+					data = "{\"data\":{\"fusion\":{\"valence\":\""+v+"\",\"arousal\":\""+a+"\"},\"language-analysis\":\""
+				+StringEscapeUtils.escapeEcmaScript(data)+"\"},\"meta\":{\"user\":\"Elisabeth\",\"scenario\":\"newspaper\"},\"path\":\""+entry.getName()+"\"}";
 
-					WebTarget webTarget = client.target(address)
-							.queryParam("valence", "0.00")
-							.queryParam("arousal", "0.00");
+					WebTarget webTarget = client.target(address);
 					Invocation.Builder ib = webTarget
 							.request(MediaType.TEXT_PLAIN_TYPE);
 
+					long start = System.currentTimeMillis();
 					Response response = ib.post(Entity.entity(data,
-							MediaType.TEXT_PLAIN));
+							MediaType.APPLICATION_JSON));
+					long end = System.currentTimeMillis();
+					System.out.println(end-start);
 					if (response.getStatus() != 200) {
 						String s = response.getStatusInfo().toString();
 						response.close();
 						throw new IOException(s);
 					}
-					System.out.println("\n" + entry.getName() + "\n");
-					System.out.println(response.readEntity(String.class));
+					//System.out.println("\n" + entry.getName() + "\n");
+					String result = StringEscapeUtils.unescapeEcmaScript(response.readEntity(String.class));
+					//System.out.println(result);
+					List<String> l = new LinkedList<String>();
+					l.add(result);
+					Files.write(Paths.get("./src/main/resources/results/DM2LG/"+entry.getName().replace("la", "dm").replace("owl","rdf")), l);
 					
 					reader.readLine();
 				}

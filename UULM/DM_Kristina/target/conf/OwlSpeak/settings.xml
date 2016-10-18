@@ -105,12 +105,12 @@
 	  <!-- <Useronto status="enabled" name="heating">Userontology</Useronto> -->
 	  <Useronto status="enabled" name="kristina">Userontology</Useronto>
     </User>
-	<User name="Eugene" docType="8" grammarType="5" sleep="0" AutoSave="1">
+	<User name="Hans" docType="8" grammarType="5" sleep="0" AutoSave="1">
 	  <!-- <Useronto status="enabled" name="travel">Userontology</Useronto> -->
 	  <!-- <Useronto status="enabled" name="heating">Userontology</Useronto> -->
 	  <Useronto status="enabled" name="kristina">Userontology</Useronto>
     </User>
-	<User name="George" docType="8" grammarType="5" sleep="0" AutoSave="1">
+	<User name="Iwona" docType="8" grammarType="5" sleep="0" AutoSave="1">
 	  <!-- <Useronto status="enabled" name="travel">Userontology</Useronto> -->
 	  <!-- <Useronto status="enabled" name="heating">Userontology</Useronto> -->
 	  <Useronto status="enabled" name="kristina">Userontology</Useronto>
@@ -120,7 +120,7 @@
 	  <!-- <Useronto status="enabled" name="heating">Userontology</Useronto> -->
 	  <Useronto status="enabled" name="kristina">Userontology</Useronto>
     </User>
-	<User name="Anna" docType="8" grammarType="5" sleep="0" AutoSave="1">
+	<User name="Juan" docType="8" grammarType="5" sleep="0" AutoSave="1">
 	  <!-- <Useronto status="enabled" name="travel">Userontology</Useronto> -->
 	  <!-- <Useronto status="enabled" name="heating">Userontology</Useronto> -->
 	  <Useronto status="enabled" name="kristina">Userontology</Useronto>
