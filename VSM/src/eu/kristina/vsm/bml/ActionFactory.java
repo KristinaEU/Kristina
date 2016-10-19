@@ -7,7 +7,7 @@ public final class ActionFactory {
 
     // Get a blink command
     public static String blink(final float duration) {
-        return "{" + "\n"
+         return "{" + "\n"
                 + "  \"blink\": true" + "," + "\n"
                 + "  \"blinkDuration\":" + duration + "\n"
                 + "}";

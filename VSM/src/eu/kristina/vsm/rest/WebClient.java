@@ -74,9 +74,11 @@ public final class WebClient {
             final Resource resource,
             final String queryargs,
             final String content) {
+        // Create the final URL
+        final String url = resource.getPath() + queryargs;
+
         try {
-            // Create the final URL
-            final String url = resource.getPath() + queryargs;
+
             // Print some information
             mLogger.message("Executing POST request to URL '" + url + "' with content:\n" + content);
             // Execute the post request
@@ -111,6 +113,10 @@ public final class WebClient {
         } catch (final Exception exc) {
             // Print some information
             mLogger.failure(exc.toString());
+            // Print some information
+            mLogger.failure("Failure: The POST request '" + url
+                    + "' to RESTful service resource '" + resource
+                    + "' failed with an exception");
             //exc.printStackTrace();
             // Return null at failure
             return exc.getMessage();
