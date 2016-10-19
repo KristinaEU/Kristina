@@ -155,19 +155,6 @@ public final class Player implements RunTimePlayer, SSIEventHandler {
     ////////////////////////////////////////////////////////////////////////////
     ////////////////////////////////////////////////////////////////////////////
     ////////////////////////////////////////////////////////////////////////////
-    public final String blink() {
-        // Get the resource
-        final Resource resource = mResourceMap.get("Avatar-Idle");
-        // Get the command
-        final String data = ActionFactory.blink(1.0f);
-        // Get the command
-        final String command = create("idle", "{ }");
-        //
-        put(command, "data", data, "OBJECT");
-        // Execute POST request
-        return mRestClient.post(resource, "", command);
-    }
-
     public final String blink(
             final float duration) {
         // Get the resource
@@ -183,53 +170,25 @@ public final class Player implements RunTimePlayer, SSIEventHandler {
         return mRestClient.post(resource, "", object.toString(2));
     }
 
-    ////////////////////////////////////////////////////////////////////////////
-    ////////////////////////////////////////////////////////////////////////////
-    ////////////////////////////////////////////////////////////////////////////
-    public final String face() {
-        // Get the resource
+    // Get a gaze command
+    public final String gaze(
+            final float speed,
+            final float angle,
+            final String direction) {
+         // Get the resource
         final Resource resource = mResourceMap.get("Avatar-Idle");
         // Get the command
-        final String data = ActionFactory.face(0.0f, 0.0f, 1.0f);
-        // Get the command
-        final String command = create("idle", "{ }");
-        //
-        put(command, "data", data, "OBJECT");
+        final JSONObject object = new JSONObject();
+        // Produce the initial object
+        object.put("uuid", id());
+        object.put("type", "idle");
+        object.put("meta", new JSONObject("{\"avatar\":\"KRISTINA\"}"));
+        object.put("data", new JSONObject(ActionFactory.gaze(speed, angle, direction)));
         // Execute POST request
-        return mRestClient.post(resource, "", command);
+        return mRestClient.post(resource, "", object.toString(2));
     }
 
-    public final String face(
-            final float valence,
-            final float arousal) {
-        // Get the resource
-        final Resource resource = mResourceMap.get("Avatar-Idle");
-        // Get the command
-        final String data = ActionFactory.face(valence, arousal, 1.0f);
-        // Get the command
-        final String command = create("idle", "{ }");
-        //
-        put(command, "data", data, "OBJECT");
-        // Execute POST request
-        return mRestClient.post(resource, "", command);
-    }
-
-    public final String face(
-            final float valence,
-            final float arousal,
-            final float duration) {
-        // Get the resource
-        final Resource resource = mResourceMap.get("Avatar-Idle");
-        // Get the command
-        final String data = ActionFactory.face(valence, arousal, duration);
-        // Get the command
-        final String command = create("idle", "{ }");
-        //
-        put(command, "data", data, "OBJECT");
-        // Execute POST request
-        return mRestClient.post(resource, "", command);
-    }
-
+    ////////////////////////////////////////////////////////////////////////////
     // Produce an inital envelope
     public final String create(final String type, final String meta) {
         final JSONObject object = new JSONObject();

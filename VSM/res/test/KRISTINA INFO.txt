@@ -18,6 +18,11 @@ https://webglstudio.org/latest/player.html?url=fileserver/files/gerard/scenes/ka
 https://webglstudio.org/latest/player.html?url=fileserver/files/gerard/scenes/elif.scene.json
 https://webglstudio.org/latest/player.html?url=fileserver/files/gerard/scenes/emma.scene.json
 https://webglstudio.org/latest/player.html?url=fileserver/files/gerard/scenes/omar.scene.json
+https://webglstudio.org/gerard/kristina/litescene.js
+https://webglstudio.org/gerard/kristina/litegl.js
+https://www.tamats.com/projects/webglstudio/editor/js/extra/Canvas2DtoWebGL.js
+https://webglstudio.org/gerard/kristina/gl-matrix-min.js
+https://webglstudio.org/gerard/kristina/kristina.SCENE.wbin
 
 
 https://ec2-52-29-254-9.eu-central-1.compute.amazonaws.com/web-gui/
