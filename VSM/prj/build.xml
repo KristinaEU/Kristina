@@ -166,7 +166,6 @@
     <target name="test-pipe">
         <java classname="eu.kristina.vsm.test.TestSuite" fork="true">
             <classpath refid="clspath"/>
-            <arg line="pipe"/>
         </java>
     </target> 
     <!-- -->

@@ -1,10 +1,13 @@
 package eu.kristina.vsm.test;
 
 import de.dfki.vsm.util.log.LOGDefaultLogger;
+import eu.kristina.vsm.bml.ActionFactory;
 import eu.kristina.vsm.rest.Resource;
 import eu.kristina.vsm.rest.WebClient;
 import eu.kristina.vsm.util.Utilities;
+import java.util.Random;
 import org.json.JSONObject;
+import static org.ujmp.core.util.StringUtil.duration;
 
 /**
  * @author Gregor Mehlmann
@@ -26,296 +29,37 @@ public final class TestSuite {
             "UPF-TALN", "Mode-Selection-Nonverbal",
             "http://kristina.taln.upf.edu/services/mode_selection/nonverbal",
             "application/json", "text/plain");
+    private final static Resource sAI = new Resource(
+            "UPF-GTI", "Avatar-Idle",
+            "https://webglstudio.org:8080/idle",
+            "application/json", "application/json");
+    private final static Resource sAT = new Resource(
+            "UPF-GTI", "Avatar-Turn",
+            "https://webglstudio.org:8080/turn",
+            "application/json", "application/json");
 
-    private static LOGDefaultLogger sLogger = LOGDefaultLogger.getInstance();
+   
+
+
+private static LOGDefaultLogger sLogger = LOGDefaultLogger.getInstance();
 
     ////////////////////////////////////////////////////////////////////////////
     public static final void main(final String args[]) {
-        //final JSONObject object = new JSONObject("{ }");
-        //object.put("asstring", "{\"feature\":\"value\"}");
-        //object.put("asdata", new JSONObject("{\"feature\":\"value\"}"));
+        // Get the generator
+        final Random random = new Random();
+        // Get the command
+        final JSONObject object = new JSONObject();
         
-        //System.out.println(object.toString(4));
+        //
+        final String action = ActionFactory.gaze(1.0f, 10.0f, "LEFT");
 
-        final String x = "<?xml version=\"1.0\"?>\n" +
-"<rdf:RDF xmlns=\"http://kristina-project.eu/ontologies/la/example#\"\n" +
-"     xml:base=\"http://kristina-project.eu/ontologies/la/example\"\n" +
-"     xmlns:rdfs=\"http://www.w3.org/2000/01/rdf-schema#\"\n" +
-"     xmlns:context=\"http://kristina-project.eu/ontologies/la/context#\"\n" +
-"     xmlns:xsd=\"http://www.w3.org/2001/XMLSchema#\"\n" +
-"     xmlns:owl=\"http://www.w3.org/2002/07/owl#\"\n" +
-"     xmlns:action=\"http://kristina-project.eu/ontologies/la/action#\"\n" +
-"     xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\"\n" +
-"     xmlns:xml=\"http://www.w3.org/XML/1998/namespace\">\n" +
-"    <owl:Ontology rdf:about=\"http://kristina-project.eu/ontologies/la/example\"/>\n" +
-"    \n" +
-"\n" +
-"\n" +
-"    <!-- \n" +
-"    ///////////////////////////////////////////////////////////////////////////////////////\n" +
-"    //\n" +
-"    // Object Properties\n" +
-"    //\n" +
-"    ///////////////////////////////////////////////////////////////////////////////////////\n" +
-"     -->\n" +
-"\n" +
-"    \n" +
-"\n" +
-"\n" +
-"    <!-- http://kristina-project.eu/ontologies/la/action#contains -->\n" +
-"\n" +
-"    <owl:ObjectProperty rdf:about=\"http://kristina-project.eu/ontologies/la/action#contains\"/>\n" +
-"    \n" +
-"\n" +
-"\n" +
-"    <!-- http://kristina-project.eu/ontologies/la/context#classifies -->\n" +
-"\n" +
-"    <owl:ObjectProperty rdf:about=\"http://kristina-project.eu/ontologies/la/context#classifies\"/>\n" +
-"    \n" +
-"\n" +
-"\n" +
-"    <!-- http://kristina-project.eu/ontologies/la/context#defines -->\n" +
-"\n" +
-"    <owl:ObjectProperty rdf:about=\"http://kristina-project.eu/ontologies/la/context#defines\"/>\n" +
-"    \n" +
-"\n" +
-"\n" +
-"    <!-- http://kristina-project.eu/ontologies/la/context#includes -->\n" +
-"\n" +
-"    <owl:ObjectProperty rdf:about=\"http://kristina-project.eu/ontologies/la/context#includes\"/>\n" +
-"    \n" +
-"\n" +
-"\n" +
-"    <!-- http://kristina-project.eu/ontologies/la/context#includesEvent -->\n" +
-"\n" +
-"    <owl:ObjectProperty rdf:about=\"http://kristina-project.eu/ontologies/la/context#includesEvent\"/>\n" +
-"    \n" +
-"\n" +
-"\n" +
-"    <!-- http://kristina-project.eu/ontologies/la/context#satisfies -->\n" +
-"\n" +
-"    <owl:ObjectProperty rdf:about=\"http://kristina-project.eu/ontologies/la/context#satisfies\"/>\n" +
-"    \n" +
-"\n" +
-"\n" +
-"    <!-- http://kristina-project.eu/ontologies/la/context#semanticContent -->\n" +
-"\n" +
-"    <owl:ObjectProperty rdf:about=\"http://kristina-project.eu/ontologies/la/context#semanticContent\"/>\n" +
-"    \n" +
-"\n" +
-"\n" +
-"    <!-- \n" +
-"    ///////////////////////////////////////////////////////////////////////////////////////\n" +
-"    //\n" +
-"    // Data properties\n" +
-"    //\n" +
-"    ///////////////////////////////////////////////////////////////////////////////////////\n" +
-"     -->\n" +
-"\n" +
-"    \n" +
-"\n" +
-"\n" +
-"    <!-- http://kristina-project.eu/ontologies/la/action#sentenceASRConfidence -->\n" +
-"\n" +
-"    <owl:DatatypeProperty rdf:about=\"http://kristina-project.eu/ontologies/la/action#sentenceASRConfidence\"/>\n" +
-"    \n" +
-"\n" +
-"\n" +
-"    <!-- http://kristina-project.eu/ontologies/la/action#textualContent -->\n" +
-"\n" +
-"    <owl:DatatypeProperty rdf:about=\"http://kristina-project.eu/ontologies/la/action#textualContent\"/>\n" +
-"    \n" +
-"\n" +
-"\n" +
-"    <!-- \n" +
-"    ///////////////////////////////////////////////////////////////////////////////////////\n" +
-"    //\n" +
-"    // Classes\n" +
-"    //\n" +
-"    ///////////////////////////////////////////////////////////////////////////////////////\n" +
-"     -->\n" +
-"\n" +
-"    \n" +
-"\n" +
-"\n" +
-"    <!-- http://kristina-project.eu/ontologies/dialogue_actions#Request -->\n" +
-"\n" +
-"    <owl:Class rdf:about=\"http://kristina-project.eu/ontologies/dialogue_actions#Request\"/>\n" +
-"    \n" +
-"\n" +
-"\n" +
-"    <!-- http://kristina-project.eu/ontologies/dialogue_actions#UserAction -->\n" +
-"\n" +
-"    <owl:Class rdf:about=\"http://kristina-project.eu/ontologies/dialogue_actions#UserAction\"/>\n" +
-"    \n" +
-"\n" +
-"\n" +
-"    <!-- http://kristina-project.eu/ontologies/la/context#Agent -->\n" +
-"\n" +
-"    <owl:Class rdf:about=\"http://kristina-project.eu/ontologies/la/context#Agent\"/>\n" +
-"    \n" +
-"\n" +
-"\n" +
-"    <!-- http://kristina-project.eu/ontologies/la/context#Context -->\n" +
-"\n" +
-"    <owl:Class rdf:about=\"http://kristina-project.eu/ontologies/la/context#Context\"/>\n" +
-"    \n" +
-"\n" +
-"\n" +
-"    <!-- http://kristina-project.eu/ontologies/la/context#ContextDescription -->\n" +
-"\n" +
-"    <owl:Class rdf:about=\"http://kristina-project.eu/ontologies/la/context#ContextDescription\"/>\n" +
-"    \n" +
-"\n" +
-"\n" +
-"    <!-- http://kristina-project.eu/ontologies/la/context#Situation -->\n" +
-"\n" +
-"    <owl:Class rdf:about=\"http://kristina-project.eu/ontologies/la/context#Situation\"/>\n" +
-"    \n" +
-"\n" +
-"\n" +
-"    <!-- http://kristina-project.eu/ontologies/la/context#TemporalAttribute -->\n" +
-"\n" +
-"    <owl:Class rdf:about=\"http://kristina-project.eu/ontologies/la/context#TemporalAttribute\"/>\n" +
-"    \n" +
-"\n" +
-"\n" +
-"    <!-- http://kristina-project.eu/ontologies/la/onto#CareRecipient -->\n" +
-"\n" +
-"    <owl:Class rdf:about=\"http://kristina-project.eu/ontologies/la/onto#CareRecipient\"/>\n" +
-"    \n" +
-"\n" +
-"\n" +
-"    <!-- http://kristina-project.eu/ontologies/la/onto#Sleep -->\n" +
-"\n" +
-"    <owl:Class rdf:about=\"http://kristina-project.eu/ontologies/la/onto#Sleep\"/>\n" +
-"    \n" +
-"\n" +
-"\n" +
-"    <!-- http://kristina-project.eu/ontologies/la/onto#Time -->\n" +
-"\n" +
-"    <owl:Class rdf:about=\"http://kristina-project.eu/ontologies/la/onto#Time\"/>\n" +
-"    \n" +
-"\n" +
-"\n" +
-"    <!-- \n" +
-"    ///////////////////////////////////////////////////////////////////////////////////////\n" +
-"    //\n" +
-"    // Individuals\n" +
-"    //\n" +
-"    ///////////////////////////////////////////////////////////////////////////////////////\n" +
-"     -->\n" +
-"\n" +
-"    \n" +
-"\n" +
-"\n" +
-"    <!-- http://kristina-project.eu/ontologies/la/example#Agent9 -->\n" +
-"\n" +
-"    <owl:NamedIndividual rdf:about=\"http://kristina-project.eu/ontologies/la/example#Agent9\">\n" +
-"        <rdf:type rdf:resource=\"http://kristina-project.eu/ontologies/la/context#Agent\"/>\n" +
-"        <context:classifies rdf:resource=\"http://kristina-project.eu/ontologies/la/example#Eugene4\"/>\n" +
-"    </owl:NamedIndividual>\n" +
-"    \n" +
-"\n" +
-"\n" +
-"    <!-- http://kristina-project.eu/ontologies/la/example#Eugene4 -->\n" +
-"\n" +
-"    <owl:NamedIndividual rdf:about=\"http://kristina-project.eu/ontologies/la/example#Eugene4\">\n" +
-"        <rdf:type rdf:resource=\"http://kristina-project.eu/ontologies/la/onto#CareRecipient\"/>\n" +
-"    </owl:NamedIndividual>\n" +
-"    \n" +
-"\n" +
-"\n" +
-"    <!-- http://kristina-project.eu/ontologies/la/example#action1 -->\n" +
-"\n" +
-"    <owl:NamedIndividual rdf:about=\"http://kristina-project.eu/ontologies/la/example#action1\">\n" +
-"        <rdf:type rdf:resource=\"http://kristina-project.eu/ontologies/dialogue_actions#UserAction\"/>\n" +
-"        <action:contains rdf:resource=\"http://kristina-project.eu/ontologies/la/example#speechAct2\"/>\n" +
-"        <action:sentenceASRConfidence rdf:datatype=\"http://www.w3.org/2001/XMLSchema#float\">0.9</action:sentenceASRConfidence>\n" +
-"        <action:textualContent rdf:datatype=\"http://www.w3.org/2001/XMLSchema#string\">Kiedy Pan Eugeniusz zazwyczaj chodzi spać?</action:textualContent>\n" +
-"    </owl:NamedIndividual>\n" +
-"    \n" +
-"\n" +
-"\n" +
-"    <!-- http://kristina-project.eu/ontologies/la/example#context8 -->\n" +
-"\n" +
-"    <owl:NamedIndividual rdf:about=\"http://kristina-project.eu/ontologies/la/example#context8\">\n" +
-"        <rdf:type rdf:resource=\"http://kristina-project.eu/ontologies/la/context#Context\"/>\n" +
-"        <context:classifies rdf:resource=\"http://kristina-project.eu/ontologies/la/example#sleep3\"/>\n" +
-"    </owl:NamedIndividual>\n" +
-"    \n" +
-"\n" +
-"\n" +
-"    <!-- http://kristina-project.eu/ontologies/la/example#sleep3 -->\n" +
-"\n" +
-"    <owl:NamedIndividual rdf:about=\"http://kristina-project.eu/ontologies/la/example#sleep3\">\n" +
-"        <rdf:type rdf:resource=\"http://kristina-project.eu/ontologies/la/onto#Sleep\"/>\n" +
-"    </owl:NamedIndividual>\n" +
-"    \n" +
-"\n" +
-"\n" +
-"    <!-- http://kristina-project.eu/ontologies/la/example#sleepCtx6 -->\n" +
-"\n" +
-"    <owl:NamedIndividual rdf:about=\"http://kristina-project.eu/ontologies/la/example#sleepCtx6\">\n" +
-"        <rdf:type rdf:resource=\"http://kristina-project.eu/ontologies/la/context#Situation\"/>\n" +
-"        <context:includes rdf:resource=\"http://kristina-project.eu/ontologies/la/example#Eugene4\"/>\n" +
-"        <context:includes rdf:resource=\"http://kristina-project.eu/ontologies/la/example#time5\"/>\n" +
-"        <context:includesEvent rdf:resource=\"http://kristina-project.eu/ontologies/la/example#sleep3\"/>\n" +
-"        <context:satisfies rdf:resource=\"http://kristina-project.eu/ontologies/la/example#sleepDesc7\"/>\n" +
-"    </owl:NamedIndividual>\n" +
-"    \n" +
-"\n" +
-"\n" +
-"    <!-- http://kristina-project.eu/ontologies/la/example#sleepDesc7 -->\n" +
-"\n" +
-"    <owl:NamedIndividual rdf:about=\"http://kristina-project.eu/ontologies/la/example#sleepDesc7\">\n" +
-"        <rdf:type rdf:resource=\"http://kristina-project.eu/ontologies/la/context#ContextDescription\"/>\n" +
-"        <context:defines rdf:resource=\"http://kristina-project.eu/ontologies/la/example#Agent9\"/>\n" +
-"        <context:defines rdf:resource=\"http://kristina-project.eu/ontologies/la/example#context8\"/>\n" +
-"        <context:defines rdf:resource=\"http://kristina-project.eu/ontologies/la/example#temporalAttribute10\"/>\n" +
-"    </owl:NamedIndividual>\n" +
-"    \n" +
-"\n" +
-"\n" +
-"    <!-- http://kristina-project.eu/ontologies/la/example#speechAct2 -->\n" +
-"\n" +
-"    <owl:NamedIndividual rdf:about=\"http://kristina-project.eu/ontologies/la/example#speechAct2\">\n" +
-"        <rdf:type rdf:resource=\"http://kristina-project.eu/ontologies/dialogue_actions#Request\"/>\n" +
-"        <context:semanticContent rdf:resource=\"http://kristina-project.eu/ontologies/la/example#sleepCtx6\"/>\n" +
-"    </owl:NamedIndividual>\n" +
-"    \n" +
-"\n" +
-"\n" +
-"    <!-- http://kristina-project.eu/ontologies/la/example#temporalAttribute10 -->\n" +
-"\n" +
-"    <owl:NamedIndividual rdf:about=\"http://kristina-project.eu/ontologies/la/example#temporalAttribute10\">\n" +
-"        <rdf:type rdf:resource=\"http://kristina-project.eu/ontologies/la/context#TemporalAttribute\"/>\n" +
-"        <context:classifies rdf:resource=\"http://kristina-project.eu/ontologies/la/example#time5\"/>\n" +
-"    </owl:NamedIndividual>\n" +
-"    \n" +
-"\n" +
-"\n" +
-"    <!-- http://kristina-project.eu/ontologies/la/example#time5 -->\n" +
-"\n" +
-"    <owl:NamedIndividual rdf:about=\"http://kristina-project.eu/ontologies/la/example#time5\">\n" +
-"        <rdf:type rdf:resource=\"http://kristina-project.eu/ontologies/la/onto#Time\"/>\n" +
-"    </owl:NamedIndividual>\n" +
-"</rdf:RDF>\n" +
-"\n" +
-"\n" +
-"\n" +
-"<!-- Generated by the OWL API (version 4.2.5.20160517-0735) https://github.com/owlcs/owlapi -->\n" +
-"\n" +
-"";
-        final String y = Utilities.encodeJSON(x);
-        final String z = Utilities.encodeJSON(y);
-        final String q = Utilities.encodeJSON(z);
-        
-        System.err.println(x);
-        System.err.println(y);
-        System.err.println(z);
-              System.err.println(q);
-
+        // Produce the initial object
+        object.put("uuid",random.nextInt());
+        object.put("type", "idle");
+        object.put("meta", new JSONObject("{\"avatar\":\"KRISTINA\"}"));
+        object.put("data", new JSONObject(action));
+        // Execute POST request
+        sClient.post(sAI, "", object.toString(2));
     }
 
     ////////////////////////////////////////////////////////////////////////////
@@ -544,21 +288,5 @@ public final class TestSuite {
         client.post(ms, "", "Hello World!");
     }
 
-    private static void testAV(final WebClient client) {
-        final Resource av = new Resource(
-                "UPF-GTI", "Avatar-Taln",
-                "https://webglstudio.org:8080/taln",
-                "application/json", "application/json");
-
-        // Try executing a POST request
-        final String params = "?id=" + "KRISTINA";
-
-        final String json_lg = Utilities.read("res/exp/output_language_generation.txt");
-        final String json_ms = Utilities.read("res/exp/output_mode_selection.txt");
-        final String payload = Utilities.merge(json_lg, json_ms, 2);
-
-        final String result = client.post(av, params, payload);
-
-    }
-
+   
 }
