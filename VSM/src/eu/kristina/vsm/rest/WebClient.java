@@ -111,6 +111,7 @@ public final class WebClient {
         } catch (final Exception exc) {
             // Print some information
             mLogger.failure(exc.toString());
+            //exc.printStackTrace();
             // Return null at failure
             return exc.getMessage();
         }
