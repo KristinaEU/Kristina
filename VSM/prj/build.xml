@@ -163,7 +163,7 @@
         </javadoc>
     </target>
     <!-- -->
-    <target name="test-pipe">
+    <target name="test-suite">
         <java classname="eu.kristina.vsm.test.TestSuite" fork="true">
             <classpath refid="clspath"/>
         </java>

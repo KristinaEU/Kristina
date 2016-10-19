@@ -25,7 +25,10 @@ import javax.xml.transform.stream.StreamResult;
 import org.apache.commons.lang3.StringEscapeUtils;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.w3c.dom.DOMException;
 import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
 /**
@@ -249,4 +252,67 @@ public final class Utilities {
         return xmldecoded;
     }
 
+    ////////////////////////////////////////////////////////////////////////////
+    public final static String parseVocapia(final String xml) {
+        final JSONObject object = new JSONObject();
+        // Insert the XML data
+        object.put("xml", xml);
+        try {
+            // Parse the received XML string
+            final ByteArrayInputStream stream = new ByteArrayInputStream(xml.getBytes("UTF-8"));
+            final DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+            final DocumentBuilder parser = factory.newDocumentBuilder();
+            final Document document = parser.parse(stream);
+            // Get the XML tree root element
+            final Element element = document.getDocumentElement();
+            if (element.getTagName().equals("AudioDoc")) {
+                // Infer the file confidence
+                final NodeList channelLists = element.getElementsByTagName("ChannelList");
+                if (channelLists.getLength() == 1) {
+                    final Element channelList = ((Element) channelLists.item(0));
+                    final NodeList channels = channelList.getElementsByTagName("Channel");
+                    if (channels.getLength() == 1) {
+                        final Element channel = ((Element) channels.item(0));
+                        final String tconf = channel.getAttribute("tconf");
+                        //System.err.println(tconf);
+                        object.put("confidence", Double.valueOf(tconf));
+                    }
+                }
+                // Construct the spoken text
+                final NodeList segmentLists = element.getElementsByTagName("SegmentList");
+                if (segmentLists.getLength() == 1) {
+                    for (int i = 0; i < segmentLists.getLength(); i++) {
+                        final StringBuilder builder = new StringBuilder();
+                        final Element segmentList = ((Element) segmentLists.item(i));
+                        final NodeList speechSegments = segmentList.getElementsByTagName("SpeechSegment");
+                        if (speechSegments.getLength() > 0) {
+                            for (int j = 0; j < speechSegments.getLength(); j++) {
+                                final Element speechSegment = ((Element) segmentLists.item(j));
+                                final NodeList words = speechSegment.getElementsByTagName("Word");
+                                if (words.getLength() > 0) {
+                                    for (int k = 0; k < words.getLength(); k++) {
+                                        final Element word = ((Element) words.item(k));
+                                        // Get the word attributes
+                                        final String stime = word.getAttribute("stime");
+                                        final String dur = word.getAttribute("dur");
+                                        final String conf = word.getAttribute("conf");
+                                        final String text = word.getTextContent().trim();
+                                        //
+                                        builder.append(text).append(" ");
+                                    }
+                                }
+                            }
+                        }
+                        // Insert the text data
+                        object.put("text", builder.toString());
+                    }
+                }
+            }
+        } catch (final DOMException | IOException | SAXException | NumberFormatException | ParserConfigurationException exc) {
+            // Print some information
+            exc.printStackTrace();
+        }
+        // Return the final string
+        return object.toString(2);
+    }
 }

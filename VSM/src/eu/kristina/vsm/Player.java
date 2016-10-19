@@ -23,8 +23,11 @@ import org.w3c.dom.NodeList;
 import eu.kristina.vsm.ssi.SSIEventHandler;
 import eu.kristina.vsm.ssi.SSIEventNotifier;
 import eu.kristina.vsm.util.Utilities;
-import java.util.Locale;
+import java.io.IOException;
+import javax.xml.parsers.ParserConfigurationException;
 import org.json.JSONObject;
+import org.w3c.dom.DOMException;
+import org.xml.sax.SAXException;
 
 /**
  * @author Gregor Mehlmann
@@ -175,7 +178,7 @@ public final class Player implements RunTimePlayer, SSIEventHandler {
             final float speed,
             final float angle,
             final String direction) {
-         // Get the resource
+        // Get the resource
         final Resource resource = mResourceMap.get("Avatar-Idle");
         // Get the command
         final JSONObject object = new JSONObject();
@@ -315,31 +318,31 @@ public final class Player implements RunTimePlayer, SSIEventHandler {
                                 } else {
                                     // Cannot process this
                                 }
+                            } else if (name.equalsIgnoreCase("xml")) {
+                                if (state.equalsIgnoreCase("completed")) {
+                                    if (type.equalsIgnoreCase("string")) {
+                                        // Just get the content
+                                        final String text = event.getTextContent().trim();
+                                        // User said something
+                                        mLogger.success("Vocapia xml is\n" + text + "'");
+                                        // Get the JSON text
+                                        final String data = Utilities.parseVocapia(text);
+                                        // User said something
+                                        mLogger.success("Vocapia data is\n" + text + "'");
+                                        // Set the variable value         
+                                        set("UserData", data);
+                                    } else {
+                                        // Cannot process this    
+                                    }
+                                } else if (state.equalsIgnoreCase("continued")) {
+                                    // Cannot process this
+                                } else {
+                                    // Cannot process this
+                                }
                             } else {
                                 // Cannot process this
                             }
-                        } /*else if (mode.equalsIgnoreCase("upf")) {                            
-                         if (name.equalsIgnoreCase("la")) {
-                         if (state.equalsIgnoreCase("completed")) {
-                         if (type.equalsIgnoreCase("string")) {
-                         // Just get the content
-                         final String text = event.getTextContent();
-                         // User said something
-                         mLogger.success("User speech act is\n" + text + "");
-                         // Set the variable value
-                         set("StartData", text);
-                         } else {
-                         // Cannot process this    
-                         }
-                         } else if (state.equalsIgnoreCase("continued")) {
-                         // Cannot process this
-                         } else {
-                         // Cannot process this
-                         }
-                         } else {
-                         // Cannot process this
-                         }
-                         }*/ else if (mode.equalsIgnoreCase("vocapia")) {
+                        } else if (mode.equalsIgnoreCase("vocapia")) {
                             if (name.equalsIgnoreCase("transcript")) {
                                 if (state.equalsIgnoreCase("completed")) {
                                     if (type.equalsIgnoreCase("string")) {
@@ -348,7 +351,7 @@ public final class Player implements RunTimePlayer, SSIEventHandler {
                                         // User said something
                                         mLogger.success("User utterance is\n" + text + "'");
                                         // Set the variable value         
-                                        set("UserSpeech", text);
+                                        set("UserText", text);
                                     } else {
                                         // Cannot process this    
                                     }
@@ -366,7 +369,7 @@ public final class Player implements RunTimePlayer, SSIEventHandler {
                     }
                 }
             }
-        } catch (final Exception exc) {
+        } catch (final DOMException | IOException | SAXException | NumberFormatException | ParserConfigurationException exc) {
             // Print some information
             mLogger.failure(exc.toString());
         }
