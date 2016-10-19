@@ -318,27 +318,6 @@ public final class Player implements RunTimePlayer, SSIEventHandler {
                                 } else {
                                     // Cannot process this
                                 }
-                            } else if (name.equalsIgnoreCase("xml")) {
-                                if (state.equalsIgnoreCase("completed")) {
-                                    if (type.equalsIgnoreCase("string")) {
-                                        // Just get the content
-                                        final String text = event.getTextContent().trim();
-                                        // User said something
-                                        mLogger.success("Vocapia xml is\n" + text + "'");
-                                        // Get the JSON text
-                                        final String data = Utilities.parseVocapia(text);
-                                        // User said something
-                                        mLogger.success("Vocapia data is\n" + text + "'");
-                                        // Set the variable value         
-                                        set("UserData", data);
-                                    } else {
-                                        // Cannot process this    
-                                    }
-                                } else if (state.equalsIgnoreCase("continued")) {
-                                    // Cannot process this
-                                } else {
-                                    // Cannot process this
-                                }
                             } else {
                                 // Cannot process this
                             }
@@ -352,6 +331,27 @@ public final class Player implements RunTimePlayer, SSIEventHandler {
                                         mLogger.success("User utterance is\n" + text + "'");
                                         // Set the variable value         
                                         set("UserText", text);
+                                    } else {
+                                        // Cannot process this    
+                                    }
+                                } else if (state.equalsIgnoreCase("continued")) {
+                                    // Cannot process this
+                                } else {
+                                    // Cannot process this
+                                }
+                            } else if (name.equalsIgnoreCase("xml")) {
+                                if (state.equalsIgnoreCase("completed")) {
+                                    if (type.equalsIgnoreCase("string")) {
+                                        // Just get the content
+                                        final String text = event.getTextContent().trim();
+                                        // User said something
+                                        mLogger.success("Vocapia xml is\n" + text + "'");
+                                        // Get the JSON text
+                                        final String data = Utilities.parseVocapia(text);
+                                        // User said something
+                                        mLogger.success("Vocapia data is\n" + text + "'");
+                                        // Set the variable value         
+                                        set("UserData", data);
                                     } else {
                                         // Cannot process this    
                                     }
