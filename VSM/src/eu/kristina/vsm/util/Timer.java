@@ -24,12 +24,14 @@ public final class Timer extends Thread {
         super("Timer");
         // Initialize the interval
         mTimerInterval = interval;
+        // Set the start time
+        reset();
         // Print some Information
         mLogger.message("Creating System Timer");
     }
 
     // Reset the system timer
-    public final void reset() {
+    public final synchronized void reset() {
         // Print some Information
         mLogger.message("Resetting System Timer");
         // Set the start time
@@ -37,7 +39,7 @@ public final class Timer extends Thread {
     }
 
     // Abort the system timer
-    public final void abort() {
+    public final synchronized void abort() {
         // Print some Information
         mLogger.message("Aborting System Timer");
         // Set termination flag
@@ -46,7 +48,7 @@ public final class Timer extends Thread {
         interrupt();
     }
 
-    public final long time() {
+    public final synchronized long time() {
         // Reurn the JPL time
         return mCurrentTime;
     }
@@ -56,8 +58,6 @@ public final class Timer extends Thread {
     public final void run() {
         // Print some information
         mLogger.message("Starting System Timer");
-        // Set the start time
-        reset();
         // Then update the time
         while (!mDone) {
             // Sleep for some very short time
@@ -70,9 +70,11 @@ public final class Timer extends Thread {
                 // Exit on an interrupt
                 mDone = true;
             }
-            // Update the player time
-            mCurrentTime
-                    = System.currentTimeMillis() - mStartupTime;
+            synchronized (this) {
+                // Update the player time
+                mCurrentTime
+                        = System.currentTimeMillis() - mStartupTime;
+            }
         }
         // Print some information
         mLogger.message("Stopping System Timer");

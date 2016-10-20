@@ -64,7 +64,7 @@ public final class Player implements RunTimePlayer, SSIEventHandler {
     // A random number generator
     private final Random mRandom = new Random();
     // A system time timer
-    private final Timer mTimer = new Timer(10);
+    private Timer mTimer = null;
 
     // Get the singelton player
     public static synchronized Player getInstance() {
@@ -139,6 +139,7 @@ public final class Player implements RunTimePlayer, SSIEventHandler {
                 Boolean.parseBoolean(ssilrflag));
         mSSIListener.start();
         // Start the time
+        mTimer = new Timer(10);
         mTimer.start();
         // Print some information
         mLogger.message("Launching KRISTINA scene player '" + this + "' with configuration:\n" + mPlayerConfig);
