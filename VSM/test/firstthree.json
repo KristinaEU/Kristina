@@ -1,0 +1,3 @@
+{"data":{"fusion":{"valence":0,"arousal":0},"vocapia-data":{"confidence":0.85,"text":"Hallo KRISTINA!"}},"meta":{"scenario":"weather","language":"de","avatar":"KRISTINA","user":"Hans"},"type":"turn","uuid":1}
+{"data":{"fusion":{"valence":0,"arousal":0},"vocapia-data":{"confidence":0.85,"text":"KRISTINA, kanst Du mir über das Wetter heute berichten? "}},"meta":{"scenario":"weather","language":"de","avatar":"KRISTINA","user":"Hans"},"type":"turn","uuid":2}
+{"data":{"fusion":{"valence":0,"arousal":0},"vocapia-data":{"confidence":0.85,"text":"Oh, ach so..."}},"meta":{"scenario":"weather","language":"de","avatar":"KRISTINA","user":"Hans"},"type":"turn","uuid":3}
