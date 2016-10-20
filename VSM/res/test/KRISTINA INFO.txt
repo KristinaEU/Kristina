@@ -30,7 +30,7 @@ https://ec2-52-29-254-9.eu-central-1.compute.amazonaws.com/web-gui/
 http://172.31.26.245:11220
 
 Meta-Data:
-"{ \"user\": \"Iwona\", \"avatar\": \"KRISTINA\", \"scenario\": \"sleep\", \"language\": \"pl\" }"
+"{ \"user\": \"Iwona\", \"avatar\": \"KRISTINA\", \"scenario\": \"sleep\", \"language\": \"es\" }"
 User-Speech:
 "{ \"text\": \"Kiedy Pan Eugeniusz zazwyczaj chodzi spać?\", \"confidence\": 0.9 }"
 "Kiedy Pan Eugeniusz zazwyczaj chodzi spać?"

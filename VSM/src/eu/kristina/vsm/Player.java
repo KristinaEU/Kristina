@@ -330,7 +330,7 @@ public final class Player implements RunTimePlayer, SSIEventHandler {
                                         // User said something
                                         mLogger.success("User utterance is\n" + text + "'");
                                         // Set the variable value         
-                                        set("UserText", text);
+                                        //set("UserText", text);
                                     } else {
                                         // Cannot process this    
                                     }
@@ -349,7 +349,7 @@ public final class Player implements RunTimePlayer, SSIEventHandler {
                                         // Get the JSON text
                                         final String data = Utilities.parseVocapia(text);
                                         // User said something
-                                        mLogger.success("Vocapia data is\n" + text + "'");
+                                        mLogger.success("Vocapia data is\n" + data + "'");
                                         // Set the variable value         
                                         set("UserData", data);
                                     } else {
