@@ -24,7 +24,13 @@ import eu.kristina.vsm.ssi.SSIEventHandler;
 import eu.kristina.vsm.ssi.SSIEventNotifier;
 import eu.kristina.vsm.util.Timer;
 import eu.kristina.vsm.util.Utilities;
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.OutputStreamWriter;
+import java.io.Writer;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import javax.xml.parsers.ParserConfigurationException;
@@ -39,9 +45,12 @@ public final class Player implements RunTimePlayer, SSIEventHandler {
 
     // The singelton player instance
     public static Player sInstance = null;
-    // Tzhe format to print dates
-    private final SimpleDateFormat mFormat
+    // The format to print dates
+    private final SimpleDateFormat mEnvFormat
             = new SimpleDateFormat("EEE, d MMM yyyy HH:mm:ss:SSS");
+    // The format to log dates
+    private final SimpleDateFormat mLogFormat
+            = new SimpleDateFormat("yyyy_MM_dd_hh_HH_ss_SSS");
     // The singelton logger instance
     private final LOGDefaultLogger mLogger
             = LOGDefaultLogger.getInstance();
@@ -248,17 +257,6 @@ public final class Player implements RunTimePlayer, SSIEventHandler {
     }
 
     ////////////////////////////////////////////////////////////////////////////
-    // Get a random float 
-    public final float randFloat(final float scale, final float shift) {
-        return scale * (mRandom.nextFloat() - shift);
-    }
-
-    // Get a random int from [0, bound[
-    public final int randInt(final int bound) {
-        return mRandom.nextInt(bound);
-    }
-
-    ////////////////////////////////////////////////////////////////////////////
     @Override
     public final void handle(final String message) {
         // Print some information
@@ -427,6 +425,17 @@ public final class Player implements RunTimePlayer, SSIEventHandler {
     }
 
     ////////////////////////////////////////////////////////////////////////////
+    // Get a random float 
+    public final float randFloat(final float scale, final float shift) {
+        return scale * (mRandom.nextFloat() - shift);
+    }
+
+    // Get a random int from [0, bound[
+    public final int randInt(final int bound) {
+        return mRandom.nextInt(bound);
+    }
+
+    ////////////////////////////////////////////////////////////////////////////
     public final void reset() {
         mTimer.reset();
     }
@@ -436,7 +445,31 @@ public final class Player implements RunTimePlayer, SSIEventHandler {
     }
 
     public final String date() {
-        return mFormat.format(new Date());
+        return mEnvFormat.format(new Date());
+    }
+
+    ////////////////////////////////////////////////////////////////////////////
+    public final void log(final String string) {
+        final JSONObject object = new JSONObject(string);
+        try {
+            final File file = new File("./log/kristina/"
+                    + mLogFormat.format(new Date()) + ".json");
+            final FileOutputStream stream = new FileOutputStream(file);
+            final Writer out = new OutputStreamWriter(stream, "UTF8");
+            out.write(object.toString(4));
+            out.close();
+        } catch (final IOException exc) {
+            mLogger.failure(exc.toString());
+        }
+    }
+
+    ////////////////////////////////////////////////////////////////////////////
+    public final String read(final String file, final int line) {
+        try {
+            return Files.readAllLines(Paths.get(file)).get(line);
+        } catch (final IOException exc) {
+            return "{}";
+        }
     }
 
     ////////////////////////////////////////////////////////////////////////////
