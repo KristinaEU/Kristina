@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<SceneFlow id="KRISTINA" name="KRISTINA" comment="KRISTINA" hideLocalVar="false" hideGlobalVar="false" exhaustive="false" preserving="false" modifDate="Do, 20 Okt 2016 11:11:47" start="S40;" context="" package="" xmlns="xml.sceneflow.dfki.de" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="xml.sceneflow.dfki.de res/xsd/sceneflow.xsd">
+<SceneFlow id="KRISTINA" name="KRISTINA" comment="KRISTINA" hideLocalVar="false" hideGlobalVar="false" exhaustive="false" preserving="false" modifDate="Do, 20 Okt 2016 11:17:42" start="S40;" context="" package="" xmlns="xml.sceneflow.dfki.de" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="xml.sceneflow.dfki.de res/xsd/sceneflow.xsd">
   <Define>
   </Define>
   <Declare>
@@ -931,7 +931,7 @@
           <Position x-pos="23" y-pos="163"/>
         </Graphics>
       </Node>
-      <SuperNode id="S29" name="Planning" comment="" exhaustive="false" preserving="false" hideLocalVar="false" hideGlobalVar="false" start="S34;">
+      <SuperNode id="S29" name="Planning" comment="" exhaustive="false" preserving="false" hideLocalVar="false" hideGlobalVar="false" start="S33;">
         <Define>
         </Define>
         <Declare>
@@ -1689,87 +1689,6 @@
             </Graphics>
           </Node>
         </SuperNode>
-        <SuperNode id="S34" name="VA" comment="" exhaustive="false" preserving="false" hideLocalVar="false" hideGlobalVar="false" start="N90;">
-          <Define>
-          </Define>
-          <Declare>
-          </Declare>
-          <Commands>
-          </Commands>
-          <EEdge target="S33" start ="">
-          <Graphics>
-            <Arrow>
-              <Point x-pos="233" y-pos="198" control-x-pos="250" control-y-pos="198"/>
-              <Point x-pos="303" y-pos="198" control-x-pos="285" control-y-pos="198"/>
-            </Arrow>
-          </Graphics>
-          </EEdge>
-          <Graphics>
-            <Position x-pos="163" y-pos="163"/>
-          </Graphics>
-          <LocalVariableBadge>
-            <Position x-pos="10" y-pos="10"/>
-          </LocalVariableBadge>
-          <GlobalVariableBadge>
-            <Position x-pos="10" y-pos="10"/>
-          </GlobalVariableBadge>
-          <Node id="N89" name="History" exhaustive="false" preserving="false" history="true">
-            <Define>
-            </Define>
-            <Declare>
-            </Declare>
-            <Commands>
-            </Commands>
-            <Graphics>
-              <Position x-pos="23" y-pos="163"/>
-            </Graphics>
-          </Node>
-          <Node id="N90" name="Insert" exhaustive="false" preserving="false" history="false">
-            <Define>
-            </Define>
-            <Declare>
-            </Declare>
-            <Commands>
-              <Assign>
-                <Variable name="PipeData"/>
-                <Expression>
-                  <UserCommand name="put">
-                    <Variable name="PipeData"/>
-                    <String>data.fusion.arousal</String>
-                    <Add>
-                      <Add>
-                        <String></String>
-                        <Variable name="UserArousal"/>
-                      </Add>
-                      <String></String>
-                    </Add>
-                    <String>DOUBLE</String>
-                  </UserCommand>
-                </Expression>
-              </Assign>
-              <Assign>
-                <Variable name="PipeData"/>
-                <Expression>
-                  <UserCommand name="put">
-                    <Variable name="PipeData"/>
-                    <String>data.fusion.valence</String>
-                    <Add>
-                      <Add>
-                        <String></String>
-                        <Variable name="UserValence"/>
-                      </Add>
-                      <String></String>
-                    </Add>
-                    <String>DOUBLE</String>
-                  </UserCommand>
-                </Expression>
-              </Assign>
-            </Commands>
-            <Graphics>
-              <Position x-pos="233" y-pos="163"/>
-            </Graphics>
-          </Node>
-        </SuperNode>
       </SuperNode>
       <SuperNode id="S35" name="Speaking" comment="" exhaustive="false" preserving="false" hideLocalVar="false" hideGlobalVar="false" start="N95;">
         <Define>
@@ -2059,7 +1978,7 @@
               <Variable name="PipeData"/>
               <Expression>
                 <UserCommand name="read">
-                  <String>./test/envelopes.json</String>
+                  <String>./test/example.json</String>
                   <Variable name="Line"/>
                 </UserCommand>
               </Expression>
