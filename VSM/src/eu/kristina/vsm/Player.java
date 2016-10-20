@@ -22,6 +22,7 @@ import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 import eu.kristina.vsm.ssi.SSIEventHandler;
 import eu.kristina.vsm.ssi.SSIEventNotifier;
+import eu.kristina.vsm.util.Timer;
 import eu.kristina.vsm.util.Utilities;
 import java.io.IOException;
 import javax.xml.parsers.ParserConfigurationException;
@@ -57,6 +58,8 @@ public final class Player implements RunTimePlayer, SSIEventHandler {
     private final HashMap<String, Resource> mResourceMap = new HashMap();
     // A random number generator
     private final Random mRandom = new Random();
+    // A system time timer
+    private final Timer mTimer = new Timer(10);
 
     // Get the singelton player
     public static synchronized Player getInstance() {
@@ -130,6 +133,8 @@ public final class Player implements RunTimePlayer, SSIEventHandler {
                 ssilrhost, Integer.parseInt(ssilrport),
                 Boolean.parseBoolean(ssilrflag));
         mSSIListener.start();
+        // Start the time
+        mTimer.start();
         // Print some information
         mLogger.message("Launching KRISTINA scene player '" + this + "' with configuration:\n" + mPlayerConfig);
         // Return true at success
@@ -142,10 +147,14 @@ public final class Player implements RunTimePlayer, SSIEventHandler {
         // Abort running handlers
         mSSIListener.abort();
         mSSINotifier.abort();
+        //
+        mTimer.abort();
         // Join with the handlers        
         try {
             mSSIListener.join();
             mSSINotifier.join();
+            //
+            mTimer.join();
         } catch (final InterruptedException exc) {
             mLogger.failure(exc.toString());
         }
@@ -406,6 +415,15 @@ public final class Player implements RunTimePlayer, SSIEventHandler {
         final String event = SSIEventFactory.createEvent(content);
         // Send the SSI event
         mSSINotifier.sendString(event);
+    }
+
+    ////////////////////////////////////////////////////////////////////////////
+    public final void reset() {
+        mTimer.reset();
+    }
+
+    public final String time() {
+        return Long.toString(mTimer.time());
     }
 
     ////////////////////////////////////////////////////////////////////////////
