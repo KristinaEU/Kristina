@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<SceneFlow id="KRISTINA" name="KRISTINA" comment="KRISTINA" hideLocalVar="false" hideGlobalVar="false" exhaustive="false" preserving="false" modifDate="Do, 20 Okt 2016 11:17:42" start="S40;" context="" package="" xmlns="xml.sceneflow.dfki.de" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="xml.sceneflow.dfki.de res/xsd/sceneflow.xsd">
+<SceneFlow id="KRISTINA" name="KRISTINA" comment="KRISTINA" hideLocalVar="false" hideGlobalVar="false" exhaustive="false" preserving="false" modifDate="Thu, 20 Oct 2016 12:58:32" start="S41;" context="" package="" xmlns="xml.sceneflow.dfki.de" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="xml.sceneflow.dfki.de res/xsd/sceneflow.xsd">
   <Define>
   </Define>
   <Declare>
@@ -36,15 +36,27 @@
   <GlobalVariableBadge>
     <Position x-pos="10" y-pos="10"/>
   </GlobalVariableBadge>
-  <SuperNode id="S40" name="TESTING" comment="" exhaustive="false" preserving="false" hideLocalVar="false" hideGlobalVar="false" start="S28;">
+  <SuperNode id="S40" name="Testing" comment="" exhaustive="false" preserving="false" hideLocalVar="false" hideGlobalVar="false" start="S28;">
     <Define>
     </Define>
     <Declare>
     </Declare>
     <Commands>
     </Commands>
+    <IEdge target="S41" start="">
+      <Graphics>
+        <Arrow>
+          <Point x-pos="303" y-pos="93" control-x-pos="355" control-y-pos="40"/>
+          <Point x-pos="443" y-pos="93" control-x-pos="390" control-y-pos="40"/>
+        </Arrow>
+      </Graphics>
+      <Eq>
+        <Variable name="CntrlCmd"/>
+        <String>release</String>
+      </Eq>
+    </IEdge>
     <Graphics>
-      <Position x-pos="303" y-pos="163"/>
+      <Position x-pos="233" y-pos="93"/>
     </Graphics>
     <LocalVariableBadge>
       <Position x-pos="10" y-pos="10"/>
@@ -63,7 +75,7 @@
         <Position x-pos="23" y-pos="163"/>
       </Graphics>
     </Node>
-    <SuperNode id="S2" name="IDLE" comment="" exhaustive="false" preserving="false" hideLocalVar="false" hideGlobalVar="false" start="S3;">
+    <SuperNode id="S2" name="Idle" comment="" exhaustive="false" preserving="false" hideLocalVar="false" hideGlobalVar="false" start="S3;">
       <Define>
       </Define>
       <Declare>
@@ -901,12 +913,18 @@
         </SuperNode>
       </SuperNode>
     </SuperNode>
-    <SuperNode id="S28" name="PIPE" comment="" exhaustive="false" preserving="false" hideLocalVar="false" hideGlobalVar="false" start="S36;">
+    <SuperNode id="S28" name="Pipe" comment="" exhaustive="false" preserving="false" hideLocalVar="false" hideGlobalVar="false" start="N22;">
       <Define>
       </Define>
       <Declare>
         <Variable type="Int" name ="Line">
           <Int value="0"/>
+        </Variable>
+        <Variable type="Int" name ="Count">
+          <Int value="0"/>
+        </Variable>
+        <Variable type="String" name ="File">
+          <String>./test/scenarios/babycare.json</String>
         </Variable>
       </Declare>
       <Commands>
@@ -915,7 +933,7 @@
         <Position x-pos="163" y-pos="163"/>
       </Graphics>
       <LocalVariableBadge>
-        <Position x-pos="326" y-pos="109"/>
+        <Position x-pos="379" y-pos="93"/>
       </LocalVariableBadge>
       <GlobalVariableBadge>
         <Position x-pos="10" y-pos="10"/>
@@ -929,6 +947,33 @@
         </Commands>
         <Graphics>
           <Position x-pos="23" y-pos="163"/>
+        </Graphics>
+      </Node>
+      <Node id="N22" name="Count" exhaustive="false" preserving="false" history="false">
+        <Define>
+        </Define>
+        <Declare>
+        </Declare>
+        <Commands>
+          <Assign>
+            <Variable name="Count"/>
+            <Expression>
+              <UserCommand name="count">
+                <Variable name="File"/>
+              </UserCommand>
+            </Expression>
+          </Assign>
+        </Commands>
+        <EEdge target="S36" start ="">
+        <Graphics>
+          <Arrow>
+            <Point x-pos="233" y-pos="198" control-x-pos="285" control-y-pos="198"/>
+            <Point x-pos="373" y-pos="198" control-x-pos="320" control-y-pos="198"/>
+          </Arrow>
+        </Graphics>
+        </EEdge>
+        <Graphics>
+          <Position x-pos="163" y-pos="163"/>
         </Graphics>
       </Node>
       <SuperNode id="S29" name="Planning" comment="" exhaustive="false" preserving="false" hideLocalVar="false" hideGlobalVar="false" start="S33;">
@@ -946,17 +991,19 @@
               <String>planning</String>
             </Expression>
           </Assign>
+          <UserCommand name="reset">
+          </UserCommand>
         </Commands>
         <EEdge target="S35" start ="">
         <Graphics>
           <Arrow>
-            <Point x-pos="443" y-pos="233" control-x-pos="396" control-y-pos="279"/>
-            <Point x-pos="373" y-pos="303" control-x-pos="419" control-y-pos="256"/>
+            <Point x-pos="653" y-pos="233" control-x-pos="606" control-y-pos="279"/>
+            <Point x-pos="583" y-pos="303" control-x-pos="629" control-y-pos="256"/>
           </Arrow>
         </Graphics>
         </EEdge>
         <Graphics>
-          <Position x-pos="443" y-pos="163"/>
+          <Position x-pos="653" y-pos="163"/>
         </Graphics>
         <LocalVariableBadge>
           <Position x-pos="305" y-pos="71"/>
@@ -975,7 +1022,7 @@
             <Position x-pos="23" y-pos="163"/>
           </Graphics>
         </Node>
-        <SuperNode id="S30" name="MS" comment="" exhaustive="false" preserving="false" hideLocalVar="false" hideGlobalVar="false" start="N46;">
+        <SuperNode id="S30" name="MS" comment="" exhaustive="false" preserving="false" hideLocalVar="false" hideGlobalVar="false" start="N44;">
           <Define>
           </Define>
           <Declare>
@@ -984,20 +1031,22 @@
             </Variable>
           </Declare>
           <Commands>
+            <UserCommand name="reset">
+            </UserCommand>
           </Commands>
           <EEdge target="S32" start ="">
           <Graphics>
             <Arrow>
-              <Point x-pos="653" y-pos="198" control-x-pos="670" control-y-pos="198"/>
-              <Point x-pos="723" y-pos="198" control-x-pos="705" control-y-pos="198"/>
+              <Point x-pos="513" y-pos="198" control-x-pos="530" control-y-pos="198"/>
+              <Point x-pos="583" y-pos="198" control-x-pos="565" control-y-pos="198"/>
             </Arrow>
           </Graphics>
           </EEdge>
           <Graphics>
-            <Position x-pos="583" y-pos="163"/>
+            <Position x-pos="443" y-pos="163"/>
           </Graphics>
           <LocalVariableBadge>
-            <Position x-pos="252" y-pos="29"/>
+            <Position x-pos="385" y-pos="143"/>
           </LocalVariableBadge>
           <GlobalVariableBadge>
             <Position x-pos="10" y-pos="10"/>
@@ -1013,36 +1062,6 @@
               <Position x-pos="23" y-pos="163"/>
             </Graphics>
           </Node>
-          <Node id="N42" name="Insert" exhaustive="false" preserving="false" history="false">
-            <Define>
-            </Define>
-            <Declare>
-            </Declare>
-            <Commands>
-              <Assign>
-                <Variable name="PipeData"/>
-                <Expression>
-                  <UserCommand name="put">
-                    <Variable name="PipeData"/>
-                    <String>data.mode-selection.nonverbal</String>
-                    <Variable name="Response"/>
-                    <String>OBJECT</String>
-                  </UserCommand>
-                </Expression>
-              </Assign>
-            </Commands>
-            <EEdge target="N49" start ="">
-            <Graphics>
-              <Arrow>
-                <Point x-pos="408" y-pos="373" control-x-pos="408" control-y-pos="390"/>
-                <Point x-pos="408" y-pos="443" control-x-pos="408" control-y-pos="425"/>
-              </Arrow>
-            </Graphics>
-            </EEdge>
-            <Graphics>
-              <Position x-pos="373" y-pos="303"/>
-            </Graphics>
-          </Node>
           <Node id="N43" name="Insert" exhaustive="false" preserving="false" history="false">
             <Define>
             </Define>
@@ -1054,23 +1073,27 @@
                 <Expression>
                   <UserCommand name="put">
                     <Variable name="PipeData"/>
-                    <String>data.mode-selection.verbal</String>
+                    <String>time.mode-selection</String>
+                    <UserCommand name="time">
+                    </UserCommand>
+                    <String>DOUBLE</String>
+                  </UserCommand>
+                </Expression>
+              </Assign>
+              <Assign>
+                <Variable name="PipeData"/>
+                <Expression>
+                  <UserCommand name="put">
+                    <Variable name="PipeData"/>
+                    <String>data.mode-selection</String>
                     <Variable name="Response"/>
                     <String>OBJECT</String>
                   </UserCommand>
                 </Expression>
               </Assign>
             </Commands>
-            <EEdge target="N45" start ="">
             <Graphics>
-              <Arrow>
-                <Point x-pos="828" y-pos="233" control-x-pos="828" control-y-pos="250"/>
-                <Point x-pos="828" y-pos="303" control-x-pos="828" control-y-pos="285"/>
-              </Arrow>
-            </Graphics>
-            </EEdge>
-            <Graphics>
-              <Position x-pos="793" y-pos="163"/>
+              <Position x-pos="233" y-pos="303"/>
             </Graphics>
           </Node>
           <Node id="N44" name="Request" exhaustive="false" preserving="false" history="false">
@@ -1083,7 +1106,7 @@
                 <Variable name="Response"/>
                 <Expression>
                   <UserCommand name="post">
-                    <String>Mode-Selection-Verbal</String>
+                    <String>Mode-Selection</String>
                     <Variable name="PipeData"/>
                   </UserCommand>
                 </Expression>
@@ -1092,114 +1115,17 @@
             <EEdge target="N43" start ="">
             <Graphics>
               <Arrow>
-                <Point x-pos="443" y-pos="198" control-x-pos="600" control-y-pos="198"/>
-                <Point x-pos="793" y-pos="198" control-x-pos="635" control-y-pos="198"/>
+                <Point x-pos="268" y-pos="233" control-x-pos="268" control-y-pos="250"/>
+                <Point x-pos="268" y-pos="303" control-x-pos="268" control-y-pos="285"/>
               </Arrow>
             </Graphics>
             </EEdge>
             <Graphics>
-              <Position x-pos="373" y-pos="163"/>
-            </Graphics>
-          </Node>
-          <Node id="N45" name="Request" exhaustive="false" preserving="false" history="false">
-            <Define>
-            </Define>
-            <Declare>
-            </Declare>
-            <Commands>
-              <Assign>
-                <Variable name="Response"/>
-                <Expression>
-                  <UserCommand name="post">
-                    <String>Mode-Selection-Nonverbal</String>
-                    <Variable name="PipeData"/>
-                  </UserCommand>
-                </Expression>
-              </Assign>
-            </Commands>
-            <EEdge target="N42" start ="">
-            <Graphics>
-              <Arrow>
-                <Point x-pos="793" y-pos="338" control-x-pos="635" control-y-pos="338"/>
-                <Point x-pos="443" y-pos="338" control-x-pos="600" control-y-pos="338"/>
-              </Arrow>
-            </Graphics>
-            </EEdge>
-            <Graphics>
-              <Position x-pos="793" y-pos="303"/>
-            </Graphics>
-          </Node>
-          <Node id="N46" name="Reset" exhaustive="false" preserving="false" history="false">
-            <Define>
-            </Define>
-            <Declare>
-            </Declare>
-            <Commands>
-              <UserCommand name="reset">
-              </UserCommand>
-            </Commands>
-            <EEdge target="N44" start ="">
-            <Graphics>
-              <Arrow>
-                <Point x-pos="233" y-pos="198" control-x-pos="285" control-y-pos="198"/>
-                <Point x-pos="373" y-pos="198" control-x-pos="320" control-y-pos="198"/>
-              </Arrow>
-            </Graphics>
-            </EEdge>
-            <Graphics>
-              <Position x-pos="163" y-pos="163"/>
-            </Graphics>
-          </Node>
-          <Node id="N47" name="Insert" exhaustive="false" preserving="false" history="false">
-            <Define>
-            </Define>
-            <Declare>
-            </Declare>
-            <Commands>
-              <Assign>
-                <Variable name="PipeData"/>
-                <Expression>
-                  <UserCommand name="put">
-                    <Variable name="PipeData"/>
-                    <String>time.mode-selection</String>
-                    <Variable name="TimeDelay"/>
-                    <String>DOUBLE</String>
-                  </UserCommand>
-                </Expression>
-              </Assign>
-            </Commands>
-            <Graphics>
-              <Position x-pos="793" y-pos="443"/>
-            </Graphics>
-          </Node>
-          <Node id="N49" name="Time" exhaustive="false" preserving="false" history="false">
-            <Define>
-            </Define>
-            <Declare>
-            </Declare>
-            <Commands>
-              <Assign>
-                <Variable name="TimeDelay"/>
-                <Expression>
-                  <UserCommand name="time">
-                  </UserCommand>
-                </Expression>
-              </Assign>
-            </Commands>
-            <EEdge target="N47" start ="">
-            <Graphics>
-              <Arrow>
-                <Point x-pos="443" y-pos="478" control-x-pos="600" control-y-pos="478"/>
-                <Point x-pos="793" y-pos="478" control-x-pos="635" control-y-pos="478"/>
-              </Arrow>
-            </Graphics>
-            </EEdge>
-            <Graphics>
-              <Position x-pos="373" y-pos="443"/>
+              <Position x-pos="233" y-pos="163"/>
             </Graphics>
           </Node>
         </SuperNode>
-        <SuperNode id="S31" name="DM" comment="" exhaustive="false" preserving="false" hideLocalVar="false" hideGlobalVar="false" start="N72;">
+        <SuperNode id="S31" name="DM" comment="" exhaustive="false" preserving="false" hideLocalVar="false" hideGlobalVar="false" start="N58;">
           <Define>
           </Define>
           <Declare>
@@ -1208,20 +1134,22 @@
             </Variable>
           </Declare>
           <Commands>
+            <UserCommand name="reset">
+            </UserCommand>
           </Commands>
           <EEdge target="S30" start ="">
           <Graphics>
             <Arrow>
-              <Point x-pos="513" y-pos="198" control-x-pos="530" control-y-pos="198"/>
-              <Point x-pos="583" y-pos="198" control-x-pos="565" control-y-pos="198"/>
+              <Point x-pos="373" y-pos="198" control-x-pos="390" control-y-pos="198"/>
+              <Point x-pos="443" y-pos="198" control-x-pos="425" control-y-pos="198"/>
             </Arrow>
           </Graphics>
           </EEdge>
           <Graphics>
-            <Position x-pos="443" y-pos="163"/>
+            <Position x-pos="303" y-pos="163"/>
           </Graphics>
           <LocalVariableBadge>
-            <Position x-pos="237" y-pos="27"/>
+            <Position x-pos="404" y-pos="173"/>
           </LocalVariableBadge>
           <GlobalVariableBadge>
             <Position x-pos="10" y-pos="10"/>
@@ -1235,36 +1163,6 @@
             </Commands>
             <Graphics>
               <Position x-pos="23" y-pos="163"/>
-            </Graphics>
-          </Node>
-          <Node id="N52" name="Insert" exhaustive="false" preserving="false" history="false">
-            <Define>
-            </Define>
-            <Declare>
-            </Declare>
-            <Commands>
-              <Assign>
-                <Variable name="PipeData"/>
-                <Expression>
-                  <UserCommand name="put">
-                    <Variable name="PipeData"/>
-                    <String>data.dialog-management</String>
-                    <Variable name="Response"/>
-                    <String>STRING</String>
-                  </UserCommand>
-                </Expression>
-              </Assign>
-            </Commands>
-            <EEdge target="N74" start ="">
-            <Graphics>
-              <Arrow>
-                <Point x-pos="828" y-pos="233" control-x-pos="828" control-y-pos="250"/>
-                <Point x-pos="828" y-pos="303" control-x-pos="828" control-y-pos="285"/>
-              </Arrow>
-            </Graphics>
-            </EEdge>
-            <Graphics>
-              <Position x-pos="793" y-pos="163"/>
             </Graphics>
           </Node>
           <Node id="N58" name="Request" exhaustive="false" preserving="false" history="false">
@@ -1283,37 +1181,16 @@
                 </Expression>
               </Assign>
             </Commands>
-            <EEdge target="N52" start ="">
+            <EEdge target="N73" start ="">
             <Graphics>
               <Arrow>
-                <Point x-pos="443" y-pos="198" control-x-pos="565" control-y-pos="198"/>
-                <Point x-pos="793" y-pos="198" control-x-pos="670" control-y-pos="198"/>
+                <Point x-pos="268" y-pos="233" control-x-pos="268" control-y-pos="250"/>
+                <Point x-pos="268" y-pos="303" control-x-pos="268" control-y-pos="285"/>
               </Arrow>
             </Graphics>
             </EEdge>
             <Graphics>
-              <Position x-pos="373" y-pos="163"/>
-            </Graphics>
-          </Node>
-          <Node id="N72" name="Reset" exhaustive="false" preserving="false" history="false">
-            <Define>
-            </Define>
-            <Declare>
-            </Declare>
-            <Commands>
-              <UserCommand name="reset">
-              </UserCommand>
-            </Commands>
-            <EEdge target="N58" start ="">
-            <Graphics>
-              <Arrow>
-                <Point x-pos="233" y-pos="198" control-x-pos="355" control-y-pos="198"/>
-                <Point x-pos="373" y-pos="198" control-x-pos="250" control-y-pos="198"/>
-              </Arrow>
-            </Graphics>
-            </EEdge>
-            <Graphics>
-              <Position x-pos="163" y-pos="163"/>
+              <Position x-pos="233" y-pos="163"/>
             </Graphics>
           </Node>
           <Node id="N73" name="Insert" exhaustive="false" preserving="false" history="false">
@@ -1328,44 +1205,30 @@
                   <UserCommand name="put">
                     <Variable name="PipeData"/>
                     <String>time.dialog-management</String>
-                    <Variable name="TimeDelay"/>
+                    <UserCommand name="time">
+                    </UserCommand>
                     <String>DOUBLE</String>
                   </UserCommand>
                 </Expression>
               </Assign>
-            </Commands>
-            <Graphics>
-              <Position x-pos="373" y-pos="303"/>
-            </Graphics>
-          </Node>
-          <Node id="N74" name="Time" exhaustive="false" preserving="false" history="false">
-            <Define>
-            </Define>
-            <Declare>
-            </Declare>
-            <Commands>
               <Assign>
-                <Variable name="TimeDelay"/>
+                <Variable name="PipeData"/>
                 <Expression>
-                  <UserCommand name="time">
+                  <UserCommand name="put">
+                    <Variable name="PipeData"/>
+                    <String>data.dialog-management</String>
+                    <Variable name="Response"/>
+                    <String>STRING</String>
                   </UserCommand>
                 </Expression>
               </Assign>
             </Commands>
-            <EEdge target="N73" start ="">
             <Graphics>
-              <Arrow>
-                <Point x-pos="793" y-pos="338" control-x-pos="635" control-y-pos="338"/>
-                <Point x-pos="443" y-pos="338" control-x-pos="600" control-y-pos="338"/>
-              </Arrow>
-            </Graphics>
-            </EEdge>
-            <Graphics>
-              <Position x-pos="793" y-pos="303"/>
+              <Position x-pos="233" y-pos="303"/>
             </Graphics>
           </Node>
         </SuperNode>
-        <SuperNode id="S32" name="LG" comment="" exhaustive="false" preserving="false" hideLocalVar="false" hideGlobalVar="false" start="N80;">
+        <SuperNode id="S32" name="LG" comment="" exhaustive="false" preserving="false" hideLocalVar="false" hideGlobalVar="false" start="N79;">
           <Define>
           </Define>
           <Declare>
@@ -1374,9 +1237,11 @@
             </Variable>
           </Declare>
           <Commands>
+            <UserCommand name="reset">
+            </UserCommand>
           </Commands>
           <Graphics>
-            <Position x-pos="723" y-pos="163"/>
+            <Position x-pos="583" y-pos="163"/>
           </Graphics>
           <LocalVariableBadge>
             <Position x-pos="242" y-pos="45"/>
@@ -1406,6 +1271,18 @@
                 <Expression>
                   <UserCommand name="put">
                     <Variable name="PipeData"/>
+                    <String>time.language-generation</String>
+                    <UserCommand name="time">
+                    </UserCommand>
+                    <String>DOUBLE</String>
+                  </UserCommand>
+                </Expression>
+              </Assign>
+              <Assign>
+                <Variable name="PipeData"/>
+                <Expression>
+                  <UserCommand name="put">
+                    <Variable name="PipeData"/>
                     <String>data.language-generation</String>
                     <Variable name="Response"/>
                     <String>OBJECT</String>
@@ -1413,16 +1290,8 @@
                 </Expression>
               </Assign>
             </Commands>
-            <EEdge target="N81" start ="">
             <Graphics>
-              <Arrow>
-                <Point x-pos="828" y-pos="233" control-x-pos="828" control-y-pos="250"/>
-                <Point x-pos="828" y-pos="303" control-x-pos="828" control-y-pos="285"/>
-              </Arrow>
-            </Graphics>
-            </EEdge>
-            <Graphics>
-              <Position x-pos="793" y-pos="163"/>
+              <Position x-pos="233" y-pos="303"/>
             </Graphics>
           </Node>
           <Node id="N79" name="Request" exhaustive="false" preserving="false" history="false">
@@ -1444,86 +1313,17 @@
             <EEdge target="N77" start ="">
             <Graphics>
               <Arrow>
-                <Point x-pos="443" y-pos="198" control-x-pos="565" control-y-pos="198"/>
-                <Point x-pos="793" y-pos="198" control-x-pos="670" control-y-pos="198"/>
+                <Point x-pos="268" y-pos="233" control-x-pos="268" control-y-pos="250"/>
+                <Point x-pos="268" y-pos="303" control-x-pos="268" control-y-pos="285"/>
               </Arrow>
             </Graphics>
             </EEdge>
             <Graphics>
-              <Position x-pos="373" y-pos="163"/>
-            </Graphics>
-          </Node>
-          <Node id="N80" name="Reset" exhaustive="false" preserving="false" history="false">
-            <Define>
-            </Define>
-            <Declare>
-            </Declare>
-            <Commands>
-              <UserCommand name="reset">
-              </UserCommand>
-            </Commands>
-            <EEdge target="N79" start ="">
-            <Graphics>
-              <Arrow>
-                <Point x-pos="233" y-pos="198" control-x-pos="285" control-y-pos="198"/>
-                <Point x-pos="373" y-pos="198" control-x-pos="320" control-y-pos="198"/>
-              </Arrow>
-            </Graphics>
-            </EEdge>
-            <Graphics>
-              <Position x-pos="163" y-pos="163"/>
-            </Graphics>
-          </Node>
-          <Node id="N81" name="Time" exhaustive="false" preserving="false" history="false">
-            <Define>
-            </Define>
-            <Declare>
-            </Declare>
-            <Commands>
-              <Assign>
-                <Variable name="TimeDelay"/>
-                <Expression>
-                  <UserCommand name="time">
-                  </UserCommand>
-                </Expression>
-              </Assign>
-            </Commands>
-            <EEdge target="N82" start ="">
-            <Graphics>
-              <Arrow>
-                <Point x-pos="793" y-pos="338" control-x-pos="635" control-y-pos="338"/>
-                <Point x-pos="443" y-pos="338" control-x-pos="600" control-y-pos="338"/>
-              </Arrow>
-            </Graphics>
-            </EEdge>
-            <Graphics>
-              <Position x-pos="793" y-pos="303"/>
-            </Graphics>
-          </Node>
-          <Node id="N82" name="Insert" exhaustive="false" preserving="false" history="false">
-            <Define>
-            </Define>
-            <Declare>
-            </Declare>
-            <Commands>
-              <Assign>
-                <Variable name="PipeData"/>
-                <Expression>
-                  <UserCommand name="put">
-                    <Variable name="PipeData"/>
-                    <String>time.language-generation</String>
-                    <Variable name="TimeDelay"/>
-                    <String>DOUBLE</String>
-                  </UserCommand>
-                </Expression>
-              </Assign>
-            </Commands>
-            <Graphics>
-              <Position x-pos="373" y-pos="303"/>
+              <Position x-pos="233" y-pos="163"/>
             </Graphics>
           </Node>
         </SuperNode>
-        <SuperNode id="S33" name="LA" comment="" exhaustive="false" preserving="false" hideLocalVar="false" hideGlobalVar="false" start="N86;">
+        <SuperNode id="S33" name="LA" comment="" exhaustive="false" preserving="false" hideLocalVar="false" hideGlobalVar="false" start="N85;">
           <Define>
           </Define>
           <Declare>
@@ -1532,20 +1332,22 @@
             </Variable>
           </Declare>
           <Commands>
+            <UserCommand name="reset">
+            </UserCommand>
           </Commands>
           <EEdge target="S31" start ="">
           <Graphics>
             <Arrow>
-              <Point x-pos="373" y-pos="198" control-x-pos="390" control-y-pos="198"/>
-              <Point x-pos="443" y-pos="198" control-x-pos="425" control-y-pos="198"/>
+              <Point x-pos="233" y-pos="198" control-x-pos="250" control-y-pos="198"/>
+              <Point x-pos="303" y-pos="198" control-x-pos="285" control-y-pos="198"/>
             </Arrow>
           </Graphics>
           </EEdge>
           <Graphics>
-            <Position x-pos="303" y-pos="163"/>
+            <Position x-pos="163" y-pos="163"/>
           </Graphics>
           <LocalVariableBadge>
-            <Position x-pos="271" y-pos="56"/>
+            <Position x-pos="460" y-pos="147"/>
           </LocalVariableBadge>
           <GlobalVariableBadge>
             <Position x-pos="10" y-pos="10"/>
@@ -1572,6 +1374,18 @@
                 <Expression>
                   <UserCommand name="put">
                     <Variable name="PipeData"/>
+                    <String>time.language-analysis</String>
+                    <UserCommand name="time">
+                    </UserCommand>
+                    <String>DOUBLE</String>
+                  </UserCommand>
+                </Expression>
+              </Assign>
+              <Assign>
+                <Variable name="PipeData"/>
+                <Expression>
+                  <UserCommand name="put">
+                    <Variable name="PipeData"/>
                     <String>data.language-analysis</String>
                     <Variable name="Response"/>
                     <String>STRING</String>
@@ -1579,16 +1393,8 @@
                 </Expression>
               </Assign>
             </Commands>
-            <EEdge target="N87" start ="">
             <Graphics>
-              <Arrow>
-                <Point x-pos="828" y-pos="233" control-x-pos="828" control-y-pos="250"/>
-                <Point x-pos="828" y-pos="303" control-x-pos="828" control-y-pos="285"/>
-              </Arrow>
-            </Graphics>
-            </EEdge>
-            <Graphics>
-              <Position x-pos="793" y-pos="163"/>
+              <Position x-pos="233" y-pos="303"/>
             </Graphics>
           </Node>
           <Node id="N85" name="Request" exhaustive="false" preserving="false" history="false">
@@ -1610,87 +1416,18 @@
             <EEdge target="N84" start ="">
             <Graphics>
               <Arrow>
-                <Point x-pos="443" y-pos="198" control-x-pos="600" control-y-pos="198"/>
-                <Point x-pos="793" y-pos="198" control-x-pos="635" control-y-pos="198"/>
+                <Point x-pos="268" y-pos="233" control-x-pos="268" control-y-pos="250"/>
+                <Point x-pos="268" y-pos="303" control-x-pos="268" control-y-pos="285"/>
               </Arrow>
             </Graphics>
             </EEdge>
             <Graphics>
-              <Position x-pos="373" y-pos="163"/>
-            </Graphics>
-          </Node>
-          <Node id="N86" name="Reset" exhaustive="false" preserving="false" history="false">
-            <Define>
-            </Define>
-            <Declare>
-            </Declare>
-            <Commands>
-              <UserCommand name="reset">
-              </UserCommand>
-            </Commands>
-            <EEdge target="N85" start ="">
-            <Graphics>
-              <Arrow>
-                <Point x-pos="233" y-pos="198" control-x-pos="285" control-y-pos="198"/>
-                <Point x-pos="373" y-pos="198" control-x-pos="320" control-y-pos="198"/>
-              </Arrow>
-            </Graphics>
-            </EEdge>
-            <Graphics>
-              <Position x-pos="163" y-pos="163"/>
-            </Graphics>
-          </Node>
-          <Node id="N87" name="Time" exhaustive="false" preserving="false" history="false">
-            <Define>
-            </Define>
-            <Declare>
-            </Declare>
-            <Commands>
-              <Assign>
-                <Variable name="TimeDelay"/>
-                <Expression>
-                  <UserCommand name="time">
-                  </UserCommand>
-                </Expression>
-              </Assign>
-            </Commands>
-            <EEdge target="N88" start ="">
-            <Graphics>
-              <Arrow>
-                <Point x-pos="793" y-pos="338" control-x-pos="635" control-y-pos="338"/>
-                <Point x-pos="443" y-pos="338" control-x-pos="600" control-y-pos="338"/>
-              </Arrow>
-            </Graphics>
-            </EEdge>
-            <Graphics>
-              <Position x-pos="793" y-pos="303"/>
-            </Graphics>
-          </Node>
-          <Node id="N88" name="Insert" exhaustive="false" preserving="false" history="false">
-            <Define>
-            </Define>
-            <Declare>
-            </Declare>
-            <Commands>
-              <Assign>
-                <Variable name="PipeData"/>
-                <Expression>
-                  <UserCommand name="put">
-                    <Variable name="PipeData"/>
-                    <String>time.language-analysis</String>
-                    <Variable name="TimeDelay"/>
-                    <String>DOUBLE</String>
-                  </UserCommand>
-                </Expression>
-              </Assign>
-            </Commands>
-            <Graphics>
-              <Position x-pos="373" y-pos="303"/>
+              <Position x-pos="233" y-pos="163"/>
             </Graphics>
           </Node>
         </SuperNode>
       </SuperNode>
-      <SuperNode id="S35" name="Speaking" comment="" exhaustive="false" preserving="false" hideLocalVar="false" hideGlobalVar="false" start="N95;">
+      <SuperNode id="S35" name="Speaking" comment="" exhaustive="false" preserving="false" hideLocalVar="false" hideGlobalVar="false" start="N93;">
         <Define>
         </Define>
         <Declare>
@@ -1708,20 +1445,22 @@
               <String>speaking</String>
             </Expression>
           </Assign>
+          <UserCommand name="reset">
+          </UserCommand>
         </Commands>
         <EEdge target="S36" start ="">
         <Graphics>
           <Arrow>
-            <Point x-pos="303" y-pos="303" control-x-pos="256" control-y-pos="256"/>
-            <Point x-pos="233" y-pos="233" control-x-pos="279" control-y-pos="279"/>
+            <Point x-pos="513" y-pos="303" control-x-pos="466" control-y-pos="256"/>
+            <Point x-pos="443" y-pos="233" control-x-pos="489" control-y-pos="279"/>
           </Arrow>
         </Graphics>
         </EEdge>
         <Graphics>
-          <Position x-pos="303" y-pos="303"/>
+          <Position x-pos="513" y-pos="303"/>
         </Graphics>
         <LocalVariableBadge>
-          <Position x-pos="428" y-pos="269"/>
+          <Position x-pos="343" y-pos="95"/>
         </LocalVariableBadge>
         <GlobalVariableBadge>
           <Position x-pos="10" y-pos="10"/>
@@ -1748,6 +1487,18 @@
               <Expression>
                 <UserCommand name="put">
                   <Variable name="PipeData"/>
+                  <String>time.avatar-turn</String>
+                  <UserCommand name="time">
+                  </UserCommand>
+                  <String>DOUBLE</String>
+                </UserCommand>
+              </Expression>
+            </Assign>
+            <Assign>
+              <Variable name="PipeData"/>
+              <Expression>
+                <UserCommand name="put">
+                  <Variable name="PipeData"/>
                   <String>data.avatar-turn</String>
                   <Variable name="Response"/>
                   <String>OBJECT</String>
@@ -1755,16 +1506,16 @@
               </Expression>
             </Assign>
           </Commands>
-          <EEdge target="N97" start ="">
+          <EEdge target="N98" start ="">
           <Graphics>
             <Arrow>
-              <Point x-pos="688" y-pos="233" control-x-pos="688" control-y-pos="250"/>
-              <Point x-pos="688" y-pos="303" control-x-pos="688" control-y-pos="285"/>
+              <Point x-pos="268" y-pos="373" control-x-pos="268" control-y-pos="390"/>
+              <Point x-pos="268" y-pos="443" control-x-pos="268" control-y-pos="425"/>
             </Arrow>
           </Graphics>
           </EEdge>
           <Graphics>
-            <Position x-pos="653" y-pos="163"/>
+            <Position x-pos="233" y-pos="303"/>
           </Graphics>
         </Node>
         <Node id="N93" name="Request" exhaustive="false" preserving="false" history="false">
@@ -1786,113 +1537,13 @@
           <EEdge target="N92" start ="">
           <Graphics>
             <Arrow>
-              <Point x-pos="373" y-pos="198" control-x-pos="495" control-y-pos="198"/>
-              <Point x-pos="653" y-pos="198" control-x-pos="530" control-y-pos="198"/>
+              <Point x-pos="268" y-pos="233" control-x-pos="268" control-y-pos="250"/>
+              <Point x-pos="268" y-pos="303" control-x-pos="268" control-y-pos="285"/>
             </Arrow>
           </Graphics>
           </EEdge>
           <Graphics>
-            <Position x-pos="303" y-pos="163"/>
-          </Graphics>
-        </Node>
-        <Node id="N94" name="Print" exhaustive="false" preserving="false" history="false">
-          <Define>
-          </Define>
-          <Declare>
-          </Declare>
-          <Commands>
-            <UserCommand name="print">
-              <Add>
-                <String>Final Pipeline Envelope:\n</String>
-                <Variable name="PipeData"/>
-              </Add>
-            </UserCommand>
-          </Commands>
-          <EEdge target="N98" start ="">
-          <Graphics>
-            <Arrow>
-              <Point x-pos="443" y-pos="478" control-x-pos="530" control-y-pos="478"/>
-              <Point x-pos="653" y-pos="478" control-x-pos="565" control-y-pos="478"/>
-            </Arrow>
-          </Graphics>
-          </EEdge>
-          <Graphics>
-            <Position x-pos="373" y-pos="443"/>
-          </Graphics>
-        </Node>
-        <Node id="N95" name="Reset" exhaustive="false" preserving="false" history="false">
-          <Define>
-          </Define>
-          <Declare>
-          </Declare>
-          <Commands>
-          </Commands>
-          <EEdge target="N93" start ="">
-          <Graphics>
-            <Arrow>
-              <Point x-pos="233" y-pos="198" control-x-pos="250" control-y-pos="198"/>
-              <Point x-pos="303" y-pos="198" control-x-pos="285" control-y-pos="198"/>
-            </Arrow>
-          </Graphics>
-          </EEdge>
-          <Graphics>
-            <Position x-pos="163" y-pos="163"/>
-          </Graphics>
-        </Node>
-        <Node id="N96" name="Insert" exhaustive="false" preserving="false" history="false">
-          <Define>
-          </Define>
-          <Declare>
-          </Declare>
-          <Commands>
-            <Assign>
-              <Variable name="PipeData"/>
-              <Expression>
-                <UserCommand name="put">
-                  <Variable name="PipeData"/>
-                  <String>time.avatar-turn</String>
-                  <Variable name="TimeDelay"/>
-                  <String>DOUBLE</String>
-                </UserCommand>
-              </Expression>
-            </Assign>
-          </Commands>
-          <EEdge target="N94" start ="">
-          <Graphics>
-            <Arrow>
-              <Point x-pos="408" y-pos="373" control-x-pos="408" control-y-pos="390"/>
-              <Point x-pos="408" y-pos="443" control-x-pos="408" control-y-pos="425"/>
-            </Arrow>
-          </Graphics>
-          </EEdge>
-          <Graphics>
-            <Position x-pos="373" y-pos="303"/>
-          </Graphics>
-        </Node>
-        <Node id="N97" name="Time" exhaustive="false" preserving="false" history="false">
-          <Define>
-          </Define>
-          <Declare>
-          </Declare>
-          <Commands>
-            <Assign>
-              <Variable name="TimeDelay"/>
-              <Expression>
-                <UserCommand name="time">
-                </UserCommand>
-              </Expression>
-            </Assign>
-          </Commands>
-          <EEdge target="N96" start ="">
-          <Graphics>
-            <Arrow>
-              <Point x-pos="653" y-pos="338" control-x-pos="495" control-y-pos="338"/>
-              <Point x-pos="443" y-pos="338" control-x-pos="600" control-y-pos="338"/>
-            </Arrow>
-          </Graphics>
-          </EEdge>
-          <Graphics>
-            <Position x-pos="653" y-pos="303"/>
+            <Position x-pos="233" y-pos="163"/>
           </Graphics>
         </Node>
         <Node id="N98" name="Log" exhaustive="false" preserving="false" history="false">
@@ -1906,11 +1557,11 @@
             </UserCommand>
           </Commands>
           <Graphics>
-            <Position x-pos="653" y-pos="443"/>
+            <Position x-pos="233" y-pos="443"/>
           </Graphics>
         </Node>
       </SuperNode>
-      <SuperNode id="S36" name="Awaiting" comment="" exhaustive="false" preserving="false" hideLocalVar="false" hideGlobalVar="false" start="N105;">
+      <SuperNode id="S36" name="Awaiting" comment="" exhaustive="false" preserving="false" hideLocalVar="false" hideGlobalVar="false" start="N10;">
         <Define>
         </Define>
         <Declare>
@@ -1922,17 +1573,19 @@
               <String>awaiting</String>
             </Expression>
           </Assign>
+          <UserCommand name="reset">
+          </UserCommand>
         </Commands>
         <EEdge target="S29" start ="">
         <Graphics>
           <Arrow>
-            <Point x-pos="233" y-pos="198" control-x-pos="320" control-y-pos="198"/>
-            <Point x-pos="443" y-pos="198" control-x-pos="355" control-y-pos="198"/>
+            <Point x-pos="443" y-pos="198" control-x-pos="530" control-y-pos="198"/>
+            <Point x-pos="653" y-pos="198" control-x-pos="565" control-y-pos="198"/>
           </Arrow>
         </Graphics>
         </EEdge>
         <Graphics>
-          <Position x-pos="163" y-pos="163"/>
+          <Position x-pos="373" y-pos="163"/>
         </Graphics>
         <LocalVariableBadge>
           <Position x-pos="10" y-pos="10"/>
@@ -1951,23 +1604,6 @@
             <Position x-pos="23" y-pos="163"/>
           </Graphics>
         </Node>
-        <Node id="N104" name="Print" exhaustive="false" preserving="false" history="false">
-          <Define>
-          </Define>
-          <Declare>
-          </Declare>
-          <Commands>
-            <UserCommand name="print">
-              <Add>
-                <String>Reading Pipe Data:\n</String>
-                <Variable name="PipeData"/>
-              </Add>
-            </UserCommand>
-          </Commands>
-          <Graphics>
-            <Position x-pos="583" y-pos="163"/>
-          </Graphics>
-        </Node>
         <Node id="N105" name="Read" exhaustive="false" preserving="false" history="false">
           <Define>
           </Define>
@@ -1978,30 +1614,11 @@
               <Variable name="PipeData"/>
               <Expression>
                 <UserCommand name="read">
-                  <String>./test/example.json</String>
+                  <Variable name="File"/>
                   <Variable name="Line"/>
                 </UserCommand>
               </Expression>
             </Assign>
-          </Commands>
-          <EEdge target="N106" start ="">
-          <Graphics>
-            <Arrow>
-              <Point x-pos="233" y-pos="198" control-x-pos="285" control-y-pos="198"/>
-              <Point x-pos="373" y-pos="198" control-x-pos="320" control-y-pos="198"/>
-            </Arrow>
-          </Graphics>
-          </EEdge>
-          <Graphics>
-            <Position x-pos="163" y-pos="163"/>
-          </Graphics>
-        </Node>
-        <Node id="N106" name="Increment" exhaustive="false" preserving="false" history="false">
-          <Define>
-          </Define>
-          <Declare>
-          </Declare>
-          <Commands>
             <Assign>
               <Variable name="Line"/>
               <Expression>
@@ -2012,30 +1629,84 @@
               </Expression>
             </Assign>
           </Commands>
-          <EEdge target="N104" start ="">
+          <Graphics>
+            <Position x-pos="373" y-pos="163"/>
+          </Graphics>
+        </Node>
+        <Node id="N10" name="Check" exhaustive="false" preserving="false" history="false">
+          <Define>
+          </Define>
+          <Declare>
+          </Declare>
+          <Commands>
+          </Commands>
+          <CEdge target="N105" start="">
+            <Graphics>
+              <Arrow>
+                <Point x-pos="233" y-pos="198" control-x-pos="285" control-y-pos="198"/>
+                <Point x-pos="373" y-pos="198" control-x-pos="320" control-y-pos="198"/>
+              </Arrow>
+            </Graphics>
+            <Lt>
+              <Variable name="Line"/>
+              <Variable name="Count"/>
+            </Lt>
+          </CEdge>
+          <EEdge target="N21" start ="">
           <Graphics>
             <Arrow>
-              <Point x-pos="443" y-pos="198" control-x-pos="495" control-y-pos="198"/>
-              <Point x-pos="583" y-pos="198" control-x-pos="530" control-y-pos="198"/>
+              <Point x-pos="198" y-pos="233" control-x-pos="198" control-y-pos="250"/>
+              <Point x-pos="198" y-pos="303" control-x-pos="198" control-y-pos="285"/>
             </Arrow>
           </Graphics>
           </EEdge>
           <Graphics>
-            <Position x-pos="373" y-pos="163"/>
+            <Position x-pos="163" y-pos="163"/>
+          </Graphics>
+        </Node>
+        <Node id="N21" name="Wait" exhaustive="false" preserving="false" history="false">
+          <Define>
+          </Define>
+          <Declare>
+          </Declare>
+          <Commands>
+          </Commands>
+          <TEdge target="N21" start="" timeout="1000">
+          <Graphics>
+            <Arrow>
+              <Point x-pos="207" y-pos="304" control-x-pos="225" control-y-pos="236"/>
+              <Point x-pos="228" y-pos="320" control-x-pos="288" control-y-pos="284"/>
+            </Arrow>
+          </Graphics>
+          </TEdge>
+          <Graphics>
+            <Position x-pos="163" y-pos="303"/>
           </Graphics>
         </Node>
       </SuperNode>
     </SuperNode>
   </SuperNode>
-  <SuperNode id="S41" name="KRISTINA" comment="" exhaustive="false" preserving="false" hideLocalVar="false" hideGlobalVar="false" start="S66;">
+  <SuperNode id="S41" name="Release" comment="" exhaustive="false" preserving="false" hideLocalVar="false" hideGlobalVar="false" start="S66;">
     <Define>
     </Define>
     <Declare>
     </Declare>
     <Commands>
     </Commands>
+    <IEdge target="S40" start="">
+      <Graphics>
+        <Arrow>
+          <Point x-pos="443" y-pos="163" control-x-pos="390" control-y-pos="215"/>
+          <Point x-pos="303" y-pos="163" control-x-pos="355" control-y-pos="215"/>
+        </Arrow>
+      </Graphics>
+      <Eq>
+        <Variable name="CntrlCmd"/>
+        <String>testing</String>
+      </Eq>
+    </IEdge>
     <Graphics>
-      <Position x-pos="303" y-pos="93"/>
+      <Position x-pos="443" y-pos="93"/>
     </Graphics>
     <LocalVariableBadge>
       <Position x-pos="10" y-pos="10"/>
@@ -2241,7 +1912,7 @@
               <Position x-pos="23" y-pos="163"/>
             </Graphics>
           </Node>
-          <SuperNode id="S43" name="Speaking" comment="" exhaustive="false" preserving="false" hideLocalVar="false" hideGlobalVar="false" start="N126;">
+          <SuperNode id="S43" name="Speaking" comment="" exhaustive="false" preserving="false" hideLocalVar="false" hideGlobalVar="false" start="N53;">
             <Define>
             </Define>
             <Declare>
@@ -2259,6 +1930,8 @@
                   <String>speaking</String>
                 </Expression>
               </Assign>
+              <UserCommand name="reset">
+              </UserCommand>
             </Commands>
             <EEdge target="S44" start ="">
             <Graphics>
@@ -2288,12 +1961,24 @@
                 <Position x-pos="23" y-pos="163"/>
               </Graphics>
             </Node>
-            <Node id="N123" name="Insert" exhaustive="false" preserving="false" history="false">
+            <Node id="N52" name="Insert" exhaustive="false" preserving="false" history="false">
               <Define>
               </Define>
               <Declare>
               </Declare>
               <Commands>
+                <Assign>
+                  <Variable name="PipeData"/>
+                  <Expression>
+                    <UserCommand name="put">
+                      <Variable name="PipeData"/>
+                      <String>time.avatar-turn</String>
+                      <UserCommand name="time">
+                      </UserCommand>
+                      <String>DOUBLE</String>
+                    </UserCommand>
+                  </Expression>
+                </Assign>
                 <Assign>
                   <Variable name="PipeData"/>
                   <Expression>
@@ -2306,19 +1991,19 @@
                   </Expression>
                 </Assign>
               </Commands>
-              <EEdge target="N128" start ="">
+              <EEdge target="N54" start ="">
               <Graphics>
                 <Arrow>
-                  <Point x-pos="688" y-pos="233" control-x-pos="688" control-y-pos="250"/>
-                  <Point x-pos="688" y-pos="303" control-x-pos="688" control-y-pos="285"/>
+                  <Point x-pos="198" y-pos="373" control-x-pos="198" control-y-pos="390"/>
+                  <Point x-pos="198" y-pos="443" control-x-pos="198" control-y-pos="425"/>
                 </Arrow>
               </Graphics>
               </EEdge>
               <Graphics>
-                <Position x-pos="653" y-pos="163"/>
+                <Position x-pos="163" y-pos="303"/>
               </Graphics>
             </Node>
-            <Node id="N124" name="Request" exhaustive="false" preserving="false" history="false">
+            <Node id="N53" name="Request" exhaustive="false" preserving="false" history="false">
               <Define>
               </Define>
               <Declare>
@@ -2334,55 +2019,11 @@
                   </Expression>
                 </Assign>
               </Commands>
-              <EEdge target="N123" start ="">
+              <EEdge target="N52" start ="">
               <Graphics>
                 <Arrow>
-                  <Point x-pos="373" y-pos="198" control-x-pos="495" control-y-pos="198"/>
-                  <Point x-pos="653" y-pos="198" control-x-pos="530" control-y-pos="198"/>
-                </Arrow>
-              </Graphics>
-              </EEdge>
-              <Graphics>
-                <Position x-pos="303" y-pos="163"/>
-              </Graphics>
-            </Node>
-            <Node id="N125" name="Print" exhaustive="false" preserving="false" history="false">
-              <Define>
-              </Define>
-              <Declare>
-              </Declare>
-              <Commands>
-                <UserCommand name="print">
-                  <Add>
-                    <String>Final Pipeline Envelope:\n</String>
-                    <Variable name="PipeData"/>
-                  </Add>
-                </UserCommand>
-              </Commands>
-              <EEdge target="N129" start ="">
-              <Graphics>
-                <Arrow>
-                  <Point x-pos="443" y-pos="478" control-x-pos="530" control-y-pos="478"/>
-                  <Point x-pos="653" y-pos="478" control-x-pos="565" control-y-pos="478"/>
-                </Arrow>
-              </Graphics>
-              </EEdge>
-              <Graphics>
-                <Position x-pos="373" y-pos="443"/>
-              </Graphics>
-            </Node>
-            <Node id="N126" name="Reset" exhaustive="false" preserving="false" history="false">
-              <Define>
-              </Define>
-              <Declare>
-              </Declare>
-              <Commands>
-              </Commands>
-              <EEdge target="N124" start ="">
-              <Graphics>
-                <Arrow>
-                  <Point x-pos="233" y-pos="198" control-x-pos="250" control-y-pos="198"/>
-                  <Point x-pos="303" y-pos="198" control-x-pos="285" control-y-pos="198"/>
+                  <Point x-pos="198" y-pos="233" control-x-pos="198" control-y-pos="250"/>
+                  <Point x-pos="198" y-pos="303" control-x-pos="198" control-y-pos="285"/>
                 </Arrow>
               </Graphics>
               </EEdge>
@@ -2390,63 +2031,7 @@
                 <Position x-pos="163" y-pos="163"/>
               </Graphics>
             </Node>
-            <Node id="N127" name="Insert" exhaustive="false" preserving="false" history="false">
-              <Define>
-              </Define>
-              <Declare>
-              </Declare>
-              <Commands>
-                <Assign>
-                  <Variable name="PipeData"/>
-                  <Expression>
-                    <UserCommand name="put">
-                      <Variable name="PipeData"/>
-                      <String>time.avatar-turn</String>
-                      <Variable name="TimeDelay"/>
-                      <String>DOUBLE</String>
-                    </UserCommand>
-                  </Expression>
-                </Assign>
-              </Commands>
-              <EEdge target="N125" start ="">
-              <Graphics>
-                <Arrow>
-                  <Point x-pos="408" y-pos="373" control-x-pos="408" control-y-pos="390"/>
-                  <Point x-pos="408" y-pos="443" control-x-pos="408" control-y-pos="425"/>
-                </Arrow>
-              </Graphics>
-              </EEdge>
-              <Graphics>
-                <Position x-pos="373" y-pos="303"/>
-              </Graphics>
-            </Node>
-            <Node id="N128" name="Time" exhaustive="false" preserving="false" history="false">
-              <Define>
-              </Define>
-              <Declare>
-              </Declare>
-              <Commands>
-                <Assign>
-                  <Variable name="TimeDelay"/>
-                  <Expression>
-                    <UserCommand name="time">
-                    </UserCommand>
-                  </Expression>
-                </Assign>
-              </Commands>
-              <EEdge target="N127" start ="">
-              <Graphics>
-                <Arrow>
-                  <Point x-pos="653" y-pos="338" control-x-pos="495" control-y-pos="338"/>
-                  <Point x-pos="443" y-pos="338" control-x-pos="600" control-y-pos="338"/>
-                </Arrow>
-              </Graphics>
-              </EEdge>
-              <Graphics>
-                <Position x-pos="653" y-pos="303"/>
-              </Graphics>
-            </Node>
-            <Node id="N129" name="Log" exhaustive="false" preserving="false" history="false">
+            <Node id="N54" name="Log" exhaustive="false" preserving="false" history="false">
               <Define>
               </Define>
               <Declare>
@@ -2457,7 +2042,7 @@
                 </UserCommand>
               </Commands>
               <Graphics>
-                <Position x-pos="653" y-pos="443"/>
+                <Position x-pos="163" y-pos="443"/>
               </Graphics>
             </Node>
           </SuperNode>
@@ -2487,6 +2072,8 @@
                   </UserCommand>
                 </Expression>
               </Assign>
+              <UserCommand name="reset">
+              </UserCommand>
             </Commands>
             <EEdge target="S46" start ="">
             <Graphics>
@@ -2522,6 +2109,8 @@
               <Declare>
               </Declare>
               <Commands>
+                <UserCommand name="reset">
+                </UserCommand>
               </Commands>
               <Graphics>
                 <Position x-pos="163" y-pos="163"/>
@@ -2534,7 +2123,7 @@
               </GlobalVariableBadge>
               <Comment>
                 <Graphics>
-                  <Rect x-pos="66" y-pos="242" width="188" height="63"/>
+                  <Rect x-pos="223" y-pos="288" width="188" height="63"/>
                 </Graphics>
                 <Text style="color:blue">
                   <html>
@@ -2570,6 +2159,18 @@
                 <Declare>
                 </Declare>
                 <Commands>
+                  <Assign>
+                    <Variable name="PipeData"/>
+                    <Expression>
+                      <UserCommand name="put">
+                        <Variable name="PipeData"/>
+                        <String>time.vocapia-data</String>
+                        <UserCommand name="time">
+                        </UserCommand>
+                        <String>DOUBLE</String>
+                      </UserCommand>
+                    </Expression>
+                  </Assign>
                   <Assign>
                     <Variable name="PipeData"/>
                     <Expression>
@@ -2659,6 +2260,8 @@
                   <String>planning</String>
                 </Expression>
               </Assign>
+              <UserCommand name="reset">
+              </UserCommand>
             </Commands>
             <EEdge target="S43" start ="">
             <Graphics>
@@ -2688,720 +2291,6 @@
                 <Position x-pos="23" y-pos="163"/>
               </Graphics>
             </Node>
-            <SuperNode id="S47" name="MS" comment="" exhaustive="false" preserving="false" hideLocalVar="false" hideGlobalVar="false" start="N141;">
-              <Define>
-              </Define>
-              <Declare>
-                <Variable type="String" name ="Response">
-                  <String>undefined</String>
-                </Variable>
-              </Declare>
-              <Commands>
-              </Commands>
-              <EEdge target="S49" start ="">
-              <Graphics>
-                <Arrow>
-                  <Point x-pos="653" y-pos="198" control-x-pos="670" control-y-pos="198"/>
-                  <Point x-pos="723" y-pos="198" control-x-pos="705" control-y-pos="198"/>
-                </Arrow>
-              </Graphics>
-              </EEdge>
-              <Graphics>
-                <Position x-pos="583" y-pos="163"/>
-              </Graphics>
-              <LocalVariableBadge>
-                <Position x-pos="252" y-pos="29"/>
-              </LocalVariableBadge>
-              <GlobalVariableBadge>
-                <Position x-pos="10" y-pos="10"/>
-              </GlobalVariableBadge>
-              <Node id="N136" name="History" exhaustive="false" preserving="false" history="true">
-                <Define>
-                </Define>
-                <Declare>
-                </Declare>
-                <Commands>
-                </Commands>
-                <Graphics>
-                  <Position x-pos="23" y-pos="163"/>
-                </Graphics>
-              </Node>
-              <Node id="N137" name="Insert" exhaustive="false" preserving="false" history="false">
-                <Define>
-                </Define>
-                <Declare>
-                </Declare>
-                <Commands>
-                  <Assign>
-                    <Variable name="PipeData"/>
-                    <Expression>
-                      <UserCommand name="put">
-                        <Variable name="PipeData"/>
-                        <String>data.mode-selection.nonverbal</String>
-                        <Variable name="Response"/>
-                        <String>OBJECT</String>
-                      </UserCommand>
-                    </Expression>
-                  </Assign>
-                </Commands>
-                <EEdge target="N143" start ="">
-                <Graphics>
-                  <Arrow>
-                    <Point x-pos="408" y-pos="373" control-x-pos="408" control-y-pos="390"/>
-                    <Point x-pos="408" y-pos="443" control-x-pos="408" control-y-pos="425"/>
-                  </Arrow>
-                </Graphics>
-                </EEdge>
-                <Graphics>
-                  <Position x-pos="373" y-pos="303"/>
-                </Graphics>
-              </Node>
-              <Node id="N138" name="Insert" exhaustive="false" preserving="false" history="false">
-                <Define>
-                </Define>
-                <Declare>
-                </Declare>
-                <Commands>
-                  <Assign>
-                    <Variable name="PipeData"/>
-                    <Expression>
-                      <UserCommand name="put">
-                        <Variable name="PipeData"/>
-                        <String>data.mode-selection.verbal</String>
-                        <Variable name="Response"/>
-                        <String>OBJECT</String>
-                      </UserCommand>
-                    </Expression>
-                  </Assign>
-                </Commands>
-                <EEdge target="N140" start ="">
-                <Graphics>
-                  <Arrow>
-                    <Point x-pos="828" y-pos="233" control-x-pos="828" control-y-pos="250"/>
-                    <Point x-pos="828" y-pos="303" control-x-pos="828" control-y-pos="285"/>
-                  </Arrow>
-                </Graphics>
-                </EEdge>
-                <Graphics>
-                  <Position x-pos="793" y-pos="163"/>
-                </Graphics>
-              </Node>
-              <Node id="N139" name="Request" exhaustive="false" preserving="false" history="false">
-                <Define>
-                </Define>
-                <Declare>
-                </Declare>
-                <Commands>
-                  <Assign>
-                    <Variable name="Response"/>
-                    <Expression>
-                      <UserCommand name="post">
-                        <String>Mode-Selection-Verbal</String>
-                        <Variable name="PipeData"/>
-                      </UserCommand>
-                    </Expression>
-                  </Assign>
-                </Commands>
-                <EEdge target="N138" start ="">
-                <Graphics>
-                  <Arrow>
-                    <Point x-pos="443" y-pos="198" control-x-pos="600" control-y-pos="198"/>
-                    <Point x-pos="793" y-pos="198" control-x-pos="635" control-y-pos="198"/>
-                  </Arrow>
-                </Graphics>
-                </EEdge>
-                <Graphics>
-                  <Position x-pos="373" y-pos="163"/>
-                </Graphics>
-              </Node>
-              <Node id="N140" name="Request" exhaustive="false" preserving="false" history="false">
-                <Define>
-                </Define>
-                <Declare>
-                </Declare>
-                <Commands>
-                  <Assign>
-                    <Variable name="Response"/>
-                    <Expression>
-                      <UserCommand name="post">
-                        <String>Mode-Selection-Nonverbal</String>
-                        <Variable name="PipeData"/>
-                      </UserCommand>
-                    </Expression>
-                  </Assign>
-                </Commands>
-                <EEdge target="N137" start ="">
-                <Graphics>
-                  <Arrow>
-                    <Point x-pos="793" y-pos="338" control-x-pos="635" control-y-pos="338"/>
-                    <Point x-pos="443" y-pos="338" control-x-pos="600" control-y-pos="338"/>
-                  </Arrow>
-                </Graphics>
-                </EEdge>
-                <Graphics>
-                  <Position x-pos="793" y-pos="303"/>
-                </Graphics>
-              </Node>
-              <Node id="N141" name="Reset" exhaustive="false" preserving="false" history="false">
-                <Define>
-                </Define>
-                <Declare>
-                </Declare>
-                <Commands>
-                  <UserCommand name="reset">
-                  </UserCommand>
-                </Commands>
-                <EEdge target="N139" start ="">
-                <Graphics>
-                  <Arrow>
-                    <Point x-pos="233" y-pos="198" control-x-pos="285" control-y-pos="198"/>
-                    <Point x-pos="373" y-pos="198" control-x-pos="320" control-y-pos="198"/>
-                  </Arrow>
-                </Graphics>
-                </EEdge>
-                <Graphics>
-                  <Position x-pos="163" y-pos="163"/>
-                </Graphics>
-              </Node>
-              <Node id="N142" name="Insert" exhaustive="false" preserving="false" history="false">
-                <Define>
-                </Define>
-                <Declare>
-                </Declare>
-                <Commands>
-                  <Assign>
-                    <Variable name="PipeData"/>
-                    <Expression>
-                      <UserCommand name="put">
-                        <Variable name="PipeData"/>
-                        <String>time.mode-selection</String>
-                        <Variable name="TimeDelay"/>
-                        <String>DOUBLE</String>
-                      </UserCommand>
-                    </Expression>
-                  </Assign>
-                </Commands>
-                <Graphics>
-                  <Position x-pos="793" y-pos="443"/>
-                </Graphics>
-              </Node>
-              <Node id="N143" name="Time" exhaustive="false" preserving="false" history="false">
-                <Define>
-                </Define>
-                <Declare>
-                </Declare>
-                <Commands>
-                  <Assign>
-                    <Variable name="TimeDelay"/>
-                    <Expression>
-                      <UserCommand name="time">
-                      </UserCommand>
-                    </Expression>
-                  </Assign>
-                </Commands>
-                <EEdge target="N142" start ="">
-                <Graphics>
-                  <Arrow>
-                    <Point x-pos="443" y-pos="478" control-x-pos="600" control-y-pos="478"/>
-                    <Point x-pos="793" y-pos="478" control-x-pos="635" control-y-pos="478"/>
-                  </Arrow>
-                </Graphics>
-                </EEdge>
-                <Graphics>
-                  <Position x-pos="373" y-pos="443"/>
-                </Graphics>
-              </Node>
-            </SuperNode>
-            <SuperNode id="S48" name="DM" comment="" exhaustive="false" preserving="false" hideLocalVar="false" hideGlobalVar="false" start="N147;">
-              <Define>
-              </Define>
-              <Declare>
-                <Variable type="String" name ="Response">
-                  <String>undefined</String>
-                </Variable>
-              </Declare>
-              <Commands>
-              </Commands>
-              <EEdge target="S47" start ="">
-              <Graphics>
-                <Arrow>
-                  <Point x-pos="513" y-pos="198" control-x-pos="530" control-y-pos="198"/>
-                  <Point x-pos="583" y-pos="198" control-x-pos="565" control-y-pos="198"/>
-                </Arrow>
-              </Graphics>
-              </EEdge>
-              <Graphics>
-                <Position x-pos="443" y-pos="163"/>
-              </Graphics>
-              <LocalVariableBadge>
-                <Position x-pos="237" y-pos="27"/>
-              </LocalVariableBadge>
-              <GlobalVariableBadge>
-                <Position x-pos="10" y-pos="10"/>
-              </GlobalVariableBadge>
-              <Node id="N144" name="History" exhaustive="false" preserving="false" history="true">
-                <Define>
-                </Define>
-                <Declare>
-                </Declare>
-                <Commands>
-                </Commands>
-                <Graphics>
-                  <Position x-pos="23" y-pos="163"/>
-                </Graphics>
-              </Node>
-              <Node id="N145" name="Insert" exhaustive="false" preserving="false" history="false">
-                <Define>
-                </Define>
-                <Declare>
-                </Declare>
-                <Commands>
-                  <Assign>
-                    <Variable name="PipeData"/>
-                    <Expression>
-                      <UserCommand name="put">
-                        <Variable name="PipeData"/>
-                        <String>data.dialog-management</String>
-                        <Variable name="Response"/>
-                        <String>STRING</String>
-                      </UserCommand>
-                    </Expression>
-                  </Assign>
-                </Commands>
-                <EEdge target="N150" start ="">
-                <Graphics>
-                  <Arrow>
-                    <Point x-pos="828" y-pos="233" control-x-pos="828" control-y-pos="250"/>
-                    <Point x-pos="828" y-pos="303" control-x-pos="828" control-y-pos="285"/>
-                  </Arrow>
-                </Graphics>
-                </EEdge>
-                <Graphics>
-                  <Position x-pos="793" y-pos="163"/>
-                </Graphics>
-              </Node>
-              <Node id="N146" name="Request" exhaustive="false" preserving="false" history="false">
-                <Define>
-                </Define>
-                <Declare>
-                </Declare>
-                <Commands>
-                  <Assign>
-                    <Variable name="Response"/>
-                    <Expression>
-                      <UserCommand name="post">
-                        <String>Dialog-Management</String>
-                        <Variable name="PipeData"/>
-                      </UserCommand>
-                    </Expression>
-                  </Assign>
-                </Commands>
-                <EEdge target="N145" start ="">
-                <Graphics>
-                  <Arrow>
-                    <Point x-pos="443" y-pos="198" control-x-pos="565" control-y-pos="198"/>
-                    <Point x-pos="793" y-pos="198" control-x-pos="670" control-y-pos="198"/>
-                  </Arrow>
-                </Graphics>
-                </EEdge>
-                <Graphics>
-                  <Position x-pos="373" y-pos="163"/>
-                </Graphics>
-              </Node>
-              <Node id="N147" name="Reset" exhaustive="false" preserving="false" history="false">
-                <Define>
-                </Define>
-                <Declare>
-                </Declare>
-                <Commands>
-                  <UserCommand name="reset">
-                  </UserCommand>
-                </Commands>
-                <EEdge target="N146" start ="">
-                <Graphics>
-                  <Arrow>
-                    <Point x-pos="233" y-pos="198" control-x-pos="355" control-y-pos="198"/>
-                    <Point x-pos="373" y-pos="198" control-x-pos="250" control-y-pos="198"/>
-                  </Arrow>
-                </Graphics>
-                </EEdge>
-                <Graphics>
-                  <Position x-pos="163" y-pos="163"/>
-                </Graphics>
-              </Node>
-              <Node id="N148" name="Insert" exhaustive="false" preserving="false" history="false">
-                <Define>
-                </Define>
-                <Declare>
-                </Declare>
-                <Commands>
-                  <Assign>
-                    <Variable name="PipeData"/>
-                    <Expression>
-                      <UserCommand name="put">
-                        <Variable name="PipeData"/>
-                        <String>time.dialog-management</String>
-                        <Variable name="TimeDelay"/>
-                        <String>DOUBLE</String>
-                      </UserCommand>
-                    </Expression>
-                  </Assign>
-                </Commands>
-                <Graphics>
-                  <Position x-pos="373" y-pos="303"/>
-                </Graphics>
-              </Node>
-              <Node id="N150" name="Time" exhaustive="false" preserving="false" history="false">
-                <Define>
-                </Define>
-                <Declare>
-                </Declare>
-                <Commands>
-                  <Assign>
-                    <Variable name="TimeDelay"/>
-                    <Expression>
-                      <UserCommand name="time">
-                      </UserCommand>
-                    </Expression>
-                  </Assign>
-                </Commands>
-                <EEdge target="N148" start ="">
-                <Graphics>
-                  <Arrow>
-                    <Point x-pos="793" y-pos="338" control-x-pos="635" control-y-pos="338"/>
-                    <Point x-pos="443" y-pos="338" control-x-pos="600" control-y-pos="338"/>
-                  </Arrow>
-                </Graphics>
-                </EEdge>
-                <Graphics>
-                  <Position x-pos="793" y-pos="303"/>
-                </Graphics>
-              </Node>
-            </SuperNode>
-            <SuperNode id="S49" name="LG" comment="" exhaustive="false" preserving="false" hideLocalVar="false" hideGlobalVar="false" start="N154;">
-              <Define>
-              </Define>
-              <Declare>
-                <Variable type="String" name ="Response">
-                  <String>undefined</String>
-                </Variable>
-              </Declare>
-              <Commands>
-              </Commands>
-              <Graphics>
-                <Position x-pos="723" y-pos="163"/>
-              </Graphics>
-              <LocalVariableBadge>
-                <Position x-pos="242" y-pos="45"/>
-              </LocalVariableBadge>
-              <GlobalVariableBadge>
-                <Position x-pos="10" y-pos="10"/>
-              </GlobalVariableBadge>
-              <Node id="N151" name="History" exhaustive="false" preserving="false" history="true">
-                <Define>
-                </Define>
-                <Declare>
-                </Declare>
-                <Commands>
-                </Commands>
-                <Graphics>
-                  <Position x-pos="23" y-pos="163"/>
-                </Graphics>
-              </Node>
-              <Node id="N152" name="Insert" exhaustive="false" preserving="false" history="false">
-                <Define>
-                </Define>
-                <Declare>
-                </Declare>
-                <Commands>
-                  <Assign>
-                    <Variable name="PipeData"/>
-                    <Expression>
-                      <UserCommand name="put">
-                        <Variable name="PipeData"/>
-                        <String>data.language-generation</String>
-                        <Variable name="Response"/>
-                        <String>OBJECT</String>
-                      </UserCommand>
-                    </Expression>
-                  </Assign>
-                </Commands>
-                <EEdge target="N155" start ="">
-                <Graphics>
-                  <Arrow>
-                    <Point x-pos="828" y-pos="233" control-x-pos="828" control-y-pos="250"/>
-                    <Point x-pos="828" y-pos="303" control-x-pos="828" control-y-pos="285"/>
-                  </Arrow>
-                </Graphics>
-                </EEdge>
-                <Graphics>
-                  <Position x-pos="793" y-pos="163"/>
-                </Graphics>
-              </Node>
-              <Node id="N153" name="Request" exhaustive="false" preserving="false" history="false">
-                <Define>
-                </Define>
-                <Declare>
-                </Declare>
-                <Commands>
-                  <Assign>
-                    <Variable name="Response"/>
-                    <Expression>
-                      <UserCommand name="post">
-                        <String>Language-Generation</String>
-                        <Variable name="PipeData"/>
-                      </UserCommand>
-                    </Expression>
-                  </Assign>
-                </Commands>
-                <EEdge target="N152" start ="">
-                <Graphics>
-                  <Arrow>
-                    <Point x-pos="443" y-pos="198" control-x-pos="565" control-y-pos="198"/>
-                    <Point x-pos="793" y-pos="198" control-x-pos="670" control-y-pos="198"/>
-                  </Arrow>
-                </Graphics>
-                </EEdge>
-                <Graphics>
-                  <Position x-pos="373" y-pos="163"/>
-                </Graphics>
-              </Node>
-              <Node id="N154" name="Reset" exhaustive="false" preserving="false" history="false">
-                <Define>
-                </Define>
-                <Declare>
-                </Declare>
-                <Commands>
-                  <UserCommand name="reset">
-                  </UserCommand>
-                </Commands>
-                <EEdge target="N153" start ="">
-                <Graphics>
-                  <Arrow>
-                    <Point x-pos="233" y-pos="198" control-x-pos="285" control-y-pos="198"/>
-                    <Point x-pos="373" y-pos="198" control-x-pos="320" control-y-pos="198"/>
-                  </Arrow>
-                </Graphics>
-                </EEdge>
-                <Graphics>
-                  <Position x-pos="163" y-pos="163"/>
-                </Graphics>
-              </Node>
-              <Node id="N155" name="Time" exhaustive="false" preserving="false" history="false">
-                <Define>
-                </Define>
-                <Declare>
-                </Declare>
-                <Commands>
-                  <Assign>
-                    <Variable name="TimeDelay"/>
-                    <Expression>
-                      <UserCommand name="time">
-                      </UserCommand>
-                    </Expression>
-                  </Assign>
-                </Commands>
-                <EEdge target="N156" start ="">
-                <Graphics>
-                  <Arrow>
-                    <Point x-pos="793" y-pos="338" control-x-pos="635" control-y-pos="338"/>
-                    <Point x-pos="443" y-pos="338" control-x-pos="600" control-y-pos="338"/>
-                  </Arrow>
-                </Graphics>
-                </EEdge>
-                <Graphics>
-                  <Position x-pos="793" y-pos="303"/>
-                </Graphics>
-              </Node>
-              <Node id="N156" name="Insert" exhaustive="false" preserving="false" history="false">
-                <Define>
-                </Define>
-                <Declare>
-                </Declare>
-                <Commands>
-                  <Assign>
-                    <Variable name="PipeData"/>
-                    <Expression>
-                      <UserCommand name="put">
-                        <Variable name="PipeData"/>
-                        <String>time.language-generation</String>
-                        <Variable name="TimeDelay"/>
-                        <String>DOUBLE</String>
-                      </UserCommand>
-                    </Expression>
-                  </Assign>
-                </Commands>
-                <Graphics>
-                  <Position x-pos="373" y-pos="303"/>
-                </Graphics>
-              </Node>
-            </SuperNode>
-            <SuperNode id="S50" name="LA" comment="" exhaustive="false" preserving="false" hideLocalVar="false" hideGlobalVar="false" start="N161;">
-              <Define>
-              </Define>
-              <Declare>
-                <Variable type="String" name ="Response">
-                  <String>undefined</String>
-                </Variable>
-              </Declare>
-              <Commands>
-              </Commands>
-              <EEdge target="S48" start ="">
-              <Graphics>
-                <Arrow>
-                  <Point x-pos="373" y-pos="198" control-x-pos="390" control-y-pos="198"/>
-                  <Point x-pos="443" y-pos="198" control-x-pos="425" control-y-pos="198"/>
-                </Arrow>
-              </Graphics>
-              </EEdge>
-              <Graphics>
-                <Position x-pos="303" y-pos="163"/>
-              </Graphics>
-              <LocalVariableBadge>
-                <Position x-pos="271" y-pos="56"/>
-              </LocalVariableBadge>
-              <GlobalVariableBadge>
-                <Position x-pos="10" y-pos="10"/>
-              </GlobalVariableBadge>
-              <Node id="N157" name="History" exhaustive="false" preserving="false" history="true">
-                <Define>
-                </Define>
-                <Declare>
-                </Declare>
-                <Commands>
-                </Commands>
-                <Graphics>
-                  <Position x-pos="23" y-pos="163"/>
-                </Graphics>
-              </Node>
-              <Node id="N158" name="Insert" exhaustive="false" preserving="false" history="false">
-                <Define>
-                </Define>
-                <Declare>
-                </Declare>
-                <Commands>
-                  <Assign>
-                    <Variable name="PipeData"/>
-                    <Expression>
-                      <UserCommand name="put">
-                        <Variable name="PipeData"/>
-                        <String>data.language-analysis</String>
-                        <Variable name="Response"/>
-                        <String>STRING</String>
-                      </UserCommand>
-                    </Expression>
-                  </Assign>
-                </Commands>
-                <EEdge target="N163" start ="">
-                <Graphics>
-                  <Arrow>
-                    <Point x-pos="828" y-pos="233" control-x-pos="828" control-y-pos="250"/>
-                    <Point x-pos="828" y-pos="303" control-x-pos="828" control-y-pos="285"/>
-                  </Arrow>
-                </Graphics>
-                </EEdge>
-                <Graphics>
-                  <Position x-pos="793" y-pos="163"/>
-                </Graphics>
-              </Node>
-              <Node id="N160" name="Request" exhaustive="false" preserving="false" history="false">
-                <Define>
-                </Define>
-                <Declare>
-                </Declare>
-                <Commands>
-                  <Assign>
-                    <Variable name="Response"/>
-                    <Expression>
-                      <UserCommand name="post">
-                        <String>Language-Analysis</String>
-                        <Variable name="PipeData"/>
-                      </UserCommand>
-                    </Expression>
-                  </Assign>
-                </Commands>
-                <EEdge target="N158" start ="">
-                <Graphics>
-                  <Arrow>
-                    <Point x-pos="443" y-pos="198" control-x-pos="600" control-y-pos="198"/>
-                    <Point x-pos="793" y-pos="198" control-x-pos="635" control-y-pos="198"/>
-                  </Arrow>
-                </Graphics>
-                </EEdge>
-                <Graphics>
-                  <Position x-pos="373" y-pos="163"/>
-                </Graphics>
-              </Node>
-              <Node id="N161" name="Reset" exhaustive="false" preserving="false" history="false">
-                <Define>
-                </Define>
-                <Declare>
-                </Declare>
-                <Commands>
-                  <UserCommand name="reset">
-                  </UserCommand>
-                </Commands>
-                <EEdge target="N160" start ="">
-                <Graphics>
-                  <Arrow>
-                    <Point x-pos="233" y-pos="198" control-x-pos="285" control-y-pos="198"/>
-                    <Point x-pos="373" y-pos="198" control-x-pos="320" control-y-pos="198"/>
-                  </Arrow>
-                </Graphics>
-                </EEdge>
-                <Graphics>
-                  <Position x-pos="163" y-pos="163"/>
-                </Graphics>
-              </Node>
-              <Node id="N163" name="Time" exhaustive="false" preserving="false" history="false">
-                <Define>
-                </Define>
-                <Declare>
-                </Declare>
-                <Commands>
-                  <Assign>
-                    <Variable name="TimeDelay"/>
-                    <Expression>
-                      <UserCommand name="time">
-                      </UserCommand>
-                    </Expression>
-                  </Assign>
-                </Commands>
-                <EEdge target="N164" start ="">
-                <Graphics>
-                  <Arrow>
-                    <Point x-pos="793" y-pos="338" control-x-pos="635" control-y-pos="338"/>
-                    <Point x-pos="443" y-pos="338" control-x-pos="600" control-y-pos="338"/>
-                  </Arrow>
-                </Graphics>
-                </EEdge>
-                <Graphics>
-                  <Position x-pos="793" y-pos="303"/>
-                </Graphics>
-              </Node>
-              <Node id="N164" name="Insert" exhaustive="false" preserving="false" history="false">
-                <Define>
-                </Define>
-                <Declare>
-                </Declare>
-                <Commands>
-                  <Assign>
-                    <Variable name="PipeData"/>
-                    <Expression>
-                      <UserCommand name="put">
-                        <Variable name="PipeData"/>
-                        <String>time.language-analysis</String>
-                        <Variable name="TimeDelay"/>
-                        <String>DOUBLE</String>
-                      </UserCommand>
-                    </Expression>
-                  </Assign>
-                </Commands>
-                <Graphics>
-                  <Position x-pos="373" y-pos="303"/>
-                </Graphics>
-              </Node>
-            </SuperNode>
             <SuperNode id="S51" name="VA" comment="" exhaustive="false" preserving="false" hideLocalVar="false" hideGlobalVar="false" start="N166;">
               <Define>
               </Define>
@@ -3409,7 +2298,7 @@
               </Declare>
               <Commands>
               </Commands>
-              <EEdge target="S50" start ="">
+              <EEdge target="S6" start ="">
               <Graphics>
                 <Arrow>
                   <Point x-pos="233" y-pos="198" control-x-pos="250" control-y-pos="198"/>
@@ -3478,6 +2367,410 @@
                     </Expression>
                   </Assign>
                 </Commands>
+                <Graphics>
+                  <Position x-pos="233" y-pos="163"/>
+                </Graphics>
+              </Node>
+            </SuperNode>
+            <SuperNode id="S1" name="MS" comment="" exhaustive="false" preserving="false" hideLocalVar="false" hideGlobalVar="false" start="N25;">
+              <Define>
+              </Define>
+              <Declare>
+                <Variable type="String" name ="Response">
+                  <String>undefined</String>
+                </Variable>
+              </Declare>
+              <Commands>
+                <UserCommand name="reset">
+                </UserCommand>
+              </Commands>
+              <EEdge target="S7" start ="">
+              <Graphics>
+                <Arrow>
+                  <Point x-pos="653" y-pos="198" control-x-pos="670" control-y-pos="198"/>
+                  <Point x-pos="723" y-pos="198" control-x-pos="705" control-y-pos="198"/>
+                </Arrow>
+              </Graphics>
+              </EEdge>
+              <Graphics>
+                <Position x-pos="583" y-pos="163"/>
+              </Graphics>
+              <LocalVariableBadge>
+                <Position x-pos="385" y-pos="143"/>
+              </LocalVariableBadge>
+              <GlobalVariableBadge>
+                <Position x-pos="10" y-pos="10"/>
+              </GlobalVariableBadge>
+              <Node id="N23" name="History" exhaustive="false" preserving="false" history="true">
+                <Define>
+                </Define>
+                <Declare>
+                </Declare>
+                <Commands>
+                </Commands>
+                <Graphics>
+                  <Position x-pos="23" y-pos="163"/>
+                </Graphics>
+              </Node>
+              <Node id="N24" name="Insert" exhaustive="false" preserving="false" history="false">
+                <Define>
+                </Define>
+                <Declare>
+                </Declare>
+                <Commands>
+                  <Assign>
+                    <Variable name="PipeData"/>
+                    <Expression>
+                      <UserCommand name="put">
+                        <Variable name="PipeData"/>
+                        <String>time.mode-selection</String>
+                        <UserCommand name="time">
+                        </UserCommand>
+                        <String>DOUBLE</String>
+                      </UserCommand>
+                    </Expression>
+                  </Assign>
+                  <Assign>
+                    <Variable name="PipeData"/>
+                    <Expression>
+                      <UserCommand name="put">
+                        <Variable name="PipeData"/>
+                        <String>data.mode-selection</String>
+                        <Variable name="Response"/>
+                        <String>OBJECT</String>
+                      </UserCommand>
+                    </Expression>
+                  </Assign>
+                </Commands>
+                <Graphics>
+                  <Position x-pos="233" y-pos="303"/>
+                </Graphics>
+              </Node>
+              <Node id="N25" name="Request" exhaustive="false" preserving="false" history="false">
+                <Define>
+                </Define>
+                <Declare>
+                </Declare>
+                <Commands>
+                  <Assign>
+                    <Variable name="Response"/>
+                    <Expression>
+                      <UserCommand name="post">
+                        <String>Mode-Selection</String>
+                        <Variable name="PipeData"/>
+                      </UserCommand>
+                    </Expression>
+                  </Assign>
+                </Commands>
+                <EEdge target="N24" start ="">
+                <Graphics>
+                  <Arrow>
+                    <Point x-pos="268" y-pos="233" control-x-pos="268" control-y-pos="250"/>
+                    <Point x-pos="268" y-pos="303" control-x-pos="268" control-y-pos="285"/>
+                  </Arrow>
+                </Graphics>
+                </EEdge>
+                <Graphics>
+                  <Position x-pos="233" y-pos="163"/>
+                </Graphics>
+              </Node>
+            </SuperNode>
+            <SuperNode id="S5" name="DM" comment="" exhaustive="false" preserving="false" hideLocalVar="false" hideGlobalVar="false" start="N29;">
+              <Define>
+              </Define>
+              <Declare>
+                <Variable type="String" name ="Response">
+                  <String>undefined</String>
+                </Variable>
+              </Declare>
+              <Commands>
+                <UserCommand name="reset">
+                </UserCommand>
+              </Commands>
+              <EEdge target="S1" start ="">
+              <Graphics>
+                <Arrow>
+                  <Point x-pos="513" y-pos="198" control-x-pos="530" control-y-pos="198"/>
+                  <Point x-pos="583" y-pos="198" control-x-pos="565" control-y-pos="198"/>
+                </Arrow>
+              </Graphics>
+              </EEdge>
+              <Graphics>
+                <Position x-pos="443" y-pos="163"/>
+              </Graphics>
+              <LocalVariableBadge>
+                <Position x-pos="404" y-pos="173"/>
+              </LocalVariableBadge>
+              <GlobalVariableBadge>
+                <Position x-pos="10" y-pos="10"/>
+              </GlobalVariableBadge>
+              <Node id="N27" name="History" exhaustive="false" preserving="false" history="true">
+                <Define>
+                </Define>
+                <Declare>
+                </Declare>
+                <Commands>
+                </Commands>
+                <Graphics>
+                  <Position x-pos="23" y-pos="163"/>
+                </Graphics>
+              </Node>
+              <Node id="N29" name="Request" exhaustive="false" preserving="false" history="false">
+                <Define>
+                </Define>
+                <Declare>
+                </Declare>
+                <Commands>
+                  <Assign>
+                    <Variable name="Response"/>
+                    <Expression>
+                      <UserCommand name="post">
+                        <String>Dialog-Management</String>
+                        <Variable name="PipeData"/>
+                      </UserCommand>
+                    </Expression>
+                  </Assign>
+                </Commands>
+                <EEdge target="N42" start ="">
+                <Graphics>
+                  <Arrow>
+                    <Point x-pos="268" y-pos="233" control-x-pos="268" control-y-pos="250"/>
+                    <Point x-pos="268" y-pos="303" control-x-pos="268" control-y-pos="285"/>
+                  </Arrow>
+                </Graphics>
+                </EEdge>
+                <Graphics>
+                  <Position x-pos="233" y-pos="163"/>
+                </Graphics>
+              </Node>
+              <Node id="N42" name="Insert" exhaustive="false" preserving="false" history="false">
+                <Define>
+                </Define>
+                <Declare>
+                </Declare>
+                <Commands>
+                  <Assign>
+                    <Variable name="PipeData"/>
+                    <Expression>
+                      <UserCommand name="put">
+                        <Variable name="PipeData"/>
+                        <String>time.dialog-management</String>
+                        <UserCommand name="time">
+                        </UserCommand>
+                        <String>DOUBLE</String>
+                      </UserCommand>
+                    </Expression>
+                  </Assign>
+                  <Assign>
+                    <Variable name="PipeData"/>
+                    <Expression>
+                      <UserCommand name="put">
+                        <Variable name="PipeData"/>
+                        <String>data.dialog-management</String>
+                        <Variable name="Response"/>
+                        <String>STRING</String>
+                      </UserCommand>
+                    </Expression>
+                  </Assign>
+                </Commands>
+                <Graphics>
+                  <Position x-pos="233" y-pos="303"/>
+                </Graphics>
+              </Node>
+            </SuperNode>
+            <SuperNode id="S6" name="LA" comment="" exhaustive="false" preserving="false" hideLocalVar="false" hideGlobalVar="false" start="N47;">
+              <Define>
+              </Define>
+              <Declare>
+                <Variable type="String" name ="Response">
+                  <String>undefined</String>
+                </Variable>
+              </Declare>
+              <Commands>
+                <UserCommand name="reset">
+                </UserCommand>
+              </Commands>
+              <EEdge target="S5" start ="">
+              <Graphics>
+                <Arrow>
+                  <Point x-pos="373" y-pos="198" control-x-pos="390" control-y-pos="198"/>
+                  <Point x-pos="443" y-pos="198" control-x-pos="425" control-y-pos="198"/>
+                </Arrow>
+              </Graphics>
+              </EEdge>
+              <Graphics>
+                <Position x-pos="303" y-pos="163"/>
+              </Graphics>
+              <LocalVariableBadge>
+                <Position x-pos="460" y-pos="147"/>
+              </LocalVariableBadge>
+              <GlobalVariableBadge>
+                <Position x-pos="10" y-pos="10"/>
+              </GlobalVariableBadge>
+              <Node id="N45" name="History" exhaustive="false" preserving="false" history="true">
+                <Define>
+                </Define>
+                <Declare>
+                </Declare>
+                <Commands>
+                </Commands>
+                <Graphics>
+                  <Position x-pos="23" y-pos="163"/>
+                </Graphics>
+              </Node>
+              <Node id="N46" name="Insert" exhaustive="false" preserving="false" history="false">
+                <Define>
+                </Define>
+                <Declare>
+                </Declare>
+                <Commands>
+                  <Assign>
+                    <Variable name="PipeData"/>
+                    <Expression>
+                      <UserCommand name="put">
+                        <Variable name="PipeData"/>
+                        <String>time.language-analysis</String>
+                        <UserCommand name="time">
+                        </UserCommand>
+                        <String>DOUBLE</String>
+                      </UserCommand>
+                    </Expression>
+                  </Assign>
+                  <Assign>
+                    <Variable name="PipeData"/>
+                    <Expression>
+                      <UserCommand name="put">
+                        <Variable name="PipeData"/>
+                        <String>data.language-analysis</String>
+                        <Variable name="Response"/>
+                        <String>STRING</String>
+                      </UserCommand>
+                    </Expression>
+                  </Assign>
+                </Commands>
+                <Graphics>
+                  <Position x-pos="233" y-pos="303"/>
+                </Graphics>
+              </Node>
+              <Node id="N47" name="Request" exhaustive="false" preserving="false" history="false">
+                <Define>
+                </Define>
+                <Declare>
+                </Declare>
+                <Commands>
+                  <Assign>
+                    <Variable name="Response"/>
+                    <Expression>
+                      <UserCommand name="post">
+                        <String>Language-Analysis</String>
+                        <Variable name="PipeData"/>
+                      </UserCommand>
+                    </Expression>
+                  </Assign>
+                </Commands>
+                <EEdge target="N46" start ="">
+                <Graphics>
+                  <Arrow>
+                    <Point x-pos="268" y-pos="233" control-x-pos="268" control-y-pos="250"/>
+                    <Point x-pos="268" y-pos="303" control-x-pos="268" control-y-pos="285"/>
+                  </Arrow>
+                </Graphics>
+                </EEdge>
+                <Graphics>
+                  <Position x-pos="233" y-pos="163"/>
+                </Graphics>
+              </Node>
+            </SuperNode>
+            <SuperNode id="S7" name="LG" comment="" exhaustive="false" preserving="false" hideLocalVar="false" hideGlobalVar="false" start="N51;">
+              <Define>
+              </Define>
+              <Declare>
+                <Variable type="String" name ="Response">
+                  <String>undefined</String>
+                </Variable>
+              </Declare>
+              <Commands>
+                <UserCommand name="reset">
+                </UserCommand>
+              </Commands>
+              <Graphics>
+                <Position x-pos="723" y-pos="163"/>
+              </Graphics>
+              <LocalVariableBadge>
+                <Position x-pos="242" y-pos="45"/>
+              </LocalVariableBadge>
+              <GlobalVariableBadge>
+                <Position x-pos="10" y-pos="10"/>
+              </GlobalVariableBadge>
+              <Node id="N48" name="History" exhaustive="false" preserving="false" history="true">
+                <Define>
+                </Define>
+                <Declare>
+                </Declare>
+                <Commands>
+                </Commands>
+                <Graphics>
+                  <Position x-pos="23" y-pos="163"/>
+                </Graphics>
+              </Node>
+              <Node id="N49" name="Insert" exhaustive="false" preserving="false" history="false">
+                <Define>
+                </Define>
+                <Declare>
+                </Declare>
+                <Commands>
+                  <Assign>
+                    <Variable name="PipeData"/>
+                    <Expression>
+                      <UserCommand name="put">
+                        <Variable name="PipeData"/>
+                        <String>time.language-generation</String>
+                        <UserCommand name="time">
+                        </UserCommand>
+                        <String>DOUBLE</String>
+                      </UserCommand>
+                    </Expression>
+                  </Assign>
+                  <Assign>
+                    <Variable name="PipeData"/>
+                    <Expression>
+                      <UserCommand name="put">
+                        <Variable name="PipeData"/>
+                        <String>data.language-generation</String>
+                        <Variable name="Response"/>
+                        <String>OBJECT</String>
+                      </UserCommand>
+                    </Expression>
+                  </Assign>
+                </Commands>
+                <Graphics>
+                  <Position x-pos="233" y-pos="303"/>
+                </Graphics>
+              </Node>
+              <Node id="N51" name="Request" exhaustive="false" preserving="false" history="false">
+                <Define>
+                </Define>
+                <Declare>
+                </Declare>
+                <Commands>
+                  <Assign>
+                    <Variable name="Response"/>
+                    <Expression>
+                      <UserCommand name="post">
+                        <String>Language-Generation</String>
+                        <Variable name="PipeData"/>
+                      </UserCommand>
+                    </Expression>
+                  </Assign>
+                </Commands>
+                <EEdge target="N49" start ="">
+                <Graphics>
+                  <Arrow>
+                    <Point x-pos="268" y-pos="233" control-x-pos="268" control-y-pos="250"/>
+                    <Point x-pos="268" y-pos="303" control-x-pos="268" control-y-pos="285"/>
+                  </Arrow>
+                </Graphics>
+                </EEdge>
                 <Graphics>
                   <Position x-pos="233" y-pos="163"/>
                 </Graphics>
@@ -4941,6 +4234,9 @@
       <Argument name="Arg1" type="int"/>
     </UserCommand>
     <UserCommand name="log" classname ="eu.kristina.vsm.Player.sInstance" method="log">
+      <Argument name="Arg0" type="java.lang.String"/>
+    </UserCommand>
+    <UserCommand name="count" classname ="eu.kristina.vsm.Player.sInstance" method="count">
       <Argument name="Arg0" type="java.lang.String"/>
     </UserCommand>
     <UserCommand name="ssi" classname ="eu.kristina.vsm.Player.sInstance" method="ssi">

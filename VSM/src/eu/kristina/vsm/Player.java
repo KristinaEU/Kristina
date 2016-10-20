@@ -50,7 +50,7 @@ public final class Player implements RunTimePlayer, SSIEventHandler {
             = new SimpleDateFormat("EEE, d MMM yyyy HH:mm:ss:SSS");
     // The format to log dates
     private final SimpleDateFormat mLogFormat
-            = new SimpleDateFormat("yyyy_MM_dd_hh_HH_ss_SSS");
+            = new SimpleDateFormat("yyyy_MM_dd_HH_mm_ss_SSS");
     // The singelton logger instance
     private final LOGDefaultLogger mLogger
             = LOGDefaultLogger.getInstance();
@@ -457,9 +457,20 @@ public final class Player implements RunTimePlayer, SSIEventHandler {
             final FileOutputStream stream = new FileOutputStream(file);
             final Writer out = new OutputStreamWriter(stream, "UTF8");
             out.write(object.toString(4));
+            out.flush();
             out.close();
+            stream.close();
         } catch (final IOException exc) {
             mLogger.failure(exc.toString());
+        }
+    }
+
+    ////////////////////////////////////////////////////////////////////////////
+    public final int count(final String file) {
+        try {
+            return (int)Files.lines(Paths.get(file)).count();
+        } catch (final IOException exc) {
+            return 0;
         }
     }
 

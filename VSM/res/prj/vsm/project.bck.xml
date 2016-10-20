@@ -49,12 +49,12 @@
       <Feature key="restful.resource.8.name" value="Mode-Selection-Nonverbal"/>
       <Feature key="restful.resource.8.path" value="http://kristina.taln.upf.edu/services/mode_selection/nonverbal"/>
       <Feature key="restful.resource.8.cons" value="application/json"/>
-      <Feature key="restful.resource.8.prod" value="application/json"/>
+      <Feature key="restful.resource.8.prod" value="application/json"/>      
       <Feature key="restful.resource.9.host" value="UPF-TALN"/>
       <Feature key="restful.resource.9.name" value="Mode-Selection"/>
       <Feature key="restful.resource.9.path" value="http://kristina.taln.upf.edu/services/mode_selection"/>
       <Feature key="restful.resource.9.cons" value="application/json"/>
-      <Feature key="restful.resource.9.prod" value="application/json"/>
+      <Feature key="restful.resource.9.prod" value="application/json"/>      
       <Feature key="restful.resource.10.host" value="UPF-GTI"/>
       <Feature key="restful.resource.10.name" value="Avatar-Idle"/>
       <Feature key="restful.resource.10.path" value="https://webglstudio.org:8080/idle"/>
