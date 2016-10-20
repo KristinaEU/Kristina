@@ -25,6 +25,8 @@ import eu.kristina.vsm.ssi.SSIEventNotifier;
 import eu.kristina.vsm.util.Timer;
 import eu.kristina.vsm.util.Utilities;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import javax.xml.parsers.ParserConfigurationException;
 import org.json.JSONObject;
 import org.w3c.dom.DOMException;
@@ -37,6 +39,9 @@ public final class Player implements RunTimePlayer, SSIEventHandler {
 
     // The singelton player instance
     public static Player sInstance = null;
+    // Tzhe format to print dates
+    private final SimpleDateFormat mFormat
+            = new SimpleDateFormat("EEE, d MMM yyyy HH:mm:ss:SSS");
     // The singelton logger instance
     private final LOGDefaultLogger mLogger
             = LOGDefaultLogger.getInstance();
@@ -86,7 +91,7 @@ public final class Player implements RunTimePlayer, SSIEventHandler {
             final String path = mPlayerConfig.getProperty("restful.resource." + i + ".path");
             final String cons = mPlayerConfig.getProperty("restful.resource." + i + ".cons");
             final String prod = mPlayerConfig.getProperty("restful.resource." + i + ".prod");
-            // Create the service data
+            // Create the service date
             final Resource resource = new Resource(host, name, path, cons, prod);
             // Print some information
             mLogger.message("Registering RESTful service resource '" + resource + "'" + "\r\n");
@@ -176,6 +181,7 @@ public final class Player implements RunTimePlayer, SSIEventHandler {
         // Produce the initial object
         object.put("uuid", id());
         object.put("type", "idle");
+        object.put("date", date());
         object.put("meta", new JSONObject("{\"avatar\":\"KRISTINA\"}"));
         object.put("data", new JSONObject(ActionFactory.blink(duration)));
         // Execute POST request
@@ -194,6 +200,7 @@ public final class Player implements RunTimePlayer, SSIEventHandler {
         // Produce the initial object
         object.put("uuid", id());
         object.put("type", "idle");
+        object.put("date", date());
         object.put("meta", new JSONObject("{\"avatar\":\"KRISTINA\"}"));
         object.put("data", new JSONObject(ActionFactory.gaze(speed, angle, direction)));
         // Execute POST request
@@ -202,11 +209,12 @@ public final class Player implements RunTimePlayer, SSIEventHandler {
 
     ////////////////////////////////////////////////////////////////////////////
     // Produce an inital envelope
-    public final String create(final String type, final String meta) {
+    public final String turn(final String meta) {
         final JSONObject object = new JSONObject();
         // Produce the initial object
         object.put("uuid", id());
-        object.put("type", type);
+        object.put("type", "turn");
+        object.put("date", date());
         object.put("meta", new JSONObject(meta));
         object.put("data", new JSONObject());
         // Return the initial object
@@ -424,6 +432,10 @@ public final class Player implements RunTimePlayer, SSIEventHandler {
 
     public final String time() {
         return Long.toString(mTimer.time());
+    }
+
+    public final String date() {
+        return mFormat.format(new Date());
     }
 
     ////////////////////////////////////////////////////////////////////////////
