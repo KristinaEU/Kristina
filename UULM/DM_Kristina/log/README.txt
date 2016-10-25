@@ -1,2 +1,0 @@
-The logfile name consists of the user name as well as the start date and time for one dialogue.
-Each logfile contains the LA and KI input in the order in was produced. This information can be used to replicate the DM process accurately.

@@ -9,6 +9,7 @@ import java.time.LocalTime;
 import java.util.ListIterator;
 import java.util.logging.FileHandler;
 import java.util.logging.Handler;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import javax.json.Json;
@@ -38,21 +39,22 @@ import presenter.KristinaPresenter;
 public class KristinaServlet {
 	
 	@POST
-	@Produces(MediaType.TEXT_PLAIN)
+	@Produces("application/rdf+xml")
 	@Consumes(MediaType.APPLICATION_JSON)
 	public synchronized String post(final String json) {
 
 		System.out.println("received POST");
+
+		Handler handler = null;
 		try{
 			
 		long start = System.currentTimeMillis();
 		
 		//set up logger for evaluation and debugging
-		Handler handler = null;
 		try {
 			LocalTime t = LocalTime.now();
 			handler = new FileHandler("log/" + LocalDate.now()
-					+ "_"+t.getHour()+"_"+t.getMinute()+"_"+t.getSecond()+"_"+t.getNano()+".log");
+					+ "_"+String.format("%02d", t.getHour())+"_"+String.format("%02d",t.getMinute())+"_"+String.format("%02d",t.getSecond())+"_"+String.format("%09d",t.getNano())+".log");
 			handler.setEncoding("utf-8");
 
 		} catch (SecurityException e) {
@@ -86,8 +88,8 @@ public class KristinaServlet {
 
 		String content = StringEscapeUtils.unescapeEcmaScript(j.getJsonObject("data").getString("language-analysis"));
 		
-		String user = StringEscapeUtils.unescapeEcmaScript(j.getJsonObject("meta").getString("user"));
-		String scenario = StringEscapeUtils.unescapeEcmaScript(j.getJsonObject("meta").getString("scenario"));
+		String user = StringEscapeUtils.unescapeEcmaScript(j.getJsonObject("meta").getString("user")).toLowerCase();
+		String scenario = StringEscapeUtils.unescapeEcmaScript(j.getJsonObject("meta").getString("scenario")).toLowerCase();
 		/*try{
 		CerthClient.setPath(j.getString("path"));
 		}catch(Exception e){
@@ -109,15 +111,18 @@ public class KristinaServlet {
 		log3.setUseParentHandlers(false);
 		log3.addHandler(handler);
 		
-		log2.info(StringEscapeUtils.escapeEcmaScript(result));
+		log2.info(result);
 		log3.info(Long.toString(end-start));
-		Handler[] arr = log3.getHandlers();
-		for(int i = 0; i < arr.length; i++){
-			arr[i].close();
-		}
-		return StringEscapeUtils.escapeEcmaScript(result);
+		return result;
 		}catch(Exception e){
-			e.printStackTrace();
+			Logger log1 = Logger.getLogger("exception");
+			log1.setUseParentHandlers(false);
+			log1.addHandler(handler);
+			log1.log(Level.SEVERE, "Probably wrong Json input", e);
+		}finally{
+			if(handler != null){
+				handler.close();
+			}
 		}
 		return null;
 	}

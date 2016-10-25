@@ -15,6 +15,7 @@ import java.util.List;
 import java.util.Set;
 import java.util.logging.FileHandler;
 import java.util.logging.Handler;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import org.apache.commons.lang3.tuple.Pair;
@@ -137,7 +138,7 @@ public class KristinaPresenter {
 			Logger log1 = Logger.getLogger("exception");
 			log1.setUseParentHandlers(false);
 			log1.addHandler(handler);
-			log1.severe(e.toString()+"\n"+e.fillInStackTrace());
+			log1.log(Level.SEVERE, "Something went wrong in the DM", e);
 			
 			KristinaModel.setSystemEmotion(new KristinaEmotion(valence,0.25));
 			LinkedList<KristinaMove> list = new LinkedList<KristinaMove>();

@@ -100,27 +100,27 @@
 	  <!-- <Useronto status="enabled" name="heating">Userontology</Useronto> -->
 	  <Useronto status="enabled" name="kristina">Userontology</Useronto>
     </User>
-	<User name="Elisabeth" docType="8" grammarType="5" sleep="0" AutoSave="1">
+	<User name="elisabeth" docType="8" grammarType="5" sleep="0" AutoSave="1">
 	  <!-- <Useronto status="enabled" name="travel">Userontology</Useronto> -->
 	  <!-- <Useronto status="enabled" name="heating">Userontology</Useronto> -->
 	  <Useronto status="enabled" name="kristina">Userontology</Useronto>
     </User>
-	<User name="Hans" docType="8" grammarType="5" sleep="0" AutoSave="1">
+	<User name="hans" docType="8" grammarType="5" sleep="0" AutoSave="1">
 	  <!-- <Useronto status="enabled" name="travel">Userontology</Useronto> -->
 	  <!-- <Useronto status="enabled" name="heating">Userontology</Useronto> -->
 	  <Useronto status="enabled" name="kristina">Userontology</Useronto>
     </User>
-	<User name="Iwona" docType="8" grammarType="5" sleep="0" AutoSave="1">
+	<User name="iwona" docType="8" grammarType="5" sleep="0" AutoSave="1">
 	  <!-- <Useronto status="enabled" name="travel">Userontology</Useronto> -->
 	  <!-- <Useronto status="enabled" name="heating">Userontology</Useronto> -->
 	  <Useronto status="enabled" name="kristina">Userontology</Useronto>
     </User>
-	<User name="Maria" docType="8" grammarType="5" sleep="0" AutoSave="1">
+	<User name="maria" docType="8" grammarType="5" sleep="0" AutoSave="1">
 	  <!-- <Useronto status="enabled" name="travel">Userontology</Useronto> -->
 	  <!-- <Useronto status="enabled" name="heating">Userontology</Useronto> -->
 	  <Useronto status="enabled" name="kristina">Userontology</Useronto>
     </User>
-	<User name="Juan" docType="8" grammarType="5" sleep="0" AutoSave="1">
+	<User name="juan" docType="8" grammarType="5" sleep="0" AutoSave="1">
 	  <!-- <Useronto status="enabled" name="travel">Userontology</Useronto> -->
 	  <!-- <Useronto status="enabled" name="heating">Userontology</Useronto> -->
 	  <Useronto status="enabled" name="kristina">Userontology</Useronto>

@@ -162,7 +162,7 @@ public class KristinaMove extends Move {
 				while(topics.hasNext()){
 					tmp = topics.next();
 					tmp = tmp.substring(tmp.indexOf('#')+1);
-					result = result+", "+tmp;
+					result = result+"/"+tmp;
 				}
 			}
 		}else if(this.isDialogueAction(DialogueAction.CANNED)||this.isDialogueAction(DialogueAction.READ_NEWSPAPER)){

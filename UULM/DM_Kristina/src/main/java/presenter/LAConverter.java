@@ -145,6 +145,7 @@ public class LAConverter {
 		}
 		ByteArrayOutputStream result = new ByteArrayOutputStream();
 		model.write(result, "RDF/XML");
+		model.close();
 		/*try {
 			return result.toString("UTF-8");
 		} catch (UnsupportedEncodingException e) {

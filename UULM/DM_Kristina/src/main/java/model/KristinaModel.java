@@ -150,9 +150,9 @@ public class KristinaModel {
 			Logger log = Logger.getLogger("usrmv");
 			log.setUseParentHandlers(false);
 			log.addHandler(handler);
+			log.info(user+": "+usrmv.toString());
 			
 			for (KristinaMove userMove : usrmv) {
-				log.info(user+": "+userMove.toString());
 				
 				Set<KristinaMove> systemMoves = new HashSet<KristinaMove>();
 				System.out.println("UserMove : "+userMove);
@@ -262,6 +262,7 @@ public class KristinaModel {
 					break;
 				case DialogueAction.STATEMENT:
 				case DialogueAction.DECLARE:
+
 					if(userMove.hasTopic("Out")&&userMove.hasTopic("Go")){
 						
 						systemMoves.add(createCannedTextMove("You can go for a walk.", user, dmOnto, manager, factory));
@@ -298,11 +299,12 @@ public class KristinaModel {
 					
 					}else if(userMove.hasTopic("Boring")){
 						systemMoves.add(createCannedTextMove("Is there anything else I can do for you?", user,dmOnto, manager, factory));
-					}else if(userMove.hasTopic("Newspaper")){
+					}else if(userMove.hasTopic("Newspaper") && userMove.hasTopic("User")){
 						systemMoves.add(createCannedTextMove("Would you like me to read the newspaper for you?", user, dmOnto, manager, factory));
 					}else if(userMove.hasTopic("Take")&&userMove.getTopics().size() <= 2){
 						//This is part of an acknowledgement, nothing needs to be done.
-					}else{
+					}
+					else{
 						systemMoves = askKI(userMove, valence, arousal, user, getScenarioString(scenario), dmOnto, manager, factory, handler);
 						for(KristinaMove m: systemMoves){
 							if(m.isDialogueAction(DialogueAction.UNKNOWN)){
@@ -319,8 +321,10 @@ public class KristinaModel {
 						}
 					}
 					break;
+
 				case DialogueAction.REQUEST:
 				case DialogueAction.BOOL_REQUEST:
+					
 					if(userMove.hasTopic("Weather")){
 						userMove.specify("RequestWeather");
 						systemMoves = askKI(userMove, valence, arousal, user,getScenarioString(scenario), dmOnto, manager, factory, handler);
