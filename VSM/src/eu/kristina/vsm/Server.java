@@ -1,6 +1,10 @@
 package eu.kristina.vsm;
 
 import com.sun.jersey.api.container.httpserver.HttpServerFactory;
+import com.sun.jersey.api.core.DefaultResourceConfig;
+import com.sun.jersey.spi.container.ContainerRequest;
+import com.sun.jersey.spi.container.ContainerResponse;
+import com.sun.jersey.spi.container.ContainerResponseFilter;
 import com.sun.net.httpserver.HttpServer;
 import de.dfki.vsm.editor.EditorInstance;
 import de.dfki.vsm.editor.project.EditorProject;
@@ -19,15 +23,35 @@ import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
+import java.util.Set;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import javax.ws.rs.core.MultivaluedMap;
 
 /**
  * @author Gregor Mehlmann
  */
-public final class Server {//extends DefaultResourceConfig {
+public final class Server extends DefaultResourceConfig {
 
+    // The CORS filter class
+    private final class CORSFilter implements ContainerResponseFilter {
+
+        @Override
+        public ContainerResponse filter(
+                final ContainerRequest request,
+                final ContainerResponse response) {
+            final MultivaluedMap<String, Object> headers = response.getHttpHeaders();
+            headers.add("Access-Control-Allow-Origin", "*");
+            headers.add("Access-Control-Allow-Headers",
+                    "origin, content-type, accept, authorization");
+            headers.add("Access-Control-Allow-Credentials", "true");
+            headers.add("Access-Control-Allow-Methods",
+                    "GET, POST, PUT, DELETE, OPTIONS, HEAD");
+            return response;
+        }
+    }
     // The singelton server
     private static Server sInstance = null;
 
@@ -40,21 +64,25 @@ public final class Server {//extends DefaultResourceConfig {
     }
 
     // The restful resource
-    //private Resource mResource = null;
+    private Service mResource = null;
+
     private Server() {
         // Print some information
-        mLogger.message("Constructing service '" + this + "'");
+        mLogger.message("Constructing server '" + this + "'");
         // Initialize the resource
-        //mResource = new Resource(this);
+        mResource = new Service(this);
+        // Register the CORS filter
+        getContainerResponseFilters().add(new CORSFilter());
     }
 
     // Get the singelton services
-    //@Override
-    // public synchronized Set<Object> getSingletons() {
-    //     final Set<Object> objects = new HashSet<>();
-    //     objects.add(mResource);
-    //     return objects;
-    //}
+    @Override
+    public synchronized Set<Object> getSingletons() {
+        final Set<Object> objects = new HashSet<>();
+        objects.add(mResource);
+        return objects;
+    }
+
     // The logger instance
     private final LOGDefaultLogger mLogger
             = LOGDefaultLogger.getInstance();
@@ -107,7 +135,7 @@ public final class Server {//extends DefaultResourceConfig {
             while (!mDone) {
                 // Read a command from the console
                 final String in = mReader.readLine();
-                  // Print information
+                // Print information
                 mLogger.message("Command '" + in + "'");
                 // Check the user's last command
                 if (in != null) {
@@ -448,7 +476,7 @@ public final class Server {//extends DefaultResourceConfig {
                 mDone = true;
                 // Interrupt the main thread
                 mReader.close();
-                 // Print some information
+                // Print some information
                 mLogger.message("Closing input reader");
                 // Return true at success
                 return true;

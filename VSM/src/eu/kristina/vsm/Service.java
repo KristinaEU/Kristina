@@ -24,9 +24,9 @@ public final class Service {
     private final Server mServer;
 
     // Construct the service
-    public Service() {
+    public Service(final Server server) {
         // Initialize the server
-        mServer = Server.getInstance();
+        mServer = server;
         // Print some information
         mLogger.message("Constructing service '" + this + "'");
     }
