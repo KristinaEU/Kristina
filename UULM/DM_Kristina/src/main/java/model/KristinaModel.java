@@ -228,7 +228,7 @@ public class KristinaModel {
 				case DialogueAction.REJECT:
 					KristinaMove tmp2 = (KristinaMove) DialogueHistory.getLastSystemMove();
 					if(tmp2!= null&&tmp2.getText().contains("Did you like the article?")){
-					systemMoves.add(createCannedTextMove("Is there anything else I can do for you?", user,dmOnto, manager, factory));
+					systemMoves.add(createTypedKristinaMove("AskTaskFollowUp", dmOnto, manager, factory));
 					
 					}else{
 					systemMoves.add(createTypedKristinaMove("MeetAgainSayGoodbye", dmOnto, manager, factory));
@@ -253,7 +253,7 @@ public class KristinaModel {
 								workspace.add(systemMoves);
 								
 								systemMoves = new HashSet<KristinaMove>();
-								systemMoves.add(createCannedTextMove("I don't know.", user, dmOnto, manager, factory));
+								systemMoves.add(createTypedKristinaMove("UnknownRequest", dmOnto, manager, factory));
 							}
 						}
 						if(systemMoves.isEmpty()){
@@ -298,7 +298,7 @@ public class KristinaModel {
 						}
 					
 					}else if(userMove.hasTopic("Boring")){
-						systemMoves.add(createCannedTextMove("Is there anything else I can do for you?", user,dmOnto, manager, factory));
+						systemMoves.add(createTypedKristinaMove("AskTaskFollowUp", dmOnto, manager, factory));
 					}else if(userMove.hasTopic("Newspaper") && userMove.hasTopic("User")){
 						systemMoves.add(createCannedTextMove("Would you like me to read the newspaper for you?", user, dmOnto, manager, factory));
 					}else if(userMove.hasTopic("Take")&&userMove.getTopics().size() <= 2){
@@ -316,7 +316,7 @@ public class KristinaModel {
 								workspace.add(systemMoves);
 									
 								systemMoves = new HashSet<KristinaMove>();
-								systemMoves.add(createCannedTextMove("I don't know about that.", user, dmOnto, manager, factory));
+								systemMoves.add(createTypedKristinaMove("UnknownStatement", dmOnto, manager, factory));
 							}
 						}
 					}
@@ -373,7 +373,7 @@ public class KristinaModel {
 								workspace.add(systemMoves);
 								
 								systemMoves = new HashSet<KristinaMove>();
-								systemMoves.add(createCannedTextMove("I don't know.", user, dmOnto, manager, factory));
+								systemMoves.add(createTypedKristinaMove("UnknownRequest", dmOnto, manager, factory));
 							}
 						}
 						//String rdfMoves = new KristinaModel().askDemoKI(userMove);

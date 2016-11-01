@@ -92,21 +92,24 @@ public class LAConverter {
 				model.add(model.getResource(tmp), model.getProperty(dialogue+"followedBy"), model.getResource(moveName));
 			}
 			tmp = moveName;
+			
+
+			model.addLiteral(model.getResource(moveName),
+					model.getProperty(dialogue + "verbosity"), sysmov.getVerbosity());
+			model.addLiteral(model.getResource(moveName),
+					model.getProperty(dialogue + "directness"), sysmov.getDirectness());
+			model.addLiteral(model.getResource(moveName),
+					model.getProperty(dialogue + "isFormal"), sysmov.getIsFormal());
+			model.addLiteral(model.getResource(moveName),
+					model.getProperty(dialogue + "isAdvice"), sysmov.getIsAdvice());
+			model.addLiteral(model.getResource(moveName),
+					model.getProperty(dialogue + "isBelief"), sysmov.getIsBelief());
+			
 			switch (sysmov.getDialogueAction()) {
 
 			case DialogueAction.DECLARE:
 				model.createResource(moveName,
 						model.getResource(dialogue + "Declare"));
-				model.addLiteral(model.getResource(moveName),
-						model.getProperty(dialogue + "verbosity"), 0);
-				model.addLiteral(model.getResource(moveName),
-						model.getProperty(dialogue + "directness"), 1);
-				model.addLiteral(model.getResource(moveName),
-						model.getProperty(dialogue + "isFormal"), false);
-				model.addLiteral(model.getResource(moveName),
-						model.getProperty(dialogue + "isAdvice"), false);
-				model.addLiteral(model.getResource(moveName),
-						model.getProperty(dialogue + "isBelief"), false);
 
 				List<ReifiedStatement> stmtList = sysmov.getStatements();
 				for (ReifiedStatement stmt : stmtList) {

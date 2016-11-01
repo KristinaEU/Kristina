@@ -76,6 +76,7 @@ public class DialogueAction {
 	public static final String PERSONAL_APOLOGISE=OntologyPrefix.dialogue+"PersonalApologise";
 	public static final String ASK_MOOD=OntologyPrefix.dialogue+"AskMood";
 	public static final String ASK_TASK=OntologyPrefix.dialogue+"AskTask";
+	public static final String ASK_FURTHER_TASK=OntologyPrefix.dialogue+"AskTaskFollowUp";
 	public static final String SIMPLE_MOTIVATE=OntologyPrefix.dialogue+"SimpleMotivate";
 	public static final String EMPTY=OntologyPrefix.dialogue+"Empty";
 	public static final String INCOMPREHENSIBLE=OntologyPrefix.dialogue+"Incomprehensible";
@@ -83,5 +84,8 @@ public class DialogueAction {
 	public static final String FURTHER_INFORMATION=OntologyPrefix.dialogue+"RequestFurtherInformation";
 	public static final String BOOL_REQUEST=OntologyPrefix.dialogue+"BooleanRequest";
 	public static final String IR_RESPONSE=OntologyPrefix.dialogue+"IRResponse";
+	public static final String REQUEST_FEEDBACK=OntologyPrefix.dialogue+"RequestFeedback";
+	public static final String UNKNOWN_STATEMENT=OntologyPrefix.dialogue+"UnknownStatement";
+	public static final String UNKNOWN_REQUEST=OntologyPrefix.dialogue+"UnknownRequest";
 	
 }

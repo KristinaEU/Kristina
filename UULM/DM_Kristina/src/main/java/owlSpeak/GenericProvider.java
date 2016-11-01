@@ -262,6 +262,15 @@ public class GenericProvider {
 	public static final String rewardProp = "#reward";
 	
 	/**
+	 * KRISTINA specific data properties
+	 */
+	public static final String directnessProp = "#directness";
+	public static final String verbosityProp = "#verbosity";
+	public static final String isFormalProp = "#isFormal";
+	public static final String isAdviceProp = "#isAdvice";
+	public static final String isBeliefProp = "#isBelief";
+	
+	/**
 	 * returns a collection of GenericClass objects that are linked from a specific individual via a specific property.
 	 * @param owlIndi the individual the GenericClass objects are linked with.
 	 * @param property the property as defined in the vocabulary.

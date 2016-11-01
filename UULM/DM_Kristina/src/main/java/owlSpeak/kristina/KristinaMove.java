@@ -1,7 +1,9 @@
 package owlSpeak.kristina;
 
+import java.util.Collection;
 import java.util.HashSet;
 import java.util.Iterator;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
 
@@ -13,6 +15,7 @@ import model.SemanticsOntology;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.ReifiedStatement;
 import org.apache.jena.rdf.model.Statement;
+import org.python.util.Generic;
 import org.semanticweb.owlapi.model.IRI;
 import org.semanticweb.owlapi.model.OWLAxiom;
 import org.semanticweb.owlapi.model.OWLClass;
@@ -27,7 +30,10 @@ import org.semanticweb.owlapi.reasoner.NodeSet;
 import org.semanticweb.owlapi.reasoner.OWLReasoner;
 import org.semanticweb.owlapi.reasoner.structural.StructuralReasonerFactory;
 
+import owlSpeak.GenericClass;
+import owlSpeak.GenericProvider;
 import owlSpeak.Move;
+import owlSpeak.Semantic;
 
 /**
  *
@@ -41,7 +47,11 @@ public class KristinaMove extends Move {
 	public KristinaMove(OWLIndividual indi, OWLOntology onto,
 			OWLDataFactory factory, OWLOntologyManager manager) {
 		super(indi, onto, factory, manager);
-
+		setIsAdvice(false);
+		setIsBelief(false);
+		setIsFormal(false);
+		setVerbosity(0f);
+		setDirectness(1f);
 	}
 
 	public List<ReifiedStatement> getStatements() {
@@ -59,6 +69,76 @@ public class KristinaMove extends Move {
 		 String text = SemanticsOntology.getProperty(indi.asOWLNamedIndividual()
 				.getIRI(), plausibilityProperty);
 		return text == null || text.isEmpty() ? 0 : Float.parseFloat(text);
+	}
+	
+	public float getDirectness(){
+		return GenericProvider.getFloatProperty(indi, GenericProvider.directnessProp, onto, factory);
+	}
+	
+	public float getVerbosity(){
+		return GenericProvider.getFloatProperty(indi, GenericProvider.verbosityProp, onto, factory);
+	}
+	
+	public boolean getIsBelief(){
+		return GenericProvider.getBooleanProperty(indi, GenericProvider.isBeliefProp, onto, factory);
+	}
+	
+	public boolean getIsFormal(){
+		return GenericProvider.getBooleanProperty(indi, GenericProvider.isFormalProp, onto, factory);
+	}
+	
+	public boolean getIsAdvice(){
+		return GenericProvider.getBooleanProperty(indi, GenericProvider.isAdviceProp, onto, factory);
+	}
+	
+	public void setDirectness(float f){
+		if(GenericProvider.hasDataProperty(indi, GenericProvider.directnessProp,
+				onto, factory)){
+			GenericProvider.removeFloatData(indi, this.getDirectness(),
+					GenericProvider.directnessProp, onto, factory, manager);
+		}
+		GenericProvider.addFloatData(indi, f,
+				GenericProvider.directnessProp, onto, factory, manager);
+	}
+	
+	public void setVerbosity(float f){
+		if(GenericProvider.hasDataProperty(indi, GenericProvider.verbosityProp,
+				onto, factory)){
+			GenericProvider.removeFloatData(indi, this.getVerbosity(),
+					GenericProvider.verbosityProp, onto, factory, manager);
+		}
+		GenericProvider.addFloatData(indi, f,
+				GenericProvider.verbosityProp, onto, factory, manager);
+	}
+	
+	public void setIsAdvice(boolean b){
+		if(GenericProvider.hasDataProperty(indi, GenericProvider.isAdviceProp,
+				onto, factory)){
+			GenericProvider.removeBooleanData(indi, this.getIsAdvice(),
+					GenericProvider.isAdviceProp, onto, factory, manager);
+		}
+		GenericProvider.addBooleanData(indi, b,
+				GenericProvider.isAdviceProp, onto, factory, manager);
+	}
+	
+	public void setIsFormal(boolean b){
+		if(GenericProvider.hasDataProperty(indi, GenericProvider.isFormalProp,
+				onto, factory)){
+			GenericProvider.removeBooleanData(indi, this.getIsFormal(),
+					GenericProvider.isFormalProp, onto, factory, manager);
+		}
+		GenericProvider.addBooleanData(indi, b,
+				GenericProvider.isFormalProp, onto, factory, manager);
+	}
+	
+	public void setIsBelief(boolean b){
+		if(GenericProvider.hasDataProperty(indi, GenericProvider.isBeliefProp,
+				onto, factory)){
+			GenericProvider.removeBooleanData(indi, this.getIsBelief(),
+					GenericProvider.isBeliefProp, onto, factory, manager);
+		}
+		GenericProvider.addBooleanData(indi, b,
+				GenericProvider.isBeliefProp, onto, factory, manager);
 	}
 
 	public boolean hasTopic(String topic) {

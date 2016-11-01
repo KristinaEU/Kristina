@@ -85,13 +85,19 @@ public class KristinaPresenter {
 
 		KristinaModel.setUserEmotion(new KristinaEmotion(valence, arousal));
 		
-		if (content.equals("timeout")) {
+		if (content.startsWith("timeout")) {
 			KristinaModel.setSystemEmotion(new KristinaEmotion(valence,0.25));
 			LinkedList<KristinaMove> list = new LinkedList<KristinaMove>();
-			list.add(KristinaModel.getCannedTextMove("Are you still there?",
+			list.add(KristinaModel.getTypedKristinaMove("RequestFeedback",
 					user, owlEngine));
 			KristinaModel.setSystemEmotion(new KristinaEmotion(KristinaModel.getCurrentEmotion().getValence(), 0.25));
 			KristinaEmotion emo = KristinaModel.getCurrentEmotion();
+			
+			Logger log = Logger.getLogger("sysmv");
+			log.setUseParentHandlers(false);
+			log.addHandler(handler);
+			log.info("System: "+list.toString());
+			
 			return LAConverter.convertFromMove(list, emo.getValence(), emo.getArousal(),
 					OntologyPrefix.dialogue);
 		} else {
@@ -183,9 +189,13 @@ public class KristinaPresenter {
 	private static List<KristinaMove> realiseCommunicationStyle(List<KristinaMove> l, String user){
 		LinkedList<KristinaMove> result = new LinkedList<KristinaMove>();
 		for(KristinaMove move: l){
-			if(move.getDialogueAction().equals(DialogueAction.ASK_TASK)&&UserModel.isIndirect(user)){
-				result.add(KristinaModel.getCannedTextMove("Perhaps I can help you with something", user, owlEngine));
-			}else if (move.hasTopic("StartTime")&&move.hasTopic("Sleep")&&(UserModel.isIndirect(user)||UserModel.isVerbose(user))){
+			if(UserModel.isIndirect(user)){
+				move.setDirectness(0f);
+			}
+			if(UserModel.isVerbose(user)){
+				move.setVerbosity(1f);
+			}
+			if (move.hasTopic("StartTime")&&move.hasTopic("Sleep")&&(UserModel.isIndirect(user)||UserModel.isVerbose(user))){
 				if(UserModel.isIndirect(user)&&UserModel.isVerbose(user)){
 					if(Math.random()<0.5){
 						result.add(KristinaModel.getCannedTextMove("Eugene usually goes to bed at midnight. He watches TV before that.", user, owlEngine));

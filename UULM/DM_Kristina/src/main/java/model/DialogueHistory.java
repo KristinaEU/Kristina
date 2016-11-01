@@ -31,7 +31,7 @@ public class DialogueHistory {
 				&& !move.getDialogueAction().equals(DialogueAction.REPHRASE)
 				&& !move.getDialogueAction().equals(DialogueAction.SHARE_JOY)
 				&& !move.getDialogueAction().equals(DialogueAction.SIMPLE_APOLOGISE)
-				&& !(p.equals(Participant.SYSTEM) && (move.getText().equals("I don't know.") || move.getText().equals("I don't now about that.")|| move.getText().equals("Are you still there?"))))
+				&& !(p.equals(Participant.SYSTEM) && (move.getDialogueAction().equals(DialogueAction.UNKNOWN_REQUEST) || move.getDialogueAction().equals(DialogueAction.UNKNOWN_STATEMENT)|| move.getDialogueAction().equals(DialogueAction.REQUEST_FEEDBACK))))
 		history.add(new ImmutablePair<KristinaMove,Participant>(move,p));
 	}
 
