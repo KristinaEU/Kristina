@@ -97,7 +97,7 @@ public class KristinaPresenter {
 			log.setUseParentHandlers(false);
 			log.addHandler(handler);
 			log.info("System: "+list.toString());
-			
+			System.out.println("SystemMove: "+list.toString());
 			return LAConverter.convertFromMove(list, emo.getValence(), emo.getArousal(),
 					OntologyPrefix.dialogue);
 		} else {
@@ -123,6 +123,9 @@ public class KristinaPresenter {
 					log.setUseParentHandlers(false);
 					log.addHandler(handler);
 					log.info("System: "+systemMove.toString());
+					
+
+					System.out.println("SystemMove: "+systemMove.toString());
 
 					KristinaEmotion emo = KristinaModel.getCurrentEmotion();
 					output = LAConverter.convertFromMove(systemMove,
@@ -155,6 +158,9 @@ public class KristinaPresenter {
 				e1.printStackTrace();
 				KristinaModel.setSystemEmotion(new KristinaEmotion(0, 0.25));
 			}
+
+			System.out.println("SystemMove: "+list.toString());
+			
 			KristinaEmotion emo;
 			try {
 				emo = KristinaModel.getCurrentEmotion();
