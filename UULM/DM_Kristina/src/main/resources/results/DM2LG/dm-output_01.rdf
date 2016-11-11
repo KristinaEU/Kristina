@@ -1,0 +1,30 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:j.0="http://kristina-project.eu/ontologies/dialogue_actions#" > 
+  <rdf:Description rdf:about="http://kristina-project.eu/tmp#fd960f0a-b662-41d1-8c71-15cadd434346">
+    <rdf:type rdf:resource="http://kristina-project.eu/ontologies/dialogue_actions#AskMood"/>
+    <j.0:isBelief rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</j.0:isBelief>
+    <j.0:isAdvice rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</j.0:isAdvice>
+    <j.0:isFormal rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</j.0:isFormal>
+    <j.0:directness rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</j.0:directness>
+    <j.0:verbosity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</j.0:verbosity>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://kristina-project.eu/tmp#b4b2b313-f396-42e1-9218-2f8ee97296db">
+    <j.0:followedBy rdf:resource="http://kristina-project.eu/tmp#fd960f0a-b662-41d1-8c71-15cadd434346"/>
+    <rdf:type rdf:resource="http://kristina-project.eu/ontologies/dialogue_actions#SimpleGreet"/>
+    <j.0:isBelief rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</j.0:isBelief>
+    <j.0:isAdvice rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</j.0:isAdvice>
+    <j.0:isFormal rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</j.0:isFormal>
+    <j.0:directness rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</j.0:directness>
+    <j.0:verbosity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</j.0:verbosity>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://kristina-project.eu/tmp#cda171a8-41af-48c6-8cce-4b348d2e3a6a">
+    <j.0:containsSystemAct rdf:resource="http://kristina-project.eu/tmp#fd960f0a-b662-41d1-8c71-15cadd434346"/>
+    <j.0:startWith rdf:resource="http://kristina-project.eu/tmp#b4b2b313-f396-42e1-9218-2f8ee97296db"/>
+    <j.0:containsSystemAct rdf:resource="http://kristina-project.eu/tmp#b4b2b313-f396-42e1-9218-2f8ee97296db"/>
+    <j.0:hasArousal rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.25</j.0:hasArousal>
+    <j.0:hasValence rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.17441585693547662</j.0:hasValence>
+    <rdf:type rdf:resource="http://kristina-project.eu/ontologies/dialogue_actions#SystemAction"/>
+  </rdf:Description>
+</rdf:RDF>
+

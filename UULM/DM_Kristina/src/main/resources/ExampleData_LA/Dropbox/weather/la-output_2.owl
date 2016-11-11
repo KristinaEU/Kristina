@@ -1,0 +1,313 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://kristina-project.eu/ontologies/la/example#"
+     xml:base="http://kristina-project.eu/ontologies/la/example"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:context="http://kristina-project.eu/ontologies/la/context#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:action="http://kristina-project.eu/ontologies/la/action#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace">
+    <owl:Ontology rdf:about="http://kristina-project.eu/ontologies/la/example"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://kristina-project.eu/ontologies/la/action#contains -->
+
+    <owl:ObjectProperty rdf:about="http://kristina-project.eu/ontologies/la/action#contains"/>
+    
+
+
+    <!-- http://kristina-project.eu/ontologies/la/context#classifies -->
+
+    <owl:ObjectProperty rdf:about="http://kristina-project.eu/ontologies/la/context#classifies"/>
+    
+
+
+    <!-- http://kristina-project.eu/ontologies/la/context#defines -->
+
+    <owl:ObjectProperty rdf:about="http://kristina-project.eu/ontologies/la/context#defines"/>
+    
+
+
+    <!-- http://kristina-project.eu/ontologies/la/context#includes -->
+
+    <owl:ObjectProperty rdf:about="http://kristina-project.eu/ontologies/la/context#includes"/>
+    
+
+
+    <!-- http://kristina-project.eu/ontologies/la/context#includesEvent -->
+
+    <owl:ObjectProperty rdf:about="http://kristina-project.eu/ontologies/la/context#includesEvent"/>
+    
+
+
+    <!-- http://kristina-project.eu/ontologies/la/context#satisfies -->
+
+    <owl:ObjectProperty rdf:about="http://kristina-project.eu/ontologies/la/context#satisfies"/>
+    
+
+
+    <!-- http://kristina-project.eu/ontologies/la/context#semanticContent -->
+
+    <owl:ObjectProperty rdf:about="http://kristina-project.eu/ontologies/la/context#semanticContent"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://kristina-project.eu/ontologies/la/action#sentenceASRConfidence -->
+
+    <owl:DatatypeProperty rdf:about="http://kristina-project.eu/ontologies/la/action#sentenceASRConfidence"/>
+    
+
+
+    <!-- http://kristina-project.eu/ontologies/la/action#textualContent -->
+
+    <owl:DatatypeProperty rdf:about="http://kristina-project.eu/ontologies/la/action#textualContent"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://kristina-project.eu/ontologies/dialogue_actions#BooleanRequest -->
+
+    <owl:Class rdf:about="http://kristina-project.eu/ontologies/dialogue_actions#BooleanRequest"/>
+    
+
+
+    <!-- http://kristina-project.eu/ontologies/dialogue_actions#UserAction -->
+
+    <owl:Class rdf:about="http://kristina-project.eu/ontologies/dialogue_actions#UserAction"/>
+    
+
+
+    <!-- http://kristina-project.eu/ontologies/la/context#Agent -->
+
+    <owl:Class rdf:about="http://kristina-project.eu/ontologies/la/context#Agent"/>
+    
+
+
+    <!-- http://kristina-project.eu/ontologies/la/context#Context -->
+
+    <owl:Class rdf:about="http://kristina-project.eu/ontologies/la/context#Context"/>
+    
+
+
+    <!-- http://kristina-project.eu/ontologies/la/context#ContextDescription -->
+
+    <owl:Class rdf:about="http://kristina-project.eu/ontologies/la/context#ContextDescription"/>
+    
+
+
+    <!-- http://kristina-project.eu/ontologies/la/context#Situation -->
+
+    <owl:Class rdf:about="http://kristina-project.eu/ontologies/la/context#Situation"/>
+    
+
+
+    <!-- http://kristina-project.eu/ontologies/la/context#TemporalAttribute -->
+
+    <owl:Class rdf:about="http://kristina-project.eu/ontologies/la/context#TemporalAttribute"/>
+    
+
+
+    <!-- http://kristina-project.eu/ontologies/la/context#Theme -->
+
+    <owl:Class rdf:about="http://kristina-project.eu/ontologies/la/context#Theme"/>
+    
+
+
+    <!-- http://kristina-project.eu/ontologies/la/onto#Kristina -->
+
+    <owl:Class rdf:about="http://kristina-project.eu/ontologies/la/onto#Kristina"/>
+    
+
+
+    <!-- http://kristina-project.eu/ontologies/la/onto#Report -->
+
+    <owl:Class rdf:about="http://kristina-project.eu/ontologies/la/onto#Report"/>
+    
+
+
+    <!-- http://kristina-project.eu/ontologies/la/onto#Time -->
+
+    <owl:Class rdf:about="http://kristina-project.eu/ontologies/la/onto#Time"/>
+    
+
+
+    <!-- http://kristina-project.eu/ontologies/la/onto#Today -->
+
+    <owl:Class rdf:about="http://kristina-project.eu/ontologies/la/onto#Today"/>
+    
+
+
+    <!-- http://kristina-project.eu/ontologies/la/onto#Weather -->
+
+    <owl:Class rdf:about="http://kristina-project.eu/ontologies/la/onto#Weather"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://kristina-project.eu/ontologies/la/example#Agent11 -->
+
+    <owl:NamedIndividual rdf:about="http://kristina-project.eu/ontologies/la/example#Agent11">
+        <rdf:type rdf:resource="http://kristina-project.eu/ontologies/la/context#Agent"/>
+        <context:classifies rdf:resource="http://kristina-project.eu/ontologies/la/example#kristina3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://kristina-project.eu/ontologies/la/example#Theme12 -->
+
+    <owl:NamedIndividual rdf:about="http://kristina-project.eu/ontologies/la/example#Theme12">
+        <rdf:type rdf:resource="http://kristina-project.eu/ontologies/la/context#Theme"/>
+        <context:classifies rdf:resource="http://kristina-project.eu/ontologies/la/example#weather5"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://kristina-project.eu/ontologies/la/example#Time6 -->
+
+    <owl:NamedIndividual rdf:about="http://kristina-project.eu/ontologies/la/example#Time6">
+        <rdf:type rdf:resource="http://kristina-project.eu/ontologies/la/onto#Time"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://kristina-project.eu/ontologies/la/example#action1 -->
+
+    <owl:NamedIndividual rdf:about="http://kristina-project.eu/ontologies/la/example#action1">
+        <rdf:type rdf:resource="http://kristina-project.eu/ontologies/dialogue_actions#UserAction"/>
+        <action:contains rdf:resource="http://kristina-project.eu/ontologies/la/example#speechAct2"/>
+        <action:sentenceASRConfidence rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.8</action:sentenceASRConfidence>
+        <action:textualContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KRISTINA, kanst Du mir über das Wetter heute berichten?</action:textualContent>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://kristina-project.eu/ontologies/la/example#context10 -->
+
+    <owl:NamedIndividual rdf:about="http://kristina-project.eu/ontologies/la/example#context10">
+        <rdf:type rdf:resource="http://kristina-project.eu/ontologies/la/context#Context"/>
+        <context:classifies rdf:resource="http://kristina-project.eu/ontologies/la/example#report4"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://kristina-project.eu/ontologies/la/example#kristina3 -->
+
+    <owl:NamedIndividual rdf:about="http://kristina-project.eu/ontologies/la/example#kristina3">
+        <rdf:type rdf:resource="http://kristina-project.eu/ontologies/la/onto#Kristina"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://kristina-project.eu/ontologies/la/example#report4 -->
+
+    <owl:NamedIndividual rdf:about="http://kristina-project.eu/ontologies/la/example#report4">
+        <rdf:type rdf:resource="http://kristina-project.eu/ontologies/la/onto#Report"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://kristina-project.eu/ontologies/la/example#reportCtx8 -->
+
+    <owl:NamedIndividual rdf:about="http://kristina-project.eu/ontologies/la/example#reportCtx8">
+        <rdf:type rdf:resource="http://kristina-project.eu/ontologies/la/context#Situation"/>
+        <context:includes rdf:resource="http://kristina-project.eu/ontologies/la/example#kristina3"/>
+        <context:includes rdf:resource="http://kristina-project.eu/ontologies/la/example#today7"/>
+        <context:includes rdf:resource="http://kristina-project.eu/ontologies/la/example#weather5"/>
+        <context:includesEvent rdf:resource="http://kristina-project.eu/ontologies/la/example#report4"/>
+        <context:satisfies rdf:resource="http://kristina-project.eu/ontologies/la/example#reportDesc9"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://kristina-project.eu/ontologies/la/example#reportDesc9 -->
+
+    <owl:NamedIndividual rdf:about="http://kristina-project.eu/ontologies/la/example#reportDesc9">
+        <rdf:type rdf:resource="http://kristina-project.eu/ontologies/la/context#ContextDescription"/>
+        <context:defines rdf:resource="http://kristina-project.eu/ontologies/la/example#Agent11"/>
+        <context:defines rdf:resource="http://kristina-project.eu/ontologies/la/example#Theme12"/>
+        <context:defines rdf:resource="http://kristina-project.eu/ontologies/la/example#context10"/>
+        <context:defines rdf:resource="http://kristina-project.eu/ontologies/la/example#temporalAttribute13"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://kristina-project.eu/ontologies/la/example#speechAct2 -->
+
+    <owl:NamedIndividual rdf:about="http://kristina-project.eu/ontologies/la/example#speechAct2">
+        <rdf:type rdf:resource="http://kristina-project.eu/ontologies/dialogue_actions#BooleanRequest"/>
+        <context:semanticContent rdf:resource="http://kristina-project.eu/ontologies/la/example#reportCtx8"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://kristina-project.eu/ontologies/la/example#temporalAttribute13 -->
+
+    <owl:NamedIndividual rdf:about="http://kristina-project.eu/ontologies/la/example#temporalAttribute13">
+        <rdf:type rdf:resource="http://kristina-project.eu/ontologies/la/context#TemporalAttribute"/>
+        <context:classifies rdf:resource="http://kristina-project.eu/ontologies/la/example#today7"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://kristina-project.eu/ontologies/la/example#today7 -->
+
+    <owl:NamedIndividual rdf:about="http://kristina-project.eu/ontologies/la/example#today7">
+        <rdf:type rdf:resource="http://kristina-project.eu/ontologies/la/onto#Today"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://kristina-project.eu/ontologies/la/example#weather5 -->
+
+    <owl:NamedIndividual rdf:about="http://kristina-project.eu/ontologies/la/example#weather5">
+        <rdf:type rdf:resource="http://kristina-project.eu/ontologies/la/onto#Weather"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.5.20160517-0735) https://github.com/owlcs/owlapi -->

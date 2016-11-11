@@ -1,0 +1,28 @@
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+<http://temp#spr21kfu7p0b4hp3v73k4rvcaj>
+      a       <http://kristina-project.eu/ontologies/responses#StatementResponse> ;
+      <http://kristina-project.eu/ontologies/responses#plausibility>
+              "1.0"^^xsd:double ;
+      <http://kristina-project.eu/ontologies/responses#responseType>
+              <http://kristina-project.eu/ontologies/responses#free_text> ;
+      <http://kristina-project.eu/ontologies/responses#text>
+              "Berlin.+Die+Bundesregierung+will+Sozialleistungen+f%C3%BCr+EU-Ausl%C3%A4nder+in+Deutschland+begrenzen.+EU-B%C3%BCrger+sollen+k%C3%BCnftig+fr%C3%BChestens+nach+f%C3%BCnf+Jahren+Hartz+IV+oder+Sozialhilfe+bekommen+k%C3%B6nnen%2C+wenn+sie+hier+nicht+arbeiten%2C+selbstst%C3%A4ndig+sind+oder+den+Leistungsanspruch+mit+vorheriger+Arbeit+erworben+haben.+Das+sieht+ein+Gesetzentwurf+von+Sozialministerin+Andrea+Nahles+%28SPD%29+vor%2C+der+im+Bundeskabinett+beschlossen+wurde.+%E2%80%9EKlar+ist%3A+Wer+hier+lebt%2C+arbeitet+und+Beitr%C3%A4ge+zahlt%2C+der+hat+auch+einen+berechtigten+Anspruch+auf+Leistungen+aus+unseren+Sozialsystemen%E2%80%9C%2C+sagte+Nahles.+%E2%80%9EWer+jedoch+noch+nie+hier+gearbeitet+hat+und+f%C3%BCr+seinen+Lebensunterhalt+auf+staatliche+finanzielle+Unterst%C3%BCtzung+aus+der+Grundsicherung+angewiesen+ist%2C+f%C3%BCr+den+gilt+der+Grundsatz%3A+Existenzsichernde+Leistungen+sind+im+jeweiligen+Heimatland+zu+beantragen.%E2%80%9C+Die+Betroffenen+k%C3%B6nnen+jedoch+%C3%9Cberbr%C3%BCckungsleistungen+bis+zur+Ausreise+erhalten+%E2%80%93+l%C3%A4ngstens+f%C3%BCr+einen+Monat.+Das+Bundessozialgericht+hatte+vergangenes+Jahr+geurteilt%2C+dass+EU-B%C3%BCrger+schon+bei+einem+Aufenthalt+ab+sechs+Monaten+in+Deutschland+Hilfe+zum+Lebensunterhalt+beantragen+k%C3%B6nnen.+St%C3%A4dte+und+Gemeinden+warnten+daraufhin+vor+hohen+Kosten.+Nun+ist+der+Weg+f%C3%BCr+das+parlamentarische+Verfahren+nach+monatelangen+Beratungen+in+der+Bundesregierung+frei.+Nahles+betonte%2C+das+Vertrauen+in+die+Arbeitnehmerfreiz%C3%BCgigkeit+werde+gest%C3%A4rkt.+%E2%80%9EUnd+wir+sch%C3%BCtzen+unsere+Kommunen+vor+finanzieller+%C3%9Cberforderung%2C+die+die+Sozialhilfeleistungen+zu+schultern+haben.%E2%80%9C+Die+CSU+begr%C3%BC%C3%9Fte+den+Entwurf+im+Grundsatz.+%E2%80%9EEs+ist+der+richtige+Weg%2C+dass+Frau+Nahles+die+durch+das+Bundessozialgericht+er%C3%B6ffnete+L%C3%BCcken+f%C3%BCr+einem+unkontrollierten+Zuzug+in+unsere+Sozialsysteme+nun+schlie%C3%9Ft%E2%80%9C%2C+sagte+Bayerns+Sozialministerin+Emilia+M%C3%BCller.+DGB-Vorstandsmitglied+Annelie+Buntenbach+kritisierte+den+Gesetzentwurf+als+m%C3%B6glicherweise+grundgesetzwidrig.+Menschen%2C+die+sich+in+Deutschland+aufhalten+und+deren+Verlust+des+Aufenthaltsrechts+nicht+bindend+festgestellt+sei%2C+h%C3%A4tten+ein+Recht+auf+die+Sicherung+einer+menschenw%C3%BCrdigen+Existenz%2C+sagte+Buntenbach.+Dies+gelte+unabh%C3%A4ngig+von+ihrer+Nationalit%C3%A4t.+Kritik+kam+auch+von+den+Linken.+dpa" .
+
+<http://temp#1dvlni4gakq0tm1202bshsfvuh>
+      a       <http://kristina-project.eu/ontologies/responses#ResponseContainer> ;
+      <http://kristina-project.eu/ontologies/responses#containsResponse>
+              <http://temp#spr21kfu7p0b4hp3v73k4rvcaj> ;
+      <http://kristina-project.eu/ontologies/responses#conversationalContext>
+              [ a       <http://kristina-project.eu/ontologies/context-light#NewspaperContext>
+              ] ;
+      <http://kristina-project.eu/ontologies/responses#timestamp>
+              "2016-10-24T01:04:29.931Z"^^xsd:dateTime .
+
+<http://response-data>
+      a       owl:Ontology ;
+      owl:imports <http://kristina-project.eu/ontologies/responses> .
+

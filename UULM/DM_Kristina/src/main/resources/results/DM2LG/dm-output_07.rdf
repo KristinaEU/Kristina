@@ -1,0 +1,20 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:j.0="http://kristina-project.eu/ontologies/dialogue_actions#" > 
+  <rdf:Description rdf:about="http://kristina-project.eu/tmp#8edcfe00-0ab9-447c-b033-550d32f0b921">
+    <rdf:type rdf:resource="http://kristina-project.eu/ontologies/dialogue_actions#Empty"/>
+    <j.0:isBelief rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</j.0:isBelief>
+    <j.0:isAdvice rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</j.0:isAdvice>
+    <j.0:isFormal rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</j.0:isFormal>
+    <j.0:directness rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</j.0:directness>
+    <j.0:verbosity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</j.0:verbosity>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://kristina-project.eu/tmp#a7b3de7e-99eb-4248-bc79-4aff309f6144">
+    <j.0:startWith rdf:resource="http://kristina-project.eu/tmp#8edcfe00-0ab9-447c-b033-550d32f0b921"/>
+    <j.0:containsSystemAct rdf:resource="http://kristina-project.eu/tmp#8edcfe00-0ab9-447c-b033-550d32f0b921"/>
+    <j.0:hasArousal rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.18037651985781294</j.0:hasArousal>
+    <j.0:hasValence rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.062484736720539086</j.0:hasValence>
+    <rdf:type rdf:resource="http://kristina-project.eu/ontologies/dialogue_actions#SystemAction"/>
+  </rdf:Description>
+</rdf:RDF>
+

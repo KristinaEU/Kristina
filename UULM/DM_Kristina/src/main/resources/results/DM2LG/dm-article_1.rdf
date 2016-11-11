@@ -1,0 +1,27 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:j.0="http://kristina-project.eu/ontologies/dialogue_actions#" > 
+  <rdf:Description rdf:about="http://kristina-project.eu/tmp#6b1eb6cf-c623-4252-bac7-e12cf2b4d7a7">
+    <j.0:followedBy rdf:resource="http://kristina-project.eu/tmp#0d59d7aa-3aa6-42d4-b336-b3710066c17b"/>
+    <j.0:text>Berlin.+Die+Bundesregierung+will+Sozialleistungen+f%C3%BCr+EU-Ausl%C3%A4nder+in+Deutschland+begrenzen.+EU-B%C3%BCrger+sollen+k%C3%BCnftig+fr%C3%BChestens+nach+f%C3%BCnf+Jahren+Hartz+IV+oder+Sozialhilfe+bekommen+k%C3%B6nnen%2C+wenn+sie+hier+nicht+arbeiten%2C+selbstst%C3%A4ndig+sind+oder+den+Leistungsanspruch+mit+vorheriger+Arbeit+erworben+haben.+Das+sieht+ein+Gesetzentwurf+von+Sozialministerin+Andrea+Nahles+%28SPD%29+vor%2C+der+im+Bundeskabinett+beschlossen+wurde.+%E2%80%9EKlar+ist%3A+Wer+hier+lebt%2C+arbeitet+und+Beitr%C3%A4ge+zahlt%2C+der+hat+auch+einen+berechtigten+Anspruch+auf+Leistungen+aus+unseren+Sozialsystemen%E2%80%9C%2C+sagte+Nahles.+%E2%80%9EWer+jedoch+noch+nie+hier+gearbeitet+hat+und+f%C3%BCr+seinen+Lebensunterhalt+auf+staatliche+finanzielle+Unterst%C3%BCtzung+aus+der+Grundsicherung+angewiesen+ist%2C+f%C3%BCr+den+gilt+der+Grundsatz%3A+Existenzsichernde+Leistungen+sind+im+jeweiligen+Heimatland+zu+beantragen.%E2%80%9C+Die+Betroffenen+k%C3%B6nnen+jedoch+%C3%9Cberbr%C3%BCckungsleistungen+bis+zur+Ausreise+erhalten+%E2%80%93+l%C3%A4ngstens+f%C3%BCr+einen+Monat.+Das+Bundessozialgericht+hatte+vergangenes+Jahr+geurteilt%2C+dass+EU-B%C3%BCrger+schon+bei+einem+Aufenthalt+ab+sechs+Monaten+in+Deutschland+Hilfe+zum+Lebensunterhalt+beantragen+k%C3%B6nnen.+St%C3%A4dte+und+Gemeinden+warnten+daraufhin+vor+hohen+Kosten.+Nun+ist+der+Weg+f%C3%BCr+das+parlamentarische+Verfahren+nach+monatelangen+Beratungen+in+der+Bundesregierung+frei.+Nahles+betonte%2C+das+Vertrauen+in+die+Arbeitnehmerfreiz%C3%BCgigkeit+werde+gest%C3%A4rkt.+%E2%80%9EUnd+wir+sch%C3%BCtzen+unsere+Kommunen+vor+finanzieller+%C3%9Cberforderung%2C+die+die+Sozialhilfeleistungen+zu+schultern+haben.%E2%80%9C+Die+CSU+begr%C3%BC%C3%9Fte+den+Entwurf+im+Grundsatz.+%E2%80%9EEs+ist+der+richtige+Weg%2C+dass+Frau+Nahles+die+durch+das+Bundessozialgericht+er%C3%B6ffnete+L%C3%BCcken+f%C3%BCr+einem+unkontrollierten+Zuzug+in+unsere+Sozialsysteme+nun+schlie%C3%9Ft%E2%80%9C%2C+sagte+Bayerns+Sozialministerin+Emilia+M%C3%BCller.+DGB-Vorstandsmitglied+Annelie+Buntenbach+kritisierte+den+Gesetzentwurf+als+m%C3%B6glicherweise+grundgesetzwidrig.+Menschen%2C+die+sich+in+Deutschland+aufhalten+und+deren+Verlust+des+Aufenthaltsrechts+nicht+bindend+festgestellt+sei%2C+h%C3%A4tten+ein+Recht+auf+die+Sicherung+einer+menschenw%C3%BCrdigen+Existenz%2C+sagte+Buntenbach.+Dies+gelte+unabh%C3%A4ngig+von+ihrer+Nationalit%C3%A4t.+Kritik+kam+auch+von+den+Linken.+dpa</j.0:text>
+    <rdf:type rdf:resource="http://kristina-project.eu/ontologies/dialogue_actions#ReadNewspaper"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://kristina-project.eu/tmp#fcb69863-a29f-4121-8c18-4b79a6b33c46">
+    <j.0:containsSystemAct rdf:resource="http://kristina-project.eu/tmp#0d59d7aa-3aa6-42d4-b336-b3710066c17b"/>
+    <j.0:containsSystemAct rdf:resource="http://kristina-project.eu/tmp#6b1eb6cf-c623-4252-bac7-e12cf2b4d7a7"/>
+    <j.0:startWith rdf:resource="http://kristina-project.eu/tmp#653b5a60-4474-438e-aba8-2af26af5a81e"/>
+    <j.0:containsSystemAct rdf:resource="http://kristina-project.eu/tmp#653b5a60-4474-438e-aba8-2af26af5a81e"/>
+    <j.0:hasArousal rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.14100000000000001</j.0:hasArousal>
+    <j.0:hasValence rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.07106585514612844</j.0:hasValence>
+    <rdf:type rdf:resource="http://kristina-project.eu/ontologies/dialogue_actions#SystemAction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://kristina-project.eu/tmp#653b5a60-4474-438e-aba8-2af26af5a81e">
+    <j.0:followedBy rdf:resource="http://kristina-project.eu/tmp#6b1eb6cf-c623-4252-bac7-e12cf2b4d7a7"/>
+    <rdf:type rdf:resource="http://kristina-project.eu/ontologies/dialogue_actions#Accept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://kristina-project.eu/tmp#0d59d7aa-3aa6-42d4-b336-b3710066c17b">
+    <j.0:text>Did you like the article?</j.0:text>
+    <rdf:type rdf:resource="http://kristina-project.eu/ontologies/dialogue_actions#Canned"/>
+  </rdf:Description>
+</rdf:RDF>
+

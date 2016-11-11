@@ -1,0 +1,21 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:j.0="http://kristina-project.eu/ontologies/dialogue_actions#" > 
+  <rdf:Description rdf:about="http://kristina-project.eu/tmp#4fc54c38-7c73-4011-bcd9-3cedf3cb6ecc">
+    <j.0:text>Would you like me to read the newspaper for you?</j.0:text>
+    <rdf:type rdf:resource="http://kristina-project.eu/ontologies/dialogue_actions#Canned"/>
+    <j.0:isBelief rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</j.0:isBelief>
+    <j.0:isAdvice rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</j.0:isAdvice>
+    <j.0:isFormal rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</j.0:isFormal>
+    <j.0:directness rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</j.0:directness>
+    <j.0:verbosity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</j.0:verbosity>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://kristina-project.eu/tmp#fee4afee-4d57-4913-a47b-b9aef0ccf08a">
+    <j.0:startWith rdf:resource="http://kristina-project.eu/tmp#4fc54c38-7c73-4011-bcd9-3cedf3cb6ecc"/>
+    <j.0:containsSystemAct rdf:resource="http://kristina-project.eu/tmp#4fc54c38-7c73-4011-bcd9-3cedf3cb6ecc"/>
+    <j.0:hasArousal rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.18037651985781294</j.0:hasArousal>
+    <j.0:hasValence rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.06233870095440823</j.0:hasValence>
+    <rdf:type rdf:resource="http://kristina-project.eu/ontologies/dialogue_actions#SystemAction"/>
+  </rdf:Description>
+</rdf:RDF>
+

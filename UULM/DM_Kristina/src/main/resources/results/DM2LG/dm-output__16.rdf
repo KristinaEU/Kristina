@@ -1,0 +1,42 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:j.0="http://kristina-project.eu/ontologies/dialogue_actions#" > 
+  <rdf:Description rdf:about="http://kristina-project.eu/tmp#3dc36229-4f12-4b95-9159-98f9431e331f">
+    <j.0:containsSystemAct rdf:resource="http://kristina-project.eu/tmp#621e61ac-0286-4b12-9ed5-66e3b52a8aad"/>
+    <j.0:containsSystemAct rdf:resource="http://kristina-project.eu/tmp#2f4b7092-cfed-420f-ab1f-c96494a60141"/>
+    <j.0:startWith rdf:resource="http://kristina-project.eu/tmp#b0cbe0e4-ccdb-43dc-ad37-4a70ecaeeafa"/>
+    <j.0:containsSystemAct rdf:resource="http://kristina-project.eu/tmp#b0cbe0e4-ccdb-43dc-ad37-4a70ecaeeafa"/>
+    <j.0:hasArousal rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.16789923083559552</j.0:hasArousal>
+    <j.0:hasValence rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.06012230465180732</j.0:hasValence>
+    <rdf:type rdf:resource="http://kristina-project.eu/ontologies/dialogue_actions#SystemAction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://kristina-project.eu/tmp#621e61ac-0286-4b12-9ed5-66e3b52a8aad">
+    <j.0:text>Did you like the article?</j.0:text>
+    <rdf:type rdf:resource="http://kristina-project.eu/ontologies/dialogue_actions#Canned"/>
+    <j.0:isBelief rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</j.0:isBelief>
+    <j.0:isAdvice rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</j.0:isAdvice>
+    <j.0:isFormal rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</j.0:isFormal>
+    <j.0:directness rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</j.0:directness>
+    <j.0:verbosity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</j.0:verbosity>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://kristina-project.eu/tmp#2f4b7092-cfed-420f-ab1f-c96494a60141">
+    <j.0:followedBy rdf:resource="http://kristina-project.eu/tmp#621e61ac-0286-4b12-9ed5-66e3b52a8aad"/>
+    <j.0:text>Peking.+Bilderbuchstart+in+der+W%C3%BCste+Gobi%3A+Zwei+Taikonauten+sind+zum+bislang+l%C3%A4ngsten+Weltraum-Aufenthalt+in+Chinas+Raumfahrtgeschichte+gestartet.+Die+Raumfahrer+Jing+Haipeng+und+Chen+Dong+hoben+am+Montag+in+einer+%E2%80%9EShenzhou-11%E2%80%9C-Rakete+von+der+Satellitenstartrampe+Jiuquan+ab.+Nach+48+Stunden+sollen+sie+das+Raumlabor+%E2%80%9ETiangong-2%E2%80%9C+erreichen%2C+das+seit+September+um+die+Erde+kreist.+Die+beiden+M%C3%A4nner+sollen+nach+ihrer+Ankunft+am+Mittwoch+30+Tage+in+dem+Raumlabor+bleiben+%E2%80%93+die+bisher+l%C3%A4ngste+Zeit+f%C3%BCr+chinesische+Astronauten+im+All.+Jing%2C+der+bereits+zwei+Mal+im+Weltraum+war%2C+leitet+die+Mission+und+wird+seinen+50.+Geburtstag+im+Orbit+feiern.+Gemeinsam+mit+Chen+soll+er+Experimente+zu+Reparaturarbeiten+im+All+und+naturwissenschaftliche+Versuche+unternehmen.+%E2%80%9EObwohl+der+Job+fordernd%2C+riskant+und+gef%C3%A4hrlich+ist%2C+gibt+es+nichts%2C+was+ich+lieber+tun+w%C3%BCrde%E2%80%9C%2C+sagte+Jing+vor+dem+Start.+Der+j%C3%BCngere+der+beiden%2C+der+37-j%C3%A4hrige+Chen%2C+darf+mit+seinem+einstigen+Idol+ins+All%3A+%E2%80%9EIch+sah+Jing+immer+im+Fernsehen.+Er+kam+mir+so+weit+weg+vor%E2%80%9C%2C+bekannte+er.+%E2%80%9EAber+als+ich+ihn+pers%C3%B6nlich+kennenlernte%2C+waren+meine+Sorgen+und+%C3%84ngste+verschwunden.%E2%80%9C+Ruf+nach+der+Raumfahrtmacht+Pr%C3%A4sident+Xi+Jinping+schickte+ein+Gl%C3%BCckwunschschreiben+an+die+Raumfahrtmission%2C+in+der+er+sie+aufrief%2C+noch+%E2%80%9Egr%C3%B6%C3%9Fere+Schritte%E2%80%9C+im+All+zu+unternehmen%2C+um+China+zur+%E2%80%9ERaumfahrtmacht%E2%80%9C+zu+machen.+Das+Labor+%E2%80%9ETiangong-2%E2%80%9C%2C+was+%C3%BCbersetzt+%E2%80%9EHimmlischer+Palast%E2%80%9C+bedeutet%2C+schwebt+393+Kilometer+%C3%BCber+der+Erde.+Es+besteht+aus+zwei+Kabinen%3A+ein+Versuchslabor%2C+das+auch+als+B%C3%BCro+und+Schlafzimmer+dient%2C+und+einem+Lager.+Die+Taikonauten%2C+wie+Astronauten+in+China+hei%C3%9Fen%2C+sollen+unter+anderem+ihre+eigene+Schwerelosigkeit+testen%2C+Reis+anbauen+und+Atom-Weltraumuhren+testen%2C+die+zur+Verbesserung+der+Pr%C3%A4zision+mit+einer+Lasertechnik+gek%C3%BChlt+werden.+Die+Raumfahrer+haben+jeden+Abend+zwei+Stunden+frei%2C+um+Filme+zu+schauen%2C+Musik+zu+h%C3%B6ren+und+Videoanrufe+bei+ihrer+Familie+zu+machen.+Wu+Ping+vom+chinesischen+Raumfahrtprogramm+sagte%2C+den+Taikonauten+st%C3%BCnden+%E2%80%9Emehr+als+hundert+Sorten+Essen+und+Getr%C3%A4nke%E2%80%9C+zur+Verf%C3%BCgung.+Au%C3%9Ferdem+gebe+es+in+dem+Raumlabor+ein+Laufband+und+ein+Fitnessfahrrad.+Um+gegen%C3%BCber+den+USA+und+Europa+aufzuholen%2C+steckt+China+Milliarden+in+das+vom+Milit%C3%A4r+kontrollierte+Raumfahrtprojekt.+Ziel+ist+es%2C+bis+2022+eine+eigene+bemannte+Raumstation+aufzubauen.+Russland%2C+das+an+der+ISS+beteiligt+ist%2C+strebt+bis+2023+eine+eigene+Raumstation+an.+China+will+%C3%BCberdies+etwa+im+Jahr+2020+ein+Raumschiff+zum+Mars+schicken%2C+um+ihn+zu+erforschen.+Au%C3%9Ferdem+arbeitet+Peking+daran%2C+einen+Taikonauten+zum+Mond+zu+schicken.+afp</j.0:text>
+    <rdf:type rdf:resource="http://kristina-project.eu/ontologies/dialogue_actions#ReadNewspaper"/>
+    <j.0:isBelief rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</j.0:isBelief>
+    <j.0:isAdvice rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</j.0:isAdvice>
+    <j.0:isFormal rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</j.0:isFormal>
+    <j.0:directness rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</j.0:directness>
+    <j.0:verbosity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</j.0:verbosity>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://kristina-project.eu/tmp#b0cbe0e4-ccdb-43dc-ad37-4a70ecaeeafa">
+    <j.0:followedBy rdf:resource="http://kristina-project.eu/tmp#2f4b7092-cfed-420f-ab1f-c96494a60141"/>
+    <rdf:type rdf:resource="http://kristina-project.eu/ontologies/dialogue_actions#Accept"/>
+    <j.0:isBelief rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</j.0:isBelief>
+    <j.0:isAdvice rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</j.0:isAdvice>
+    <j.0:isFormal rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</j.0:isFormal>
+    <j.0:directness rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</j.0:directness>
+    <j.0:verbosity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</j.0:verbosity>
+  </rdf:Description>
+</rdf:RDF>
+

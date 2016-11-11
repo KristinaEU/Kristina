@@ -28,7 +28,7 @@ import org.python.core.util.StringUtil;
 
 public class KristinaTest {
 
-	static final String address = "http://localhost:11153";
+	static final String address = "http://52.29.254.9:11150";
 
 	public static void post() {
 
@@ -37,13 +37,13 @@ public class KristinaTest {
 			Client client = ClientBuilder.newClient();
 			final BufferedReader reader = new BufferedReader(new InputStreamReader(
 					System.in));
-			File folder = new File("./src/main/resources/ExampleData_LA/articles/");
+			File folder = new File("./src/main/resources/ExampleData_LA/ExceptionHandling/");
 			for (File entry : folder.listFiles()) {
 				if ( entry.getName().startsWith("")) {
 
 					BufferedReader r = new BufferedReader(
 							new InputStreamReader(KristinaTest.class
-									.getResourceAsStream("/ExampleData_LA/articles/"
+									.getResourceAsStream("/ExampleData_LA/ExceptionHandling/"
 											+ entry.getName()), StandardCharsets.UTF_8));
 
 					String data = "";
@@ -61,17 +61,17 @@ public class KristinaTest {
 					}*/
 				
 					data = "{\"data\":{\"fusion\":{\"valence\":\""+v+"\",\"arousal\":\""+a+"\"},\"language-analysis\":\""
-				+StringEscapeUtils.escapeEcmaScript(data)+"\"},\"meta\":{\"user\":\"Elisabeth\",\"scenario\":\"newspaper\"},\"path\":\""+entry.getName()+"\"}";
+				+StringEscapeUtils.escapeEcmaScript(data)+"\"},\"meta\":{\"user\":\"hans\",\"scenario\":\"newspaper\"}}";
 
 					WebTarget webTarget = client.target(address);
 					Invocation.Builder ib = webTarget
-							.request(MediaType.TEXT_PLAIN_TYPE);
+							.request("application/rdf+xml");
 
 					long start = System.currentTimeMillis();
 					Response response = ib.post(Entity.entity(data,
 							MediaType.APPLICATION_JSON));
 					long end = System.currentTimeMillis();
-					System.out.println(end-start);
+					//System.out.println(end-start);
 					if (response.getStatus() != 200) {
 						String s = response.getStatusInfo().toString();
 						response.close();
@@ -84,7 +84,7 @@ public class KristinaTest {
 					l.add(result);
 					Files.write(Paths.get("./src/main/resources/results/DM2LG/"+entry.getName().replace("la", "dm").replace("owl","rdf")), l);
 					
-					reader.readLine();
+					//reader.readLine();
 				}
 			}
 		} catch (Exception e) {

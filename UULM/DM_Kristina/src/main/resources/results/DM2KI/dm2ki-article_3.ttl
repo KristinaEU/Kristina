@@ -1,0 +1,54 @@
+@prefix :        <http://kristina-project.eu/ontologies/la/example#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix action:  <http://kristina-project.eu/ontologies/la/action#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://kristina-project.eu/ontologies/la/onto#Read>
+      a       owl:Class .
+
+action:textualContent
+      a       owl:DatatypeProperty .
+
+:read2
+      a       <http://kristina-project.eu/ontologies/la/onto#Read> , owl:NamedIndividual .
+
+action:sentenceASRConfidence
+      a       owl:DatatypeProperty .
+
+action:contains
+      a       owl:ObjectProperty .
+
+<http://kristina-project.eu/ontologies/dialogue_actions#UserAction>
+      a       owl:Class .
+
+:article4
+      a       <http://kristina-project.eu/ontologies/la/onto#Article> , owl:NamedIndividual .
+
+<http://kristina-project.eu/ontologies/la/onto#For>
+      a       owl:Class .
+
+<http://kristina-project.eu/ontologies/la/example>
+      a       owl:Ontology .
+
+:action1
+      a       <http://kristina-project.eu/ontologies/dialogue_actions#UserAction> , owl:NamedIndividual ;
+      action:contains :ae711878-38ce-4d29-83d8-733da9e9251a ;
+      action:sentenceASRConfidence
+              "0.9"^^xsd:float ;
+      action:textualContent
+              "K%C3%B6nntest+Du+den+Artikel+Baufirma+soll+eine+Lehrrohr-Trasse+f%C3%BCr+Stromkabel+bis+zum+Tunnel+am+Baggersee+verleg+vorlesen%3F" .
+
+<http://kristina-project.eu/ontologies/la/onto#Article>
+      a       owl:Class .
+
+<http://kristina-project.eu/ontologies/dialogue_actions#BooleanRequest>
+      a       owl:Class .
+
+:for3
+      a       <http://kristina-project.eu/ontologies/la/onto#For> , owl:NamedIndividual .
+
+:ae711878-38ce-4d29-83d8-733da9e9251a
+      a       <http://kristina-project.eu/ontologies/dialogue_actions#RequestNewspaper> , owl:NamedIndividual .
+

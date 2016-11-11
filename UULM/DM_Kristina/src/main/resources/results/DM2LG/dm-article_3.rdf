@@ -1,0 +1,27 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:j.0="http://kristina-project.eu/ontologies/dialogue_actions#" > 
+  <rdf:Description rdf:about="http://kristina-project.eu/tmp#a4345d6b-6422-43a4-b699-561e07d46a25">
+    <j.0:text>Did you like the article?</j.0:text>
+    <rdf:type rdf:resource="http://kristina-project.eu/ontologies/dialogue_actions#Canned"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://kristina-project.eu/tmp#1d35a2af-44b2-48fa-a801-96d7589daaee">
+    <j.0:containsSystemAct rdf:resource="http://kristina-project.eu/tmp#a4345d6b-6422-43a4-b699-561e07d46a25"/>
+    <j.0:containsSystemAct rdf:resource="http://kristina-project.eu/tmp#6df16766-0911-4ef9-9f8e-0a4753308deb"/>
+    <j.0:startWith rdf:resource="http://kristina-project.eu/tmp#43cda8d2-6a67-41c3-8d6e-6ca55b43e040"/>
+    <j.0:containsSystemAct rdf:resource="http://kristina-project.eu/tmp#43cda8d2-6a67-41c3-8d6e-6ca55b43e040"/>
+    <j.0:hasArousal rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.14100000000000001</j.0:hasArousal>
+    <j.0:hasValence rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.10595187144804212</j.0:hasValence>
+    <rdf:type rdf:resource="http://kristina-project.eu/ontologies/dialogue_actions#SystemAction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://kristina-project.eu/tmp#43cda8d2-6a67-41c3-8d6e-6ca55b43e040">
+    <j.0:followedBy rdf:resource="http://kristina-project.eu/tmp#6df16766-0911-4ef9-9f8e-0a4753308deb"/>
+    <rdf:type rdf:resource="http://kristina-project.eu/ontologies/dialogue_actions#Accept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://kristina-project.eu/tmp#6df16766-0911-4ef9-9f8e-0a4753308deb">
+    <j.0:followedBy rdf:resource="http://kristina-project.eu/tmp#a4345d6b-6422-43a4-b699-561e07d46a25"/>
+    <j.0:text>Kirchentellinsfurt.+Wenn+die+Firma+schon+den+Neckartalradweg+baut%2C+k%C3%B6nne+sie+doch+gleich+eine+Stromversorgung+entlang+des+Radwegs+von+der+Triebstra%C3%9Fe+bis+zum+Tunnel+am+Baggersee+verlegen+%28weil+das+Neckartal+%C3%9Cberschwemmungsgebiet+ist%2C+d%C3%BCrfen+dort+keine+Strommasten+aufgestellt+werden%29.+Rund+66%C2%A0000+Euro+soll+die+Lehrrohr-Trasse+kosten.+Strom-+und+andere+Kabel+kann+der+potenzielle+P%C3%A4chter+Christoph+Jeggle+f%C3%BCr+seine+Wakeboardanlage+brauchen%2C+der+die+Trasse+dann+mieten+k%C3%B6nne.+Die+Verhandlungen+zwischen+Jeggle+und+den+Epplesee-Besitzern+sind+noch+nicht+abgeschlossen%2C+so+Ortsbaumeister+Martin+Lack.+Wenn+sie+sich+einigten%2C+sei+die+Trasse+die+einzig+sinnvolle+L%C3%B6sung.+Eine+Verlegung+unter+den+Neckar+hindurch+verschlinge+eine+hohe+sechsstellige+Summe.+Der+Neckartalradweg+m%C3%BCsse+jedoch+wegen+der+Zusch%C3%BCsse+dieses+Jahr+gebaut+werden.+So+m%C3%BCssten+die+R%C3%A4te+die+Trasse+also+ins+Blaue+beschlie%C3%9Fen.+%E2%80%9EDie+Erschlie%C3%9Fung+tue+dem+Baggersee+gut%2C+klar%2C+dass+man%E2%80%99s+machen+muss%E2%80%9C%2C+meinte+Markus+Appenzeller+%28FWV%29.+Auch%2C+wenn+es+mit+Jeggle+nicht+klappen+sollte.+Ruth+Setzler+%28GAL%29+und+Petra+Kriegeskorte+%28SPD%29+sahen+das+auch+so%2C+Susanne+Weitbrecht+%28RAT%29+fand+es+nicht+notwendig%2C+Strom+%E2%80%9Ef%C3%BCr+einen+sanften+Ausbau+der+Badekultur%E2%80%9C+zu+brauchen.+F%C3%BCr+Karl-Heinz+Armbruster+%28FWV%29+war+das+Risiko+zu+gro%C3%9F%2C+falls+Jeggle+abspringt.+Schlie%C3%9Flich+sprach+sich+der+Rat+mehrheitlich+f%C3%BCr+die+Trasse+aus.</j.0:text>
+    <rdf:type rdf:resource="http://kristina-project.eu/ontologies/dialogue_actions#ReadNewspaper"/>
+  </rdf:Description>
+</rdf:RDF>
+

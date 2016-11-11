@@ -1,0 +1,106 @@
+@prefix :        <http://kristina-project.eu/ontologies/la/example#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix context:  <http://kristina-project.eu/ontologies/la/context#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix action:  <http://kristina-project.eu/ontologies/la/action#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://kristina-project.eu/ontologies/la/onto#Read>
+      a       owl:Class .
+
+:Agent8
+      a       context:Agent , owl:NamedIndividual ;
+      context:classifies :read3 .
+
+context:Agent
+      a       owl:Class .
+
+<http://kristina-project.eu/ontologies/la/example>
+      a       owl:Ontology .
+
+:article2
+      a       <http://kristina-project.eu/ontologies/la/onto#Article> , owl:NamedIndividual .
+
+:for4
+      a       <http://kristina-project.eu/ontologies/la/onto#For> , owl:NamedIndividual .
+
+<http://kristina-project.eu/ontologies/dialogue_actions#BooleanRequest>
+      a       owl:Class .
+
+:forCtx5
+      a       context:Situation , owl:NamedIndividual ;
+      context:includes :read3 ;
+      context:includesEvent
+              :for4 ;
+      context:satisfies :forDesc6 .
+
+:context7
+      a       context:Context , owl:NamedIndividual ;
+      context:classifies :for4 .
+
+:read3
+      a       <http://kristina-project.eu/ontologies/la/onto#Read> , owl:NamedIndividual .
+
+action:textualContent
+      a       owl:DatatypeProperty .
+
+context:defines
+      a       owl:ObjectProperty .
+
+context:Situation
+      a       owl:Class .
+
+context:semanticContent
+      a       owl:ObjectProperty .
+
+action:sentenceASRConfidence
+      a       owl:DatatypeProperty .
+
+action:contains
+      a       owl:ObjectProperty .
+
+context:Context
+      a       owl:Class .
+
+<http://kristina-project.eu/ontologies/dialogue_actions#UserAction>
+      a       owl:Class .
+
+context:ContextDescription
+      a       owl:Class .
+
+context:satisfies
+      a       owl:ObjectProperty .
+
+:forDesc6
+      a       owl:NamedIndividual , context:ContextDescription ;
+      context:defines :context7 , :Agent8 .
+
+context:includesEvent
+      a       owl:ObjectProperty .
+
+<http://kristina-project.eu/ontologies/la/onto#For>
+      a       owl:Class .
+
+:action1
+      a       <http://kristina-project.eu/ontologies/dialogue_actions#UserAction> , owl:NamedIndividual ;
+      action:contains <http://kristina-project.eu/ontologies/la/example#92344df8-a85c-4ea0-8fa7-bb99bbaaa022> ;
+      action:sentenceASRConfidence
+              "0.9"^^xsd:float ;
+      action:textualContent
+              "K%C3%B6nntest+Du+den+Artikel+Das+Entringer+Freibad+%C3%B6ffnete+am+Sonntag+erstmals+f%C3%BCr+einen+Hundeschwimmtag+vorlesen%3F" .
+
+<http://kristina-project.eu/ontologies/la/onto#Article>
+      a       owl:Class .
+
+<http://kristina-project.eu/ontologies/la/example#92344df8-a85c-4ea0-8fa7-bb99bbaaa022>
+      a       <http://kristina-project.eu/ontologies/dialogue_actions#RequestNewspaper> , owl:NamedIndividual ;
+      context:semanticContent
+              :forCtx5 .
+
+context:classifies
+      a       owl:ObjectProperty .
+
+context:includes
+      a       owl:ObjectProperty .
+

@@ -1,0 +1,258 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:j.0="http://kristina-project.eu/ontologies/dialogue_actions#" > 
+  <rdf:Description rdf:about="http://temp#d6dmqoldqrbls7p96k27934437">
+    <rdf:object rdf:resource="http://kristina-project.eu/ontologies/la/exampledataResponse_favouriteBoardGameLudo#playCtx2"/>
+    <rdf:predicate rdf:resource="http://kristina-project.eu/ontologies/la/context#includes"/>
+    <rdf:subject rdf:resource="http://kristina-project.eu/ontologies/la/exampledataResponse_favouriteBoardGameLudo#likeCtx1"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://temp#4d91jhqrl05ao1p8u744fahku4">
+    <rdf:object rdf:resource="http://kristina-project.eu/ontologies/la/context#Context"/>
+    <rdf:predicate rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    <rdf:subject rdf:resource="http://kristina-project.eu/ontologies/la/exampledataResponse_favouriteBoardGameLudo#context2"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://temp#43uv6fre6002hif33tu4vg2972">
+    <rdf:object rdf:resource="http://kristina-project.eu/ontologies/la/exampledataResponse_favouriteBoardGameLudo#context1"/>
+    <rdf:predicate rdf:resource="http://kristina-project.eu/ontologies/la/context#defines"/>
+    <rdf:subject rdf:resource="http://kristina-project.eu/ontologies/la/exampledataResponse_favouriteBoardGameLudo#likeDesc1"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://temp#oerjjpqn4iafbdapuh7rqpgr6s">
+    <rdf:object rdf:resource="http://kristina-project.eu/ontologies/la/context#ContextDescription"/>
+    <rdf:predicate rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    <rdf:subject rdf:resource="http://kristina-project.eu/ontologies/la/exampledataResponse_favouriteBoardGameLudo#likeDesc1"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://temp#va1g0sh3sbia2bqtcvn5ftdnk3">
+    <rdf:object rdf:resource="http://kristina-project.eu/ontologies/la/context#Situation"/>
+    <rdf:predicate rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    <rdf:subject rdf:resource="http://kristina-project.eu/ontologies/la/exampledataResponse_favouriteBoardGameLudo#likeCtx1"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://temp#jo83174hu901c7bufnu71v0rv6">
+    <rdf:object rdf:resource="http://kristina-project.eu/ontologies/la/context#ContextDescription"/>
+    <rdf:predicate rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    <rdf:subject rdf:resource="http://kristina-project.eu/ontologies/la/exampledataResponse_favouriteBoardGameLudo#playDesc2"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://temp#fcehqf7h93i0kobdthiep39995">
+    <rdf:object rdf:resource="http://kristina-project.eu/ontologies/la/exampledataResponse_favouriteBoardGameLudo#ludo"/>
+    <rdf:predicate rdf:resource="http://kristina-project.eu/ontologies/la/context#includes"/>
+    <rdf:subject rdf:resource="http://kristina-project.eu/ontologies/la/exampledataResponse_favouriteBoardGameLudo#playCtx2"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://temp#n699ieifj0fco9apfddo4jml13">
+    <rdf:object rdf:resource="http://kristina-project.eu/ontologies/la/exampledataResponse_favouriteBoardGameLudo#ludo"/>
+    <rdf:predicate rdf:resource="http://kristina-project.eu/ontologies/la/context#classifies"/>
+    <rdf:subject rdf:resource="http://kristina-project.eu/ontologies/la/exampledataResponse_favouriteBoardGameLudo#theme2"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://kristina-project.eu/tmp#10e682b7-26ed-40c5-b910-eda88c4af89f">
+    <j.0:containsSemantics rdf:resource="http://temp#ckl66evhu8r9f0gh4kqusml62e"/>
+    <j.0:containsSemantics rdf:resource="http://temp#vv50o4knl750rld6gh63rioem5"/>
+    <j.0:containsSemantics rdf:resource="http://temp#iv3f50it5ipnoiftcs5emq91a5"/>
+    <j.0:containsSemantics rdf:resource="http://temp#oe9p3f9klb0k47iu4qkfrovrss"/>
+    <j.0:containsSemantics rdf:resource="http://temp#d6dmqoldqrbls7p96k27934437"/>
+    <j.0:containsSemantics rdf:resource="http://temp#30mggn868ct5p8v4elopnt3u2m"/>
+    <j.0:verbosity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</j.0:verbosity>
+    <j.0:isFormal rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</j.0:isFormal>
+    <j.0:containsSemantics rdf:resource="http://temp#q3tjb58o6fdfbkcb1dv00bmfkd"/>
+    <j.0:containsSemantics rdf:resource="http://temp#nnffng6rgatm77tl21mjcnrjfs"/>
+    <j.0:containsSemantics rdf:resource="http://temp#h8lipmepntmpjsor721mm6ocsg"/>
+    <j.0:isBelief rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</j.0:isBelief>
+    <j.0:containsSemantics rdf:resource="http://temp#fcehqf7h93i0kobdthiep39995"/>
+    <j.0:containsSemantics rdf:resource="http://temp#n699ieifj0fco9apfddo4jml13"/>
+    <j.0:containsSemantics rdf:resource="http://temp#8i0a6stpg229e6vq6uommo6dt4"/>
+    <j.0:containsSemantics rdf:resource="http://temp#jd7j4fb36l2l6mhmvt8tr469sq"/>
+    <j.0:containsSemantics rdf:resource="http://temp#lah2mm70c2c0hev3t6h6o5lalh"/>
+    <j.0:directness rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</j.0:directness>
+    <j.0:containsSemantics rdf:resource="http://temp#9cluqkf1553ss1rhuf05k0jm9v"/>
+    <j.0:containsSemantics rdf:resource="http://temp#4mkq9b1knago35u8kb63qkkp07"/>
+    <j.0:containsSemantics rdf:resource="http://temp#va1g0sh3sbia2bqtcvn5ftdnk3"/>
+    <j.0:containsSemantics rdf:resource="http://temp#jo83174hu901c7bufnu71v0rv6"/>
+    <j.0:containsSemantics rdf:resource="http://temp#op88fld0dj6gu0l4qu9si2avsn"/>
+    <j.0:containsSemantics rdf:resource="http://temp#f4d2vne9l9qaocqr9ls9nmoitn"/>
+    <j.0:containsSemantics rdf:resource="http://temp#pvgnbdrhtjs4s5aok2gghjbh0h"/>
+    <j.0:containsSemantics rdf:resource="http://temp#ugv7sp1o6j5ernq22vodmtujdu"/>
+    <j.0:containsSemantics rdf:resource="http://temp#43uv6fre6002hif33tu4vg2972"/>
+    <j.0:containsSemantics rdf:resource="http://temp#571e3344ukgvq3oucj3nmaqvfv"/>
+    <j.0:containsSemantics rdf:resource="http://temp#4d91jhqrl05ao1p8u744fahku4"/>
+    <j.0:containsSemantics rdf:resource="http://temp#3lims8itmcb4d7gf2hiqn4p0s6"/>
+    <j.0:containsSemantics rdf:resource="http://temp#faab0l515sj6vkun3kqtefde3g"/>
+    <j.0:containsSemantics rdf:resource="http://temp#bor2bdp3jhegvlbnaat7vsh4li"/>
+    <j.0:containsSemantics rdf:resource="http://temp#oerjjpqn4iafbdapuh7rqpgr6s"/>
+    <j.0:containsSemantics rdf:resource="http://temp#4e2n8munfdsbin6irn77eqeugn"/>
+    <j.0:containsSemantics rdf:resource="http://temp#v0ptvcfhpag8gl2p6l5q9ange"/>
+    <j.0:isAdvice rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</j.0:isAdvice>
+    <j.0:containsSemantics rdf:resource="http://temp#l7tf1apom7hglv3e5j7q8q1an9"/>
+    <rdf:type rdf:resource="http://kristina-project.eu/ontologies/dialogue_actions#Declare"/>
+    <j.0:containsSemantics rdf:resource="http://temp#2t8k9v2pv1j1ah74q2l7n1hc79"/>
+    <j.0:containsSemantics rdf:resource="http://temp#7r8hlcv2l6s4b8k7au43iq758c"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://temp#nnffng6rgatm77tl21mjcnrjfs">
+    <rdf:object rdf:resource="http://kristina-project.eu/ontologies/la/context#Context"/>
+    <rdf:predicate rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    <rdf:subject rdf:resource="http://kristina-project.eu/ontologies/la/exampledataResponse_favouriteBoardGameLudo#context1"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://temp#30mggn868ct5p8v4elopnt3u2m">
+    <rdf:object rdf:resource="http://kristina-project.eu/ontologies/la/exampledataResponse_favouriteBoardGameLudo#play2"/>
+    <rdf:predicate rdf:resource="http://kristina-project.eu/ontologies/la/context#includes"/>
+    <rdf:subject rdf:resource="http://kristina-project.eu/ontologies/la/exampledataResponse_favouriteBoardGameLudo#playCtx2"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://temp#pvgnbdrhtjs4s5aok2gghjbh0h">
+    <rdf:object rdf:resource="http://kristina-project.eu/ontologies/la/exampledataResponse_favouriteBoardGameLudo#Eugene"/>
+    <rdf:predicate rdf:resource="http://kristina-project.eu/ontologies/la/context#classifies"/>
+    <rdf:subject rdf:resource="http://kristina-project.eu/ontologies/la/exampledataResponse_favouriteBoardGameLudo#agent1"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://temp#9cluqkf1553ss1rhuf05k0jm9v">
+    <rdf:object rdf:resource="http://kristina-project.eu/ontologies/la/exampledataResponse_favouriteBoardGameLudo#theme1"/>
+    <rdf:predicate rdf:resource="http://kristina-project.eu/ontologies/la/context#defines"/>
+    <rdf:subject rdf:resource="http://kristina-project.eu/ontologies/la/exampledataResponse_favouriteBoardGameLudo#likeDesc1"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://temp#f4d2vne9l9qaocqr9ls9nmoitn">
+    <rdf:object rdf:resource="http://kristina-project.eu/ontologies/la/context#Theme"/>
+    <rdf:predicate rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    <rdf:subject rdf:resource="http://kristina-project.eu/ontologies/la/exampledataResponse_favouriteBoardGameLudo#theme1"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://temp#4e2n8munfdsbin6irn77eqeugn">
+    <rdf:object rdf:resource="http://kristina-project.eu/ontologies/la/exampledataResponse_favouriteBoardGameLudo#context2"/>
+    <rdf:predicate rdf:resource="http://kristina-project.eu/ontologies/la/context#defines"/>
+    <rdf:subject rdf:resource="http://kristina-project.eu/ontologies/la/exampledataResponse_favouriteBoardGameLudo#playDesc2"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://temp#q3tjb58o6fdfbkcb1dv00bmfkd">
+    <rdf:object rdf:resource="http://kristina-project.eu/ontologies/la/exampledataResponse_favouriteBoardGameLudo#Eugene"/>
+    <rdf:predicate rdf:resource="http://kristina-project.eu/ontologies/la/context#includes"/>
+    <rdf:subject rdf:resource="http://kristina-project.eu/ontologies/la/exampledataResponse_favouriteBoardGameLudo#likeCtx1"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://temp#jd7j4fb36l2l6mhmvt8tr469sq">
+    <rdf:object rdf:resource="http://kristina-project.eu/ontologies/la/exampledataResponse_favouriteBoardGameLudo#play2"/>
+    <rdf:predicate rdf:resource="http://kristina-project.eu/ontologies/la/context#classifies"/>
+    <rdf:subject rdf:resource="http://kristina-project.eu/ontologies/la/exampledataResponse_favouriteBoardGameLudo#context2"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://temp#faab0l515sj6vkun3kqtefde3g">
+    <rdf:object rdf:resource="http://kristina-project.eu/ontologies/la/exampledataResponse_favouriteBoardGameLudo#agent2"/>
+    <rdf:predicate rdf:resource="http://kristina-project.eu/ontologies/la/context#defines"/>
+    <rdf:subject rdf:resource="http://kristina-project.eu/ontologies/la/exampledataResponse_favouriteBoardGameLudo#playDesc2"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://temp#571e3344ukgvq3oucj3nmaqvfv">
+    <rdf:object rdf:resource="http://kristina-project.eu/ontologies/la/onto#Like"/>
+    <rdf:predicate rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    <rdf:subject rdf:resource="http://kristina-project.eu/ontologies/la/exampledataResponse_favouriteBoardGameLudo#like1"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://temp#2t8k9v2pv1j1ah74q2l7n1hc79">
+    <rdf:object rdf:resource="http://kristina-project.eu/ontologies/la/onto#CareRecipient"/>
+    <rdf:predicate rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    <rdf:subject rdf:resource="http://kristina-project.eu/ontologies/la/exampledataResponse_favouriteBoardGameLudo#Eugene"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://kristina-project.eu/tmp#c405ee22-8c7d-4bcd-871e-e7a0dd651af4">
+    <j.0:startWith rdf:resource="http://kristina-project.eu/tmp#10e682b7-26ed-40c5-b910-eda88c4af89f"/>
+    <j.0:containsSystemAct rdf:resource="http://kristina-project.eu/tmp#10e682b7-26ed-40c5-b910-eda88c4af89f"/>
+    <j.0:hasArousal rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.14396593708227923</j.0:hasArousal>
+    <j.0:hasValence rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.08246194049025368</j.0:hasValence>
+    <rdf:type rdf:resource="http://kristina-project.eu/ontologies/dialogue_actions#SystemAction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://temp#vv50o4knl750rld6gh63rioem5">
+    <rdf:object rdf:resource="http://kristina-project.eu/ontologies/la/exampledataResponse_favouriteBoardGameLudo#like1"/>
+    <rdf:predicate rdf:resource="http://kristina-project.eu/ontologies/la/context#includesEvent"/>
+    <rdf:subject rdf:resource="http://kristina-project.eu/ontologies/la/exampledataResponse_favouriteBoardGameLudo#likeCtx1"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://temp#bor2bdp3jhegvlbnaat7vsh4li">
+    <rdf:object rdf:resource="http://kristina-project.eu/ontologies/la/exampledataResponse_favouriteBoardGameLudo#like1"/>
+    <rdf:predicate rdf:resource="http://kristina-project.eu/ontologies/la/context#classifies"/>
+    <rdf:subject rdf:resource="http://kristina-project.eu/ontologies/la/exampledataResponse_favouriteBoardGameLudo#context1"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://temp#7r8hlcv2l6s4b8k7au43iq758c">
+    <rdf:object rdf:resource="http://kristina-project.eu/ontologies/la/exampledataResponse_favouriteBoardGameLudo#playDesc2"/>
+    <rdf:predicate rdf:resource="http://kristina-project.eu/ontologies/la/context#satisfies"/>
+    <rdf:subject rdf:resource="http://kristina-project.eu/ontologies/la/exampledataResponse_favouriteBoardGameLudo#playCtx2"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://temp#ugv7sp1o6j5ernq22vodmtujdu">
+    <rdf:object rdf:resource="http://kristina-project.eu/ontologies/la/onto#BoardGame"/>
+    <rdf:predicate rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    <rdf:subject rdf:resource="http://kristina-project.eu/ontologies/la/exampledataResponse_favouriteBoardGameLudo#ludo"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://temp#iv3f50it5ipnoiftcs5emq91a5">
+    <rdf:object rdf:resource="http://kristina-project.eu/ontologies/la/context#Situation"/>
+    <rdf:predicate rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    <rdf:subject rdf:resource="http://kristina-project.eu/ontologies/la/exampledataResponse_favouriteBoardGameLudo#playCtx2"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://temp#oe9p3f9klb0k47iu4qkfrovrss">
+    <rdf:object rdf:resource="http://kristina-project.eu/ontologies/la/context#Theme"/>
+    <rdf:predicate rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    <rdf:subject rdf:resource="http://kristina-project.eu/ontologies/la/exampledataResponse_favouriteBoardGameLudo#theme2"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://temp#v0ptvcfhpag8gl2p6l5q9ange">
+    <rdf:object rdf:resource="http://kristina-project.eu/ontologies/la/exampledataResponse_favouriteBoardGameLudo#Eugene"/>
+    <rdf:predicate rdf:resource="http://kristina-project.eu/ontologies/la/context#includes"/>
+    <rdf:subject rdf:resource="http://kristina-project.eu/ontologies/la/exampledataResponse_favouriteBoardGameLudo#playCtx2"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://temp#3lims8itmcb4d7gf2hiqn4p0s6">
+    <rdf:object rdf:resource="http://kristina-project.eu/ontologies/la/onto#Play"/>
+    <rdf:predicate rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    <rdf:subject rdf:resource="http://kristina-project.eu/ontologies/la/exampledataResponse_favouriteBoardGameLudo#play2"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://temp#8i0a6stpg229e6vq6uommo6dt4">
+    <rdf:object rdf:resource="http://kristina-project.eu/ontologies/la/exampledataResponse_favouriteBoardGameLudo#agent1"/>
+    <rdf:predicate rdf:resource="http://kristina-project.eu/ontologies/la/context#defines"/>
+    <rdf:subject rdf:resource="http://kristina-project.eu/ontologies/la/exampledataResponse_favouriteBoardGameLudo#likeDesc1"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://temp#ckl66evhu8r9f0gh4kqusml62e">
+    <rdf:object rdf:resource="http://kristina-project.eu/ontologies/la/exampledataResponse_favouriteBoardGameLudo#playCtx2"/>
+    <rdf:predicate rdf:resource="http://kristina-project.eu/ontologies/la/context#classifies"/>
+    <rdf:subject rdf:resource="http://kristina-project.eu/ontologies/la/exampledataResponse_favouriteBoardGameLudo#theme1"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://temp#h8lipmepntmpjsor721mm6ocsg">
+    <rdf:object rdf:resource="http://kristina-project.eu/ontologies/la/exampledataResponse_favouriteBoardGameLudo#likeDesc1"/>
+    <rdf:predicate rdf:resource="http://kristina-project.eu/ontologies/la/context#satisfies"/>
+    <rdf:subject rdf:resource="http://kristina-project.eu/ontologies/la/exampledataResponse_favouriteBoardGameLudo#likeCtx1"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://temp#l7tf1apom7hglv3e5j7q8q1an9">
+    <rdf:object rdf:resource="http://kristina-project.eu/ontologies/la/exampledataResponse_favouriteBoardGameLudo#Eugene"/>
+    <rdf:predicate rdf:resource="http://kristina-project.eu/ontologies/la/context#classifies"/>
+    <rdf:subject rdf:resource="http://kristina-project.eu/ontologies/la/exampledataResponse_favouriteBoardGameLudo#agent2"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://temp#lah2mm70c2c0hev3t6h6o5lalh">
+    <rdf:object rdf:resource="http://kristina-project.eu/ontologies/la/exampledataResponse_favouriteBoardGameLudo#theme2"/>
+    <rdf:predicate rdf:resource="http://kristina-project.eu/ontologies/la/context#defines"/>
+    <rdf:subject rdf:resource="http://kristina-project.eu/ontologies/la/exampledataResponse_favouriteBoardGameLudo#playDesc2"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://temp#op88fld0dj6gu0l4qu9si2avsn">
+    <rdf:object rdf:resource="http://kristina-project.eu/ontologies/la/context#Agent"/>
+    <rdf:predicate rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    <rdf:subject rdf:resource="http://kristina-project.eu/ontologies/la/exampledataResponse_favouriteBoardGameLudo#agent2"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://temp#4mkq9b1knago35u8kb63qkkp07">
+    <rdf:object rdf:resource="http://kristina-project.eu/ontologies/la/context#Agent"/>
+    <rdf:predicate rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    <rdf:subject rdf:resource="http://kristina-project.eu/ontologies/la/exampledataResponse_favouriteBoardGameLudo#agent1"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"/>
+  </rdf:Description>
+</rdf:RDF>
+

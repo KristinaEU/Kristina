@@ -1,0 +1,153 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:j.0="http://kristina-project.eu/ontologies/dialogue_actions#" > 
+  <rdf:Description rdf:about="http://temp#u1irq20fb2gqudk0rob3m6pmae">
+    <rdf:object rdf:resource="http://kristina-project.eu/ontologies/la/exampledataResponse_sleepTime#Eugene"/>
+    <rdf:predicate rdf:resource="http://kristina-project.eu/ontologies/la/context#includes"/>
+    <rdf:subject rdf:resource="http://kristina-project.eu/ontologies/la/exampledataResponse_sleepTime#sleepCtx1"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://temp#ha5rd3vcdud41u0rsqg2mnubm3">
+    <rdf:object rdf:resource="http://kristina-project.eu/ontologies/la/onto#StartTime"/>
+    <rdf:predicate rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    <rdf:subject rdf:resource="http://kristina-project.eu/ontologies/la/exampledataResponse_sleepTime#time1"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://temp#banogu410uusohdbi8t9nbtsle">
+    <rdf:object rdf:resource="http://kristina-project.eu/ontologies/la/context#TemporalAttribute"/>
+    <rdf:predicate rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    <rdf:subject rdf:resource="http://kristina-project.eu/ontologies/la/exampledataResponse_sleepTime#tempAttr1"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://temp#9n8kvuvkl4vqs3g3lpplthhv4s">
+    <rdf:object>midnight</rdf:object>
+    <rdf:predicate rdf:resource="http://kristina-project.eu/ontologies/la/onto#hasValue"/>
+    <rdf:subject rdf:resource="http://kristina-project.eu/ontologies/la/exampledataResponse_sleepTime#time1"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://temp#84rkofcv6orspom3u0783ct3l7">
+    <rdf:object rdf:resource="http://kristina-project.eu/ontologies/la/exampledataResponse_sleepTime#tempAttr1"/>
+    <rdf:predicate rdf:resource="http://kristina-project.eu/ontologies/la/context#defines"/>
+    <rdf:subject rdf:resource="http://kristina-project.eu/ontologies/la/exampledataResponse_sleepTime#sleepDesc1"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://temp#et3huioh39mbclgk5idoqkr8j4">
+    <rdf:object rdf:resource="http://kristina-project.eu/ontologies/la/exampledataResponse_sleepTime#time1"/>
+    <rdf:predicate rdf:resource="http://kristina-project.eu/ontologies/la/context#includes"/>
+    <rdf:subject rdf:resource="http://kristina-project.eu/ontologies/la/exampledataResponse_sleepTime#sleepCtx1"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://temp#4mqli242c36iqkhoj3ajf668o2">
+    <rdf:object rdf:resource="http://kristina-project.eu/ontologies/la/context#Agent"/>
+    <rdf:predicate rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    <rdf:subject rdf:resource="http://kristina-project.eu/ontologies/la/exampledataResponse_sleepTime#agent1"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://temp#p4lf7bes80k2i2fbc1rg0dkm3b">
+    <rdf:object rdf:resource="http://kristina-project.eu/ontologies/la/onto#Sleep"/>
+    <rdf:predicate rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    <rdf:subject rdf:resource="http://kristina-project.eu/ontologies/la/exampledataResponse_sleepTime#sleep1"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://temp#ejaljolbdprcb0u6l823v01o57">
+    <rdf:object rdf:resource="http://kristina-project.eu/ontologies/la/exampledataResponse_sleepTime#sleep1"/>
+    <rdf:predicate rdf:resource="http://kristina-project.eu/ontologies/la/context#classifies"/>
+    <rdf:subject rdf:resource="http://kristina-project.eu/ontologies/la/exampledataResponse_sleepTime#context1"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://temp#manbslimoqbchrh0ok2ueatgqc">
+    <rdf:object rdf:resource="http://kristina-project.eu/ontologies/la/context#ContextDescription"/>
+    <rdf:predicate rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    <rdf:subject rdf:resource="http://kristina-project.eu/ontologies/la/exampledataResponse_sleepTime#sleepDesc1"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://temp#loi63s1hb71a3cchntjn022sjh">
+    <rdf:object rdf:resource="http://kristina-project.eu/ontologies/la/context#Context"/>
+    <rdf:predicate rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    <rdf:subject rdf:resource="http://kristina-project.eu/ontologies/la/exampledataResponse_sleepTime#context1"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://temp#g4pm0i427gl8ji4gpubpri2it">
+    <rdf:object rdf:resource="http://kristina-project.eu/ontologies/la/exampledataResponse_sleepTime#time1"/>
+    <rdf:predicate rdf:resource="http://kristina-project.eu/ontologies/la/context#classifies"/>
+    <rdf:subject rdf:resource="http://kristina-project.eu/ontologies/la/exampledataResponse_sleepTime#tempAttr1"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://kristina-project.eu/tmp#420cbf49-8259-4ce3-aa05-3f5025867bda">
+    <j.0:containsSemantics rdf:resource="http://temp#nr3unqo0fd5i6anqcbb8g50crn"/>
+    <j.0:isAdvice rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</j.0:isAdvice>
+    <j.0:containsSemantics rdf:resource="http://temp#p4lf7bes80k2i2fbc1rg0dkm3b"/>
+    <j.0:containsSemantics rdf:resource="http://temp#9n8kvuvkl4vqs3g3lpplthhv4s"/>
+    <j.0:containsSemantics rdf:resource="http://temp#g4pm0i427gl8ji4gpubpri2it"/>
+    <j.0:verbosity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</j.0:verbosity>
+    <j.0:isFormal rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</j.0:isFormal>
+    <j.0:containsSemantics rdf:resource="http://temp#ejaljolbdprcb0u6l823v01o57"/>
+    <j.0:containsSemantics rdf:resource="http://temp#ad8igq8hmr7796msav4l71h3tm"/>
+    <j.0:containsSemantics rdf:resource="http://temp#manbslimoqbchrh0ok2ueatgqc"/>
+    <j.0:containsSemantics rdf:resource="http://temp#4mqli242c36iqkhoj3ajf668o2"/>
+    <j.0:containsSemantics rdf:resource="http://temp#loi63s1hb71a3cchntjn022sjh"/>
+    <j.0:containsSemantics rdf:resource="http://temp#et3huioh39mbclgk5idoqkr8j4"/>
+    <j.0:containsSemantics rdf:resource="http://temp#gulph0gt54sb46nhut1b56t1vp"/>
+    <rdf:type rdf:resource="http://kristina-project.eu/ontologies/dialogue_actions#Declare"/>
+    <j.0:containsSemantics rdf:resource="http://temp#84rkofcv6orspom3u0783ct3l7"/>
+    <j.0:containsSemantics rdf:resource="http://temp#ha5rd3vcdud41u0rsqg2mnubm3"/>
+    <j.0:containsSemantics rdf:resource="http://temp#u1irq20fb2gqudk0rob3m6pmae"/>
+    <j.0:containsSemantics rdf:resource="http://temp#73setmlss9q9upte55ftk6hoo8"/>
+    <j.0:containsSemantics rdf:resource="http://temp#o42ggrcjo0t576dbgoc57q2q7g"/>
+    <j.0:directness rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</j.0:directness>
+    <j.0:containsSemantics rdf:resource="http://temp#9mjo9o1febgrdgn2plvrpgude8"/>
+    <j.0:containsSemantics rdf:resource="http://temp#n6l6p89u7q92l35mddk76g3nt0"/>
+    <j.0:containsSemantics rdf:resource="http://temp#banogu410uusohdbi8t9nbtsle"/>
+    <j.0:isBelief rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</j.0:isBelief>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://temp#73setmlss9q9upte55ftk6hoo8">
+    <rdf:object rdf:resource="http://kristina-project.eu/ontologies/la/exampledataResponse_sleepTime#context1"/>
+    <rdf:predicate rdf:resource="http://kristina-project.eu/ontologies/la/context#defines"/>
+    <rdf:subject rdf:resource="http://kristina-project.eu/ontologies/la/exampledataResponse_sleepTime#sleepDesc1"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://temp#ad8igq8hmr7796msav4l71h3tm">
+    <rdf:object rdf:resource="http://kristina-project.eu/ontologies/la/exampledataResponse_sleepTime#sleepDesc1"/>
+    <rdf:predicate rdf:resource="http://kristina-project.eu/ontologies/la/context#satisfies"/>
+    <rdf:subject rdf:resource="http://kristina-project.eu/ontologies/la/exampledataResponse_sleepTime#sleepCtx1"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://temp#9mjo9o1febgrdgn2plvrpgude8">
+    <rdf:object rdf:resource="http://kristina-project.eu/ontologies/la/exampledataResponse_sleepTime#sleep1"/>
+    <rdf:predicate rdf:resource="http://kristina-project.eu/ontologies/la/context#includesEvent"/>
+    <rdf:subject rdf:resource="http://kristina-project.eu/ontologies/la/exampledataResponse_sleepTime#sleepCtx1"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://temp#o42ggrcjo0t576dbgoc57q2q7g">
+    <rdf:object rdf:resource="http://kristina-project.eu/ontologies/la/context#Situation"/>
+    <rdf:predicate rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    <rdf:subject rdf:resource="http://kristina-project.eu/ontologies/la/exampledataResponse_sleepTime#sleepCtx1"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://temp#gulph0gt54sb46nhut1b56t1vp">
+    <rdf:object rdf:resource="http://kristina-project.eu/ontologies/la/exampledataResponse_sleepTime#agent1"/>
+    <rdf:predicate rdf:resource="http://kristina-project.eu/ontologies/la/context#defines"/>
+    <rdf:subject rdf:resource="http://kristina-project.eu/ontologies/la/exampledataResponse_sleepTime#sleepDesc1"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://kristina-project.eu/tmp#4a82e8b7-f987-4973-9dc3-a7a4b9402497">
+    <j.0:startWith rdf:resource="http://kristina-project.eu/tmp#420cbf49-8259-4ce3-aa05-3f5025867bda"/>
+    <j.0:containsSystemAct rdf:resource="http://kristina-project.eu/tmp#420cbf49-8259-4ce3-aa05-3f5025867bda"/>
+    <j.0:hasArousal rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.1324634759142102</j.0:hasArousal>
+    <j.0:hasValence rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.043439205984848864</j.0:hasValence>
+    <rdf:type rdf:resource="http://kristina-project.eu/ontologies/dialogue_actions#SystemAction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://temp#n6l6p89u7q92l35mddk76g3nt0">
+    <rdf:object rdf:resource="http://kristina-project.eu/ontologies/la/exampledataResponse_sleepTime#Eugene"/>
+    <rdf:predicate rdf:resource="http://kristina-project.eu/ontologies/la/context#classifies"/>
+    <rdf:subject rdf:resource="http://kristina-project.eu/ontologies/la/exampledataResponse_sleepTime#agent1"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://temp#nr3unqo0fd5i6anqcbb8g50crn">
+    <rdf:object rdf:resource="http://kristina-project.eu/ontologies/la/onto#CareRecipient"/>
+    <rdf:predicate rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    <rdf:subject rdf:resource="http://kristina-project.eu/ontologies/la/exampledataResponse_sleepTime#Eugene"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"/>
+  </rdf:Description>
+</rdf:RDF>
+

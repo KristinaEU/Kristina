@@ -1,0 +1,28 @@
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+<http://temp#5kfr91q4rgn661cqebn90tr7t9>
+      a       <http://kristina-project.eu/ontologies/responses#StatementResponse> ;
+      <http://kristina-project.eu/ontologies/responses#plausibility>
+              "1.0"^^xsd:double ;
+      <http://kristina-project.eu/ontologies/responses#responseType>
+              <http://kristina-project.eu/ontologies/responses#free_text> ;
+      <http://kristina-project.eu/ontologies/responses#text>
+              "Kirchentellinsfurt.+Wenn+die+Firma+schon+den+Neckartalradweg+baut%2C+k%C3%B6nne+sie+doch+gleich+eine+Stromversorgung+entlang+des+Radwegs+von+der+Triebstra%C3%9Fe+bis+zum+Tunnel+am+Baggersee+verlegen+%28weil+das+Neckartal+%C3%9Cberschwemmungsgebiet+ist%2C+d%C3%BCrfen+dort+keine+Strommasten+aufgestellt+werden%29.+Rund+66%C2%A0000+Euro+soll+die+Lehrrohr-Trasse+kosten.+Strom-+und+andere+Kabel+kann+der+potenzielle+P%C3%A4chter+Christoph+Jeggle+f%C3%BCr+seine+Wakeboardanlage+brauchen%2C+der+die+Trasse+dann+mieten+k%C3%B6nne.+Die+Verhandlungen+zwischen+Jeggle+und+den+Epplesee-Besitzern+sind+noch+nicht+abgeschlossen%2C+so+Ortsbaumeister+Martin+Lack.+Wenn+sie+sich+einigten%2C+sei+die+Trasse+die+einzig+sinnvolle+L%C3%B6sung.+Eine+Verlegung+unter+den+Neckar+hindurch+verschlinge+eine+hohe+sechsstellige+Summe.+Der+Neckartalradweg+m%C3%BCsse+jedoch+wegen+der+Zusch%C3%BCsse+dieses+Jahr+gebaut+werden.+So+m%C3%BCssten+die+R%C3%A4te+die+Trasse+also+ins+Blaue+beschlie%C3%9Fen.+%E2%80%9EDie+Erschlie%C3%9Fung+tue+dem+Baggersee+gut%2C+klar%2C+dass+man%E2%80%99s+machen+muss%E2%80%9C%2C+meinte+Markus+Appenzeller+%28FWV%29.+Auch%2C+wenn+es+mit+Jeggle+nicht+klappen+sollte.+Ruth+Setzler+%28GAL%29+und+Petra+Kriegeskorte+%28SPD%29+sahen+das+auch+so%2C+Susanne+Weitbrecht+%28RAT%29+fand+es+nicht+notwendig%2C+Strom+%E2%80%9Ef%C3%BCr+einen+sanften+Ausbau+der+Badekultur%E2%80%9C+zu+brauchen.+F%C3%BCr+Karl-Heinz+Armbruster+%28FWV%29+war+das+Risiko+zu+gro%C3%9F%2C+falls+Jeggle+abspringt.+Schlie%C3%9Flich+sprach+sich+der+Rat+mehrheitlich+f%C3%BCr+die+Trasse+aus." .
+
+<http://temp#d1a40flas1o1sm6n2sh31f5us1>
+      a       <http://kristina-project.eu/ontologies/responses#ResponseContainer> ;
+      <http://kristina-project.eu/ontologies/responses#containsResponse>
+              <http://temp#5kfr91q4rgn661cqebn90tr7t9> ;
+      <http://kristina-project.eu/ontologies/responses#conversationalContext>
+              [ a       <http://kristina-project.eu/ontologies/context-light#NewspaperContext>
+              ] ;
+      <http://kristina-project.eu/ontologies/responses#timestamp>
+              "2016-10-24T01:04:51.142Z"^^xsd:dateTime .
+
+<http://response-data>
+      a       owl:Ontology ;
+      owl:imports <http://kristina-project.eu/ontologies/responses> .
+

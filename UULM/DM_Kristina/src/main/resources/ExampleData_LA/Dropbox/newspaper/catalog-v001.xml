@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1475726753362" name="duplicate:http://kristina-project.eu/ontologies/la/example" uri="la-output_01.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1475726753362" name="duplicate:http://kristina-project.eu/ontologies/la/example" uri="la-output_10.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1475726753362" name="duplicate:http://kristina-project.eu/ontologies/la/example" uri="la-output_11.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1475726753362" name="duplicate:http://kristina-project.eu/ontologies/la/example" uri="la-output_12.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1475726753362" name="duplicate:http://kristina-project.eu/ontologies/la/example" uri="la-output_13.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1475726753362" name="duplicate:http://kristina-project.eu/ontologies/la/example" uri="la-output_14.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1475726753362" name="duplicate:http://kristina-project.eu/ontologies/la/example" uri="la-output_15.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1475726753362" name="duplicate:http://kristina-project.eu/ontologies/la/example" uri="la-output_16.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1475726753362" name="duplicate:http://kristina-project.eu/ontologies/la/example" uri="la-output_2.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1475726753362" name="duplicate:http://kristina-project.eu/ontologies/la/example" uri="la-output_3.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1475726753362" name="duplicate:http://kristina-project.eu/ontologies/la/example" uri="la-output_4.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1475726753362" name="duplicate:http://kristina-project.eu/ontologies/la/example" uri="la-output_5.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1475726753362" name="duplicate:http://kristina-project.eu/ontologies/la/example" uri="la-output_6.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1475726753362" name="duplicate:http://kristina-project.eu/ontologies/la/example" uri="la-output_7.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1475726753362" name="duplicate:http://kristina-project.eu/ontologies/la/example" uri="la-output_8.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1475726753362" name="duplicate:http://kristina-project.eu/ontologies/la/example" uri="la-output_9.owl"/>
+    </group>
+</catalog>

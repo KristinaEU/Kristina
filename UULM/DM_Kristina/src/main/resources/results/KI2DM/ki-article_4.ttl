@@ -1,0 +1,28 @@
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+<http://temp#15ep3rhcbbvajd6s2ecb7hrlof>
+      a       <http://kristina-project.eu/ontologies/responses#StatementResponse> ;
+      <http://kristina-project.eu/ontologies/responses#plausibility>
+              "1.0"^^xsd:double ;
+      <http://kristina-project.eu/ontologies/responses#responseType>
+              <http://kristina-project.eu/ontologies/responses#free_text> ;
+      <http://kristina-project.eu/ontologies/responses#text>
+              "Eine+Anwohnerin+hatte+kurz+nach+2+Uhr+Rauchgeruch+aus+der+Nachbarswohnung+wahrgenommen+und+den+Alarm+eines+Rauchmelders+geh%C3%B6rt.+Au%C3%9Ferdem+bellte+der+Hund+des+20-j%C3%A4hrigen+Bewohners+lautstark.+Als+die+Feuerwehr+mit+zwei+L%C3%B6schz%C3%BCgen+und+21+Mann+vor+Ort+eintraf%2C+war+kein+offenes+Feuer+feststellbar.+Der+Bewohner+hatte+das+Essen+auf+dem+eingeschalteten+Herd+vergessen.+Er+wurde+vorsorglich+vom+Rettungsdienst+untersucht%2C+blieb+aber+unverletzt.+Ein+Schaden+ist+nicht+entstanden.+Nach+ausgiebiger+L%C3%BCftung+konnte+der+Mann+in+der+Wohnung+verbleiben." .
+
+<http://temp#7mac39a8e4s62imbsf9epac7ag>
+      a       <http://kristina-project.eu/ontologies/responses#ResponseContainer> ;
+      <http://kristina-project.eu/ontologies/responses#containsResponse>
+              <http://temp#15ep3rhcbbvajd6s2ecb7hrlof> ;
+      <http://kristina-project.eu/ontologies/responses#conversationalContext>
+              [ a       <http://kristina-project.eu/ontologies/context-light#NewspaperContext>
+              ] ;
+      <http://kristina-project.eu/ontologies/responses#timestamp>
+              "2016-10-24T01:04:53.778Z"^^xsd:dateTime .
+
+<http://response-data>
+      a       owl:Ontology ;
+      owl:imports <http://kristina-project.eu/ontologies/responses> .
+

@@ -1,0 +1,48 @@
+@prefix :        <http://kristina-project.eu/ontologies/la/example#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix action:  <http://kristina-project.eu/ontologies/la/action#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://kristina-project.eu/ontologies/la/onto#Read>
+      a       owl:Class .
+
+:article2
+      a       <http://kristina-project.eu/ontologies/la/onto#Article> , owl:NamedIndividual .
+
+<http://kristina-project.eu/ontologies/la/example>
+      a       owl:Ontology .
+
+:read3
+      a       <http://kristina-project.eu/ontologies/la/onto#Read> , owl:NamedIndividual .
+
+action:textualContent
+      a       owl:DatatypeProperty .
+
+:action1
+      a       <http://kristina-project.eu/ontologies/dialogue_actions#UserAction> , owl:NamedIndividual ;
+      action:contains <http://kristina-project.eu/ontologies/la/example#0ad9acf3-8785-42ef-ada4-d098e5b6c393> ;
+      action:sentenceASRConfidence
+              "0.9"^^xsd:float ;
+      action:textualContent
+              "K%C3%B6nntest+Du+den+Artikel+Illegal+Eingereiste+l%C3%B6sen+Alarm+und+Bahnhofsperrung+aus+vorlesen%3F" .
+
+<http://kristina-project.eu/ontologies/la/onto#Article>
+      a       owl:Class .
+
+action:sentenceASRConfidence
+      a       owl:DatatypeProperty .
+
+action:contains
+      a       owl:ObjectProperty .
+
+<http://kristina-project.eu/ontologies/dialogue_actions#UserAction>
+      a       owl:Class .
+
+<http://kristina-project.eu/ontologies/dialogue_actions#BooleanRequest>
+      a       owl:Class .
+
+<http://kristina-project.eu/ontologies/la/example#0ad9acf3-8785-42ef-ada4-d098e5b6c393>
+      a       <http://kristina-project.eu/ontologies/dialogue_actions#RequestNewspaper> , owl:NamedIndividual .
+

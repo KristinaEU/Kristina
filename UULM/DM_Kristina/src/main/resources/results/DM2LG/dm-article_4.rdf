@@ -1,0 +1,27 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:j.0="http://kristina-project.eu/ontologies/dialogue_actions#" > 
+  <rdf:Description rdf:about="http://kristina-project.eu/tmp#f4d01c0c-9a27-473c-841b-a303eacff960">
+    <j.0:followedBy rdf:resource="http://kristina-project.eu/tmp#93e60fc7-fdea-41db-b126-aefc192ac133"/>
+    <j.0:text>Eine+Anwohnerin+hatte+kurz+nach+2+Uhr+Rauchgeruch+aus+der+Nachbarswohnung+wahrgenommen+und+den+Alarm+eines+Rauchmelders+geh%C3%B6rt.+Au%C3%9Ferdem+bellte+der+Hund+des+20-j%C3%A4hrigen+Bewohners+lautstark.+Als+die+Feuerwehr+mit+zwei+L%C3%B6schz%C3%BCgen+und+21+Mann+vor+Ort+eintraf%2C+war+kein+offenes+Feuer+feststellbar.+Der+Bewohner+hatte+das+Essen+auf+dem+eingeschalteten+Herd+vergessen.+Er+wurde+vorsorglich+vom+Rettungsdienst+untersucht%2C+blieb+aber+unverletzt.+Ein+Schaden+ist+nicht+entstanden.+Nach+ausgiebiger+L%C3%BCftung+konnte+der+Mann+in+der+Wohnung+verbleiben.</j.0:text>
+    <rdf:type rdf:resource="http://kristina-project.eu/ontologies/dialogue_actions#ReadNewspaper"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://kristina-project.eu/tmp#e1905aff-bbaa-4ed5-a93c-ee0d2532f6a9">
+    <j.0:containsSystemAct rdf:resource="http://kristina-project.eu/tmp#93e60fc7-fdea-41db-b126-aefc192ac133"/>
+    <j.0:containsSystemAct rdf:resource="http://kristina-project.eu/tmp#f4d01c0c-9a27-473c-841b-a303eacff960"/>
+    <j.0:startWith rdf:resource="http://kristina-project.eu/tmp#101a3231-3a62-4ed7-8a6f-a0a0bf559da6"/>
+    <j.0:containsSystemAct rdf:resource="http://kristina-project.eu/tmp#101a3231-3a62-4ed7-8a6f-a0a0bf559da6"/>
+    <j.0:hasArousal rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.14100000000000001</j.0:hasArousal>
+    <j.0:hasValence rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.10595187144804212</j.0:hasValence>
+    <rdf:type rdf:resource="http://kristina-project.eu/ontologies/dialogue_actions#SystemAction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://kristina-project.eu/tmp#101a3231-3a62-4ed7-8a6f-a0a0bf559da6">
+    <j.0:followedBy rdf:resource="http://kristina-project.eu/tmp#f4d01c0c-9a27-473c-841b-a303eacff960"/>
+    <rdf:type rdf:resource="http://kristina-project.eu/ontologies/dialogue_actions#Accept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://kristina-project.eu/tmp#93e60fc7-fdea-41db-b126-aefc192ac133">
+    <j.0:text>Did you like the article?</j.0:text>
+    <rdf:type rdf:resource="http://kristina-project.eu/ontologies/dialogue_actions#Canned"/>
+  </rdf:Description>
+</rdf:RDF>
+
