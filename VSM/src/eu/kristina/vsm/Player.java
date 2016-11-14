@@ -148,8 +148,7 @@ public final class Player implements RunTimePlayer, SSIEventHandler {
                 Boolean.parseBoolean(ssilrflag));
         mSSIListener.start();
         // Start the time
-        mTimer = new Timer(10);
-        mTimer.start();
+        mTimer = new Timer();
         // Print some information
         mLogger.message("Launching KRISTINA scene player '" + this + "' with configuration:\n" + mPlayerConfig);
         // Return true at success
@@ -163,13 +162,10 @@ public final class Player implements RunTimePlayer, SSIEventHandler {
         mSSIListener.abort();
         mSSINotifier.abort();
         //
-        mTimer.abort();
         // Join with the handlers        
         try {
             mSSIListener.join();
             mSSINotifier.join();
-            //
-            mTimer.join();
         } catch (final InterruptedException exc) {
             mLogger.failure(exc.toString());
         }
