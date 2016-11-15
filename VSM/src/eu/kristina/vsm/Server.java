@@ -121,7 +121,7 @@ public final class Server extends DefaultResourceConfig {
         // Start the server
         try {
             // Create the server
-            mServer = HttpServerFactory.create(args[0]/*, this*/);
+            mServer = HttpServerFactory.create(args[0], this);
             // Get the executors
             mPool = Executors.newFixedThreadPool(1);
             // Set the executors
