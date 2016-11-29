@@ -38,12 +38,14 @@ public class KristinaMain {
 				
 				//Start the OwlDocumentServer
 				// Create the server
+				if(args[0].equals("true")){
 				URI baseUriDoc = UriBuilder.fromUri("http://localhost/")
 						.port(8080).build();
 				ResourceConfig configDoc = new ResourceConfig(OwlDocumentServlet.class);
 				
 				serverDoc = JdkHttpServerFactory.createHttpServer(
 						baseUriDoc, configDoc);
+				}
 
 				//Start the dialogue manager
 				KristinaPresenter.init();
@@ -56,8 +58,8 @@ public class KristinaMain {
 				// Start the HTTP server
 				
 				// Create the server
-				URI baseUri = UriBuilder.fromUri(args[0])
-						.port(Integer.parseInt(args[1])).path(args.length>2?args[2]:"").build();
+				URI baseUri = UriBuilder.fromUri(args[1])
+						.port(Integer.parseInt(args[2])).path(args.length>3?args[3]:"").build();
 				ResourceConfig config = new ResourceConfig(KristinaServlet.class);
 				config = config.registerClasses(KristinaDemo.class);
 				server = JdkHttpServerFactory.createHttpServer(
