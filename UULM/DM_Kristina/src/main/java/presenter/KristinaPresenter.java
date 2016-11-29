@@ -58,8 +58,7 @@ public class KristinaPresenter {
 	private static List<KristinaMove> systemMove;
 	private static List<Set<KristinaMove>> ws;
 
-	public static void init() throws URISyntaxException,
-			OWLOntologyCreationException {
+	public static void init() throws Exception {
 
 		System.setProperty("owlSpeak.settings.file",
 				"./conf/OwlSpeak/settings.xml");
@@ -225,9 +224,9 @@ public class KristinaPresenter {
 				}else{
 					result.add(KristinaModel.getCannedTextMove("He usually watches TV until 9:45. That is when his favourite show ends.", user, owlEngine));
 				}
-			}else if(move.hasTopic("TV")&&UserModel.isVerbose(user)){
+			}else if(move.hasTopic("TV")&&!move.hasTopic("After")&&UserModel.isVerbose(user)){
 				result.add(KristinaModel.getCannedTextMove("He often watches TV. His favourite show is broadcasted very late.", user, owlEngine));
-			}else if(move.hasTopic("TV")&&UserModel.isConcise(user)){
+			}else if(move.hasTopic("TV")&&!move.hasTopic("After")&&UserModel.isConcise(user)){
 				result.add(KristinaModel.getCannedTextMove("Watching TV.", user, owlEngine));
 			}else if(!DialogueHistory.getLastUserMove().getDialogueAction().equals(DialogueAction.FURTHER_INFORMATION)&&move.getDialogueAction().equals(DialogueAction.REJECT)&&currentScenario.equals(Scenario.SLEEP)&&(UserModel.isIndirect(user)||UserModel.isVerbose(user))){
 				if(UserModel.isIndirect(user)&&UserModel.isVerbose(user)){
@@ -248,10 +247,10 @@ public class KristinaPresenter {
 			}else if(move.hasTopic("WakeUp")&&move.hasTopic("Frequency")&&UserModel.isConcise(user)){
 				result.add(KristinaModel.getCannedTextMove("Between 1 and 4 times.", user, owlEngine));
 			}
-			//TODO: This condition should be verified
+			//TODO: Not currently supported
 			else if(move.getDialogueAction().equals(DialogueAction.REQUEST)&&move.hasTopic("Assistance")&&UserModel.isIndirect(user)){
 				result.add(KristinaModel.getCannedTextMove("I am not sure what kind of assistance you mean.", user, owlEngine));
-			}else if(move.hasTopic("Assistance")&&UserModel.isDirect(user)){
+			}else if(move.hasTopic("Assistance")&&move.hasTopic("GetUp")&&UserModel.isDirect(user)){
 				if(Math.random()<0.5){
 					result.add(KristinaModel.getCannedTextMove("You should help him up.", user, owlEngine));
 				}else{
@@ -263,7 +262,7 @@ public class KristinaPresenter {
 				}else{
 					result.add(KristinaModel.getCannedTextMove("You should comb his hair.", user, owlEngine));
 				}
-			}else if(move.hasTopic("BoardGame")&&UserModel.isVerbose(user)){
+			}else if(move.hasTopic("BoardGame")&&!move.hasTopic("TV")&&UserModel.isVerbose(user)){
 				result.add(KristinaModel.getCannedTextMove("He often plays Morris. It is a strategy board game played by two people.", user, owlEngine));
 			}else if(move.hasTopic("Toilet")&&move.hasTopic("Frequency")&&UserModel.isConcise(user)){
 				result.add(KristinaModel.getCannedTextMove("Just once.", user, owlEngine));

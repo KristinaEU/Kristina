@@ -17,6 +17,8 @@ import java.util.UUID;
 import java.util.logging.Handler;
 import java.util.logging.Logger;
 
+import javax.ws.rs.ProcessingException;
+
 import model.DialogueHistory.Participant;
 
 import org.apache.jena.rdf.model.Model;
@@ -26,6 +28,7 @@ import org.apache.jena.rdf.model.Resource;
 import org.apache.jena.rdf.model.Statement;
 import org.apache.jena.rdf.model.StmtIterator;
 import org.apache.jena.vocabulary.RDF;
+import org.jdom.JDOMException;
 import org.semanticweb.owlapi.apibinding.OWLManager;
 import org.semanticweb.owlapi.model.IRI;
 import org.semanticweb.owlapi.model.OWLAxiom;
@@ -51,20 +54,30 @@ import uk.ac.manchester.cs.owl.owlapi.OWLNamedIndividualImpl;
 public class KristinaModel {
 
 	private static EmotionGenerator emotionGenerator;
+	private static CerthClient certhClient;
 	// ALMA configuration files
 	private final static String sALMACOMP = "/EmotionGeneration/AffectComputation.aml";
 	private final static String sALMADEF = "/EmotionGeneration/CharacterDefinition.aml";
+	//CERTH confirguration file
+	private final static String sCERTHCONF = "./conf/CERTH/config.xml";
+	
 
 	
 
 	public enum Scenario {PAIN,SLEEP,BABY,WEATHER,NEWSPAPER,UNDEFINED};
 	private static boolean sent = false;
 	
-	public static void init() {
+	public static void init() throws Exception{
 		emotionGenerator = new EmotionGenerator(
 				KristinaPresenter.class.getResourceAsStream(sALMACOMP),
 				KristinaPresenter.class.getResourceAsStream(sALMADEF));
 		UserModel.init();
+		try {
+			certhClient = new CerthClient(sCERTHCONF);
+		} catch (IOException | JDOMException e) {
+			System.err.println("Initialisation gone wrong. Something about the CERTH config file.");
+			throw new Exception(e);
+		}
 	}
 
 	// _________________________________WARNING: extremly ugly
@@ -435,6 +448,9 @@ public class KristinaModel {
 			for(KristinaMove m: l){
 				if(m != null)
 				ws = ws+m+"\n";
+				/*for(ReifiedStatement r: m.getStatements()){
+					ws = ws + r.getStatement().getSubject() +" "+r.getStatement().getPredicate() +" "+r.getStatement().getObject() +"\n";
+				}*/
 			}
 			ws = ws+"]\n";
 		}
@@ -469,7 +485,7 @@ public class KristinaModel {
 		
 		userMove.getModel().write(input, "TURTLE");
 		log1.info(input.toString("UTF-8"));
-		String rdfMoves = CerthClient.post(input.toString("UTF-8"),
+		String rdfMoves = certhClient.post(input.toString("UTF-8"),
 				valence, arousal, user, scenario);
 		// String rdfMoves = askDemoKI(null);
 		Logger log2 = Logger.getLogger("KI2DM");

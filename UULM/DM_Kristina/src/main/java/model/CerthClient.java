@@ -2,6 +2,7 @@ package model;
 
 import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -28,17 +29,34 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
 import org.glassfish.jersey.filter.LoggingFilter;
+import org.jdom.Document;
+import org.jdom.Element;
+import org.jdom.JDOMException;
+import org.jdom.input.SAXBuilder;
 
 import owlSpeak.Move;
 
 public class CerthClient {
 	
-	static final String address = "http://160.40.50.196:8080/kristina-j2ee-web/api/context/";
+	//static final String address = "http://160.40.50.196:8080/kristina-j2ee-web/api/context/";
+	final String address;
 	private final static Logger logger = Logger.getLogger("LoggerTmp");
 	private static Handler handler;
 	private static String path = "";
 	
-	public static String get(String data) throws Exception {
+	public CerthClient(String confpath) throws IOException, JDOMException{
+		
+			FileInputStream in = new FileInputStream(confpath);
+			SAXBuilder builder = new SAXBuilder();
+			Document doc = builder.build(in);
+			in.close();
+
+			Element ip = doc.getRootElement();
+			address = ip.getText();
+
+	}
+	
+	public String get(String data) throws Exception {
 			Client client = ClientBuilder.newClient();
 			WebTarget webTarget = client.target(address+"query").queryParam("query", data);
 			
@@ -53,7 +71,7 @@ public class CerthClient {
 			return response.readEntity(String.class);
 	}
 
-	public static String post(String in, double valence, double arousal, String user, String scenario)  throws Exception{
+	public String post(String in, double valence, double arousal, String user, String scenario)  throws Exception{
 			Client client = ClientBuilder.newClient();
 			
 			WebTarget webTarget = client.target(address+"update");
@@ -83,7 +101,7 @@ public class CerthClient {
 			
 	}
 	
-	public static void setPath(String p){
+	public void setPath(String p){
 		
 		
 		path = p;

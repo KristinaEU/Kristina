@@ -32,7 +32,8 @@ public class KristinaMain {
 	 * @throws URISyntaxException 
 	 */
 	public static void main(final String args[]) {
-		
+			HttpServer server = null;
+			HttpServer serverDoc = null;
 			try {
 				
 				//Start the OwlDocumentServer
@@ -41,7 +42,7 @@ public class KristinaMain {
 						.port(8080).build();
 				ResourceConfig configDoc = new ResourceConfig(OwlDocumentServlet.class);
 				
-				final HttpServer serverDoc = JdkHttpServerFactory.createHttpServer(
+				serverDoc = JdkHttpServerFactory.createHttpServer(
 						baseUriDoc, configDoc);
 
 				//Start the dialogue manager
@@ -56,24 +57,27 @@ public class KristinaMain {
 				
 				// Create the server
 				URI baseUri = UriBuilder.fromUri(args[0])
-						.port(Integer.parseInt(args[1])).build();
+						.port(Integer.parseInt(args[1])).path(args.length>2?args[2]:"").build();
 				ResourceConfig config = new ResourceConfig(KristinaServlet.class);
 				config = config.registerClasses(KristinaDemo.class);
-				final HttpServer server = JdkHttpServerFactory.createHttpServer(
+				server = JdkHttpServerFactory.createHttpServer(
 						baseUri, config);
 				
 				reader.readLine();
-
-				// Abort the server
-				server.stop(0);
-				serverDoc.stop(0);
-				
-				KristinaPresenter.close();
 				
 
 			} catch (final Exception exc) {
 				exc.printStackTrace();
-			}			
+			} finally{
+				// Abort the server
+				if(server != null)
+				server.stop(0);
+				
+				if(serverDoc != null)
+				serverDoc.stop(0);
+				
+				KristinaPresenter.close();
+			}
 			
 		// Print information
 		System.out.println("Terminating KRISTINA DM restful server");

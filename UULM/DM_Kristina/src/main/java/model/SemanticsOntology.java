@@ -5,6 +5,8 @@ import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
+import java.util.function.Predicate;
+import java.util.stream.Collectors;
 
 import org.apache.jena.datatypes.RDFDatatype;
 import org.apache.jena.rdf.model.InfModel;
@@ -86,44 +88,55 @@ public class SemanticsOntology {
 		if (p == null) {
 			return "";
 		} else {
-			if(p.getObject().isLiteral()){
+			if (p.getObject().isLiteral()) {
 				return p.getObject().asLiteral().getValue().toString();
-			}else{
+			} else {
 				return p.getObject().toString();
 			}
 		}
 	}
 
 	public static boolean hasTopic(IRI id, String topic) {
-		Model onto = semantics.get(id);
-		if (onto == null) {
-			return false;
-		}
-		ResIterator it = onto.listResourcesWithProperty(RDF.type,
-				onto.getResource(OntologyPrefix.ontoLA + topic));
 
-		return it.hasNext();
+		return getTopics(id).stream().anyMatch(new Predicate<String>() {
+
+			@Override
+			public boolean test(String t) {
+
+				return t.endsWith(topic);
+			}
+
+		});
 	}
 
 	public static boolean hasNegatedTopic(IRI id, String topic) {
-
 		Model onto = semantics.get(id);
 		if (onto == null) {
 			return false;
 		}
-		ResIterator it = onto.listResourcesWithProperty(RDF.type,
-				onto.getResource(OntologyPrefix.ontoLA + topic));
-		while (it.hasNext()) {
-			Resource r = it.next();
-			ResIterator it2 = onto.listResourcesWithProperty(
-					onto.getProperty(OntologyPrefix.context + "includes"), r);
-			while (it2.hasNext()) {
-				Resource r2 = it2.next();
-				if (onto.contains(onto.createLiteralStatement(
-						r2,
-						onto.getProperty(OntologyPrefix.context
-								+ "hasTruthValue"), false))) {
-					return true;
+
+		if (onto.contains(onto.getResource(id.toString()),
+				onto.getProperty(OntologyPrefix.onto + "responseType"),
+				onto.getResource(OntologyPrefix.onto + "structured"))) {
+			//TODO how do negated Topics for KI input look like?
+			return false;
+		} else if (!onto.listResourcesWithProperty(RDF.type,
+				OntologyPrefix.onto + "ResponseContainer").hasNext()) {
+			ResIterator it = onto.listResourcesWithProperty(RDF.type,
+					onto.getResource(OntologyPrefix.ontoLA + topic));
+			while (it.hasNext()) {
+				Resource r = it.next();
+				ResIterator it2 = onto.listResourcesWithProperty(
+						onto.getProperty(OntologyPrefix.context + "includes"),
+						r);
+				while (it2.hasNext()) {
+					Resource r2 = it2.next();
+					if (onto.contains(onto.createLiteralStatement(
+							r2,
+							onto.getProperty(OntologyPrefix.context
+									+ "hasTruthValue"), false))) {
+						return true;
+					}
 				}
 			}
 		}
@@ -131,8 +144,6 @@ public class SemanticsOntology {
 
 	}
 
-	// TODO: since the type is not explicit in the KI ontology, it is not found by this
-	// method
 	public static Set<String> getTopics(IRI id) {
 		Model onto = semantics.get(id);
 		if (onto == null) {
@@ -143,26 +154,29 @@ public class SemanticsOntology {
 		if (onto.contains(onto.getResource(id.toString()),
 				onto.getProperty(OntologyPrefix.onto + "responseType"),
 				onto.getResource(OntologyPrefix.onto + "structured"))) {
-			//This is a structured KI response
+			// This is a structured KI response
 			NodeIterator it = onto.listObjectsOfProperty(
 					onto.getResource(id.toString()),
 					onto.getProperty(OntologyPrefix.onto + "rdf"));
 			while (it.hasNext()) {
 				Statement s = it.next().as(ReifiedStatement.class)
 						.getStatement();
-				if(s.getPredicate().equals(RDF.type)){
+				if (s.getPredicate().equals(RDF.type)) {
 					RDFNode obj = s.getObject();
-					if(obj.asResource().getNameSpace().equals(OntologyPrefix.ontoLA)){
+					if (obj.asResource().getNameSpace()
+							.equals(OntologyPrefix.ontoLA)) {
 						list.add(obj.asResource().toString());
 					}
 				}
 			}
-		}else if(!onto.listResourcesWithProperty(RDF.type, OntologyPrefix.onto+"ResponseContainer").hasNext()){
-			//This is LA input
+		} else if (!onto.listResourcesWithProperty(RDF.type,
+				OntologyPrefix.onto + "ResponseContainer").hasNext()) {
+			// This is LA input
 			NodeIterator it = onto.listObjectsOfProperty(RDF.type);
-			while(it.hasNext()){
+			while (it.hasNext()) {
 				RDFNode obj = it.next();
-				if(obj.asResource().getNameSpace().equals(OntologyPrefix.ontoLA)){
+				if (obj.asResource().getNameSpace()
+						.equals(OntologyPrefix.ontoLA)) {
 					list.add(obj.asResource().toString());
 				}
 			}
@@ -173,7 +187,8 @@ public class SemanticsOntology {
 	public static void specifyType(IRI id, String type) {
 		Model onto = semantics.get(id);
 		if (onto != null) {
-			onto.remove(onto.listStatements(onto.getResource(id.toString()), RDF.type,(RDFNode)null));
+			onto.remove(onto.listStatements(onto.getResource(id.toString()),
+					RDF.type, (RDFNode) null));
 			onto.add(onto.getResource(id.toString()), RDF.type,
 					onto.getResource(OntologyPrefix.dialogue + type));
 			onto.add(onto.getResource(id.toString()), RDF.type,
