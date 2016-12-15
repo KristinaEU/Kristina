@@ -35,6 +35,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import javax.xml.parsers.ParserConfigurationException;
 import org.json.JSONObject;
+import org.json.JSONString;
 import org.w3c.dom.DOMException;
 import org.xml.sax.SAXException;
 
@@ -176,8 +177,7 @@ public final class Player implements RunTimePlayer, SSIEventHandler {
     }
 
     ////////////////////////////////////////////////////////////////////////////
-    ////////////////////////////////////////////////////////////////////////////
-    ////////////////////////////////////////////////////////////////////////////
+    // Produce a blink command
     public final String blink(
             final float duration) {
         // Get the resource
@@ -194,7 +194,7 @@ public final class Player implements RunTimePlayer, SSIEventHandler {
         return mRestClient.post(resource, "", object.toString(2));
     }
 
-    // Get a gaze command
+    // Produce a gaze command
     public final String gaze(
             final float speed,
             final float angle,
@@ -213,8 +213,7 @@ public final class Player implements RunTimePlayer, SSIEventHandler {
         return mRestClient.post(resource, "", object.toString(2));
     }
 
-    ////////////////////////////////////////////////////////////////////////////
-    // Produce an inital envelope
+    // Produce a turn envelope
     public final String turn(final String meta) {
         final JSONObject object = new JSONObject();
         // Produce the initial object
@@ -224,9 +223,25 @@ public final class Player implements RunTimePlayer, SSIEventHandler {
         object.put("meta", new JSONObject(meta));
         object.put("data", new JSONObject());
         // Return the initial object
+        return object.toString(2);  
+    }
+
+    // Produce a control envelope
+    public final String state(final String meta, final String state) {
+        final JSONObject data = new JSONObject();
+        data.put("state", state);        
+        final JSONObject object = new JSONObject();
+        // Produce the initial object
+        object.put("uuid", id());
+        object.put("type", "control");
+        object.put("date", date());
+        object.put("meta", new JSONObject(meta));
+        object.put("data", data);
+        // Return the initial object
         return object.toString(2);
     }
 
+    ////////////////////////////////////////////////////////////////////////////
     // Put a value at some path in the JSON string
     public final String put(
             final String obj,
@@ -236,6 +251,7 @@ public final class Player implements RunTimePlayer, SSIEventHandler {
         return Utilities.put(obj, key, val, typ);
     }
 
+    ////////////////////////////////////////////////////////////////////////////
     // Post some request to a specific service
     public final String post(
             final String service,
@@ -448,7 +464,7 @@ public final class Player implements RunTimePlayer, SSIEventHandler {
     public final void log(final String string) {
         final JSONObject object = new JSONObject(string);
         try {
-            final File file = new File("./log/kristina/"
+            final File file = new File("C:/Users/Administrator/Desktop/KristinaLogFiles/"
                     + mLogFormat.format(new Date()) + ".json");
             final FileOutputStream stream = new FileOutputStream(file);
             final Writer out = new OutputStreamWriter(stream, "UTF8");
@@ -464,7 +480,7 @@ public final class Player implements RunTimePlayer, SSIEventHandler {
     ////////////////////////////////////////////////////////////////////////////
     public final int count(final String file) {
         try {
-            return (int)Files.lines(Paths.get(file)).count();
+            return (int) Files.lines(Paths.get(file)).count();
         } catch (final IOException exc) {
             return 0;
         }

@@ -4,7 +4,7 @@
   </Plugins>
   <Players>
     <Player name="defaultsceneplayer" class="eu.kristina.vsm.Player">
-      <Feature key="restful.resource.count" value="12"/>
+      <Feature key="restful.resource.count" value="13"/>
       <Feature key="restful.resource.0.host" value="UAU-VSM"/>
       <Feature key="restful.resource.0.name" value="Turn-Control"/>
       <Feature key="restful.resource.0.path" value="http://172.31.26.245:11220"/>
@@ -65,6 +65,11 @@
       <Feature key="restful.resource.11.path" value="https://webglstudio.org:8080/turn"/>
       <Feature key="restful.resource.11.cons" value="application/json"/>
       <Feature key="restful.resource.11.prod" value="application/json"/>
+      <Feature key="restful.resource.12.host" value="UPF-GTI"/>
+      <Feature key="restful.resource.12.name" value="Avatar-Control"/>
+      <Feature key="restful.resource.12.path" value="https://webglstudio.org:8080/avatar"/>
+      <Feature key="restful.resource.12.cons" value="application/json"/>
+      <Feature key="restful.resource.12.prod" value="application/json"/>
       <Feature key="ssi.listener.local.host" value="127.0.0.1"/>
       <Feature key="ssi.listener.local.port" value="11221"/>
       <Feature key="ssi.listener.remote.host" value="127.0.0.1"/>
