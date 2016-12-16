@@ -1,7 +1,9 @@
 package eu.kristina.vsm.util;
 
 import com.sun.jersey.json.impl.JSONHelper;
+
 import de.dfki.vsm.util.log.LOGDefaultLogger;
+
 import java.io.BufferedReader;
 import java.io.ByteArrayInputStream;
 import java.io.FileInputStream;
@@ -14,6 +16,7 @@ import java.io.Writer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Map.Entry;
+
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
@@ -22,7 +25,9 @@ import javax.xml.transform.TransformerException;
 import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
+
 import org.apache.commons.lang3.StringEscapeUtils;
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.w3c.dom.DOMException;
@@ -114,6 +119,16 @@ public final class Utilities {
                 sLogger.failure(exc.toString());
                 // Insert default value
                 member.put(path, new JSONObject());
+            }
+        } else if (typ.equals("ARRAY")) {
+            try {
+                // Insert parsed value
+                member.put(path, new JSONArray(val));
+            } catch (final JSONException exc) {
+                // Print some information
+                sLogger.failure(exc.toString());
+                // Insert default value
+                member.put(path, new JSONArray());
             }
         } else if (typ.equals("DOUBLE")) {
             try {
