@@ -223,13 +223,13 @@ public final class Player implements RunTimePlayer, SSIEventHandler {
         object.put("meta", new JSONObject(meta));
         object.put("data", new JSONObject());
         // Return the initial object
-        return object.toString(2);  
+        return object.toString(2);
     }
 
     // Produce a control envelope
     public final String state(final String meta, final String state) {
         final JSONObject data = new JSONObject();
-        data.put("state", state);        
+        data.put("state", state);
         final JSONObject object = new JSONObject();
         // Produce the initial object
         object.put("uuid", id());
@@ -268,6 +268,11 @@ public final class Player implements RunTimePlayer, SSIEventHandler {
         return response;
     }
 
+    // Post some request to a specific service
+    public final void abort() {
+        mRestClient.abort();
+    }
+
     ////////////////////////////////////////////////////////////////////////////
     @Override
     public final void handle(final String message) {
@@ -299,7 +304,7 @@ public final class Player implements RunTimePlayer, SSIEventHandler {
                         final Integer from = Integer.parseInt(event.getAttribute("from"));
                         final Integer dur = Integer.parseInt(event.getAttribute("dur"));
                         final Double prob = Double.parseDouble(event.getAttribute("prob"));
-                        // Process the event features
+                        // Process the event features 
                         if (mode.equalsIgnoreCase("audio")) {
                             if (name.equalsIgnoreCase("vad")) {
                                 if (state.equalsIgnoreCase("completed")) {

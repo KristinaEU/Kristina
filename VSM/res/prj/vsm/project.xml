@@ -37,7 +37,7 @@
       <Feature key="restful.resource.5.prod" value="application/rdf+xml"/>
       <Feature key="restful.resource.6.host" value="UPF-TALN"/>
       <Feature key="restful.resource.6.name" value="Language-Generation"/>
-      <Feature key="restful.resource.6.path" value="http://kristina.taln.upf.edu/services_dev/language_generation"/>
+      <Feature key="restful.resource.6.path" value="http://kristina.taln.upf.edu/services_dev/language_generation/bml"/>
       <Feature key="restful.resource.6.cons" value="application/json"/>
       <Feature key="restful.resource.6.prod" value="application/json"/>
       <Feature key="restful.resource.7.host" value="UPF-TALN"/>

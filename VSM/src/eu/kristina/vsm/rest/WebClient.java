@@ -70,10 +70,15 @@ public final class WebClient {
 
     }
 
+    public void abort() {
+        mClient.destroy();
+    }
+
     public final String post(
             final Resource resource,
             final String queryargs,
             final String content) {
+        
         // Create the final URL
         final String url = resource.getPath() + queryargs;
 

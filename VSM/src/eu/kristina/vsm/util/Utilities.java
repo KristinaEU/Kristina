@@ -116,7 +116,7 @@ public final class Utilities {
                 member.put(path, new JSONObject(val));
             } catch (final JSONException exc) {
                 // Print some information
-                sLogger.failure(exc.toString());
+                sLogger.failure(exc.toString() + " from input '"+val+"'");
                 // Insert default value
                 member.put(path, new JSONObject());
             }
@@ -126,7 +126,7 @@ public final class Utilities {
                 member.put(path, new JSONArray(val));
             } catch (final JSONException exc) {
                 // Print some information
-                sLogger.failure(exc.toString());
+                sLogger.failure(exc.toString() + " from input '"+val+"'");
                 // Insert default value
                 member.put(path, new JSONArray());
             }
@@ -136,7 +136,7 @@ public final class Utilities {
                 member.put(path, Double.parseDouble(val));
             } catch (final JSONException | NumberFormatException exc) {
                 // Print some information
-                sLogger.failure(exc.toString());
+                sLogger.failure(exc.toString() + " from input '"+val+"'");
                 // Insert default value
                 member.put(path, 0.0);
             }
@@ -146,7 +146,7 @@ public final class Utilities {
                 member.put(path, val);
             } catch (final JSONException exc) {
                 // Print some information
-                sLogger.failure(exc.toString());
+                sLogger.failure(exc.toString() + " from input '"+val+"'");
                 // Insert default value
                 member.put(path, "");
             }
