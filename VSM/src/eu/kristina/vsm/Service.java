@@ -116,6 +116,13 @@ public final class Service {
             response.put("config", mServer.config());
         } else if (cmd.equalsIgnoreCase("states")) {
             response.put("states", mServer.states());
+        } else if (cmd.equalsIgnoreCase("get")) {
+            final JSONObject arg = request.getJSONObject("arg");
+            final String var = arg.getString("var");
+            final String val = mServer.get(var);
+            response.put("status",  "success");
+            response.put("var", var);
+            response.put("val", val);
         } else if (cmd.equalsIgnoreCase("set")) {
             // Parse key value pair
             final JSONObject arg = request.getJSONObject("arg");

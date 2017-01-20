@@ -11,6 +11,7 @@ import de.dfki.vsm.editor.project.EditorProject;
 import de.dfki.vsm.editor.project.ProjectEditor;
 import de.dfki.vsm.runtime.RunTimeInstance;
 import de.dfki.vsm.runtime.symbol.SymbolEntry;
+import de.dfki.vsm.runtime.values.AbstractValue;
 import de.dfki.vsm.util.ios.IOSIndentWriter;
 import de.dfki.vsm.util.log.LOGDefaultLogger;
 import de.dfki.vsm.util.tpl.TPLTriple;
@@ -523,6 +524,29 @@ public final class Server extends DefaultResourceConfig {
         return false;
     }
 
+    // Construct status message
+    public synchronized String get(final String var) {
+    	AbstractValue result = null;
+        try {
+            if (mProject != null) {
+                // Check if project is running
+                if (mRunTime.isRunning(mProject)) {
+                	result = mRunTime.getValueOf(mProject, var);
+                } else {
+                    // Print some information
+                    mLogger.failure("Cannot get variable '" + var + "' because the project is not yet loaded!");
+                }
+            } else {
+                // Print some information
+                mLogger.failure("Cannot get data because the project is not yet loaded!");
+            }
+        } catch (final Exception exc) {
+            // Print some information
+            mLogger.failure(exc.toString());
+        }
+        return (String)result.getValue();
+    }
+    
     // Construct status message
     public synchronized String status() {
         try {
