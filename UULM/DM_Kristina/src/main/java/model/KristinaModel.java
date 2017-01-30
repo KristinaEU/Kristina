@@ -397,7 +397,6 @@ public class KristinaModel {
 				case DialogueAction.ACKNOWLEDGE:
 					KristinaMove tmp = (KristinaMove) DialogueHistory.getLastSystemMove();
 					KristinaMove tmp3 = (KristinaMove) DialogueHistory.getLastUserMove();
-					
 					if(tmp!=null&&tmp.getText().contains("walk")){
 						systemMoves.add(createTypedKristinaMove("SimpleMotivate", dmOnto, manager, factory));
 						workspace.add(systemMoves);

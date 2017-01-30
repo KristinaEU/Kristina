@@ -97,7 +97,6 @@ public class SemanticsOntology {
 	}
 
 	public static boolean hasTopic(IRI id, String topic) {
-
 		return getTopics(id).stream().anyMatch(new Predicate<String>() {
 
 			@Override
@@ -147,7 +146,7 @@ public class SemanticsOntology {
 	public static Set<String> getTopics(IRI id) {
 		Model onto = semantics.get(id);
 		if (onto == null) {
-			return null;
+			return new HashSet<String>();
 		}
 
 		HashSet<String> list = new HashSet<String>();
