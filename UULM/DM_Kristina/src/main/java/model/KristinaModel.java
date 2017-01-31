@@ -29,6 +29,7 @@ import org.apache.jena.rdf.model.Statement;
 import org.apache.jena.rdf.model.StmtIterator;
 import org.apache.jena.vocabulary.RDF;
 import org.jdom.JDOMException;
+import org.python.bouncycastle.crypto.tls.NewSessionTicket;
 import org.semanticweb.owlapi.apibinding.OWLManager;
 import org.semanticweb.owlapi.model.IRI;
 import org.semanticweb.owlapi.model.OWLAxiom;
@@ -199,7 +200,6 @@ public class KristinaModel {
 						break;
 					case SLEEP:
 						systemMoves.add(createTypedKristinaMove("AskMood", dmOnto, manager, factory));
-						systemMoves.add(null);
 					case BABY:
 					case PAIN:
 						systemMoves.add(createTypedKristinaMove("AskTask", dmOnto, manager, factory));
@@ -244,9 +244,18 @@ public class KristinaModel {
 					systemMoves.add(createTypedKristinaMove("AskTaskFollowUp", dmOnto, manager, factory));
 					
 					}else{
-					systemMoves.add(createTypedKristinaMove("MeetAgainSayGoodbye", dmOnto, manager, factory));
-					systemMoves.add(createTypedKristinaMove("PersonalSayGoodbye", dmOnto, manager, factory));
-					systemMoves.add(createTypedKristinaMove("SimpleSayGoodbye", dmOnto, manager, factory));
+						systemMoves.add(createTypedKristinaMove("Acknowledge", dmOnto, manager, factory));
+						workspace.add(systemMoves);
+						
+						systemMoves = new HashSet<KristinaMove>();
+						
+						if(scenario.equals(Scenario.NEWSPAPER)){
+							systemMoves.add(createCannedTextMove("just let me know if I can read out aloud the newspaper another time again.", user, dmOnto, manager, factory));
+						}else{
+							systemMoves.add(createTypedKristinaMove("MeetAgainSayGoodbye", dmOnto, manager, factory));
+							systemMoves.add(createTypedKristinaMove("PersonalSayGoodbye", dmOnto, manager, factory));
+							systemMoves.add(createTypedKristinaMove("SimpleSayGoodbye", dmOnto, manager, factory));
+						}
 					}
 					break;
 				case DialogueAction.FURTHER_INFORMATION:
@@ -299,7 +308,7 @@ public class KristinaModel {
 							systemMoves.add(createTypedKristinaMove("AskTask", dmOnto, manager, factory));
 						}
 					
-					}else if(userMove.hasTopic("Fine")){
+					}else if(userMove.hasTopic("Fine")||userMove.hasTopic("Good")){
 						setUserAction("StatementFine");
 						
 						systemMoves.add(createTypedKristinaMove("ShareJoy", dmOnto, manager, factory));
@@ -316,6 +325,23 @@ public class KristinaModel {
 						systemMoves.add(createCannedTextMove("Would you like me to read the newspaper for you?", user, dmOnto, manager, factory));
 					}else if(userMove.hasTopic("Take")&&userMove.getTopics().size() <= 2){
 						//This is part of an acknowledgement, nothing needs to be done.
+					}else if(scenario.equals(Scenario.WEATHER)){
+						KristinaMove tmp = (KristinaMove) DialogueHistory.getLastSystemMove();
+						KristinaMove tmp3 = (KristinaMove) DialogueHistory.getLastUserMove();
+						if(tmp!=null&&tmp.getText().contains("walk")){
+							systemMoves.add(createTypedKristinaMove("SimpleMotivate", dmOnto, manager, factory));
+							workspace.add(systemMoves);
+							
+							systemMoves = new HashSet<KristinaMove>();
+							systemMoves.add(createCannedTextMove("Remember to take your umbrella.", user, dmOnto, manager, factory));
+						}else if(tmp!=null&&tmp.isDialogueAction(DialogueAction.SHOW_WEATHER) && tmp3!=null&&tmp3.hasTopic("Walk")){
+							systemMoves.add(createTypedKristinaMove("Acknowledge", dmOnto, manager, factory));
+							workspace.add(systemMoves);
+							
+							systemMoves = new HashSet<KristinaMove>();
+							systemMoves.add(createCannedTextMove("Don't forget your sunglasses and your hat.", user, dmOnto, manager, factory));
+							
+						}
 					}
 					else{
 						systemMoves = askKI(userMove, valence, arousal, user, getScenarioString(scenario), dmOnto, manager, factory, handler);
@@ -411,6 +437,9 @@ public class KristinaModel {
 						systemMoves.add(createCannedTextMove("Don't forget your sunglasses and your hat.", user, dmOnto, manager, factory));
 						
 					}
+					break;
+				case DialogueAction.ON_HOLD:
+					systemMoves.add(createTypedKristinaMove("Acknowledge", dmOnto, manager, factory));
 					break;
 				default:
 					break;

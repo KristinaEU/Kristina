@@ -87,5 +87,6 @@ public class DialogueAction {
 	public static final String REQUEST_FEEDBACK=OntologyPrefix.dialogue+"RequestFeedback";
 	public static final String UNKNOWN_STATEMENT=OntologyPrefix.dialogue+"UnknownStatement";
 	public static final String UNKNOWN_REQUEST=OntologyPrefix.dialogue+"UnknownRequest";
+	public static final String ON_HOLD=OntologyPrefix.dialogue+"OnHold";
 	
 }
