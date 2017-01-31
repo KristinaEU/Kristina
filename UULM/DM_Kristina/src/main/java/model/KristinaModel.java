@@ -231,7 +231,7 @@ public class KristinaModel {
 						userMove.specify("RequestWeather");
 						systemMoves = askKI(userMove, valence, arousal, user,getScenarioString(scenario), dmOnto, manager, factory, handler);
 					}
-					else if(lastMove!= null&&lastMove.getText().contains("newspaper")){
+					else if(lastMove!= null&&lastMove.getText().contains("newspaper")&&lastMove.getText().contains("Would you")){
 						systemMoves.add(createCannedTextMove("Tell me the headline of the article.", user, dmOnto, manager, factory));
 					}else if(lastMove!= null&&lastMove.getText().contains("like")){
 						systemMoves.add(createCannedTextMove("Is there another article you would like me to read out loud?", user, dmOnto, manager, factory));
