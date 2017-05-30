@@ -9,8 +9,7 @@ import de.dfki.vsm.util.log.LOGDefaultLogger;
 public final class Timer {
 
     // The singelton system togger
-    private final LOGDefaultLogger mLogger
-            = LOGDefaultLogger.getInstance();
+    private final LOGDefaultLogger mLogger = LOGDefaultLogger.getInstance();
     // The launch startup time
     private volatile long mStartupTime;
 
@@ -31,7 +30,7 @@ public final class Timer {
     }
 
     public final synchronized long time() {
-        // Reurn the sytem time
+        // Return the sytem time
         return System.currentTimeMillis() - mStartupTime;
     }
 }

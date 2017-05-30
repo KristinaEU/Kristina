@@ -1,29 +1,6 @@
 package eu.kristina.vsm;
 
-import eu.kristina.vsm.rest.WebClient;
-import eu.kristina.vsm.bml.ActionFactory;
-import de.dfki.vsm.model.project.PlayerConfig;
-import de.dfki.vsm.runtime.RunTimeInstance;
-import de.dfki.vsm.runtime.project.RunTimeProject;
-import de.dfki.vsm.runtime.values.AbstractValue;
-import de.dfki.vsm.runtime.players.RunTimePlayer;
-import de.dfki.vsm.util.log.LOGDefaultLogger;
-import eu.kristina.vsm.rest.Resource;
-import eu.kristina.vsm.ssi.SSIEventFactory;
-import eu.kristina.vsm.ssi.SSIEventListener;
 import java.io.ByteArrayInputStream;
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.Random;
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
-import org.w3c.dom.Document;
-import org.w3c.dom.Element;
-import org.w3c.dom.NodeList;
-import eu.kristina.vsm.ssi.SSIEventHandler;
-import eu.kristina.vsm.ssi.SSIEventNotifier;
-import eu.kristina.vsm.util.Timer;
-import eu.kristina.vsm.util.Utilities;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -32,12 +9,41 @@ import java.io.Writer;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.Map.Entry;
+import java.util.Random;
+import java.util.concurrent.ConcurrentSkipListMap;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
+
+import org.json.JSONArray;
 import org.json.JSONObject;
-import org.json.JSONString;
 import org.w3c.dom.DOMException;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
+
+import de.dfki.vsm.model.project.PlayerConfig;
+import de.dfki.vsm.runtime.RunTimeInstance;
+import de.dfki.vsm.runtime.players.RunTimePlayer;
+import de.dfki.vsm.runtime.project.RunTimeProject;
+import de.dfki.vsm.runtime.values.AbstractValue;
+import de.dfki.vsm.util.log.LOGDefaultLogger;
+import eu.kristina.vsm.bml.ActionFactory;
+import eu.kristina.vsm.rest.Resource;
+import eu.kristina.vsm.rest.WebClient;
+import eu.kristina.vsm.ssi.SSIEventFactory;
+import eu.kristina.vsm.ssi.SSIEventHandler;
+import eu.kristina.vsm.ssi.SSIEventListener;
+import eu.kristina.vsm.ssi.SSIEventNotifier;
+import eu.kristina.vsm.util.Timer;
+import eu.kristina.vsm.util.Utilities;
 
 /**
  * @author Gregor Mehlmann
@@ -75,6 +81,13 @@ public final class Player implements RunTimePlayer, SSIEventHandler {
     private final Random mRandom = new Random();
     // A system time timer
     private Timer mTimer = null;
+    
+    private class SemanticEvent {
+    	public String xml;
+    	public long timestamp;
+    }
+    private final ArrayList<SemanticEvent> semanticEvents = new ArrayList<SemanticEvent>(1000);
+    private long semanticEventsStartTime = 0;
 
     // Get the singelton player
     public static synchronized Player getInstance() {
@@ -267,7 +280,152 @@ public final class Player implements RunTimePlayer, SSIEventHandler {
         // Return the result
         return response;
     }
+    
+    public final String mapGesture(final Double label, final boolean hand){
+    	/*
+0: unknown
+1: right upperbody
+2: left upperbody
+3: right lowerbody
+4: left lowerbody
+5: right upperarm
+6: right lowerarm
+7: left upperarm
+8: right lowerarm
+9: face
+    	 */
+    	final String[] labels = { "unknown","rightUpperBody","leftUpperBody","rightLowerBody","leftLowerBody","rightUpperArm","rightLowerArm","leftUpperArm","rightUpperArm","head" };
+        if (hand){
+    		return labels[label.intValue()];
+    	} else {
+    		//TODO: Still need to define these.
+    	}
+    	return "";
+    }
+    
+    
+    public final String mergeSemanticEvents(){
+    	String response = "";
+    	/*
+      	    <?xml version="1.0" ?>
+			<events ssi-v="V2">
+				<event sender="gesture" event="info" from="245" dur="0" prob="1.000000" type="MAP" state="COMPLETED" glue="0">
+					<tuple string="arousal" value="0.045947" />
+					<tuple string="codeLH" value="0.000000" />
+					<tuple string="codeRH" value="0.000000" />
+					<tuple string="codeGesture" value="0.000000" />
+					<tuple string="leftHandMissing" value="0.000000" />
+					<tuple string="rightHandMissing" value="0.000000" />
+				</event>
+			</events>
+    	 */
+    	final ConcurrentSkipListMap<Long,Double> leftHand = new ConcurrentSkipListMap<Long,Double>();
+    	final ConcurrentSkipListMap<Long,Double> rightHand = new ConcurrentSkipListMap<Long,Double>();
+    	final ConcurrentSkipListMap<Long,Double> gesture = new ConcurrentSkipListMap<Long,Double>();
+    	
+    	synchronized(semanticEvents){
+    		//loop through all events, filter out near similar, put larger steps aside (per field);
+    		double prev_lh = 0.0;
+    		double prev_rh = 0.0;
+    		double prev_gs = 0.0;
+    		for (SemanticEvent event : semanticEvents){
+    			//Poor mans parser, grep the correct fields:
+    			final String txt = event.xml;
+    			final double lh = Double.parseDouble(txt.substring(txt.indexOf("codeLH")+15,txt.indexOf("codeLH")+24));
+    			final double rh = Double.parseDouble(txt.substring(txt.indexOf("codeRH")+15,txt.indexOf("codeRH")+24));
+    			final double gs = Double.parseDouble(txt.substring(txt.indexOf("codeGesture")+20,txt.indexOf("codeGesture")+29));
+    			if (lh != prev_lh){
+    				leftHand.put(event.timestamp,lh);
+    				prev_lh = lh;
+    			}
+    			if (rh != prev_rh){
+    				rightHand.put(event.timestamp,rh);
+    				prev_rh = rh;
+    			}
+    			if (gs != prev_gs){
+    				gesture.put(event.timestamp,gs);
+    				prev_gs = gs;
+    			}
+    		}
+    		//Put list of states into a string form. Json object with separate arrays
+    		final JSONObject object = new JSONObject();
+            final JSONArray leftHandJson = new JSONArray();
+            final JSONArray rightHandJson = new JSONArray();
+            final JSONArray gestureJson = new JSONArray();
+            
+            //Add list of states (and translate double back to labels)
+            Entry<Long,Double> prev = leftHand.pollFirstEntry();
+            Entry<Long,Double> next = leftHand.pollFirstEntry();
+            while (next != null){
+            	final JSONObject item = new JSONObject();
+            	item.put("start", prev.getKey()-semanticEventsStartTime);
+            	item.put("end", next.getKey()-semanticEventsStartTime);
+            	item.put("label", mapGesture(prev.getValue(),true));
+            	leftHandJson.put(item);
+            	prev = next;
+            	next = leftHand.pollFirstEntry();
+            }
+            //Add last state:
+            if (prev != null){
+            	final JSONObject item = new JSONObject();
+            	item.put("start", prev.getKey()-semanticEventsStartTime);
+            	item.put("end", System.currentTimeMillis()-semanticEventsStartTime);
+            	item.put("label", mapGesture(prev.getValue(),true));
+            	leftHandJson.put(item);
+            }
+            object.put("leftHandLocation", leftHandJson);
 
+            //Add list of states (and translate double back to labels)
+            prev = rightHand.pollFirstEntry();
+            next = rightHand.pollFirstEntry();
+            while (next != null){
+            	final JSONObject item = new JSONObject();
+            	item.put("start", prev.getKey()-semanticEventsStartTime);
+            	item.put("end", next.getKey()-semanticEventsStartTime);
+            	item.put("label", mapGesture(prev.getValue(),true));
+            	rightHandJson.put(item);
+            	prev = next;
+            	next = rightHand.pollFirstEntry();
+            }
+            //Add last state:
+            if (prev != null){
+            	final JSONObject item = new JSONObject();
+            	item.put("start", prev.getKey()-semanticEventsStartTime);
+            	item.put("end", System.currentTimeMillis()-semanticEventsStartTime);
+            	item.put("label", mapGesture(prev.getValue(),true));
+            	rightHandJson.put(item);
+            }
+            object.put("rightHandLocation", rightHandJson);
+
+            //Add list of states (and translate double back to labels)
+            prev = gesture.pollFirstEntry();
+            next = gesture.pollFirstEntry();
+            while (next != null){
+            	final JSONObject item = new JSONObject();
+            	item.put("start", prev.getKey()-semanticEventsStartTime);
+            	item.put("end", next.getKey()-semanticEventsStartTime);
+            	item.put("label", mapGesture(prev.getValue(),false));
+            	gestureJson.put(item);
+            	prev = next;
+            	next = gesture.pollFirstEntry();
+            }
+            //Add last state:
+            if (prev != null){
+            	final JSONObject item = new JSONObject();
+            	item.put("start", prev.getKey()-semanticEventsStartTime);
+            	item.put("end", System.currentTimeMillis()-semanticEventsStartTime);
+            	item.put("label", mapGesture(prev.getValue(),false));
+            	gestureJson.put(item);
+            }
+            object.put("gestures", gestureJson);
+
+            response = object.toString(4);
+            semanticEventsStartTime = 0;
+            semanticEvents.clear();
+    	}
+    	return response;
+    }
+    
     // Post some request to a specific service
     public final void abort() {
         mRestClient.abort();
@@ -355,7 +513,41 @@ public final class Player implements RunTimePlayer, SSIEventHandler {
                             } else {
                                 // Cannot process this
                             }
-                        } else if (mode.equalsIgnoreCase("vocapia")) {
+                        } else if (mode.equalsIgnoreCase("gesture")) {
+                            if (name.equalsIgnoreCase("info")) {
+                                //mLogger.success("Received gesture event:'" + message + "'\n");
+                            	/*
+                            	 *  <?xml version="1.0" ?>
+									<events ssi-v="V2">
+										<event sender="gesture" event="info" from="245" dur="0" prob="1.000000" type="MAP" state="COMPLETED" glue="0">
+											<tuple string="arousal" value="0.045947" />
+											<tuple string="codeLH" value="0.000000" />
+											<tuple string="codeRH" value="0.000000" />
+											<tuple string="codeGesture" value="0.000000" />
+											<tuple string="leftHandMissing" value="0.000000" />
+											<tuple string="rightHandMissing" value="0.000000" />
+										</event>
+									</events>
+                            	 * 
+                            	 * Receive events, add them to a queue/array. On forwarding turn to DM, merge inputs to state timeslots. Empty queue again, restart collection.
+                            	 */
+								final String text = event.getTextContent()
+										.trim();
+								final SemanticEvent se = new SemanticEvent();
+								se.timestamp = System.currentTimeMillis();
+								se.xml = text;
+								synchronized (semanticEvents) {
+									if (semanticEventsStartTime == 0){
+										semanticEventsStartTime = se.timestamp;
+									}
+									if (semanticEvents.size() < 10000) { // Some sanity limit (keeping memory down)
+										semanticEvents.add(se);
+									}
+								}
+							} else {
+								// Cannot process this
+							}
+						} else if (mode.equalsIgnoreCase("vocapia")) {
                             if (name.equalsIgnoreCase("transcript")) {
                                 if (state.equalsIgnoreCase("completed")) {
                                     if (type.equalsIgnoreCase("string")) {
