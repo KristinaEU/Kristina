@@ -284,6 +284,7 @@ public final class Player implements RunTimePlayer, SSIEventHandler {
             final DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
             final DocumentBuilder builder = factory.newDocumentBuilder();
             final Document document = builder.parse(stream);
+
             // Get the XML tree root element
             final Element element = document.getDocumentElement();
             // Check if we have SSI events 

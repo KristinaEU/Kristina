@@ -37,7 +37,7 @@
       <Feature key="restful.resource.5.prod" value="application/rdf+xml"/>
       <Feature key="restful.resource.6.host" value="UPF-TALN"/>
       <Feature key="restful.resource.6.name" value="Language-Generation"/>
-      <Feature key="restful.resource.6.path" value="http://kristina.taln.upf.edu/services_dev/language_generation/bml"/>
+      <Feature key="restful.resource.6.path" value="http://kristina.taln.upf.edu/services_dev/language_generation"/>
       <Feature key="restful.resource.6.cons" value="application/json"/>
       <Feature key="restful.resource.6.prod" value="application/json"/>
       <Feature key="restful.resource.7.host" value="UPF-TALN"/>
@@ -57,17 +57,17 @@
       <Feature key="restful.resource.9.prod" value="application/json"/>
       <Feature key="restful.resource.10.host" value="UPF-GTI"/>
       <Feature key="restful.resource.10.name" value="Avatar-Idle"/>
-      <Feature key="restful.resource.10.path" value="https://webglstudio.org:8080/idle"/>
+      <Feature key="restful.resource.10.path" value="https://ec2-52-29-254-9.eu-central-1.compute.amazonaws.com:8000/idle"/>
       <Feature key="restful.resource.10.cons" value="application/json"/>
       <Feature key="restful.resource.10.prod" value="application/json"/>
       <Feature key="restful.resource.11.host" value="UPF-GTI"/>
       <Feature key="restful.resource.11.name" value="Avatar-Turn"/>
-      <Feature key="restful.resource.11.path" value="https://webglstudio.org:8080/turn"/>
+      <Feature key="restful.resource.11.path" value="https://ec2-52-29-254-9.eu-central-1.compute.amazonaws.com:8000/turn"/>
       <Feature key="restful.resource.11.cons" value="application/json"/>
       <Feature key="restful.resource.11.prod" value="application/json"/>
       <Feature key="restful.resource.12.host" value="UPF-GTI"/>
       <Feature key="restful.resource.12.name" value="Avatar-Control"/>
-      <Feature key="restful.resource.12.path" value="https://webglstudio.org:8080/avatar"/>
+      <Feature key="restful.resource.12.path" value="https://ec2-52-29-254-9.eu-central-1.compute.amazonaws.com:8000/avatar"/>
       <Feature key="restful.resource.12.cons" value="application/json"/>
       <Feature key="restful.resource.12.prod" value="application/json"/>
       <Feature key="ssi.listener.local.host" value="127.0.0.1"/>
