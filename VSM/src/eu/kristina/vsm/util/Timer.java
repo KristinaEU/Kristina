@@ -29,7 +29,7 @@ public final class Timer {
         mStartupTime = System.currentTimeMillis();
     }
 
-    public final synchronized long time() {
+    public final long time() {
         // Return the sytem time
         return System.currentTimeMillis() - mStartupTime;
     }

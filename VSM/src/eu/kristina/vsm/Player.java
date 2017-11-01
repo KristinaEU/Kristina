@@ -330,21 +330,30 @@ public final class Player implements RunTimePlayer, SSIEventHandler {
     		double prev_gs = 0.0;
     		for (SemanticEvent event : semanticEvents){
     			//Poor mans parser, grep the correct fields:
-    			final String txt = event.xml;
-    			final double lh = Double.parseDouble(txt.substring(txt.indexOf("codeLH")+15,txt.indexOf("codeLH")+24));
-    			final double rh = Double.parseDouble(txt.substring(txt.indexOf("codeRH")+15,txt.indexOf("codeRH")+24));
-    			final double gs = Double.parseDouble(txt.substring(txt.indexOf("codeGesture")+20,txt.indexOf("codeGesture")+29));
-    			if (lh != prev_lh){
-    				leftHand.put(event.timestamp,lh);
-    				prev_lh = lh;
-    			}
-    			if (rh != prev_rh){
-    				rightHand.put(event.timestamp,rh);
-    				prev_rh = rh;
-    			}
-    			if (gs != prev_gs){
-    				gesture.put(event.timestamp,gs);
-    				prev_gs = gs;
+                        //mLogger.success("checking:"+event.xml);
+    			final String txt[] = event.xml.split("\n");
+    			for (String line : txt){
+                                //mLogger.success("substring:"+line);
+    				if (line.indexOf("codeLH")>0){
+    					final double lh = Double.parseDouble(line.substring(line.indexOf("codeLH")+15,line.indexOf("codeLH")+23));	
+    					if (lh != prev_lh){
+        					leftHand.put(event.timestamp,lh);
+        					prev_lh = lh;
+        				}
+        			}
+    				if (line.indexOf("codeRH")>0){
+    					final double rh = Double.parseDouble(line.substring(line.indexOf("codeRH")+15,line.indexOf("codeRH")+23));	
+    					if (rh != prev_rh){
+        					rightHand.put(event.timestamp,rh);
+        					prev_rh = rh;
+        				}
+        			}
+    				if (line.indexOf("codeGesture")>0){
+    					final double gs = Double.parseDouble(line.substring(line.indexOf("codeGesture")+20,line.indexOf("codeGesture")+28));
+    					if (gs != prev_gs){
+    						gesture.put(event.timestamp,gs);
+    						prev_gs = gs;
+    					}}
     			}
     		}
     		//Put list of states into a string form. Json object with separate arrays
@@ -531,11 +540,9 @@ public final class Player implements RunTimePlayer, SSIEventHandler {
                             	 * 
                             	 * Receive events, add them to a queue/array. On forwarding turn to DM, merge inputs to state timeslots. Empty queue again, restart collection.
                             	 */
-								final String text = event.getTextContent()
-										.trim();
 								final SemanticEvent se = new SemanticEvent();
 								se.timestamp = System.currentTimeMillis();
-								se.xml = text;
+								se.xml = message;
 								synchronized (semanticEvents) {
 									if (semanticEventsStartTime == 0){
 										semanticEventsStartTime = se.timestamp;
