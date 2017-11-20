@@ -294,15 +294,20 @@ public final class Player implements RunTimePlayer, SSIEventHandler {
 8: right lowerarm
 9: face
     	 */
-    	final String[] labels = { "unknown","rightUpperBody","leftUpperBody","rightLowerBody","leftLowerBody","rightUpperArm","rightLowerArm","leftUpperArm","rightUpperArm","head" };
         if (hand){
+        	final String[] labels = { "unknown","rightUpperBody","leftUpperBody","rightLowerBody","leftLowerBody","rightUpperArm","rightLowerArm","leftUpperArm","rightUpperArm","head" };
     		return labels[label.intValue()];
     	} else {
-    		//TODO: Still need to define these.
-    	}
-    	return "";
+    		final String[] labels = { "leftHandWave","rightHandWave","headShake","headNod" };
+    		String res = "";
+    		Integer val = label.intValue();
+    		res += ((val & 1) == 1)?labels[0]+"|":"";
+    		res += ((val & 2) == 2)?labels[1]+"|":"";
+    		res += ((val & 4) == 4)?labels[2]+"|":"";
+    		res += ((val & 8) == 8)?labels[3]+"|":"";
+            return res;
+        }
     }
-    
     
     public final String mergeSemanticEvents(){
     	String response = "";
@@ -335,7 +340,7 @@ public final class Player implements RunTimePlayer, SSIEventHandler {
     			for (String line : txt){
                                 //mLogger.success("substring:"+line);
     				if (line.indexOf("codeLH")>0){
-    					final double lh = Double.parseDouble(line.substring(line.indexOf("codeLH")+15,line.indexOf("codeLH")+23));	
+    					final double lh = Double.parseDouble(line.substring(line.indexOf("codeLH")+15,line.indexOf("codeLH")+23));
     					if (lh != prev_lh){
         					leftHand.put(event.timestamp,lh);
         					prev_lh = lh;
@@ -364,6 +369,14 @@ public final class Player implements RunTimePlayer, SSIEventHandler {
             
             //Add list of states (and translate double back to labels)
             Entry<Long,Double> prev = leftHand.pollFirstEntry();
+            //Add unknown state before prev.
+            if (prev != null){
+            	final JSONObject item = new JSONObject();
+            	item.put("start", 0);
+            	item.put("end", prev.getKey()-semanticEventsStartTime);
+            	item.put("label", mapGesture(0.0,true));
+            	leftHandJson.put(item);
+            }
             Entry<Long,Double> next = leftHand.pollFirstEntry();
             while (next != null){
             	final JSONObject item = new JSONObject();
@@ -383,9 +396,17 @@ public final class Player implements RunTimePlayer, SSIEventHandler {
             	leftHandJson.put(item);
             }
             object.put("leftHandLocation", leftHandJson);
-
+            
             //Add list of states (and translate double back to labels)
             prev = rightHand.pollFirstEntry();
+            //Add unknown state before prev.
+            if (prev != null){
+            	final JSONObject item = new JSONObject();
+            	item.put("start", 0);
+            	item.put("end", prev.getKey()-semanticEventsStartTime);
+            	item.put("label", mapGesture(0.0,true));
+            	rightHandJson.put(item);
+            }
             next = rightHand.pollFirstEntry();
             while (next != null){
             	final JSONObject item = new JSONObject();
@@ -408,6 +429,14 @@ public final class Player implements RunTimePlayer, SSIEventHandler {
 
             //Add list of states (and translate double back to labels)
             prev = gesture.pollFirstEntry();
+            //Add unknown state before prev.
+            if (prev != null){
+            	final JSONObject item = new JSONObject();
+            	item.put("start", 0);
+            	item.put("end", prev.getKey()-semanticEventsStartTime);
+            	item.put("label", mapGesture(0.0,false));
+            	gestureJson.put(item);
+            }
             next = gesture.pollFirstEntry();
             while (next != null){
             	final JSONObject item = new JSONObject();
@@ -522,9 +551,13 @@ public final class Player implements RunTimePlayer, SSIEventHandler {
                             } else {
                                 // Cannot process this
                             }
+                        } else if (mode.equalsIgnoreCase("face")) {
+                            if (name.equalsIgnoreCase("discreteemotion")) {
+                               // mLogger.success("Received face semantic event:'" + message + "'\n");
+                            }
                         } else if (mode.equalsIgnoreCase("gesture")) {
                             if (name.equalsIgnoreCase("info")) {
-                                //mLogger.success("Received gesture event:'" + message + "'\n");
+                                mLogger.success("Received gesture event:'" + message + "'\n");
                             	/*
                             	 *  <?xml version="1.0" ?>
 									<events ssi-v="V2">
