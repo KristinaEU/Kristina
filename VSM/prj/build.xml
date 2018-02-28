@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="KBM" default="build" basedir="..">
+<project name="KristinaBehaviorManager" default="build" basedir="..">
     <!-- Define Binary Directory -->
     <property name="bindir" value="${basedir}${file.separator}bin"/>
     <!-- Define Build Directory -->
@@ -72,7 +72,13 @@
     <!-- Build Project -->
     <target name="build" depends="clean,infos">
         <!-- Compile Project -->
-        <javac srcdir="${srcdir}" destdir="${tmpdir}" debug="on" includes="**/*.java" encoding="utf-8" includeantruntime="false" fork="true">
+        <javac srcdir="${srcdir}" 
+               destdir="${tmpdir}" 
+               debug="on" 
+               includes="**/*.java" 
+               encoding="utf-8" 
+               includeantruntime="false" 
+               fork="true">
             <classpath refid="clspath"/>
         </javac>
         <!-- Copy JavaDocs -->
@@ -88,7 +94,10 @@
             </fileset>
         </copy>
         <!-- Build JAR File -->
-        <jar jarfile="${jarfile}" basedir="${tmpdir}" destfile="${jarfile}" includes="de/**/*.class,**/*.*">
+        <jar jarfile="${jarfile}" 
+             basedir="${tmpdir}" 
+             destfile="${jarfile}" 
+             includes="de/**/*.class,**/*.*">
             <zipgroupfileset dir="${libdir}" includes="*.jar"/>
             <manifest>
                 <attribute name="Built-By" value="Human Centered Multimedia Augsburg"/>
@@ -154,53 +163,48 @@
         </javadoc>
     </target>
     <!-- -->
-    <target name="tests">
-        <java classname="eu.kristina.vsm.test.RESTFulPipeTestSuite" fork="true">
+    <target name="test-suite">
+        <java classname="eu.kristina.vsm.test.TestSuite" fork="true">
             <classpath refid="clspath"/>
-            <arg line="http://137.250.171.231:11223"/>
         </java>
     </target> 
+    <!-- -->
     <!-- Execute Project -->
-    <target name="run-vsm-project-editor">
+    <target name="run-editor">
         <java classname="de.dfki.vsm.SceneMaker3" fork="true">
             <classpath refid="clspath"/>
             <arg line="editor res/prj/vsm"/>
         </java>
     </target> 
     <!-- -->
-    <target name="run-vsm-kristina-service">
-        <java classname="eu.kristina.vsm.VSMKristinaService" fork="true">
+    <target name="run-server">
+        <java classname="eu.kristina.vsm.Server" fork="true">
             <classpath refid="clspath"/>
-            <arg line="http://137.250.171.231:11223/"/>
+            <arg line="http://ec2-52-29-254-9.eu-central-1.compute.amazonaws.com:11220/"/>
+            <!--<arg line="http://172.31.26.245:11220/"/>-->
+            <!--<arg line="http://127.0.0.1:11223/"/>-->
         </java>
-    </target>     
+    </target>  
     <!-- -->
-    <target name="run-ssi-handler-terminal">
-        <java classname="eu.kristina.vsm.ssi.SSIHandlerTerminal" fork="true">
-            <classpath refid="clspath"/>
-            <arg line="137.250.171.231 11220 137.250.171.230 11190 false"/>
-        </java>
-    </target>
-    <!-- -->
-    <target name="run-ssi-service-terminal">
-        <java classname="eu.kristina.vsm.ssi.SSIServiceTerminal" fork="true">
-            <classpath refid="clspath"/>
-            <arg line="http://137.250.171.230:11193"/>
-        </java>
-    </target>   
-    <!-- 
-    <target name="prf-vsm-restful-service" depends="build" description="Profile Project">
+    <target name="run-profile" depends="build" description="Profile Service">
         <fail unless="netbeans.home">
             This target can only run inside the NetBeans IDE.
         </fail>
         <nbprofiledirect>
             <classpath refid="clspath"/>
         </nbprofiledirect>
-        <java classname="eu.kristina.vsm.VSMRestFulServer" fork="true">
+        <java classname="eu.kristina.vsm.Service" fork="true">
+            <jvmarg value="${profiler.info.jvmargs.agent}"/>
+            <!--<jvmarg line="${profiler.info.jvmargs}"/>-->
             <classpath refid="clspath"/>
-            <arg line="http://137.250.171.231:11223/"/>
-            <jvmarg line="${agent.jvmargs}"/>
+            <arg line="http://127.0.0.1:11223/"/>
         </java>
-    </target>  
-    --> 
+    </target>   
+    <!-- -->
+    <target name="run-handler">
+        <java classname="eu.kristina.vsm.ssi.SSIHandlerTerminal" fork="true">
+            <classpath refid="clspath"/>
+            <arg line="137.250.171.231 11220 137.250.171.230 11190 false"/>
+        </java>
+    </target>
 </project>

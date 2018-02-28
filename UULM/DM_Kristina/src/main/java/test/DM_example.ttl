@@ -1,0 +1,68 @@
+# baseURI: http://kristina-project.eu/ontologies/testdata
+
+@prefix : <http://kristina-project.eu/ontologies/testdata#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sleeping_habits_pattern: <http://kristina-project.eu/ontologies/sleeping_habits_pattern#> .
+@prefix v1: <http://kristina-project.eu/ontologies/responses/v1#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dialogue: <http://kristina-project.eu/dialogue_actions> .
+
+:Response_1
+  rdf:type dialogue:Declare ;
+  dialogue:verbosity "1"^^xsd:double ;
+  dialogue:directness "1"^^xsd:double ;
+  dialogue:isFormal "false"^^xsd:true ;
+  dialogue:isAdvice "false"^^xsd:true ;
+  dialogue:isBelief "false"^^xsd:true ;
+  dialogue:semantics :Statement_1 ;
+  dialogue:semantics :Statement_2 ;
+  dialogue:semantics :Statement_3 ;
+  dialogue:semantics :Statement_4 ;
+  dialogue:semantics :Statement_5 ;
+  dialogue:semantics :Statement_6 ;
+  dialogue:semantics :Statement_7 ;
+.
+:Statement_1
+  rdf:type rdf:Statement ;
+  rdf:object sleeping_habits_pattern:Description_1 ;
+  rdf:predicate <http://www.loa.istc.cnr.it/ontologies/DUL.owl#satisfies> ;
+  rdf:subject sleeping_habits_pattern:ActivityOnSetPattern_1 ;
+.
+:Statement_2
+  rdf:type rdf:Statement ;
+  rdf:object sleeping_habits_pattern:eugene ;
+  rdf:predicate <http://www.loa.istc.cnr.it/ontologies/DUL.owl#involvesAgent> ;
+  rdf:subject sleeping_habits_pattern:ActivityOnSetPattern_1 ;
+.
+:Statement_3
+  rdf:type rdf:Statement ;
+  rdf:object sleeping_habits_pattern:EventType_1 ;
+  rdf:predicate <http://www.loa.istc.cnr.it/ontologies/DUL.owl#defines> ;
+  rdf:subject sleeping_habits_pattern:Description_1 ;
+.
+:Statement_4
+  rdf:type rdf:Statement ;
+  rdf:object sleeping_habits_pattern:Sleep ;
+  rdf:predicate <http://www.loa.istc.cnr.it/ontologies/DUL.owl#classifies> ;
+  rdf:subject sleeping_habits_pattern:EventType_1 ;
+.
+:Statement_5
+  rdf:type rdf:Statement ;
+  rdf:object sleeping_habits_pattern:OnSet_1 ;
+  rdf:predicate <http://www.loa.istc.cnr.it/ontologies/DUL.owl#defines> ;
+  rdf:subject sleeping_habits_pattern:Description_1 ;
+.
+:Statement_6
+  rdf:type rdf:Statement ;
+  rdf:object sleeping_habits_pattern:TemporalEntity_1 ;
+  rdf:predicate <http://www.loa.istc.cnr.it/ontologies/DUL.owl#classifies> ;
+  rdf:subject sleeping_habits_pattern:OnSet_1 ;
+.
+:Statement_7
+  rdf:type rdf:Statement ;
+  rdf:object "12:00"^^xsd:string ;
+  rdf:predicate sleeping_habits_pattern:at ;
+  rdf:subject sleeping_habits_pattern:TemporalEntity_1 ;
+.

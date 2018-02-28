@@ -65,8 +65,12 @@ public final class SSIEventListener extends Thread {
         try {
             // Create the server socket
             mSocket = new DatagramSocket(mLAddr);
+
             // Connect the server socket
             if (mRFlag) {
+                //
+                //mSocket.bind(mRAddr);
+                //
                 mSocket.connect(mRAddr);
             }
             // Print some information
@@ -97,14 +101,20 @@ public final class SSIEventListener extends Thread {
     public final void run() {
         // Receive while not done 
         while (!mDone) {
+            // Print some information
+            //mLogger.message("Awaiting SSI event listener input ...");
             // Receive new SSI event
             final String event = recvString();
+            // Print some information
+            //mLogger.message("Received SSI event listener input '" + event + "'");
             // Check message content
             if (event != null) {
                 // Handle the SSI event
                 mHandler.handle(event);
             }
         }
+        // Print some information
+        mLogger.message("Aborting SSI event listener " + mLAddr + " " + mRAddr);
     }
 
     // Receive a sized byte array
@@ -115,8 +125,12 @@ public final class SSIEventListener extends Thread {
             // Construct an UDP packet
             final DatagramPacket packet
                     = new DatagramPacket(buffer, buffer.length);
+            //
+            //mLogger.message("Awaiting datagram packet");
             // Receive the UDP packet
             mSocket.receive(packet);
+            // Print some information
+            //mLogger.message("Receiving datagram packet '" + packet.toString() + "'");
             // Return the buffer now
             return Arrays.copyOf(buffer, packet.getLength());
         } catch (final IOException exc) {

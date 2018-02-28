@@ -21,7 +21,7 @@
         <configuration>
           <archive>
             <manifest>
-              <mainClass>main.KristinaMain</mainClass>
+              <mainClass>owlSpeak.servlet.KristinaMain</mainClass>
             </manifest>
           </archive>
         </configuration>
