@@ -1,0 +1,80 @@
+02.11.2011 16:20:35 Command: request 
+INFO: OK
+02.11.2011 16:21:23 Command: request 
+INFO: OK
+02.11.2011 16:21:25 Command: work 
+INFO: Agenda: question_agenda | Move: light_a1n1d_high_move | Speak: null
+02.11.2011 16:21:26 Command: work 
+INFO: Agenda: question_agenda | Move: light_a1n1d_LightsOff_move | Speak: null
+02.11.2011 16:21:27 Command: work 
+INFO: Agenda: question_agenda | Move: light_a1n1d_veryHigh_move | Speak: null
+02.11.2011 16:21:28 Command: work 
+INFO: Agenda: question_agenda | Move: light_a1n1d_LigthsOn_move | Speak: null
+02.11.2011 16:21:31 Command: work 
+INFO: Agenda: question_agenda | Move: yesnoquestion_a1n1d_no_move | Speak: null
+02.11.2011 16:21:33 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_LightsOff_move | Speak: null
+02.11.2011 16:21:34 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_medium_move | Speak: null
+02.11.2011 16:24:03 Command: reset 
+INFO: OK
+02.11.2011 16:24:06 Command: request 
+INFO: OK
+02.11.2011 16:24:07 Command: work 
+INFO: Agenda: question_agenda | Move: light_a1n1d_LightsOff_move | Speak: null
+02.11.2011 16:24:08 Command: work 
+INFO: Agenda: question_agenda | Move: light_a1n1d_high_move | Speak: null
+02.11.2011 16:24:09 Command: work 
+INFO: Agenda: question_agenda | Move: light_a1n1d_LigthsOn_move | Speak: null
+02.11.2011 16:24:11 Command: work 
+INFO: Agenda: question_agenda | Move: yesnoquestion_a1n1d_no_move | Speak: null
+02.11.2011 16:24:13 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_LightsOff_move | Speak: null
+02.11.2011 16:24:13 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_LigthsOn_move | Speak: null
+02.11.2011 16:24:15 Command: reset 
+INFO: OK
+02.11.2011 16:24:16 Command: request 
+INFO: OK
+02.11.2011 16:59:25 Command: request 
+INFO: OK
+02.11.2011 16:59:27 Command: request 
+INFO: OK
+02.11.2011 16:59:29 Command: request 
+INFO: OK
+02.11.2011 16:59:30 Command: work 
+INFO: Agenda: question_agenda | Move: light_a1n1d_medium_move | Speak: null
+02.11.2011 16:59:31 Command: work 
+INFO: Agenda: question_agenda | Move: light_a1n1d_LigthsOn_move | Speak: null
+02.11.2011 16:59:33 Command: work 
+INFO: Agenda: question_agenda | Move: yesnoquestion_a1n1d_no_move | Speak: null
+02.11.2011 16:59:35 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_LightsOff_move | Speak: null
+02.11.2011 16:59:36 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_LightsOff_move | Speak: null
+02.11.2011 16:59:38 Command: reset 
+INFO: OK
+02.11.2011 16:59:40 Command: request 
+INFO: OK
+02.11.2011 16:59:41 Command: work 
+INFO: Agenda: question_agenda | Move: light_a1n1d_LightsOff_move | Speak: null
+02.11.2011 17:00:01 Command: request 
+INFO: OK
+02.11.2011 17:00:04 Command: reset 
+INFO: OK
+02.11.2011 17:00:05 Command: request 
+INFO: OK
+02.11.2011 17:02:18 Command: request 
+INFO: OK
+02.11.2011 17:02:25 Command: work 
+INFO: Agenda: question_agenda | Move: yesnoquestion_a1n1d_yes_move | Speak: yes
+02.11.2011 17:02:32 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_LigthsOn_move | Speak: lights on
+02.11.2011 17:02:37 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_LightsOff_move | Speak: lights off
+02.11.2011 17:02:42 Command: reset 
+INFO: OK
+02.11.2011 17:02:44 Command: request 
+INFO: noinput
+02.11.2011 17:02:50 Command: work 
+INFO: Agenda: question_agenda | Move: yesnoquestion_a1n1d_no_move | Speak: no

@@ -1,0 +1,8 @@
+public <FinalQuit> = <THANKS>;
+<IT> = it | all;
+<THANKS> = thanks [<VERY_MUCH>] | thank you [<VERY_MUCH>];
+<VERY_MUCH> = very much | a lot;/*End of Slot*/
+public <FinalQuit> = <THANKS>;
+<IT> = it | all;
+<THANKS> = thanks [<VERY_MUCH>] | thank you [<VERY_MUCH>];
+<VERY_MUCH> = very much | a lot;/*End of Slot*/

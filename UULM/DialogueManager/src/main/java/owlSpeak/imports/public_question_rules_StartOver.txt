@@ -1,0 +1,20 @@
+public <StartOver> = [<_i_want>] restart [<IT>] | [<_i_want>] reset [<IT>] | [<_i_want>] start [<IT>] [all] <OVER> | [<_i_want>] start from the [very] <BEGINNING> | [<_i_want>] go back to the <BEGINNING> | [<_i_want>] <START> from scratch | [<_i_want>] main menu | [<_i_want>] [<START>] [<THE>] new <REQUEST> | [<_i_want>] [<START>] [<THE>] new <ACTIVITY> | [<_i_want>] modify [<THE>] <REQUEST>;
+<THE> = a | the | this;
+<IT> = <_it> | [<_this>] <ACTIVITY> | [<_this>] system;
+<ACTIVITY> = activity | dialog | dialogue | session | conversation;
+<OVER> = again | over;
+<BEGINNING> = beginning | start;
+<START> = [to] start | [to] restart;
+<REQUEST> = request | query;
+<THE> = a | the;/*End of Slot*/
+
+public <StartOver> = [<_i_want>] restart [<IT>] | [<_i_want>] reset [<IT>] | [<_i_want>] start [<IT>] [all] <OVER> | [<_i_want>] start from the [very] <BEGINNING> | [<_i_want>] go back to the <BEGINNING> | [<_i_want>] <START> from scratch | [<_i_want>] main menu | [<_i_want>] [<START>] [<THE>] new <REQUEST> | [<_i_want>] [<START>] [<THE>] new <ACTIVITY> | [<_i_want>] modify [<THE>] <REQUEST>;
+<THE> = a | the | this;
+<IT> = <_it> | [<_this>] <ACTIVITY> | [<_this>] system;
+<ACTIVITY> = activity | dialog | dialogue | session | conversation;
+<OVER> = again | over;
+<BEGINNING> = beginning | start;
+<START> = [to] start | [to] restart;
+<REQUEST> = request | query;
+<THE> = a | the;/*End of Slot*/
+

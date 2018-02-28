@@ -1,0 +1,802 @@
+04.03.2011 15:16:06 Command: reset 
+INFO: OK
+04.03.2011 15:16:07 Command: request 
+INFO: OK
+04.03.2011 15:16:09 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_LigthsOn_move | Speak: null
+04.03.2011 15:16:10 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_LigthsOn_move | Speak: null
+04.03.2011 15:16:24 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_LigthsOn_move | Speak: null
+04.03.2011 15:16:25 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_LigthsOn_move | Speak: null
+04.03.2011 15:16:26 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_veryHigh_move | Speak: null
+04.03.2011 15:16:26 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_medium_move | Speak: null
+04.03.2011 15:16:27 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_LightsOff_move | Speak: null
+04.03.2011 15:16:27 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_veryLow_move | Speak: null
+04.03.2011 15:16:28 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_high_move | Speak: null
+04.03.2011 15:16:28 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_low_move | Speak: null
+04.03.2011 15:16:50 Command: reset 
+INFO: OK
+04.03.2011 15:16:51 Command: request 
+INFO: OK
+04.03.2011 15:16:55 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_LigthsOn_move | Speak: null
+04.03.2011 15:16:55 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_LigthsOn_move | Speak: null
+04.03.2011 15:16:56 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_LigthsOn_move | Speak: null
+04.03.2011 15:16:56 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_LigthsOn_move | Speak: null
+04.03.2011 15:16:56 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_LigthsOn_move | Speak: null
+04.03.2011 15:16:56 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_LigthsOn_move | Speak: null
+04.03.2011 15:16:57 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_LigthsOn_move | Speak: null
+04.03.2011 15:22:57 Command: reset 
+INFO: OK
+04.03.2011 15:22:57 Command: request 
+INFO: OK
+04.03.2011 15:22:59 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_low_move | Speak: null
+04.03.2011 15:23:00 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_low_move | Speak: null
+04.03.2011 15:23:00 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_high_move | Speak: null
+04.03.2011 15:23:01 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_veryLow_move | Speak: null
+04.03.2011 15:23:01 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_LightsOff_move | Speak: null
+04.03.2011 15:23:02 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_medium_move | Speak: null
+04.03.2011 15:23:02 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_veryHigh_move | Speak: null
+04.03.2011 15:23:03 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_LigthsOn_move | Speak: null
+04.03.2011 15:23:04 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_start_move | Speak: null
+04.03.2011 15:23:05 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_currentPic_move | Speak: null
+04.03.2011 15:23:06 Command: work 
+INFO: Agenda: whichPic_agenda | Move: null | Speak: null
+04.03.2011 15:23:10 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_exit_move | Speak: null
+04.03.2011 15:23:11 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_low_move | Speak: null
+04.03.2011 15:23:12 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_high_move | Speak: null
+04.03.2011 15:23:12 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_veryLow_move | Speak: null
+04.03.2011 15:23:13 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_LightsOff_move | Speak: null
+04.03.2011 15:23:13 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_medium_move | Speak: null
+04.03.2011 15:23:13 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_veryHigh_move | Speak: null
+04.03.2011 15:23:14 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_LigthsOn_move | Speak: null
+04.03.2011 15:24:50 Command: reset 
+INFO: OK
+04.03.2011 15:24:50 Command: request 
+INFO: OK
+04.03.2011 15:24:52 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_low_move | Speak: null
+04.03.2011 15:24:52 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_low_move | Speak: null
+04.03.2011 15:24:53 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_high_move | Speak: null
+04.03.2011 15:24:53 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_veryLow_move | Speak: null
+04.03.2011 15:24:54 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_LightsOff_move | Speak: null
+04.03.2011 15:24:54 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_LightsOff_move | Speak: null
+04.03.2011 15:24:55 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_medium_move | Speak: null
+04.03.2011 15:24:55 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_veryHigh_move | Speak: null
+04.03.2011 15:24:56 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_LigthsOn_move | Speak: null
+04.03.2011 15:24:56 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_veryHigh_move | Speak: null
+04.03.2011 15:24:57 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_LightsOff_move | Speak: null
+04.03.2011 15:24:57 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_start_move | Speak: null
+04.03.2011 15:24:58 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_currentPic_move | Speak: null
+04.03.2011 15:24:59 Command: work 
+INFO: Agenda: whichPic_agenda | Move: null | Speak: null
+04.03.2011 15:25:02 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_exit_move | Speak: null
+04.03.2011 15:25:03 Command: work 
+INFO: Agenda: fault | Move: system_a1n1d_reset | Speak: null
+04.03.2011 15:25:04 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_high_move | Speak: null
+04.03.2011 15:25:04 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_veryLow_move | Speak: null
+04.03.2011 15:25:04 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_medium_move | Speak: null
+04.03.2011 15:25:05 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_veryHigh_move | Speak: null
+04.03.2011 15:25:05 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_start_move | Speak: null
+04.03.2011 15:25:07 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_exit_move | Speak: null
+04.03.2011 15:28:53 Command: reset 
+INFO: OK
+04.03.2011 15:28:54 Command: request 
+INFO: OK
+04.03.2011 15:28:55 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_low_move | Speak: null
+04.03.2011 15:28:56 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_high_move | Speak: null
+04.03.2011 15:28:57 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_veryLow_move | Speak: null
+04.03.2011 15:28:57 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_veryLow_move | Speak: null
+04.03.2011 15:28:58 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_LightsOff_move | Speak: null
+04.03.2011 15:28:58 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_medium_move | Speak: null
+04.03.2011 15:28:59 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_veryHigh_move | Speak: null
+04.03.2011 15:28:59 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_LigthsOn_move | Speak: null
+04.03.2011 15:29:01 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_veryHigh_move | Speak: null
+04.03.2011 15:29:01 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_LightsOff_move | Speak: null
+04.03.2011 15:29:01 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_LightsOff_move | Speak: null
+04.03.2011 15:29:02 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_veryLow_move | Speak: null
+04.03.2011 15:29:02 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_veryLow_move | Speak: null
+04.03.2011 15:29:02 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_low_move | Speak: null
+04.03.2011 15:29:03 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_veryLow_move | Speak: null
+04.03.2011 15:29:03 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_medium_move | Speak: null
+04.03.2011 15:29:03 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_LigthsOn_move | Speak: null
+04.03.2011 15:29:12 Command: reset 
+INFO: OK
+04.03.2011 15:30:21 Command: request 
+INFO: OK
+04.03.2011 15:30:23 Command: reset 
+INFO: OK
+04.03.2011 15:30:24 Command: reset 
+INFO: OK
+04.03.2011 15:31:46 Command: reset 
+INFO: OK
+04.03.2011 15:31:51 Command: request 
+INFO: OK
+04.03.2011 15:31:52 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_low_move | Speak: null
+04.03.2011 15:31:53 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_low_move | Speak: null
+04.03.2011 15:31:53 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_high_move | Speak: null
+04.03.2011 15:31:54 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_veryLow_move | Speak: null
+04.03.2011 15:31:55 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_LightsOff_move | Speak: null
+04.03.2011 15:31:55 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_medium_move | Speak: null
+04.03.2011 15:31:56 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_veryHigh_move | Speak: null
+04.03.2011 15:31:57 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_LigthsOn_move | Speak: null
+04.03.2011 15:31:58 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_start_move | Speak: null
+04.03.2011 15:32:00 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_currentPic_move | Speak: null
+04.03.2011 15:32:01 Command: work 
+INFO: Agenda: whichPic_agenda | Move: null | Speak: null
+04.03.2011 15:32:04 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_selectFra_move | Speak: null
+04.03.2011 15:32:05 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_selectVen_move | Speak: null
+04.03.2011 15:32:05 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_next_move | Speak: null
+04.03.2011 15:32:05 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_selectSlo_move | Speak: null
+04.03.2011 15:32:06 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_pause_move | Speak: null
+04.03.2011 15:32:06 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_prev_move | Speak: null
+04.03.2011 15:32:07 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_exit_move | Speak: null
+04.03.2011 15:32:07 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_medium_move | Speak: null
+04.03.2011 15:32:08 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_veryLow_move | Speak: null
+04.03.2011 15:32:08 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_low_move | Speak: null
+04.03.2011 15:32:08 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_LightsOff_move | Speak: null
+04.03.2011 15:35:14 Command: reset 
+INFO: OK
+04.03.2011 15:35:15 Command: request 
+INFO: OK
+04.03.2011 15:35:18 Command: work 
+INFO: Agenda: light_agenda | Move: light_a1n1d_low_move | Speak: null
+04.03.2011 15:35:19 Command: work 
+INFO: Agenda: light_agenda | Move: light_a1n1d_high_move | Speak: null
+04.03.2011 15:35:20 Command: work 
+INFO: Agenda: light_agenda | Move: light_a1n1d_low_move | Speak: null
+04.03.2011 15:35:20 Command: work 
+INFO: Agenda: light_agenda | Move: light_a1n1d_veryLow_move | Speak: null
+04.03.2011 15:35:21 Command: work 
+INFO: Agenda: light_agenda | Move: light_a1n1d_LightsOff_move | Speak: null
+04.03.2011 15:35:21 Command: work 
+INFO: Agenda: light_agenda | Move: light_a1n1d_veryHigh_move | Speak: null
+04.03.2011 15:35:22 Command: work 
+INFO: Agenda: light_agenda | Move: light_a1n1d_medium_move | Speak: null
+04.03.2011 15:35:23 Command: work 
+INFO: Agenda: light_agenda | Move: light_a1n1d_LigthsOn_move | Speak: null
+04.03.2011 15:35:25 Command: work 
+INFO: Agenda: light_agenda | Move: system_a1n1d_reloadsets | Speak: null
+04.03.2011 15:35:25 Command: work 
+INFO: Agenda: light_agenda | Move: system_a1n1d_reset | Speak: null
+04.03.2011 15:37:01 Command: reset 
+INFO: OK
+04.03.2011 15:37:02 Command: request 
+INFO: OK
+04.03.2011 15:37:03 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_low_move | Speak: null
+04.03.2011 15:37:05 Command: work 
+INFO: Agenda: feedback_agenda | Move: null | Speak: null
+04.03.2011 15:37:06 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_high_move | Speak: null
+04.03.2011 15:37:06 Command: work 
+INFO: Agenda: feedback_agenda | Move: null | Speak: null
+04.03.2011 15:37:07 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_veryHigh_move | Speak: null
+04.03.2011 15:37:08 Command: work 
+INFO: Agenda: feedback_agenda | Move: null | Speak: null
+04.03.2011 15:37:09 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_LigthsOn_move | Speak: null
+04.03.2011 15:37:10 Command: work 
+INFO: Agenda: feedback_agenda | Move: null | Speak: null
+04.03.2011 15:37:12 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_start_move | Speak: null
+04.03.2011 15:37:13 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_currentPic_move | Speak: null
+04.03.2011 15:37:14 Command: work 
+INFO: Agenda: whichPic_agenda | Move: null | Speak: null
+04.03.2011 15:37:15 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_veryLow_move | Speak: null
+04.03.2011 15:37:17 Command: work 
+INFO: Agenda: feedback_agenda | Move: null | Speak: null
+04.03.2011 15:38:07 Command: request 
+INFO: OK
+04.03.2011 15:38:15 Command: request 
+INFO: noinput
+04.03.2011 15:38:19 Command: request 
+INFO: nomatch
+04.03.2011 15:38:23 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_LigthsOn_move | Speak: light on
+04.03.2011 15:38:23 Command: work 
+INFO: Agenda: feedback_agenda | Move: null | Speak: null
+04.03.2011 15:38:28 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_LightsOff_move | Speak: lights off
+04.03.2011 15:38:28 Command: work 
+INFO: Agenda: feedback_agenda | Move: null | Speak: null
+04.03.2011 15:38:33 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_high_move | Speak: light high
+04.03.2011 15:38:33 Command: work 
+INFO: Agenda: feedback_agenda | Move: null | Speak: null
+04.03.2011 15:38:40 Command: request 
+INFO: nomatch
+04.03.2011 15:38:44 Command: request 
+INFO: nomatch
+04.03.2011 15:38:47 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_medium_move | Speak: lights medium
+04.03.2011 15:38:47 Command: work 
+INFO: Agenda: feedback_agenda | Move: null | Speak: null
+04.03.2011 15:38:56 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_medium_move | Speak: lights medium
+04.03.2011 15:38:56 Command: work 
+INFO: Agenda: feedback_agenda | Move: null | Speak: null
+04.03.2011 15:39:04 Command: request 
+INFO: noinput
+04.03.2011 15:39:11 Command: request 
+INFO: noinput
+04.03.2011 15:39:16 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_LightsOff_move | Speak: lights off
+04.03.2011 15:39:16 Command: work 
+INFO: Agenda: feedback_agenda | Move: null | Speak: null
+04.03.2011 15:50:06 Command: reset 
+INFO: OK
+04.03.2011 15:50:07 Command: request 
+INFO: OK
+04.03.2011 15:50:08 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_low_move | Speak: null
+04.03.2011 15:50:09 Command: work 
+INFO: Agenda: feedback_agenda | Move: null | Speak: null
+04.03.2011 15:50:10 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_high_move | Speak: null
+04.03.2011 15:50:11 Command: work 
+INFO: Agenda: feedback_agenda | Move: null | Speak: null
+04.03.2011 15:50:12 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_start_move | Speak: null
+04.03.2011 15:50:14 Command: work 
+INFO: Agenda: feedback_Agenda | Move: null | Speak: null
+04.03.2011 15:50:20 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_selectSwi_move | Speak: null
+04.03.2011 15:50:21 Command: work 
+INFO: Agenda: feedback_Agenda | Move: null | Speak: null
+04.03.2011 15:50:23 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_currentPic_move | Speak: null
+04.03.2011 15:50:24 Command: work 
+INFO: Agenda: whichPic_agenda | Move: null | Speak: null
+04.03.2011 15:50:25 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_exit_move | Speak: null
+04.03.2011 15:50:27 Command: work 
+INFO: Agenda: feedback_Agenda | Move: null | Speak: null
+04.03.2011 15:50:29 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_start_move | Speak: null
+04.03.2011 15:50:32 Command: work 
+INFO: Agenda: feedback_Agenda | Move: null | Speak: null
+04.03.2011 15:50:33 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_exit_move | Speak: null
+04.03.2011 15:50:34 Command: work 
+INFO: Agenda: feedback_Agenda | Move: null | Speak: null
+04.03.2011 15:50:36 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_start_move | Speak: null
+04.03.2011 15:50:37 Command: work 
+INFO: Agenda: feedback_Agenda | Move: null | Speak: null
+04.03.2011 15:50:38 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_selectFra_move | Speak: null
+04.03.2011 15:50:39 Command: work 
+INFO: Agenda: feedback_Agenda | Move: null | Speak: null
+04.03.2011 15:50:41 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_next_move | Speak: null
+04.03.2011 15:50:41 Command: work 
+INFO: Agenda: feedback_Agenda | Move: null | Speak: null
+04.03.2011 16:03:47 Command: reset 
+INFO: OK
+04.03.2011 16:03:50 Command: request 
+INFO: OK
+04.03.2011 16:03:54 Command: request 
+INFO: error.unsupported.language
+04.03.2011 16:03:59 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_LigthsOn_move | Speak: lights on
+04.03.2011 16:03:59 Command: work 
+INFO: Agenda: feedback_agenda | Move: null | Speak: null
+04.03.2011 16:04:06 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_LightsOff_move | Speak: lights off
+04.03.2011 16:04:06 Command: work 
+INFO: Agenda: feedback_agenda | Move: null | Speak: null
+04.03.2011 16:04:12 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_start_move | Speak: photos
+04.03.2011 16:04:12 Command: work 
+INFO: Agenda: feedback_Agenda | Move: null | Speak: null
+04.03.2011 16:04:12 Command: request 
+INFO: OK
+04.03.2011 16:04:16 Command: request 
+INFO: OK
+04.03.2011 16:04:21 Command: request 
+INFO: noinput
+04.03.2011 16:04:23 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_selectItaly_move | Speak: italy
+04.03.2011 16:04:23 Command: work 
+INFO: Agenda: feedback_Agenda | Move: null | Speak: null
+04.03.2011 16:04:27 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_currentPic_move | Speak: photo details
+04.03.2011 16:04:28 Command: work 
+INFO: Agenda: whichPic_agenda | Move: null | Speak: null
+04.03.2011 16:04:32 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_play_move | Speak: play
+04.03.2011 16:04:32 Command: work 
+INFO: Agenda: feedback_Agenda | Move: null | Speak: null
+04.03.2011 16:04:38 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_exit_move | Speak: end photos
+04.03.2011 16:04:38 Command: work 
+INFO: Agenda: feedback_Agenda | Move: null | Speak: null
+04.03.2011 16:04:44 Command: request 
+INFO: nomatch
+04.03.2011 16:04:47 Command: request 
+INFO: nomatch
+04.03.2011 16:04:51 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_LigthsOn_move | Speak: lights on
+04.03.2011 16:04:51 Command: work 
+INFO: Agenda: feedback_agenda | Move: null | Speak: null
+04.03.2011 16:13:23 Command: reset 
+INFO: OK
+04.03.2011 16:13:24 Command: request 
+INFO: OK
+04.03.2011 16:13:25 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_low_move | Speak: null
+04.03.2011 16:13:27 Command: work 
+INFO: Agenda: feedback_agenda | Move: null | Speak: null
+04.03.2011 16:13:28 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_low_move | Speak: null
+04.03.2011 16:13:29 Command: work 
+INFO: Agenda: feedback_agenda | Move: null | Speak: null
+04.03.2011 16:13:31 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_high_move | Speak: null
+04.03.2011 16:13:32 Command: work 
+INFO: Agenda: feedback_agenda | Move: null | Speak: null
+04.03.2011 16:13:33 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_veryLow_move | Speak: null
+04.03.2011 16:13:34 Command: work 
+INFO: Agenda: feedback_agenda | Move: null | Speak: null
+04.03.2011 16:13:35 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_veryLow_move | Speak: null
+04.03.2011 16:13:36 Command: work 
+INFO: Agenda: feedback_agenda | Move: null | Speak: null
+04.03.2011 16:13:37 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_LightsOff_move | Speak: null
+04.03.2011 16:13:38 Command: work 
+INFO: Agenda: feedback_agenda | Move: null | Speak: null
+04.03.2011 16:13:39 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_medium_move | Speak: null
+04.03.2011 16:13:40 Command: work 
+INFO: Agenda: feedback_agenda | Move: null | Speak: null
+04.03.2011 16:13:41 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_veryHigh_move | Speak: null
+04.03.2011 16:13:42 Command: work 
+INFO: Agenda: feedback_agenda | Move: null | Speak: null
+04.03.2011 16:13:43 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_LigthsOn_move | Speak: null
+04.03.2011 16:13:44 Command: work 
+INFO: Agenda: feedback_agenda | Move: null | Speak: null
+04.03.2011 16:13:47 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_veryHigh_move | Speak: null
+04.03.2011 16:13:48 Command: work 
+INFO: Agenda: feedback_agenda | Move: null | Speak: null
+04.03.2011 16:13:48 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_LightsOff_move | Speak: null
+04.03.2011 16:13:49 Command: work 
+INFO: Agenda: feedback_agenda | Move: null | Speak: null
+04.03.2011 16:14:09 Command: request 
+INFO: OK
+04.03.2011 16:14:18 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_LigthsOn_move | Speak: lights on
+04.03.2011 16:14:18 Command: work 
+INFO: Agenda: feedback_agenda | Move: null | Speak: null
+04.03.2011 16:14:24 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_LightsOff_move | Speak: light off
+04.03.2011 16:14:25 Command: work 
+INFO: Agenda: feedback_agenda | Move: null | Speak: null
+04.03.2011 16:14:33 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_LightsOff_move | Speak: lights off
+04.03.2011 16:14:33 Command: work 
+INFO: Agenda: feedback_agenda | Move: null | Speak: null
+04.03.2011 16:15:06 Command: request 
+INFO: OK
+04.03.2011 16:15:10 Command: request 
+INFO: nomatch
+04.03.2011 16:15:13 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_LigthsOn_move | Speak: light on
+04.03.2011 16:15:13 Command: work 
+INFO: Agenda: feedback_agenda | Move: null | Speak: null
+04.03.2011 16:15:20 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_LightsOff_move | Speak: lights off
+04.03.2011 16:15:20 Command: work 
+INFO: Agenda: feedback_agenda | Move: null | Speak: null
+04.03.2011 16:15:43 Command: request 
+INFO: OK
+04.03.2011 16:15:47 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_LigthsOn_move | Speak: lights on
+04.03.2011 16:15:47 Command: work 
+INFO: Agenda: feedback_agenda | Move: null | Speak: null
+04.03.2011 16:15:52 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_LightsOff_move | Speak: lights off
+04.03.2011 16:15:52 Command: work 
+INFO: Agenda: feedback_agenda | Move: null | Speak: null
+04.03.2011 16:15:58 Command: request 
+INFO: nomatch
+04.03.2011 16:16:01 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_veryLow_move | Speak: lights very low
+04.03.2011 16:16:01 Command: work 
+INFO: Agenda: feedback_agenda | Move: null | Speak: null
+04.03.2011 16:16:11 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_veryHigh_move | Speak: lights very high
+04.03.2011 16:16:11 Command: work 
+INFO: Agenda: feedback_agenda | Move: null | Speak: null
+04.03.2011 16:16:29 Command: request 
+INFO: OK
+04.03.2011 16:16:34 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_low_move | Speak: light low
+04.03.2011 16:16:34 Command: work 
+INFO: Agenda: feedback_agenda | Move: null | Speak: null
+04.03.2011 16:16:40 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_high_move | Speak: light high
+04.03.2011 16:16:40 Command: work 
+INFO: Agenda: feedback_agenda | Move: null | Speak: null
+04.03.2011 16:16:46 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_LightsOff_move | Speak: lights off
+04.03.2011 16:16:46 Command: work 
+INFO: Agenda: feedback_agenda | Move: null | Speak: null
+04.03.2011 16:16:51 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_LigthsOn_move | Speak: lights on
+04.03.2011 16:16:51 Command: work 
+INFO: Agenda: feedback_agenda | Move: null | Speak: null
+04.03.2011 16:16:59 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_veryHigh_move | Speak: lights very high
+04.03.2011 16:16:59 Command: work 
+INFO: Agenda: feedback_agenda | Move: null | Speak: null
+04.03.2011 16:17:05 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_veryLow_move | Speak: lights very low
+04.03.2011 16:17:05 Command: work 
+INFO: Agenda: feedback_agenda | Move: null | Speak: null
+04.03.2011 16:17:13 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_medium_move | Speak: lights medium
+04.03.2011 16:17:13 Command: work 
+INFO: Agenda: feedback_agenda | Move: null | Speak: null
+04.03.2011 16:26:32 Command: reset 
+INFO: OK
+04.03.2011 16:26:33 Command: request 
+INFO: OK
+04.03.2011 16:26:54 Command: request 
+INFO: OK
+04.03.2011 16:26:56 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_veryHigh_move | Speak: null
+04.03.2011 16:26:57 Command: work 
+INFO: Agenda: feedback_agenda | Move: null | Speak: null
+04.03.2011 16:26:58 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_start_move | Speak: null
+04.03.2011 16:27:00 Command: work 
+INFO: Agenda: feedback_Agenda | Move: null | Speak: null
+04.03.2011 16:27:03 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_exit_move | Speak: null
+04.03.2011 16:27:05 Command: work 
+INFO: Agenda: feedback_Agenda | Move: null | Speak: null
+04.03.2011 16:27:06 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_start_move | Speak: null
+04.03.2011 16:27:08 Command: work 
+INFO: Agenda: feedback_Agenda | Move: null | Speak: null
+04.03.2011 16:27:09 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_selectItaly_move | Speak: null
+04.03.2011 16:27:10 Command: work 
+INFO: Agenda: feedback_Agenda | Move: null | Speak: null
+04.03.2011 16:28:31 Command: reset 
+INFO: OK
+04.03.2011 16:28:31 Command: request 
+INFO: OK
+04.03.2011 16:28:33 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_start_move | Speak: null
+04.03.2011 16:28:35 Command: work 
+INFO: Agenda: feedback_Agenda | Move: null | Speak: null
+04.03.2011 16:28:37 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_prev_move | Speak: null
+04.03.2011 16:28:38 Command: work 
+INFO: Agenda: feedback_Agenda | Move: null | Speak: null
+04.03.2011 16:28:40 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_next_move | Speak: null
+04.03.2011 16:28:41 Command: work 
+INFO: Agenda: feedback_Agenda | Move: null | Speak: null
+04.03.2011 16:28:42 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_selectWed_move | Speak: null
+04.03.2011 16:28:43 Command: work 
+INFO: Agenda: feedback_Agenda | Move: null | Speak: null
+04.03.2011 16:28:45 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_prev_move | Speak: null
+04.03.2011 16:28:46 Command: work 
+INFO: Agenda: feedback_Agenda | Move: null | Speak: null
+04.03.2011 16:28:47 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_selectWed_move | Speak: null
+04.03.2011 16:28:48 Command: work 
+INFO: Agenda: feedback_Agenda | Move: null | Speak: null
+04.03.2011 16:28:50 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_currentPic_move | Speak: null
+04.03.2011 16:28:51 Command: work 
+INFO: Agenda: whichPic_agenda | Move: null | Speak: null
+04.03.2011 16:28:55 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_exit_move | Speak: null
+04.03.2011 16:28:57 Command: work 
+INFO: Agenda: feedback_Agenda | Move: null | Speak: null
+04.03.2011 16:28:59 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_veryLow_move | Speak: null
+04.03.2011 16:29:00 Command: work 
+INFO: Agenda: feedback_agenda | Move: null | Speak: null
+04.03.2011 16:29:01 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_veryHigh_move | Speak: null
+04.03.2011 16:29:02 Command: work 
+INFO: Agenda: feedback_agenda | Move: null | Speak: null
+04.03.2011 16:29:25 Command: reset 
+INFO: OK
+04.03.2011 16:29:27 Command: request 
+INFO: OK
+04.03.2011 16:29:28 Command: request 
+INFO: OK
+04.03.2011 16:29:33 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_LigthsOn_move | Speak: lights on
+04.03.2011 16:29:33 Command: work 
+INFO: Agenda: feedback_agenda | Move: null | Speak: null
+04.03.2011 16:29:40 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_start_move | Speak: photos
+04.03.2011 16:29:40 Command: work 
+INFO: Agenda: feedback_Agenda | Move: null | Speak: null
+04.03.2011 16:29:49 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_next_move | Speak: next
+04.03.2011 16:29:49 Command: work 
+INFO: Agenda: feedback_Agenda | Move: null | Speak: null
+04.03.2011 16:29:54 Command: request 
+INFO: nomatch
+04.03.2011 16:29:58 Command: request 
+INFO: nomatch
+04.03.2011 16:30:01 Command: request 
+INFO: nomatch
+04.03.2011 16:30:04 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_prev_move | Speak: back
+04.03.2011 16:30:04 Command: work 
+INFO: Agenda: feedback_Agenda | Move: null | Speak: null
+04.03.2011 16:30:14 Command: request 
+INFO: noinput
+04.03.2011 16:30:18 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_currentPic_move | Speak: photo details
+04.03.2011 16:30:18 Command: work 
+INFO: Agenda: whichPic_agenda | Move: null | Speak: null
+04.03.2011 16:30:25 Command: request 
+INFO: OK
+04.03.2011 16:30:29 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_selectItaly_move | Speak: italy
+04.03.2011 16:30:29 Command: work 
+INFO: Agenda: feedback_Agenda | Move: null | Speak: null
+04.03.2011 16:31:39 Command: reset 
+INFO: OK
+04.03.2011 16:31:40 Command: request 
+INFO: OK
+04.03.2011 16:31:43 Command: request 
+INFO: OK
+04.03.2011 16:33:00 Command: reset 
+INFO: OK
+04.03.2011 16:33:01 Command: request 
+INFO: OK
+04.03.2011 16:33:04 Command: request 
+INFO: OK
+04.03.2011 16:33:08 Command: request 
+INFO: noinput
+04.03.2011 16:33:12 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_start_move | Speak: photos
+04.03.2011 16:33:12 Command: work 
+INFO: Agenda: feedback_Agenda | Move: null | Speak: null
+04.03.2011 16:33:15 Command: request 
+INFO: OK
+04.03.2011 16:33:21 Command: request 
+INFO: noinput
+04.03.2011 16:33:25 Command: request 
+INFO: nomatch
+04.03.2011 16:33:30 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_selectWed_move | Speak: wedding
+04.03.2011 16:33:30 Command: work 
+INFO: Agenda: feedback_Agenda | Move: null | Speak: null
+04.03.2011 16:33:36 Command: request 
+INFO: nomatch
+04.03.2011 16:33:42 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_selectSlo_move | Speak: slovenia
+04.03.2011 16:33:42 Command: work 
+INFO: Agenda: feedback_Agenda | Move: null | Speak: null
+04.03.2011 16:33:49 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_selectWed_move | Speak: wedding
+04.03.2011 16:33:50 Command: work 
+INFO: Agenda: feedback_Agenda | Move: null | Speak: null
+04.03.2011 16:33:59 Command: request 
+INFO: noinput
+04.03.2011 16:34:05 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_selectItaly_move | Speak: italy
+04.03.2011 16:34:05 Command: work 
+INFO: Agenda: feedback_Agenda | Move: null | Speak: null
+04.03.2011 16:34:09 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_selectFra_move | Speak: france
+04.03.2011 16:34:09 Command: work 
+INFO: Agenda: feedback_Agenda | Move: null | Speak: null
+04.03.2011 16:34:15 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_selectWed_move | Speak: wedding
+04.03.2011 16:34:15 Command: work 
+INFO: Agenda: feedback_Agenda | Move: null | Speak: null
+04.03.2011 16:34:20 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_selectVen_move | Speak: venice
+04.03.2011 16:34:20 Command: work 
+INFO: Agenda: feedback_Agenda | Move: null | Speak: null
+04.03.2011 16:34:26 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_pause_move | Speak: pause
+04.03.2011 16:34:26 Command: work 
+INFO: Agenda: feedback_Agenda | Move: null | Speak: null
+04.03.2011 16:34:34 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_play_move | Speak: play
+04.03.2011 16:34:34 Command: work 
+INFO: Agenda: feedback_Agenda | Move: null | Speak: null
+04.03.2011 16:34:43 Command: request 
+INFO: noinput
+04.03.2011 16:34:50 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_selectSwi_move | Speak: switzerland
+04.03.2011 16:34:50 Command: work 
+INFO: Agenda: feedback_Agenda | Move: null | Speak: null
+04.03.2011 16:34:56 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_currentPic_move | Speak: photo details
+04.03.2011 16:34:56 Command: work 
+INFO: Agenda: whichPic_agenda | Move: null | Speak: null
+04.03.2011 16:35:02 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_LigthsOn_move | Speak: lights on
+04.03.2011 16:35:02 Command: work 
+INFO: Agenda: feedback_agenda | Move: null | Speak: null
+04.03.2011 16:35:08 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_high_move | Speak: lights high
+04.03.2011 16:35:08 Command: work 
+INFO: Agenda: feedback_agenda | Move: null | Speak: null
+04.03.2011 16:35:18 Command: request 
+INFO: noinput
+04.03.2011 16:35:25 Command: request 
+INFO: noinput
+04.03.2011 16:35:27 Command: request 
+INFO: nomatch
+04.03.2011 16:35:30 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_prev_move | Speak: previous picture
+04.03.2011 16:35:30 Command: work 
+INFO: Agenda: feedback_Agenda | Move: null | Speak: null
+04.03.2011 16:35:40 Command: request 
+INFO: nomatch
+04.03.2011 16:35:44 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_prev_move | Speak: previous
+04.03.2011 16:35:44 Command: work 
+INFO: Agenda: feedback_Agenda | Move: null | Speak: null
+04.03.2011 16:35:49 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_prev_move | Speak: back
+04.03.2011 16:35:49 Command: work 
+INFO: Agenda: feedback_Agenda | Move: null | Speak: null
+04.03.2011 16:38:20 Command: request 
+INFO: OK
+04.03.2011 16:38:25 Command: reset 
+INFO: OK
+04.03.2011 16:38:26 Command: request 
+INFO: OK
+04.03.2011 16:38:28 Command: request 
+INFO: OK
+04.03.2011 16:38:35 Command: request 
+INFO: noinput
+04.03.2011 16:38:38 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_start_move | Speak: photos
+04.03.2011 16:38:38 Command: work 
+INFO: Agenda: feedback_Agenda | Move: null | Speak: null
+04.03.2011 16:38:45 Command: request 
+INFO: OK
+04.03.2011 16:38:47 Command: request 
+INFO: noinput
+04.03.2011 16:38:49 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_selectItaly_move | Speak: italy
+04.03.2011 16:38:49 Command: work 
+INFO: Agenda: feedback_Agenda | Move: null | Speak: null
+04.03.2011 16:38:54 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_play_move | Speak: play
+04.03.2011 16:38:54 Command: work 
+INFO: Agenda: feedback_Agenda | Move: null | Speak: null
+04.03.2011 16:39:00 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_pause_move | Speak: pause
+04.03.2011 16:39:00 Command: work 
+INFO: Agenda: feedback_Agenda | Move: null | Speak: null
+04.03.2011 16:39:06 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_selectWed_move | Speak: wedding
+04.03.2011 16:39:06 Command: work 
+INFO: Agenda: feedback_Agenda | Move: null | Speak: null
+04.03.2011 16:39:12 Command: request 
+INFO: nomatch
+04.03.2011 16:39:18 Command: request 
+INFO: nomatch
+04.03.2011 16:39:23 Command: request 
+INFO: nomatch
+04.03.2011 16:39:30 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_selectSlo_move | Speak: slovenia
+04.03.2011 16:39:31 Command: work 
+INFO: Agenda: feedback_Agenda | Move: null | Speak: null
+04.03.2011 16:39:38 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_selectFra_move | Speak: france
+04.03.2011 16:39:38 Command: work 
+INFO: Agenda: feedback_Agenda | Move: null | Speak: null
+04.03.2011 16:39:43 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_play_move | Speak: play
+04.03.2011 16:39:43 Command: work 
+INFO: Agenda: feedback_Agenda | Move: null | Speak: null

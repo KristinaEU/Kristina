@@ -1,0 +1,12 @@
+public <Yes> = <YES> [<MOD>] | <STRONG_MOD> |  <OKAY>  |  <WEAK_MOD> ;
+<YES> = yes | yeah | yep | yup;
+<MOD> = <STRONG_MOD> | <WEAK_MOD>;
+<STRONG_MOD> = please [do] | i [sure] do | i [sure] am | i [sure] will | [<_that_is>] [be] <OKAY> | <_that> sounds <OKAY> | <_that> works | you betcha | [let's] go for it | absolutely | definitely |  <OKAY> <OKAY> ;
+<WEAK_MOD> = why not | i think so | i guess so | [<_that_is>] close enough;
+<OKAY> = sure | of course | okay | correct | fine | perfect | great | wonderful | acceptable | good [enough] | right | alright | cool;/*End of Slot*/
+public <Yes> = <YES> [<MOD>] | <STRONG_MOD> |  <OKAY>  |  <WEAK_MOD> ;
+<YES> = yes | yeah | yep | yup;
+<MOD> = <STRONG_MOD> | <WEAK_MOD>;
+<STRONG_MOD> = please [do] | i [sure] do | i [sure] am | i [sure] will | [<_that_is>] [be] <OKAY> | <_that> sounds <OKAY> | <_that> works | you betcha | [let's] go for it | absolutely | definitely |  <OKAY> <OKAY> ;
+<WEAK_MOD> = why not | i think so | i guess so | [<_that_is>] close enough;
+<OKAY> = sure | of course | okay | correct | fine | perfect | great | wonderful | acceptable | good [enough] | right | alright | cool;/*End of Slot*/

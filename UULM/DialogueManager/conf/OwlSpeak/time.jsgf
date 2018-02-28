@@ -1,0 +1,10 @@
+#JSGF 1.0;
+grammar builtin_time;
+public <builtin_time> = (<builtin_hours_of_day> <builtin_minutes> | <builtin_hours> <builtin_minutes> <builtin_ampm> | <builtin_hours> <builtin_minutes> | <builtin_hours_of_day> [o'clock] | <builtin_hours> [o'clock] (<builtin_ampm>|<NULL>) | half past (<builtin_hours> (<builtin_ampm>|<NULL>)|<builtin_hours_of_day>) | quarter past (<builtin_hours> (<builtin_ampm>|<NULL>)|<builtin_hours_of_day>) | noon | midnight) {external_time_mv};
+<builtin_hours_of_day> = (thirteen|fourteen|fifteen|sixteen|seventeen|eighteen|nineteen|twenty|twenty one|twenty two|twenty three);
+<builtin_hours> = (one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve);
+<builtin_ampm> = (a m|p m);
+<builtin_minutes> = ([oh] <builtin_G1to9>|<builtin_G11to19>|<builtin_G20to50>|<builtin_G20to50> <builtin_G1to9>);
+<builtin_G11to19> = (eleven|twelve|thirteen|fourteen|fifteen|sixteen|seventeen|eighteen|nineteen);
+<builtin_G20to50> = (twenty|thirty|forty|fifty);
+<builtin_G1to9> = (one|two|three|four|five|six|seven|eight|nine|zero|naught|ought|oh);

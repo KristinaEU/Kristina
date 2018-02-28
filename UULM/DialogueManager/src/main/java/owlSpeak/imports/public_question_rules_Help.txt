@@ -1,0 +1,2 @@
+public <Help> = [<_i_want>] <general_help> | <what_can_i_say> [now] | [<_i_want>] <give_me_tips>;
+public <Help> = [<_i_want>] <general_help> | <what_can_i_say> [now] | [<_i_want>] <give_me_tips>;

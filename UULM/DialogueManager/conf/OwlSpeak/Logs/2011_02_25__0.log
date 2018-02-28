@@ -1,0 +1,2136 @@
+25.02.2011 08:21:27 Command: reset 
+INFO: OK
+25.02.2011 08:21:29 Command: request 
+INFO: OK
+25.02.2011 08:21:30 Command: request 
+INFO: OK
+25.02.2011 08:26:12 Command: request 
+INFO: OK
+25.02.2011 08:41:55 Command: request 
+INFO: OK
+25.02.2011 08:41:55 Command: work 
+INFO: Agenda: intro_agenda | Move: null | Speak: null
+25.02.2011 08:42:06 Command: work 
+INFO: Agenda: say_go_agenda | Move: reminder_a1n1d_what_are_my_options_mv | Speak: hilfe
+25.02.2011 08:42:12 Command: request 
+INFO: OK
+25.02.2011 08:42:13 Command: request 
+INFO: nomatch
+25.02.2011 08:42:20 Command: request 
+INFO: nomatch
+25.02.2011 08:42:26 Command: request 
+INFO: OK
+25.02.2011 08:42:29 Command: request 
+INFO: error.unsupported.language
+25.02.2011 08:42:35 Command: request 
+INFO: error.unsupported.language
+25.02.2011 08:42:43 Command: work 
+INFO: Agenda: what_country_agenda | Move: hotel_a1n1d_america_mv | Speak: amerika
+25.02.2011 08:42:50 Command: request 
+INFO: nomatch
+25.02.2011 08:42:51 Command: request 
+INFO: OK
+25.02.2011 08:43:02 Command: request 
+INFO: error.unsupported.language
+25.02.2011 08:43:10 Command: request 
+INFO: nomatch
+25.02.2011 08:43:17 Command: work 
+INFO: Agenda: what_town_america_agenda | Move: hotel_a1n1d_chicago_mv | Speak: chicago
+25.02.2011 08:43:17 Command: work 
+INFO: Agenda: there_are_hotels_agenda | Move: null | Speak: null
+25.02.2011 08:43:25 Command: request 
+INFO: OK
+25.02.2011 08:43:41 Command: request 
+INFO: noinput
+25.02.2011 08:43:51 Command: request 
+INFO: noinput
+25.02.2011 08:43:57 Command: request 
+INFO: nomatch
+25.02.2011 08:44:07 Command: request 
+INFO: noinput
+25.02.2011 08:44:17 Command: request 
+INFO: noinput
+25.02.2011 08:44:28 Command: request 
+INFO: noinput
+25.02.2011 08:44:35 Command: request 
+INFO: error.unsupported.language
+25.02.2011 08:44:40 Command: request 
+INFO: OK
+25.02.2011 08:44:41 Command: request 
+INFO: nomatch
+25.02.2011 08:44:47 Command: request 
+INFO: nomatch
+25.02.2011 08:44:56 Command: request 
+INFO: error.unsupported.language
+25.02.2011 08:45:02 Command: request 
+INFO: nomatch
+25.02.2011 08:45:10 Command: work 
+INFO: Agenda: what_hotel_chicago_agenda | Move: hotel_a1n1d_chicago_james_chic_mv | Speak: james chicago
+25.02.2011 08:45:14 Command: request 
+INFO: OK
+25.02.2011 08:45:17 Command: request 
+INFO: nomatch
+25.02.2011 08:45:22 Command: request 
+INFO: nomatch
+25.02.2011 08:45:28 Command: request 
+INFO: nomatch
+25.02.2011 08:45:35 Command: request 
+INFO: nomatch
+25.02.2011 08:45:42 Command: request 
+INFO: nomatch
+25.02.2011 08:45:54 Command: request 
+INFO: error.unsupported.language
+25.02.2011 08:46:00 Command: request 
+INFO: error.unsupported.language
+25.02.2011 08:46:03 Command: request 
+INFO: OK
+25.02.2011 08:46:10 Command: request 
+INFO: nomatch
+25.02.2011 08:46:12 Command: request 
+INFO: OK
+25.02.2011 08:46:15 Command: request 
+INFO: error.unsupported.language
+25.02.2011 08:46:20 Command: request 
+INFO: nomatch
+25.02.2011 08:46:28 Command: request 
+INFO: error.unsupported.language
+25.02.2011 08:46:34 Command: request 
+INFO: error.unsupported.language
+25.02.2011 08:46:41 Command: request 
+INFO: error.unsupported.language
+25.02.2011 08:46:46 Command: request 
+INFO: nomatch
+25.02.2011 08:46:52 Command: request 
+INFO: error.unsupported.language
+25.02.2011 08:46:57 Command: request 
+INFO: nomatch
+25.02.2011 08:47:03 Command: request 
+INFO: OK
+25.02.2011 08:47:06 Command: request 
+INFO: noinput
+25.02.2011 08:47:12 Command: request 
+INFO: nomatch
+25.02.2011 08:47:19 Command: work 
+INFO: Agenda: what_day_to_stay_agenda | Move: hotel_a1n1d_seventeenth_mv | Speak: am siebzehnten
+25.02.2011 08:47:24 Command: request 
+INFO: OK
+25.02.2011 08:47:29 Command: request 
+INFO: noinput
+25.02.2011 08:47:34 Command: request 
+INFO: nomatch
+25.02.2011 08:47:40 Command: work 
+INFO: Agenda: how_long_seventeenth_agenda | Move: hotel_a1n1d_two_weeks_seventeenth_mv | Speak: zwei wochen buchen
+25.02.2011 08:47:47 Command: request 
+INFO: nomatch
+25.02.2011 08:47:47 Command: request 
+INFO: OK
+25.02.2011 08:47:54 Command: request 
+INFO: nomatch
+25.02.2011 08:48:01 Command: request 
+INFO: nomatch
+25.02.2011 08:48:08 Command: request 
+INFO: error.unsupported.language
+25.02.2011 08:48:17 Command: request 
+INFO: nomatch
+25.02.2011 08:48:23 Command: request 
+INFO: nomatch
+25.02.2011 08:48:32 Command: request 
+INFO: error.unsupported.language
+25.02.2011 08:48:39 Command: request 
+INFO: nomatch
+25.02.2011 08:48:46 Command: request 
+INFO: nomatch
+25.02.2011 08:48:47 Command: request 
+INFO: OK
+25.02.2011 08:48:55 Command: request 
+INFO: error.unsupported.language
+25.02.2011 08:49:02 Command: work 
+INFO: Agenda: board_agenda | Move: hotel_a1n1d_full_board_mv | Speak: vollpension
+25.02.2011 08:49:07 Command: request 
+INFO: OK
+25.02.2011 08:49:18 Command: request 
+INFO: error.unsupported.language
+25.02.2011 08:49:33 Command: work 
+INFO: Agenda: correct_agenda | Move: hotel_a1n1d_yes_mv | Speak: ja
+25.02.2011 08:49:40 Command: work 
+INFO: Agenda: flight_as_hotel_agenda | Move: flug_a1n1d_hotel_yes_mv | Speak: ja
+25.02.2011 08:49:45 Command: request 
+INFO: OK
+25.02.2011 08:49:49 Command: work 
+INFO: Agenda: from_which_airport_hotel | Move: flug_a1n1d_stuttgart_hotel_mv | Speak: stuttgart
+25.02.2011 08:49:52 Command: request 
+INFO: OK
+25.02.2011 08:49:57 Command: work 
+INFO: Agenda: start_time_hotel_agenda | Move: flug_a1n1d_start_eight_hotel_mv | Speak: um acht
+25.02.2011 08:50:01 Command: request 
+INFO: OK
+25.02.2011 08:50:09 Command: request 
+INFO: nomatch
+25.02.2011 08:50:16 Command: work 
+INFO: Agenda: return_time_agenda | Move: flug_a1n1d_return_at_eight_mv | Speak: um acht
+25.02.2011 08:50:26 Command: work 
+INFO: Agenda: correct_agenda | Move: flug_a1n1d_yes_mv | Speak: ja
+25.02.2011 08:50:26 Command: work 
+INFO: Agenda: holger_birthday_agenda | Move: null | Speak: null
+25.02.2011 08:50:33 Command: work 
+INFO: Agenda: heavy_rain_agenda | Move: null | Speak: null
+25.02.2011 08:50:37 Command: work 
+INFO: Agenda: movie_agenda | Move: null | Speak: null
+25.02.2011 08:50:48 Command: request 
+INFO: OK
+25.02.2011 08:50:49 Command: request 
+INFO: OK
+25.02.2011 08:50:50 Command: request 
+INFO: OK
+25.02.2011 08:50:50 Command: request 
+INFO: OK
+25.02.2011 08:50:51 Command: request 
+INFO: noinput
+25.02.2011 08:50:55 Command: request 
+INFO: OK
+25.02.2011 08:50:56 Command: request 
+INFO: OK
+25.02.2011 08:50:57 Command: request 
+INFO: OK
+25.02.2011 08:50:58 Command: request 
+INFO: OK
+25.02.2011 08:50:58 Command: request 
+INFO: noinput
+25.02.2011 08:51:05 Command: request 
+INFO: noinput
+25.02.2011 08:51:10 Command: reset 
+INFO: OK
+25.02.2011 08:51:13 Command: request 
+INFO: noinput
+25.02.2011 08:51:13 Command: work 
+INFO: Agenda: intro_agenda | Move: null | Speak: null
+25.02.2011 08:51:24 Command: request 
+INFO: nomatch
+25.02.2011 08:51:29 Command: work 
+INFO: Agenda: say_go_agenda | Move: reminder_a1n1d_what_are_my_options_mv | Speak: hilfe
+25.02.2011 08:51:32 Command: reset 
+INFO: OK
+25.02.2011 08:51:34 Command: reset 
+INFO: OK
+25.02.2011 08:51:36 Command: work 
+INFO: Agenda: what_country_agenda | Move: hotel_a1n1d_america_mv | Speak: u s a
+25.02.2011 08:51:36 Command: work 
+INFO: Agenda: intro_agenda | Move: null | Speak: null
+25.02.2011 08:51:38 Command: reset 
+INFO: OK
+25.02.2011 08:51:51 Command: work 
+INFO: Agenda: say_go_agenda | Move: reminder_a1n1d_what_are_my_options_mv | Speak: hilfe
+25.02.2011 08:51:51 Command: work 
+INFO: Agenda: intro_agenda | Move: null | Speak: null
+25.02.2011 08:52:02 Command: work 
+INFO: Agenda: say_go_agenda | Move: reminder_a1n1d_what_are_my_options_mv | Speak: hilfe
+25.02.2011 08:52:10 Command: work 
+INFO: Agenda: what_country_agenda | Move: hotel_a1n1d_america_mv | Speak: u s a
+25.02.2011 08:52:17 Command: work 
+INFO: Agenda: what_town_america_agenda | Move: hotel_a1n1d_chicago_mv | Speak: chicago
+25.02.2011 08:52:17 Command: work 
+INFO: Agenda: there_are_hotels_agenda | Move: null | Speak: null
+25.02.2011 08:52:38 Command: work 
+INFO: Agenda: what_hotel_chicago_agenda | Move: hotel_a1n1d_chicago_best_western_mv | Speak: best western
+25.02.2011 08:52:43 Command: request 
+INFO: nomatch
+25.02.2011 08:52:48 Command: work 
+INFO: Agenda: what_day_to_stay_agenda | Move: hotel_a1n1d_seventeenth_mv | Speak: am siebzehnten
+25.02.2011 08:52:54 Command: request 
+INFO: nomatch
+25.02.2011 08:52:59 Command: request 
+INFO: error.unsupported.language
+25.02.2011 08:53:05 Command: request 
+INFO: nomatch
+25.02.2011 08:53:10 Command: work 
+INFO: Agenda: how_long_seventeenth_agenda | Move: hotel_a1n1d_one_week_seventeenth_mv | Speak: eine woche buchen
+25.02.2011 08:53:17 Command: request 
+INFO: nomatch
+25.02.2011 08:53:24 Command: work 
+INFO: Agenda: board_agenda | Move: hotel_a1n1d_full_board_mv | Speak: vollpension
+25.02.2011 08:53:38 Command: work 
+INFO: Agenda: correct_agenda | Move: hotel_a1n1d_no_mv | Speak: nein
+25.02.2011 08:53:48 Command: request 
+INFO: nomatch
+25.02.2011 08:53:53 Command: request 
+INFO: nomatch
+25.02.2011 08:53:59 Command: work 
+INFO: Agenda: what_country_agenda | Move: hotel_a1n1d_america_mv | Speak: amerika
+25.02.2011 08:54:06 Command: work 
+INFO: Agenda: what_town_america_agenda | Move: hotel_a1n1d_chicago_mv | Speak: chicago
+25.02.2011 08:54:07 Command: work 
+INFO: Agenda: there_are_hotels_agenda | Move: null | Speak: null
+25.02.2011 08:54:29 Command: work 
+INFO: Agenda: what_hotel_chicago_agenda | Move: hotel_a1n1d_chicago_best_western_mv | Speak: best western
+25.02.2011 08:54:36 Command: request 
+INFO: nomatch
+25.02.2011 08:54:41 Command: request 
+INFO: nomatch
+25.02.2011 08:54:46 Command: request 
+INFO: nomatch
+25.02.2011 08:54:55 Command: request 
+INFO: noinput
+25.02.2011 08:55:01 Command: request 
+INFO: nomatch
+25.02.2011 08:55:06 Command: request 
+INFO: nomatch
+25.02.2011 08:55:11 Command: work 
+INFO: Agenda: what_day_to_stay_agenda | Move: hotel_a1n1d_seventeenth_mv | Speak: am siebzehnten
+25.02.2011 08:55:17 Command: request 
+INFO: error.unsupported.language
+25.02.2011 08:55:22 Command: request 
+INFO: nomatch
+25.02.2011 08:55:27 Command: request 
+INFO: nomatch
+25.02.2011 08:55:32 Command: work 
+INFO: Agenda: how_long_seventeenth_agenda | Move: hotel_a1n1d_two_weeks_seventeenth_mv | Speak: zwei wochen bleiben
+25.02.2011 08:55:39 Command: request 
+INFO: nomatch
+25.02.2011 08:55:45 Command: request 
+INFO: nomatch
+25.02.2011 08:55:52 Command: request 
+INFO: error.unsupported.language
+25.02.2011 08:55:59 Command: request 
+INFO: nomatch
+25.02.2011 08:56:05 Command: request 
+INFO: nomatch
+25.02.2011 08:56:12 Command: request 
+INFO: nomatch
+25.02.2011 08:56:18 Command: work 
+INFO: Agenda: board_agenda | Move: hotel_a1n1d_full_board_mv | Speak: vollpension
+25.02.2011 08:56:32 Command: work 
+INFO: Agenda: correct_agenda | Move: hotel_a1n1d_yes_mv | Speak: ja
+25.02.2011 08:56:40 Command: work 
+INFO: Agenda: flight_as_hotel_agenda | Move: flug_a1n1d_hotel_yes_mv | Speak: ja
+25.02.2011 08:56:45 Command: work 
+INFO: Agenda: from_which_airport_hotel | Move: flug_a1n1d_stuttgart_hotel_mv | Speak: stuttgart
+25.02.2011 08:56:51 Command: work 
+INFO: Agenda: start_time_hotel_agenda | Move: flug_a1n1d_start_eight_hotel_mv | Speak: um acht
+25.02.2011 08:56:57 Command: work 
+INFO: Agenda: return_time_agenda | Move: flug_a1n1d_return_at_eight_mv | Speak: um acht
+25.02.2011 08:57:08 Command: work 
+INFO: Agenda: correct_agenda | Move: flug_a1n1d_yes_mv | Speak: ja
+25.02.2011 08:57:08 Command: work 
+INFO: Agenda: holger_birthday_agenda | Move: null | Speak: null
+25.02.2011 08:57:15 Command: work 
+INFO: Agenda: heavy_rain_agenda | Move: null | Speak: null
+25.02.2011 08:57:19 Command: work 
+INFO: Agenda: movie_agenda | Move: null | Speak: null
+25.02.2011 08:57:33 Command: request 
+INFO: noinput
+25.02.2011 08:57:40 Command: request 
+INFO: noinput
+25.02.2011 08:57:40 Command: reset 
+INFO: OK
+25.02.2011 08:57:47 Command: request 
+INFO: noinput
+25.02.2011 08:57:47 Command: work 
+INFO: Agenda: intro_agenda | Move: null | Speak: null
+25.02.2011 08:57:48 Command: request 
+INFO: OK
+25.02.2011 08:58:03 Command: request 
+INFO: noinput
+25.02.2011 08:58:13 Command: request 
+INFO: noinput
+25.02.2011 08:58:23 Command: request 
+INFO: noinput
+25.02.2011 08:58:33 Command: request 
+INFO: noinput
+25.02.2011 08:58:43 Command: request 
+INFO: noinput
+25.02.2011 08:58:53 Command: request 
+INFO: noinput
+25.02.2011 08:59:03 Command: request 
+INFO: noinput
+25.02.2011 08:59:13 Command: request 
+INFO: noinput
+25.02.2011 08:59:23 Command: request 
+INFO: noinput
+25.02.2011 08:59:33 Command: request 
+INFO: noinput
+25.02.2011 08:59:43 Command: request 
+INFO: noinput
+25.02.2011 08:59:53 Command: request 
+INFO: noinput
+25.02.2011 09:00:03 Command: request 
+INFO: noinput
+25.02.2011 09:00:14 Command: request 
+INFO: noinput
+25.02.2011 09:00:24 Command: request 
+INFO: noinput
+25.02.2011 09:00:34 Command: request 
+INFO: noinput
+25.02.2011 09:00:44 Command: request 
+INFO: noinput
+25.02.2011 09:00:54 Command: request 
+INFO: noinput
+25.02.2011 09:01:04 Command: request 
+INFO: noinput
+25.02.2011 09:01:14 Command: request 
+INFO: noinput
+25.02.2011 09:01:24 Command: request 
+INFO: noinput
+25.02.2011 09:01:34 Command: request 
+INFO: noinput
+25.02.2011 09:01:44 Command: request 
+INFO: noinput
+25.02.2011 09:01:54 Command: request 
+INFO: noinput
+25.02.2011 09:02:04 Command: request 
+INFO: noinput
+25.02.2011 09:02:14 Command: request 
+INFO: noinput
+25.02.2011 09:02:24 Command: request 
+INFO: noinput
+25.02.2011 09:02:34 Command: request 
+INFO: noinput
+25.02.2011 09:02:44 Command: request 
+INFO: noinput
+25.02.2011 09:02:54 Command: request 
+INFO: noinput
+25.02.2011 09:03:04 Command: request 
+INFO: noinput
+25.02.2011 09:03:15 Command: request 
+INFO: noinput
+25.02.2011 09:03:25 Command: request 
+INFO: noinput
+25.02.2011 09:03:35 Command: request 
+INFO: noinput
+25.02.2011 09:03:45 Command: request 
+INFO: noinput
+25.02.2011 09:03:55 Command: request 
+INFO: noinput
+25.02.2011 09:04:05 Command: request 
+INFO: noinput
+25.02.2011 09:04:15 Command: request 
+INFO: noinput
+25.02.2011 09:04:25 Command: request 
+INFO: noinput
+25.02.2011 09:04:35 Command: request 
+INFO: noinput
+25.02.2011 09:04:45 Command: request 
+INFO: noinput
+25.02.2011 09:04:55 Command: request 
+INFO: noinput
+25.02.2011 09:05:05 Command: request 
+INFO: noinput
+25.02.2011 09:05:15 Command: request 
+INFO: noinput
+25.02.2011 09:05:25 Command: request 
+INFO: noinput
+25.02.2011 09:05:35 Command: request 
+INFO: noinput
+25.02.2011 09:05:46 Command: request 
+INFO: noinput
+25.02.2011 09:05:56 Command: request 
+INFO: noinput
+25.02.2011 09:06:06 Command: request 
+INFO: noinput
+25.02.2011 09:06:16 Command: request 
+INFO: noinput
+25.02.2011 09:06:26 Command: request 
+INFO: noinput
+25.02.2011 09:06:36 Command: request 
+INFO: noinput
+25.02.2011 09:06:46 Command: request 
+INFO: noinput
+25.02.2011 09:06:56 Command: request 
+INFO: noinput
+25.02.2011 09:07:06 Command: request 
+INFO: noinput
+25.02.2011 09:07:16 Command: request 
+INFO: noinput
+25.02.2011 09:07:26 Command: request 
+INFO: noinput
+25.02.2011 09:07:36 Command: request 
+INFO: noinput
+25.02.2011 09:07:46 Command: request 
+INFO: noinput
+25.02.2011 09:07:56 Command: request 
+INFO: noinput
+25.02.2011 09:08:06 Command: request 
+INFO: noinput
+25.02.2011 09:08:16 Command: request 
+INFO: noinput
+25.02.2011 09:08:26 Command: request 
+INFO: noinput
+25.02.2011 09:08:37 Command: request 
+INFO: noinput
+25.02.2011 09:08:47 Command: request 
+INFO: noinput
+25.02.2011 09:08:57 Command: request 
+INFO: noinput
+25.02.2011 09:09:07 Command: request 
+INFO: noinput
+25.02.2011 09:09:17 Command: request 
+INFO: noinput
+25.02.2011 09:09:27 Command: request 
+INFO: noinput
+25.02.2011 09:09:37 Command: request 
+INFO: noinput
+25.02.2011 09:09:47 Command: request 
+INFO: noinput
+25.02.2011 09:09:57 Command: request 
+INFO: noinput
+25.02.2011 09:10:07 Command: request 
+INFO: noinput
+25.02.2011 09:10:17 Command: request 
+INFO: noinput
+25.02.2011 09:10:27 Command: request 
+INFO: noinput
+25.02.2011 09:10:37 Command: request 
+INFO: noinput
+25.02.2011 09:10:47 Command: request 
+INFO: noinput
+25.02.2011 09:10:57 Command: request 
+INFO: noinput
+25.02.2011 09:11:07 Command: request 
+INFO: noinput
+25.02.2011 09:11:17 Command: request 
+INFO: noinput
+25.02.2011 09:11:27 Command: request 
+INFO: noinput
+25.02.2011 09:11:38 Command: request 
+INFO: noinput
+25.02.2011 09:11:48 Command: request 
+INFO: noinput
+25.02.2011 09:11:58 Command: request 
+INFO: noinput
+25.02.2011 09:12:08 Command: request 
+INFO: noinput
+25.02.2011 09:12:18 Command: request 
+INFO: noinput
+25.02.2011 09:12:28 Command: request 
+INFO: noinput
+25.02.2011 09:12:38 Command: request 
+INFO: noinput
+25.02.2011 09:12:48 Command: request 
+INFO: noinput
+25.02.2011 09:12:58 Command: request 
+INFO: noinput
+25.02.2011 09:13:08 Command: request 
+INFO: noinput
+25.02.2011 09:13:18 Command: request 
+INFO: noinput
+25.02.2011 09:13:28 Command: request 
+INFO: noinput
+25.02.2011 09:13:38 Command: request 
+INFO: noinput
+25.02.2011 09:13:48 Command: request 
+INFO: noinput
+25.02.2011 09:13:58 Command: request 
+INFO: noinput
+25.02.2011 09:14:08 Command: request 
+INFO: noinput
+25.02.2011 09:14:18 Command: request 
+INFO: noinput
+25.02.2011 09:14:29 Command: request 
+INFO: noinput
+25.02.2011 09:14:39 Command: request 
+INFO: noinput
+25.02.2011 09:14:49 Command: request 
+INFO: noinput
+25.02.2011 09:14:59 Command: request 
+INFO: noinput
+25.02.2011 09:15:09 Command: request 
+INFO: noinput
+25.02.2011 09:15:19 Command: request 
+INFO: noinput
+25.02.2011 09:15:29 Command: request 
+INFO: noinput
+25.02.2011 09:15:39 Command: request 
+INFO: noinput
+25.02.2011 09:15:49 Command: request 
+INFO: noinput
+25.02.2011 09:15:59 Command: request 
+INFO: noinput
+25.02.2011 09:16:09 Command: request 
+INFO: noinput
+25.02.2011 09:16:19 Command: request 
+INFO: noinput
+25.02.2011 09:16:29 Command: request 
+INFO: noinput
+25.02.2011 09:16:39 Command: request 
+INFO: noinput
+25.02.2011 09:16:49 Command: request 
+INFO: noinput
+25.02.2011 09:16:59 Command: request 
+INFO: noinput
+25.02.2011 09:17:09 Command: request 
+INFO: noinput
+25.02.2011 09:17:20 Command: request 
+INFO: noinput
+25.02.2011 09:17:30 Command: request 
+INFO: noinput
+25.02.2011 09:17:40 Command: request 
+INFO: noinput
+25.02.2011 09:17:50 Command: request 
+INFO: noinput
+25.02.2011 09:18:00 Command: request 
+INFO: noinput
+25.02.2011 09:18:10 Command: request 
+INFO: noinput
+25.02.2011 09:18:20 Command: request 
+INFO: noinput
+25.02.2011 09:18:30 Command: request 
+INFO: noinput
+25.02.2011 09:18:40 Command: request 
+INFO: noinput
+25.02.2011 09:18:50 Command: request 
+INFO: noinput
+25.02.2011 09:19:00 Command: request 
+INFO: noinput
+25.02.2011 09:19:10 Command: request 
+INFO: noinput
+25.02.2011 09:19:20 Command: request 
+INFO: noinput
+25.02.2011 09:19:30 Command: request 
+INFO: noinput
+25.02.2011 09:19:40 Command: request 
+INFO: noinput
+25.02.2011 09:19:50 Command: request 
+INFO: noinput
+25.02.2011 09:20:00 Command: request 
+INFO: noinput
+25.02.2011 09:20:10 Command: request 
+INFO: noinput
+25.02.2011 09:20:20 Command: request 
+INFO: noinput
+25.02.2011 09:20:30 Command: request 
+INFO: noinput
+25.02.2011 09:20:41 Command: request 
+INFO: noinput
+25.02.2011 09:20:51 Command: request 
+INFO: noinput
+25.02.2011 09:21:01 Command: request 
+INFO: noinput
+25.02.2011 09:21:11 Command: request 
+INFO: noinput
+25.02.2011 09:21:21 Command: request 
+INFO: noinput
+25.02.2011 09:21:31 Command: request 
+INFO: noinput
+25.02.2011 09:21:41 Command: request 
+INFO: noinput
+25.02.2011 09:21:51 Command: request 
+INFO: noinput
+25.02.2011 09:22:01 Command: request 
+INFO: noinput
+25.02.2011 09:22:11 Command: request 
+INFO: noinput
+25.02.2011 09:22:21 Command: request 
+INFO: noinput
+25.02.2011 09:22:31 Command: request 
+INFO: noinput
+25.02.2011 09:22:41 Command: request 
+INFO: noinput
+25.02.2011 09:22:51 Command: request 
+INFO: noinput
+25.02.2011 09:23:01 Command: request 
+INFO: noinput
+25.02.2011 09:23:11 Command: request 
+INFO: noinput
+25.02.2011 09:23:21 Command: request 
+INFO: noinput
+25.02.2011 09:23:31 Command: request 
+INFO: noinput
+25.02.2011 09:23:41 Command: request 
+INFO: noinput
+25.02.2011 09:23:52 Command: request 
+INFO: noinput
+25.02.2011 09:24:02 Command: request 
+INFO: noinput
+25.02.2011 09:24:12 Command: request 
+INFO: noinput
+25.02.2011 09:24:22 Command: request 
+INFO: noinput
+25.02.2011 09:24:32 Command: request 
+INFO: noinput
+25.02.2011 09:24:42 Command: request 
+INFO: noinput
+25.02.2011 09:24:52 Command: request 
+INFO: noinput
+25.02.2011 09:25:02 Command: request 
+INFO: noinput
+25.02.2011 09:25:12 Command: request 
+INFO: noinput
+25.02.2011 09:25:22 Command: request 
+INFO: noinput
+25.02.2011 09:25:32 Command: request 
+INFO: noinput
+25.02.2011 09:25:42 Command: request 
+INFO: noinput
+25.02.2011 09:25:52 Command: request 
+INFO: noinput
+25.02.2011 09:26:02 Command: request 
+INFO: noinput
+25.02.2011 09:26:12 Command: request 
+INFO: noinput
+25.02.2011 09:26:22 Command: request 
+INFO: noinput
+25.02.2011 09:26:32 Command: request 
+INFO: noinput
+25.02.2011 09:26:43 Command: request 
+INFO: noinput
+25.02.2011 09:26:53 Command: request 
+INFO: noinput
+25.02.2011 09:27:03 Command: request 
+INFO: noinput
+25.02.2011 09:27:13 Command: request 
+INFO: noinput
+25.02.2011 09:27:23 Command: request 
+INFO: noinput
+25.02.2011 09:27:33 Command: request 
+INFO: noinput
+25.02.2011 09:27:43 Command: request 
+INFO: noinput
+25.02.2011 09:27:53 Command: request 
+INFO: noinput
+25.02.2011 09:28:03 Command: request 
+INFO: noinput
+25.02.2011 09:28:13 Command: request 
+INFO: noinput
+25.02.2011 09:28:23 Command: request 
+INFO: noinput
+25.02.2011 09:28:33 Command: request 
+INFO: noinput
+25.02.2011 09:28:43 Command: request 
+INFO: noinput
+25.02.2011 09:28:53 Command: request 
+INFO: noinput
+25.02.2011 09:29:03 Command: request 
+INFO: noinput
+25.02.2011 09:29:13 Command: request 
+INFO: noinput
+25.02.2011 09:29:23 Command: request 
+INFO: noinput
+25.02.2011 09:29:33 Command: request 
+INFO: noinput
+25.02.2011 09:29:44 Command: request 
+INFO: noinput
+25.02.2011 09:29:54 Command: request 
+INFO: noinput
+25.02.2011 09:30:04 Command: request 
+INFO: noinput
+25.02.2011 09:30:14 Command: request 
+INFO: noinput
+25.02.2011 09:30:24 Command: request 
+INFO: noinput
+25.02.2011 09:30:34 Command: request 
+INFO: noinput
+25.02.2011 09:30:44 Command: request 
+INFO: noinput
+25.02.2011 09:30:54 Command: request 
+INFO: noinput
+25.02.2011 09:31:04 Command: request 
+INFO: noinput
+25.02.2011 09:31:14 Command: request 
+INFO: noinput
+25.02.2011 09:31:24 Command: request 
+INFO: noinput
+25.02.2011 09:31:34 Command: request 
+INFO: noinput
+25.02.2011 09:31:44 Command: request 
+INFO: noinput
+25.02.2011 09:31:54 Command: request 
+INFO: noinput
+25.02.2011 09:32:04 Command: request 
+INFO: noinput
+25.02.2011 09:32:15 Command: request 
+INFO: noinput
+25.02.2011 09:32:25 Command: request 
+INFO: noinput
+25.02.2011 09:32:35 Command: request 
+INFO: noinput
+25.02.2011 09:32:45 Command: request 
+INFO: noinput
+25.02.2011 09:32:55 Command: request 
+INFO: noinput
+25.02.2011 09:33:05 Command: request 
+INFO: noinput
+25.02.2011 09:33:15 Command: request 
+INFO: noinput
+25.02.2011 09:33:25 Command: request 
+INFO: noinput
+25.02.2011 09:33:35 Command: request 
+INFO: noinput
+25.02.2011 09:33:45 Command: request 
+INFO: noinput
+25.02.2011 09:33:55 Command: request 
+INFO: noinput
+25.02.2011 09:34:05 Command: request 
+INFO: noinput
+25.02.2011 09:34:15 Command: request 
+INFO: noinput
+25.02.2011 09:34:25 Command: request 
+INFO: noinput
+25.02.2011 09:34:35 Command: request 
+INFO: noinput
+25.02.2011 09:34:45 Command: request 
+INFO: noinput
+25.02.2011 09:34:55 Command: request 
+INFO: noinput
+25.02.2011 09:35:06 Command: request 
+INFO: noinput
+25.02.2011 09:35:16 Command: request 
+INFO: noinput
+25.02.2011 09:35:26 Command: request 
+INFO: noinput
+25.02.2011 09:35:36 Command: request 
+INFO: noinput
+25.02.2011 09:35:46 Command: request 
+INFO: noinput
+25.02.2011 09:35:56 Command: request 
+INFO: noinput
+25.02.2011 09:36:06 Command: request 
+INFO: noinput
+25.02.2011 09:36:16 Command: request 
+INFO: noinput
+25.02.2011 09:36:26 Command: request 
+INFO: noinput
+25.02.2011 09:36:36 Command: request 
+INFO: noinput
+25.02.2011 09:36:46 Command: request 
+INFO: noinput
+25.02.2011 09:36:56 Command: request 
+INFO: noinput
+25.02.2011 09:37:06 Command: request 
+INFO: noinput
+25.02.2011 09:37:16 Command: request 
+INFO: noinput
+25.02.2011 09:37:26 Command: request 
+INFO: noinput
+25.02.2011 09:37:36 Command: request 
+INFO: noinput
+25.02.2011 09:37:46 Command: request 
+INFO: noinput
+25.02.2011 09:37:57 Command: request 
+INFO: noinput
+25.02.2011 09:38:07 Command: request 
+INFO: noinput
+25.02.2011 09:38:17 Command: request 
+INFO: noinput
+25.02.2011 09:38:27 Command: request 
+INFO: noinput
+25.02.2011 09:38:37 Command: request 
+INFO: noinput
+25.02.2011 09:38:47 Command: request 
+INFO: noinput
+25.02.2011 09:38:57 Command: request 
+INFO: noinput
+25.02.2011 09:39:07 Command: request 
+INFO: noinput
+25.02.2011 09:39:17 Command: request 
+INFO: noinput
+25.02.2011 09:39:27 Command: request 
+INFO: noinput
+25.02.2011 09:39:37 Command: request 
+INFO: noinput
+25.02.2011 09:39:47 Command: request 
+INFO: noinput
+25.02.2011 09:39:57 Command: request 
+INFO: noinput
+25.02.2011 09:40:07 Command: request 
+INFO: noinput
+25.02.2011 09:40:17 Command: request 
+INFO: noinput
+25.02.2011 09:40:27 Command: request 
+INFO: noinput
+25.02.2011 09:40:37 Command: request 
+INFO: noinput
+25.02.2011 09:40:47 Command: request 
+INFO: noinput
+25.02.2011 09:40:58 Command: request 
+INFO: noinput
+25.02.2011 09:41:08 Command: request 
+INFO: noinput
+25.02.2011 09:41:18 Command: request 
+INFO: noinput
+25.02.2011 09:41:28 Command: request 
+INFO: noinput
+25.02.2011 09:41:38 Command: request 
+INFO: noinput
+25.02.2011 09:41:48 Command: request 
+INFO: noinput
+25.02.2011 09:41:58 Command: request 
+INFO: noinput
+25.02.2011 09:42:08 Command: request 
+INFO: noinput
+25.02.2011 09:42:18 Command: request 
+INFO: noinput
+25.02.2011 09:42:28 Command: request 
+INFO: noinput
+25.02.2011 09:42:38 Command: request 
+INFO: noinput
+25.02.2011 09:42:48 Command: request 
+INFO: noinput
+25.02.2011 09:42:58 Command: request 
+INFO: noinput
+25.02.2011 09:43:08 Command: request 
+INFO: noinput
+25.02.2011 09:43:18 Command: request 
+INFO: noinput
+25.02.2011 09:43:28 Command: request 
+INFO: noinput
+25.02.2011 09:43:38 Command: request 
+INFO: noinput
+25.02.2011 09:43:48 Command: request 
+INFO: noinput
+25.02.2011 09:43:59 Command: request 
+INFO: noinput
+25.02.2011 09:44:09 Command: request 
+INFO: noinput
+25.02.2011 09:44:19 Command: request 
+INFO: noinput
+25.02.2011 09:44:29 Command: request 
+INFO: noinput
+25.02.2011 09:44:39 Command: request 
+INFO: noinput
+25.02.2011 09:44:49 Command: request 
+INFO: noinput
+25.02.2011 09:44:59 Command: request 
+INFO: noinput
+25.02.2011 09:45:09 Command: request 
+INFO: noinput
+25.02.2011 09:45:19 Command: request 
+INFO: noinput
+25.02.2011 09:45:29 Command: request 
+INFO: noinput
+25.02.2011 09:45:39 Command: request 
+INFO: noinput
+25.02.2011 09:45:49 Command: request 
+INFO: noinput
+25.02.2011 09:45:59 Command: request 
+INFO: noinput
+25.02.2011 09:46:09 Command: request 
+INFO: noinput
+25.02.2011 09:46:19 Command: request 
+INFO: noinput
+25.02.2011 09:46:30 Command: request 
+INFO: noinput
+25.02.2011 09:46:40 Command: request 
+INFO: noinput
+25.02.2011 09:46:50 Command: request 
+INFO: noinput
+25.02.2011 09:47:00 Command: request 
+INFO: noinput
+25.02.2011 09:47:10 Command: request 
+INFO: noinput
+25.02.2011 09:47:20 Command: request 
+INFO: noinput
+25.02.2011 09:47:30 Command: request 
+INFO: noinput
+25.02.2011 09:47:40 Command: request 
+INFO: noinput
+25.02.2011 09:47:50 Command: request 
+INFO: noinput
+25.02.2011 09:48:00 Command: request 
+INFO: noinput
+25.02.2011 09:48:10 Command: request 
+INFO: noinput
+25.02.2011 09:48:20 Command: request 
+INFO: noinput
+25.02.2011 09:48:30 Command: request 
+INFO: noinput
+25.02.2011 09:48:40 Command: request 
+INFO: noinput
+25.02.2011 09:48:50 Command: request 
+INFO: noinput
+25.02.2011 09:49:00 Command: request 
+INFO: noinput
+25.02.2011 09:49:10 Command: request 
+INFO: noinput
+25.02.2011 09:49:21 Command: request 
+INFO: noinput
+25.02.2011 09:49:31 Command: request 
+INFO: noinput
+25.02.2011 09:49:41 Command: request 
+INFO: noinput
+25.02.2011 09:49:51 Command: request 
+INFO: noinput
+25.02.2011 09:50:01 Command: request 
+INFO: noinput
+25.02.2011 09:50:11 Command: request 
+INFO: noinput
+25.02.2011 09:50:21 Command: request 
+INFO: noinput
+25.02.2011 09:50:31 Command: request 
+INFO: noinput
+25.02.2011 09:50:41 Command: request 
+INFO: noinput
+25.02.2011 09:50:51 Command: request 
+INFO: noinput
+25.02.2011 09:51:01 Command: request 
+INFO: noinput
+25.02.2011 09:51:11 Command: request 
+INFO: noinput
+25.02.2011 09:51:21 Command: request 
+INFO: noinput
+25.02.2011 09:51:31 Command: request 
+INFO: noinput
+25.02.2011 09:51:41 Command: request 
+INFO: noinput
+25.02.2011 09:51:51 Command: request 
+INFO: noinput
+25.02.2011 09:52:01 Command: request 
+INFO: noinput
+25.02.2011 09:52:11 Command: request 
+INFO: noinput
+25.02.2011 09:52:22 Command: request 
+INFO: noinput
+25.02.2011 09:52:32 Command: request 
+INFO: noinput
+25.02.2011 09:52:42 Command: request 
+INFO: noinput
+25.02.2011 09:52:52 Command: request 
+INFO: noinput
+25.02.2011 09:53:02 Command: request 
+INFO: noinput
+25.02.2011 09:53:12 Command: request 
+INFO: noinput
+25.02.2011 09:53:22 Command: request 
+INFO: noinput
+25.02.2011 09:53:32 Command: request 
+INFO: noinput
+25.02.2011 09:53:42 Command: request 
+INFO: noinput
+25.02.2011 09:53:52 Command: request 
+INFO: noinput
+25.02.2011 09:54:02 Command: request 
+INFO: noinput
+25.02.2011 09:54:12 Command: request 
+INFO: noinput
+25.02.2011 09:54:22 Command: request 
+INFO: noinput
+25.02.2011 09:54:32 Command: request 
+INFO: noinput
+25.02.2011 09:54:42 Command: request 
+INFO: noinput
+25.02.2011 09:54:52 Command: request 
+INFO: noinput
+25.02.2011 09:55:02 Command: request 
+INFO: noinput
+25.02.2011 09:55:12 Command: request 
+INFO: noinput
+25.02.2011 09:55:23 Command: request 
+INFO: noinput
+25.02.2011 09:55:33 Command: request 
+INFO: noinput
+25.02.2011 09:55:43 Command: request 
+INFO: noinput
+25.02.2011 09:55:53 Command: request 
+INFO: noinput
+25.02.2011 09:56:03 Command: request 
+INFO: noinput
+25.02.2011 09:56:13 Command: request 
+INFO: noinput
+25.02.2011 09:56:23 Command: request 
+INFO: noinput
+25.02.2011 09:56:33 Command: request 
+INFO: noinput
+25.02.2011 09:56:43 Command: request 
+INFO: noinput
+25.02.2011 09:56:53 Command: request 
+INFO: noinput
+25.02.2011 09:57:03 Command: request 
+INFO: noinput
+25.02.2011 09:57:13 Command: request 
+INFO: noinput
+25.02.2011 09:57:23 Command: request 
+INFO: noinput
+25.02.2011 09:57:33 Command: request 
+INFO: noinput
+25.02.2011 09:57:43 Command: request 
+INFO: noinput
+25.02.2011 09:57:53 Command: request 
+INFO: noinput
+25.02.2011 09:58:03 Command: request 
+INFO: noinput
+25.02.2011 09:58:14 Command: request 
+INFO: noinput
+25.02.2011 09:58:24 Command: request 
+INFO: noinput
+25.02.2011 09:58:34 Command: request 
+INFO: noinput
+25.02.2011 09:58:44 Command: request 
+INFO: noinput
+25.02.2011 09:58:54 Command: request 
+INFO: noinput
+25.02.2011 09:59:04 Command: request 
+INFO: noinput
+25.02.2011 09:59:14 Command: request 
+INFO: noinput
+25.02.2011 09:59:24 Command: request 
+INFO: noinput
+25.02.2011 09:59:34 Command: request 
+INFO: noinput
+25.02.2011 10:18:48 Command: request 
+INFO: error.badfetch.http.404
+25.02.2011 10:18:49 Command: reset 
+INFO: OK
+25.02.2011 10:18:51 Command: request 
+INFO: OK
+25.02.2011 10:18:54 Command: request 
+INFO: OK
+25.02.2011 10:25:33 Command: reset 
+INFO: OK
+25.02.2011 10:25:34 Command: request 
+INFO: OK
+25.02.2011 10:25:41 Command: work 
+INFO: Agenda: intro_agenda | Move: null | Speak: null
+25.02.2011 10:25:50 Command: work 
+INFO: Agenda: say_go_agenda | Move: reminder_a1n1d_what_are_my_options_mv | Speak: null
+25.02.2011 10:26:02 Command: work 
+INFO: Agenda: what_country_agenda | Move: hotel_a1n1d_america_mv | Speak: null
+25.02.2011 10:26:03 Command: work 
+INFO: Agenda: what_town_america_agenda | Move: hotel_a1n1d_new_york_mv | Speak: null
+25.02.2011 10:26:04 Command: work 
+INFO: Agenda: there_are_hotels_agenda | Move: null | Speak: null
+25.02.2011 10:26:07 Command: work 
+INFO: Agenda: what_hotel_newyork_agenda | Move: hotel_a1n1d_newyork_hilton_gardens_mv | Speak: null
+25.02.2011 10:26:09 Command: work 
+INFO: Agenda: what_day_to_stay_agenda | Move: hotel_a1n1d_seventeenth_mv | Speak: null
+25.02.2011 10:26:10 Command: work 
+INFO: Agenda: how_long_seventeenth_agenda | Move: hotel_a1n1d_two_weeks_seventeenth_mv | Speak: null
+25.02.2011 10:26:12 Command: work 
+INFO: Agenda: board_agenda | Move: hotel_a1n1d_full_board_mv | Speak: null
+25.02.2011 10:26:15 Command: work 
+INFO: Agenda: correct_agenda | Move: hotel_a1n1d_yes_mv | Speak: null
+25.02.2011 10:26:20 Command: reset 
+INFO: OK
+25.02.2011 10:26:22 Command: request 
+INFO: OK
+25.02.2011 10:30:50 Command: reset 
+INFO: OK
+25.02.2011 10:30:51 Command: request 
+INFO: OK
+25.02.2011 10:30:52 Command: request 
+INFO: OK
+25.02.2011 10:30:53 Command: request 
+INFO: OK
+25.02.2011 10:31:07 Command: request 
+INFO: OK
+25.02.2011 10:31:25 Command: request 
+INFO: OK
+25.02.2011 10:31:25 Command: work 
+INFO: Agenda: intro_agenda | Move: null | Speak: null
+25.02.2011 10:31:43 Command: request 
+INFO: OK
+25.02.2011 10:31:53 Command: reset 
+INFO: OK
+25.02.2011 10:31:54 Command: request 
+INFO: OK
+25.02.2011 10:31:57 Command: request 
+INFO: OK
+25.02.2011 10:33:25 Command: request 
+INFO: OK
+25.02.2011 10:38:32 Command: request 
+INFO: OK
+25.02.2011 10:41:39 Command: request 
+INFO: OK
+25.02.2011 10:41:41 Command: request 
+INFO: OK
+25.02.2011 10:41:42 Command: request 
+INFO: OK
+25.02.2011 10:41:46 Command: request 
+INFO: OK
+25.02.2011 10:42:48 Command: request 
+INFO: OK
+25.02.2011 10:42:48 Command: work 
+INFO: Agenda: intro_agenda | Move: null | Speak: null
+25.02.2011 10:55:05 Command: reset 
+INFO: OK
+25.02.2011 10:55:06 Command: request 
+INFO: OK
+25.02.2011 10:55:08 Command: request 
+INFO: OK
+25.02.2011 10:56:15 Command: reset 
+INFO: OK
+25.02.2011 10:56:17 Command: request 
+INFO: OK
+25.02.2011 10:56:18 Command: work 
+INFO: Agenda: intro_agenda | Move: null | Speak: null
+25.02.2011 10:56:28 Command: work 
+INFO: Agenda: what_country_agenda | Move: hotel_a1n1d_america_mv | Speak: null
+25.02.2011 10:56:29 Command: work 
+INFO: Agenda: what_town_america_agenda | Move: hotel_a1n1d_chicago_mv | Speak: null
+25.02.2011 10:56:30 Command: work 
+INFO: Agenda: there_are_hotels_agenda | Move: null | Speak: null
+25.02.2011 10:56:31 Command: work 
+INFO: Agenda: what_hotel_chicago_agenda | Move: hotel_a1n1d_chicago_james_chic_mv | Speak: null
+25.02.2011 10:56:32 Command: work 
+INFO: Agenda: what_day_to_stay_agenda | Move: hotel_a1n1d_seventeenth_mv | Speak: null
+25.02.2011 10:56:33 Command: work 
+INFO: Agenda: how_long_seventeenth_agenda | Move: hotel_a1n1d_one_week_seventeenth_mv | Speak: null
+25.02.2011 10:56:34 Command: work 
+INFO: Agenda: board_agenda | Move: hotel_a1n1d_full_board_mv | Speak: null
+25.02.2011 10:56:36 Command: work 
+INFO: Agenda: correct_agenda | Move: hotel_a1n1d_yes_mv | Speak: null
+25.02.2011 10:56:38 Command: work 
+INFO: Agenda: flight_as_hotel_agenda | Move: flug_a1n1d_hotel_yes_mv | Speak: null
+25.02.2011 10:56:39 Command: work 
+INFO: Agenda: from_which_airport_hotel | Move: flug_a1n1d_stuttgart_hotel_mv | Speak: null
+25.02.2011 10:56:40 Command: work 
+INFO: Agenda: start_time_hotel_agenda | Move: flug_a1n1d_start_eight_hotel_mv | Speak: null
+25.02.2011 10:56:41 Command: work 
+INFO: Agenda: return_time_agenda | Move: flug_a1n1d_return_at_eight_mv | Speak: null
+25.02.2011 10:56:45 Command: work 
+INFO: Agenda: correct_agenda | Move: flug_a1n1d_yes_mv | Speak: null
+25.02.2011 10:56:47 Command: work 
+INFO: Agenda: holger_birthday_agenda | Move: null | Speak: null
+25.02.2011 10:56:48 Command: work 
+INFO: Agenda: heavy_rain_agenda | Move: null | Speak: null
+25.02.2011 10:56:49 Command: work 
+INFO: Agenda: movie_agenda | Move: null | Speak: null
+25.02.2011 10:57:14 Command: reset 
+INFO: OK
+25.02.2011 11:01:39 Command: reset 
+INFO: OK
+25.02.2011 11:01:40 Command: request 
+INFO: OK
+25.02.2011 11:01:41 Command: work 
+INFO: Agenda: intro_agenda | Move: null | Speak: null
+25.02.2011 11:01:43 Command: work 
+INFO: Agenda: short_reminder_agenda | Move: null | Speak: null
+25.02.2011 11:01:44 Command: work 
+INFO: Agenda: long_reminder_agenda | Move: null | Speak: null
+25.02.2011 11:01:45 Command: work 
+INFO: Agenda: sub_task | Move: null | Speak: null
+25.02.2011 11:03:46 Command: reset 
+INFO: OK
+25.02.2011 11:03:46 Command: request 
+INFO: OK
+25.02.2011 11:03:48 Command: work 
+INFO: Agenda: intro_agenda | Move: null | Speak: null
+25.02.2011 11:03:50 Command: work 
+INFO: Agenda: what_country_agenda | Move: hotel_a1n1d_america_mv | Speak: null
+25.02.2011 11:03:51 Command: work 
+INFO: Agenda: what_town_america_agenda | Move: hotel_a1n1d_new_york_mv | Speak: null
+25.02.2011 11:03:53 Command: work 
+INFO: Agenda: there_are_hotels_agenda | Move: null | Speak: null
+25.02.2011 11:03:54 Command: work 
+INFO: Agenda: short_reminder_agenda | Move: null | Speak: null
+25.02.2011 11:03:57 Command: work 
+INFO: Agenda: long_reminder_agenda | Move: null | Speak: null
+25.02.2011 11:03:57 Command: work 
+INFO: Agenda: sub_task | Move: null | Speak: null
+25.02.2011 11:03:59 Command: reset 
+INFO: OK
+25.02.2011 11:04:00 Command: request 
+INFO: OK
+25.02.2011 11:04:01 Command: work 
+INFO: Agenda: intro_agenda | Move: null | Speak: null
+25.02.2011 11:04:03 Command: work 
+INFO: Agenda: what_country_agenda | Move: hotel_a1n1d_america_mv | Speak: null
+25.02.2011 11:04:06 Command: work 
+INFO: Agenda: what_town_america_agenda | Move: hotel_a1n1d_new_york_mv | Speak: null
+25.02.2011 11:04:11 Command: work 
+INFO: Agenda: there_are_hotels_agenda | Move: null | Speak: null
+25.02.2011 11:04:14 Command: work 
+INFO: Agenda: short_reminder_agenda | Move: null | Speak: null
+25.02.2011 11:04:17 Command: work 
+INFO: Agenda: long_reminder_agenda | Move: null | Speak: null
+25.02.2011 11:04:17 Command: work 
+INFO: Agenda: sub_task | Move: null | Speak: null
+25.02.2011 11:04:42 Command: work 
+INFO: Agenda: what_hotel_newyork_agenda | Move: hotel_a1n1d_newyork_sofitel_mv | Speak: null
+25.02.2011 11:04:48 Command: reset 
+INFO: OK
+25.02.2011 11:05:42 Command: reset 
+INFO: OK
+25.02.2011 11:05:42 Command: request 
+INFO: OK
+25.02.2011 11:05:43 Command: work 
+INFO: Agenda: intro_agenda | Move: null | Speak: null
+25.02.2011 11:05:45 Command: work 
+INFO: Agenda: what_country_agenda | Move: hotel_a1n1d_england_mv | Speak: null
+25.02.2011 11:05:47 Command: work 
+INFO: Agenda: what_town_england_agenda | Move: hotel_a1n1d_london_mv | Speak: null
+25.02.2011 11:05:48 Command: work 
+INFO: Agenda: there_are_hotels_agenda | Move: null | Speak: null
+25.02.2011 11:05:49 Command: work 
+INFO: Agenda: short_reminder_agenda | Move: null | Speak: null
+25.02.2011 11:05:50 Command: work 
+INFO: Agenda: long_reminder_agenda | Move: null | Speak: null
+25.02.2011 11:05:50 Command: work 
+INFO: Agenda: sub_task | Move: null | Speak: null
+25.02.2011 11:07:53 Command: reset 
+INFO: OK
+25.02.2011 11:07:53 Command: request 
+INFO: OK
+25.02.2011 11:07:54 Command: work 
+INFO: Agenda: intro_agenda | Move: null | Speak: null
+25.02.2011 11:07:56 Command: work 
+INFO: Agenda: what_country_agenda | Move: hotel_a1n1d_america_mv | Speak: null
+25.02.2011 11:07:58 Command: work 
+INFO: Agenda: what_town_america_agenda | Move: hotel_a1n1d_new_york_mv | Speak: null
+25.02.2011 11:08:01 Command: work 
+INFO: Agenda: there_are_hotels_agenda | Move: null | Speak: null
+25.02.2011 11:08:02 Command: work 
+INFO: Agenda: short_reminder_agenda | Move: null | Speak: null
+25.02.2011 11:08:03 Command: work 
+INFO: Agenda: long_reminder_agenda | Move: null | Speak: null
+25.02.2011 11:08:03 Command: work 
+INFO: Agenda: sub_task | Move: null | Speak: null
+25.02.2011 11:08:07 Command: request 
+INFO: OK
+25.02.2011 11:08:08 Command: reset 
+INFO: OK
+25.02.2011 11:08:08 Command: request 
+INFO: OK
+25.02.2011 11:08:09 Command: work 
+INFO: Agenda: intro_agenda | Move: null | Speak: null
+25.02.2011 11:08:17 Command: work 
+INFO: Agenda: what_country_agenda | Move: hotel_a1n1d_america_mv | Speak: null
+25.02.2011 11:08:20 Command: work 
+INFO: Agenda: what_town_america_agenda | Move: hotel_a1n1d_losangeles_mv | Speak: null
+25.02.2011 11:08:39 Command: request 
+INFO: OK
+25.02.2011 11:08:40 Command: reset 
+INFO: OK
+25.02.2011 11:08:40 Command: request 
+INFO: OK
+25.02.2011 11:08:41 Command: work 
+INFO: Agenda: intro_agenda | Move: null | Speak: null
+25.02.2011 11:08:45 Command: work 
+INFO: Agenda: what_country_agenda | Move: hotel_a1n1d_america_mv | Speak: null
+25.02.2011 11:08:46 Command: work 
+INFO: Agenda: what_town_america_agenda | Move: hotel_a1n1d_new_york_mv | Speak: null
+25.02.2011 11:08:53 Command: reset 
+INFO: OK
+25.02.2011 11:08:54 Command: request 
+INFO: OK
+25.02.2011 11:08:55 Command: work 
+INFO: Agenda: intro_agenda | Move: null | Speak: null
+25.02.2011 11:08:56 Command: work 
+INFO: Agenda: what_country_agenda | Move: hotel_a1n1d_america_mv | Speak: null
+25.02.2011 11:09:06 Command: work 
+INFO: Agenda: what_town_america_agenda | Move: hotel_a1n1d_losangeles_mv | Speak: null
+25.02.2011 11:10:15 Command: reset 
+INFO: OK
+25.02.2011 11:10:15 Command: request 
+INFO: OK
+25.02.2011 11:10:18 Command: work 
+INFO: Agenda: intro_agenda | Move: null | Speak: null
+25.02.2011 11:10:19 Command: work 
+INFO: Agenda: what_country_agenda | Move: hotel_a1n1d_america_mv | Speak: null
+25.02.2011 11:10:21 Command: work 
+INFO: Agenda: short_reminder_agenda | Move: null | Speak: null
+25.02.2011 11:10:22 Command: work 
+INFO: Agenda: long_reminder_agenda | Move: null | Speak: null
+25.02.2011 11:10:33 Command: reset 
+INFO: OK
+25.02.2011 11:10:34 Command: request 
+INFO: OK
+25.02.2011 11:10:35 Command: work 
+INFO: Agenda: intro_agenda | Move: null | Speak: null
+25.02.2011 11:10:37 Command: work 
+INFO: Agenda: what_country_agenda | Move: hotel_a1n1d_egypt_mv | Speak: null
+25.02.2011 11:10:44 Command: work 
+INFO: Agenda: short_reminder_agenda | Move: null | Speak: null
+25.02.2011 11:10:45 Command: work 
+INFO: Agenda: long_reminder_agenda | Move: null | Speak: null
+25.02.2011 11:11:15 Command: work 
+INFO: Agenda: what_town_egypt_agenda | Move: hotel_a1n1d_abusimbel_mv | Speak: null
+25.02.2011 11:13:09 Command: reset 
+INFO: OK
+25.02.2011 11:13:10 Command: request 
+INFO: OK
+25.02.2011 11:13:11 Command: work 
+INFO: Agenda: intro_agenda | Move: null | Speak: null
+25.02.2011 11:13:13 Command: work 
+INFO: Agenda: what_country_agenda | Move: hotel_a1n1d_america_mv | Speak: null
+25.02.2011 11:13:15 Command: work 
+INFO: Agenda: what_town_america_agenda | Move: hotel_a1n1d_new_york_mv | Speak: null
+25.02.2011 11:13:17 Command: work 
+INFO: Agenda: short_reminder_agenda | Move: null | Speak: null
+25.02.2011 11:13:24 Command: work 
+INFO: Agenda: what_hotel_newyork_agenda | Move: hotel_a1n1d_what_are_my_options_mv | Speak: null
+25.02.2011 11:13:27 Command: work 
+INFO: Agenda: say_options_towns_america | Move: null | Speak: null
+25.02.2011 11:14:34 Command: reset 
+INFO: OK
+25.02.2011 11:14:35 Command: request 
+INFO: OK
+25.02.2011 11:14:36 Command: work 
+INFO: Agenda: intro_agenda | Move: null | Speak: null
+25.02.2011 11:14:38 Command: work 
+INFO: Agenda: what_country_agenda | Move: hotel_a1n1d_america_mv | Speak: null
+25.02.2011 11:14:39 Command: work 
+INFO: Agenda: what_town_america_agenda | Move: hotel_a1n1d_new_york_mv | Speak: null
+25.02.2011 11:14:45 Command: work 
+INFO: Agenda: there_are_hotels_agenda | Move: null | Speak: null
+25.02.2011 11:14:46 Command: work 
+INFO: Agenda: short_reminder_agenda | Move: null | Speak: null
+25.02.2011 11:18:17 Command: reset 
+INFO: OK
+25.02.2011 11:18:18 Command: request 
+INFO: OK
+25.02.2011 11:18:20 Command: work 
+INFO: Agenda: intro_agenda | Move: null | Speak: null
+25.02.2011 11:18:21 Command: work 
+INFO: Agenda: what_country_agenda | Move: hotel_a1n1d_america_mv | Speak: null
+25.02.2011 11:18:23 Command: work 
+INFO: Agenda: what_town_america_agenda | Move: hotel_a1n1d_new_york_mv | Speak: null
+25.02.2011 11:18:26 Command: work 
+INFO: Agenda: short_reminder_agenda | Move: null | Speak: null
+25.02.2011 11:18:41 Command: work 
+INFO: Agenda: what_hotel_newyork_agenda | Move: hotel_a1n1d_what_are_my_options_mv | Speak: null
+25.02.2011 11:18:45 Command: work 
+INFO: Agenda: say_options_towns_america | Move: null | Speak: null
+25.02.2011 11:19:03 Command: reset 
+INFO: OK
+25.02.2011 11:19:04 Command: request 
+INFO: OK
+25.02.2011 11:19:05 Command: work 
+INFO: Agenda: intro_agenda | Move: null | Speak: null
+25.02.2011 11:19:06 Command: work 
+INFO: Agenda: what_country_agenda | Move: hotel_a1n1d_america_mv | Speak: null
+25.02.2011 11:19:08 Command: work 
+INFO: Agenda: what_town_america_agenda | Move: hotel_a1n1d_new_york_mv | Speak: null
+25.02.2011 11:19:16 Command: work 
+INFO: Agenda: short_reminder_agenda | Move: null | Speak: null
+25.02.2011 11:19:20 Command: request 
+INFO: OK
+25.02.2011 11:19:20 Command: request 
+INFO: OK
+25.02.2011 11:19:21 Command: request 
+INFO: OK
+25.02.2011 11:19:21 Command: request 
+INFO: OK
+25.02.2011 11:19:21 Command: request 
+INFO: OK
+25.02.2011 11:19:21 Command: request 
+INFO: OK
+25.02.2011 11:19:21 Command: request 
+INFO: OK
+25.02.2011 11:19:26 Command: reset 
+INFO: OK
+25.02.2011 11:19:27 Command: request 
+INFO: OK
+25.02.2011 11:19:28 Command: work 
+INFO: Agenda: intro_agenda | Move: null | Speak: null
+25.02.2011 11:19:29 Command: work 
+INFO: Agenda: what_country_agenda | Move: hotel_a1n1d_america_mv | Speak: null
+25.02.2011 11:19:31 Command: work 
+INFO: Agenda: what_town_america_agenda | Move: hotel_a1n1d_new_york_mv | Speak: null
+25.02.2011 11:19:56 Command: work 
+INFO: Agenda: short_reminder_agenda | Move: null | Speak: null
+25.02.2011 11:23:32 Command: reset 
+INFO: OK
+25.02.2011 11:23:33 Command: request 
+INFO: OK
+25.02.2011 11:23:34 Command: work 
+INFO: Agenda: intro_agenda | Move: null | Speak: null
+25.02.2011 11:23:36 Command: work 
+INFO: Agenda: what_country_agenda | Move: hotel_a1n1d_america_mv | Speak: null
+25.02.2011 11:23:38 Command: work 
+INFO: Agenda: what_town_america_agenda | Move: hotel_a1n1d_new_york_mv | Speak: null
+25.02.2011 11:23:40 Command: work 
+INFO: Agenda: short_reminder_agenda | Move: null | Speak: null
+25.02.2011 11:23:43 Command: work 
+INFO: Agenda: there_are_hotels_agenda | Move: null | Speak: null
+25.02.2011 11:23:49 Command: work 
+INFO: Agenda: what_hotel_newyork_agenda | Move: hotel_a1n1d_what_are_my_options_mv | Speak: null
+25.02.2011 11:23:50 Command: work 
+INFO: Agenda: what_hotel_newyork_agenda | Move: hotel_a1n1d_what_are_my_options_mv | Speak: null
+25.02.2011 11:23:52 Command: work 
+INFO: Agenda: what_hotel_newyork_agenda | Move: hotel_a1n1d_what_are_my_options_mv | Speak: null
+25.02.2011 11:23:53 Command: work 
+INFO: Agenda: what_hotel_newyork_agenda | Move: hotel_a1n1d_what_are_my_options_mv | Speak: null
+25.02.2011 11:23:54 Command: work 
+INFO: Agenda: what_hotel_newyork_agenda | Move: hotel_a1n1d_what_are_my_options_mv | Speak: null
+25.02.2011 11:26:52 Command: reset 
+INFO: OK
+25.02.2011 11:26:53 Command: request 
+INFO: OK
+25.02.2011 11:26:54 Command: work 
+INFO: Agenda: intro_agenda | Move: null | Speak: null
+25.02.2011 11:26:56 Command: work 
+INFO: Agenda: what_country_agenda | Move: hotel_a1n1d_america_mv | Speak: null
+25.02.2011 11:26:57 Command: work 
+INFO: Agenda: what_town_america_agenda | Move: hotel_a1n1d_new_york_mv | Speak: null
+25.02.2011 11:26:58 Command: work 
+INFO: Agenda: short_reminder_agenda | Move: null | Speak: null
+25.02.2011 11:27:01 Command: work 
+INFO: Agenda: there_are_hotels_agenda | Move: null | Speak: null
+25.02.2011 11:27:03 Command: work 
+INFO: Agenda: what_hotel_newyork_agenda | Move: hotel_a1n1d_what_are_my_options_mv | Speak: null
+25.02.2011 11:27:05 Command: work 
+INFO: Agenda: what_hotel_newyork_agenda | Move: hotel_a1n1d_newyork_hilton_gardens_mv | Speak: null
+25.02.2011 11:27:07 Command: reset 
+INFO: OK
+25.02.2011 11:27:08 Command: request 
+INFO: OK
+25.02.2011 11:27:09 Command: work 
+INFO: Agenda: intro_agenda | Move: null | Speak: null
+25.02.2011 11:27:11 Command: work 
+INFO: Agenda: what_country_agenda | Move: hotel_a1n1d_america_mv | Speak: null
+25.02.2011 11:27:13 Command: work 
+INFO: Agenda: what_town_america_agenda | Move: hotel_a1n1d_new_york_mv | Speak: null
+25.02.2011 11:27:14 Command: work 
+INFO: Agenda: short_reminder_agenda | Move: null | Speak: null
+25.02.2011 11:27:20 Command: work 
+INFO: Agenda: there_are_hotels_agenda | Move: null | Speak: null
+25.02.2011 11:29:38 Command: reset 
+INFO: OK
+25.02.2011 11:29:39 Command: request 
+INFO: OK
+25.02.2011 11:29:40 Command: work 
+INFO: Agenda: intro_agenda | Move: null | Speak: null
+25.02.2011 11:29:41 Command: work 
+INFO: Agenda: what_country_agenda | Move: hotel_a1n1d_america_mv | Speak: null
+25.02.2011 11:29:43 Command: work 
+INFO: Agenda: what_town_america_agenda | Move: hotel_a1n1d_new_york_mv | Speak: null
+25.02.2011 11:29:44 Command: work 
+INFO: Agenda: short_reminder_agenda | Move: null | Speak: null
+25.02.2011 11:29:45 Command: work 
+INFO: Agenda: there_are_hotels_agenda | Move: null | Speak: null
+25.02.2011 11:29:47 Command: work 
+INFO: Agenda: what_hotel_newyork_agenda | Move: hotel_a1n1d_what_are_my_options_mv | Speak: null
+25.02.2011 11:29:49 Command: work 
+INFO: Agenda: say_options_hotel | Move: null | Speak: null
+25.02.2011 11:29:50 Command: work 
+INFO: Agenda: what_hotel_newyork_agenda | Move: hotel_a1n1d_what_are_my_options_mv | Speak: null
+25.02.2011 11:29:51 Command: work 
+INFO: Agenda: say_options_hotel | Move: null | Speak: null
+25.02.2011 11:29:52 Command: work 
+INFO: Agenda: what_hotel_newyork_agenda | Move: hotel_a1n1d_newyork_hilton_gardens_mv | Speak: null
+25.02.2011 11:29:55 Command: work 
+INFO: Agenda: long_reminder_agenda | Move: null | Speak: null
+25.02.2011 11:29:56 Command: work 
+INFO: Agenda: sub_task | Move: null | Speak: null
+25.02.2011 11:29:59 Command: work 
+INFO: Agenda: what_day_to_stay_agenda | Move: hotel_a1n1d_seventeenth_mv | Speak: null
+25.02.2011 11:30:00 Command: work 
+INFO: Agenda: how_long_seventeenth_agenda | Move: hotel_a1n1d_two_weeks_seventeenth_mv | Speak: null
+25.02.2011 11:30:26 Command: reset 
+INFO: OK
+25.02.2011 11:30:27 Command: request 
+INFO: OK
+25.02.2011 11:30:28 Command: work 
+INFO: Agenda: intro_agenda | Move: null | Speak: null
+25.02.2011 11:30:30 Command: work 
+INFO: Agenda: what_country_agenda | Move: hotel_a1n1d_america_mv | Speak: null
+25.02.2011 11:30:32 Command: work 
+INFO: Agenda: what_town_america_agenda | Move: hotel_a1n1d_new_york_mv | Speak: null
+25.02.2011 11:30:36 Command: work 
+INFO: Agenda: short_reminder_agenda | Move: null | Speak: null
+25.02.2011 11:30:40 Command: work 
+INFO: Agenda: there_are_hotels_agenda | Move: null | Speak: null
+25.02.2011 11:31:04 Command: work 
+INFO: Agenda: what_hotel_newyork_agenda | Move: hotel_a1n1d_newyork_hilton_gardens_mv | Speak: null
+25.02.2011 11:31:18 Command: work 
+INFO: Agenda: long_reminder_agenda | Move: null | Speak: null
+25.02.2011 11:31:20 Command: work 
+INFO: Agenda: sub_task | Move: null | Speak: null
+25.02.2011 11:32:17 Command: reset 
+INFO: OK
+25.02.2011 11:32:18 Command: request 
+INFO: OK
+25.02.2011 11:32:19 Command: work 
+INFO: Agenda: intro_agenda | Move: null | Speak: null
+25.02.2011 11:32:20 Command: work 
+INFO: Agenda: what_country_agenda | Move: hotel_a1n1d_america_mv | Speak: null
+25.02.2011 11:32:21 Command: work 
+INFO: Agenda: what_town_america_agenda | Move: hotel_a1n1d_new_york_mv | Speak: null
+25.02.2011 11:32:23 Command: work 
+INFO: Agenda: short_reminder_agenda | Move: null | Speak: null
+25.02.2011 11:32:24 Command: work 
+INFO: Agenda: there_are_hotels_agenda | Move: null | Speak: null
+25.02.2011 11:32:29 Command: work 
+INFO: Agenda: what_hotel_newyork_agenda | Move: hotel_a1n1d_newyork_hilton_gardens_mv | Speak: null
+25.02.2011 11:32:32 Command: work 
+INFO: Agenda: long_reminder_agenda | Move: null | Speak: null
+25.02.2011 11:32:37 Command: work 
+INFO: Agenda: what_day_to_stay_agenda | Move: hotel_a1n1d_seventeenth_mv | Speak: null
+25.02.2011 11:32:44 Command: work 
+INFO: Agenda: sub_task | Move: null | Speak: null
+25.02.2011 11:32:45 Command: work 
+INFO: Agenda: how_long_seventeenth_agenda | Move: hotel_a1n1d_two_weeks_seventeenth_mv | Speak: null
+25.02.2011 11:32:47 Command: work 
+INFO: Agenda: board_agenda | Move: hotel_a1n1d_full_board_mv | Speak: null
+25.02.2011 11:33:07 Command: work 
+INFO: Agenda: correct_agenda | Move: hotel_a1n1d_no_mv | Speak: null
+25.02.2011 11:33:08 Command: work 
+INFO: Agenda: what_country_agenda | Move: hotel_a1n1d_america_mv | Speak: null
+25.02.2011 11:33:11 Command: work 
+INFO: Agenda: what_town_america_agenda | Move: hotel_a1n1d_new_york_mv | Speak: null
+25.02.2011 11:33:13 Command: work 
+INFO: Agenda: there_are_hotels_agenda | Move: null | Speak: null
+25.02.2011 11:33:15 Command: work 
+INFO: Agenda: what_hotel_newyork_agenda | Move: hotel_a1n1d_newyork_hilton_gardens_mv | Speak: null
+25.02.2011 11:33:18 Command: work 
+INFO: Agenda: what_day_to_stay_agenda | Move: hotel_a1n1d_fifteenth_mv | Speak: null
+25.02.2011 11:33:19 Command: work 
+INFO: Agenda: fifteenth_agenda | Move: null | Speak: null
+25.02.2011 11:33:20 Command: work 
+INFO: Agenda: what_day_to_stay_agenda | Move: hotel_a1n1d_fourth_mv | Speak: null
+25.02.2011 11:33:21 Command: work 
+INFO: Agenda: how_long_fourth_agenda | Move: hotel_a1n1d_one_week_fourth_mv | Speak: null
+25.02.2011 11:33:25 Command: work 
+INFO: Agenda: board_agenda | Move: hotel_a1n1d_full_board_mv | Speak: null
+25.02.2011 11:33:28 Command: work 
+INFO: Agenda: correct_agenda | Move: hotel_a1n1d_yes_mv | Speak: null
+25.02.2011 11:34:41 Command: reset 
+INFO: OK
+25.02.2011 11:34:42 Command: request 
+INFO: OK
+25.02.2011 11:34:43 Command: work 
+INFO: Agenda: intro_agenda | Move: null | Speak: null
+25.02.2011 11:34:44 Command: work 
+INFO: Agenda: what_country_agenda | Move: hotel_a1n1d_america_mv | Speak: null
+25.02.2011 11:34:46 Command: work 
+INFO: Agenda: what_town_america_agenda | Move: hotel_a1n1d_new_york_mv | Speak: null
+25.02.2011 11:34:49 Command: work 
+INFO: Agenda: short_reminder_agenda | Move: null | Speak: null
+25.02.2011 11:34:50 Command: work 
+INFO: Agenda: there_are_hotels_agenda | Move: null | Speak: null
+25.02.2011 11:35:02 Command: work 
+INFO: Agenda: what_hotel_newyork_agenda | Move: hotel_a1n1d_newyork_hilton_gardens_mv | Speak: null
+25.02.2011 11:35:27 Command: reset 
+INFO: OK
+25.02.2011 11:35:27 Command: request 
+INFO: OK
+25.02.2011 11:35:28 Command: work 
+INFO: Agenda: intro_agenda | Move: null | Speak: null
+25.02.2011 11:35:29 Command: work 
+INFO: Agenda: what_country_agenda | Move: hotel_a1n1d_america_mv | Speak: null
+25.02.2011 11:35:33 Command: work 
+INFO: Agenda: what_town_america_agenda | Move: hotel_a1n1d_new_york_mv | Speak: null
+25.02.2011 11:35:34 Command: work 
+INFO: Agenda: short_reminder_agenda | Move: null | Speak: null
+25.02.2011 11:35:38 Command: work 
+INFO: Agenda: there_are_hotels_agenda | Move: null | Speak: null
+25.02.2011 11:35:43 Command: work 
+INFO: Agenda: what_hotel_newyork_agenda | Move: hotel_a1n1d_newyork_hilton_gardens_mv | Speak: null
+25.02.2011 11:35:46 Command: work 
+INFO: Agenda: what_day_to_stay_agenda | Move: hotel_a1n1d_seventeenth_mv | Speak: null
+25.02.2011 11:35:49 Command: work 
+INFO: Agenda: long_reminder_agenda | Move: null | Speak: null
+25.02.2011 11:35:51 Command: work 
+INFO: Agenda: sub_task | Move: null | Speak: null
+25.02.2011 11:36:04 Command: work 
+INFO: Agenda: how_long_seventeenth_agenda | Move: hotel_a1n1d_what_are_my_options_mv | Speak: null
+25.02.2011 11:36:05 Command: work 
+INFO: Agenda: say_options_duration | Move: null | Speak: null
+25.02.2011 11:38:19 Command: reset 
+INFO: OK
+25.02.2011 11:38:20 Command: request 
+INFO: OK
+25.02.2011 11:38:21 Command: work 
+INFO: Agenda: intro_agenda | Move: null | Speak: null
+25.02.2011 11:38:22 Command: work 
+INFO: Agenda: what_country_agenda | Move: hotel_a1n1d_america_mv | Speak: null
+25.02.2011 11:38:25 Command: work 
+INFO: Agenda: what_town_america_agenda | Move: hotel_a1n1d_new_york_mv | Speak: null
+25.02.2011 11:38:26 Command: work 
+INFO: Agenda: short_reminder_agenda | Move: null | Speak: null
+25.02.2011 11:38:28 Command: work 
+INFO: Agenda: there_are_hotels_agenda | Move: null | Speak: null
+25.02.2011 11:38:31 Command: work 
+INFO: Agenda: what_hotel_newyork_agenda | Move: hotel_a1n1d_newyork_hilton_gardens_mv | Speak: null
+25.02.2011 11:38:33 Command: work 
+INFO: Agenda: what_day_to_stay_agenda | Move: hotel_a1n1d_seventeenth_mv | Speak: null
+25.02.2011 11:38:34 Command: work 
+INFO: Agenda: how_long_seventeenth_agenda | Move: hotel_a1n1d_two_weeks_seventeenth_mv | Speak: null
+25.02.2011 11:38:38 Command: work 
+INFO: Agenda: long_reminder_agenda | Move: null | Speak: null
+25.02.2011 11:38:41 Command: work 
+INFO: Agenda: board_agenda | Move: hotel_a1n1d_full_board_mv | Speak: null
+25.02.2011 11:38:45 Command: work 
+INFO: Agenda: correct_agenda | Move: hotel_a1n1d_what_are_my_options_mv | Speak: null
+25.02.2011 11:38:46 Command: work 
+INFO: Agenda: say_options_duration | Move: null | Speak: null
+25.02.2011 11:38:56 Command: work 
+INFO: Agenda: correct_agenda | Move: hotel_a1n1d_yes_mv | Speak: null
+25.02.2011 11:39:15 Command: work 
+INFO: Agenda: flight_as_hotel_agenda | Move: flug_a1n1d_hotel_yes_mv | Speak: null
+25.02.2011 11:39:17 Command: work 
+INFO: Agenda: sub_task | Move: null | Speak: null
+25.02.2011 11:42:09 Command: reset 
+INFO: OK
+25.02.2011 11:42:09 Command: request 
+INFO: OK
+25.02.2011 11:42:11 Command: work 
+INFO: Agenda: intro_agenda | Move: null | Speak: null
+25.02.2011 11:42:13 Command: work 
+INFO: Agenda: what_country_agenda | Move: hotel_a1n1d_america_mv | Speak: null
+25.02.2011 11:42:14 Command: work 
+INFO: Agenda: what_town_america_agenda | Move: hotel_a1n1d_new_york_mv | Speak: null
+25.02.2011 11:42:15 Command: work 
+INFO: Agenda: short_reminder_agenda | Move: null | Speak: null
+25.02.2011 11:42:15 Command: work 
+INFO: Agenda: there_are_hotels_agenda | Move: null | Speak: null
+25.02.2011 11:42:19 Command: work 
+INFO: Agenda: what_hotel_newyork_agenda | Move: hotel_a1n1d_newyork_hilton_gardens_mv | Speak: null
+25.02.2011 11:42:25 Command: work 
+INFO: Agenda: what_day_to_stay_agenda | Move: hotel_a1n1d_seventeenth_mv | Speak: null
+25.02.2011 11:42:27 Command: work 
+INFO: Agenda: how_long_seventeenth_agenda | Move: hotel_a1n1d_two_weeks_seventeenth_mv | Speak: null
+25.02.2011 11:42:28 Command: work 
+INFO: Agenda: long_reminder_agenda | Move: null | Speak: null
+25.02.2011 11:42:35 Command: work 
+INFO: Agenda: board_agenda | Move: hotel_a1n1d_full_board_mv | Speak: null
+25.02.2011 11:42:37 Command: work 
+INFO: Agenda: correct_agenda | Move: hotel_a1n1d_yes_mv | Speak: null
+25.02.2011 11:42:38 Command: work 
+INFO: Agenda: flight_as_hotel_agenda | Move: flug_a1n1d_hotel_yes_mv | Speak: null
+25.02.2011 11:42:40 Command: work 
+INFO: Agenda: from_which_airport_hotel | Move: flug_a1n1d_stuttgart_hotel_mv | Speak: null
+25.02.2011 11:42:42 Command: work 
+INFO: Agenda: start_time_hotel_agenda | Move: flug_a1n1d_start_eight_hotel_mv | Speak: null
+25.02.2011 11:42:44 Command: work 
+INFO: Agenda: sub_task | Move: null | Speak: null
+25.02.2011 11:42:48 Command: work 
+INFO: Agenda: return_time_agenda | Move: flug_a1n1d_return_at_eight_mv | Speak: null
+25.02.2011 11:42:52 Command: work 
+INFO: Agenda: correct_agenda | Move: flug_a1n1d_yes_mv | Speak: null
+25.02.2011 11:42:53 Command: work 
+INFO: Agenda: fault | Move: hotel_a1n1d_what_are_my_options_mv | Speak: null
+25.02.2011 11:42:55 Command: work 
+INFO: Agenda: say_options_duration | Move: null | Speak: null
+25.02.2011 11:42:56 Command: reset 
+INFO: OK
+25.02.2011 11:42:57 Command: request 
+INFO: OK
+25.02.2011 11:43:00 Command: work 
+INFO: Agenda: intro_agenda | Move: null | Speak: null
+25.02.2011 11:43:01 Command: work 
+INFO: Agenda: what_country_agenda | Move: hotel_a1n1d_england_mv | Speak: null
+25.02.2011 11:43:02 Command: work 
+INFO: Agenda: what_town_england_agenda | Move: hotel_a1n1d_london_mv | Speak: null
+25.02.2011 11:43:04 Command: work 
+INFO: Agenda: short_reminder_agenda | Move: null | Speak: null
+25.02.2011 11:43:05 Command: work 
+INFO: Agenda: there_are_hotels_agenda | Move: null | Speak: null
+25.02.2011 11:43:06 Command: work 
+INFO: Agenda: what_hotel_london_agenda | Move: hotel_a1n1d_london_premierinn_mv | Speak: null
+25.02.2011 11:43:07 Command: work 
+INFO: Agenda: what_day_to_stay_agenda | Move: hotel_a1n1d_seventeenth_mv | Speak: null
+25.02.2011 11:43:08 Command: work 
+INFO: Agenda: how_long_seventeenth_agenda | Move: hotel_a1n1d_two_weeks_seventeenth_mv | Speak: null
+25.02.2011 11:43:09 Command: work 
+INFO: Agenda: long_reminder_agenda | Move: null | Speak: null
+25.02.2011 11:43:11 Command: work 
+INFO: Agenda: board_agenda | Move: hotel_a1n1d_full_board_mv | Speak: null
+25.02.2011 11:43:12 Command: work 
+INFO: Agenda: correct_agenda | Move: hotel_a1n1d_yes_mv | Speak: null
+25.02.2011 11:43:13 Command: work 
+INFO: Agenda: flight_as_hotel_agenda | Move: flug_a1n1d_hotel_yes_mv | Speak: null
+25.02.2011 11:43:14 Command: work 
+INFO: Agenda: from_which_airport_hotel | Move: flug_a1n1d_stuttgart_hotel_mv | Speak: null
+25.02.2011 11:43:15 Command: work 
+INFO: Agenda: start_time_hotel_agenda | Move: flug_a1n1d_start_eight_hotel_mv | Speak: null
+25.02.2011 11:43:16 Command: work 
+INFO: Agenda: sub_task | Move: null | Speak: null
+25.02.2011 11:43:17 Command: work 
+INFO: Agenda: return_time_agenda | Move: flug_a1n1d_return_at_eight_mv | Speak: null
+25.02.2011 11:43:20 Command: work 
+INFO: Agenda: correct_agenda | Move: flug_a1n1d_yes_mv | Speak: null
+25.02.2011 11:43:23 Command: reset 
+INFO: OK
+25.02.2011 11:43:24 Command: request 
+INFO: OK
+25.02.2011 11:43:24 Command: work 
+INFO: Agenda: intro_agenda | Move: null | Speak: null
+25.02.2011 11:43:26 Command: work 
+INFO: Agenda: what_country_agenda | Move: hotel_a1n1d_egypt_mv | Speak: null
+25.02.2011 11:43:27 Command: work 
+INFO: Agenda: what_town_egypt_agenda | Move: hotel_a1n1d_abusimbel_mv | Speak: null
+25.02.2011 11:43:28 Command: work 
+INFO: Agenda: short_reminder_agenda | Move: null | Speak: null
+25.02.2011 11:43:28 Command: work 
+INFO: Agenda: there_are_hotels_agenda | Move: null | Speak: null
+25.02.2011 11:43:29 Command: work 
+INFO: Agenda: what_hotel_abusimbel_agenda | Move: hotel_a1n1d_abusimbel_nobaleh_ramses | Speak: null
+25.02.2011 11:43:31 Command: work 
+INFO: Agenda: what_day_to_stay_agenda | Move: hotel_a1n1d_seventeenth_mv | Speak: null
+25.02.2011 11:43:32 Command: work 
+INFO: Agenda: how_long_seventeenth_agenda | Move: hotel_a1n1d_one_week_seventeenth_mv | Speak: null
+25.02.2011 11:43:33 Command: work 
+INFO: Agenda: long_reminder_agenda | Move: null | Speak: null
+25.02.2011 11:43:34 Command: work 
+INFO: Agenda: board_agenda | Move: hotel_a1n1d_half_board_mv | Speak: null
+25.02.2011 11:43:37 Command: work 
+INFO: Agenda: correct_agenda | Move: hotel_a1n1d_yes_mv | Speak: null
+25.02.2011 11:43:38 Command: work 
+INFO: Agenda: flight_as_hotel_agenda | Move: flug_a1n1d_hotel_no_mv | Speak: null
+25.02.2011 11:43:41 Command: work 
+INFO: Agenda: sub_task | Move: null | Speak: null
+25.02.2011 11:43:43 Command: work 
+INFO: Agenda: hello_country_agenda | Move: flug_a1n1d_england_mv | Speak: null
+25.02.2011 11:43:44 Command: work 
+INFO: Agenda: which_town_england | Move: flug_a1n1d_london_mv | Speak: null
+25.02.2011 11:43:46 Command: work 
+INFO: Agenda: from_which_airport | Move: flug_a1n1d_frankfurt_mv | Speak: null
+25.02.2011 11:44:20 Command: reset 
+INFO: OK
+25.02.2011 11:44:21 Command: request 
+INFO: OK
+25.02.2011 11:44:22 Command: work 
+INFO: Agenda: intro_agenda | Move: null | Speak: null
+25.02.2011 11:44:23 Command: work 
+INFO: Agenda: what_country_agenda | Move: hotel_a1n1d_egypt_mv | Speak: null
+25.02.2011 11:44:24 Command: work 
+INFO: Agenda: what_town_egypt_agenda | Move: hotel_a1n1d_abusimbel_mv | Speak: null
+25.02.2011 11:44:24 Command: work 
+INFO: Agenda: short_reminder_agenda | Move: null | Speak: null
+25.02.2011 11:44:25 Command: work 
+INFO: Agenda: there_are_hotels_agenda | Move: null | Speak: null
+25.02.2011 11:44:26 Command: work 
+INFO: Agenda: what_hotel_abusimbel_agenda | Move: hotel_a1n1d_abusimbel_nobaleh_ramses | Speak: null
+25.02.2011 11:44:27 Command: work 
+INFO: Agenda: what_day_to_stay_agenda | Move: hotel_a1n1d_seventeenth_mv | Speak: null
+25.02.2011 11:44:28 Command: work 
+INFO: Agenda: how_long_seventeenth_agenda | Move: hotel_a1n1d_two_weeks_seventeenth_mv | Speak: null
+25.02.2011 11:44:29 Command: work 
+INFO: Agenda: long_reminder_agenda | Move: null | Speak: null
+25.02.2011 11:44:30 Command: work 
+INFO: Agenda: board_agenda | Move: hotel_a1n1d_full_board_mv | Speak: null
+25.02.2011 11:44:44 Command: work 
+INFO: Agenda: correct_agenda | Move: hotel_a1n1d_yes_mv | Speak: null
+25.02.2011 11:44:57 Command: work 
+INFO: Agenda: flight_as_hotel_agenda | Move: flug_a1n1d_hotel_yes_mv | Speak: null
+25.02.2011 11:45:00 Command: reset 
+INFO: OK
+25.02.2011 11:45:01 Command: request 
+INFO: OK
+25.02.2011 11:45:02 Command: work 
+INFO: Agenda: intro_agenda | Move: null | Speak: null
+25.02.2011 11:45:03 Command: work 
+INFO: Agenda: what_country_agenda | Move: hotel_a1n1d_egypt_mv | Speak: null
+25.02.2011 11:45:04 Command: work 
+INFO: Agenda: what_town_egypt_agenda | Move: hotel_a1n1d_abusimbel_mv | Speak: null
+25.02.2011 11:45:05 Command: work 
+INFO: Agenda: short_reminder_agenda | Move: null | Speak: null
+25.02.2011 11:45:06 Command: work 
+INFO: Agenda: there_are_hotels_agenda | Move: null | Speak: null
+25.02.2011 11:45:07 Command: work 
+INFO: Agenda: what_hotel_abusimbel_agenda | Move: hotel_a1n1d_abusimbel_seti_abusimbel_mv | Speak: null
+25.02.2011 11:45:08 Command: work 
+INFO: Agenda: what_day_to_stay_agenda | Move: hotel_a1n1d_seventeenth_mv | Speak: null
+25.02.2011 11:45:09 Command: work 
+INFO: Agenda: how_long_seventeenth_agenda | Move: hotel_a1n1d_two_weeks_seventeenth_mv | Speak: null
+25.02.2011 11:45:10 Command: work 
+INFO: Agenda: long_reminder_agenda | Move: null | Speak: null
+25.02.2011 11:45:11 Command: work 
+INFO: Agenda: board_agenda | Move: hotel_a1n1d_half_board_mv | Speak: null
+25.02.2011 11:45:15 Command: work 
+INFO: Agenda: correct_agenda | Move: hotel_a1n1d_yes_mv | Speak: null
+25.02.2011 11:45:16 Command: work 
+INFO: Agenda: flight_as_hotel_agenda | Move: flug_a1n1d_hotel_no_mv | Speak: null
+25.02.2011 11:45:18 Command: work 
+INFO: Agenda: hello_country_agenda | Move: flug_a1n1d_england_mv | Speak: null
+25.02.2011 11:45:19 Command: work 
+INFO: Agenda: which_town_england | Move: flug_a1n1d_london_mv | Speak: null
+25.02.2011 11:45:20 Command: work 
+INFO: Agenda: from_which_airport | Move: flug_a1n1d_frankfurt_mv | Speak: null
+25.02.2011 11:45:22 Command: work 
+INFO: Agenda: start_day_agenda | Move: flug_a1n1d_seventeenth_mv | Speak: null
+25.02.2011 11:45:22 Command: work 
+INFO: Agenda: start_time_agenda | Move: flug_a1n1d_start_at_twelve_mv | Speak: null
+25.02.2011 11:45:24 Command: work 
+INFO: Agenda: sub_task | Move: null | Speak: null
+25.02.2011 11:45:25 Command: work 
+INFO: Agenda: return_seventeenth_day_agenda | Move: flug_a1n1d_return_twentyfourth_mv | Speak: null
+25.02.2011 11:45:26 Command: work 
+INFO: Agenda: return_time_agenda | Move: flug_a1n1d_return_at_eight_mv | Speak: null
+25.02.2011 11:45:29 Command: work 
+INFO: Agenda: correct_agenda | Move: flug_a1n1d_yes_mv | Speak: null
+25.02.2011 11:45:32 Command: reset 
+INFO: OK
+25.02.2011 11:47:06 Command: reset 
+INFO: OK
+25.02.2011 11:47:07 Command: request 
+INFO: OK
+25.02.2011 11:48:06 Command: request 
+INFO: OK
+25.02.2011 11:48:11 Command: work 
+INFO: Agenda: intro_agenda | Move: null | Speak: null
+25.02.2011 11:48:16 Command: work 
+INFO: Agenda: what_country_agenda | Move: hotel_a1n1d_america_mv | Speak: null
+25.02.2011 11:48:18 Command: work 
+INFO: Agenda: what_town_america_agenda | Move: hotel_a1n1d_new_york_mv | Speak: null
+25.02.2011 11:50:07 Command: work 
+INFO: Agenda: short_reminder_agenda | Move: null | Speak: null
+25.02.2011 11:50:14 Command: work 
+INFO: Agenda: there_are_hotels_agenda | Move: null | Speak: null
+25.02.2011 11:50:17 Command: work 
+INFO: Agenda: what_hotel_newyork_agenda | Move: hotel_a1n1d_newyork_hilton_gardens_mv | Speak: null
+25.02.2011 11:50:21 Command: work 
+INFO: Agenda: what_day_to_stay_agenda | Move: hotel_a1n1d_fifteenth_mv | Speak: null
+25.02.2011 11:50:22 Command: work 
+INFO: Agenda: fifteenth_agenda | Move: null | Speak: null
+25.02.2011 11:50:23 Command: work 
+INFO: Agenda: what_day_to_stay_agenda | Move: hotel_a1n1d_fourth_mv | Speak: null
+25.02.2011 11:50:25 Command: work 
+INFO: Agenda: long_reminder_agenda | Move: null | Speak: null
+25.02.2011 11:50:32 Command: work 
+INFO: Agenda: sub_task | Move: null | Speak: null
+25.02.2011 11:50:35 Command: work 
+INFO: Agenda: how_long_fourth_agenda | Move: hotel_a1n1d_one_week_fourth_mv | Speak: null
+25.02.2011 11:50:41 Command: reset 
+INFO: OK
+25.02.2011 11:50:45 Command: request 
+INFO: OK
+25.02.2011 11:50:46 Command: work 
+INFO: Agenda: intro_agenda | Move: null | Speak: null
+25.02.2011 11:50:48 Command: work 
+INFO: Agenda: what_country_agenda | Move: hotel_a1n1d_america_mv | Speak: null
+25.02.2011 11:50:49 Command: work 
+INFO: Agenda: what_town_america_agenda | Move: hotel_a1n1d_new_york_mv | Speak: null
+25.02.2011 11:50:52 Command: work 
+INFO: Agenda: short_reminder_agenda | Move: null | Speak: null
+25.02.2011 11:50:55 Command: work 
+INFO: Agenda: there_are_hotels_agenda | Move: null | Speak: null
+25.02.2011 11:50:57 Command: work 
+INFO: Agenda: what_hotel_newyork_agenda | Move: hotel_a1n1d_newyork_hilton_gardens_mv | Speak: null
+25.02.2011 11:51:00 Command: work 
+INFO: Agenda: what_day_to_stay_agenda | Move: hotel_a1n1d_seventeenth_mv | Speak: null
+25.02.2011 11:51:05 Command: work 
+INFO: Agenda: how_long_seventeenth_agenda | Move: hotel_a1n1d_two_weeks_seventeenth_mv | Speak: null
+25.02.2011 11:51:11 Command: work 
+INFO: Agenda: long_reminder_agenda | Move: null | Speak: null
+25.02.2011 11:51:15 Command: reset 
+INFO: OK
+25.02.2011 11:51:18 Command: request 
+INFO: OK
+25.02.2011 11:51:19 Command: work 
+INFO: Agenda: intro_agenda | Move: null | Speak: null
+25.02.2011 11:51:20 Command: work 
+INFO: Agenda: what_country_agenda | Move: hotel_a1n1d_america_mv | Speak: null
+25.02.2011 11:51:21 Command: work 
+INFO: Agenda: what_town_america_agenda | Move: hotel_a1n1d_new_york_mv | Speak: null
+25.02.2011 11:51:24 Command: work 
+INFO: Agenda: short_reminder_agenda | Move: null | Speak: null
+25.02.2011 11:51:25 Command: work 
+INFO: Agenda: there_are_hotels_agenda | Move: null | Speak: null
+25.02.2011 11:51:27 Command: work 
+INFO: Agenda: what_hotel_newyork_agenda | Move: hotel_a1n1d_newyork_hilton_gardens_mv | Speak: null
+25.02.2011 11:51:29 Command: work 
+INFO: Agenda: what_day_to_stay_agenda | Move: hotel_a1n1d_fifteenth_mv | Speak: null
+25.02.2011 11:51:31 Command: work 
+INFO: Agenda: fifteenth_agenda | Move: null | Speak: null
+25.02.2011 11:51:32 Command: work 
+INFO: Agenda: what_day_to_stay_agenda | Move: hotel_a1n1d_fourth_mv | Speak: null
+25.02.2011 12:10:53 Command: reset 
+INFO: OK
+25.02.2011 12:10:53 Command: request 
+INFO: OK
+25.02.2011 12:10:55 Command: work 
+INFO: Agenda: intro_agenda | Move: null | Speak: null
+25.02.2011 12:10:56 Command: work 
+INFO: Agenda: what_country_agenda | Move: hotel_a1n1d_america_mv | Speak: null
+25.02.2011 12:10:57 Command: work 
+INFO: Agenda: what_town_america_agenda | Move: hotel_a1n1d_new_york_mv | Speak: null
+25.02.2011 12:10:59 Command: work 
+INFO: Agenda: short_reminder_agenda | Move: null | Speak: null
+25.02.2011 12:11:00 Command: work 
+INFO: Agenda: there_are_hotels_agenda | Move: null | Speak: null
+25.02.2011 12:11:01 Command: work 
+INFO: Agenda: what_hotel_newyork_agenda | Move: hotel_a1n1d_newyork_hilton_gardens_mv | Speak: null
+25.02.2011 12:11:04 Command: work 
+INFO: Agenda: what_day_to_stay_agenda | Move: hotel_a1n1d_fourth_mv | Speak: null
+25.02.2011 12:11:05 Command: work 
+INFO: Agenda: long_reminder_agenda | Move: null | Speak: null
+25.02.2011 12:11:08 Command: work 
+INFO: Agenda: sub_task | Move: null | Speak: null
+25.02.2011 12:11:13 Command: reset 
+INFO: OK
+25.02.2011 12:11:14 Command: request 
+INFO: OK
+25.02.2011 12:11:15 Command: work 
+INFO: Agenda: intro_agenda | Move: null | Speak: null
+25.02.2011 12:11:17 Command: work 
+INFO: Agenda: what_country_agenda | Move: hotel_a1n1d_america_mv | Speak: null
+25.02.2011 12:11:18 Command: work 
+INFO: Agenda: what_town_america_agenda | Move: hotel_a1n1d_new_york_mv | Speak: null
+25.02.2011 12:11:19 Command: work 
+INFO: Agenda: short_reminder_agenda | Move: null | Speak: null
+25.02.2011 12:11:20 Command: work 
+INFO: Agenda: there_are_hotels_agenda | Move: null | Speak: null
+25.02.2011 12:11:21 Command: work 
+INFO: Agenda: what_hotel_newyork_agenda | Move: hotel_a1n1d_newyork_hilton_gardens_mv | Speak: null
+25.02.2011 12:13:02 Command: reset 
+INFO: OK
+25.02.2011 12:13:03 Command: request 
+INFO: OK
+25.02.2011 12:13:04 Command: work 
+INFO: Agenda: intro_agenda | Move: null | Speak: null
+25.02.2011 12:13:05 Command: work 
+INFO: Agenda: what_country_agenda | Move: hotel_a1n1d_america_mv | Speak: null
+25.02.2011 12:13:06 Command: work 
+INFO: Agenda: what_town_america_agenda | Move: hotel_a1n1d_new_york_mv | Speak: null
+25.02.2011 12:13:07 Command: work 
+INFO: Agenda: short_reminder_agenda | Move: null | Speak: null
+25.02.2011 12:13:08 Command: work 
+INFO: Agenda: there_are_hotels_agenda | Move: null | Speak: null
+25.02.2011 12:13:09 Command: work 
+INFO: Agenda: what_hotel_newyork_agenda | Move: hotel_a1n1d_newyork_hilton_gardens_mv | Speak: null
+25.02.2011 12:13:13 Command: work 
+INFO: Agenda: what_day_to_stay_agenda | Move: hotel_a1n1d_fourth_mv | Speak: null
+25.02.2011 12:13:14 Command: work 
+INFO: Agenda: how_long_fourth_agenda | Move: hotel_a1n1d_one_week_fourth_mv | Speak: null
+25.02.2011 12:13:15 Command: work 
+INFO: Agenda: long_reminder_agenda | Move: null | Speak: null
+25.02.2011 12:13:17 Command: work 
+INFO: Agenda: board_agenda | Move: hotel_a1n1d_half_board_mv | Speak: null
+25.02.2011 12:13:19 Command: work 
+INFO: Agenda: correct_agenda | Move: hotel_a1n1d_no_mv | Speak: null
+25.02.2011 12:13:21 Command: reset 
+INFO: OK
+25.02.2011 12:13:22 Command: request 
+INFO: OK
+25.02.2011 12:13:23 Command: work 
+INFO: Agenda: intro_agenda | Move: null | Speak: null
+25.02.2011 12:13:24 Command: work 
+INFO: Agenda: what_country_agenda | Move: hotel_a1n1d_america_mv | Speak: null
+25.02.2011 12:13:25 Command: work 
+INFO: Agenda: what_town_america_agenda | Move: hotel_a1n1d_new_york_mv | Speak: null
+25.02.2011 12:13:26 Command: work 
+INFO: Agenda: short_reminder_agenda | Move: null | Speak: null
+25.02.2011 12:13:27 Command: work 
+INFO: Agenda: there_are_hotels_agenda | Move: null | Speak: null
+25.02.2011 12:13:28 Command: work 
+INFO: Agenda: what_hotel_newyork_agenda | Move: hotel_a1n1d_newyork_hilton_gardens_mv | Speak: null
+25.02.2011 12:13:30 Command: work 
+INFO: Agenda: what_day_to_stay_agenda | Move: hotel_a1n1d_fifteenth_mv | Speak: null
+25.02.2011 12:13:32 Command: work 
+INFO: Agenda: fifteenth_agenda | Move: null | Speak: null
+25.02.2011 12:13:33 Command: work 
+INFO: Agenda: what_day_to_stay_agenda | Move: hotel_a1n1d_fourth_mv | Speak: null
+25.02.2011 12:13:34 Command: work 
+INFO: Agenda: how_long_fourth_agenda | Move: hotel_a1n1d_one_week_fourth_mv | Speak: null
+25.02.2011 12:13:39 Command: reset 
+INFO: OK
+25.02.2011 14:14:50 Command: reset 
+INFO: OK
+25.02.2011 14:14:53 Command: request 
+INFO: OK
+25.02.2011 14:17:12 Command: request 
+INFO: OK
+25.02.2011 14:18:29 Command: request 
+INFO: OK
+25.02.2011 14:28:45 Command: request 
+INFO: OK
+25.02.2011 14:30:06 Command: request 
+INFO: OK
+25.02.2011 14:35:54 Command: request 
+INFO: OK
+25.02.2011 14:40:21 Command: request 
+INFO: OK
+25.02.2011 14:41:13 Command: reset 
+INFO: OK
+25.02.2011 14:41:13 Command: request 
+INFO: OK
+25.02.2011 14:41:20 Command: request 
+INFO: OK
+25.02.2011 14:42:13 Command: request 
+INFO: OK
+25.02.2011 14:53:16 Command: request 
+INFO: OK
+25.02.2011 14:55:22 Command: request 
+INFO: OK
+25.02.2011 14:57:51 Command: reset 
+INFO: OK
+25.02.2011 14:57:52 Command: request 
+INFO: OK
+25.02.2011 14:59:52 Command: reset 
+INFO: OK
+25.02.2011 14:59:53 Command: request 
+INFO: OK
+25.02.2011 15:08:54 Command: reset 
+INFO: OK
+25.02.2011 15:08:55 Command: request 
+INFO: OK
+25.02.2011 15:12:55 Command: request 
+INFO: OK
+25.02.2011 15:13:10 Command: request 
+INFO: OK
+25.02.2011 15:13:10 Command: work 
+INFO: Agenda: intro_agenda | Move: null | Speak: null
+25.02.2011 15:13:24 Command: request 
+INFO: noinput
+25.02.2011 15:13:26 Command: reset 
+INFO: OK
+25.02.2011 15:13:34 Command: request 
+INFO: noinput
+25.02.2011 15:13:34 Command: work 
+INFO: Agenda: intro_agenda | Move: null | Speak: null
+25.02.2011 15:13:47 Command: reset 
+INFO: OK
+25.02.2011 15:13:48 Command: request 
+INFO: OK
+25.02.2011 15:13:48 Command: request 
+INFO: noinput
+25.02.2011 15:13:48 Command: work 
+INFO: Agenda: intro_agenda | Move: null | Speak: null
+25.02.2011 15:13:58 Command: request 
+INFO: OK
+25.02.2011 15:14:02 Command: request 
+INFO: noinput
+25.02.2011 15:14:10 Command: reset 
+INFO: OK
+25.02.2011 15:14:12 Command: request 
+INFO: noinput
+25.02.2011 15:14:13 Command: work 
+INFO: Agenda: intro_agenda | Move: null | Speak: null
+25.02.2011 15:14:22 Command: request 
+INFO: OK
+25.02.2011 15:14:26 Command: request 
+INFO: noinput
+25.02.2011 15:18:16 Command: reset 
+INFO: OK
+25.02.2011 15:18:16 Command: request 
+INFO: OK
+25.02.2011 15:18:19 Command: request 
+INFO: OK
+25.02.2011 15:18:20 Command: request 
+INFO: OK
+25.02.2011 15:21:22 Command: reset 
+INFO: OK
+25.02.2011 15:21:23 Command: request 
+INFO: OK
+25.02.2011 15:21:34 Command: request 
+INFO: OK
+25.02.2011 15:21:34 Command: work 
+INFO: Agenda: intro_agenda | Move: null | Speak: null
+25.02.2011 15:38:40 Command: request 
+INFO: OK
+25.02.2011 15:38:41 Command: reset 
+INFO: OK
+25.02.2011 15:38:42 Command: request 
+INFO: OK
+25.02.2011 15:38:43 Command: request 
+INFO: OK
+25.02.2011 15:38:45 Command: request 
+INFO: OK
+25.02.2011 15:38:46 Command: request 
+INFO: OK
+25.02.2011 15:58:38 Command: reset 
+INFO: OK
+25.02.2011 15:58:38 Command: request 
+INFO: OK
+25.02.2011 15:58:43 Command: request 
+INFO: OK
+25.02.2011 15:58:44 Command: request 
+INFO: OK
+25.02.2011 15:59:55 Command: request 
+INFO: OK
+25.02.2011 15:59:56 Command: request 
+INFO: OK
+25.02.2011 15:59:57 Command: request 
+INFO: OK
+25.02.2011 16:00:42 Command: request 
+INFO: OK
+25.02.2011 16:00:52 Command: request 
+INFO: OK
+25.02.2011 16:00:52 Command: work 
+INFO: Agenda: intro_agenda | Move: null | Speak: null
+25.02.2011 16:01:05 Command: reset 
+INFO: OK
+25.02.2011 16:01:08 Command: request 
+INFO: noinput
+25.02.2011 16:01:08 Command: work 
+INFO: Agenda: intro_agenda | Move: null | Speak: null

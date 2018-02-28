@@ -1,0 +1,68 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+    xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:p1="http://localhost:8080/Atraco/OwlSpeakOnto.owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+    xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns="http://localhost:8080/Atraco/curtain.owl#" > 
+  <rdf:Description rdf:about="http://localhost:8080/Atraco/curtain.owl#userWorkspace">
+    <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#WorkSpace"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/Atraco/curtain.owl#stop_move">
+    <p1:grammar rdf:resource="http://localhost:8080/Atraco/curtain.owl#stop_grammar"/>
+    <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Move"/>
+    <p1:semantic rdf:resource="http://localhost:8080/Atraco/curtain.owl#stop_semantic"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/Atraco/curtain.owl#close_move">
+    <p1:semantic rdf:resource="http://localhost:8080/Atraco/curtain.owl#close_semantic"/>
+    <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Move"/>
+    <p1:grammar rdf:resource="http://localhost:8080/Atraco/curtain.owl#close_grammar"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/Atraco/curtain.owl#open_grammar">
+    <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Grammar"/>
+    <p1:grammarString xml:lang="en">(curtains open)</p1:grammarString>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/Atraco/curtain.owl#stop_semantic">
+    <p1:semanticString xml:lang="en">curtain_stop;</p1:semanticString>
+    <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Semantic"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/Atraco/curtain.owl#close_grammar">
+    <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Grammar"/>
+    <p1:grammarString xml:lang="en">(curtains close)</p1:grammarString>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/Atraco/curtain.owl#open_semantic">
+    <p1:semanticString xml:lang="en">curtain_open;</p1:semanticString>
+    <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Semantic"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/Atraco/curtain.owl#open_move">
+    <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Move"/>
+    <p1:grammar rdf:resource="http://localhost:8080/Atraco/curtain.owl#open_grammar"/>
+    <p1:semantic rdf:resource="http://localhost:8080/Atraco/curtain.owl#open_semantic"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/Atraco/curtain.owl#respawns_agenda">
+    <p1:respawn rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</p1:respawn>
+    <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Agenda"/>
+    <p1:has rdf:resource="http://localhost:8080/Atraco/curtain.owl#close_move"/>
+    <p1:has rdf:resource="http://localhost:8080/Atraco/curtain.owl#stop_move"/>
+    <p1:has rdf:resource="http://localhost:8080/Atraco/curtain.owl#open_move"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/Atraco/curtain.owl#stop_grammar">
+    <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Grammar"/>
+    <p1:grammarString xml:lang="en">(curtains stop)</p1:grammarString>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/Atraco/curtain.owl">
+    <owl:imports rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/Atraco/curtain.owl#close_semantic">
+    <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Semantic"/>
+    <p1:semanticString xml:lang="en">curtain_close;</p1:semanticString>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/Atraco/curtain.owl#userBeliefspace">
+    <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#BeliefSpace"/>
+  </rdf:Description>
+</rdf:RDF>

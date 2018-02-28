@@ -1,0 +1,176 @@
+17.02.2011 08:37:07 Command: reset 
+INFO: OK
+17.02.2011 08:37:09 Command: request 
+INFO: OK
+17.02.2011 08:37:20 Command: work 
+INFO: Agenda: question_agenda | Move: yesnoquestion_a1n1d_no_move | Speak: null
+17.02.2011 08:37:20 Command: work 
+INFO: Agenda: fault | Move: heating_a1n1d_on_move | Speak: null
+17.02.2011 08:37:21 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_veryHigh_move | Speak: null
+17.02.2011 08:37:22 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_veryLow_move | Speak: null
+17.02.2011 08:37:22 Command: work 
+INFO: Agenda: fault | Move: music_a1n1d_start_move | Speak: null
+17.02.2011 08:37:24 Command: work 
+INFO: Agenda: fault | Move: music_a1n1d_selectChill_move | Speak: null
+17.02.2011 08:37:25 Command: work 
+INFO: Agenda: fault | Move: music_a1n1d_musicDown_move | Speak: null
+17.02.2011 08:37:27 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_medium_move | Speak: null
+17.02.2011 09:45:57 Command: request 
+INFO: OK
+17.02.2011 09:45:59 Command: request 
+INFO: OK
+17.02.2011 09:45:59 Command: request 
+INFO: OK
+17.02.2011 09:46:00 Command: request 
+INFO: OK
+17.02.2011 09:46:00 Command: request 
+INFO: OK
+17.02.2011 09:46:00 Command: request 
+INFO: OK
+17.02.2011 09:46:01 Command: request 
+INFO: OK
+17.02.2011 09:46:01 Command: request 
+INFO: OK
+17.02.2011 09:46:01 Command: request 
+INFO: OK
+17.02.2011 09:46:01 Command: request 
+INFO: OK
+17.02.2011 09:46:02 Command: work 
+INFO: Agenda: fault | Move: alarm_a1n1d_on_move | Speak: null
+17.02.2011 09:46:02 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_LigthsOn_move | Speak: null
+17.02.2011 09:46:04 Command: work 
+INFO: Agenda: fault | Move: music_a1n1d_exit_move | Speak: null
+17.02.2011 09:46:05 Command: work 
+INFO: Agenda: fault | Move: alarm_a1n1d_off_move | Speak: null
+17.02.2011 09:46:05 Command: work 
+INFO: Agenda: fault | Move: heating_a1n1d_on_move | Speak: null
+17.02.2011 09:46:06 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_veryHigh_move | Speak: null
+17.02.2011 09:46:07 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_high_move | Speak: null
+17.02.2011 09:46:07 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_medium_move | Speak: null
+17.02.2011 09:46:08 Command: work 
+INFO: Agenda: fault | Move: alarm_a1n1d_off_move | Speak: null
+17.02.2011 09:46:09 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_LigthsOn_move | Speak: null
+17.02.2011 09:46:09 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_LigthsOn_move | Speak: null
+17.02.2011 09:46:09 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_LigthsOn_move | Speak: null
+17.02.2011 09:46:09 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_veryHigh_move | Speak: null
+17.02.2011 09:46:09 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_veryHigh_move | Speak: null
+17.02.2011 09:46:10 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_start_move | Speak: null
+17.02.2011 09:46:11 Command: work 
+INFO: Agenda: fault | Move: heating_a1n1d_off_move | Speak: null
+17.02.2011 09:46:12 Command: work 
+INFO: Agenda: fault | Move: heating_a1n1d_off_move | Speak: null
+17.02.2011 09:46:12 Command: work 
+INFO: Agenda: fault | Move: heating_a1n1d_off_move | Speak: null
+17.02.2011 09:46:12 Command: work 
+INFO: Agenda: fault | Move: heating_a1n1d_off_move | Speak: null
+17.02.2011 09:46:12 Command: work 
+INFO: Agenda: fault | Move: heating_a1n1d_off_move | Speak: null
+17.02.2011 09:46:12 Command: work 
+INFO: Agenda: fault | Move: heating_a1n1d_off_move | Speak: null
+17.02.2011 09:46:13 Command: work 
+INFO: Agenda: fault | Move: heating_a1n1d_off_move | Speak: null
+17.02.2011 09:46:13 Command: work 
+INFO: Agenda: fault | Move: heating_a1n1d_off_move | Speak: null
+17.02.2011 09:46:13 Command: work 
+INFO: Agenda: fault | Move: heating_a1n1d_off_move | Speak: null
+17.02.2011 09:46:13 Command: work 
+INFO: Agenda: fault | Move: heating_a1n1d_off_move | Speak: null
+17.02.2011 09:46:14 Command: work 
+INFO: Agenda: fault | Move: heating_a1n1d_off_move | Speak: null
+17.02.2011 09:46:14 Command: work 
+INFO: Agenda: fault | Move: heating_a1n1d_off_move | Speak: null
+17.02.2011 09:46:14 Command: work 
+INFO: Agenda: fault | Move: heating_a1n1d_off_move | Speak: null
+17.02.2011 09:46:15 Command: work 
+INFO: Agenda: fault | Move: heating_a1n1d_off_move | Speak: null
+17.02.2011 09:46:15 Command: work 
+INFO: Agenda: fault | Move: heating_a1n1d_off_move | Speak: null
+17.02.2011 09:46:15 Command: work 
+INFO: Agenda: fault | Move: heating_a1n1d_off_move | Speak: null
+17.02.2011 09:46:16 Command: work 
+INFO: Agenda: fault | Move: heating_a1n1d_off_move | Speak: null
+17.02.2011 09:46:16 Command: work 
+INFO: Agenda: fault | Move: heating_a1n1d_off_move | Speak: null
+17.02.2011 09:46:16 Command: work 
+INFO: Agenda: fault | Move: heating_a1n1d_off_move | Speak: null
+17.02.2011 09:46:17 Command: work 
+INFO: Agenda: fault | Move: heating_a1n1d_off_move | Speak: null
+17.02.2011 09:46:17 Command: work 
+INFO: Agenda: fault | Move: heating_a1n1d_off_move | Speak: null
+17.02.2011 09:46:17 Command: work 
+INFO: Agenda: fault | Move: heating_a1n1d_off_move | Speak: null
+17.02.2011 09:46:18 Command: work 
+INFO: Agenda: fault | Move: heating_a1n1d_off_move | Speak: null
+17.02.2011 09:46:18 Command: work 
+INFO: Agenda: fault | Move: heating_a1n1d_off_move | Speak: null
+17.02.2011 09:46:18 Command: work 
+INFO: Agenda: fault | Move: heating_a1n1d_off_move | Speak: null
+17.02.2011 09:46:18 Command: work 
+INFO: Agenda: fault | Move: heating_a1n1d_off_move | Speak: null
+17.02.2011 09:46:19 Command: work 
+INFO: Agenda: fault | Move: heating_a1n1d_off_move | Speak: null
+17.02.2011 09:46:19 Command: work 
+INFO: Agenda: fault | Move: heating_a1n1d_off_move | Speak: null
+17.02.2011 09:46:19 Command: work 
+INFO: Agenda: fault | Move: heating_a1n1d_off_move | Speak: null
+17.02.2011 09:46:19 Command: work 
+INFO: Agenda: fault | Move: heating_a1n1d_off_move | Speak: null
+17.02.2011 09:46:19 Command: work 
+INFO: Agenda: fault | Move: heating_a1n1d_off_move | Speak: null
+17.02.2011 09:46:20 Command: work 
+INFO: Agenda: fault | Move: heating_a1n1d_off_move | Speak: null
+17.02.2011 09:46:20 Command: work 
+INFO: Agenda: fault | Move: heating_a1n1d_off_move | Speak: null
+17.02.2011 09:46:20 Command: work 
+INFO: Agenda: fault | Move: heating_a1n1d_off_move | Speak: null
+17.02.2011 09:46:20 Command: work 
+INFO: Agenda: fault | Move: heating_a1n1d_off_move | Speak: null
+17.02.2011 09:46:21 Command: work 
+INFO: Agenda: fault | Move: heating_a1n1d_off_move | Speak: null
+17.02.2011 09:46:21 Command: work 
+INFO: Agenda: fault | Move: heating_a1n1d_off_move | Speak: null
+17.02.2011 09:46:21 Command: work 
+INFO: Agenda: fault | Move: heating_a1n1d_off_move | Speak: null
+17.02.2011 09:46:22 Command: work 
+INFO: Agenda: fault | Move: heating_a1n1d_off_move | Speak: null
+17.02.2011 09:46:22 Command: work 
+INFO: Agenda: fault | Move: heating_a1n1d_off_move | Speak: null
+17.02.2011 09:46:22 Command: work 
+INFO: Agenda: fault | Move: heating_a1n1d_off_move | Speak: null
+17.02.2011 09:46:22 Command: work 
+INFO: Agenda: fault | Move: heating_a1n1d_off_move | Speak: null
+17.02.2011 09:46:22 Command: work 
+INFO: Agenda: fault | Move: heating_a1n1d_off_move | Speak: null
+17.02.2011 09:46:23 Command: work 
+INFO: Agenda: fault | Move: heating_a1n1d_off_move | Speak: null
+17.02.2011 09:46:23 Command: work 
+INFO: Agenda: fault | Move: heating_a1n1d_off_move | Speak: null
+17.02.2011 09:46:23 Command: work 
+INFO: Agenda: fault | Move: heating_a1n1d_off_move | Speak: null
+17.02.2011 09:46:23 Command: work 
+INFO: Agenda: fault | Move: heating_a1n1d_off_move | Speak: null
+17.02.2011 09:46:30 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_exit_move | Speak: null
+17.02.2011 09:47:06 Command: request 
+INFO: OK
+17.02.2011 09:47:07 Command: request 
+INFO: OK
+17.02.2011 09:47:07 Command: request 
+INFO: OK
+17.02.2011 09:47:09 Command: request 
+INFO: OK
+17.02.2011 09:47:09 Command: request 
+INFO: OK

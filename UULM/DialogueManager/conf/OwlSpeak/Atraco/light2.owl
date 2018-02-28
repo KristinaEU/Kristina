@@ -1,0 +1,616 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://localhost:8080/Atraco/light.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     ontologyIRI="http://localhost:8080/Atraco/light.owl">
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="swrlb" IRI="http://www.w3.org/2003/11/swrlb#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="protege" IRI="http://protege.stanford.edu/plugins/owl/protege#"/>
+    <Prefix name="xsp" IRI="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"/>
+    <Prefix name="" IRI="http://localhost:8080/Atraco/light.owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="swrl" IRI="http://www.w3.org/2003/11/swrl#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="p1" IRI="http://localhost:8080/Atraco/OwlSpeakOnto.owl#"/>
+    <Import>http://localhost:8080/Atraco/OwlSpeakOnto.owl</Import>
+    <Declaration>
+        <NamedIndividual IRI="#Belief_-1731112853"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Belief_-184337327"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DialogueDomain_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DialogueDomain_2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#LightsOff_grammar"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#LightsOff_move"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#LightsOff_semantic"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#LightsOn_Semantic"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#LightsOn_grammar"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#LigthsOn_move"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#high_grammar"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#high_move"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#high_semantic"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#light_agenda"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#low_grammar"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#low_move"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#low_semantic"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#medium_grammar"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#medium_move"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#medium_semantic"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#userBeliefspace"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#userWorkspace"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#veryHigh_grammar"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#veryHigh_move"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#veryHigh_semantic"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#veryLow_grammar"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#veryLow_move"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#veryLow_semantic"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class abbreviatedIRI="p1:Belief"/>
+        <NamedIndividual IRI="#Belief_-1731112853"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="p1:Belief"/>
+        <NamedIndividual IRI="#Belief_-184337327"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="p1:DialogueDomain"/>
+        <NamedIndividual IRI="#DialogueDomain_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="p1:DialogueDomain"/>
+        <NamedIndividual IRI="#DialogueDomain_2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="p1:Grammar"/>
+        <NamedIndividual IRI="#LightsOff_grammar"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="p1:Move"/>
+        <NamedIndividual IRI="#LightsOff_move"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="p1:Semantic"/>
+        <NamedIndividual IRI="#LightsOff_semantic"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="p1:Semantic"/>
+        <NamedIndividual IRI="#LightsOn_Semantic"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="p1:Grammar"/>
+        <NamedIndividual IRI="#LightsOn_grammar"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="p1:Move"/>
+        <NamedIndividual IRI="#LigthsOn_move"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="p1:Grammar"/>
+        <NamedIndividual IRI="#high_grammar"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="p1:Move"/>
+        <NamedIndividual IRI="#high_move"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="p1:Semantic"/>
+        <NamedIndividual IRI="#high_semantic"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="p1:Agenda"/>
+        <NamedIndividual IRI="#light_agenda"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="p1:Grammar"/>
+        <NamedIndividual IRI="#low_grammar"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="p1:Move"/>
+        <NamedIndividual IRI="#low_move"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="p1:Semantic"/>
+        <NamedIndividual IRI="#low_semantic"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="p1:Grammar"/>
+        <NamedIndividual IRI="#medium_grammar"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="p1:Move"/>
+        <NamedIndividual IRI="#medium_move"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="p1:Semantic"/>
+        <NamedIndividual IRI="#medium_semantic"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="p1:BeliefSpace"/>
+        <NamedIndividual IRI="#userBeliefspace"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="p1:WorkSpace"/>
+        <NamedIndividual IRI="#userWorkspace"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="p1:Grammar"/>
+        <NamedIndividual IRI="#veryHigh_grammar"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="p1:Move"/>
+        <NamedIndividual IRI="#veryHigh_move"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="p1:Semantic"/>
+        <NamedIndividual IRI="#veryHigh_semantic"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="p1:Grammar"/>
+        <NamedIndividual IRI="#veryLow_grammar"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="p1:Move"/>
+        <NamedIndividual IRI="#veryLow_move"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="p1:Semantic"/>
+        <NamedIndividual IRI="#veryLow_semantic"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="p1:semantic"/>
+        <NamedIndividual IRI="#Belief_-1731112853"/>
+        <NamedIndividual IRI="#medium_semantic"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="p1:semantic"/>
+        <NamedIndividual IRI="#Belief_-184337327"/>
+        <NamedIndividual IRI="#LightsOn_Semantic"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="p1:contrarySemantic"/>
+        <NamedIndividual IRI="#LightsOff_move"/>
+        <NamedIndividual IRI="#LightsOn_Semantic"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="p1:grammar"/>
+        <NamedIndividual IRI="#LightsOff_move"/>
+        <NamedIndividual IRI="#LightsOff_grammar"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="p1:semantic"/>
+        <NamedIndividual IRI="#LightsOff_move"/>
+        <NamedIndividual IRI="#LightsOff_semantic"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="p1:contrarySemantic"/>
+        <NamedIndividual IRI="#LigthsOn_move"/>
+        <NamedIndividual IRI="#LightsOff_semantic"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="p1:grammar"/>
+        <NamedIndividual IRI="#LigthsOn_move"/>
+        <NamedIndividual IRI="#LightsOn_grammar"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="p1:semantic"/>
+        <NamedIndividual IRI="#LigthsOn_move"/>
+        <NamedIndividual IRI="#LightsOn_Semantic"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="p1:contrarySemantic"/>
+        <NamedIndividual IRI="#high_move"/>
+        <NamedIndividual IRI="#veryHigh_semantic"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="p1:contrarySemantic"/>
+        <NamedIndividual IRI="#high_move"/>
+        <NamedIndividual IRI="#medium_semantic"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="p1:contrarySemantic"/>
+        <NamedIndividual IRI="#high_move"/>
+        <NamedIndividual IRI="#veryLow_semantic"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="p1:contrarySemantic"/>
+        <NamedIndividual IRI="#high_move"/>
+        <NamedIndividual IRI="#low_semantic"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="p1:contrarySemantic"/>
+        <NamedIndividual IRI="#high_move"/>
+        <NamedIndividual IRI="#LightsOff_semantic"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="p1:grammar"/>
+        <NamedIndividual IRI="#high_move"/>
+        <NamedIndividual IRI="#high_grammar"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="p1:semantic"/>
+        <NamedIndividual IRI="#high_move"/>
+        <NamedIndividual IRI="#high_semantic"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="p1:has"/>
+        <NamedIndividual IRI="#light_agenda"/>
+        <NamedIndividual IRI="#medium_move"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="p1:has"/>
+        <NamedIndividual IRI="#light_agenda"/>
+        <NamedIndividual IRI="#high_move"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="p1:has"/>
+        <NamedIndividual IRI="#light_agenda"/>
+        <NamedIndividual IRI="#low_move"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="p1:has"/>
+        <NamedIndividual IRI="#light_agenda"/>
+        <NamedIndividual IRI="#veryLow_move"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="p1:has"/>
+        <NamedIndividual IRI="#light_agenda"/>
+        <NamedIndividual IRI="#LightsOff_move"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="p1:has"/>
+        <NamedIndividual IRI="#light_agenda"/>
+        <NamedIndividual IRI="#veryHigh_move"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="p1:has"/>
+        <NamedIndividual IRI="#light_agenda"/>
+        <NamedIndividual IRI="#LigthsOn_move"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="p1:contrarySemantic"/>
+        <NamedIndividual IRI="#low_move"/>
+        <NamedIndividual IRI="#LightsOff_semantic"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="p1:contrarySemantic"/>
+        <NamedIndividual IRI="#low_move"/>
+        <NamedIndividual IRI="#veryHigh_semantic"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="p1:contrarySemantic"/>
+        <NamedIndividual IRI="#low_move"/>
+        <NamedIndividual IRI="#veryLow_semantic"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="p1:contrarySemantic"/>
+        <NamedIndividual IRI="#low_move"/>
+        <NamedIndividual IRI="#medium_semantic"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="p1:contrarySemantic"/>
+        <NamedIndividual IRI="#low_move"/>
+        <NamedIndividual IRI="#high_semantic"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="p1:grammar"/>
+        <NamedIndividual IRI="#low_move"/>
+        <NamedIndividual IRI="#low_grammar"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="p1:semantic"/>
+        <NamedIndividual IRI="#low_move"/>
+        <NamedIndividual IRI="#low_semantic"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="p1:contrarySemantic"/>
+        <NamedIndividual IRI="#medium_move"/>
+        <NamedIndividual IRI="#high_semantic"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="p1:contrarySemantic"/>
+        <NamedIndividual IRI="#medium_move"/>
+        <NamedIndividual IRI="#veryHigh_semantic"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="p1:contrarySemantic"/>
+        <NamedIndividual IRI="#medium_move"/>
+        <NamedIndividual IRI="#LightsOff_semantic"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="p1:contrarySemantic"/>
+        <NamedIndividual IRI="#medium_move"/>
+        <NamedIndividual IRI="#low_semantic"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="p1:contrarySemantic"/>
+        <NamedIndividual IRI="#medium_move"/>
+        <NamedIndividual IRI="#veryLow_semantic"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="p1:grammar"/>
+        <NamedIndividual IRI="#medium_move"/>
+        <NamedIndividual IRI="#medium_grammar"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="p1:semantic"/>
+        <NamedIndividual IRI="#medium_move"/>
+        <NamedIndividual IRI="#medium_semantic"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="p1:hasBelief"/>
+        <NamedIndividual IRI="#userBeliefspace"/>
+        <NamedIndividual IRI="#Belief_-1731112853"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="p1:hasBelief"/>
+        <NamedIndividual IRI="#userBeliefspace"/>
+        <NamedIndividual IRI="#Belief_-184337327"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="p1:contrarySemantic"/>
+        <NamedIndividual IRI="#veryHigh_move"/>
+        <NamedIndividual IRI="#LightsOff_semantic"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="p1:contrarySemantic"/>
+        <NamedIndividual IRI="#veryHigh_move"/>
+        <NamedIndividual IRI="#low_semantic"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="p1:contrarySemantic"/>
+        <NamedIndividual IRI="#veryHigh_move"/>
+        <NamedIndividual IRI="#medium_semantic"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="p1:contrarySemantic"/>
+        <NamedIndividual IRI="#veryHigh_move"/>
+        <NamedIndividual IRI="#high_semantic"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="p1:contrarySemantic"/>
+        <NamedIndividual IRI="#veryHigh_move"/>
+        <NamedIndividual IRI="#veryLow_semantic"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="p1:grammar"/>
+        <NamedIndividual IRI="#veryHigh_move"/>
+        <NamedIndividual IRI="#veryHigh_grammar"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="p1:semantic"/>
+        <NamedIndividual IRI="#veryHigh_move"/>
+        <NamedIndividual IRI="#veryHigh_semantic"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="p1:contrarySemantic"/>
+        <NamedIndividual IRI="#veryLow_move"/>
+        <NamedIndividual IRI="#high_semantic"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="p1:contrarySemantic"/>
+        <NamedIndividual IRI="#veryLow_move"/>
+        <NamedIndividual IRI="#medium_semantic"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="p1:contrarySemantic"/>
+        <NamedIndividual IRI="#veryLow_move"/>
+        <NamedIndividual IRI="#veryHigh_semantic"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="p1:contrarySemantic"/>
+        <NamedIndividual IRI="#veryLow_move"/>
+        <NamedIndividual IRI="#low_semantic"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="p1:contrarySemantic"/>
+        <NamedIndividual IRI="#veryLow_move"/>
+        <NamedIndividual IRI="#LightsOff_semantic"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="p1:grammar"/>
+        <NamedIndividual IRI="#veryLow_move"/>
+        <NamedIndividual IRI="#veryLow_grammar"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="p1:semantic"/>
+        <NamedIndividual IRI="#veryLow_move"/>
+        <NamedIndividual IRI="#veryLow_semantic"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="p1:grammarString"/>
+        <NamedIndividual IRI="#LightsOff_grammar"/>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(licht aus)</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="p1:grammarString"/>
+        <NamedIndividual IRI="#LightsOff_grammar"/>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">[(light off) (lights off)]</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="p1:semanticString"/>
+        <NamedIndividual IRI="#LightsOff_semantic"/>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">light_level;off</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="p1:semanticString"/>
+        <NamedIndividual IRI="#LightsOn_Semantic"/>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">light_level;on</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="p1:grammarString"/>
+        <NamedIndividual IRI="#LightsOn_grammar"/>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">[(light on) (lights on)]</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="p1:grammarString"/>
+        <NamedIndividual IRI="#LightsOn_grammar"/>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(licht an)</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="p1:grammarString"/>
+        <NamedIndividual IRI="#high_grammar"/>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">[(light high)(lights high)]</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="p1:grammarString"/>
+        <NamedIndividual IRI="#high_grammar"/>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(helles licht)</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="p1:semanticString"/>
+        <NamedIndividual IRI="#high_semantic"/>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">light_level;High</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="p1:priority"/>
+        <NamedIndividual IRI="#light_agenda"/>
+        <Literal datatypeIRI="&xsd;int">80</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="p1:respawn"/>
+        <NamedIndividual IRI="#light_agenda"/>
+        <Literal datatypeIRI="&xsd;boolean">true</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="p1:grammarString"/>
+        <NamedIndividual IRI="#low_grammar"/>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(mattes licht)</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="p1:grammarString"/>
+        <NamedIndividual IRI="#low_grammar"/>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">[(light low)(lights low)]</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="p1:semanticString"/>
+        <NamedIndividual IRI="#low_semantic"/>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">light_level;Low</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="p1:grammarString"/>
+        <NamedIndividual IRI="#medium_grammar"/>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(normales licht)</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="p1:grammarString"/>
+        <NamedIndividual IRI="#medium_grammar"/>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">[(light medium)(lights medium)]</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="p1:semanticString"/>
+        <NamedIndividual IRI="#medium_semantic"/>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">light_level;Medium</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="p1:grammarString"/>
+        <NamedIndividual IRI="#veryHigh_grammar"/>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(sehr helles licht)</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="p1:grammarString"/>
+        <NamedIndividual IRI="#veryHigh_grammar"/>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">[(light very high)(lights very high)]</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="p1:semanticString"/>
+        <NamedIndividual IRI="#veryHigh_semantic"/>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">light_level;VeryHigh</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="p1:grammarString"/>
+        <NamedIndividual IRI="#veryLow_grammar"/>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(sehr mattes licht)</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="p1:grammarString"/>
+        <NamedIndividual IRI="#veryLow_grammar"/>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">[(light very low)(lights very low)]</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="p1:semanticString"/>
+        <NamedIndividual IRI="#veryLow_semantic"/>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">light_level;VeryLow</Literal>
+    </DataPropertyAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="p1:domainName"/>
+        <IRI>#DialogueDomain_1</IRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">licht</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="p1:domainName"/>
+        <IRI>#DialogueDomain_1</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">light</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.1.0.1602) http://owlapi.sourceforge.net -->
+

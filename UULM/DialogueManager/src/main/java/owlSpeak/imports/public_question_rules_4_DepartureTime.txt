@@ -1,0 +1,16 @@
+public <4_DepartureTime> = [<pre_assertion>] [<I_D_LIKE>] <LEAVE> <day_time> | [<pre_assertion>] <IS_THERE> a bus <LEAVING> <day_time> | [<pre_assertion>] <I_M_LEAVING> <day_time>;
+<IS_THERE> = is there | i'd like | i would like | i want | i need | <I_AM> looking for;
+<I_D_LIKE> = i'd like to | i would like to | i want to | i wanna | i need to | i have to;
+<LEAVING> = that leaves | that leave | leaving | that go | that goes | going;
+<LEAVE> = leave | leaves | go | goes;
+<I_M_LEAVING> = [<I_AM>] leaving | [<I_AM>] going;
+<I_AM> = i am | i'm | i'll be | i will be;
+<AT_AROUND> = at | around | at around;/*End of Slot*/
+public <4_DepartureTime> = [<pre_assertion>] [<I_D_LIKE>] <LEAVE> <day_time> | [<pre_assertion>] <IS_THERE> a bus <LEAVING> <day_time> | [<pre_assertion>] <I_M_LEAVING> <day_time>;
+<IS_THERE> = is there | i'd like | i would like | i want | i need | <I_AM> looking for;
+<I_D_LIKE> = i'd like to | i would like to | i want to | i wanna | i need to | i have to;
+<LEAVING> = that leaves | that leave | leaving | that go | that goes | going;
+<LEAVE> = leave | leaves | go | goes;
+<I_M_LEAVING> = [<I_AM>] leaving | [<I_AM>] going;
+<I_AM> = i am | i'm | i'll be | i will be;
+<AT_AROUND> = at | around | at around;/*End of Slot*/

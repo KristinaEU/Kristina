@@ -1,0 +1,12 @@
+public <Suspend> = [<_lets>] <HOLD_ON> [<FOR_TIME>] [<_courtesy>] | [<_lets>] <TAKE_A_BREAK> [<FOR_TIME>] [<_courtesy>] | [<_courtesy>] <HOLD_ON> [<FOR_TIME>] | [<_courtesy>] <TAKE_A_BREAK> [<FOR_TIME>];
+<HOLD_ON> = hold [on] [<_courtesy>] | pause | break | stand by [<_courtesy>] | suspend [<_this>] [<ACTIVITY>];
+<ACTIVITY> = activity | dialog | dialogue | conversation | session;
+<TAKE_A_BREAK> = take a [<SHORT>] break | have a [<SHORT>] break | break;
+<SHORT> = short | quick | small | little;
+<FOR_TIME> = [for] a while | [for] now | [for] a second;/*End of Slot*/
+public <Suspend> = [<_lets>] <HOLD_ON> [<FOR_TIME>] [<_courtesy>] | [<_lets>] <TAKE_A_BREAK> [<FOR_TIME>] [<_courtesy>] | [<_courtesy>] <HOLD_ON> [<FOR_TIME>] | [<_courtesy>] <TAKE_A_BREAK> [<FOR_TIME>];
+<HOLD_ON> = hold [on] [<_courtesy>] | pause | break | stand by [<_courtesy>] | suspend [<_this>] [<ACTIVITY>];
+<ACTIVITY> = activity | dialog | dialogue | conversation | session;
+<TAKE_A_BREAK> = take a [<SHORT>] break | have a [<SHORT>] break | break;
+<SHORT> = short | quick | small | little;
+<FOR_TIME> = [for] a while | [for] now | [for] a second;/*End of Slot*/

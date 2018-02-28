@@ -1,0 +1,140 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://localhost:8080/Atraco/heating.owl#"
+     xml:base="http://localhost:8080/Atraco/heating.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+     xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
+     xmlns:p1="http://localhost:8080/Atraco/OwlSpeakOnto.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://localhost:8080/Atraco/heating.owl">
+        <owl:imports rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://localhost:8080/Atraco/heating.owl#DialogueDomain_1 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/heating.owl#DialogueDomain_1">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#DialogueDomain"/>
+        <p1:domainName xml:lang="de">heizung</p1:domainName>
+        <p1:domainName xml:lang="en">heating</p1:domainName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/heating.owl#off_grammar -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/heating.owl#off_grammar">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Grammar"/>
+        <p1:grammarString xml:lang="de">(heizung aus)</p1:grammarString>
+        <p1:grammarString xml:lang="en">(heating off)</p1:grammarString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/heating.owl#off_move -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/heating.owl#off_move">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Move"/>
+        <p1:grammar rdf:resource="http://localhost:8080/Atraco/heating.owl#off_grammar"/>
+        <p1:semantic rdf:resource="http://localhost:8080/Atraco/heating.owl#off_semantic"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/Atraco/heating.owl#on_semantic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/heating.owl#off_semantic -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/heating.owl#off_semantic">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Semantic"/>
+        <p1:semanticString xml:lang="en">heating_level;0</p1:semanticString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/heating.owl#on_grammar -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/heating.owl#on_grammar">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Grammar"/>
+        <p1:grammarString xml:lang="de">(heizung an)</p1:grammarString>
+        <p1:grammarString xml:lang="en">(heating on)</p1:grammarString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/heating.owl#on_move -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/heating.owl#on_move">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Move"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/Atraco/heating.owl#off_semantic"/>
+        <p1:grammar rdf:resource="http://localhost:8080/Atraco/heating.owl#on_grammar"/>
+        <p1:semantic rdf:resource="http://localhost:8080/Atraco/heating.owl#on_semantic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/heating.owl#on_semantic -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/heating.owl#on_semantic">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Semantic"/>
+        <p1:semanticString xml:lang="en">heating_level;1</p1:semanticString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/heating.owl#respawns_agenda -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/heating.owl#respawns_agenda">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Agenda"/>
+        <p1:respawn rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</p1:respawn>
+        <p1:has rdf:resource="http://localhost:8080/Atraco/heating.owl#off_move"/>
+        <p1:has rdf:resource="http://localhost:8080/Atraco/heating.owl#on_move"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/heating.owl#userBeliefspace -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/heating.owl#userBeliefspace">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#BeliefSpace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/heating.owl#userWorkspace -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/heating.owl#userWorkspace">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#WorkSpace"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.2.0.1502) http://owlapi.sourceforge.net -->
+

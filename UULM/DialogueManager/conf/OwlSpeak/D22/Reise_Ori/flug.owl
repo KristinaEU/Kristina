@@ -1,0 +1,2122 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://localhost:8080/D22/flug.owl#"
+     xml:base="http://localhost:8080/D22/flug.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+     xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
+     xmlns:p1="http://localhost:8080/OwlSpeakOnto.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://localhost:8080/D22/flug.owl">
+        <owl:imports rdf:resource="http://localhost:8080/OwlSpeakOnto.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#At_what_time_to_leave_utt -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#At_what_time_to_leave_utt">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Utterance"/>
+        <p1:utteranceString xml:lang="de">Wann wollen sie von %to_town_de% abfliegen?</p1:utteranceString>
+        <p1:utteranceString xml:lang="en">At what time do you want to leave %to_town%?</p1:utteranceString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#At_what_time_to_start_utt -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#At_what_time_to_start_utt">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Utterance"/>
+        <p1:utteranceString xml:lang="de">Wann wollen sie von %from_airport_de% abfliegen?</p1:utteranceString>
+        <p1:utteranceString xml:lang="en">At what time do you want to depart from %from_airport%?</p1:utteranceString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#Egypt_gram -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#Egypt_gram">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Grammar"/>
+        <p1:grammarString xml:lang="de">(aegypten)</p1:grammarString>
+        <p1:grammarString xml:lang="en">(egypt)</p1:grammarString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#Hello_user_utt -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#Hello_user_utt">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Utterance"/>
+        <p1:utteranceString xml:lang="de">In welches Land wollen sie fliegen?</p1:utteranceString>
+        <p1:utteranceString xml:lang="en">To what country do you want to fly?</p1:utteranceString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#History-1035505243 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#History-1035505243">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#History"/>
+        <p1:addTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</p1:addTime>
+        <p1:agendaPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">90</p1:agendaPriority>
+        <p1:forAgenda rdf:resource="http://localhost:8080/D22/flug.owl#say_options_country_agenda"/>
+        <p1:inWorkspace rdf:resource="http://localhost:8080/D22/flug.owl#userWorkspace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#History-1284471718 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#History-1284471718">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#History"/>
+        <p1:addTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</p1:addTime>
+        <p1:agendaPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">90</p1:agendaPriority>
+        <p1:forAgenda rdf:resource="http://localhost:8080/D22/flug.owl#say_options_return_seventeenth_agenda"/>
+        <p1:inWorkspace rdf:resource="http://localhost:8080/D22/flug.owl#userWorkspace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#History-1370376348 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#History-1370376348">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#History"/>
+        <p1:addTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</p1:addTime>
+        <p1:agendaPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">90</p1:agendaPriority>
+        <p1:forAgenda rdf:resource="http://localhost:8080/D22/flug.owl#say_options_time_agenda"/>
+        <p1:inWorkspace rdf:resource="http://localhost:8080/D22/flug.owl#userWorkspace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#History-85595790 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#History-85595790">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#History"/>
+        <p1:addTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</p1:addTime>
+        <p1:agendaPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">90</p1:agendaPriority>
+        <p1:forAgenda rdf:resource="http://localhost:8080/D22/flug.owl#say_options_date_agenda"/>
+        <p1:inWorkspace rdf:resource="http://localhost:8080/D22/flug.owl#userWorkspace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#History1322939285 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#History1322939285">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#History"/>
+        <p1:addTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</p1:addTime>
+        <p1:agendaPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">90</p1:agendaPriority>
+        <p1:forAgenda rdf:resource="http://localhost:8080/D22/flug.owl#say_options_airport_agenda"/>
+        <p1:inWorkspace rdf:resource="http://localhost:8080/D22/flug.owl#userWorkspace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#History1364972149 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#History1364972149">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#History"/>
+        <p1:addTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</p1:addTime>
+        <p1:agendaPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">50</p1:agendaPriority>
+        <p1:forAgenda rdf:resource="http://localhost:8080/D22/flug.owl#flight_as_hotel_agenda"/>
+        <p1:inWorkspace rdf:resource="http://localhost:8080/D22/flug.owl#userWorkspace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#History1393642782 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#History1393642782">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#History"/>
+        <p1:addTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</p1:addTime>
+        <p1:agendaPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">90</p1:agendaPriority>
+        <p1:forAgenda rdf:resource="http://localhost:8080/D22/flug.owl#say_options_return_fourth_agenda"/>
+        <p1:inWorkspace rdf:resource="http://localhost:8080/D22/flug.owl#userWorkspace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#History1434102713 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#History1434102713">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#History"/>
+        <p1:addTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</p1:addTime>
+        <p1:agendaPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">90</p1:agendaPriority>
+        <p1:forAgenda rdf:resource="http://localhost:8080/D22/flug.owl#say_options_america_agenda"/>
+        <p1:inWorkspace rdf:resource="http://localhost:8080/D22/flug.owl#userWorkspace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#History183484898 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#History183484898">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#History"/>
+        <p1:addTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</p1:addTime>
+        <p1:agendaPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">42</p1:agendaPriority>
+        <p1:forAgenda rdf:resource="http://localhost:8080/D22/flug.owl#hello_country_agenda"/>
+        <p1:inWorkspace rdf:resource="http://localhost:8080/D22/flug.owl#userWorkspace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#History791155532 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#History791155532">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#History"/>
+        <p1:addTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</p1:addTime>
+        <p1:agendaPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">90</p1:agendaPriority>
+        <p1:forAgenda rdf:resource="http://localhost:8080/D22/flug.owl#say_options_england_agenda"/>
+        <p1:inWorkspace rdf:resource="http://localhost:8080/D22/flug.owl#userWorkspace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#History868954196 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#History868954196">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#History"/>
+        <p1:addTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</p1:addTime>
+        <p1:agendaPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">90</p1:agendaPriority>
+        <p1:forAgenda rdf:resource="http://localhost:8080/D22/flug.owl#say_options_egypt_agenda"/>
+        <p1:inWorkspace rdf:resource="http://localhost:8080/D22/flug.owl#userWorkspace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#New_York_gram -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#New_York_gram">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Grammar"/>
+        <p1:grammarString xml:lang="de">(new york)</p1:grammarString>
+        <p1:grammarString xml:lang="en">(new york)</p1:grammarString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#On_what_day_to_return_utt -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#On_what_day_to_return_utt">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Utterance"/>
+        <p1:utteranceString xml:lang="de">Wann wollen sie nach deutschland zurückfliegen?</p1:utteranceString>
+        <p1:utteranceString xml:lang="en">On what day do you want to return to germany?</p1:utteranceString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#abu_simbel_gram -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#abu_simbel_gram">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Grammar"/>
+        <p1:grammarString xml:lang="de">(abu simbel)</p1:grammarString>
+        <p1:grammarString xml:lang="en">(abu simbel)</p1:grammarString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#abusimbel_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#abusimbel_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SET(to_town=AbuSimbel);(dialog_progress=airport);(to_town_de=AbuSimbel)</p1:variableOperator>
+        <p1:grammar rdf:resource="http://localhost:8080/D22/flug.owl#abu_simbel_gram"/>
+        <p1:semantic rdf:resource="http://localhost:8080/D22/flug.owl#town_abusimbel_sem"/>
+        <p1:semantic rdf:resource="http://localhost:8080/D22/flug.owl#town_said_sem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#additional_information -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#additional_information">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Variable"/>
+        <p1:defaultValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12</p1:defaultValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#airport_said_sem -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#airport_said_sem">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Semantic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#america_gram -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#america_gram">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Grammar"/>
+        <p1:grammarString xml:lang="de">(amerika)</p1:grammarString>
+        <p1:grammarString xml:lang="en">(america)</p1:grammarString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#america_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#america_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SET(to_country=America);(dialog_progress=america);(to_country_de=Amerika)</p1:variableOperator>
+        <p1:grammar rdf:resource="http://localhost:8080/D22/flug.owl#america_gram"/>
+        <p1:semantic rdf:resource="http://localhost:8080/D22/flug.owl#country_america"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/D22/flug.owl#country_egypt_sem"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/D22/flug.owl#country_england_sem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#at_eight_gram -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#at_eight_gram">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Grammar"/>
+        <p1:grammarString xml:lang="de">(?(ich moechte) um acht ?(uhr) ?[starten fliegen])</p1:grammarString>
+        <p1:grammarString xml:lang="en">(?(i want to fly) at eight ?(o&#39;clock))</p1:grammarString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#at_twelve_gram -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#at_twelve_gram">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Grammar"/>
+        <p1:grammarString xml:lang="de">(?(ich moechte) um zwoelf ?(uhr) ?[starten fliegen])</p1:grammarString>
+        <p1:grammarString xml:lang="en">(?(i want to fly) at twelve ?(o&#39;clock))</p1:grammarString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#chicago_gram -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#chicago_gram">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Grammar"/>
+        <p1:grammarString xml:lang="de">(chicago)</p1:grammarString>
+        <p1:grammarString xml:lang="en">(chicago)</p1:grammarString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#chicago_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#chicago_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SET(to_town=Chicago);(dialog_progress=airport);(to_town_de=Chicago)</p1:variableOperator>
+        <p1:grammar rdf:resource="http://localhost:8080/D22/flug.owl#chicago_gram"/>
+        <p1:semantic rdf:resource="http://localhost:8080/D22/flug.owl#town_chicago_sem"/>
+        <p1:semantic rdf:resource="http://localhost:8080/D22/flug.owl#town_said_sem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#correct_agenda -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#correct_agenda">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/flug.owl#correct_mv"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/flug.owl#flight_as_hotel_agenda"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/flug.owl#hello_country_agenda"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/flug.owl#no_mv"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/flug.owl#yes_mv"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#correct_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#correct_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:utterance rdf:resource="http://localhost:8080/D22/flug.owl#correct_utt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#correct_sem -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#correct_sem">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Semantic"/>
+        <p1:semanticString xml:lang="en">correct</p1:semanticString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#correct_utt -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#correct_utt">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Utterance"/>
+        <p1:utteranceString xml:lang="de">Sie wollen am %start_day_de% um %start_time_de% uhr von %from_airport_de% 
+    nach %to_town_de% und am %return_day_de% um %return_time_de% uhr zurueck, 
+    Ist das richtig?</p1:utteranceString>
+        <p1:utteranceString xml:lang="en">You stated that you want to fly from %from_airport% to %to_town% on the %start_day% at %start_time% o&#39;clock and return on the %return_day% at %return_time%, is this correct?</p1:utteranceString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#country_america -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#country_america">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Semantic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#country_egypt_sem -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#country_egypt_sem">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Semantic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#country_england_sem -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#country_england_sem">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Semantic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#country_said_sem -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#country_said_sem">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Semantic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#dialog_progress -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#dialog_progress">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Variable"/>
+        <p1:defaultValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">country</p1:defaultValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#do_you_wish_to_fly_utt -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#do_you_wish_to_fly_utt">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Utterance"/>
+        <p1:utteranceString xml:lang="de">Moechten sie einen zu ihrem hotel-aufenthalt passenden flug buchen?</p1:utteranceString>
+        <p1:utteranceString xml:lang="en">Do you want me to book your flight that it matches your hotel stay?</p1:utteranceString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#egypt_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#egypt_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SET(to_country=Egypt);(dialog_progress=egypt);(to_country_de=Aegypten)</p1:variableOperator>
+        <p1:grammar rdf:resource="http://localhost:8080/D22/flug.owl#Egypt_gram"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/D22/flug.owl#country_america"/>
+        <p1:semantic rdf:resource="http://localhost:8080/D22/flug.owl#country_egypt_sem"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/D22/flug.owl#country_england_sem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#england_gram -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#england_gram">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Grammar"/>
+        <p1:grammarString xml:lang="de">(england)</p1:grammarString>
+        <p1:grammarString xml:lang="en">(england)</p1:grammarString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#england_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#england_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SET(to_country=England);(dialog_progress=england);(to_town_de=England)</p1:variableOperator>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/D22/flug.owl#country_america"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/D22/flug.owl#country_egypt_sem"/>
+        <p1:semantic rdf:resource="http://localhost:8080/D22/flug.owl#country_england_sem"/>
+        <p1:grammar rdf:resource="http://localhost:8080/D22/flug.owl#england_gram"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#flight_as_hotel_agenda -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#flight_as_hotel_agenda">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <p1:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">50</p1:priority>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">REQUIRES(%hotel:done%==1)</p1:variableOperator>
+        <p1:mustnot rdf:resource="http://localhost:8080/D22/flug.owl#correct_sem"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/flug.owl#flight_as_hotel_agenda"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/flug.owl#flight_as_hotel_mv"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/flug.owl#from_which_airport_hotel"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/flug.owl#hotel_no_mv"/>
+        <p1:mustnot rdf:resource="http://localhost:8080/D22/flug.owl#hotel_no_sem"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/flug.owl#hotel_yes_mv"/>
+        <p1:mustnot rdf:resource="http://localhost:8080/D22/flug.owl#match_hotel_sem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#flight_as_hotel_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#flight_as_hotel_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:utterance rdf:resource="http://localhost:8080/D22/flug.owl#do_you_wish_to_fly_utt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#flight_as_hotel_utt -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#flight_as_hotel_utt">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Utterance"/>
+        <p1:utteranceString xml:lang="de">Moechten sie einen zu ihrem hotel-aufenthalt passenden flug buchen?</p1:utteranceString>
+        <p1:utteranceString xml:lang="en">Do you want to book a flight matching your hotel stay?</p1:utteranceString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#fly_at_eight_sem -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#fly_at_eight_sem">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Semantic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#fly_at_twelve_sem -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#fly_at_twelve_sem">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Semantic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#fly_fourth_sem -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#fly_fourth_sem">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Semantic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#fly_seventeenth_sem -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#fly_seventeenth_sem">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Semantic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#fourth_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#fourth_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SET(start_day=fourth);(dialog_progress=time);(start_day_de=vierten)</p1:variableOperator>
+        <p1:semantic rdf:resource="http://localhost:8080/D22/flug.owl#fly_fourth_sem"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/D22/flug.owl#fly_seventeenth_sem"/>
+        <p1:grammar rdf:resource="http://localhost:8080/D22/flug.owl#on_the_fourth_gram"/>
+        <p1:semantic rdf:resource="http://localhost:8080/D22/flug.owl#start_day_said_sem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#frankfurt_gram -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#frankfurt_gram">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Grammar"/>
+        <p1:grammarString xml:lang="de">(frankfurt)</p1:grammarString>
+        <p1:grammarString xml:lang="en">(frankfurt)</p1:grammarString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#frankfurt_hotel_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#frankfurt_hotel_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SET(from_airport=Frankfurt);(dialog_progress=time);(from_airport_de=Frankfurt)</p1:variableOperator>
+        <p1:semantic rdf:resource="http://localhost:8080/D22/flug.owl#airport_said_sem"/>
+        <p1:grammar rdf:resource="http://localhost:8080/D22/flug.owl#frankfurt_gram"/>
+        <p1:semantic rdf:resource="http://localhost:8080/D22/flug.owl#from_frankfurt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#frankfurt_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#frankfurt_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SET(from_airport=Frankfurt);(dialog_progress=date);(from_airport_de=Frankfurt)</p1:variableOperator>
+        <p1:semantic rdf:resource="http://localhost:8080/D22/flug.owl#airport_said_sem"/>
+        <p1:grammar rdf:resource="http://localhost:8080/D22/flug.owl#frankfurt_gram"/>
+        <p1:semantic rdf:resource="http://localhost:8080/D22/flug.owl#from_frankfurt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#from_airport -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#from_airport">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Variable"/>
+        <p1:defaultValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12</p1:defaultValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#from_airport_de -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#from_airport_de">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Variable"/>
+        <p1:defaultValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12</p1:defaultValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#from_frankfurt -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#from_frankfurt">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Semantic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#from_munic -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#from_munic">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Semantic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#from_stuttgart -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#from_stuttgart">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Semantic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#from_which_airport -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#from_which_airport">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <p1:mustnot rdf:resource="http://localhost:8080/D22/flug.owl#airport_said_sem"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/flug.owl#frankfurt_mv"/>
+        <p1:mustnot rdf:resource="http://localhost:8080/D22/flug.owl#from_frankfurt"/>
+        <p1:mustnot rdf:resource="http://localhost:8080/D22/flug.owl#from_munic"/>
+        <p1:mustnot rdf:resource="http://localhost:8080/D22/flug.owl#from_stuttgart"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/flug.owl#from_which_airport"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/flug.owl#from_which_airport_mv"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/flug.owl#munic_mv"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/flug.owl#start_day_agenda"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/flug.owl#stuttgart_mv"/>
+        <p1:requires rdf:resource="http://localhost:8080/D22/flug.owl#town_said_sem"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/flug.owl#what_are_my_options_mv"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#from_which_airport_hotel -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#from_which_airport_hotel">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <p1:mustnot rdf:resource="http://localhost:8080/D22/flug.owl#airport_said_sem"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/flug.owl#frankfurt_hotel_mv"/>
+        <p1:mustnot rdf:resource="http://localhost:8080/D22/flug.owl#from_frankfurt"/>
+        <p1:mustnot rdf:resource="http://localhost:8080/D22/flug.owl#from_munic"/>
+        <p1:mustnot rdf:resource="http://localhost:8080/D22/flug.owl#from_stuttgart"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/flug.owl#from_which_airport_hotel"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/flug.owl#from_which_airport_mv"/>
+        <p1:requires rdf:resource="http://localhost:8080/D22/flug.owl#match_hotel_sem"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/flug.owl#munic_hotel_mv"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/flug.owl#start_time_hotel_agenda"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/flug.owl#stuttgart_hotel_mv"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/flug.owl#what_are_my_options_mv"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#from_which_airport_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#from_which_airport_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:utterance rdf:resource="http://localhost:8080/D22/flug.owl#from_which_airport_utt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#from_which_airport_utt -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#from_which_airport_utt">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Utterance"/>
+        <p1:utteranceString xml:lang="de">Von welchem Flughafen wollen sie starten?</p1:utteranceString>
+        <p1:utteranceString xml:lang="en">From which airport do you want to start?</p1:utteranceString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#hello_country_agenda -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#hello_country_agenda">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">REQUIRES((%hotel:present%!=1)||(%ignorehotel%==1))</p1:variableOperator>
+        <p1:has rdf:resource="http://localhost:8080/D22/flug.owl#america_mv"/>
+        <p1:mustnot rdf:resource="http://localhost:8080/D22/flug.owl#correct_sem"/>
+        <p1:mustnot rdf:resource="http://localhost:8080/D22/flug.owl#country_america"/>
+        <p1:mustnot rdf:resource="http://localhost:8080/D22/flug.owl#country_egypt_sem"/>
+        <p1:mustnot rdf:resource="http://localhost:8080/D22/flug.owl#country_england_sem"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/flug.owl#egypt_mv"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/flug.owl#england_mv"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/flug.owl#hello_country_agenda"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/flug.owl#hello_country_mv"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/flug.owl#what_are_my_options_mv"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/flug.owl#which_town_america"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/flug.owl#which_town_egypt"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/flug.owl#which_town_england"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#hello_country_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#hello_country_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:utterance rdf:resource="http://localhost:8080/D22/flug.owl#Hello_user_utt"/>
+        <p1:semantic rdf:resource="http://localhost:8080/D22/flug.owl#country_said_sem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#hello_said_sem -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#hello_said_sem">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Semantic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#help -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#help">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Variable"/>
+        <p1:defaultValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12</p1:defaultValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#hotel_no_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#hotel_no_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SET(ignorehotel=1)</p1:variableOperator>
+        <p1:semantic rdf:resource="http://localhost:8080/D22/flug.owl#hotel_no_sem"/>
+        <p1:grammar rdf:resource="http://localhost:8080/D22/flug.owl#no_gram"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#hotel_no_sem -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#hotel_no_sem">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Semantic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#hotel_yes_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#hotel_yes_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SET(to_country=%hotel:country%);(to_country_de=%hotel:country_de%);(to_town_de=%hotel:town_de%);(start_day=%hotel:date%);(start_day_de=%hotel:date_de%);(return_day=%hotel:return_day%);(return_day_de=%hotel:return_day_de%);(dialog_progress=airport)</p1:variableOperator>
+        <p1:semantic rdf:resource="http://localhost:8080/D22/flug.owl#match_hotel_sem"/>
+        <p1:grammar rdf:resource="http://localhost:8080/D22/flug.owl#yes_gram"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#ignorehotel -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#ignorehotel">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Variable"/>
+        <p1:defaultValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</p1:defaultValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#is_present -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#is_present">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Variable"/>
+        <p1:defaultValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</p1:defaultValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#kairo_gram -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#kairo_gram">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Grammar"/>
+        <p1:grammarString xml:lang="de">(kairo)</p1:grammarString>
+        <p1:grammarString xml:lang="en">(kairo)</p1:grammarString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#kairo_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#kairo_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SET(to_town=Kairo);(dialog_progress=airport);(to_town_de=Kairo)</p1:variableOperator>
+        <p1:grammar rdf:resource="http://localhost:8080/D22/flug.owl#kairo_gram"/>
+        <p1:semantic rdf:resource="http://localhost:8080/D22/flug.owl#town_kairo_sem"/>
+        <p1:semantic rdf:resource="http://localhost:8080/D22/flug.owl#town_said_sem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#london_gram -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#london_gram">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Grammar"/>
+        <p1:grammarString xml:lang="de">(london)</p1:grammarString>
+        <p1:grammarString xml:lang="en">(london)</p1:grammarString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#london_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#london_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SET(to_town=London);(dialog_progress=airport);(to_town_de=London)</p1:variableOperator>
+        <p1:grammar rdf:resource="http://localhost:8080/D22/flug.owl#london_gram"/>
+        <p1:semantic rdf:resource="http://localhost:8080/D22/flug.owl#town_london_sem"/>
+        <p1:semantic rdf:resource="http://localhost:8080/D22/flug.owl#town_said_sem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#los_angeles_gram -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#los_angeles_gram">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Grammar"/>
+        <p1:grammarString xml:lang="de">(los angeles)</p1:grammarString>
+        <p1:grammarString xml:lang="en">(los angeles)</p1:grammarString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#losangeles_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#losangeles_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SET(to_town=LosAngeles);(dialog_progress=airport);(to_town_de=LosAngeles)</p1:variableOperator>
+        <p1:grammar rdf:resource="http://localhost:8080/D22/flug.owl#los_angeles_gram"/>
+        <p1:semantic rdf:resource="http://localhost:8080/D22/flug.owl#town_losangeles_sem"/>
+        <p1:semantic rdf:resource="http://localhost:8080/D22/flug.owl#town_said_sem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#luxor_gram -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#luxor_gram">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Grammar"/>
+        <p1:grammarString xml:lang="de">(luxor)</p1:grammarString>
+        <p1:grammarString xml:lang="en">(luxor)</p1:grammarString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#luxor_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#luxor_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SET(to_town=Luxor);(dialog_progress=airport);(to_town_de=Luxor)</p1:variableOperator>
+        <p1:grammar rdf:resource="http://localhost:8080/D22/flug.owl#luxor_gram"/>
+        <p1:semantic rdf:resource="http://localhost:8080/D22/flug.owl#town_luxor_sem"/>
+        <p1:semantic rdf:resource="http://localhost:8080/D22/flug.owl#town_said_sem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#manchester_gram -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#manchester_gram">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Grammar"/>
+        <p1:grammarString xml:lang="de">(manchester)</p1:grammarString>
+        <p1:grammarString xml:lang="en">(manchester)</p1:grammarString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#manchester_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#manchester_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SET(to_town=Manchester);(dialog_progress=airport);(to_town_de=Manchester)</p1:variableOperator>
+        <p1:grammar rdf:resource="http://localhost:8080/D22/flug.owl#manchester_gram"/>
+        <p1:semantic rdf:resource="http://localhost:8080/D22/flug.owl#town_manchester_sem"/>
+        <p1:semantic rdf:resource="http://localhost:8080/D22/flug.owl#town_said_sem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#masteragenda -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#masteragenda">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <p1:isMasterBool rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</p1:isMasterBool>
+        <p1:next rdf:resource="http://localhost:8080/D22/flug.owl#flight_as_hotel_agenda"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/flug.owl#hello_country_agenda"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/flug.owl#say_options_airport_agenda"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/flug.owl#say_options_america_agenda"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/flug.owl#say_options_country_agenda"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/flug.owl#say_options_date_agenda"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/flug.owl#say_options_egypt_agenda"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/flug.owl#say_options_england_agenda"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/flug.owl#say_options_return_fourth_agenda"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/flug.owl#say_options_return_seventeenth_agenda"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/flug.owl#say_options_time_agenda"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#match_hotel_sem -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#match_hotel_sem">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Semantic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#munic_gram -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#munic_gram">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Grammar"/>
+        <p1:grammarString xml:lang="de">(muenchen)</p1:grammarString>
+        <p1:grammarString xml:lang="en">(munic)</p1:grammarString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#munic_hotel_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#munic_hotel_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SET(from_airport=Munic);(dialog_progress=time);(from_airport_de=Muenchen)</p1:variableOperator>
+        <p1:semantic rdf:resource="http://localhost:8080/D22/flug.owl#airport_said_sem"/>
+        <p1:semantic rdf:resource="http://localhost:8080/D22/flug.owl#from_munic"/>
+        <p1:grammar rdf:resource="http://localhost:8080/D22/flug.owl#munic_gram"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#munic_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#munic_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SET(from_airport=Munic);(dialog_progress=date);(from_airport_de=Munic)</p1:variableOperator>
+        <p1:semantic rdf:resource="http://localhost:8080/D22/flug.owl#airport_said_sem"/>
+        <p1:semantic rdf:resource="http://localhost:8080/D22/flug.owl#from_munic"/>
+        <p1:grammar rdf:resource="http://localhost:8080/D22/flug.owl#munic_gram"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#newyork_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#newyork_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SET(to_town=NewYork);(dialog_progress=airport);(to_town_de=NewYork)</p1:variableOperator>
+        <p1:grammar rdf:resource="http://localhost:8080/D22/flug.owl#New_York_gram"/>
+        <p1:semantic rdf:resource="http://localhost:8080/D22/flug.owl#town_newyork_sem"/>
+        <p1:semantic rdf:resource="http://localhost:8080/D22/flug.owl#town_said_sem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#no_gram -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#no_gram">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Grammar"/>
+        <p1:grammarString xml:lang="de">(nein)</p1:grammarString>
+        <p1:grammarString xml:lang="en">(no)</p1:grammarString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#no_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#no_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SET(dialog_progress=country)</p1:variableOperator>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/D22/flug.owl#airport_said_sem"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/D22/flug.owl#correct_sem"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/D22/flug.owl#country_america"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/D22/flug.owl#country_egypt_sem"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/D22/flug.owl#country_england_sem"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/D22/flug.owl#country_said_sem"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/D22/flug.owl#fly_at_eight_sem"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/D22/flug.owl#fly_at_twelve_sem"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/D22/flug.owl#fly_fourth_sem"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/D22/flug.owl#fly_seventeenth_sem"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/D22/flug.owl#from_frankfurt"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/D22/flug.owl#from_munic"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/D22/flug.owl#from_stuttgart"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/D22/flug.owl#hello_said_sem"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/D22/flug.owl#hotel_no_sem"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/D22/flug.owl#match_hotel_sem"/>
+        <p1:grammar rdf:resource="http://localhost:8080/D22/flug.owl#no_gram"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/D22/flug.owl#redo_sem"/>
+        <p1:semantic rdf:resource="http://localhost:8080/D22/flug.owl#redo_sem"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/D22/flug.owl#return_at_eight_sem"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/D22/flug.owl#return_at_twelve_sem"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/D22/flug.owl#return_day_said_sem"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/D22/flug.owl#return_eightteenth_sem"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/D22/flug.owl#return_eleventh_sem"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/D22/flug.owl#return_thirtyfirst_sem"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/D22/flug.owl#return_time_said_sem"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/D22/flug.owl#return_twentyfourth_sem"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/D22/flug.owl#say_options_sem"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/D22/flug.owl#start_day_said_sem"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/D22/flug.owl#start_time_said_sem"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/D22/flug.owl#town_abusimbel_sem"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/D22/flug.owl#town_chicago_sem"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/D22/flug.owl#town_kairo_sem"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/D22/flug.owl#town_london_sem"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/D22/flug.owl#town_losangeles_sem"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/D22/flug.owl#town_luxor_sem"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/D22/flug.owl#town_manchester_sem"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/D22/flug.owl#town_newyork_sem"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/D22/flug.owl#town_said_sem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#on_the_eightteenth_gram -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#on_the_eightteenth_gram">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Grammar"/>
+        <p1:grammarString xml:lang="de">(?(ich moechte) am achtzehnten ?[starten fliegen])</p1:grammarString>
+        <p1:grammarString xml:lang="en">(?(i want to fly) on the eigthteenth)</p1:grammarString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#on_the_eleventh_gram -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#on_the_eleventh_gram">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Grammar"/>
+        <p1:grammarString xml:lang="de">(?(ich moechte) am elften ?[starten fliegen])</p1:grammarString>
+        <p1:grammarString xml:lang="en">(?(i want to fly) on the eleventh)</p1:grammarString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#on_the_fourth_gram -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#on_the_fourth_gram">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Grammar"/>
+        <p1:grammarString xml:lang="de">(?(ich moechte) am vierten ?[starten fliegen])</p1:grammarString>
+        <p1:grammarString xml:lang="en">(?(i want to fly) on the fourth)</p1:grammarString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#on_the_seventeenth_gram -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#on_the_seventeenth_gram">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Grammar"/>
+        <p1:grammarString xml:lang="de">(?(ich moechte) am siebzehnten ?[starten fliegen])</p1:grammarString>
+        <p1:grammarString xml:lang="en">(?(i want to fly) on the seventeenth)</p1:grammarString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#on_the_thirtyfirst_gram -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#on_the_thirtyfirst_gram">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Grammar"/>
+        <p1:grammarString xml:lang="de">(?(ich moechte) am einunddreissigsten ?[starten fliegen])</p1:grammarString>
+        <p1:grammarString xml:lang="en">(?(i want to fly) on the thirtyfirst)</p1:grammarString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#on_the_twentyforth_gram -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#on_the_twentyforth_gram">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Grammar"/>
+        <p1:grammarString xml:lang="de">(?(ich moechte) am vierundzwanzigsten ?[starten fliegen])</p1:grammarString>
+        <p1:grammarString xml:lang="en">(?(i want to fly) on the twenty-fourth)</p1:grammarString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#on_what_day_to_start_utt -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#on_what_day_to_start_utt">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Utterance"/>
+        <p1:utteranceString xml:lang="de">An welchem tag wollen sie nach %to_town_de% abreisen?</p1:utteranceString>
+        <p1:utteranceString xml:lang="en">On what day do you want to fly to %to_town%?</p1:utteranceString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#redo_sem -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#redo_sem">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Semantic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#return_at_eight_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#return_at_eight_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SET(return_time=8);(dialog_progress=muh);(return_time_de=acht)</p1:variableOperator>
+        <p1:grammar rdf:resource="http://localhost:8080/D22/flug.owl#at_eight_gram"/>
+        <p1:semantic rdf:resource="http://localhost:8080/D22/flug.owl#return_at_eight_sem"/>
+        <p1:semantic rdf:resource="http://localhost:8080/D22/flug.owl#return_time_said_sem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#return_at_eight_sem -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#return_at_eight_sem">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Semantic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#return_at_twelve_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#return_at_twelve_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SET(return_time=12);(dialog_progress=muh);(return_time_de=zwoelf)</p1:variableOperator>
+        <p1:grammar rdf:resource="http://localhost:8080/D22/flug.owl#at_twelve_gram"/>
+        <p1:semantic rdf:resource="http://localhost:8080/D22/flug.owl#return_at_twelve_sem"/>
+        <p1:semantic rdf:resource="http://localhost:8080/D22/flug.owl#return_time_said_sem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#return_at_twelve_sem -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#return_at_twelve_sem">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Semantic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#return_day -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#return_day">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Variable"/>
+        <p1:defaultValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12</p1:defaultValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#return_day_de -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#return_day_de">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Variable"/>
+        <p1:defaultValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12</p1:defaultValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#return_day_said_sem -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#return_day_said_sem">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Semantic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#return_eightteenth_sem -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#return_eightteenth_sem">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Semantic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#return_eigthteenth_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#return_eigthteenth_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SET(return_day=eightteenth);(dialog_progress=time);(return_day_de=achtzehnten)</p1:variableOperator>
+        <p1:grammar rdf:resource="http://localhost:8080/D22/flug.owl#on_the_eightteenth_gram"/>
+        <p1:semantic rdf:resource="http://localhost:8080/D22/flug.owl#return_day_said_sem"/>
+        <p1:semantic rdf:resource="http://localhost:8080/D22/flug.owl#return_eightteenth_sem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#return_eleventh_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#return_eleventh_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SET(return_day=eleventh);(dialog_progress=time);(return_day_de=elften)</p1:variableOperator>
+        <p1:grammar rdf:resource="http://localhost:8080/D22/flug.owl#on_the_eleventh_gram"/>
+        <p1:semantic rdf:resource="http://localhost:8080/D22/flug.owl#return_day_said_sem"/>
+        <p1:semantic rdf:resource="http://localhost:8080/D22/flug.owl#return_eleventh_sem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#return_eleventh_sem -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#return_eleventh_sem">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Semantic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#return_fourth_day_agenda -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#return_fourth_day_agenda">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <p1:requires rdf:resource="http://localhost:8080/D22/flug.owl#fly_fourth_sem"/>
+        <p1:mustnot rdf:resource="http://localhost:8080/D22/flug.owl#return_eightteenth_sem"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/flug.owl#return_eigthteenth_mv"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/flug.owl#return_eleventh_mv"/>
+        <p1:mustnot rdf:resource="http://localhost:8080/D22/flug.owl#return_eleventh_sem"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/flug.owl#return_fourth_day_agenda"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/flug.owl#return_time_agenda"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/flug.owl#returnday_mv"/>
+        <p1:requires rdf:resource="http://localhost:8080/D22/flug.owl#start_time_said_sem"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/flug.owl#what_are_my_options_mv"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#return_seventeenth_day_agenda -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#return_seventeenth_day_agenda">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <p1:requires rdf:resource="http://localhost:8080/D22/flug.owl#fly_seventeenth_sem"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/flug.owl#return_seventeenth_day_agenda"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/flug.owl#return_thirtyfirst_mv"/>
+        <p1:mustnot rdf:resource="http://localhost:8080/D22/flug.owl#return_thirtyfirst_sem"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/flug.owl#return_time_agenda"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/flug.owl#return_twentyfourth_mv"/>
+        <p1:mustnot rdf:resource="http://localhost:8080/D22/flug.owl#return_twentyfourth_sem"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/flug.owl#returnday_mv"/>
+        <p1:requires rdf:resource="http://localhost:8080/D22/flug.owl#start_time_said_sem"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/flug.owl#what_are_my_options_mv"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#return_thirtyfirst_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#return_thirtyfirst_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SET(return_day=thirtyfirst);(dialog_progress=time);(return_day_de=einunddreissigsten)</p1:variableOperator>
+        <p1:grammar rdf:resource="http://localhost:8080/D22/flug.owl#on_the_thirtyfirst_gram"/>
+        <p1:semantic rdf:resource="http://localhost:8080/D22/flug.owl#return_day_said_sem"/>
+        <p1:semantic rdf:resource="http://localhost:8080/D22/flug.owl#return_thirtyfirst_sem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#return_thirtyfirst_sem -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#return_thirtyfirst_sem">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Semantic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#return_time -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#return_time">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Variable"/>
+        <p1:defaultValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12</p1:defaultValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#return_time_agenda -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#return_time_agenda">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/flug.owl#correct_agenda"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/flug.owl#return_at_eight_mv"/>
+        <p1:mustnot rdf:resource="http://localhost:8080/D22/flug.owl#return_at_eight_sem"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/flug.owl#return_at_twelve_mv"/>
+        <p1:mustnot rdf:resource="http://localhost:8080/D22/flug.owl#return_at_twelve_sem"/>
+        <p1:requires rdf:resource="http://localhost:8080/D22/flug.owl#return_day_said_sem"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/flug.owl#return_time_agenda"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/flug.owl#returntime_mv"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/flug.owl#what_are_my_options_mv"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#return_time_said_sem -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#return_time_said_sem">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Semantic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#return_twentyfourth_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#return_twentyfourth_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SET(return_day=twentyfourth);(dialog_progress=time);(return_day_de=vierundzwanzigsten)</p1:variableOperator>
+        <p1:grammar rdf:resource="http://localhost:8080/D22/flug.owl#on_the_twentyforth_gram"/>
+        <p1:semantic rdf:resource="http://localhost:8080/D22/flug.owl#return_day_said_sem"/>
+        <p1:semantic rdf:resource="http://localhost:8080/D22/flug.owl#return_twentyfourth_sem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#return_twentyfourth_sem -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#return_twentyfourth_sem">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Semantic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#returnday_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#returnday_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:utterance rdf:resource="http://localhost:8080/D22/flug.owl#On_what_day_to_return_utt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#returntime_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#returntime_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:utterance rdf:resource="http://localhost:8080/D22/flug.owl#At_what_time_to_leave_utt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#say_options_airport_agenda -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#say_options_airport_agenda">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <p1:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">90</p1:priority>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">REQUIRES(%dialog_progress%==airport)</p1:variableOperator>
+        <p1:next rdf:resource="http://localhost:8080/D22/flug.owl#say_options_airport_agenda"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/flug.owl#say_options_airport_mv"/>
+        <p1:requires rdf:resource="http://localhost:8080/D22/flug.owl#say_options_sem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#say_options_airport_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#say_options_airport_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:utterance rdf:resource="http://localhost:8080/D22/flug.owl#say_options_airport_utt"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/D22/flug.owl#say_options_sem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#say_options_airport_utt -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#say_options_airport_utt">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Utterance"/>
+        <p1:utteranceString xml:lang="de">Sie können von muenchen, stuttgart oder frankfurt aus fleigen.</p1:utteranceString>
+        <p1:utteranceString xml:lang="en">You can fly from Munic, Stuttgart or Frankfurt.</p1:utteranceString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#say_options_america_agenda -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#say_options_america_agenda">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <p1:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">90</p1:priority>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">REQUIRES(%dialog_progress%==america)</p1:variableOperator>
+        <p1:next rdf:resource="http://localhost:8080/D22/flug.owl#say_options_america_agenda"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/flug.owl#say_options_america_mv"/>
+        <p1:requires rdf:resource="http://localhost:8080/D22/flug.owl#say_options_sem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#say_options_america_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#say_options_america_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:utterance rdf:resource="http://localhost:8080/D22/flug.owl#say_options_america_utt"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/D22/flug.owl#say_options_sem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#say_options_america_utt -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#say_options_america_utt">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Utterance"/>
+        <p1:utteranceString xml:lang="de">Sie können in new york, chicago oder los angeles landen</p1:utteranceString>
+        <p1:utteranceString xml:lang="en">You choose between New York, Chicago or Los Angeles.</p1:utteranceString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#say_options_country_agenda -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#say_options_country_agenda">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <p1:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">90</p1:priority>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">REQUIRES(%dialog_progress%==country)</p1:variableOperator>
+        <p1:next rdf:resource="http://localhost:8080/D22/flug.owl#say_options_country_agenda"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/flug.owl#say_options_country_mv"/>
+        <p1:requires rdf:resource="http://localhost:8080/D22/flug.owl#say_options_sem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#say_options_country_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#say_options_country_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:utterance rdf:resource="http://localhost:8080/D22/flug.owl#say_options_country_utt"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/D22/flug.owl#say_options_sem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#say_options_country_utt -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#say_options_country_utt">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Utterance"/>
+        <p1:utteranceString xml:lang="de">Sie koennen nach america, england oder aegypten reisen.</p1:utteranceString>
+        <p1:utteranceString xml:lang="en">You can fly to either America, England or Egypt.</p1:utteranceString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#say_options_date_agenda -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#say_options_date_agenda">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <p1:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">90</p1:priority>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">REQUIRES(%dialog_progress%==date)</p1:variableOperator>
+        <p1:next rdf:resource="http://localhost:8080/D22/flug.owl#say_options_date_agenda"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/flug.owl#say_options_date_mv"/>
+        <p1:requires rdf:resource="http://localhost:8080/D22/flug.owl#say_options_sem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#say_options_date_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#say_options_date_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:utterance rdf:resource="http://localhost:8080/D22/flug.owl#say_options_date_utt"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/D22/flug.owl#say_options_sem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#say_options_date_utt -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#say_options_date_utt">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Utterance"/>
+        <p1:utteranceString xml:lang="de">Sie koennen am vierten oder am siebzehnten abreisen.</p1:utteranceString>
+        <p1:utteranceString xml:lang="en">You can fly on either the fourth or the seventeenth.</p1:utteranceString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#say_options_egypt_agenda -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#say_options_egypt_agenda">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <p1:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">90</p1:priority>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">REQUIRES(%dialog_progress%==egypt)</p1:variableOperator>
+        <p1:next rdf:resource="http://localhost:8080/D22/flug.owl#say_options_egypt_agenda"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/flug.owl#say_options_egypt_mv"/>
+        <p1:requires rdf:resource="http://localhost:8080/D22/flug.owl#say_options_sem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#say_options_egypt_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#say_options_egypt_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:utterance rdf:resource="http://localhost:8080/D22/flug.owl#say_options_egypt_utt"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/D22/flug.owl#say_options_sem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#say_options_egypt_utt -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#say_options_egypt_utt">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Utterance"/>
+        <p1:utteranceString xml:lang="de">Sie koennen in kairo, luxor oder abu simbel landen. </p1:utteranceString>
+        <p1:utteranceString xml:lang="en">You choose between Kairo, Luxor or Abu Simbel.</p1:utteranceString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#say_options_england_agenda -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#say_options_england_agenda">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <p1:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">90</p1:priority>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">REQUIRES(%dialog_progress%==england)</p1:variableOperator>
+        <p1:next rdf:resource="http://localhost:8080/D22/flug.owl#say_options_england_agenda"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/flug.owl#say_options_england_mv"/>
+        <p1:requires rdf:resource="http://localhost:8080/D22/flug.owl#say_options_sem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#say_options_england_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#say_options_england_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:utterance rdf:resource="http://localhost:8080/D22/flug.owl#say_options_england_utt"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/D22/flug.owl#say_options_sem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#say_options_england_utt -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#say_options_england_utt">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Utterance"/>
+        <p1:utteranceString xml:lang="de">Sie koennen in London oder in Manchester landen.</p1:utteranceString>
+        <p1:utteranceString xml:lang="en">You can choose between London or Manchester.</p1:utteranceString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#say_options_return_fourth_agenda -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#say_options_return_fourth_agenda">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <p1:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">90</p1:priority>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">REQUIRES(%dialog_progress%==return)</p1:variableOperator>
+        <p1:requires rdf:resource="http://localhost:8080/D22/flug.owl#fly_fourth_sem"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/flug.owl#say_options_return_fourth_agenda"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/flug.owl#say_options_return_fourth_mv"/>
+        <p1:requires rdf:resource="http://localhost:8080/D22/flug.owl#say_options_sem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#say_options_return_fourth_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#say_options_return_fourth_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:utterance rdf:resource="http://localhost:8080/D22/flug.owl#say_options_return_fourth_utt"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/D22/flug.owl#say_options_sem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#say_options_return_fourth_utt -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#say_options_return_fourth_utt">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Utterance"/>
+        <p1:utteranceString xml:lang="de">Da sie entweder eine oder zwei wochen aufenthalt buchen koennen ist ein rueckflug am elften oder am achtzehnten möglich. </p1:utteranceString>
+        <p1:utteranceString xml:lang="en">You can stay for one week or for two weeks. So you can return on either the eleventh or the eighteenth.</p1:utteranceString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#say_options_return_seventeenth_agenda -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#say_options_return_seventeenth_agenda">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <p1:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">90</p1:priority>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">REQUIRES(%dialog_progress%==return)</p1:variableOperator>
+        <p1:requires rdf:resource="http://localhost:8080/D22/flug.owl#fly_seventeenth_sem"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/flug.owl#say_options_return_seventeenth_agenda"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/flug.owl#say_options_return_seventeenth_mv"/>
+        <p1:requires rdf:resource="http://localhost:8080/D22/flug.owl#say_options_sem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#say_options_return_seventeenth_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#say_options_return_seventeenth_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:utterance rdf:resource="http://localhost:8080/D22/flug.owl#say_options_return_seventeenth_utt"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/D22/flug.owl#say_options_sem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#say_options_return_seventeenth_utt -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#say_options_return_seventeenth_utt">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Utterance"/>
+        <p1:utteranceString xml:lang="de">Da sie entweder eine oder zwei wochen aufenthalt buchen koennen ist ein rueckflug am vierundzwanzigsten oder am einunddreissigsten möglich. </p1:utteranceString>
+        <p1:utteranceString xml:lang="en">You can stay one week or two weeks. So you can return on either the twentyfourth or the thirtyfirst.</p1:utteranceString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#say_options_sem -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#say_options_sem">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Semantic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#say_options_time_agenda -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#say_options_time_agenda">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <p1:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">90</p1:priority>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">REQUIRES(%dialog_progress%==time)</p1:variableOperator>
+        <p1:requires rdf:resource="http://localhost:8080/D22/flug.owl#say_options_sem"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/flug.owl#say_options_time_agenda"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/flug.owl#say_options_time_mv"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#say_options_time_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#say_options_time_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/D22/flug.owl#say_options_sem"/>
+        <p1:utterance rdf:resource="http://localhost:8080/D22/flug.owl#say_options_time_utt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#say_options_time_utt -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#say_options_time_utt">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Utterance"/>
+        <p1:utteranceString xml:lang="de">Sie koennen um acht uhr oder um zwoelf uhr starten.</p1:utteranceString>
+        <p1:utteranceString xml:lang="en">You can start at eight o&#39;clock or at twelve o&#39;clock.</p1:utteranceString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#seventeenth_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#seventeenth_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SET(start_day=seventeenth);(dialog_progress=time);(start_day_de=siebzehnten)</p1:variableOperator>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/D22/flug.owl#fly_fourth_sem"/>
+        <p1:semantic rdf:resource="http://localhost:8080/D22/flug.owl#fly_seventeenth_sem"/>
+        <p1:grammar rdf:resource="http://localhost:8080/D22/flug.owl#on_the_seventeenth_gram"/>
+        <p1:semantic rdf:resource="http://localhost:8080/D22/flug.owl#start_day_said_sem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#start_at_eight_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#start_at_eight_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SET(start_time=8);(dialog_progress=return)</p1:variableOperator>
+        <p1:grammar rdf:resource="http://localhost:8080/D22/flug.owl#at_eight_gram"/>
+        <p1:semantic rdf:resource="http://localhost:8080/D22/flug.owl#fly_at_eight_sem"/>
+        <p1:semantic rdf:resource="http://localhost:8080/D22/flug.owl#start_time_said_sem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#start_at_twelve_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#start_at_twelve_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SET(start_time=12);(dialog_progress=return)</p1:variableOperator>
+        <p1:grammar rdf:resource="http://localhost:8080/D22/flug.owl#at_twelve_gram"/>
+        <p1:semantic rdf:resource="http://localhost:8080/D22/flug.owl#fly_at_twelve_sem"/>
+        <p1:semantic rdf:resource="http://localhost:8080/D22/flug.owl#start_time_said_sem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#start_day -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#start_day">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Variable"/>
+        <p1:defaultValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12</p1:defaultValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#start_day_agenda -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#start_day_agenda">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <p1:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">50</p1:priority>
+        <p1:requires rdf:resource="http://localhost:8080/D22/flug.owl#airport_said_sem"/>
+        <p1:mustnot rdf:resource="http://localhost:8080/D22/flug.owl#fly_fourth_sem"/>
+        <p1:mustnot rdf:resource="http://localhost:8080/D22/flug.owl#fly_seventeenth_sem"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/flug.owl#fourth_mv"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/flug.owl#seventeenth_mv"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/flug.owl#start_day_agenda"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/flug.owl#start_time_agenda"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/flug.owl#startday_mv"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/flug.owl#what_are_my_options_mv"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#start_day_de -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#start_day_de">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Variable"/>
+        <p1:defaultValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12</p1:defaultValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#start_day_said_sem -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#start_day_said_sem">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Semantic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#start_eight_hotel_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#start_eight_hotel_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SET(start_time=8);(start_time_de=acht)</p1:variableOperator>
+        <p1:grammar rdf:resource="http://localhost:8080/D22/flug.owl#at_eight_gram"/>
+        <p1:semantic rdf:resource="http://localhost:8080/D22/flug.owl#fly_at_eight_sem"/>
+        <p1:semantic rdf:resource="http://localhost:8080/D22/flug.owl#return_day_said_sem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#start_time -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#start_time">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Variable"/>
+        <p1:defaultValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12</p1:defaultValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#start_time_agenda -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#start_time_agenda">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <p1:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">50</p1:priority>
+        <p1:mustnot rdf:resource="http://localhost:8080/D22/flug.owl#fly_at_eight_sem"/>
+        <p1:mustnot rdf:resource="http://localhost:8080/D22/flug.owl#fly_at_twelve_sem"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/flug.owl#return_fourth_day_agenda"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/flug.owl#return_seventeenth_day_agenda"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/flug.owl#start_at_eight_mv"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/flug.owl#start_at_twelve_mv"/>
+        <p1:requires rdf:resource="http://localhost:8080/D22/flug.owl#start_day_said_sem"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/flug.owl#start_time_agenda"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/flug.owl#starttime_mv"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/flug.owl#what_are_my_options_mv"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#start_time_de -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#start_time_de">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Variable"/>
+        <p1:defaultValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12</p1:defaultValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#start_time_hotel_agenda -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#start_time_hotel_agenda">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <p1:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">50</p1:priority>
+        <p1:requires rdf:resource="http://localhost:8080/D22/flug.owl#airport_said_sem"/>
+        <p1:mustnot rdf:resource="http://localhost:8080/D22/flug.owl#fly_at_eight_sem"/>
+        <p1:mustnot rdf:resource="http://localhost:8080/D22/flug.owl#fly_at_twelve_sem"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/flug.owl#return_time_agenda"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/flug.owl#start_eight_hotel_mv"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/flug.owl#start_time_hotel_agenda"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/flug.owl#start_twelve_hotel_mv"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/flug.owl#starttime_mv"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/flug.owl#what_are_my_options_mv"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#start_time_said_sem -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#start_time_said_sem">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Semantic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#start_twelve_hotel_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#start_twelve_hotel_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SET(start_time=12);(start_time_de=zwoelf)</p1:variableOperator>
+        <p1:grammar rdf:resource="http://localhost:8080/D22/flug.owl#at_twelve_gram"/>
+        <p1:semantic rdf:resource="http://localhost:8080/D22/flug.owl#fly_at_twelve_sem"/>
+        <p1:semantic rdf:resource="http://localhost:8080/D22/flug.owl#return_day_said_sem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#startday_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#startday_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:utterance rdf:resource="http://localhost:8080/D22/flug.owl#on_what_day_to_start_utt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#starttime_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#starttime_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:utterance rdf:resource="http://localhost:8080/D22/flug.owl#At_what_time_to_start_utt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#stuttgart_gram -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#stuttgart_gram">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Grammar"/>
+        <p1:grammarString xml:lang="de">(stuttgart)</p1:grammarString>
+        <p1:grammarString xml:lang="en">([stuttgart)</p1:grammarString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#stuttgart_hotel_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#stuttgart_hotel_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SET(from_airport=Stuttgart);(dialog_progress=time);(from_airport_de=Stuttgart)</p1:variableOperator>
+        <p1:semantic rdf:resource="http://localhost:8080/D22/flug.owl#airport_said_sem"/>
+        <p1:semantic rdf:resource="http://localhost:8080/D22/flug.owl#from_stuttgart"/>
+        <p1:grammar rdf:resource="http://localhost:8080/D22/flug.owl#stuttgart_gram"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#stuttgart_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#stuttgart_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SET(from_airport=Stuttgart);(dialog_progress=date);(from_airport_de=Stuttgart)</p1:variableOperator>
+        <p1:semantic rdf:resource="http://localhost:8080/D22/flug.owl#airport_said_sem"/>
+        <p1:semantic rdf:resource="http://localhost:8080/D22/flug.owl#from_stuttgart"/>
+        <p1:grammar rdf:resource="http://localhost:8080/D22/flug.owl#stuttgart_gram"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#to_country -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#to_country">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Variable"/>
+        <p1:defaultValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aga</p1:defaultValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#to_country_de -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#to_country_de">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Variable"/>
+        <p1:defaultValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12</p1:defaultValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#to_town -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#to_town">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Variable"/>
+        <p1:defaultValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aga</p1:defaultValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#to_town_de -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#to_town_de">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Variable"/>
+        <p1:defaultValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12</p1:defaultValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#to_what_town_utt -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#to_what_town_utt">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Utterance"/>
+        <p1:utteranceString xml:lang="de">In welche Stadt in %to_counrty_de% wollen sie fliegen?</p1:utteranceString>
+        <p1:utteranceString xml:lang="en">To what town in %to_country% do you want to fly?</p1:utteranceString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#town_abusimbel_sem -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#town_abusimbel_sem">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Semantic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#town_chicago_sem -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#town_chicago_sem">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Semantic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#town_kairo_sem -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#town_kairo_sem">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Semantic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#town_london_sem -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#town_london_sem">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Semantic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#town_losangeles_sem -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#town_losangeles_sem">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Semantic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#town_luxor_sem -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#town_luxor_sem">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Semantic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#town_manchester_sem -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#town_manchester_sem">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Semantic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#town_newyork_sem -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#town_newyork_sem">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Semantic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#town_said_sem -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#town_said_sem">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Semantic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#user -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#user">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Variable"/>
+        <p1:defaultValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aga</p1:defaultValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#userBeliefspace -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#userBeliefspace">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#BeliefSpace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#userWorkspace -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#userWorkspace">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#WorkSpace"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/flug.owl#flight_as_hotel_agenda"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/flug.owl#hello_country_agenda"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/flug.owl#say_options_airport_agenda"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/flug.owl#say_options_america_agenda"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/flug.owl#say_options_country_agenda"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/flug.owl#say_options_date_agenda"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/flug.owl#say_options_egypt_agenda"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/flug.owl#say_options_england_agenda"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/flug.owl#say_options_return_fourth_agenda"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/flug.owl#say_options_return_seventeenth_agenda"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/flug.owl#say_options_time_agenda"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#what_are_my_options -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#what_are_my_options">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Grammar"/>
+        <p1:grammarString xml:lang="de">(hilfe)</p1:grammarString>
+        <p1:grammarString xml:lang="en">[(what are my options) help]</p1:grammarString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#what_are_my_options_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#what_are_my_options_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:semantic rdf:resource="http://localhost:8080/D22/flug.owl#say_options_sem"/>
+        <p1:grammar rdf:resource="http://localhost:8080/D22/flug.owl#what_are_my_options"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#what_are_my_options_respawn -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#what_are_my_options_respawn">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <p1:respawn rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</p1:respawn>
+        <p1:has rdf:resource="http://localhost:8080/D22/flug.owl#what_are_my_options_mv"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#which_town_america -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#which_town_america">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/flug.owl#chicago_mv"/>
+        <p1:requires rdf:resource="http://localhost:8080/D22/flug.owl#country_america"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/flug.owl#from_which_airport"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/flug.owl#losangeles_mv"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/flug.owl#newyork_mv"/>
+        <p1:mustnot rdf:resource="http://localhost:8080/D22/flug.owl#town_chicago_sem"/>
+        <p1:mustnot rdf:resource="http://localhost:8080/D22/flug.owl#town_losangeles_sem"/>
+        <p1:mustnot rdf:resource="http://localhost:8080/D22/flug.owl#town_newyork_sem"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/flug.owl#what_are_my_options_mv"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/flug.owl#which_town_america"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/flug.owl#which_town_mv"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#which_town_egypt -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#which_town_egypt">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/flug.owl#abusimbel_mv"/>
+        <p1:requires rdf:resource="http://localhost:8080/D22/flug.owl#country_egypt_sem"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/flug.owl#from_which_airport"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/flug.owl#kairo_mv"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/flug.owl#luxor_mv"/>
+        <p1:mustnot rdf:resource="http://localhost:8080/D22/flug.owl#town_abusimbel_sem"/>
+        <p1:mustnot rdf:resource="http://localhost:8080/D22/flug.owl#town_kairo_sem"/>
+        <p1:mustnot rdf:resource="http://localhost:8080/D22/flug.owl#town_luxor_sem"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/flug.owl#what_are_my_options_mv"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/flug.owl#which_town_egypt"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/flug.owl#which_town_mv"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#which_town_england -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#which_town_england">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <p1:requires rdf:resource="http://localhost:8080/D22/flug.owl#country_england_sem"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/flug.owl#from_which_airport"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/flug.owl#london_mv"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/flug.owl#manchester_mv"/>
+        <p1:mustnot rdf:resource="http://localhost:8080/D22/flug.owl#town_london_sem"/>
+        <p1:mustnot rdf:resource="http://localhost:8080/D22/flug.owl#town_manchester_sem"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/flug.owl#what_are_my_options_mv"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/flug.owl#which_town_england"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/flug.owl#which_town_mv"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#which_town_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#which_town_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:utterance rdf:resource="http://localhost:8080/D22/flug.owl#to_what_town_utt"/>
+        <p1:semantic rdf:resource="http://localhost:8080/D22/flug.owl#town_said_sem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#yes_gram -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#yes_gram">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Grammar"/>
+        <p1:grammarString xml:lang="de">(ja)</p1:grammarString>
+        <p1:grammarString xml:lang="en">(yes)</p1:grammarString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/flug.owl#yes_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/flug.owl#yes_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:semantic rdf:resource="http://localhost:8080/D22/flug.owl#correct_sem"/>
+        <p1:grammar rdf:resource="http://localhost:8080/D22/flug.owl#yes_gram"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.2.0.1502) http://owlapi.sourceforge.net -->
+

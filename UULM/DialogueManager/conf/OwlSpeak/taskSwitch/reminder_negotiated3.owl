@@ -1,0 +1,613 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://localhost:8080/D22/reminder.owl#"
+     xml:base="http://localhost:8080/D22/reminder.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+     xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
+     xmlns:p1="http://localhost:8080/OwlSpeakOnto.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://localhost:8080/D22/reminder.owl">
+        <owl:imports rdf:resource="http://localhost:8080/OwlSpeakOnto.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://localhost:8080/D22/reminder.owl#Besitos_gr -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/reminder.owl#Besitos_gr">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Grammar"/>
+        <p1:grammarString xml:lang="de">[(besitos)(ins besitos)]</p1:grammarString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/reminder.owl#Besitos_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/reminder.owl#Besitos_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SET(location_var=besitos)</p1:variableOperator>
+        <p1:grammar rdf:resource="http://localhost:8080/D22/reminder.owl#Besitos_gr"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/reminder.owl#Chilis_gr -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/reminder.owl#Chilis_gr">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Grammar"/>
+        <p1:grammarString xml:lang="de">[(chilis)(ins chilis)]</p1:grammarString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/reminder.owl#Chilis_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/reminder.owl#Chilis_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SET(location_var=chilis)</p1:variableOperator>
+        <p1:grammar rdf:resource="http://localhost:8080/D22/reminder.owl#Chilis_gr"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/reminder.owl#History-1539668094 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/reminder.owl#History-1539668094">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#History"/>
+        <p1:addTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</p1:addTime>
+        <p1:procTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4</p1:procTime>
+        <p1:agendaPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">400</p1:agendaPriority>
+        <p1:forAgenda rdf:resource="http://localhost:8080/D22/reminder.owl#intro_agenda"/>
+        <p1:inWorkspace rdf:resource="http://localhost:8080/D22/reminder.owl#userWorkspace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/reminder.owl#History-1952137472 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/reminder.owl#History-1952137472">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#History"/>
+        <p1:addTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4</p1:addTime>
+        <p1:agendaPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">42</p1:agendaPriority>
+        <p1:forAgenda rdf:resource="http://localhost:8080/D22/reminder.owl#negotiated_switch_agenda"/>
+        <p1:inWorkspace rdf:resource="http://localhost:8080/D22/reminder.owl#userWorkspace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/reminder.owl#Negotiated_no_semantic -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/reminder.owl#Negotiated_no_semantic">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Semantic"/>
+        <p1:semanticString rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></p1:semanticString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/reminder.owl#Negotiated_yes_semantic -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/reminder.owl#Negotiated_yes_semantic">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Semantic"/>
+        <p1:semanticString rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Negotiated_yes</p1:semanticString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/reminder.owl#Ratskeller_gr -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/reminder.owl#Ratskeller_gr">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Grammar"/>
+        <p1:grammarString xml:lang="de">[(ratskeller)(in den ratskeller)]</p1:grammarString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/reminder.owl#Ratskeller_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/reminder.owl#Ratskeller_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SET(location_var=ratskeller)</p1:variableOperator>
+        <p1:grammar rdf:resource="http://localhost:8080/D22/reminder.owl#Ratskeller_gr"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/reminder.owl#go_gram -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/reminder.owl#go_gram">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Grammar"/>
+        <p1:grammarString xml:lang="de">(weiter)</p1:grammarString>
+        <p1:grammarString xml:lang="en">(go)</p1:grammarString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/reminder.owl#go_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/reminder.owl#go_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:grammar rdf:resource="http://localhost:8080/D22/reminder.owl#go_gram"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/reminder.owl#intro_1_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/reminder.owl#intro_1_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">60</p1:priority>
+        <p1:utterance rdf:resource="http://localhost:8080/D22/reminder.owl#intro_1_utt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/reminder.owl#intro_1_utt -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/reminder.owl#intro_1_utt">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Utterance"/>
+        <p1:speakerGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">male</p1:speakerGender>
+        <p1:utteranceVolume rdf:datatype="http://www.w3.org/2001/XMLSchema#string">soft</p1:utteranceVolume>
+        <p1:utteranceString xml:lang="de">Hallo Nutzer.</p1:utteranceString>
+        <p1:utteranceString xml:lang="en">Hello User. Thanks for participating in the travel booking and smart home test system.</p1:utteranceString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/reminder.owl#intro_2_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/reminder.owl#intro_2_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">50</p1:priority>
+        <p1:utterance rdf:resource="http://localhost:8080/D22/reminder.owl#intro_2_utt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/reminder.owl#intro_2_utt -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/reminder.owl#intro_2_utt">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Utterance"/>
+        <p1:utteranceVolume rdf:datatype="http://www.w3.org/2001/XMLSchema#string">loud</p1:utteranceVolume>
+        <p1:utteranceString xml:lang="de">Willkommen zur Reisebuchung!</p1:utteranceString>
+        <p1:utteranceString xml:lang="en">Remember: You can say  &quot;What are my options&quot; at any time and I will explain your current available options.</p1:utteranceString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/reminder.owl#intro_agenda -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/reminder.owl#intro_agenda">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <p1:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">400</p1:priority>
+        <p1:has rdf:resource="http://localhost:8080/D22/reminder.owl#intro_1_mv"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/reminder.owl#intro_2_mv"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/reminder.owl#negotiated_switch_agenda"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/reminder.owl#location_var -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/reminder.owl#location_var">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Variable"/>
+        <p1:defaultValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">default</p1:defaultValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/reminder.owl#long_reminder -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/reminder.owl#long_reminder">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Utterance"/>
+        <p1:utteranceString xml:lang="de">Ach, uebrigens! Dein Freund Mark hat am zehnten April Geburtstag, du 
+    solltest ihm ein Geschenk besorgen. Ok, weiter!</p1:utteranceString>
+        <p1:utteranceString xml:lang="en">Your friend Oliver has his birthday on August, the fifteenth. You should get him a present.</p1:utteranceString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/reminder.owl#long_reminder_agenda -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/reminder.owl#long_reminder_agenda">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <p1:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">50</p1:priority>
+        <p1:has rdf:resource="http://localhost:8080/D22/reminder.owl#long_reminder_mv"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/reminder.owl#long_reminder_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/reminder.owl#long_reminder_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:utterance rdf:resource="http://localhost:8080/D22/reminder.owl#long_reminder"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/reminder.owl#masteragenda -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/reminder.owl#masteragenda">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <p1:isMasterBool rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</p1:isMasterBool>
+        <p1:next rdf:resource="http://localhost:8080/D22/reminder.owl#intro_agenda"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/reminder.owl#negotiated_query -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/reminder.owl#negotiated_query">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:utterance rdf:resource="http://localhost:8080/D22/reminder.owl#negotiated_utt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/reminder.owl#negotiated_switch_agenda -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/reminder.owl#negotiated_switch_agenda">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/reminder.owl#negotiated_query"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/reminder.owl#no_negotiated_mv"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/reminder.owl#short_reminder_agenda"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/reminder.owl#yes_negotiated_mv"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/reminder.owl#negotiated_utt -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/reminder.owl#negotiated_utt">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Utterance"/>
+        <p1:utteranceString rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;p style=&quot;margin-top: 0&quot;&gt;
+      Darf ich dich mal kurz unterbrechen?
+    &lt;/p&gt;</p1:utteranceString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/reminder.owl#no_Grammar -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/reminder.owl#no_Grammar">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Grammar"/>
+        <p1:grammarString xml:lang="de">(nein)</p1:grammarString>
+        <p1:grammarString xml:lang="en">(no)</p1:grammarString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/reminder.owl#no_Move -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/reminder.owl#no_Move">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:grammar rdf:resource="http://localhost:8080/D22/reminder.owl#no_Grammar"/>
+        <p1:semantic rdf:resource="http://localhost:8080/D22/reminder.owl#subTask_no_Semantic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/reminder.owl#no_negotiated_gr -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/reminder.owl#no_negotiated_gr">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Grammar"/>
+        <p1:grammarString xml:lang="de">(nein)</p1:grammarString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/reminder.owl#no_negotiated_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/reminder.owl#no_negotiated_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:semantic rdf:resource="http://localhost:8080/D22/reminder.owl#Negotiated_no_semantic"/>
+        <p1:grammar rdf:resource="http://localhost:8080/D22/reminder.owl#no_negotiated_gr"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/reminder.owl#no_request -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/reminder.owl#no_request">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/reminder.owl#no_request_mv"/>
+        <p1:requires rdf:resource="http://localhost:8080/D22/reminder.owl#subTask_no_Semantic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/reminder.owl#no_request_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/reminder.owl#no_request_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:utterance rdf:resource="http://localhost:8080/D22/reminder.owl#no_request_utt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/reminder.owl#no_request_utt -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/reminder.owl#no_request_utt">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Utterance"/>
+        <p1:utteranceString rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></p1:utteranceString>
+        <p1:utteranceString xml:lang="de">Ok.Dann weiter.
+  </p1:utteranceString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/reminder.owl#please_say_go_utt -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/reminder.owl#please_say_go_utt">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Utterance"/>
+        <p1:utteranceString xml:lang="de">Bitte starte den dialog mit &quot;hilfe&quot;</p1:utteranceString>
+        <p1:utteranceString xml:lang="en">Please say &quot;what are my options&quot; to begin the dialogue.</p1:utteranceString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/reminder.owl#say_go_agenda -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/reminder.owl#say_go_agenda">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <p1:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">400</p1:priority>
+        <p1:next rdf:resource="http://localhost:8080/D22/reminder.owl#long_reminder_agenda"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/reminder.owl#say_go_mv"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/reminder.owl#short_reminder_agenda"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/reminder.owl#sub_task_query"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/reminder.owl#what_are_my_options_mv"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/reminder.owl#say_go_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/reminder.owl#say_go_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:utterance rdf:resource="http://localhost:8080/D22/reminder.owl#please_say_go_utt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/reminder.owl#short_reminder -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/reminder.owl#short_reminder">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Utterance"/>
+        <p1:utteranceString xml:lang="de">Die Waschmaschine ist fertig.</p1:utteranceString>
+        <p1:utteranceString xml:lang="en">The weather report predicts heavy rain in the next fifteen minutes.</p1:utteranceString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/reminder.owl#short_reminder_agenda -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/reminder.owl#short_reminder_agenda">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <p1:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">60</p1:priority>
+        <p1:requires rdf:resource="http://localhost:8080/D22/reminder.owl#Negotiated_yes_semantic"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/reminder.owl#short_reminder_mv"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/reminder.owl#short_reminder_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/reminder.owl#short_reminder_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:utterance rdf:resource="http://localhost:8080/D22/reminder.owl#short_reminder"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/reminder.owl#subTask_no_Semantic -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/reminder.owl#subTask_no_Semantic">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Semantic"/>
+        <p1:semanticString xml:lang="de">subTask_no</p1:semanticString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/reminder.owl#subTask_yes_Semantic -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/reminder.owl#subTask_yes_Semantic">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Semantic"/>
+        <p1:semanticString xml:lang="de">subTask_yes</p1:semanticString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/reminder.owl#sub_task_query -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/reminder.owl#sub_task_query">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <p1:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">45</p1:priority>
+        <p1:has rdf:resource="http://localhost:8080/D22/reminder.owl#no_Move"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/reminder.owl#no_request"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/reminder.owl#sub_task_query_mv"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/reminder.owl#sub_task_request"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/reminder.owl#yes_Move"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/reminder.owl#sub_task_query_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/reminder.owl#sub_task_query_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:utterance rdf:resource="http://localhost:8080/D22/reminder.owl#sub_task_query_utt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/reminder.owl#sub_task_query_utt -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/reminder.owl#sub_task_query_utt">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Utterance"/>
+        <p1:utteranceString xml:lang="de">Oh! Warte mal! Du bist mit Sandra fuer Samstag zum Abendessen verabredet. 
+    Moechtest du jetzt ein Tisch reservieren?</p1:utteranceString>
+        <p1:utteranceString xml:lang="en">You planned a movie night with some friends today. I should remind you that you still have to get the movie.</p1:utteranceString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/reminder.owl#sub_task_replay -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/reminder.owl#sub_task_replay">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/reminder.owl#sub_task_replay_mv"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/reminder.owl#sub_task_replay_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/reminder.owl#sub_task_replay_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:utterance rdf:resource="http://localhost:8080/D22/reminder.owl#sub_task_replay_utt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/reminder.owl#sub_task_replay_utt -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/reminder.owl#sub_task_replay_utt">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Utterance"/>
+        <p1:utteranceString xml:lang="de">Ok. Ich habe einen Tisch im %location_var% reserviert. Und jetzt weiter.</p1:utteranceString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/reminder.owl#sub_task_request -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/reminder.owl#sub_task_request">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/reminder.owl#Besitos_mv"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/reminder.owl#Chilis_mv"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/reminder.owl#Ratskeller_mv"/>
+        <p1:requires rdf:resource="http://localhost:8080/D22/reminder.owl#subTask_yes_Semantic"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/reminder.owl#sub_task_replay"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/reminder.owl#sub_task_request_mv"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/reminder.owl#sub_task_request_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/reminder.owl#sub_task_request_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:utterance rdf:resource="http://localhost:8080/D22/reminder.owl#sub_task_request_utt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/reminder.owl#sub_task_request_utt -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/reminder.owl#sub_task_request_utt">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Utterance"/>
+        <p1:utteranceString xml:lang="de">Wo wuerdest dann gerne hin: Besitos, Chilis oder Ratskeller?</p1:utteranceString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/reminder.owl#userBeliefspace -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/reminder.owl#userBeliefspace">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#BeliefSpace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/reminder.owl#userWorkspace -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/reminder.owl#userWorkspace">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#WorkSpace"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/reminder.owl#negotiated_switch_agenda"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/reminder.owl#weather_report -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/reminder.owl#weather_report">
+        <p1:utteranceString xml:lang="de">Der wetterbericht prognostiziert starken regen.</p1:utteranceString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/reminder.owl#what_are_my_options -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/reminder.owl#what_are_my_options">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Grammar"/>
+        <p1:grammarString xml:lang="de">(hilfe)</p1:grammarString>
+        <p1:grammarString xml:lang="en">[(what are my options)(help)]</p1:grammarString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/reminder.owl#what_are_my_options_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/reminder.owl#what_are_my_options_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:grammar rdf:resource="http://localhost:8080/D22/reminder.owl#what_are_my_options"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/reminder.owl#yes_Grammar -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/reminder.owl#yes_Grammar">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Grammar"/>
+        <p1:grammarString xml:lang="de">(ja)</p1:grammarString>
+        <p1:grammarString xml:lang="en">(yes)</p1:grammarString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/reminder.owl#yes_Move -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/reminder.owl#yes_Move">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:semantic rdf:resource="http://localhost:8080/D22/reminder.owl#subTask_yes_Semantic"/>
+        <p1:grammar rdf:resource="http://localhost:8080/D22/reminder.owl#yes_Grammar"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/reminder.owl#yes_negotiated_gr -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/reminder.owl#yes_negotiated_gr">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Grammar"/>
+        <p1:grammarString xml:lang="de">(ja)</p1:grammarString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/reminder.owl#yes_negotiated_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/reminder.owl#yes_negotiated_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:semantic rdf:resource="http://localhost:8080/D22/reminder.owl#Negotiated_yes_semantic"/>
+        <p1:grammar rdf:resource="http://localhost:8080/D22/reminder.owl#yes_negotiated_gr"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.2.0.1502) http://owlapi.sourceforge.net -->
+

@@ -1,0 +1,6 @@
+public <GoodEnough> = [<_that_is>] [good] enough;
+
+/* These are expressions that are equivalent to Goodbye at the*//* end of a dialogue but have a different/no meaning in the*//* middle of a dialogue*/
+public <GoodEnough> = [<_that_is>] [good] enough;
+
+/* These are expressions that are equivalent to Goodbye at the*//* end of a dialogue but have a different/no meaning in the*//* middle of a dialogue*/

@@ -1,0 +1,1666 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<domain>
+	<!-- Parameters -->
+	<parameters>
+	
+		<!-- German Parameters -->
+		<variable id="theta_Greet_German">
+			<distrib type="dirichlet">
+				<alpha>50</alpha>
+				<alpha>50</alpha>
+				<alpha>50</alpha>
+				<alpha>50</alpha>
+				<alpha>50</alpha>
+				<alpha>50</alpha>
+				<alpha>50</alpha>
+				<alpha>50</alpha>
+			</distrib>
+		</variable>
+
+		<variable id="theta_SayGoodbye_German">
+			<distrib type="dirichlet">
+				<alpha>50</alpha>
+				<alpha>50</alpha>
+				<alpha>50</alpha>
+				<alpha>50</alpha>
+			</distrib>
+		</variable>
+		
+		<!-- Polish Parameters -->
+		<variable id="theta_Greet_Polish">
+			<distrib type="dirichlet">
+				<alpha>50</alpha>
+				<alpha>50</alpha>
+				<alpha>50</alpha>
+				<alpha>50</alpha>
+				<alpha>50</alpha>
+				<alpha>50</alpha>
+				<alpha>50</alpha>
+				<alpha>50</alpha>
+			</distrib>
+		</variable>
+		
+		<variable id="theta_SayGoodbye_Polish">
+			<distrib type="dirichlet">
+				<alpha>50</alpha>
+				<alpha>50</alpha>
+				<alpha>50</alpha>
+				<alpha>50</alpha>
+			</distrib>
+		</variable>
+		
+		<!-- Spanish Parameters -->
+		<variable id="theta_Greet_Spanish">
+			<distrib type="dirichlet">
+				<alpha>50</alpha>
+				<alpha>50</alpha>
+				<alpha>50</alpha>
+				<alpha>50</alpha>
+				<alpha>50</alpha>
+				<alpha>50</alpha>
+				<alpha>50</alpha>
+				<alpha>50</alpha>
+			</distrib>
+		</variable>
+		
+		<variable id="theta_SayGoodbye_Spanish">
+			<distrib type="dirichlet">
+				<alpha>50</alpha>
+				<alpha>50</alpha>
+				<alpha>50</alpha>
+				<alpha>50</alpha>
+			</distrib>
+		</variable>
+
+		<!-- Turkish Parameters -->
+		<variable id="theta_Greet_Turkish">
+			<distrib type="dirichlet">
+				<alpha>50</alpha>
+				<alpha>50</alpha>
+				<alpha>50</alpha>
+				<alpha>50</alpha>
+				<alpha>50</alpha>
+				<alpha>50</alpha>
+				<alpha>50</alpha>
+				<alpha>50</alpha>
+			</distrib>
+		</variable>
+		
+		<variable id="theta_SayGoodbye_Turkish">
+			<distrib type="dirichlet">
+				<alpha>50</alpha>
+				<alpha>50</alpha>
+				<alpha>50</alpha>
+				<alpha>50</alpha>
+			</distrib>
+		</variable>
+		
+		<!-- Gaussian Parameters -->
+		<variable id="theta_gaussian0">
+			<distrib type="gaussian">
+				<mean>5</mean>
+				<variance>1</variance>
+			</distrib>
+		</variable>
+		
+		<variable id="theta_gaussian1">
+			<distrib type="gaussian">
+				<mean>5.02</mean>
+				<variance>1</variance>
+			</distrib>
+		</variable>
+		
+		<variable id="theta_gaussian2">
+			<distrib type="gaussian">
+				<mean>5.05</mean>
+				<variance>1</variance>
+			</distrib>
+		</variable>
+		
+		<variable id="theta_gaussian3">
+			<distrib type="gaussian">
+				<mean>5.1</mean>
+				<variance>1</variance>
+			</distrib>
+		</variable>
+		
+	</parameters>
+	
+	
+	<!-- Action Selection Model -->
+	<model trigger="a_u">
+		<rule id="greet_special">
+			<case>
+                <condition>
+                    <if var="a_u"  value="Greet"/>
+                    <if var="scenario" relation="in" value="[newspaper,eat_sleep]"/>
+                    <if var="userValence" relation="&lt;" value="0"/>
+                    <if var="userArousal" relation="&gt;" value="0.9"/>
+                </condition>
+                <effect util="1">
+                    <set var="a_m" value="agenda_SimpleGreet,agenda_PersonalGreet+agenda_RequestWellbeing"/>
+                </effect>
+            </case>
+		</rule>
+		<!-- Greet Rules with Parameter Estimation -->
+		<rule id="greet_German">		
+            <case>
+                <condition>
+                    <if var="a_u"  value="Greet"/>
+					<if var="kiVariable" value=""/>
+					<if var="userCulture" value="German"/>
+                </condition>
+				<effect util="theta_Greet_German[0]">
+                    <set var="a_m" value="agenda_Acknowledge+agenda_PersonalGreet"/>
+                </effect>
+				<effect util="theta_Greet_German[1]">
+                    <set var="a_m" value="agenda_PersonalGreet+agenda_AskMood"/>
+                </effect>
+				<effect util="theta_Greet_German[2]">
+                    <set var="a_m" value="agenda_PersonalGreet+agenda_AskTask"/>
+                </effect>
+				<effect util="theta_Greet_German[3]">
+                    <set var="a_m" value="agenda_AskMood"/>
+                </effect>
+				<effect util="theta_Greet_German[4]">
+                    <set var="a_m" value="agenda_EveningGreet"/>
+                </effect>
+				<effect util="theta_Greet_German[5]">
+                    <set var="a_m" value="agenda_MorningGreet"/>
+                </effect>
+				<effect util="theta_Greet_German[6]">
+                    <set var="a_m" value="agenda_PersonalGreet"/>
+                </effect>
+				<effect util="theta_Greet_German[7]">
+                    <set var="a_m" value="agenda_SimpleGreet"/>
+                </effect>
+            </case>
+        </rule>
+
+		<rule id="greet_Polish">
+            <case>
+                <condition>
+                    <if var="a_u"  value="Greet"/>
+					<if var="kiVariable" value=""/>
+					<if var="userCulture" value="Polish"/>
+                </condition>
+				<effect util="theta_Greet_Polish[0]">
+                    <set var="a_m" value="agenda_Acknowledge+agenda_PersonalGreet"/>
+                </effect>
+				<effect util="theta_Greet_Polish[1]">
+                    <set var="a_m" value="agenda_PersonalGreet+agenda_AskMood"/>
+                </effect>
+				<effect util="theta_Greet_Polish[2]">
+                    <set var="a_m" value="agenda_PersonalGreet+agenda_AskTask"/>
+                </effect>
+				<effect util="theta_Greet_Polish[3]">
+                    <set var="a_m" value="agenda_AskMood"/>
+                </effect>
+				<effect util="theta_Greet_Polish[4]">
+                    <set var="a_m" value="agenda_EveningGreet"/>
+                </effect>
+				<effect util="theta_Greet_Polish[5]">
+                    <set var="a_m" value="agenda_MorningGreet"/>
+                </effect>
+				<effect util="theta_Greet_Polish[6]">
+                    <set var="a_m" value="agenda_PersonalGreet"/>
+                </effect>
+				<effect util="theta_Greet_Polish[7]">
+                    <set var="a_m" value="agenda_SimpleGreet"/>
+                </effect>
+            </case>
+        </rule>
+	
+		<rule id="greet_Spanish">
+            <case>
+                <condition>
+                    <if var="a_u"  value="Greet"/>
+					<if var="kiVariable" value=""/>
+					<if var="userCulture" value="Spanish"/>
+                </condition>
+				<effect util="theta_Greet_Spanish[0]">
+                    <set var="a_m" value="agenda_Acknowledge+agenda_PersonalGreet"/>
+                </effect>
+				<effect util="theta_Greet_Spanish[1]">
+                    <set var="a_m" value="agenda_PersonalGreet+agenda_AskMood"/>
+                </effect>
+				<effect util="theta_Greet_Spanish[2]">
+                    <set var="a_m" value="agenda_PersonalGreet+agenda_AskTask"/>
+                </effect>
+				<effect util="theta_Greet_Spanish[3]">
+                    <set var="a_m" value="agenda_AskMood"/>
+                </effect>
+				<effect util="theta_Greet_Spanish[4]">
+                    <set var="a_m" value="agenda_EveningGreet"/>
+                </effect>
+				<effect util="theta_Greet_Spanish[5]">
+                    <set var="a_m" value="agenda_MorningGreet"/>
+                </effect>
+				<effect util="theta_Greet_Spanish[6]">
+                    <set var="a_m" value="agenda_PersonalGreet"/>
+                </effect>
+				<effect util="theta_Greet_Spanish[7]">
+                    <set var="a_m" value="agenda_SimpleGreet"/>
+                </effect>
+            </case>
+        </rule>
+	
+		<rule id="greet_Turkish">
+            <case>
+                <condition>
+                    <if var="a_u"  value="Greet"/>
+					<if var="kiVariable" value=""/>
+					<if var="userCulture" value="Turkish"/>
+                </condition>
+				<effect util="theta_Greet_Turkish[0]">
+                    <set var="a_m" value="agenda_Acknowledge+agenda_PersonalGreet"/>
+                </effect>
+				<effect util="theta_Greet_Turkish[1]">
+                    <set var="a_m" value="agenda_PersonalGreet+agenda_AskMood"/>
+                </effect>
+				<effect util="theta_Greet_Turkish[2]">
+                    <set var="a_m" value="agenda_PersonalGreet+agenda_AskTask"/>
+                </effect>
+				<effect util="theta_Greet_Turkish[3]">
+                    <set var="a_m" value="agenda_AskMood"/>
+                </effect>
+				<effect util="theta_Greet_Turkish[4]">
+                    <set var="a_m" value="agenda_EveningGreet"/>
+                </effect>
+				<effect util="theta_Greet_Turkish[5]">
+                    <set var="a_m" value="agenda_MorningGreet"/>
+                </effect>
+				<effect util="theta_Greet_Turkish[6]">
+                    <set var="a_m" value="agenda_PersonalGreet"/>
+                </effect>
+				<effect util="theta_Greet_Turkish[7]">
+                    <set var="a_m" value="agenda_SimpleGreet"/>
+                </effect>
+            </case>
+        </rule>
+        <rule id="general_greet">
+        	<case>
+                <condition>
+                    <if var="a_u"  value="Greet"/>
+					<if var="userCulture" value="Arab"/>
+                </condition>
+                <effect util="1">
+                    <set var="a_m" value="agenda_SimpleGreet,agenda_PersonalGreet"/>
+                </effect>
+            </case>
+        </rule>
+		
+		<!-- SayGoodbye Rules with Parameter Estimation -->	
+		<rule id="sayGoodbye_German">
+            <case>
+                <condition>
+                    <if var="a_u"  value="SayGoodbye"/>
+					<if var="kiVariable" value=""/>
+					<if var="userCulture" value="German"/>
+                </condition>
+				<effect util="theta_SayGoodbye_German[0]">
+                    <set var="a_m" value="agenda_Acknowledge"/>
+                </effect>
+				<effect util="theta_SayGoodbye_German[1]">
+                    <set var="a_m" value="agenda_MeetAgainSayGoodbye"/>
+                </effect>
+				<effect util="theta_SayGoodbye_German[2]">
+                    <set var="a_m" value="agenda_PersonalSayGoodbye"/>
+                </effect>
+				<effect util="theta_SayGoodbye_German[3]">
+                    <set var="a_m" value="agenda_SimpleSayGoodbye"/>
+                </effect>
+            </case>
+        </rule>
+		
+		<rule id="sayGoodbye_Polish">
+            <case>
+                <condition>
+                    <if var="a_u"  value="SayGoodbye"/>
+					<if var="kiVariable" value=""/>
+					<if var="userCulture" value="Polish"/>
+                </condition>
+				<effect util="theta_SayGoodbye_Polish[0]">
+                    <set var="a_m" value="agenda_Acknowledge"/>
+                </effect>
+				<effect util="theta_SayGoodbye_Polish[1]">
+                    <set var="a_m" value="agenda_MeetAgainSayGoodbye"/>
+                </effect>
+				<effect util="theta_SayGoodbye_Polish[2]">
+                    <set var="a_m" value="agenda_PersonalSayGoodbye"/>
+                </effect>
+				<effect util="theta_SayGoodbye_Polish[3]">
+                    <set var="a_m" value="agenda_SimpleSayGoodbye"/>
+                </effect>
+            </case>
+        </rule>
+		
+		<rule id="sayGoodbye_Spanish">
+            <case>
+                <condition>
+                    <if var="a_u"  value="SayGoodbye"/>
+					<if var="kiVariable" value=""/>
+					<if var="userCulture" value="Spanish"/>
+                </condition>
+				<effect util="theta_SayGoodbye_Spanish[0]">
+                    <set var="a_m" value="agenda_Acknowledge"/>
+                </effect>
+				<effect util="theta_SayGoodbye_Spanish[1]">
+                    <set var="a_m" value="agenda_MeetAgainSayGoodbye"/>
+                </effect>
+				<effect util="theta_SayGoodbye_Spanish[2]">
+                    <set var="a_m" value="agenda_PersonalSayGoodbye"/>
+                </effect>
+				<effect util="theta_SayGoodbye_Spanish[3]">
+                    <set var="a_m" value="agenda_SimpleSayGoodbye"/>
+                </effect>
+            </case>
+        </rule>
+		
+		<rule id="sayGoodbye_Turkish">
+            <case>
+                <condition>
+                    <if var="a_u"  value="SayGoodbye"/>
+					<if var="kiVariable" value=""/>
+					<if var="userCulture" value="Turkish"/>
+                </condition>
+				<effect util="theta_SayGoodbye_Turkish[0]">
+                    <set var="a_m" value="agenda_Acknowledge"/>
+                </effect>
+				<effect util="theta_SayGoodbye_Turkish[1]">
+                    <set var="a_m" value="agenda_MeetAgainSayGoodbye"/>
+                </effect>
+				<effect util="theta_SayGoodbye_Turkish[2]">
+                    <set var="a_m" value="agenda_PersonalSayGoodbye"/>
+                </effect>
+				<effect util="theta_SayGoodbye_Turkish[3]">
+                    <set var="a_m" value="agenda_SimpleSayGoodbye"/>
+                </effect>
+            </case>
+        </rule>
+        <rule id="general_goodbye">
+        	<case>
+                <condition>
+                    <if var="a_u"  value="SayGoodbye"/>
+					<if var="userCulture" value="Arab"/>
+                </condition>
+                <effect util="1">
+                    <set var="a_m" value="agenda_SimpleSayGoodbye,agenda_PersonalSayGoodbye"/>
+                </effect>
+            </case>
+        </rule>
+		
+		<!-- Emotion Rule -->
+		<rule id="emotion">
+            <case>
+                <condition>
+                    <if var="a_u" value="emotion"/>
+                    <if var="userValence" relation="&gt;" value="0.5"/>
+                </condition>
+                <effect>
+                    <set var="a_m" value="agenda_ShareJoy"/>
+                </effect>
+            </case>
+            <case>
+                <condition>
+                    <if var="a_u" value="emotion"/>
+                    <if var="userArousal" relation="&lt;" value="0"/>
+                    <if var="scenario" value="weather"/>
+                </condition>
+                <effect>
+                    <set var="a_m" value="agenda_RequestReasonSad"/>
+                </effect>
+            </case>
+            <case>
+                <condition>
+                    <if var="a_u" value="emotion"/>
+                    <if var="userArousal" relation="&lt;" value="0"/>
+                </condition>
+                <effect>
+                    <set var="a_m" value="agenda_Console,agenda_CheerUp"/>
+                </effect>
+            </case>
+            <case>
+                <condition>
+                    <if var="a_u" value="emotion"/>
+                    <if var="userArousal" relation="&gt;" value="0"/>
+                </condition>
+                <effect>
+                    <set var="a_m" value="agenda_CalmDown"/>
+                </effect>
+            </case>
+        </rule>
+		
+		<!-- Fixed Rules -->
+		<rule id="intro">
+            <case>
+                <condition>
+                    <if var="a_u" value="RequestIntro"/>
+                </condition>
+                <effect>
+                    <set var="a_m" value="agenda_Introduce"/>
+                </effect>
+            </case>
+        </rule>
+        
+        <rule id="incomprehensible">
+            <case>
+                <condition>
+                    <if var="a_u" value="Incomprehensible"/>
+                </condition>
+                <effect>
+                    <set var="a_m" value="agenda_PersonalApologise,agenda_SimpleApologise,agenda_Empty+agenda_StateMissingComprehension+agenda_RequestRepeat,agenda_RequestRephrase,agenda_Empty"/>
+                </effect>
+            </case>
+        </rule>
+		
+		<rule id="additionalInformationRequest">
+            <case>
+                <condition>
+                    <if var="a_u" value="AdditionalInformationRequest"/>
+					<if var="userCulture" value="German"/>
+                </condition>
+                <effect util="1">
+                    <set var="a_m" value="{kiVariable}"/>
+                </effect>
+            </case>
+			<case>
+                <condition>
+                    <if var="a_u" value="AdditionalInformationRequest"/>
+					<if var="userCulture" value="Polish"/>
+                </condition>
+                <effect util="1">
+                    <set var="a_m" value="{kiVariable}"/>
+                </effect>
+            </case>
+			<case>
+                <condition>
+                    <if var="a_u" value="AdditionalInformationRequest"/>
+					<if var="userCulture" value="Spanish"/>
+                </condition>
+                <effect util="1">
+                    <set var="a_m" value="{kiVariable}"/>
+                </effect>
+            </case>
+			<case>
+                <condition>
+                    <if var="a_u" value="AdditionalInformationRequest"/>
+					<if var="userCulture" value="Turkish"/>
+                </condition>
+                <effect util="1">
+                    <set var="a_m" value="{kiVariable}"/>
+                </effect>
+            </case>
+            <case>
+                <condition>
+                    <if var="a_u" value="AdditionalInformationRequest"/>
+					<if var="userCulture" value="Arab"/>
+                </condition>
+                <effect util="1">
+                    <set var="a_m" value="agenda_Acknowledge,agenda_Empty+{kiVariable}"/>
+                </effect>
+            </case>
+        </rule>
+		
+		<rule id="thank">
+        	<case> 
+               <condition>
+                    <if var="a_u"  value="Thank"/>
+                    <if var="isLast"  value="true"/>
+                </condition>
+                <effect>
+                    <set var="a_m" value="agenda_AnswerThank+agenda_AskTaskFollowUp"/>
+                </effect>
+            </case>
+            <case> 
+               <condition>
+                    <if var="a_u"  value="ThankVideo"/>
+                </condition>
+                <effect>
+                    <set var="a_m" value="agenda_AnswerThank+agenda_Helpful"/>
+                </effect>
+            </case>
+            <case> 
+               <condition>
+                    <if var="a_u"  value="Thank"/>
+                </condition>
+                <effect>
+                    <set var="a_m" value="agenda_AnswerThank"/>
+                </effect>
+            </case>
+        </rule>
+		
+		<rule id="answerthank">
+            <case> 
+               <condition>
+                    <if var="a_u"  value="AnswerThank"/>
+                </condition>
+                <effect>
+                    <set var="a_m" value="agenda_Acknowledge+agenda_AskTask"/>
+                </effect>
+            </case>
+        </rule>
+		
+		<rule id="accept">
+			<case>
+                 <condition>
+                    <if var="a_u" relation="in" value="[Accept]"/>
+                    <or>
+                    <if var="userMoveTopic" relation="contains" value="Assistance"/>
+                    <if var="userMoveTopic" relation="contains" value="Help"/>
+                    </or>
+                    <if var="offer" relation="!=" value="helpful"/>
+                </condition>
+                <effect>
+                    <set var="a_m" value="agenda_Acknowledge+agenda_AskSpecificTask"/>
+                </effect>
+            </case>
+            <case>
+                 <condition>
+                    <if var="a_u" relation="in" value="[Accept]"/>
+                    <if var="userMoveTopic" relation="contains" value="Meet"/>
+                    <if var="userMoveTopic" relation="contains" value="Friend"/>
+                </condition>
+                <effect>
+                    <set var="a_m" value="agenda_RequestWishEvent"/>
+                </effect>
+            </case>
+            <case> 
+               <condition>
+                    <if var="a_u"  relation="in" value="[RequestInfoSleepHygiene,RequestLocalEvent,RequestWeather,RequestArticles,RequestSocialMedia,RequestRecipe,RequestInfoSleep,RequestInfoDementia,RequestClosestParks,RequestActivitiesBaby,RequestInfoProtectionBaby,RequestClosestHealthCenter]"/>
+                </condition>
+                <effect>
+                    <set var="a_m" value="{kiVariable}"/>
+                </effect>
+            </case>
+            <case> 
+               <condition>
+                    <if var="a_u"  value="Accept"/>
+                    <if var="offer" value="task"/>
+                </condition>
+                <effect>
+                    <set var="a_m" value="agenda_AskSpecificTask"/>
+                </effect>
+            </case>
+            <case> 
+               <condition>
+                    <if var="a_u"  value="Accept"/>
+                    <if var="offer" value="preference"/>
+                </condition>
+                <effect>
+                    <set var="a_m" value="agenda_RequestOtherArticle"/>
+                </effect>
+            </case>
+            <case> 
+               <condition>
+                    <if var="a_u"  value="Accept"/>
+                    <if var="offer" value="pain"/>
+                </condition>
+                <effect>
+                    <set var="a_m" value="{kiVariable}"/>
+                </effect>
+            </case>
+            <case> 
+               <condition>
+                    <if var="a_u"  value="Accept"/>
+                    <if var="offer" value="helpful"/>
+                </condition>
+                <effect>
+                    <set var="a_m" value="agenda_VideoAgain"/>
+                </effect>
+            </case>
+            <case> 
+               <condition>
+                    <if var="a_u"  value="Accept"/>
+                    <if var="kiVariable"  relation="!=" value=""/>
+                </condition>
+                <effect>
+                    <set var="a_m" value="{kiVariable}"/>
+                </effect>
+            </case>
+			<case>
+                <condition>
+                    <if var="a_u"  value="Accept"/>
+                    <if var="offer"  value="wellbeing"/>
+                    <if var="isLast" value="true"/>
+                </condition>
+                <effect>
+                    <set var="a_m" value="agenda_Acknowledge+agenda_AskTaskFollowUp"/>
+                </effect>
+            </case>
+        </rule>
+        
+        <rule id="reject">
+        	<case>
+                 <condition>
+                    <if var="a_u" relation="in" value="[Reject]"/>
+                    <or>
+                    <if var="userMoveTopic" relation="contains" value="Assistance"/>
+                    <if var="userMoveTopic" relation="contains" value="Help"/>
+                    </or>
+                </condition>
+                <effect>
+                    <set var="a_m" value="agenda_Acknowledge+agenda_AskSpecificTask"/>
+                </effect>
+            </case>
+            <case>  
+                <condition>
+                    <if var="a_u"  value="Reject"/>
+                    <if var="offer"  value="preference"/>
+                </condition>
+                <effect>
+                    <set var="a_m" value="agenda_PersonalApologise,agenda_SimpleApologise+agenda_AskTaskFollowUp"/>
+                </effect>
+            </case>
+            <case>
+                <condition>
+                    <if var="a_u"  value="Reject"/>
+                    <if var="offer"  value="task"/>
+                </condition>
+                <effect>
+                    <set var="a_m" value="agenda_Acknowledge+agenda_MeetAgainSayGoodbye,agenda_PersonalSayGoodbye,agenda_SimpleSayGoodbye"/>
+                </effect>
+            </case>
+            <case>
+                <condition>
+                    <if var="a_u"  value="Reject"/>
+                    <if var="offer"  value="newspaper"/>
+                </condition>
+                <effect>
+                    <set var="a_m" value="agenda_Acknowledge+agenda_NewspaperAnotherTime,agenda_AskTaskFollowUp"/>
+                </effect>
+            </case>
+            <case>
+                <condition>
+                    <if var="a_u"  value="Reject"/>
+                    <if var="offer"  value="event"/>
+                </condition>
+                <effect>
+                    <set var="a_m" value="agenda_Acknowledge+agenda_EventAnotherTime,agenda_AskTaskFollowUp"/>
+                </effect>
+            </case>
+            <case>
+                <condition>
+                    <if var="a_u"  value="Reject"/>
+                    <if var="offer"  value="socialMedia"/>
+                </condition>
+                <effect>
+                    <set var="a_m" value="agenda_Acknowledge+agenda_SocialMediaAnotherTime,agenda_AskTaskFollowUp"/>
+                </effect>
+            </case>
+            
+            <case> 
+               <condition>
+                    <if var="a_u"  value="Reject"/>
+                    <if var="offer" value="pain"/>
+                </condition>
+                <effect>
+                    <set var="a_m" value="{kiVariable}"/>
+                </effect>
+            </case>
+			<case>
+                <condition>
+                    <if var="a_u"  value="Reject"/>
+                    <if var="offer"  value="wellbeing"/>
+                    <if var="isLast" value="true"/>
+                </condition>
+                <effect>
+                    <set var="a_m" value="agenda_ExpressEmpathy+agenda_AskTaskFollowUp"/>
+                </effect>
+            </case>
+            <case>
+                <condition>
+                    <if var="a_u"  value="Reject"/>
+                    <if var="userMoveTopic" relation="contains" value="Newspaper"/>
+                    <if var="userMoveTopic" relation="contains" value="Read"/>
+                    <if var="userMoveTopic" relation="contains" value="Not"/>
+                </condition>
+                <effect>
+                    <set var="a_m" value="agenda_RequestWishNewspaper"/>
+                </effect>
+            </case>
+            <case>
+                <condition>
+                    <if var="a_u"  value="Reject"/>
+                </condition>
+                <effect>
+                    <set var="a_m" value="agenda_Acknowledge+agenda_AskTaskFollowUp"/>
+                </effect>
+            </case>
+        </rule>
+		
+		<rule id="furtherInformation">
+        	<case>  
+                <condition>
+                    <if var="a_u"  value="RequestFurtherInformation"/>
+                    <if var="kiVariable"  value=""/>
+                </condition>
+                <effect util="1">
+                    <set var="a_m" value="agenda_Reject+agenda_AskTaskFollowUp"/>
+                </effect>
+            </case>
+            <case>  
+                <condition>
+                    <if var="a_u"  value="RequestFurtherInformation"/>
+                    <if var="kiMoveDA"  value="Unknown"/>
+                </condition>
+                <effect util="1">
+                    <set var="a_m" value="agenda_Reject+agenda_AskTaskFollowUp"/>
+                </effect>
+            </case>
+            <case>  
+                <condition>
+                    <if var="a_u"  value="RequestFurtherInformation"/>
+                    <if var="kiMoveDA" value="Affirm"/>
+                </condition>
+                <effect util="1">
+                    <set var="a_m" value="agenda_Reject+agenda_AskTaskFollowUp"/>
+                </effect>
+            </case>  
+			<case>
+                <condition>
+                    <if var="a_u" value="RequestFurtherInformation"/>
+					<if var="userCulture" value="German"/>
+                </condition>
+                <effect util="1">
+                    <set var="a_m" value="{kiVariable}"/>
+                </effect>
+            </case>
+			<case>
+                <condition>
+                    <if var="a_u" value="RequestFurtherInformation"/>
+					<if var="userCulture" value="Polish"/>
+                </condition>
+                <effect util="1">
+                    <set var="a_m" value="{kiVariable}"/>
+                </effect>
+            </case>
+			<case>
+                <condition>
+                    <if var="a_u" value="RequestFurtherInformation"/>
+					<if var="userCulture" value="Spanish"/>
+                </condition>
+                <effect util="1">
+                    <set var="a_m" value="{kiVariable}"/>
+                </effect>
+            </case>
+			<case>
+                <condition>
+                    <if var="a_u" value="RequestFurtherInformation"/>
+					<if var="userCulture" value="Turkish"/>
+                </condition>
+                <effect util="1">
+                    <set var="a_m" value="{kiVariable}"/>
+                </effect>
+            </case>
+            <case>
+                <condition>
+                    <if var="a_u" value="RequestFurtherInformation"/>
+					<if var="userCulture" value="Arab"/>
+                </condition>
+                <effect util="1">
+                    <set var="a_m" value="agenda_Acknowledge,agenda_Empty+{kiVariable}"/>
+                </effect>
+            </case>
+        </rule>
+		
+		<rule id="StatementDeclare">
+			<case> 
+               <condition>
+                    <if var="a_u"  relation="in" value="[Statement,Declare]"/>
+                    <if var="userMoveTopic" relation="contains" value="Informative"/>
+                </condition>
+                <effect util="1">
+                    <set var="a_m" value="agenda_VideoAgain"/>
+                </effect>
+            </case>
+        	<case>
+                 <condition>
+                    <if var="a_u" relation="in" value="[Statement,Declare]"/>
+                    <if var="userMoveTopic" relation="contains" value="Newspaper"/>
+                    <if var="userMoveTopic" relation="contains" value="Font"/>
+                    <if var="userMoveTopic" relation="contains" value="Small"/>
+                    <if var="userMoveTopic" relation="contains" value="Sad"/>
+                </condition>
+                <effect util="1">
+                    <set var="a_m" value="agenda_PersonalApologise,agenda_SimpleApologise+agenda_RequestWishNewspaper"/>
+                </effect>
+            </case>
+        	<case>
+                 <condition>
+                    <if var="a_u" relation="in" value="[Statement,Declare]"/>
+                    <if var="userMoveTopic" relation="contains" value="Newspaper"/>
+                    <if var="userMoveTopic" relation="contains" value="Font"/>
+                    <if var="userMoveTopic" relation="contains" value="Small"/>
+                </condition>
+                <effect util="1">
+                    <set var="a_m" value="agenda_RequestWishNewspaper"/>
+                </effect>
+            </case>
+            
+            <case>
+                 <condition>
+                    <if var="a_u" relation="in" value="[Statement,Declare]"/>
+                    <if var="userMoveTopic" relation="contains" value="Newspaper"/>
+                    <if var="userMoveNegatedTopic" relation="contains" value="Read"/>
+                </condition>
+                <effect util="1">
+                    <set var="a_m" value="agenda_RequestWishNewspaper"/>
+                </effect>
+            </case>
+            <case>
+                <condition>
+                    <if var="a_u" relation="in" value="[Statement,Declare]"/>
+                    <if var="userMoveTopic" relation="contains" value="Sad"/>
+                    <if var="isLast" value="true"/>
+                    <or>
+                    	<if var="userMoveTopic" relation="contains" value="Cold"/>
+                    	<if var="userMoveTopic" relation="contains" value="Gloomy"/>
+                    	<if var="userMoveTopic" relation="contains" value="Rainy"/>
+         			</or>
+                </condition>
+                <effect util="1">
+                    <set var="a_m" value="agenda_PersonalApologise,agenda_SimpleApologise+agenda_AskTask,agenda_RequestWishNewspaper,agenda_RequestWishEvent,agenda_RequestWishSocialMedia"/>
+                </effect>
+            </case>
+        	<case>
+                <condition>
+                    <if var="a_u" relation="in" value="[Statement,Declare]"/>
+                    <if var="userMoveTopic" relation="contains" value="GoOutdoors"/>
+                    <if var="weather" value=""/>
+                </condition>
+                <effect util="1">
+                    <set var="a_m" value="agenda_SimpleMotivate+agenda_RequestWishWeather"/>
+                </effect>
+            </case>
+            <case>
+                <condition>
+                    <if var="a_u" relation="in" value="[Statement,Declare]"/>
+                    <if var="userMoveTopic" relation="contains" value="GoOut"/>
+                    <if var="isLast" value="true"/>
+                </condition>
+                <effect util="1">
+                    <set var="a_m" value="agenda_SimpleMotivate,agenda_Empty+agenda_RequestWishEvent"/>
+                </effect>
+            </case>
+            <case>
+                <condition>
+                    <if var="a_u" relation="in" value="[Statement,Declare]"/>
+                    <if var="userMoveTopic" relation="contains" value="GoOut"/>
+                </condition>
+                <effect util="1">
+                    <set var="a_m" value="agenda_SimpleMotivate"/>
+                </effect>
+            </case>
+            <case>
+                <condition>
+                    <if var="a_u" relation="in" value="[Statement,Declare]"/>
+                    <if var="userMoveTopic" relation="contains" value="GoOutdoors"/>
+                    <if var="weather" value="rainy"/>
+                </condition>
+                <effect util="1">
+                    <set var="a_m" value="agenda_SuggestWalk"/>
+                </effect>
+            </case>
+            <case>
+                <condition>
+                    <if var="a_u" relation="in" value="[Statement,Declare]"/>
+                    <if var="userMoveTopic" relation="contains" value="GoOutdoors"/>
+                </condition>
+                <effect util="1">
+                    <set var="a_m" value="agenda_SimpleMotivate"/>
+                </effect>
+            </case>
+            <case>
+                <condition>
+                    <if var="a_u" relation="in" value="[Statement,Declare]"/>
+                    <if var="userMoveTopic" relation="contains" value="Walk"/>
+                    <if var="weather" value=""/>
+                </condition>
+                <effect util="1">
+                    <set var="a_m" value="agenda_SimpleMotivate+agenda_RequestWishWeather"/>
+                </effect>
+            </case>
+            <case>
+                <condition>
+                    <if var="a_u" relation="in" value="[Statement,Declare]"/>
+                    <if var="userMoveTopic" relation="contains" value="Walk"/>
+                    <if var="weather" value="sunny"/>
+                </condition>
+                <effect util="1">
+                    <set var="a_m" value="agenda_Acknowledge+agenda_SuggestSunglassesAndHat"/>
+                </effect>
+            </case>
+            <case>
+                <condition>
+                    <if var="a_u" relation="in" value="[Statement,Declare]"/>
+                    <if var="userMoveTopic" relation="contains" value="Walk"/>
+                    <if var="weather" value="rainy"/>
+                </condition>
+                <effect util="1">
+                    <set var="a_m" value="agenda_SimpleMotivate+agenda_SuggestUmbrella"/>
+                </effect>
+            </case>
+            <case>
+                <condition>
+                    <if var="a_u" relation="in" value="[Statement,Declare]"/>
+                    <if var="userMoveTopic" relation="contains" value="Walk"/>
+                    <if var="weather" relation="in" value="[cloudy,hot,cold]"/>
+                </condition>
+                <effect util="1">
+                    <set var="a_m" value="agenda_SimpleMotivate"/>
+                </effect>
+            </case>
+            <case>
+                 <condition>
+                    <if var="a_u" relation="in" value="[Statement,Declare]"/>
+                    <if var="userMoveTopic" relation="contains" value="Sound"/>
+                    <or>
+                    <if var="userMoveTopic" relation="contains" value="Hard"/>
+                    <if var="userMoveTopic" relation="contains" value="Bad"/>
+                    <if var="userMoveNegatedTopic" relation="contains" value="Fine"/>
+                    <if var="userMoveNegatedTopic" relation="contains" value="Good"/>
+                    </or>
+                </condition>
+                <effect util="1">
+                    <set var="a_m" value="agenda_Acknowledge"/>
+                </effect>
+            </case>
+            <case>
+                <condition>
+                    <if var="a_u" relation="in" value="[Statement,Declare]"/>
+                    <if var="isLast" value="true"/>
+                    <or>
+                    	<if var="userMoveTopic" relation="contains" value="User"/>
+                    	<if var="userMoveTopic" relation="contains" value="CareRecipient"/>
+                    	<if var="userMoveTopic" relation="contains" value="Feel"/>
+                    </or>
+                    <or>
+                        <if var="userMoveTopic" relation="contains" value="Sad"/>
+                        <if var="userMoveTopic" relation="contains" value="Frustrated"/>
+                        <if var="userMoveNegatedTopic" relation="contains" value="Good"/>
+                        <if var="userMoveNegatedTopic" relation="contains" value="Fine"/>
+                    </or>
+                </condition>
+                <effect util="1">
+                    <set var="a_m" value="agenda_PersonalApologise,agenda_SimpleApologise+agenda_AskTask"/>
+                </effect>
+            </case>
+            <case>
+                <condition>
+                    <if var="a_u" relation="in" value="[Statement,Declare]"/>
+                    <if var="isLast" value="true"/>
+                    <or>
+                    	<if var="userMoveTopic" relation="contains" value="Frustrated"/>  
+                        <if var="userMoveNegatedTopic" relation="contains" value="Good"/>  
+                        <if var="userMoveNegatedTopic" relation="contains" value="Fine"/>
+                        <if var="userMoveNegatedTopic" relation="contains" value="Well"/>
+                    </or>
+                </condition>
+                <effect util="1">
+                    <set var="a_m" value="agenda_PersonalApologise,agenda_SimpleApologise+agenda_AskTask"/>
+                </effect>
+            </case>
+            <case>
+                <condition>
+                    <if var="a_u" relation="in" value="[Statement,Declare]"/>
+                    <if var="isLast" value="true"/>
+                    <or>
+                        <if var="userMoveTopic" relation="contains" value="Sad"/>
+                        <if var="userMoveTopic" relation="contains" value="Pity"/>
+                    </or>
+                </condition>
+                <effect util="1">
+                    <set var="a_m" value="agenda_PersonalApologise,agenda_SimpleApologise+agenda_RequestReasonSad"/>
+                </effect>
+            </case>
+            <case>
+                <condition>
+                    <if var="a_u" relation="in" value="[Statement,Declare]"/>
+                    <or>
+                        <if var="userMoveTopic" relation="contains" value="Sad"/>
+                        <if var="userMoveTopic" relation="contains" value="Frustrated"/>
+                        <if var="userMoveNegatedTopic" relation="contains" value="Good"/>
+                        <if var="userMoveNegatedTopic" relation="contains" value="Fine"/>
+                        <if var="userMoveNegatedTopic" relation="contains" value="Well"/>
+                    </or>
+                </condition>
+                <effect util="1">
+                    <set var="a_m" value="agenda_PersonalApologise,agenda_SimpleApologise"/>
+                </effect>
+            </case>
+            <case>
+                <condition>
+                    <if var="a_u" relation="in" value="[Statement,Declare]"/>
+                    <if var="isLast" value="true"/>
+                    <or>
+                    	<if var="userMoveTopic" relation="contains" value="Cold"/>
+                    	<if var="userMoveTopic" relation="contains" value="Gloomy"/>
+                    	<if var="userMoveTopic" relation="contains" value="Rainy"/>
+         			</or>
+                </condition>
+                <effect util="1">
+                    <set var="a_m" value="agenda_AskTask,agenda_RequestWishNewspaper,agenda_RequestWishEvent,agenda_RequestWishSocialMedia"/>
+                </effect>
+            </case>
+            <case>
+                <condition>
+                    <if var="a_u" relation="in" value="[Statement,Declare]"/>
+                    <if var="userMoveTopic" relation="contains" value="Weather"/>
+                    <or>
+                    	<if var="userMoveTopic" relation="contains" value="Cold"/>
+                    	<if var="userMoveTopic" relation="contains" value="Gloomy"/>
+                    	<if var="userMoveTopic" relation="contains" value="Rainy"/>
+         			</or>
+                </condition>
+                <effect util="1">
+                    <set var="a_m" value="agenda_Empty"/>
+                </effect>
+            </case>
+            <case>
+                 <condition>
+                    <if var="a_u" relation="in" value="[Statement,Declare]"/>
+                    <if var="isLast" value="true"/>
+                    <if var="userMoveTopic" relation="contains" value="User"/>
+                    <or>
+                    <if var="userMoveTopic" relation="contains" value="Fine"/>
+                    <if var="userMoveTopic" relation="contains" value="Good"/>
+                    </or>
+                    <if var="offer" relation="!=" value="pain"/>
+                </condition>
+                <effect util="1">
+                    <set var="a_m" value="agenda_ShareJoy+agenda_AskTask"/>
+                </effect>
+            </case>
+            <case>
+                 <condition>
+                    <if var="a_u" relation="in" value="[Statement,Declare]"/>
+                    <if var="userMoveTopic" relation="contains" value="User"/>
+                    <or>
+                    <if var="userMoveTopic" relation="contains" value="Fine"/>
+                    <if var="userMoveTopic" relation="contains" value="Good"/>
+                    </or>
+                    <if var="offer" relation="!=" value="pain"/>
+                </condition>
+                <effect util="1">
+                    <set var="a_m" value="agenda_ShareJoy"/>
+                </effect>
+            </case>
+            <case>
+                 <condition>
+                    <if var="a_u" relation="in" value="[Statement,Declare]"/>
+                    <if var="userMoveTopic" relation="contains" value="Boring"/>
+                </condition>
+                <effect util="1">
+                    <set var="a_m" value="agenda_PersonalApologise,agenda_SimpleApologise+agenda_AskTaskFollowUp"/>
+                </effect>
+            </case>
+            <case>
+                 <condition>
+                    <if var="a_u" relation="in" value="[Statement,Declare]"/>
+                    <if var="userMoveTopic" relation="contains" value="Take"/>
+                    <if var="topicsSize" relation="&lt;" value="3"/>
+                </condition>
+                <effect util="1">
+                    <set var="a_m" value=""/>
+                </effect>
+            </case>
+			<case>
+                 <condition>
+                    <if var="a_u" relation="in" value="[Statement,Declare]"/>
+                    <or>
+                    <if var="userMoveTopic" relation="contains" value="Assistance"/>
+                    <if var="userMoveTopic" relation="contains" value="Help"/>
+                    </or>
+                    <if var="userMoveTopic" relation="!contains" value="OutOfBed"/>
+                    <if var="userMoveTopic" relation="!contains" value="FallingAsleep"/>
+                    <if var="userMoveTopic" relation="!contains" value="FallAsleep"/>
+					<if var="userMoveTopic" relation="!contains" value="Toilet"/>
+					<if var="userMoveTopic" relation="!contains" value="Financial"/>
+                </condition>
+                <effect util="1">
+                    <set var="a_m" value="agenda_Acknowledge+agenda_AskSpecificTask"/>
+                </effect>
+            </case>
+            <case>
+                 <condition>
+                    <if var="a_u" relation="in" value="[Statement,Declare]"/>
+                    <or>
+                    <if var="userMoveTopic" relation="contains" value="Hurt"/>
+                    <if var="userMoveTopic" relation="contains" value="Pain"/>
+                    </or>
+                    <if var="userMoveTopic" relation="contains" value="User"/>
+                </condition>
+                <effect util="1">
+                    <set var="a_m" value="agenda_AdviseDoctorSelf"/>
+                </effect>
+            </case>
+            <case>
+                 <condition>
+                    <if var="a_u" relation="in" value="[Statement,Declare]"/>
+                    <if var="userMoveNegatedTopic" relation="contains" value="Know"/>
+                    <if var="userMoveTopic" relation="contains" value="Lift"/>
+                </condition>
+                <effect util="1">
+                    <set var="a_m" value="agenda_ConfirmAssistance+{kiVariable}"/>
+                </effect>
+            </case>
+            <case>
+                 <condition>
+                    <if var="a_u" relation="in" value="[Statement,Declare]"/>
+                    <if var="userMoveTopic" relation="contains" value="Pregnant"/>
+                    <if var="userMoveTopic" relation="contains" value="User"/>
+                </condition>
+                <effect util="1">
+                    <set var="a_m" value="agenda_Congrats"/>
+                </effect>
+            </case>
+            <case>
+                 <condition>
+                    <if var="a_u" relation="in" value="[Statement,Declare]"/>
+                    <if var="userMoveNegatedTopic" relation="contains" value="Expected"/>
+                </condition>
+                <effect util="1">
+                    <set var="a_m" value="agenda_ConfirmAssistance"/>
+                </effect>
+            </case>
+            <case>
+                 <condition>
+                    <if var="a_u" relation="in" value="[Statement,Declare]"/>
+                    <if var="userMoveNegatedTopic" relation="contains" value="Appointment"/>
+                    <if var="userMoveNegatedTopic" relation="contains" value="User"/>
+                    <if var="userMoveNegatedTopic" relation="contains" value="Take"/>
+                </condition>
+                <effect util="1">
+                    <set var="a_m" value="agenda_KnowHow"/>
+                </effect>
+            </case>
+            <case>
+                 <condition>
+                    <if var="a_u" relation="in" value="[Statement,Declare]"/>
+                    <if var="userMoveTopic" relation="contains" value="Want"/>
+                    <if var="userMoveTopic" relation="contains" value="Baby"/>
+                </condition>
+                <effect util="1">
+                    <set var="a_m" value="agenda_Congrats"/>
+                </effect>
+            </case>
+            <case>
+                 <condition>
+                    <if var="a_u" relation="in" value="[Statement,Declare]"/>
+                    <if var="userMoveNegatedTopic" relation="contains" value="Have"/>
+                    <if var="userMoveTopic" relation="contains" value="Cooking"/>
+                    <if var="userMoveTopic" relation="contains" value="Experience"/>
+                </condition>
+                <effect util="1">
+                    <set var="a_m" value="agenda_RequestWishRecipe"/>
+                </effect>
+            </case>
+            <case>
+                 <condition>
+                    <if var="a_u" relation="in" value="[Statement,Declare]"/>
+                    <if var="userMoveTopic" relation="contains" value="Know"/>
+                    <or>
+                    <if var="userMoveTopic" relation="contains" value="Food"/>
+                    <if var="userMoveTopic" relation="contains" value="Cuisine"/>
+                    </or>
+                    <or>
+                    <if var="userMoveTopic" relation="contains" value="Nothing"/>
+                    <if var="userMoveTopic" relation="contains" value="No"/>
+                    </or>
+                </condition>
+                <effect util="1">
+                    <set var="a_m" value="agenda_RequestWishRecipe"/>
+                </effect>
+            </case>
+            <case>
+                 <condition>
+                    <if var="a_u" relation="in" value="[Statement,Declare]"/>
+                    <if var="userMoveNegatedTopic" relation="contains" value="Know"/>
+                    <or>
+                    <if var="userMoveTopic" relation="contains" value="Food"/>
+                    <if var="userMoveTopic" relation="contains" value="Cuisine"/>
+                    </or>
+                </condition>
+                <effect util="1">
+                    <set var="a_m" value="agenda_RequestWishRecipe"/>
+                </effect>
+            </case>
+            <case>
+                 <condition>
+                    <if var="a_u" relation="in" value="[Statement,Declare]"/>
+                    <if var="userMoveNegatedTopic" relation="contains" value="Experience"/>
+                    <or>
+                    <if var="userMoveTopic" relation="contains" value="Food"/>
+                    <if var="userMoveTopic" relation="contains" value="Cuisine"/>
+                    </or>
+                </condition>
+                <effect util="1">
+                    <set var="a_m" value="agenda_RequestWishRecipe"/>
+                </effect>
+            </case>
+            <case>
+                 <condition>
+                    <if var="a_u" relation="in" value="[Statement,Declare]"/>
+                    <if var="userMoveTopic" relation="contains" value="Meet"/>
+                    <if var="userMoveTopic" relation="contains" value="Friend"/>
+                </condition>
+                <effect util="1">
+                    <set var="a_m" value="agenda_RequestWishEvent"/>
+                </effect>
+            </case>
+            <case>
+                 <condition>
+                    <if var="a_u" relation="in" value="[Statement,Declare]"/>
+                    <if var="userMoveTopic" relation="contains" value="Confused"/>
+                </condition>
+                <effect util="1">
+                    <set var="a_m" value="agenda_RequestMatter"/>
+                </effect>
+            </case>
+            <case>
+                 <condition>
+                    <if var="a_u" relation="in" value="[Statement,Declare]"/>
+                    <if var="kiMoveDA" value="Unknown"/>
+                    <if var="answerFound" value=""/>
+                </condition>
+                <effect util="1">
+                    <set var="a_m" value="agenda_PersonalApologise,agenda_SimpleApologise+agenda_UnknownStatement"/>
+                </effect>
+            </case>
+            <case>
+                 <condition>
+                    <if var="a_u" relation="in" value="[Statement,Declare]"/>
+                    <if var="kiVariable" value=""/>
+                    <if var="answerFound" value=""/>
+                </condition>
+                <effect util="1">
+                    <set var="a_m" value="agenda_PersonalApologise,agenda_SimpleApologise+agenda_UnknownStatement"/>
+                </effect>
+            </case>
+            <case>
+                 <condition>
+                    <if var="a_u" relation="in" value="[Statement,Declare]"/>
+                    <if var="kiMoveDA" value="Unknown"/>
+                </condition>
+                <effect util="1">
+                    <set var="a_m" value=""/>
+                </effect>
+            </case>
+            <case>
+                 <condition>
+                    <if var="a_u" relation="in" value="[Statement,Declare]"/>
+                    <if var="kiVariable" value=""/>
+                </condition>
+                <effect util="1">
+                    <set var="a_m" value=""/>
+                </effect>
+            </case>
+			<case>
+                <condition>
+                    <if var="a_u" relation="in" value="[Statement,Declare]"/>
+					<if var="userCulture" value="German"/>
+                </condition>
+                <effect util="1">
+                    <set var="a_m" value="{kiVariable}"/>
+                </effect>
+            </case>
+			<case>
+                <condition>
+                    <if var="a_u" relation="in" value="[Statement,Declare]"/>
+					<if var="userCulture" value="Polish"/>
+                </condition>
+                <effect util="1">
+                    <set var="a_m" value="{kiVariable}"/>
+                </effect>
+            </case>
+			<case>
+                <condition>
+                    <if var="a_u" relation="in" value="[Statement,Declare]"/>
+					<if var="userCulture" value="Spanish"/>
+                </condition>
+                <effect util="1">
+                    <set var="a_m" value="{kiVariable}"/>
+                </effect>
+            </case>
+			<case>
+                <condition>
+                    <if var="a_u" relation="in" value="[Statement,Declare]"/>
+					<if var="userCulture" value="Turkish"/>
+                </condition>
+                <effect util="1">
+                    <set var="a_m" value="{kiVariable}"/>
+                </effect>
+            </case>	
+            <case>
+                <condition>
+                    <if var="a_u" relation="in" value="[Statement,Declare]"/>
+					<if var="userCulture" value="Arab"/>
+                </condition>
+                <effect util="1">
+                    <set var="a_m" value="agenda_Acknowledge,agenda_Empty+{kiVariable}"/>
+                </effect>
+            </case>
+        </rule>
+		
+		<rule id="requestBoolrequest"> 
+		<case>  
+                <condition>
+                    <if var="a_u"  relation="in" value="[Request,BooleanRequest]"/>
+                    <if var="userMoveTopic" relation="contains" value="AnythingElse"/>
+                    <if var="kiVariable"  value=""/>
+                </condition>
+                <effect util="1">
+                    <set var="a_m" value="agenda_Reject+agenda_AskTaskFollowUp"/>
+                </effect>
+            </case>
+            <case>  
+                <condition>
+                    <if var="a_u"  relation="in" value="[Request,BooleanRequest]"/>
+                    <if var="userMoveTopic" relation="contains" value="AnythingElse"/>
+                    <if var="kiMoveDA"  value="Unknown"/>
+                </condition>
+                <effect util="1">
+                    <set var="a_m" value="agenda_Reject+agenda_AskTaskFollowUp"/>
+                </effect>
+            </case>
+            <case>  
+                <condition>
+                    <if var="a_u"  relation="in" value="[Request,BooleanRequest]"/>
+                    <if var="userMoveTopic" relation="contains" value="AnythingElse"/>
+                    <if var="kiMoveDA" value="Affirm"/>
+                </condition>
+                <effect util="1">
+                    <set var="a_m" value="agenda_Reject+agenda_AskTaskFollowUp"/>
+                </effect>
+            </case>  
+			<case>
+                <condition>
+                    <if var="a_u"  relation="in" value="[Request,BooleanRequest]"/>
+                    <if var="userMoveTopic" relation="contains" value="AnythingElse"/>
+                </condition>
+                <effect util="1">
+                    <set var="a_m" value="{kiVariable}"/>
+                </effect>
+            </case>
+            <case>  
+                <condition>
+                    <if var="a_u"  relation="in" value="[Request,BooleanRequest]"/>
+                    <if var="userMoveTopic" relation="contains" value="Else"/>
+                    <if var="userMoveTopic" relation="contains" value="Something"/>
+                    <if var="kiVariable"  value=""/>
+                </condition>
+                <effect util="1">
+                    <set var="a_m" value="agenda_Reject+agenda_AskTaskFollowUp"/>
+                </effect>
+            </case>
+            <case>  
+                <condition>
+                    <if var="a_u"  relation="in" value="[Request,BooleanRequest]"/>
+                    <if var="userMoveTopic" relation="contains" value="Else"/>
+                    <if var="userMoveTopic" relation="contains" value="Something"/>
+                    <if var="kiMoveDA"  value="Unknown"/>
+                </condition>
+                <effect util="1">
+                    <set var="a_m" value="agenda_Reject+agenda_AskTaskFollowUp"/>
+                </effect>
+            </case>
+            <case>  
+                <condition>
+                    <if var="a_u"  relation="in" value="[Request,BooleanRequest]"/>
+                    <if var="userMoveTopic" relation="contains" value="Else"/>
+                    <if var="userMoveTopic" relation="contains" value="Something"/>
+                    <if var="kiMoveDA" value="Affirm"/>
+                </condition>
+                <effect util="1">
+                    <set var="a_m" value="agenda_Reject+agenda_AskTaskFollowUp"/>
+                </effect>
+            </case>  
+			<case>
+                <condition>
+                    <if var="a_u"  relation="in" value="[Request,BooleanRequest]"/>
+                    <if var="userMoveTopic" relation="contains" value="Else"/>
+                    <if var="userMoveTopic" relation="contains" value="Something"/>
+                </condition>
+                <effect util="1">
+                    <set var="a_m" value="{kiVariable}"/>
+                </effect>
+            </case>
+            <case>
+                <condition>
+                    <if var="a_u" relation="in" value="[RequestNewspaper]"/>
+                    <if var="kiText" relation="!=" value=""/>
+                </condition>
+                <effect util="1">
+                    <set var="a_m" value="agenda_Accept+{kiVariable}+agenda_RequestArticleLiked"/>
+                </effect>
+            </case>
+            <case>
+                <condition>
+                    <if var="a_u" relation="in" value="[RequestReplay]"/>
+                    <if var="kiVariable" relation="!=" value=""/>
+                </condition>
+                <effect util="1">
+                    <set var="a_m" value="agenda_Accept+{kiVariable}"/>
+                </effect>
+            </case>
+            <case>
+                <condition>
+                    <if var="a_u" relation="in" value="[RequestReplay]"/>
+                    <if var="kiVariable" value=""/>
+                </condition>
+                <effect util="1">
+                    <set var="a_m" value="agenda_NotFound"/>
+                </effect>
+            </case>
+            <case>
+                 <condition>
+                    <if var="a_u" relation="in" value="[Request]"/>
+                    <or>
+                    <if var="userMoveTopic" relation="contains" value="Assistance"/>
+                    <if var="userMoveTopic" relation="contains" value="Help"/>
+                    </or>
+                    <if var="userMoveTopic" relation="!contains" value="FallingAsleep"/>
+                    <if var="userMoveTopic" relation="!contains" value="Appointment"/>
+                    <if var="userMoveTopic" relation="!contains" value="FallAsleep"/>
+                    <if var="userMoveTopic" relation="!contains" value="Toilet"/>
+					<if var="userMoveTopic" relation="!contains" value="Financial"/>
+                </condition>
+                <effect util="1">
+                    <set var="a_m" value="agenda_Acknowledge+agenda_AskSpecificTask"/>
+                </effect>
+            </case>        
+            <case>
+                <condition>
+                    <if var="a_u" relation="in" value="[BooleanRequest]"/>
+                    <if var="kiMoveDA" value="Reject"/>
+                </condition>
+                <effect util="1">
+                    <set var="a_m" value="agenda_Reject"/>
+                </effect>
+            </case>
+            <case>
+                <condition>
+                    <if var="a_u" relation="in" value="[Request,BooleanRequest]"/>
+                    <if var="kiMoveDA" value="Unknown"/>
+                </condition>
+                <effect util="1">
+                    <set var="a_m" value="agenda_UnknownRequest"/>
+                </effect>
+            </case>
+            <case>
+                <condition>
+                    <if var="a_u" relation="in" value="[Request,BooleanRequest]"/>
+                    <if var="kiMoveDA" value="NotFound"/>
+                </condition>
+                <effect util="1">
+                    <set var="a_m" value="agenda_NotFound"/>
+                </effect>
+            </case>
+            <case>
+                <condition>
+                    <if var="a_u" relation="in" value="[BooleanRequest]"/>
+                    <if var="kiVariable" value=""/>
+                </condition>
+                <effect util="1">
+                    <set var="a_m" value="agenda_Reject"/>
+                </effect>
+            </case>
+            <case>
+                <condition>
+                    <if var="a_u" relation="in" value="[Request]"/>
+                    <if var="kiVariable" value=""/>
+                </condition>
+                <effect util="1">
+                    <set var="a_m" value="agenda_UnknownRequest"/>
+                </effect>
+            </case>
+			<case>
+                <condition>
+                    <if var="a_u" relation="in" value="[Request]"/>
+					<if var="userCulture" value="German"/>
+                </condition>
+                <effect util="1">
+                    <set var="a_m" value="{kiVariable}"/>
+                </effect>
+            </case>
+			<case>
+                <condition>
+                    <if var="a_u" relation="in" value="[Request]"/>
+					<if var="userCulture" value="Polish"/>
+                </condition>
+                <effect util="1">
+                    <set var="a_m" value="{kiVariable}"/>
+                </effect>
+            </case>
+			<case>
+                <condition>
+                    <if var="a_u" relation="in" value="[Request]"/>
+					<if var="userCulture" value="Spanish"/>
+                </condition>
+                <effect util="1">
+                    <set var="a_m" value="{kiVariable}"/>
+                </effect>
+            </case>
+			<case>
+                <condition>
+                    <if var="a_u" relation="in" value="[Request]"/>
+					<if var="userCulture" value="Turkish"/>
+                </condition>
+                <effect util="1">
+                    <set var="a_m" value="{kiVariable}"/>
+                </effect>
+            </case>
+            <case>
+                <condition>
+                    <if var="a_u" relation="in" value="[Request]"/>
+					<if var="userCulture" value="Arab"/>
+                </condition>
+                <effect util="1">
+                    <set var="a_m" value="agenda_Acknowledge,agenda_Empty+{kiVariable}"/>
+                </effect>
+            </case>
+            <case>
+                <condition>
+                    <if var="a_u" relation="in" value="[RequestNewspaper]"/>
+                    <if var="kiText" value=""/>
+                </condition>
+                <effect util="1">
+                    <set var="a_m" value="agenda_TellArticleNotFound"/>
+                </effect>
+            </case>
+            <case>
+                <condition>
+                    <if var="a_u" relation="in" value="[BooleanRequest]"/>
+                    <if var="kiMoveDA" value="Affirm"/>
+                </condition>
+                <effect util="1">
+                    <set var="a_m" value="agenda_Affirm"/>
+                </effect>
+            </case>
+            <case>
+                <condition>
+                    <if var="a_u" relation="in" value="[BooleanRequest]"/>
+                    <if var="kiMoveDA" value="IRResponse"/>
+                </condition>
+                <effect util="1">
+                    <set var="a_m" value="{kiVariable}"/>
+                </effect>
+            </case>
+            <case>
+                <condition>
+                    <if var="a_u" relation="in" value="[BooleanRequest]"/>
+                </condition>
+                <effect util="1">
+                    <set var="a_m" value="agenda_Affirm,agenda_Empty+{kiVariable}"/>
+                </effect>
+            </case>
+        </rule>
+		
+		<rule id="acknowledge">
+            <case>
+                <condition>
+                    <if var="a_u"  value="Acknowledge"/>
+                    <if var="weather" value="rainy"/>
+                    <if var="userMoveTopic" relation="contains" value="Walk"/>
+                </condition>
+                <effect>
+                    <set var="a_m" value="agenda_SimpleMotivate+agenda_SuggestUmbrella"/>
+                </effect>
+            </case>
+            <case>
+                <condition>
+                    <if var="a_u"  value="Acknowledge"/>
+                    <if var="weather"  value="sunny"/>
+                    <if var="userMoveTopic" relation="contains" value="Walk"/>
+                </condition>
+                <effect>
+                    <set var="a_m" value="Acknowledge+agenda_SuggestSunglassesAndHat"/>
+                </effect>
+            </case>
+            <case>
+                <condition>
+                    <if var="a_u"  value="Acknowledge"/>
+                    <if var="weather" relation="in" value="[cloudy,hot,cold]"/>
+                    <if var="userMoveTopic" relation="contains" value="Walk"/>
+                </condition>
+                <effect>
+                    <set var="a_m" value="agenda_SimpleMotivate"/>
+                </effect>
+            </case>
+            <case>
+                <condition>
+                    <if var="a_u"  value="Acknowledge"/>
+                    <if var="nrDAs" value="1"/>
+                </condition>
+                <effect>
+                    <set var="a_m" value="agenda_AskTaskFollowUp"/>
+                </effect>
+            </case>
+            <case>
+                <condition>
+                    <if var="a_u"  value="Acknowledge"/>
+                </condition>
+                <effect>
+                    <set var="a_m" value=""/>
+                </effect>
+            </case>
+        </rule>
+		
+		<rule id="onHold">
+            <case>
+                <condition>
+                    <if var="a_u"  value="OnHold"/>
+                </condition>
+                <effect>
+                    <set var="a_m" value="agenda_Acknowledge"/>
+                </effect>
+            </case>
+        </rule>
+	
+	</model>	
+		
+		
+</domain>
+		
+		

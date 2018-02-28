@@ -1,0 +1,10 @@
+public <NewRequest> = [<I_D_LIKE_TO>] [<START>] [<THE>] [new] <QUERY> [again] | [<I_D_LIKE_TO>] modify [<THE>] <QUERY> [again];
+<START> = start | restart | reset;
+<THE> = a | the | this;
+<QUERY> = query | request | conversation | dialogue;
+<I_D_LIKE_TO> = i'd like to | i would like to | i want to | i wanna | i need to | i have to;/*End of Slot*/
+public <NewRequest> = [<I_D_LIKE_TO>] [<START>] [<THE>] [new] <QUERY> [again] | [<I_D_LIKE_TO>] modify [<THE>] <QUERY> [again];
+<START> = start | restart | reset;
+<THE> = a | the | this;
+<QUERY> = query | request | conversation | dialogue;
+<I_D_LIKE_TO> = i'd like to | i would like to | i want to | i wanna | i need to | i have to;/*End of Slot*/

@@ -1,0 +1,16 @@
+public <4_ArrivalTime> = [<pre_assertion>] <I_D_LIKE> <BE> there <day_time> | [<pre_assertion>] [<I_D_LIKE>] <ARRIVE> [there] <day_time> | [<pre_assertion>] <IS_THERE> a bus <ARRIVING> <day_time> | [<pre_assertion>] <ARRIVING> [there] <day_time>;
+<IS_THERE> = is there | i'd like | i would like | i want | i need | <I_AM> looking for;
+<I_D_LIKE> = i'd like to | i would like to | i want to | i wanna | i need to | i have to;
+<BE> = be | get | gets;
+<ARRIVING> = that arrive | that arrives | arriving | reaching;
+<ARRIVE> = arrive | arrives | be arriving | reach | reaches | be reaching;
+<I_AM> = i am | i'm;
+<AT_AROUND> = at | around | at around;/*End of Slot*/
+public <4_ArrivalTime> = [<pre_assertion>] <I_D_LIKE> <BE> there <day_time> | [<pre_assertion>] [<I_D_LIKE>] <ARRIVE> [there] <day_time> | [<pre_assertion>] <IS_THERE> a bus <ARRIVING> <day_time> | [<pre_assertion>] <ARRIVING> [there] <day_time>;
+<IS_THERE> = is there | i'd like | i would like | i want | i need | <I_AM> looking for;
+<I_D_LIKE> = i'd like to | i would like to | i want to | i wanna | i need to | i have to;
+<BE> = be | get | gets;
+<ARRIVING> = that arrive | that arrives | arriving | reaching;
+<ARRIVE> = arrive | arrives | be arriving | reach | reaches | be reaching;
+<I_AM> = i am | i'm;
+<AT_AROUND> = at | around | at around;/*End of Slot*/

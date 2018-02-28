@@ -1,0 +1,321 @@
+uncovered_route_default_1:The #uncovered_route_sem#.Is this correct?
+uncovered_route_default_2:The #uncovered_route_sem#.Did I get that right?
+uncovered_route_explain_more:I think you said you wanted the schedule of the #uncovered_route_sem#.I need you to confirm that.
+uncovered_route_what_can_i_say:If you want the schedule of the #uncovered_route_sem# say yes or press one,otherwise say no or press three.
+query.route_number_default_1:The #query_route_number_sem#.Is this correct?
+query.route_number_default_2:The #query_route_number_sem#.Did I get that right?
+query.route_number_explain_more:I think you said you wanted the schedule of the #query_route_number_sem#.I need you to confirm that.
+query.route_number_what_can_i_say:If you want the schedule of the #query_route_number_sem# say yes or press one,otherwise say no or press three.
+query.departure_place_default_1:Leaving from #query_departure_place_name_sem#.Is this correct?
+query.departure_place_default_2:Leaving from #query_departure_place_name_sem#.Did I get that right?
+query.departure_place_explain_more:I think you said you wanted to leave from #query_departure_place_name_sem#.I need you to confirm that.
+query.departure_place_what_can_i_say:If you want to leave from #query_departure_place_name_sem# say yes or press one,otherwise say no or press three.
+neighborhood_default_1:Leaving from #neighborhood_name_sem#.Is this correct?
+neighborhood_default_2:Leaving from #neighborhood_name_sem#.Did I get that right?
+neighborhood_explain_more:I think you said you wanted to leave from #neighborhood_name_sem#.I need you to confirm that.
+neighborhood_what_can_i_say:If you want to leave from #neighborhood_name_sem# say yes or press one,otherwise say no or press three.
+single_place_default_1:#single_place_name_sem#.Is this correct?
+single_place_default_2:#single_place_name_sem#.Did I get that right?
+single_place_explain_more:I think you said #single_place_name_sem#.I need you to confirm that.
+single_place_what_can_i_say:If you want a bus for #single_place_name_sem# say yes or press one,otherwise say no or press three.
+uncovered_place_default_1:#uncovered_place_name_sem#.Is this correct?
+uncovered_place_default_2:#uncovered_place_name_sem#.Did I get that right?
+uncovered_place_explain_more:I think you said you #uncovered_place_name_sem#.I need you to confirm that.
+uncovered_place_what_can_i_say:If you a bus for #uncovered_place_name_sem# say yes or press one,otherwise say no or press three.
+query.arrival_place_default_1:Going to #query_arrival_place_name_sem#.Is this correct?
+query.arrival_place_default_2:Going to #query_arrival_place_name_sem#.Did I get that right?
+query.arrival_place_explain_more:I think you said you wanted to go to #query_arrival_place_name_sem#.I need you to confirm that.
+query.arrival_place_what_can_i_say:If you want to go to #query_arrival_place_name_sem# say yes or press one,otherwise say no or press three.
+query.travel_time_query.travel_time.time.type_eq_departure_query.travel_time.time.now_default_1:You want #query_travel_time_the_next_bus_sem#.Is this correct?
+query.travel_time_query.travel_time.time.type_eq_departure_query.travel_time.time.now_default_2:I think you want #query_travel_time_the_next_bus_sem#.Am I right?
+query.travel_time_query.travel_time.time.type_eq_departure_query.travel_time.time.now_explain_more:I think you said you want to take#query_travel_time_the_next_bus_sem#.I need you to confirm this.
+query.travel_time_query.travel_time.time.type_eq_departure_query.travel_time.time.now_what_can_i_say:If you want the time of #query_travel_time_the_next_bus_sem# say yes or press one,otherwise, say no or press three.
+query.travel_time_query.travel_time.time.type_eq_departure_default_1:#query_travel_time_Leaving_at_#mytime_sem#_sem#.Is this correct?
+query.travel_time_query.travel_time.time.type_eq_departure_default_2:#query_travel_time_Leaving_at_#mytime_sem#_sem#.Did I get that right?
+query.travel_time_query.travel_time.time.type_eq_departure_explain_more:I think you said you want to #query_travel_time_leave_at_#mytime_sem#_sem#.I need you to confirm that.
+query.travel_time_query.travel_time.time.type_eq_departure_what_can_i_say:If you want to #query_travel_time_leave_at_#mytime_sem#_sem# say yes or press one,otherwise say no or press three.
+query.travel_time_not_query.travel_time.time.type_eq_departure_default_1:#query_travel_time_Arriving_by_#mytime_sem#_sem#.Is this correct?
+query.travel_time_not_query.travel_time.time.type_eq_departure_default_2:#query_travel_time_Arriving_by_#mytime_sem#_sem#.Did I get that right?
+query.travel_time_not_query.travel_time.time.type_eq_departure_explain_more:I think you said you want to #query_travel_time_arrive_before_#mytime_sem#_sem#.I need you to confirm that.
+query.travel_time_not_query.travel_time.time.type_eq_departure_what_can_i_say:If you want to #query_travel_time_arrive_before_#mytime_sem#_sem# say yes or press one,otherwise say no or press three.
+uncovered_route:The #uncovered_route_sem#.
+query.route_number:The #query_route_number_sem#.
+query.departure_place:Leaving from #query_departure_place_name_sem#.
+neighborhood:Leaving from #neighborhood_name_sem#.
+single_place:#single_place_name_sem#.
+uncovered_place:#uncovered_place_name_sem#.
+query.arrival_place:Going to #query_arrival_place_name_sem#.
+query.travel_time_query.travel_time.time.type_eq_departure_query.travel_time.time.now:#query_travel_time_The_next_bus_sem#.
+query.travel_time_query.travel_time.time.type_eq_departure:#query_travel_time_Leaving_at_#mytime_sem#_sem#.
+query.travel_time_not_query.travel_time.time.type_eq_departure:#query_travel_time_Arriving_by_#mytime_sem#_sem#.
+nonunderstanding_speak_less_loud_1:Sorry, I understand people best when they speak softer.
+nonunderstanding_speak_less_loud_2:I can't understand loud speech. Please speak more quietly.
+nonunderstanding_starting_over:Okay, let's start from the beginning. By the way, you can say ‘help' to get tips for how to best use this system.
+nonunderstanding_giveup_start_time_EQUAL_7:I'm very sorry, but it doesn't seem like I'm able to help you. If your question can wait until 7, you can call back then to speak to a person.I hope that I can be more helpful the next time you call. Thank you for calling the CMU Let's Go bus information system. Goodbye.
+nonunderstanding_giveup_not_start_time_EQUAL_7:I'm very sorry, but it doesn't seem like I'm able to help you. If your question can wait until 8, you can call back then to speak to a person.I hope that I can be more helpful the next time you call. Thank you for calling the CMU Let's Go bus information system. Goodbye.
+nonunderstanding_interaction_tips:Okay, I know this conversation isn't going well. There are things you can try to help me understand you better. Speak clearly and naturally; don't speak too quickly or too slowly. Give short, concise answers. Calling from a quiet place helps. If you'd like to start from scratch, you can say 'start-over' at any time.
+nonunderstanding_askshortanswer_1:Please use shorter answers because I have trouble understanding long sentences.
+nonunderstanding_askshortanswer_2:I need you to give me a short answer.
+welcome:Welcome to the CMU Let's Go bus information system.
+recording_warning:This conversation will be recorded for technical research purposes.
+how_to_get_help:To get help at any time, just say Help or press zero.
+system_description_slower:I am a voice-activated agent that can give you schedule information for some bus routes running in the East End, Downtown, and the airport.
+how_to_get_help_slower:To get help at any time, just say Help or press zero.
+speak_louder:I'm having some trouble hearing you.If you're still there, please try to talk a little bit louder or closer to the phone.
+you_not_there:I will assume you are not there. Goodbye.
+sorry_i_will_shutdown:I will hang up now.
+generic_tips:To help me understand you better, please go to a quiet place and speak clearly in a natural voice.
+no_help_available:I'm sorry, there is currently no help available.
+goodbye:Thank you for using the cmu Let's Go Bus Information System. Goodbye.
+looking_up_database_first_1:Just a minute. Let me check that for you.<break time="500"/>
+looking_up_database_first_2:Just a minute. I'll look that up.<break time="500"/>
+looking_up_database_first_3:Hold on. Let me check that for you.<break time="500"/>
+looking_up_database_first_4:Hold on. I'll look that up.<break time="500"/>
+looking_up_database_subsequent_1:Just a second.<break time="800"/>
+looking_up_database_subsequent_2:Okay.<break time="500"/>
+confirm_okay_1:Okay
+confirm_okay_2:Alright
+confirm_okay_3:Right
+backchannel_uhu:uhu
+nonunderstanding_1:Sorry, I didn't understand what you said.
+nonunderstanding_2:Sorry, I didn't catch that.
+subsequent_nonunderstanding_1:Sorry, I still did not understand you.
+subsequent_nonunderstanding_2:Sorry, I still didn't catch that.
+subsequent_nonunderstanding_3:I'm still having trouble understanding you.
+failrequest:Sorry, I didn't catch that.
+subsequent_failrequest:Sorry, I still didn't catch that.
+quitting:I'm sorry I couldn't be more helpful. Please try again later.
+starting_over:Okay, let's start from the beginning.
+starting_new_query:Okay, let's start from the beginning.
+uncovered_route_2:I'm sorry but I do not have the schedule for the #uncovered_route_sem#. The routes I currently cover are the following: 28X, 54C, 56U, 59U, 61A, 61B, 61C, 61D, 61F, 64A, 69A, and 5 oh 1.
+neighborhood_strategy:Let's procede step by step.
+uncovered_place_2:I'm sorry but I do not have the schedule for buses serving #uncovered_place_name_sem#. <break time="500"/>Currently, I only cover some routes in the following neighborhoods: Downtown, Oakland, Shadyside, Squirrel Hill, Homestead, McKeesport, and the airport.
+no_stop_matching:I'm sorry but I do not know where #place_name_sem# is located. Try using the closest intersection instead.
+too_many_stops_matching:I'm sorry but #place_name_sem# is not specific enough. Please give me a landmark or intersection.
+using_default_stop:Okay, I'll find a stop for you.
+result_query.type_EQUAL_LEAVE_AFTER_AND_query.travel_time.time.now_arrival_time[0]_NOT_EQUAL_-1:The next #result_route_number_sem# leaves #departure_stop_result_sem# at #departure_time_0_sem# and arrives at #arrival_stop_result_sem# at #arrival_time_0_sem#.
+result_query.type_EQUAL_LEAVE_AFTER_AND_query.travel_time.time.now:The next #result_route_number_sem# leaves #departure_stop_result_sem# at #departure_time_0_sem#
+result_query.type_EQUAL_LEAVE_AFTER_arrival_time[0]_NOT_EQUAL_-1:There is a #result_route_number_sem# leaving #departure_stop_result_sem# at #departure_time_0_sem#. It will arrive at #arrival_stop_result_sem# at #arrival_time_0_sem#.
+result_query.type_EQUAL_LEAVE_AFTER:There is a #result_route_number_sem# leaving #departure_stop_result_sem# at #departure_time_0_sem#.
+result_query.type_EQUAL_ARRIVE_BEFORE_AND_query.travel_time.time.now:The next #result_route_number_sem# arrives at #arrival_stop_result_sem# at #arrival_time_0_sem#.
+result_query.type_EQUAL_ARRIVE_BEFORE_arrival_time[0]_NOT_EQUAL_-1:There is a #result_route_number_sem# leaving #departure_stop_result_sem# at #departure_time_0_sem#. It will arrive at #arrival_stop_result_sem# at #arrival_time_0_sem#.
+result_query.type_EQUAL_ARRIVE_BEFORE:There is a #result_route_number_sem# leaving #departure_stop_result_sem# at #departure_time_0_sem#.
+result_query.type_EQUAL_BUS_BEFORE_THAT_OR_query.type_EQUAL_BUS_AFTER_THAT_arrival_time[0]_NOT_EQUAL_-1:There is a #result_route_number_sem# leaving #departure_stop_result_sem# at #departure_time_0_sem#. It will arrive at #arrival_stop_result_sem# at #arrival_time_0_sem#.
+result_query.type_EQUAL_BUS_BEFORE_THAT_OR_query.type_EQUAL_BUS_AFTER_THAT:There is a #result_route_number_sem# leaving #departure_stop_result_sem# at #departure_time_0_sem#.
+result_query.type_EQUAL_FIRST_BUS_query.route_number_ne:The first #query_route_number_sem# of the day leaves #departure_stop_result_sem# at #departure_time_0_sem#.
+result_query.type_EQUAL_FIRST_BUS_query.route_number_ne_arrival_time[0]_NOT_EQUAL_-1:The first #query_route_number_sem# of the day leaves #departure_stop_result_sem# at #departure_time_0_sem#. It arrives at #arrival_stop_result_sem# at #arrival_time_0_sem#.
+result_query.type_EQUAL_FIRST_BUS_not_query.route_number_ne:The first #result_route_number_sem# of the day leaves #departure_stop_result_sem# at #departure_time_0_sem#.
+result_query.type_EQUAL_FIRST_BUS_not_query.route_number_ne_arrival_time[0]_NOT_EQUAL_-1:The first #result_route_number_sem# of the day leaves #departure_stop_result_sem# at #departure_time_0_sem#. It arrives at #arrival_stop_result_sem# at #arrival_time_0_sem#.
+result_query.type_EQUAL_LAST_BUS_query.route_number_ne:The last #query_route_number_sem# of the day leaves #departure_stop_result_sem# at #departure_time_0_sem#.
+result_query.type_EQUAL_LAST_BUS_query.route_number_ne_arrival_time[0]_NOT_EQUAL_-1:The last #query_route_number_sem# of the day leaves #departure_stop_result_sem# at #departure_time_0_sem#. It arrives at #arrival_stop_result_sem# at #arrival_time_0_sem#.
+result_query.type_EQUAL_LAST_BUS_not_query.route_number_ne:The last #result_route_number_sem# of the day leaves #departure_stop_result_sem# at #departure_time_0_sem#.
+result_query.type_EQUAL_LAST_BUS_not_query.route_number_ne_arrival_time[0]_NOT_EQUAL_-1:The last #result_route_number_sem# of the day leaves #departure_stop_result_sem# at #departure_time_0_sem#. It arrives at #arrival_stop_result_sem# at #arrival_time_0_sem#.
+result_query.type_EQUAL_HOW_TO_GO_n_routes_1:There are #n_routes_sem# lines that run between #departure_stop_name_sem# and #arrival_stop_name_sem#:and the #result_routes_#i_sem#_route_number_sem#.
+result_query.type_EQUAL_HOW_TO_GO_not_n_routes_1:The #result_routes_0_route_number_sem# runs between #departure_stop_name_sem# and #arrival_stop_name_sem#.
+current_time_1:It is currently #currenttimeresult_#thetime_sem#_sem#.
+current_time_2:The time is now #currenttimeresult_#thetime_sem#_sem#.
+no_operator_available_1:I'm sorry, but I'm the only one here right now. If you want to speak to a person, you will have to call back during normal business hours, which are Monday through Friday, 7 a. m. to 7 p. m., and weekends and holidays, 8 a. m. to 6 p. m.
+error_result.failed_EQUAL_ARRIVAL_NOT_FOUND_1:I'm sorry, I don't know any stops for #arrival_stop_name_sem#.
+error_result.failed_EQUAL_ARRIVAL_NOT_FOUND_2:I'm sorry, I don't know of any stops for #arrival_stop_name_sem#.
+error_result.failed_EQUAL_DEPARTURE_NOT_FOUND_1:I'm sorry, I don't know any stops for #departure_stop_name_sem#.
+error_result.failed_EQUAL_DEPARTURE_NOT_FOUND_2:I'm sorry, I don't know of any stops for #departure_stop_name_sem#.
+error_result.failed_EQUAL_STOP_NOT_FOUND:I'm sorry, the stop that I think you described is unknown.Please try again.
+error_result.failed_EQUAL_NOT_A_ROUTE:I'm sorry, but the #query_route_number_sem# is not a known route.Please try again.
+error_result.failed_EQUAL_ROUTE_NOT_FOUND:I'm sorry, I don't know any routes that go from #departure_stop_name_sem# to #arrival_stop_name_sem#.
+error_result.failed_EQUAL_SAME_START_END:#departure_stop_name_sem# and #arrival_stop_name_sem# are both the same stop.Please provide a different start or end point.
+error_result.failed_EQUAL_ARRIVE_TIME_NOT_FOUND:I'm sorry, but there's no time information available for #arrival_stop_name_sem#.
+error_result.failed_EQUAL_DEPART_TIME_NOT_FOUND:I'm sorry, but there's no time information available for #departure_stop_name_sem#.
+error_result.failed_EQUAL_STOPS_NOT_ON_ROUTE_1:I'm sorry, but the #query_route_number_sem# does not go between #departure_stop_name_sem# and #arrival_stop_name_sem#.
+error_result.failed_EQUAL_STOPS_NOT_ON_ROUTE_2:I'm sorry, but the #query_route_number_sem# does not run between #departure_stop_name_sem# and #arrival_stop_name_sem#.
+error_result.failed_EQUAL_NOT_ENOUGH_INFO:I'm sorry, but you did not provide enough information for me to complete your request.Please try again.
+error_result.failed_EQUAL_NO_BUS_AFTER_THAT_query.route_number_1:I'm sorry, but that was the last #query_route_number_sem# between #departure_stop_name_sem# and #arrival_stop_name_sem# today.
+error_result.failed_EQUAL_NO_BUS_AFTER_THAT_query.route_number_2:I'm sorry, but that was the last #query_route_number_sem# of the day between #departure_stop_name_sem# and #arrival_stop_name_sem#.
+error_result.failed_EQUAL_NO_BUS_AFTER_THAT_not_query.route_number_1:I'm sorry, but that was the last bus between #departure_stop_name_sem# and #arrival_stop_name_sem# today.
+error_result.failed_EQUAL_NO_BUS_AFTER_THAT_not_query.route_number_2:I'm sorry, but that was the last bus of the day between #departure_stop_name_sem# and #arrival_stop_name_sem#.
+error_result.failed_EQUAL_NO_BUS_BEFORE_THAT_query.route_number:I'm sorry, but that was the first #query_route_number_sem# of the day between #departure_stop_name_sem# and #arrival_stop_name_sem#.
+error_result.failed_EQUAL_NO_BUS_BEFORE_THAT_not_query.route_number:I'm sorry, but that was the first bus of the day between #departure_stop_name_sem# and #arrival_stop_name_sem#.
+error_result.failed_EQUAL_NO_BUS_AT_THAT_TIME_query.route_number:I'm sorry, but there is no #query_route_number_sem# between #departure_stop_name_sem# and #arrival_stop_name_sem# #at_that_time_sem#.
+error_result.failed_EQUAL_NO_BUS_AT_THAT_TIME_not_query.route_number_1:I'm sorry, but there is no bus running between #departure_stop_name_sem# and #arrival_stop_name_sem# #at_that_time_sem#.
+error_result.failed_EQUAL_NO_BUS_AT_THAT_TIME_not_query.route_number_2:I'm sorry, but there is no bus that goes between #departure_stop_name_sem# and #arrival_stop_name_sem# #at_that_time_sem#.
+error_result.failed_EQUAL_INTERNAL_ERROR:I'm sorry, I seem to have had an internal error while handling your request.Please try again later.
+error_result.failed_EQUAL_BAD_QUERY_OR_result.failed_EQUAL_UNKNOWN_QUERY_TYPE:I'm sorry, your request seems to have confused me.Please try again.
+error_result.failed_EQUAL_TIMEOUT_TRIGGERED_1:I'm sorry, your request has too many results.Please be more specific.
+error_result.failed_EQUAL_TIMEOUT_TRIGGERED_2:I'm sorry, your request has too many results.Please try to narrow your request.
+error_else:I'm sorry, I could not find any results for your request.Please try again.
+are_you_still_there:Are you still there?
+nonunderstanding_askrepeat_1:Can you say that again?
+nonunderstanding_askrepeat_2:Can you repeat that?
+nonunderstanding_askrepeat_3:Can you repeat what you just said?
+nonunderstanding_askrephrase_1:Can you rephrase that?
+nonunderstanding_askrephrase_2:Could you rephrase that?
+nonunderstanding_askshortanswer_1_2:Please use shorter answers because I have trouble understanding long sentences.
+nonunderstanding_askshortanswer_2_2:I need you to give me a short answer.
+nonunderstanding_askstartover_1:I'm sorry but I'm still having problems understanding you and I might do better if we restarted.Would you like to start over?
+nothing:...
+next_query_default:To get more information about buses related to this trip, you can say, when is the next bus, or, when is the previous bus. To ask about a different trip, you can say, start a new query. If you are finished, you can say goodbye.
+next_query_explain_more:Right now, I need to know what you want to do next.
+next_query_what_can_i_say:You can say, when is the next bus, when is the previous bus, start a new query, or goodbye.
+next_query_error_default:To ask about a different trip, you can say, start a new query. If you are finished, you can say goodbye.
+next_query_error_explain_more:Right now, I need to know what you want to do next.
+next_query_error_what_can_i_say:You can say start a new query, or goodbye.
+how_may_i_help_you_default_system_version_EQUAL_2:What bus information are you looking for?
+how_may_i_help_you_default_not_system_version_EQUAL_2:What can I do for you?
+how_may_i_help_you_explain_more:What bus schedule information are you looking for?
+how_may_i_help_you_what_can_i_say:For example, you can say, when is the next 28X from DOWNTOWN to THE AIRPORT? or I'd like to go from MCKEESPORT to HOMESTEAD tomorrow at 10 a.m..
+busnumber_or_departureplace_default:Which bus number or departure stop do you want information for?
+busnumber_or_departureplace_explain_more:Right now, I need you to tell me either the number of the bus you want to take or the name of the bus stop you're leaving from.
+busnumber_or_departureplace_what_can_i_say:For example, you can say, 28X, or FORBES AND MURRAY, or, DOWNTOWN.
+busnumber_or_departureplace_what_can_i_say_or_startover:For example, you can say, 28X, or FORBES AND MURRAY, or, DOWNTOWN, or say start over to restart.
+query.departure_place_default_1_2:Where are you leaving from?
+query.departure_place_default_2_2:Where do you want to leave from?
+query.departure_place_default_3:Where would you like to leave from?
+query.departure_place_default_4:Where do you wanna leave from?
+query.departure_place_explain_more_2:Right now, I need you to tell me which bus stop you're leaving from.
+query.departure_place_what_can_i_say_2:For example, you can say,".&getSampleStops(%args).".
+query.departure_place_what_can_i_say_or_startover:For example, you can say,".&getSampleStops(%args).", or say start over to restart.
+departure_stop_in_neighborhood_default_1:Which stop in #neighborhood_name_sem# are you leaving from?
+departure_stop_in_neighborhood_default_2:Where in #neighborhood_name_sem# are you leaving from?
+departure_stop_in_neighborhood_default_3:Which stop in #neighborhood_name_sem# do you want to leave from?
+departure_stop_in_neighborhood_default_4:Where in #neighborhood_name_sem# do you want to leave from?
+departure_stop_in_neighborhood_explain_more:Right now, I need you to tell me the exact bus stop or landmark you're leaving from.
+departure_stop_in_neighborhood_what_can_i_say:For example, you can say,".&getSampleStops(%args).".<break time="300"/> If you're not sure about the name of the stop, you can say I don't know.
+neighborhood_default_1_2:Which neighborhood do you want to leave from?
+neighborhood_default_2_2:In what neighborhood is your departure stop?
+neighborhood_explain_more_2:Right now, I need you to tell me which neighborhood you are leaving from.
+neighborhood_what_can_i_say_2:For example, you can say, SQUIRREL HILL, <break time="500"/>OAKLAND,<break time="500"/>or THE AIRPORT.
+neighborhood_what_can_i_say_or_startover:For example, you can say, MCKEESPORT, <break time="500"/>or OAKLAND,<break time="500"/>or say start over to restart.
+query.travel_time_default_1:When would you like to travel?
+query.travel_time_default_2:When are you going to take that bus?
+query.travel_time_default_3:When do you wanna travel?
+query.travel_time_default_4:When do you want to travel?
+query.travel_time_explain_more:Right now, I need to know about what time you want to take the bus.
+query.travel_time_what_can_i_say:For example, you can say, 10:30 in the morning, or I want to arrive by 3 p m, or i want the next bus.
+query.travel_time_what_can_i_say_or_startover:For example, you can say, 10:30 in the morning, or I want the next bus, or say start over to restart.
+exact_travel_time_default_1:At what time would you like to travel?
+exact_travel_time_default_2:At what time do you wanna travel?
+exact_travel_time_default_3:At what time do you want to travel?
+exact_travel_time_explain_more:Right now, I need to know about what time you want to take the bus.
+exact_travel_time_what_can_i_say:For example, you can say, 10:30 in the morning, or I want to arrive by 3 p m, or i want the next bus.
+exact_travel_time_what_can_i_say_or_startover:For example, you can say, 10:30 in the morning, I want the next bus, or say start over to restart.
+query.arrival_place_default_1_2:Where are you going?
+query.arrival_place_default_2_2:Where do you want to go?
+query.arrival_place_default_3:Where do you wanna go?
+query.arrival_place_default_4:What is your destination?
+query.arrival_place_explain_more_2:Right now, I need you to tell me the stop or neighborhood you want to go to.
+query.arrival_place_what_can_i_say_2:For example, you can say,".&getSampleStops(%args).".
+query.arrival_place_what_can_i_say_or_startover:For example, you can say,".&getSampleStops(%args).", or say start over to restart.
+disambiguate_departure_arrival_place_default:Sorry, I must have misunderstood you. Is #query_departure_place_name_sem# your departure stop<break time="300"/> or your destination?
+disambiguate_departure_arrival_place_explain_more:Right now, I need you to tell me if it is your departure stop or your destination.
+disambiguate_departure_arrival_place_what_can_i_say:Please say departure or press one if you want to leave from there,<break time="300"/>or say destination or press three if you want to go there.
+query.line_number_default:Which route do you want to take?
+query.line_number_explain_more:Right now, I need to know the specific bus route that you want to take.
+query.line_number_what_can_i_say:For example, you can say, 61 C, or, 28 X.
+query.line_number_what_can_i_say_or_startover:For example, you can say, 61 C, or, 28 X, or say start over to restart.
+query.direction_default:Are you going towards downtown or away from downtown?
+query.direction_explain_more:Right now, I need you to tell me the direction towards which you want to go.
+query.direction_what_can_i_say:You can say inbound or outbound.You can also say I'd like to go to THE AIRPORT.
+sure_start_over_default:Are you sure you want to start over?
+sure_start_over_explain_more:I think you told me you wanted to restart this dialogue from the beginning. I will forget about everything you have told me so far. Is this what you want to do?
+sure_start_over_what_can_i_say:If you want to start over say yes or press one, to continue where we left off say no or press three.
+are_you_still_there_default:Are you still there?
+next_query_1:What else can I do for you?
+next_query_2:Is there anything else I can do for you?
+get_query_specs_NOT_query.departure_place.name_AND_NOT_query.route_number:I am an automated spoken dialogue system that can give you schedule information for bus routes in Pittsburgh's East End. You can ask me about the following buses: 28X, 54C, 56U, 59U, 61A, 61B, 61C, 61D, 61F, 64A, 69A, and 501.
+get_query_specs_query.travel_time.time.now_query.route_number_query.departure_place.name_query.arrival_place.name_NOT_query.travel_time.time.now_AND_query.travel_time.time.type_eq_departure:So far, I know that you want to take the  next #query_route_number_sem# from #query_departure_place_name_sem# to #query_arrival_place_name_sem# #query_travel_time_time_leaving_at_around_#mytime_sem#_sem#
+get_query_specs_query.travel_time.time.now_query.route_number_query.departure_place.name_query.arrival_place.name_query.travel_time.time.type_eq_arrival:So far, I know that you want to take the  next #query_route_number_sem# from #query_departure_place_name_sem# to #query_arrival_place_name_sem# #query_travel_time_time_to_arrive_by_#mytime_sem#_sem#.
+get_query_specs_query.travel_time.time.now_not_query.route_number_query.departure_place.name_query.arrival_place.name_NOT_query.travel_time.time.now_AND_query.travel_time.time.type_eq_departure:So far, I know that you want to take the  next bus from #query_departure_place_name_sem# to #query_arrival_place_name_sem# #query_travel_time_time_leaving_at_around_#mytime_sem#_sem#
+get_query_specs_query.travel_time.time.now_not_query.route_number_query.departure_place.name_query.arrival_place.name_query.travel_time.time.type_eq_arrival:So far, I know that you want to take the  next bus from #query_departure_place_name_sem# to #query_arrival_place_name_sem# #query_travel_time_time_to_arrive_by_#mytime_sem#_sem#.
+get_departure_neighborhood_and_stop_query.route_number_query.travel_time.time.now_neighborhood_ne_UNDEFINED:So far, I know that you want to take the next #query_route_number_sem# from #neighborhood_name_sem#.
+get_departure_neighborhood_and_stop_neighborhood_ne_UNDEFINED_NOT_query.route_number_query.travel_time.time.now:So far, I know that you want to take the next bus from #neighborhood_name_sem#.
+get_departure_neighborhood_and_stop_query.route_number_query.travel_time.time.now_not_neighborhood_ne_UNDEFINED:So far, I know that you want to take the next #query_route_number_sem# Since I was having difficulty understanding your departure place, we are now trying to describe it progressively.
+disambiguate_departure_arrival_place:<break time="500"/>I understood you mentioned #query_departure_place_name_sem# <break time="300"/>but I don't know if this is where you will leave from or if it's the place you want to go to.
+give_results_query.travel_time.time.now_query.route_number_NOT_query.travel_time.time.now_AND_query.travel_time.time.type_eq_departure_result.failed_EQUAL_ARRIVAL_NOT_FOUND:I looked for  the next #query_route_number_sem# leaving #query_departure_place_name_sem# for #query_arrival_place_name_sem# at around #query_travel_time_#mytime_sem#_sem# However, I don't know any stops for #arrival_stop_name_sem#.
+give_results_query.travel_time.time.now_query.route_number_NOT_query.travel_time.time.now_AND_query.travel_time.time.type_eq_departure_result.failed_EQUAL_DEPARTURE_NOT_FOUND:I looked for  the next #query_route_number_sem# leaving #query_departure_place_name_sem# for #query_arrival_place_name_sem# at around #query_travel_time_#mytime_sem#_sem# However, I don't know any stops for #departure_stop_name_sem#.
+give_results_query.travel_time.time.now_query.route_number_NOT_query.travel_time.time.now_AND_query.travel_time.time.type_eq_departure_result.failed_EQUAL_STOP_NOT_FOUND:I looked for  the next #query_route_number_sem# leaving #query_departure_place_name_sem# for #query_arrival_place_name_sem# at around #query_travel_time_#mytime_sem#_sem# However, the stop that I think you described is unknown.
+give_results_query.travel_time.time.now_query.route_number_NOT_query.travel_time.time.now_AND_query.travel_time.time.type_eq_departure_result.failed_EQUAL_NOT_A_ROUTE:I looked for  the next #query_route_number_sem# leaving #query_departure_place_name_sem# for #query_arrival_place_name_sem# at around #query_travel_time_#mytime_sem#_sem# However, but the #query_route_number_sem# is not a known route.
+give_results_query.travel_time.time.now_query.route_number_NOT_query.travel_time.time.now_AND_query.travel_time.time.type_eq_departure_result.failed_EQUAL_ROUTE_NOT_FOUND:I looked for  the next #query_route_number_sem# leaving #query_departure_place_name_sem# for #query_arrival_place_name_sem# at around #query_travel_time_#mytime_sem#_sem# However, I don't know any routes that go from #departure_stop_name_sem# to #arrival_stop_name_sem#.
+give_results_query.travel_time.time.now_query.route_number_NOT_query.travel_time.time.now_AND_query.travel_time.time.type_eq_departure_result.failed_EQUAL_SAME_START_END:I looked for  the next #query_route_number_sem# leaving #query_departure_place_name_sem# for #query_arrival_place_name_sem# at around #query_travel_time_#mytime_sem#_sem# However, #departure_stop_name_sem# and #arrival_stop_name_sem# are both the same stop.
+give_results_query.travel_time.time.now_query.route_number_NOT_query.travel_time.time.now_AND_query.travel_time.time.type_eq_departure_result.failed_EQUAL_ARRIVE_TIME_NOT_FOUND:I looked for  the next #query_route_number_sem# leaving #query_departure_place_name_sem# for #query_arrival_place_name_sem# at around #query_travel_time_#mytime_sem#_sem# Unfortunately, there's no time information available for #arrival_stop_name_sem#.
+give_results_query.travel_time.time.now_query.route_number_NOT_query.travel_time.time.now_AND_query.travel_time.time.type_eq_departure_result.failed_EQUAL_DEPART_TIME_NOT_FOUND:I looked for  the next #query_route_number_sem# leaving #query_departure_place_name_sem# for #query_arrival_place_name_sem# at around #query_travel_time_#mytime_sem#_sem# Unfortunately, there's no time information available for #departure_stop_name_sem#.
+give_results_query.travel_time.time.now_query.route_number_NOT_query.travel_time.time.now_AND_query.travel_time.time.type_eq_departure_result.failed_EQUAL_STOPS_NOT_ON_ROUTE:I looked for  the next #query_route_number_sem# leaving #query_departure_place_name_sem# for #query_arrival_place_name_sem# at around #query_travel_time_#mytime_sem#_sem# However, but the #query_route_number_sem# DOES not run between #departure_stop_name_sem# and #arrival_stop_name_sem#.
+give_results_query.travel_time.time.now_query.route_number_NOT_query.travel_time.time.now_AND_query.travel_time.time.type_eq_departure_result.failed_EQUAL_NOT_ENOUGH_INFO:I looked for  the next #query_route_number_sem# leaving #query_departure_place_name_sem# for #query_arrival_place_name_sem# at around #query_travel_time_#mytime_sem#_sem# However, but you did not provide enough information for me to complete your request.
+give_results_query.travel_time.time.now_query.route_number_NOT_query.travel_time.time.now_AND_query.travel_time.time.type_eq_departure_result.failed_EQUAL_INTERNAL_ERROR:I looked for  the next #query_route_number_sem# leaving #query_departure_place_name_sem# for #query_arrival_place_name_sem# at around #query_travel_time_#mytime_sem#_sem# Unfortunately, I seem to have had an internal error while handling your request.
+give_results_query.travel_time.time.now_query.route_number_NOT_query.travel_time.time.now_AND_query.travel_time.time.type_eq_departure_result.failed_EQUAL_BAD_QUERY_OR_result.failed_EQUAL_UNKNOWN_QUERY_TYPE:I looked for  the next #query_route_number_sem# leaving #query_departure_place_name_sem# for #query_arrival_place_name_sem# at around #query_travel_time_#mytime_sem#_sem# Unfortunately, this request seems to have confused me and I wasn't able to complete it.
+give_results_query.travel_time.time.now_query.route_number_NOT_query.travel_time.time.now_AND_query.travel_time.time.type_eq_departure_result.failed_EQUAL_TIMEOUT_TRIGGERED:I looked for  the next #query_route_number_sem# leaving #query_departure_place_name_sem# for #query_arrival_place_name_sem# at around #query_travel_time_#mytime_sem#_sem# Unfortunately, this request has too many results.
+give_results_query.travel_time.time.now_query.route_number_NOT_query.travel_time.time.now_AND_query.travel_time.time.type_eq_departure_result.failed:I looked for  the next #query_route_number_sem# leaving #query_departure_place_name_sem# for #query_arrival_place_name_sem# at around #query_travel_time_#mytime_sem#_sem# Unfortunately, I could not find any results for this request.
+give_results_query.travel_time.time.now_query.route_number_NOT_query.travel_time.time.now_AND_query.travel_time.time.type_eq_departure_else:I looked for  the next #query_route_number_sem# leaving #query_departure_place_name_sem# for #query_arrival_place_name_sem# at around #query_travel_time_#mytime_sem#_sem# I found a #result_rides_0_route_number_sem# leaving #result_rides_0_departure_stop_name_sem# at #departure_time_0_sem#. and reaching #result_rides_0_arrival_stop_name_sem# at #arrival_time_0_sem#.
+give_results_query.travel_time.time.now_query.route_number_query.travel_time.time.type_eq_arrival_result.failed_EQUAL_ARRIVAL_NOT_FOUND:I looked for  the next #query_route_number_sem# to get to #query_arrival_place_name_sem# from #query_departure_place_name_sem# #query_travel_time_by_#mytime_sem#_sem# However, I don't know any stops for #arrival_stop_name_sem#.
+give_results_query.travel_time.time.now_query.route_number_query.travel_time.time.type_eq_arrival_result.failed_EQUAL_DEPARTURE_NOT_FOUND:I looked for  the next #query_route_number_sem# to get to #query_arrival_place_name_sem# from #query_departure_place_name_sem# #query_travel_time_by_#mytime_sem#_sem# However, I don't know any stops for #departure_stop_name_sem#.
+give_results_query.travel_time.time.now_query.route_number_query.travel_time.time.type_eq_arrival_result.failed_EQUAL_STOP_NOT_FOUND:I looked for  the next #query_route_number_sem# to get to #query_arrival_place_name_sem# from #query_departure_place_name_sem# #query_travel_time_by_#mytime_sem#_sem# However, the stop that I think you described is unknown.
+give_results_query.travel_time.time.now_query.route_number_query.travel_time.time.type_eq_arrival_result.failed_EQUAL_NOT_A_ROUTE:I looked for  the next #query_route_number_sem# to get to #query_arrival_place_name_sem# from #query_departure_place_name_sem# #query_travel_time_by_#mytime_sem#_sem# However, but the #query_route_number_sem# is not a known route.
+give_results_query.travel_time.time.now_query.route_number_query.travel_time.time.type_eq_arrival_result.failed_EQUAL_ROUTE_NOT_FOUND:I looked for  the next #query_route_number_sem# to get to #query_arrival_place_name_sem# from #query_departure_place_name_sem# #query_travel_time_by_#mytime_sem#_sem# However, I don't know any routes that go from #departure_stop_name_sem# to #arrival_stop_name_sem#.
+give_results_query.travel_time.time.now_query.route_number_query.travel_time.time.type_eq_arrival_result.failed_EQUAL_SAME_START_END:I looked for  the next #query_route_number_sem# to get to #query_arrival_place_name_sem# from #query_departure_place_name_sem# #query_travel_time_by_#mytime_sem#_sem# However, #departure_stop_name_sem# and #arrival_stop_name_sem# are both the same stop.
+give_results_query.travel_time.time.now_query.route_number_query.travel_time.time.type_eq_arrival_result.failed_EQUAL_ARRIVE_TIME_NOT_FOUND:I looked for  the next #query_route_number_sem# to get to #query_arrival_place_name_sem# from #query_departure_place_name_sem# #query_travel_time_by_#mytime_sem#_sem# Unfortunately, there's no time information available for #arrival_stop_name_sem#.
+give_results_query.travel_time.time.now_query.route_number_query.travel_time.time.type_eq_arrival_result.failed_EQUAL_DEPART_TIME_NOT_FOUND:I looked for  the next #query_route_number_sem# to get to #query_arrival_place_name_sem# from #query_departure_place_name_sem# #query_travel_time_by_#mytime_sem#_sem# Unfortunately, there's no time information available for #departure_stop_name_sem#.
+give_results_query.travel_time.time.now_query.route_number_query.travel_time.time.type_eq_arrival_result.failed_EQUAL_STOPS_NOT_ON_ROUTE:I looked for  the next #query_route_number_sem# to get to #query_arrival_place_name_sem# from #query_departure_place_name_sem# #query_travel_time_by_#mytime_sem#_sem# However, but the #query_route_number_sem# DOES not run between #departure_stop_name_sem# and #arrival_stop_name_sem#.
+give_results_query.travel_time.time.now_query.route_number_query.travel_time.time.type_eq_arrival_result.failed_EQUAL_NOT_ENOUGH_INFO:I looked for  the next #query_route_number_sem# to get to #query_arrival_place_name_sem# from #query_departure_place_name_sem# #query_travel_time_by_#mytime_sem#_sem# However, but you did not provide enough information for me to complete your request.
+give_results_query.travel_time.time.now_query.route_number_query.travel_time.time.type_eq_arrival_result.failed_EQUAL_INTERNAL_ERROR:I looked for  the next #query_route_number_sem# to get to #query_arrival_place_name_sem# from #query_departure_place_name_sem# #query_travel_time_by_#mytime_sem#_sem# Unfortunately, I seem to have had an internal error while handling your request.
+give_results_query.travel_time.time.now_query.route_number_query.travel_time.time.type_eq_arrival_result.failed_EQUAL_BAD_QUERY_OR_result.failed_EQUAL_UNKNOWN_QUERY_TYPE:I looked for  the next #query_route_number_sem# to get to #query_arrival_place_name_sem# from #query_departure_place_name_sem# #query_travel_time_by_#mytime_sem#_sem# Unfortunately, this request seems to have confused me and I wasn't able to complete it.
+give_results_query.travel_time.time.now_query.route_number_query.travel_time.time.type_eq_arrival_result.failed_EQUAL_TIMEOUT_TRIGGERED:I looked for  the next #query_route_number_sem# to get to #query_arrival_place_name_sem# from #query_departure_place_name_sem# #query_travel_time_by_#mytime_sem#_sem# Unfortunately, this request has too many results.
+give_results_query.travel_time.time.now_query.route_number_query.travel_time.time.type_eq_arrival_result.failed:I looked for  the next #query_route_number_sem# to get to #query_arrival_place_name_sem# from #query_departure_place_name_sem# #query_travel_time_by_#mytime_sem#_sem# Unfortunately, I could not find any results for this request.
+give_results_query.travel_time.time.now_query.route_number_query.travel_time.time.type_eq_arrival_else:I looked for  the next #query_route_number_sem# to get to #query_arrival_place_name_sem# from #query_departure_place_name_sem# #query_travel_time_by_#mytime_sem#_sem# I found a #result_rides_0_route_number_sem# leaving #result_rides_0_departure_stop_name_sem# at #departure_time_0_sem#. and reaching #result_rides_0_arrival_stop_name_sem# at #arrival_time_0_sem#.
+give_results_query.travel_time.time.now_query.route_number_else_result.failed_EQUAL_ARRIVAL_NOT_FOUND:I looked for  the next #query_route_number_sem# from #query_departure_place_name_sem# to #query_arrival_place_name_sem#. However, I don't know any stops for #arrival_stop_name_sem#.
+give_results_query.travel_time.time.now_query.route_number_else_result.failed_EQUAL_DEPARTURE_NOT_FOUND:I looked for  the next #query_route_number_sem# from #query_departure_place_name_sem# to #query_arrival_place_name_sem#. However, I don't know any stops for #departure_stop_name_sem#.
+give_results_query.travel_time.time.now_query.route_number_else_result.failed_EQUAL_STOP_NOT_FOUND:I looked for  the next #query_route_number_sem# from #query_departure_place_name_sem# to #query_arrival_place_name_sem#. However, the stop that I think you described is unknown.
+give_results_query.travel_time.time.now_query.route_number_else_result.failed_EQUAL_NOT_A_ROUTE:I looked for  the next #query_route_number_sem# from #query_departure_place_name_sem# to #query_arrival_place_name_sem#. However, but the #query_route_number_sem# is not a known route.
+give_results_query.travel_time.time.now_query.route_number_else_result.failed_EQUAL_ROUTE_NOT_FOUND:I looked for  the next #query_route_number_sem# from #query_departure_place_name_sem# to #query_arrival_place_name_sem#. However, I don't know any routes that go from #departure_stop_name_sem# to #arrival_stop_name_sem#.
+give_results_query.travel_time.time.now_query.route_number_else_result.failed_EQUAL_SAME_START_END:I looked for  the next #query_route_number_sem# from #query_departure_place_name_sem# to #query_arrival_place_name_sem#. However, #departure_stop_name_sem# and #arrival_stop_name_sem# are both the same stop.
+give_results_query.travel_time.time.now_query.route_number_else_result.failed_EQUAL_ARRIVE_TIME_NOT_FOUND:I looked for  the next #query_route_number_sem# from #query_departure_place_name_sem# to #query_arrival_place_name_sem#. Unfortunately, there's no time information available for #arrival_stop_name_sem#.
+give_results_query.travel_time.time.now_query.route_number_else_result.failed_EQUAL_DEPART_TIME_NOT_FOUND:I looked for  the next #query_route_number_sem# from #query_departure_place_name_sem# to #query_arrival_place_name_sem#. Unfortunately, there's no time information available for #departure_stop_name_sem#.
+give_results_query.travel_time.time.now_query.route_number_else_result.failed_EQUAL_STOPS_NOT_ON_ROUTE:I looked for  the next #query_route_number_sem# from #query_departure_place_name_sem# to #query_arrival_place_name_sem#. However, but the #query_route_number_sem# DOES not run between #departure_stop_name_sem# and #arrival_stop_name_sem#.
+give_results_query.travel_time.time.now_query.route_number_else_result.failed_EQUAL_NOT_ENOUGH_INFO:I looked for  the next #query_route_number_sem# from #query_departure_place_name_sem# to #query_arrival_place_name_sem#. However, but you did not provide enough information for me to complete your request.
+give_results_query.travel_time.time.now_query.route_number_else_result.failed_EQUAL_INTERNAL_ERROR:I looked for  the next #query_route_number_sem# from #query_departure_place_name_sem# to #query_arrival_place_name_sem#. Unfortunately, I seem to have had an internal error while handling your request.
+give_results_query.travel_time.time.now_query.route_number_else_result.failed_EQUAL_BAD_QUERY_OR_result.failed_EQUAL_UNKNOWN_QUERY_TYPE:I looked for  the next #query_route_number_sem# from #query_departure_place_name_sem# to #query_arrival_place_name_sem#. Unfortunately, this request seems to have confused me and I wasn't able to complete it.
+give_results_query.travel_time.time.now_query.route_number_else_result.failed_EQUAL_TIMEOUT_TRIGGERED:I looked for  the next #query_route_number_sem# from #query_departure_place_name_sem# to #query_arrival_place_name_sem#. Unfortunately, this request has too many results.
+give_results_query.travel_time.time.now_query.route_number_else_result.failed:I looked for  the next #query_route_number_sem# from #query_departure_place_name_sem# to #query_arrival_place_name_sem#. Unfortunately, I could not find any results for this request.
+give_results_query.travel_time.time.now_query.route_number_else_else:I looked for  the next #query_route_number_sem# from #query_departure_place_name_sem# to #query_arrival_place_name_sem#. I found a #result_rides_0_route_number_sem# leaving #result_rides_0_departure_stop_name_sem# at #departure_time_0_sem#. and reaching #result_rides_0_arrival_stop_name_sem# at #arrival_time_0_sem#.
+give_results_not_query.travel_time.time.now_not_query.route_number_NOT_query.travel_time.time.now_AND_query.travel_time.time.type_eq_departure_result.failed_EQUAL_ARRIVAL_NOT_FOUND:I looked for  a bus leaving #query_departure_place_name_sem# for #query_arrival_place_name_sem# at around #query_travel_time_#mytime_sem#_sem# However, I don't know any stops for #arrival_stop_name_sem#.
+give_results_not_query.travel_time.time.now_not_query.route_number_NOT_query.travel_time.time.now_AND_query.travel_time.time.type_eq_departure_result.failed_EQUAL_DEPARTURE_NOT_FOUND:I looked for  a bus leaving #query_departure_place_name_sem# for #query_arrival_place_name_sem# at around #query_travel_time_#mytime_sem#_sem# However, I don't know any stops for #departure_stop_name_sem#.
+give_results_not_query.travel_time.time.now_not_query.route_number_NOT_query.travel_time.time.now_AND_query.travel_time.time.type_eq_departure_result.failed_EQUAL_STOP_NOT_FOUND:I looked for  a bus leaving #query_departure_place_name_sem# for #query_arrival_place_name_sem# at around #query_travel_time_#mytime_sem#_sem# However, the stop that I think you described is unknown.
+give_results_not_query.travel_time.time.now_not_query.route_number_NOT_query.travel_time.time.now_AND_query.travel_time.time.type_eq_departure_result.failed_EQUAL_NOT_A_ROUTE:I looked for  a bus leaving #query_departure_place_name_sem# for #query_arrival_place_name_sem# at around #query_travel_time_#mytime_sem#_sem# However, but the #query_route_number_sem# is not a known route.
+give_results_not_query.travel_time.time.now_not_query.route_number_NOT_query.travel_time.time.now_AND_query.travel_time.time.type_eq_departure_result.failed_EQUAL_ROUTE_NOT_FOUND:I looked for  a bus leaving #query_departure_place_name_sem# for #query_arrival_place_name_sem# at around #query_travel_time_#mytime_sem#_sem# However, I don't know any routes that go from #departure_stop_name_sem# to #arrival_stop_name_sem#.
+give_results_not_query.travel_time.time.now_not_query.route_number_NOT_query.travel_time.time.now_AND_query.travel_time.time.type_eq_departure_result.failed_EQUAL_SAME_START_END:I looked for  a bus leaving #query_departure_place_name_sem# for #query_arrival_place_name_sem# at around #query_travel_time_#mytime_sem#_sem# However, #departure_stop_name_sem# and #arrival_stop_name_sem# are both the same stop.
+give_results_not_query.travel_time.time.now_not_query.route_number_NOT_query.travel_time.time.now_AND_query.travel_time.time.type_eq_departure_result.failed_EQUAL_ARRIVE_TIME_NOT_FOUND:I looked for  a bus leaving #query_departure_place_name_sem# for #query_arrival_place_name_sem# at around #query_travel_time_#mytime_sem#_sem# Unfortunately, there's no time information available for #arrival_stop_name_sem#.
+give_results_not_query.travel_time.time.now_not_query.route_number_NOT_query.travel_time.time.now_AND_query.travel_time.time.type_eq_departure_result.failed_EQUAL_DEPART_TIME_NOT_FOUND:I looked for  a bus leaving #query_departure_place_name_sem# for #query_arrival_place_name_sem# at around #query_travel_time_#mytime_sem#_sem# Unfortunately, there's no time information available for #departure_stop_name_sem#.
+give_results_not_query.travel_time.time.now_not_query.route_number_NOT_query.travel_time.time.now_AND_query.travel_time.time.type_eq_departure_result.failed_EQUAL_STOPS_NOT_ON_ROUTE:I looked for  a bus leaving #query_departure_place_name_sem# for #query_arrival_place_name_sem# at around #query_travel_time_#mytime_sem#_sem# However, but the #query_route_number_sem# DOES not run between #departure_stop_name_sem# and #arrival_stop_name_sem#.
+give_results_not_query.travel_time.time.now_not_query.route_number_NOT_query.travel_time.time.now_AND_query.travel_time.time.type_eq_departure_result.failed_EQUAL_NOT_ENOUGH_INFO:I looked for  a bus leaving #query_departure_place_name_sem# for #query_arrival_place_name_sem# at around #query_travel_time_#mytime_sem#_sem# However, but you did not provide enough information for me to complete your request.
+give_results_not_query.travel_time.time.now_not_query.route_number_NOT_query.travel_time.time.now_AND_query.travel_time.time.type_eq_departure_result.failed_EQUAL_INTERNAL_ERROR:I looked for  a bus leaving #query_departure_place_name_sem# for #query_arrival_place_name_sem# at around #query_travel_time_#mytime_sem#_sem# Unfortunately, I seem to have had an internal error while handling your request.
+give_results_not_query.travel_time.time.now_not_query.route_number_NOT_query.travel_time.time.now_AND_query.travel_time.time.type_eq_departure_result.failed_EQUAL_BAD_QUERY_OR_result.failed_EQUAL_UNKNOWN_QUERY_TYPE:I looked for  a bus leaving #query_departure_place_name_sem# for #query_arrival_place_name_sem# at around #query_travel_time_#mytime_sem#_sem# Unfortunately, this request seems to have confused me and I wasn't able to complete it.
+give_results_not_query.travel_time.time.now_not_query.route_number_NOT_query.travel_time.time.now_AND_query.travel_time.time.type_eq_departure_result.failed_EQUAL_TIMEOUT_TRIGGERED:I looked for  a bus leaving #query_departure_place_name_sem# for #query_arrival_place_name_sem# at around #query_travel_time_#mytime_sem#_sem# Unfortunately, this request has too many results.
+give_results_not_query.travel_time.time.now_not_query.route_number_NOT_query.travel_time.time.now_AND_query.travel_time.time.type_eq_departure_result.failed:I looked for  a bus leaving #query_departure_place_name_sem# for #query_arrival_place_name_sem# at around #query_travel_time_#mytime_sem#_sem# Unfortunately, I could not find any results for this request.
+give_results_not_query.travel_time.time.now_not_query.route_number_NOT_query.travel_time.time.now_AND_query.travel_time.time.type_eq_departure_else:I looked for  a bus leaving #query_departure_place_name_sem# for #query_arrival_place_name_sem# at around #query_travel_time_#mytime_sem#_sem# I found a #result_rides_0_route_number_sem# leaving #result_rides_0_departure_stop_name_sem# at #departure_time_0_sem#. and reaching #result_rides_0_arrival_stop_name_sem# at #arrival_time_0_sem#.
+give_results_not_query.travel_time.time.now_not_query.route_number_query.travel_time.time.type_eq_arrival_result.failed_EQUAL_ARRIVAL_NOT_FOUND:I looked for  a bus to get to #query_arrival_place_name_sem# from #query_departure_place_name_sem# #query_travel_time_by_#mytime_sem#_sem# However, I don't know any stops for #arrival_stop_name_sem#.
+give_results_not_query.travel_time.time.now_not_query.route_number_query.travel_time.time.type_eq_arrival_result.failed_EQUAL_DEPARTURE_NOT_FOUND:I looked for  a bus to get to #query_arrival_place_name_sem# from #query_departure_place_name_sem# #query_travel_time_by_#mytime_sem#_sem# However, I don't know any stops for #departure_stop_name_sem#.
+give_results_not_query.travel_time.time.now_not_query.route_number_query.travel_time.time.type_eq_arrival_result.failed_EQUAL_STOP_NOT_FOUND:I looked for  a bus to get to #query_arrival_place_name_sem# from #query_departure_place_name_sem# #query_travel_time_by_#mytime_sem#_sem# However, the stop that I think you described is unknown.
+give_results_not_query.travel_time.time.now_not_query.route_number_query.travel_time.time.type_eq_arrival_result.failed_EQUAL_NOT_A_ROUTE:I looked for  a bus to get to #query_arrival_place_name_sem# from #query_departure_place_name_sem# #query_travel_time_by_#mytime_sem#_sem# However, but the #query_route_number_sem# is not a known route.
+give_results_not_query.travel_time.time.now_not_query.route_number_query.travel_time.time.type_eq_arrival_result.failed_EQUAL_ROUTE_NOT_FOUND:I looked for  a bus to get to #query_arrival_place_name_sem# from #query_departure_place_name_sem# #query_travel_time_by_#mytime_sem#_sem# However, I don't know any routes that go from #departure_stop_name_sem# to #arrival_stop_name_sem#.
+give_results_not_query.travel_time.time.now_not_query.route_number_query.travel_time.time.type_eq_arrival_result.failed_EQUAL_SAME_START_END:I looked for  a bus to get to #query_arrival_place_name_sem# from #query_departure_place_name_sem# #query_travel_time_by_#mytime_sem#_sem# However, #departure_stop_name_sem# and #arrival_stop_name_sem# are both the same stop.
+give_results_not_query.travel_time.time.now_not_query.route_number_query.travel_time.time.type_eq_arrival_result.failed_EQUAL_ARRIVE_TIME_NOT_FOUND:I looked for  a bus to get to #query_arrival_place_name_sem# from #query_departure_place_name_sem# #query_travel_time_by_#mytime_sem#_sem# Unfortunately, there's no time information available for #arrival_stop_name_sem#.
+give_results_not_query.travel_time.time.now_not_query.route_number_query.travel_time.time.type_eq_arrival_result.failed_EQUAL_DEPART_TIME_NOT_FOUND:I looked for  a bus to get to #query_arrival_place_name_sem# from #query_departure_place_name_sem# #query_travel_time_by_#mytime_sem#_sem# Unfortunately, there's no time information available for #departure_stop_name_sem#.
+give_results_not_query.travel_time.time.now_not_query.route_number_query.travel_time.time.type_eq_arrival_result.failed_EQUAL_STOPS_NOT_ON_ROUTE:I looked for  a bus to get to #query_arrival_place_name_sem# from #query_departure_place_name_sem# #query_travel_time_by_#mytime_sem#_sem# However, but the #query_route_number_sem# DOES not run between #departure_stop_name_sem# and #arrival_stop_name_sem#.
+give_results_not_query.travel_time.time.now_not_query.route_number_query.travel_time.time.type_eq_arrival_result.failed_EQUAL_NOT_ENOUGH_INFO:I looked for  a bus to get to #query_arrival_place_name_sem# from #query_departure_place_name_sem# #query_travel_time_by_#mytime_sem#_sem# However, but you did not provide enough information for me to complete your request.
+give_results_not_query.travel_time.time.now_not_query.route_number_query.travel_time.time.type_eq_arrival_result.failed_EQUAL_INTERNAL_ERROR:I looked for  a bus to get to #query_arrival_place_name_sem# from #query_departure_place_name_sem# #query_travel_time_by_#mytime_sem#_sem# Unfortunately, I seem to have had an internal error while handling your request.
+give_results_not_query.travel_time.time.now_not_query.route_number_query.travel_time.time.type_eq_arrival_result.failed_EQUAL_BAD_QUERY_OR_result.failed_EQUAL_UNKNOWN_QUERY_TYPE:I looked for  a bus to get to #query_arrival_place_name_sem# from #query_departure_place_name_sem# #query_travel_time_by_#mytime_sem#_sem# Unfortunately, this request seems to have confused me and I wasn't able to complete it.
+give_results_not_query.travel_time.time.now_not_query.route_number_query.travel_time.time.type_eq_arrival_result.failed_EQUAL_TIMEOUT_TRIGGERED:I looked for  a bus to get to #query_arrival_place_name_sem# from #query_departure_place_name_sem# #query_travel_time_by_#mytime_sem#_sem# Unfortunately, this request has too many results.
+give_results_not_query.travel_time.time.now_not_query.route_number_query.travel_time.time.type_eq_arrival_result.failed:I looked for  a bus to get to #query_arrival_place_name_sem# from #query_departure_place_name_sem# #query_travel_time_by_#mytime_sem#_sem# Unfortunately, I could not find any results for this request.
+give_results_not_query.travel_time.time.now_not_query.route_number_query.travel_time.time.type_eq_arrival_else:I looked for  a bus to get to #query_arrival_place_name_sem# from #query_departure_place_name_sem# #query_travel_time_by_#mytime_sem#_sem# I found a #result_rides_0_route_number_sem# leaving #result_rides_0_departure_stop_name_sem# at #departure_time_0_sem#. and reaching #result_rides_0_arrival_stop_name_sem# at #arrival_time_0_sem#.
+give_results_not_query.travel_time.time.now_not_query.route_number_else_result.failed_EQUAL_ARRIVAL_NOT_FOUND:I looked for  a bus from #query_departure_place_name_sem# to #query_arrival_place_name_sem#. However, I don't know any stops for #arrival_stop_name_sem#.
+give_results_not_query.travel_time.time.now_not_query.route_number_else_result.failed_EQUAL_DEPARTURE_NOT_FOUND:I looked for  a bus from #query_departure_place_name_sem# to #query_arrival_place_name_sem#. However, I don't know any stops for #departure_stop_name_sem#.
+give_results_not_query.travel_time.time.now_not_query.route_number_else_result.failed_EQUAL_STOP_NOT_FOUND:I looked for  a bus from #query_departure_place_name_sem# to #query_arrival_place_name_sem#. However, the stop that I think you described is unknown.
+give_results_not_query.travel_time.time.now_not_query.route_number_else_result.failed_EQUAL_NOT_A_ROUTE:I looked for  a bus from #query_departure_place_name_sem# to #query_arrival_place_name_sem#. However, but the #query_route_number_sem# is not a known route.
+give_results_not_query.travel_time.time.now_not_query.route_number_else_result.failed_EQUAL_ROUTE_NOT_FOUND:I looked for  a bus from #query_departure_place_name_sem# to #query_arrival_place_name_sem#. However, I don't know any routes that go from #departure_stop_name_sem# to #arrival_stop_name_sem#.
+give_results_not_query.travel_time.time.now_not_query.route_number_else_result.failed_EQUAL_SAME_START_END:I looked for  a bus from #query_departure_place_name_sem# to #query_arrival_place_name_sem#. However, #departure_stop_name_sem# and #arrival_stop_name_sem# are both the same stop.
+give_results_not_query.travel_time.time.now_not_query.route_number_else_result.failed_EQUAL_ARRIVE_TIME_NOT_FOUND:I looked for  a bus from #query_departure_place_name_sem# to #query_arrival_place_name_sem#. Unfortunately, there's no time information available for #arrival_stop_name_sem#.
+give_results_not_query.travel_time.time.now_not_query.route_number_else_result.failed_EQUAL_DEPART_TIME_NOT_FOUND:I looked for  a bus from #query_departure_place_name_sem# to #query_arrival_place_name_sem#. Unfortunately, there's no time information available for #departure_stop_name_sem#.
+give_results_not_query.travel_time.time.now_not_query.route_number_else_result.failed_EQUAL_STOPS_NOT_ON_ROUTE:I looked for  a bus from #query_departure_place_name_sem# to #query_arrival_place_name_sem#. However, but the #query_route_number_sem# DOES not run between #departure_stop_name_sem# and #arrival_stop_name_sem#.
+give_results_not_query.travel_time.time.now_not_query.route_number_else_result.failed_EQUAL_NOT_ENOUGH_INFO:I looked for  a bus from #query_departure_place_name_sem# to #query_arrival_place_name_sem#. However, but you did not provide enough information for me to complete your request.
+give_results_not_query.travel_time.time.now_not_query.route_number_else_result.failed_EQUAL_INTERNAL_ERROR:I looked for  a bus from #query_departure_place_name_sem# to #query_arrival_place_name_sem#. Unfortunately, I seem to have had an internal error while handling your request.
+give_results_not_query.travel_time.time.now_not_query.route_number_else_result.failed_EQUAL_BAD_QUERY_OR_result.failed_EQUAL_UNKNOWN_QUERY_TYPE:I looked for  a bus from #query_departure_place_name_sem# to #query_arrival_place_name_sem#. Unfortunately, this request seems to have confused me and I wasn't able to complete it.
+give_results_not_query.travel_time.time.now_not_query.route_number_else_result.failed_EQUAL_TIMEOUT_TRIGGERED:I looked for  a bus from #query_departure_place_name_sem# to #query_arrival_place_name_sem#. Unfortunately, this request has too many results.
+give_results_not_query.travel_time.time.now_not_query.route_number_else_result.failed:I looked for  a bus from #query_departure_place_name_sem# to #query_arrival_place_name_sem#. Unfortunately, I could not find any results for this request.
+give_results_not_query.travel_time.time.now_not_query.route_number_else_else:I looked for  a bus from #query_departure_place_name_sem# to #query_arrival_place_name_sem#. I found a #result_rides_0_route_number_sem# leaving #result_rides_0_departure_stop_name_sem# at #departure_time_0_sem#. and reaching #result_rides_0_arrival_stop_name_sem# at #arrival_time_0_sem#.

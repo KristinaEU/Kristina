@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<interaction>
+
+<!-- GREET -->
+
+<!-- PersonalGreet 8 -->
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet</value>
+</variable>
+</systemTurn>
+
+
+
+<!-- SAYGOODBYE -->
+
+<!-- MeetAgainSayGoodbye 3 -->
+<userTurn>
+<variable id="a_u">
+<value>SayGoodbye</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_MeetAgainSayGoodbye</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>SayGoodbye</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_MeetAgainSayGoodbye</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>SayGoodbye</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_MeetAgainSayGoodbye</value>
+</variable>
+</systemTurn>
+
+<!-- MorningSayGoodbye 2 -->
+<userTurn>
+<variable id="a_u">
+<value>SayGoodbye</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_MorningSayGoodbye</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>SayGoodbye</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_MorningSayGoodbye</value>
+</variable>
+</systemTurn>
+
+<!-- SimpleSayGoodbye 4 -->
+<userTurn>
+<variable id="a_u">
+<value>SayGoodbye</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_SimpleSayGoodbye</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>SayGoodbye</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_SimpleSayGoodbye</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>SayGoodbye</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_SimpleSayGoodbye</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>SayGoodbye</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_SimpleSayGoodbye</value>
+</variable>
+</systemTurn>
+
+</interaction>

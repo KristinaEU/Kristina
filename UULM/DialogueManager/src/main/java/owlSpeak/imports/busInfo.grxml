@@ -1,0 +1,62 @@
+<?xml version="1.0" ?>
+<grammar root="main" version="1.0" xml:lang="de-DE">
+  <rule id="gr_BusRoutes" scope="public">
+  	<one-of>
+	  	<item>17b<tag>out.gr_BusRoutes="17b"</tag></item>
+	  	<item>501<tag>out.gr_BusRoutes="501"</tag></item>
+	  	<item>69a<tag>out.gr_BusRoutes="69a"</tag></item>
+	  	<item>1a<tag>out.gr_BusRoutes="1a"</tag></item>
+	  	<item>1c<tag>out.gr_BusRoutes="1c"</tag></item>
+	  	<item>18b<tag>out.gr_BusRoutes="18b"</tag></item>
+	  	<item>16d<tag>out.gr_BusRoutes="16d"</tag></item>
+	  	<item>16f<tag>out.gr_BusRoutes="16f"</tag></item>
+	  	<item>61f<tag>out.gr_BusRoutes="61f"</tag></item>
+	  	<item>100<tag>out.gr_BusRoutes="100"</tag></item>
+	  	<item>64a<tag>out.gr_BusRoutes="64a"</tag></item>
+	  	<item>1b<tag>out.gr_BusRoutes="1b"</tag></item>
+	  	<item>18c<tag>out.gr_BusRoutes="18c"</tag></item>
+ 	</one-of>
+ </rule>
+  
+
+   <rule id ="gr_BusStops">
+	<one-of>
+		<item>port_vue<tag>out.gr_BusStops="port_vue"</tag></item>
+		<item>ross<tag>out.gr_BusStops="ross"</tag></item>
+		<item>pine<tag>out.gr_BusStops="pine"</tag></item>
+		<item>wendover<tag>out.gr_BusStops="wendover"</tag></item>
+		<item>pitcairn<tag>out.gr_BusStops="pitcairn"</tag></item>
+		<item>reserve_township<tag>out.gr_BusStops="reserve_township"</tag></item>
+		<item>welfer<tag>out.gr_BusStops="welfer"</tag></item>
+		<item>wilkins<tag>out.gr_BusStops="wilkins"</tag></item>
+		<item>indiana<tag>out.gr_BusStops="indiana"</tag></item>
+		<item>eastmont<tag>out.gr_BusStops="eastmont"</tag></item>
+		<item>pine_township<tag>out.gr_BusStops="pine_township"</tag></item>
+		<item>verona<tag>out.gr_BusStops="verona"</tag></item>
+		<item>reserve<tag>out.gr_BusStops="reserve"</tag></item>
+		<item>whitaker<tag>out.gr_BusStops="whitaker"</tag></item>
+		<item>blackberry_drive<tag>out.gr_BusStops="blackberry_drive"</tag></item>
+		<item>rosedale<tag>out.gr_BusStops="rosedale"</tag></item>
+		<item>east_hills<tag>out.gr_BusStops="east_hills"</tag></item>
+		<item>rosslyn_farms<tag>out.gr_BusStops="rosslyn_farms"</tag></item>
+		<item>dravosburg<tag>out.gr_BusStops="dravosburg"</tag></item>
+		<item>east_mckeesport<tag>out.gr_BusStops="east_mckeesport"</tag></item>
+		<item>west<tag>out.gr_BusStops="west"</tag></item>
+		<item>saint_clair<tag>out.gr_BusStops="saint_clair"</tag></item>
+		<item>east_vue<tag>out.gr_BusStops="east_vue"</tag></item>
+		<item>versailles<tag>out.gr_BusStops="versailles"</tag></item>
+		<item>russelton<tag>out.gr_BusStops="russelton"</tag></item>
+		<item>pleasant_hills<tag>out.gr_BusStops="pleasant_hills"</tag></item>
+		<item>presto<tag>out.gr_BusStops="presto"</tag></item>
+		<item>waverly<tag>out.gr_BusStops="waverly"</tag></item>
+		<item>ross_township<tag>out.gr_BusStops="ross_township"</tag></item>
+		<item>plum<tag>out.gr_BusStops="plum"</tag></item>
+	</one-of>
+   </rule>
+
+
+  
+  
+
+
+</grammar>

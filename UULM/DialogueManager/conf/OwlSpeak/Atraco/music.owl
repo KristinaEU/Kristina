@@ -1,0 +1,559 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://localhost:8080/Atraco/music.owl#"
+     xml:base="http://localhost:8080/Atraco/music.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+     xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
+     xmlns:p1="http://localhost:8080/Atraco/OwlSpeakOnto.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://localhost:8080/Atraco/music.owl">
+        <owl:imports rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://localhost:8080/Atraco/music.owl#DialogueDomain_1 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/music.owl#DialogueDomain_1">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#DialogueDomain"/>
+        <p1:domainName xml:lang="de">musik</p1:domainName>
+        <p1:domainName xml:lang="en">music</p1:domainName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/music.owl#activation_state -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/music.owl#activation_state">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Variable"/>
+        <p1:defaultValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</p1:defaultValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/music.owl#control_Agenda -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/music.owl#control_Agenda">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Agenda"/>
+        <p1:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">80</p1:priority>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">REQUIRES(%activation_state%==1)</p1:variableOperator>
+        <p1:respawn rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</p1:respawn>
+        <p1:has rdf:resource="http://localhost:8080/Atraco/music.owl#exit_move"/>
+        <p1:has rdf:resource="http://localhost:8080/Atraco/music.owl#musicDown_move"/>
+        <p1:has rdf:resource="http://localhost:8080/Atraco/music.owl#musicUp_move"/>
+        <p1:has rdf:resource="http://localhost:8080/Atraco/music.owl#next_move"/>
+        <p1:has rdf:resource="http://localhost:8080/Atraco/music.owl#pause_move"/>
+        <p1:has rdf:resource="http://localhost:8080/Atraco/music.owl#play_move"/>
+        <p1:has rdf:resource="http://localhost:8080/Atraco/music.owl#prev_move"/>
+        <p1:has rdf:resource="http://localhost:8080/Atraco/music.owl#selectChill_move"/>
+        <p1:has rdf:resource="http://localhost:8080/Atraco/music.owl#selectClassic_move"/>
+        <p1:has rdf:resource="http://localhost:8080/Atraco/music.owl#selectJazz_move"/>
+        <p1:has rdf:resource="http://localhost:8080/Atraco/music.owl#selectLat_move"/>
+        <p1:has rdf:resource="http://localhost:8080/Atraco/music.owl#selectPop_move"/>
+        <p1:has rdf:resource="http://localhost:8080/Atraco/music.owl#selectRock_move"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/music.owl#exit_grammar -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/music.owl#exit_grammar">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Grammar"/>
+        <p1:grammarString xml:lang="de">[beenden]</p1:grammarString>
+        <p1:grammarString xml:lang="en">[(end music)end]</p1:grammarString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/music.owl#exit_move -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/music.owl#exit_move">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Move"/>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SET(activation_state=0)</p1:variableOperator>
+        <p1:grammar rdf:resource="http://localhost:8080/Atraco/music.owl#exit_grammar"/>
+        <p1:semantic rdf:resource="http://localhost:8080/Atraco/music.owl#exit_semantic"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/Atraco/music.owl#start_semantic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/music.owl#exit_semantic -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/music.owl#exit_semantic">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Semantic"/>
+        <p1:semanticString xml:lang="en">stop;</p1:semanticString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/music.owl#musicDown_grammar -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/music.owl#musicDown_grammar">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Grammar"/>
+        <p1:grammarString xml:lang="de">(musik leiser)</p1:grammarString>
+        <p1:grammarString xml:lang="en">[(turn the music down)(volume down)]</p1:grammarString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/music.owl#musicDown_move -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/music.owl#musicDown_move">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Move"/>
+        <p1:grammar rdf:resource="http://localhost:8080/Atraco/music.owl#musicDown_grammar"/>
+        <p1:semantic rdf:resource="http://localhost:8080/Atraco/music.owl#musicDown_semantic"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/Atraco/music.owl#musicUp_semantic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/music.owl#musicDown_semantic -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/music.owl#musicDown_semantic">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Semantic"/>
+        <p1:semanticString xml:lang="en">sound_level_down;</p1:semanticString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/music.owl#musicUp_grammar -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/music.owl#musicUp_grammar">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Grammar"/>
+        <p1:grammarString xml:lang="de">(musik lauter)</p1:grammarString>
+        <p1:grammarString xml:lang="en">[(crank up the volume)(volume up)]</p1:grammarString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/music.owl#musicUp_move -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/music.owl#musicUp_move">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Move"/>
+        <p1:grammar rdf:resource="http://localhost:8080/Atraco/music.owl#musicUp_grammar"/>
+        <p1:semantic rdf:resource="http://localhost:8080/Atraco/music.owl#musicUp_semantic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/music.owl#musicUp_semantic -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/music.owl#musicUp_semantic">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Semantic"/>
+        <p1:semanticString xml:lang="en">sound_level_up;</p1:semanticString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/music.owl#nextTrack_grammar -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/music.owl#nextTrack_grammar">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Grammar"/>
+        <p1:grammarString xml:lang="de">[weiter (naechstes lied)]</p1:grammarString>
+        <p1:grammarString xml:lang="en">[next(next song)]</p1:grammarString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/music.owl#next_move -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/music.owl#next_move">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Move"/>
+        <p1:grammar rdf:resource="http://localhost:8080/Atraco/music.owl#nextTrack_grammar"/>
+        <p1:semantic rdf:resource="http://localhost:8080/Atraco/music.owl#next_semantic"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/Atraco/music.owl#prev_semantic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/music.owl#next_semantic -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/music.owl#next_semantic">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Semantic"/>
+        <p1:semanticString xml:lang="en">next_track;</p1:semanticString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/music.owl#pause_grammar -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/music.owl#pause_grammar">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Grammar"/>
+        <p1:grammarString xml:lang="de">[pause]</p1:grammarString>
+        <p1:grammarString xml:lang="en">[pause]</p1:grammarString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/music.owl#pause_move -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/music.owl#pause_move">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Move"/>
+        <p1:grammar rdf:resource="http://localhost:8080/Atraco/music.owl#pause_grammar"/>
+        <p1:semantic rdf:resource="http://localhost:8080/Atraco/music.owl#pause_semantic"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/Atraco/music.owl#play_semantic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/music.owl#pause_semantic -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/music.owl#pause_semantic">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Semantic"/>
+        <p1:semanticString xml:lang="en">pause;</p1:semanticString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/music.owl#playChill_grammar -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/music.owl#playChill_grammar">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Grammar"/>
+        <p1:grammarString xml:lang="de">[rockmusik]</p1:grammarString>
+        <p1:grammarString xml:lang="en">[chillout]</p1:grammarString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/music.owl#playClassic_grammar -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/music.owl#playClassic_grammar">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Grammar"/>
+        <p1:grammarString xml:lang="de">[klassisch]</p1:grammarString>
+        <p1:grammarString xml:lang="en">[classic]</p1:grammarString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/music.owl#playJazz_grammar -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/music.owl#playJazz_grammar">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Grammar"/>
+        <p1:grammarString xml:lang="de">[jazz]</p1:grammarString>
+        <p1:grammarString xml:lang="en">[jazz]</p1:grammarString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/music.owl#playLat_grammar -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/music.owl#playLat_grammar">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Grammar"/>
+        <p1:grammarString xml:lang="de">[latin]</p1:grammarString>
+        <p1:grammarString xml:lang="en">[latin]</p1:grammarString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/music.owl#playPop_grammar -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/music.owl#playPop_grammar">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Grammar"/>
+        <p1:grammarString xml:lang="de">[pop]</p1:grammarString>
+        <p1:grammarString xml:lang="en">[pop]</p1:grammarString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/music.owl#playRock_grammar -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/music.owl#playRock_grammar">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Grammar"/>
+        <p1:grammarString xml:lang="de">[rock]</p1:grammarString>
+        <p1:grammarString xml:lang="en">[rock]</p1:grammarString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/music.owl#play_grammar -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/music.owl#play_grammar">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Grammar"/>
+        <p1:grammarString xml:lang="de">(musik weiter)</p1:grammarString>
+        <p1:grammarString xml:lang="en">[play]</p1:grammarString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/music.owl#play_move -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/music.owl#play_move">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Move"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/Atraco/music.owl#pause_semantic"/>
+        <p1:grammar rdf:resource="http://localhost:8080/Atraco/music.owl#play_grammar"/>
+        <p1:semantic rdf:resource="http://localhost:8080/Atraco/music.owl#play_semantic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/music.owl#play_semantic -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/music.owl#play_semantic">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Semantic"/>
+        <p1:semanticString xml:lang="en">play;</p1:semanticString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/music.owl#prevTrack_grammar -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/music.owl#prevTrack_grammar">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Grammar"/>
+        <p1:grammarString xml:lang="de">[(ein lied zurueck)zurueck]</p1:grammarString>
+        <p1:grammarString xml:lang="en">[(a song back)back]</p1:grammarString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/music.owl#prev_move -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/music.owl#prev_move">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Move"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/Atraco/music.owl#next_semantic"/>
+        <p1:grammar rdf:resource="http://localhost:8080/Atraco/music.owl#prevTrack_grammar"/>
+        <p1:semantic rdf:resource="http://localhost:8080/Atraco/music.owl#prev_semantic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/music.owl#prev_semantic -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/music.owl#prev_semantic">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Semantic"/>
+        <p1:semanticString xml:lang="en">previous_track;</p1:semanticString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/music.owl#selectChill_move -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/music.owl#selectChill_move">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Move"/>
+        <p1:grammar rdf:resource="http://localhost:8080/Atraco/music.owl#playChill_grammar"/>
+        <p1:semantic rdf:resource="http://localhost:8080/Atraco/music.owl#selectChill_semantic"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/Atraco/music.owl#selectClassic_semantic"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/Atraco/music.owl#selectJazz_semantic"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/Atraco/music.owl#selectLatin_semantic"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/Atraco/music.owl#selectPop_semantic"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/Atraco/music.owl#selectRock_semantic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/music.owl#selectChill_semantic -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/music.owl#selectChill_semantic">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Semantic"/>
+        <p1:semanticString xml:lang="en">select_playlist;chillout</p1:semanticString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/music.owl#selectClassic_move -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/music.owl#selectClassic_move">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Move"/>
+        <p1:grammar rdf:resource="http://localhost:8080/Atraco/music.owl#playClassic_grammar"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/Atraco/music.owl#selectChill_semantic"/>
+        <p1:semantic rdf:resource="http://localhost:8080/Atraco/music.owl#selectClassic_semantic"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/Atraco/music.owl#selectJazz_semantic"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/Atraco/music.owl#selectLatin_semantic"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/Atraco/music.owl#selectPop_semantic"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/Atraco/music.owl#selectRock_semantic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/music.owl#selectClassic_semantic -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/music.owl#selectClassic_semantic">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Semantic"/>
+        <p1:semanticString xml:lang="en">select_playlist;classic</p1:semanticString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/music.owl#selectJazz_move -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/music.owl#selectJazz_move">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Move"/>
+        <p1:grammar rdf:resource="http://localhost:8080/Atraco/music.owl#playJazz_grammar"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/Atraco/music.owl#selectChill_semantic"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/Atraco/music.owl#selectClassic_semantic"/>
+        <p1:semantic rdf:resource="http://localhost:8080/Atraco/music.owl#selectJazz_semantic"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/Atraco/music.owl#selectLatin_semantic"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/Atraco/music.owl#selectPop_semantic"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/Atraco/music.owl#selectRock_semantic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/music.owl#selectJazz_semantic -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/music.owl#selectJazz_semantic">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Semantic"/>
+        <p1:semanticString xml:lang="en">select_playlist;jazz</p1:semanticString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/music.owl#selectLat_move -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/music.owl#selectLat_move">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Move"/>
+        <p1:grammar rdf:resource="http://localhost:8080/Atraco/music.owl#playLat_grammar"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/Atraco/music.owl#selectChill_semantic"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/Atraco/music.owl#selectClassic_semantic"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/Atraco/music.owl#selectJazz_semantic"/>
+        <p1:semantic rdf:resource="http://localhost:8080/Atraco/music.owl#selectLatin_semantic"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/Atraco/music.owl#selectPop_semantic"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/Atraco/music.owl#selectRock_semantic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/music.owl#selectLatin_semantic -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/music.owl#selectLatin_semantic">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Semantic"/>
+        <p1:semanticString xml:lang="en">select_playlist;latin</p1:semanticString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/music.owl#selectPop_move -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/music.owl#selectPop_move">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Move"/>
+        <p1:grammar rdf:resource="http://localhost:8080/Atraco/music.owl#playPop_grammar"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/Atraco/music.owl#selectChill_semantic"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/Atraco/music.owl#selectClassic_semantic"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/Atraco/music.owl#selectJazz_semantic"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/Atraco/music.owl#selectLatin_semantic"/>
+        <p1:semantic rdf:resource="http://localhost:8080/Atraco/music.owl#selectPop_semantic"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/Atraco/music.owl#selectRock_semantic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/music.owl#selectPop_semantic -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/music.owl#selectPop_semantic">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Semantic"/>
+        <p1:semanticString xml:lang="en">select_playlist;pop</p1:semanticString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/music.owl#selectRock_move -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/music.owl#selectRock_move">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Move"/>
+        <p1:grammar rdf:resource="http://localhost:8080/Atraco/music.owl#playRock_grammar"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/Atraco/music.owl#selectChill_semantic"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/Atraco/music.owl#selectClassic_semantic"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/Atraco/music.owl#selectJazz_semantic"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/Atraco/music.owl#selectLatin_semantic"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/Atraco/music.owl#selectPop_semantic"/>
+        <p1:semantic rdf:resource="http://localhost:8080/Atraco/music.owl#selectRock_semantic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/music.owl#selectRock_semantic -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/music.owl#selectRock_semantic">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Semantic"/>
+        <p1:semanticString xml:lang="en">select_playlist;rock</p1:semanticString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/music.owl#start_agenda -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/music.owl#start_agenda">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Agenda"/>
+        <p1:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">80</p1:priority>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">REQUIRES(%activation_state%==0)</p1:variableOperator>
+        <p1:respawn rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</p1:respawn>
+        <p1:has rdf:resource="http://localhost:8080/Atraco/music.owl#start_move"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/music.owl#start_grammar -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/music.owl#start_grammar">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Grammar"/>
+        <p1:grammarString xml:lang="de">(musik starten)</p1:grammarString>
+        <p1:grammarString xml:lang="en">[(start music)music]</p1:grammarString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/music.owl#start_move -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/music.owl#start_move">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Move"/>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SET(activation_state=1)</p1:variableOperator>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/Atraco/music.owl#exit_semantic"/>
+        <p1:grammar rdf:resource="http://localhost:8080/Atraco/music.owl#start_grammar"/>
+        <p1:semantic rdf:resource="http://localhost:8080/Atraco/music.owl#start_semantic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/music.owl#start_semantic -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/music.owl#start_semantic">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Semantic"/>
+        <p1:semanticString xml:lang="en">start;</p1:semanticString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/music.owl#userBeliefspace -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/music.owl#userBeliefspace">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#BeliefSpace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/music.owl#userWorkspace -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/music.owl#userWorkspace">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#WorkSpace"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.2.0.1502) http://owlapi.sourceforge.net -->
+

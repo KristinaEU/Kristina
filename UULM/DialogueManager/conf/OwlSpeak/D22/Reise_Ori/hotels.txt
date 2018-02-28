@@ -1,0 +1,17 @@
+SET(town=kairo);(hotel1_name=PyramisaSuites);(hotel1_price=62);(hotel2_name=grandHyatt);(hotel2_price=130);(hotel3_name=HolidayInn);(hotel3_price=146)
+
+SET(town=luxor);(hotel1_name=PyramisaIsis);(hotel1_price=25);(hotel2_name=Sofitel);(hotel2_price=79);(hotel3_name=HiltonLuxor);(hotel3_price=230)
+
+SET(town=abusimbel);(hotel1_name=NobalehRamses);(hotel1_price=30);(hotel2_name=Nefertari);(hotel2_price=70);(hotel3_name=SetiAbuSimbel);(hotel3_price=100)
+
+
+SET(town=chicago);(hotel1_name=BestWestern);(hotel1_price=100);(hotel2_name=HiltonOhare);(hotel2_price=120);(hotel3_name=JamesChicago);(hotel3_price=150)
+
+SET(town=losangeles);(hotel1_name=HolidayInn);(hotel1_price=140);(hotel2_name=Sofitel);(hotel2_price=170);(hotel3_name=HiltonCheckers);(hotel3_price=180)
+
+SET(town=newyork);(hotel1_name=HolidayInn);(hotel1_price=130);(hotel2_name=HiltonGardenInn);(hotel2_price=170);(hotel3_name=Sofitel);(hotel3_price=200)
+
+
+SET(town=london);(hotel1_name=PremierInn);(hotel1_price=150);(hotel2_name=Knightsbridge);(hotel2_price=280);(hotel3_name=BeaufortHouse);(hotel3_price=400)
+
+SET(town=manchester);(hotel1_name=Britannia);(hotel1_price=40);(hotel2_name=HiltonAirport);(hotel2_price=90);(hotel3_name=PalaceHotel);(hotel3_price=100)

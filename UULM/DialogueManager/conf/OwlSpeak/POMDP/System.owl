@@ -1,0 +1,410 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://localhost:8080/Atraco/System.owl#"
+     xml:base="http://localhost:8080/Atraco/System.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+     xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
+     xmlns:p1="http://localhost:8080/Atraco/OwlSpeakOnto.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://localhost:8080/Atraco/System.owl">
+        <owl:imports rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:AnnotationProperty rdf:about="http://localhost:8080/Atraco/OwlSpeakOnto.owl#ask_dest_utt"/>
+    <owl:AnnotationProperty rdf:about="http://localhost:8080/Atraco/OwlSpeakOnto.owl#type"/>
+    <owl:AnnotationProperty rdf:about="http://localhost:8080/Atraco/OwlSpeakOnto.owl#resource"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#dur_four_weeks_sem -->
+
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#dur_four_weeks_sem"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://localhost:8080/Atraco/System.owl#DialogueDomain_1 -->
+
+    <owl:dur_four_weeks_sem rdf:about="http://localhost:8080/Atraco/System.owl#DialogueDomain_1">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#DialogueDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <p1:domainName xml:lang="de">system</p1:domainName>
+        <p1:domainName xml:lang="en">system</p1:domainName>
+    </owl:dur_four_weeks_sem>
+    
+
+
+    <!-- http://localhost:8080/Atraco/System.owl#History-462488025 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/System.owl#History-462488025">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#History"/>
+        <p1:agendaPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">-1</p1:agendaPriority>
+        <p1:addTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</p1:addTime>
+        <p1:forAgenda rdf:resource="http://localhost:8080/Atraco/System.owl#fault"/>
+        <p1:inWorkspace rdf:resource="http://localhost:8080/Atraco/System.owl#userWorkspace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/System.owl#Move_4 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/System.owl#Move_4">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Move"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/System.owl#Reduce -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/System.owl#Reduce">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Move"/>
+        <p1:grammar rdf:resource="http://localhost:8080/Atraco/System.owl#reduce_gram"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/System.owl#Reset -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/System.owl#Reset">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Semantic"/>
+        <p1:semanticString xml:lang="en">reset</p1:semanticString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/System.owl#Utterance_2 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/System.owl#Utterance_2">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Utterance"/>
+        <p1:utteranceString xml:lang="de">welches?</p1:utteranceString>
+        <p1:utteranceString xml:lang="en">which one?</p1:utteranceString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/System.owl#Utterance_3 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/System.owl#Utterance_3">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Utterance"/>
+        <p1:utteranceString xml:lang="de">oder</p1:utteranceString>
+        <p1:utteranceString xml:lang="en">or</p1:utteranceString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/System.owl#conflict -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/System.owl#conflict">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Agenda"/>
+        <p1:has rdf:resource="http://localhost:8080/Atraco/System.owl#conflict_move"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/System.owl#conflict_move -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/System.owl#conflict_move">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Move"/>
+        <p1:utterance rdf:resource="http://localhost:8080/Atraco/System.owl#Utterance_2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/System.owl#dantest -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/System.owl#dantest"/>
+    
+
+
+    <!-- http://localhost:8080/Atraco/System.owl#fault -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/System.owl#fault">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Agenda"/>
+        <p1:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">-1</p1:priority>
+        <p1:next rdf:resource="http://localhost:8080/Atraco/System.owl#fault"/>
+        <p1:type rdf:resource="http://localhost:8080/Atraco/System.owl#fault_move"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/System.owl#fault_grammar -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/System.owl#fault_grammar">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Grammar"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/System.owl#fault_move -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/System.owl#fault_move">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Move"/>
+        <p1:grammar rdf:resource="http://localhost:8080/Atraco/System.owl#fault_grammar"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/System.owl#master -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/System.owl#master">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Agenda"/>
+        <p1:isMasterBool rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</p1:isMasterBool>
+        <p1:next rdf:resource="http://localhost:8080/Atraco/System.owl#fault"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/System.owl#name -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/System.owl#name">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Variable"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/System.owl#or -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/System.owl#or">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Agenda"/>
+        <p1:has rdf:resource="http://localhost:8080/Atraco/System.owl#or_move"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/System.owl#or_move -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/System.owl#or_move">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Move"/>
+        <p1:utterance rdf:resource="http://localhost:8080/Atraco/System.owl#Utterance_3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/System.owl#reduce -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/System.owl#reduce">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Semantic"/>
+        <p1:semanticString rdf:datatype="http://www.w3.org/2001/XMLSchema#string">reduce</p1:semanticString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/System.owl#reduce_agenda -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/System.owl#reduce_agenda">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Agenda"/>
+        <p1:has rdf:resource="http://localhost:8080/Atraco/System.owl#Reduce"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/System.owl#reduce_gram -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/System.owl#reduce_gram">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Grammar"/>
+        <p1:grammarString xml:lang="de">(reduziere prioritaet)</p1:grammarString>
+        <p1:grammarString xml:lang="en">(reduce priority)</p1:grammarString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/System.owl#reloadSettings -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/System.owl#reloadSettings">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Semantic"/>
+        <p1:semanticString xml:lang="en">reloadSettings</p1:semanticString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/System.owl#reload_agenda -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/System.owl#reload_agenda">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Agenda"/>
+        <p1:respawn rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</p1:respawn>
+        <p1:has rdf:resource="http://localhost:8080/Atraco/System.owl#reloadsets"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/System.owl#reload_gram -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/System.owl#reload_gram">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Grammar"/>
+        <p1:grammarString xml:lang="de">(sgvdyfbnfn)</p1:grammarString>
+        <p1:grammarString xml:lang="en">(yfretg)</p1:grammarString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/System.owl#reloadsets -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/System.owl#reloadsets">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Move"/>
+        <p1:semantic rdf:resource="http://localhost:8080/Atraco/System.owl#reloadSettings"/>
+        <p1:grammar rdf:resource="http://localhost:8080/Atraco/System.owl#reload_gram"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/System.owl#reset -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/System.owl#reset">
+        <p1:semantic rdf:resource="http://localhost:8080/Atraco/System.owl#Reset"/>
+        <p1:grammar rdf:resource="http://localhost:8080/Atraco/System.owl#reset_gram"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/System.owl#reset_agenda -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/System.owl#reset_agenda">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Agenda"/>
+        <p1:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">100</p1:priority>
+        <p1:respawn rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</p1:respawn>
+        <p1:has rdf:resource="http://localhost:8080/Atraco/System.owl#reset"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/System.owl#reset_gram -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/System.owl#reset_gram">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Grammar"/>
+        <p1:grammarString xml:lang="de">(reset)</p1:grammarString>
+        <p1:grammarString xml:lang="en">(reset)</p1:grammarString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/System.owl#sleep_agenda -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/System.owl#sleep_agenda">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Agenda"/>
+        <p1:resource rdf:resource="http://localhost:8080/Atraco/System.owl#sleep_move"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/System.owl#sleep_grammar -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/System.owl#sleep_grammar">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Grammar"/>
+        <p1:grammarString xml:lang="de">(dvbnmtgmbvm)</p1:grammarString>
+        <p1:grammarString xml:lang="en">(sdfdhgnvnciwoa)</p1:grammarString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/System.owl#sleep_move -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/System.owl#sleep_move">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Move"/>
+        <p1:grammar rdf:resource="http://localhost:8080/Atraco/System.owl#sleep_grammar"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/System.owl#test_agenda -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/System.owl#test_agenda">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Agenda"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/System.owl#test_gram -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/System.owl#test_gram">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Grammar"/>
+        <p1:grammarString xml:lang="de">(gut)</p1:grammarString>
+        <p1:grammarString xml:lang="en">great job</p1:grammarString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/System.owl#test_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/System.owl#test_mv">
+        <p1:grammar rdf:resource="http://localhost:8080/Atraco/System.owl#test_gram"/>
+        <p1:ask_dest_utt rdf:resource="http://localhost:8080/Atraco/System.owl#test_sem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/System.owl#test_sem -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/System.owl#test_sem">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Semantic"/>
+        <p1:semanticString xml:lang="en">tut</p1:semanticString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/System.owl#userBeliefspace -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/System.owl#userBeliefspace">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#BeliefSpace"/>
+        <p1:prior rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</p1:prior>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/System.owl#userWorkspace -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/System.owl#userWorkspace">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#WorkSpace"/>
+        <p1:next rdf:resource="http://localhost:8080/Atraco/System.owl#fault"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.2.4.1806) http://owlapi.sourceforge.net -->
+

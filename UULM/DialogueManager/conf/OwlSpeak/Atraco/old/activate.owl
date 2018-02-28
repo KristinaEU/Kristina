@@ -1,0 +1,185 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+    xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:p1="http://localhost:8080/Atraco/OwlSpeakOnto.owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns="http://localhost:8080/Atraco/activate.owl#"
+    xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+    xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" > 
+  <rdf:Description rdf:about="http://localhost:8080/Atraco/activate.owl#browser_move">
+    <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Move"/>
+    <p1:grammar rdf:resource="http://localhost:8080/Atraco/activate.owl#browser_grammar"/>
+    <p1:semantic rdf:resource="http://localhost:8080/Atraco/activate.owl#browser_semantic"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/Atraco/activate.owl#radio_move">
+    <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Move"/>
+    <p1:grammar rdf:resource="http://localhost:8080/Atraco/activate.owl#radio_grammar"/>
+    <p1:semantic rdf:resource="http://localhost:8080/Atraco/activate.owl#radio_semantic"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/Atraco/activate.owl#browser_semantic">
+    <p1:semanticString xml:lang="en">startbrowser;</p1:semanticString>
+    <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Semantic"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/Atraco/activate.owl#browser_grammar">
+    <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Grammar"/>
+    <p1:grammarString xml:lang="en">[surf]</p1:grammarString>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/Atraco/activate.owl#userWorkspace">
+    <p1:next rdf:resource="http://localhost:8080/Atraco/activate.owl#touchRadio_agenda"/>
+    <p1:next rdf:resource="http://localhost:8080/Atraco/activate.owl#touchTv_agenda"/>
+    <p1:next rdf:resource="http://localhost:8080/Atraco/activate.owl#touchMusic_agenda"/>
+    <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#WorkSpace"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/Atraco/activate.owl#photos_grammar">
+    <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Grammar"/>
+    <p1:grammarString xml:lang="en">[photos]</p1:grammarString>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/Atraco/activate.owl#touchRadio_move">
+    <p1:contrarySemantic rdf:resource="http://localhost:8080/Atraco/activate.owl#radio_semantic"/>
+    <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Move"/>
+    <p1:utterance rdf:resource="http://localhost:8080/Atraco/activate.owl#touchPanel_utterance"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/Atraco/activate.owl#dokument_move">
+    <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Move"/>
+    <p1:grammar rdf:resource="http://localhost:8080/Atraco/activate.owl#dokument_grammar"/>
+    <p1:semantic rdf:resource="http://localhost:8080/Atraco/activate.owl#document_semantic"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/Atraco/activate.owl#tv_move">
+    <p1:grammar rdf:resource="http://localhost:8080/Atraco/activate.owl#tv_grammar"/>
+    <p1:semantic rdf:resource="http://localhost:8080/Atraco/activate.owl#tv_semantic"/>
+    <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Move"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/Atraco/activate.owl#music_move">
+    <p1:semantic rdf:resource="http://localhost:8080/Atraco/activate.owl#music_semantic"/>
+    <p1:grammar rdf:resource="http://localhost:8080/Atraco/activate.owl#music_grammar"/>
+    <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Move"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/Atraco/activate.owl#Master_agenda">
+    <p1:next rdf:resource="http://localhost:8080/Atraco/activate.owl#touchRadio_agenda"/>
+    <p1:next rdf:resource="http://localhost:8080/Atraco/activate.owl#touchTv_agenda"/>
+    <p1:next rdf:resource="http://localhost:8080/Atraco/activate.owl#touchMusic_agenda"/>
+    <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Agenda"/>
+    <p1:isMasterBool rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</p1:isMasterBool>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/Atraco/activate.owl#History-892100505">
+    <p1:agendaPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">80</p1:agendaPriority>
+    <p1:forAgenda rdf:resource="http://localhost:8080/Atraco/activate.owl#touchRadio_agenda"/>
+    <p1:inWorkspace rdf:resource="http://localhost:8080/Atraco/activate.owl#userWorkspace"/>
+    <p1:addTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</p1:addTime>
+    <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#History"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/Atraco/activate.owl#music_semantic">
+    <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Semantic"/>
+    <p1:semanticString xml:lang="en">startmusic;</p1:semanticString>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/Atraco/activate.owl#History-1715563318">
+    <p1:forAgenda rdf:resource="http://localhost:8080/Atraco/activate.owl#touchMusic_agenda"/>
+    <p1:addTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</p1:addTime>
+    <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#History"/>
+    <p1:inWorkspace rdf:resource="http://localhost:8080/Atraco/activate.owl#userWorkspace"/>
+    <p1:agendaPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">80</p1:agendaPriority>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/Atraco/activate.owl#touchRadio_agenda">
+    <p1:has rdf:resource="http://localhost:8080/Atraco/activate.owl#touchRadio_move"/>
+    <p1:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">80</p1:priority>
+    <p1:next rdf:resource="http://localhost:8080/Atraco/activate.owl#touchRadio_agenda"/>
+    <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Agenda"/>
+    <p1:requires rdf:resource="http://localhost:8080/Atraco/activate.owl#radio_semantic"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/Atraco/activate.owl#dokument_grammar">
+    <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Grammar"/>
+    <p1:grammarString xml:lang="en">[write]</p1:grammarString>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/Atraco/activate.owl#tv_semantic">
+    <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Semantic"/>
+    <p1:semanticString xml:lang="en">starttv;</p1:semanticString>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/Atraco/activate.owl#tv_grammar">
+    <p1:grammarString xml:lang="en">[telly]</p1:grammarString>
+    <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Grammar"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/Atraco/activate.owl#userBeliefspace">
+    <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#BeliefSpace"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/Atraco/activate.owl#photo_move">
+    <p1:semantic rdf:resource="http://localhost:8080/Atraco/activate.owl#photo_semantic"/>
+    <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Move"/>
+    <p1:grammar rdf:resource="http://localhost:8080/Atraco/activate.owl#photos_grammar"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/Atraco/activate.owl#touchMusic_agenda">
+    <p1:isMasterBool rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</p1:isMasterBool>
+    <p1:requires rdf:resource="http://localhost:8080/Atraco/activate.owl#music_semantic"/>
+    <p1:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">80</p1:priority>
+    <p1:next rdf:resource="http://localhost:8080/Atraco/activate.owl#touchMusic_agenda"/>
+    <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Agenda"/>
+    <p1:has rdf:resource="http://localhost:8080/Atraco/activate.owl#touchMusic_move"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/Atraco/activate.owl#touchTv_move">
+    <p1:contrarySemantic rdf:resource="http://localhost:8080/Atraco/activate.owl#tv_semantic"/>
+    <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Move"/>
+    <p1:utterance rdf:resource="http://localhost:8080/Atraco/activate.owl#touchPanel_utterance"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/Atraco/activate.owl#touchTv_agenda">
+    <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Agenda"/>
+    <p1:next rdf:resource="http://localhost:8080/Atraco/activate.owl#touchTv_agenda"/>
+    <p1:requires rdf:resource="http://localhost:8080/Atraco/activate.owl#tv_semantic"/>
+    <p1:has rdf:resource="http://localhost:8080/Atraco/activate.owl#touchTv_move"/>
+    <p1:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">80</p1:priority>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/Atraco/activate.owl">
+    <owl:imports rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/Atraco/activate.owl#touchPanel_utterance">
+    <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Utterance"/>
+    <p1:utteranceString xml:lang="en">please control from the touch panel.</p1:utteranceString>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/Atraco/activate.owl#music_grammar">
+    <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Grammar"/>
+    <p1:grammarString xml:lang="en">[music]</p1:grammarString>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/Atraco/activate.owl#radio_grammar">
+    <p1:grammarString xml:lang="en">[radio]</p1:grammarString>
+    <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Grammar"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/Atraco/activate.owl#History-1427005456">
+    <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#History"/>
+    <p1:addTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</p1:addTime>
+    <p1:agendaPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">80</p1:agendaPriority>
+    <p1:inWorkspace rdf:resource="http://localhost:8080/Atraco/activate.owl#userWorkspace"/>
+    <p1:forAgenda rdf:resource="http://localhost:8080/Atraco/activate.owl#touchTv_agenda"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/Atraco/activate.owl#touchMusic_move">
+    <p1:utterance rdf:resource="http://localhost:8080/Atraco/activate.owl#touchPanel_utterance"/>
+    <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Move"/>
+    <p1:contrarySemantic rdf:resource="http://localhost:8080/Atraco/activate.owl#music_semantic"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/Atraco/activate.owl#document_semantic">
+    <p1:semanticString xml:lang="en">startdokument;</p1:semanticString>
+    <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Semantic"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/Atraco/activate.owl#radio_semantic">
+    <p1:semanticString xml:lang="en">startradio;</p1:semanticString>
+    <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Semantic"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/Atraco/activate.owl#photo_semantic">
+    <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Semantic"/>
+    <p1:semanticString xml:lang="en">startphoto;</p1:semanticString>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/Atraco/activate.owl#respawns_agenda">
+    <p1:respawn rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</p1:respawn>
+    <p1:next rdf:resource="http://localhost:8080/Atraco/activate.owl#touchMusic_agenda"/>
+    <p1:has rdf:resource="http://localhost:8080/Atraco/activate.owl#tv_move"/>
+    <p1:has rdf:resource="http://localhost:8080/Atraco/activate.owl#music_move"/>
+    <p1:has rdf:resource="http://localhost:8080/Atraco/activate.owl#radio_move"/>
+    <p1:next rdf:resource="http://localhost:8080/Atraco/activate.owl#touchTv_agenda"/>
+    <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Agenda"/>
+    <p1:has rdf:resource="http://localhost:8080/Atraco/activate.owl#dokument_move"/>
+    <p1:has rdf:resource="http://localhost:8080/Atraco/activate.owl#browser_move"/>
+    <p1:has rdf:resource="http://localhost:8080/Atraco/activate.owl#photo_move"/>
+    <p1:next rdf:resource="http://localhost:8080/Atraco/activate.owl#touchRadio_agenda"/>
+  </rdf:Description>
+</rdf:RDF>

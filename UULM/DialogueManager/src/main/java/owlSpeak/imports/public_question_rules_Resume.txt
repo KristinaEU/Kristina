@@ -1,0 +1,6 @@
+public <Resume> = [<_courtesy>] resume [<_this>] [<ACTIVITY>] [<_courtesy>];
+<ACTIVITY> = activity | dialog | dialogue | conversation | session;/*End of Slot*/
+
+public <Resume> = [<_courtesy>] resume [<_this>] [<ACTIVITY>] [<_courtesy>];
+<ACTIVITY> = activity | dialog | dialogue | conversation | session;/*End of Slot*/
+

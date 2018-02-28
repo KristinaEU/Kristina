@@ -1,0 +1,122 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://localhost:8080/D22/light.owl#"
+     xml:base="http://localhost:8080/D22/light.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+     xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
+     xmlns:p1="http://localhost:8080/OwlSpeakOnto.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://localhost:8080/D22/light.owl">
+        <owl:imports rdf:resource="http://localhost:8080/OwlSpeakOnto.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://localhost:8080/D22/light.owl#LightsOff_grammar -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/light.owl#LightsOff_grammar">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Grammar"/>
+        <p1:grammarString xml:lang="de">(licht aus)</p1:grammarString>
+        <p1:grammarString xml:lang="en">[(light off) (lights off)]</p1:grammarString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/light.owl#LightsOff_move -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/light.owl#LightsOff_move">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SET(%greeting:userInit%=false;%greeting:userEntered%=false)</p1:variableOperator>
+        <p1:grammar rdf:resource="http://localhost:8080/D22/light.owl#LightsOff_grammar"/>
+        <p1:semantic rdf:resource="http://localhost:8080/D22/light.owl#LightsOff_semantic"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/D22/light.owl#LightsOn_Semantic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/light.owl#LightsOff_semantic -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/light.owl#LightsOff_semantic">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Semantic"/>
+        <p1:semanticString xml:lang="en">light_level;off</p1:semanticString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/light.owl#LightsOn_Semantic -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/light.owl#LightsOn_Semantic">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Semantic"/>
+        <p1:semanticString xml:lang="en">light_level;on</p1:semanticString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/light.owl#LightsOn_grammar -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/light.owl#LightsOn_grammar">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Grammar"/>
+        <p1:grammarString xml:lang="de">(licht an)</p1:grammarString>
+        <p1:grammarString xml:lang="en">[(light on) (lights on)]</p1:grammarString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/light.owl#LigthsOn_move -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/light.owl#LigthsOn_move">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SET(%greeting:userInit%=false;%greeting:userEntered%=false)</p1:variableOperator>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/D22/light.owl#LightsOff_semantic"/>
+        <p1:semantic rdf:resource="http://localhost:8080/D22/light.owl#LightsOn_Semantic"/>
+        <p1:grammar rdf:resource="http://localhost:8080/D22/light.owl#LightsOn_grammar"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/light.owl#light_agenda -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/light.owl#light_agenda">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <p1:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">80</p1:priority>
+        <p1:respawn rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</p1:respawn>
+        <p1:has rdf:resource="http://localhost:8080/D22/light.owl#LightsOff_move"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/light.owl#LigthsOn_move"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/light.owl#userBeliefspace -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/light.owl#userBeliefspace">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#BeliefSpace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/light.owl#userWorkspace -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/light.owl#userWorkspace">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#WorkSpace"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.2.0.1502) http://owlapi.sourceforge.net -->
+

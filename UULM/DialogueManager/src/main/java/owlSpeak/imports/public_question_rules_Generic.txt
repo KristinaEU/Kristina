@@ -1,0 +1,4 @@
+public <Generic> = [<_can_you>] [Help] [<_courtesy>] | [<_can_you>] [EstablishContext] [<_courtesy>] | [<_can_you>] [Repeat] [<_courtesy>] | [<_can_you>] [Suspend] [<_courtesy>] | [<_can_you>] [Resume] [<_courtesy>] | [<_can_you>] [StartOver] [<_courtesy>] | [<_courtesy>] [<_can_you>] [Quit] [<_courtesy>] | [FinalQuit] | <_greeting> | <_can_you> | <_courtesy> | [Yes] | [GoodEnough] | [No] | [DontKnow];
+
+public <Generic> = [<_can_you>] [Help] [<_courtesy>] | [<_can_you>] [EstablishContext] [<_courtesy>] | [<_can_you>] [Repeat] [<_courtesy>] | [<_can_you>] [Suspend] [<_courtesy>] | [<_can_you>] [Resume] [<_courtesy>] | [<_can_you>] [StartOver] [<_courtesy>] | [<_courtesy>] [<_can_you>] [Quit] [<_courtesy>] | [FinalQuit] | <_greeting> | <_can_you> | <_courtesy> | [Yes] | [GoodEnough] | [No] | [DontKnow];
+

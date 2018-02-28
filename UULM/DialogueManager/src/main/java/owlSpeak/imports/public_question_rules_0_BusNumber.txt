@@ -1,0 +1,16 @@
+public <0_BusNumber> = [<pre_assertion>] <I_D_LIKE_TO_TAKE> [the] [<direction>] <route> [<LINE>] | [<pre_assertion>] <I_D_LIKE_TO_TAKE> [the] <LINE> [number] <route> [<direction>] | [<pre_assertion>] <I_D_LIKE_TO> know [the] schedule <FOR> [the] <route> [<LINE>] | [<pre_assertion>] [<can_you_tell_me>] [the] schedule <FOR> [the] <route> [<LINE>] | [<pre_assertion>] [<i_want>] the schedule <FOR> [the] <route> [<LINE>] | [<pre_assertion>] [<CAN_YOU>] give me [the] schedule <FOR> [the] <route> [<LINE>] | [<pre_assertion>] <I_M> looking for [the] [schedule] [<FOR>] [the] <route> [<LINE>] | [<pre_assertion>] [the] <route> [<LINE>];
+<I_D_LIKE_TO_TAKE> = <I_D_LIKE_TO> <TAKE>;
+<TAKE> = take | takes | taking | ride | rides | riding;
+<LINE> = line | bus | route;
+<I_D_LIKE_TO> = i'd like to | i would like to | i want to | i wanna | i need to | i have to;
+<FOR> = for | of;
+<CAN_YOU> = can you | could you;
+<I_M> = i am | i'm;/*End of Slot*/
+public <0_BusNumber> = [<pre_assertion>] <I_D_LIKE_TO_TAKE> [the] [<direction>] <route> [<LINE>] | [<pre_assertion>] <I_D_LIKE_TO_TAKE> [the] <LINE> [number] <route> [<direction>] | [<pre_assertion>] <I_D_LIKE_TO> know [the] schedule <FOR> [the] <route> [<LINE>] | [<pre_assertion>] [<can_you_tell_me>] [the] schedule <FOR> [the] <route> [<LINE>] | [<pre_assertion>] [<i_want>] the schedule <FOR> [the] <route> [<LINE>] | [<pre_assertion>] [<CAN_YOU>] give me [the] schedule <FOR> [the] <route> [<LINE>] | [<pre_assertion>] <I_M> looking for [the] [schedule] [<FOR>] [the] <route> [<LINE>] | [<pre_assertion>] [the] <route> [<LINE>];
+<I_D_LIKE_TO_TAKE> = <I_D_LIKE_TO> <TAKE>;
+<TAKE> = take | takes | taking | ride | rides | riding;
+<LINE> = line | bus | route;
+<I_D_LIKE_TO> = i'd like to | i would like to | i want to | i wanna | i need to | i have to;
+<FOR> = for | of;
+<CAN_YOU> = can you | could you;
+<I_M> = i am | i'm;/*End of Slot*/

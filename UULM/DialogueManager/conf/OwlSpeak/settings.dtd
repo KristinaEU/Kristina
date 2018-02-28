@@ -1,0 +1,64 @@
+<!ELEMENT owlSetting (platform,URI,HomePath,plugin,Youpi,YoupiPath,YoupiID,YoupiFriendlyName,MatchAgenda,PrioFactor,LoopDuration,MaxSpeechTimeout,speakRate,ttsCodes,ttsMode,asrCodes,asrMode,deriveQuality,dbLogging,callRecording,kristina,idaco,demo,maxNBestListEntries,SysCommands?,Files?,Users)>
+<!ELEMENT platform (#PCDATA)>
+<!ELEMENT URI (#PCDATA)>
+<!ELEMENT HomePath (#PCDATA)>
+<!ELEMENT plugin (#PCDATA)>
+<!ELEMENT Youpi (#PCDATA)>
+<!ELEMENT YoupiPath (#PCDATA)>
+<!ELEMENT YoupiID (#PCDATA)>
+<!ELEMENT YoupiFriendlyName (#PCDATA)>
+<!ELEMENT MatchAgenda (#PCDATA)>
+<!ELEMENT PrioFactor (#PCDATA)>
+<!ELEMENT LoopDuration (#PCDATA)>
+<!ELEMENT MaxSpeechTimeout (#PCDATA)>
+<!ELEMENT speakRate (#PCDATA)>
+<!ELEMENT ttsCodes (tts)*>
+<!ELEMENT tts (#PCDATA)>
+<!ATTLIST tts
+   id    CDATA   #REQUIRED
+>
+<!ELEMENT ttsMode (#PCDATA)>
+<!ELEMENT asrCodes (asr)*>
+<!ELEMENT asr (#PCDATA)>
+<!ATTLIST asr
+   id    CDATA   #REQUIRED
+>
+<!ELEMENT asrMode (#PCDATA)>
+<!ELEMENT deriveQuality (#PCDATA)>
+<!ELEMENT dbLogging (#PCDATA)>
+<!ELEMENT callRecording (#PCDATA)>
+<!ELEMENT kristina (#PCDATA)>
+<!ELEMENT idaco (#PCDATA)>
+<!ELEMENT demo (#PCDATA)>
+<!ELEMENT maxNBestListEntries (#PCDATA)>
+<!ELEMENT SysCommands (Command)*>
+<!ELEMENT Command (#PCDATA)>
+<!ATTLIST Command
+   name    CDATA   #REQUIRED
+>
+<!ELEMENT Files (ontoFile)*>
+<!ELEMENT ontoFile (#PCDATA)>
+<!ATTLIST ontoFile
+   name    CDATA   #REQUIRED
+   path  CDATA   #REQUIRED 
+   file    CDATA   #REQUIRED
+   HISvariant   CDATA   "0"
+   policyVariant   CDATA   "0"
+   systemStateVariant   CDATA   "0"
+>
+<!ELEMENT Users (User)*>
+<!ELEMENT User (Useronto*)>
+<!ATTLIST User 
+	name    	CDATA   #REQUIRED
+	docType 	CDATA	#REQUIRED
+	grammarType CDATA	#REQUIRED
+	sleep		CDATA	#REQUIRED
+	AutoSave	CDATA	#REQUIRED
+>
+<!ELEMENT Useronto (#PCDATA)>
+<!ATTLIST Useronto
+   name    CDATA   #REQUIRED
+   status  CDATA   #REQUIRED
+>
+
+

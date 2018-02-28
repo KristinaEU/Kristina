@@ -1,0 +1,4 @@
+public <EstablishContext> = where are we | where am i | what's going on | what are we doing | what am i doing | what is happening | where were we | where was i;
+
+public <EstablishContext> = where are we | where am i | what's going on | what are we doing | what am i doing | what is happening | where were we | where was i;
+

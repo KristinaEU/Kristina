@@ -1,0 +1,2 @@
+public <AnyStop> = any stop;
+public <AnyStop> = any stop;

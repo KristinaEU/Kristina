@@ -1,0 +1,458 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://localhost:8080/OwlSpeakOnto.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     ontologyIRI="http://localhost:8080/OwlSpeakOnto.owl">
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="swrlb" IRI="http://www.w3.org/2003/11/swrlb#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="protege" IRI="http://protege.stanford.edu/plugins/owl/protege#"/>
+    <Prefix name="" IRI="http://localhost:8080/OwlSpeakOnto.owl#"/>
+    <Prefix name="xsp" IRI="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="swrl" IRI="http://www.w3.org/2003/11/swrl#"/>
+    <Declaration>
+        <Class IRI="#Agenda"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Belief"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BeliefSpace"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DialogueDomain"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Grammar"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#History"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Move"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Semantic"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Speech"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#State"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Utterance"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Variable"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#WorkSpace"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#contrarySemantic"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#forAgenda"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#grammar"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasBelief"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#inWorkspace"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#mustnot"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#next"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#requires"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#semantic"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#utterance"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#variabledefault"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#addTime"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#agendaPriority"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#defaultValue"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#domainName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#grammarString"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#isMasterBool"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#priority"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#procTime"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#respawn"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#semanticString"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#utteranceString"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#variableOperator"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#variableValue"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="#domainName"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Agenda"/>
+        <Class IRI="#State"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Belief"/>
+        <Class IRI="#State"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BeliefSpace"/>
+        <Class IRI="#Belief"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Grammar"/>
+        <Class IRI="#Speech"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#History"/>
+        <Class IRI="#State"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Move"/>
+        <Class IRI="#Speech"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Semantic"/>
+        <Class IRI="#Speech"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Speech"/>
+        <Class IRI="#DialogueDomain"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#State"/>
+        <Class IRI="#DialogueDomain"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Utterance"/>
+        <Class IRI="#Speech"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Variable"/>
+        <Class IRI="#Speech"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#WorkSpace"/>
+        <Class IRI="#Agenda"/>
+    </SubClassOf>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#forAgenda"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#grammar"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#inWorkspace"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#utterance"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#variabledefault"/>
+    </FunctionalObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#contrarySemantic"/>
+        <Class IRI="#Move"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#forAgenda"/>
+        <Class IRI="#History"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#grammar"/>
+        <Class IRI="#Move"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#has"/>
+        <Class IRI="#Agenda"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasBelief"/>
+        <Class IRI="#BeliefSpace"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#inWorkspace"/>
+        <Class IRI="#History"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#mustnot"/>
+        <Class IRI="#Agenda"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#next"/>
+        <Class IRI="#Agenda"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#requires"/>
+        <Class IRI="#Agenda"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#semantic"/>
+        <ObjectUnionOf>
+            <Class IRI="#Belief"/>
+            <Class IRI="#Move"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#utterance"/>
+        <Class IRI="#Move"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#variabledefault"/>
+        <Class IRI="#Belief"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#contrarySemantic"/>
+        <Class IRI="#Semantic"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#forAgenda"/>
+        <Class IRI="#Agenda"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#grammar"/>
+        <Class IRI="#Grammar"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#has"/>
+        <Class IRI="#Move"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasBelief"/>
+        <Class IRI="#Belief"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#inWorkspace"/>
+        <Class IRI="#WorkSpace"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#mustnot"/>
+        <ObjectUnionOf>
+            <Class IRI="#Belief"/>
+            <Class IRI="#Semantic"/>
+        </ObjectUnionOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#next"/>
+        <Class IRI="#Agenda"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#requires"/>
+        <ObjectUnionOf>
+            <Class IRI="#Belief"/>
+            <Class IRI="#Semantic"/>
+        </ObjectUnionOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#semantic"/>
+        <ObjectUnionOf>
+            <Class IRI="#Semantic"/>
+            <Class IRI="#Variable"/>
+        </ObjectUnionOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#utterance"/>
+        <Class IRI="#Utterance"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#variabledefault"/>
+        <Class IRI="#Variable"/>
+    </ObjectPropertyRange>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#addTime"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#agendaPriority"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#defaultValue"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#isMasterBool"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#priority"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#procTime"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#respawn"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#variableOperator"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#variableValue"/>
+    </FunctionalDataProperty>
+    <DataPropertyDomain>
+        <DataProperty IRI="#addTime"/>
+        <Class IRI="#History"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#agendaPriority"/>
+        <Class IRI="#History"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#defaultValue"/>
+        <Class IRI="#Variable"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#domainName"/>
+        <Class IRI="#DialogueDomain"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#grammarString"/>
+        <Class IRI="#Grammar"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#isMasterBool"/>
+        <Class IRI="#Agenda"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#priority"/>
+        <ObjectUnionOf>
+            <Class IRI="#Agenda"/>
+            <Class IRI="#Move"/>
+        </ObjectUnionOf>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#procTime"/>
+        <Class IRI="#History"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#respawn"/>
+        <Class IRI="#Agenda"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#semanticString"/>
+        <Class IRI="#Semantic"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#utteranceString"/>
+        <Class IRI="#Utterance"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#variableOperator"/>
+        <ObjectUnionOf>
+            <Class IRI="#Agenda"/>
+            <Class IRI="#Move"/>
+        </ObjectUnionOf>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#variableValue"/>
+        <Class IRI="#Belief"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#addTime"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#agendaPriority"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#defaultValue"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#domainName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#grammarString"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#isMasterBool"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#priority"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#procTime"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#respawn"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#semanticString"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#utteranceString"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#variableOperator"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#variableValue"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.1.0.1602) http://owlapi.sourceforge.net -->
+

@@ -1,0 +1,16 @@
+public <DisambiguateDeparture> = [<pre_assertion>] departure | [<pre_assertion>] <IT_IS> my departure [<PLACE>] | [<pre_assertion>] [<I_D_LIKE>] <LEAVE> [there] | [<pre_assertion>] [<I_WANNA_GO>] from there | [<pre_assertion>] [<I_D_LIKE>] <LEAVE> <AT_THAT_TIME>;
+<IT_IS> = it's | it is | this is | that is | that's;
+<PLACE> = stop | place;
+<I_WANNA_GO> = <I_D_LIKE> <GO> | <I_D_LIKE> <LEAVE>;
+<LEAVE> = leave | leaves | leaving | depart | departs | departing;
+<GO> = go | goes | going;
+<AT_THAT_TIME> = then | at that time;
+<I_D_LIKE> = i'd like to | i would like to | i want to | i wanna | i need to | i have to;/*End of Slot*/
+public <DisambiguateDeparture> = [<pre_assertion>] departure | [<pre_assertion>] <IT_IS> my departure [<PLACE>] | [<pre_assertion>] [<I_D_LIKE>] <LEAVE> [there] | [<pre_assertion>] [<I_WANNA_GO>] from there | [<pre_assertion>] [<I_D_LIKE>] <LEAVE> <AT_THAT_TIME>;
+<IT_IS> = it's | it is | this is | that is | that's;
+<PLACE> = stop | place;
+<I_WANNA_GO> = <I_D_LIKE> <GO> | <I_D_LIKE> <LEAVE>;
+<LEAVE> = leave | leaves | leaving | depart | departs | departing;
+<GO> = go | goes | going;
+<AT_THAT_TIME> = then | at that time;
+<I_D_LIKE> = i'd like to | i would like to | i want to | i wanna | i need to | i have to;/*End of Slot*/

@@ -1,0 +1,6 @@
+public <Quit> = [good] bye | goodbye | byebye | hang up [now] | see you later | have a good day | good night | goodnight |  [<_i_want>] abort [<SESSION>] [<_courtesy>]  |  [<_i_want>] exit [<SESSION>] [<_courtesy>]  |  [<_i_want>] quit [<SESSION>] [<_courtesy>] ;
+<SESSION> = [<_this>] dialog | [<_this>] dialogue | [<_this>] session | [<_this>] conversation | [<_this>] system;/*End of Slot*/
+
+public <Quit> = [good] bye | goodbye | byebye | hang up [now] | see you later | have a good day | good night | goodnight |  [<_i_want>] abort [<SESSION>] [<_courtesy>]  |  [<_i_want>] exit [<SESSION>] [<_courtesy>]  |  [<_i_want>] quit [<SESSION>] [<_courtesy>] ;
+<SESSION> = [<_this>] dialog | [<_this>] dialogue | [<_this>] session | [<_this>] conversation | [<_this>] system;/*End of Slot*/
+

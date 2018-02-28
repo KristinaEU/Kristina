@@ -1,0 +1,82 @@
+SimpleGreet
+My answer: [PersonalGreet, SimpleGreet]
+AskTask
+My answer: [Reject]
+AskTask
+My answer: [AfternoonGreet]
+AskTask
+My answer: [Declare: [Motivation, walk]]
+Declare
+My answer: [SimpleThank]
+SimpleMotivate
+My answer: [SimpleThank]
+AskTask
+My answer: [Request: [rain], RequestWeather: []]
+ShowWeather
+My answer: [SimpleThank, Request: [sun]]
+ShowWeather
+My answer: [SimpleThank]
+AnswerThank
+My answer: [SimpleThank]
+AskTask
+My answer: [Request: [temperature]]
+ShowWeather
+My answer: [SimpleThank, SimpleSayGoodbye]
+
+
+
+SimpleGreet
+My answer: [AfternoonGreet]
+AskTask
+My answer: [Declare: [Motivation, walk], Request: [rain]]
+RequestMissingInformation
+My answer: [Request: [temperature]]
+RequestMissingInformation
+My answer: [Request: [sun], RequestWeather: []]
+ShowWeather
+My answer: [SimpleThank]
+Acknowledge
+My answer: [SimpleThank, SimpleSayGoodbye]
+
+
+SimpleGreet
+My answer: [SimpleGreet]
+AskTask
+My answer: [AfternoonGreet]
+
+________
+
+US: [MorningGreet]
+PersonalGreet
+US: [Declare: [Motivation, walk]]
+Declare
+US: [Request: [temperature]]
+RequestMissingInformation
+US: [Request: [sun], PersonalThank]
+RequestMissingInformation
+US: [Reject, RequestWeather: [rain]]
+ShowWeather
+US: [SimpleThank]
+AnswerThank
+US: [SimpleThank]
+AskTask
+US: [Reject]
+Declare
+US: [PersonalThank, Reject]
+Acknowlege
+
+
+
+US: [SimpleGreet]
+SimpleGreet
+US: [SimpleGreet]
+PersonalGreet
+US: [Declare: [Temperature, hot]]
+Acknowledge
+US: [RequestWeather: [rain, sun]]
+Declare
+US: [Request: [temperature], Reject]
+ShowWeather
+US: [SimpleSayGoodbye]
+
+

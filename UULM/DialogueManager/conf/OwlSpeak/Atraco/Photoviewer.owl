@@ -1,0 +1,590 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://localhost:8080/Atraco/Photoviewer.owl#"
+     xml:base="http://localhost:8080/Atraco/Photoviewer.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+     xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
+     xmlns:p1="http://localhost:8080/Atraco/OwlSpeakOnto.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://localhost:8080/Atraco/Photoviewer.owl">
+        <owl:imports rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://localhost:8080/Atraco/Photoviewer.owl#DialogueDomain_1 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/Photoviewer.owl#DialogueDomain_1">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#DialogueDomain"/>
+        <p1:domainName xml:lang="de">bilder</p1:domainName>
+        <p1:domainName xml:lang="en">photos</p1:domainName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/Photoviewer.owl#History1648431545 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/Photoviewer.owl#History1648431545">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#History"/>
+        <p1:addTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</p1:addTime>
+        <p1:agendaPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">38</p1:agendaPriority>
+        <p1:inWorkspace rdf:resource="http://localhost:8080/Atraco/Photoviewer.owl#userWorkspace"/>
+        <p1:forAgenda rdf:resource="http://localhost:8080/Atraco/Photoviewer.owl#whichPic_agenda"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/Photoviewer.owl#Masteragenda -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/Photoviewer.owl#Masteragenda">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Agenda"/>
+        <p1:isMasterBool rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</p1:isMasterBool>
+        <p1:next rdf:resource="http://localhost:8080/Atraco/Photoviewer.owl#whichPic_agenda"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/Photoviewer.owl#activation_state -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/Photoviewer.owl#activation_state">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Variable"/>
+        <p1:defaultValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</p1:defaultValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/Photoviewer.owl#control_Agenda -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/Photoviewer.owl#control_Agenda">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Agenda"/>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">REQUIRES(%activation_state%==1)</p1:variableOperator>
+        <p1:respawn rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</p1:respawn>
+        <p1:has rdf:resource="http://localhost:8080/Atraco/Photoviewer.owl#currentPic_move"/>
+        <p1:has rdf:resource="http://localhost:8080/Atraco/Photoviewer.owl#exit_move"/>
+        <p1:has rdf:resource="http://localhost:8080/Atraco/Photoviewer.owl#next_move"/>
+        <p1:has rdf:resource="http://localhost:8080/Atraco/Photoviewer.owl#pause_move"/>
+        <p1:has rdf:resource="http://localhost:8080/Atraco/Photoviewer.owl#play_move"/>
+        <p1:has rdf:resource="http://localhost:8080/Atraco/Photoviewer.owl#prev_move"/>
+        <p1:has rdf:resource="http://localhost:8080/Atraco/Photoviewer.owl#selectFra_move"/>
+        <p1:has rdf:resource="http://localhost:8080/Atraco/Photoviewer.owl#selectItaly_move"/>
+        <p1:has rdf:resource="http://localhost:8080/Atraco/Photoviewer.owl#selectSlo_move"/>
+        <p1:has rdf:resource="http://localhost:8080/Atraco/Photoviewer.owl#selectSwi_move"/>
+        <p1:has rdf:resource="http://localhost:8080/Atraco/Photoviewer.owl#selectVen_move"/>
+        <p1:has rdf:resource="http://localhost:8080/Atraco/Photoviewer.owl#selectWed_move"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/Photoviewer.owl#currentPhotoName -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/Photoviewer.owl#currentPhotoName">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Variable"/>
+        <p1:defaultValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">default</p1:defaultValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/Photoviewer.owl#currentPic_move -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/Photoviewer.owl#currentPic_move">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Move"/>
+        <p1:semantic rdf:resource="http://localhost:8080/Atraco/Photoviewer.owl#currentPic_semantic"/>
+        <p1:grammar rdf:resource="http://localhost:8080/Atraco/Photoviewer.owl#whichPhoto_grammar"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/Photoviewer.owl#currentPic_semantic -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/Photoviewer.owl#currentPic_semantic">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Semantic"/>
+        <p1:semanticString xml:lang="en">current_pic_asked;</p1:semanticString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/Photoviewer.owl#exit_grammar -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/Photoviewer.owl#exit_grammar">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Grammar"/>
+        <p1:grammarString xml:lang="de">[beenden]</p1:grammarString>
+        <p1:grammarString xml:lang="en">[(end photos)end]</p1:grammarString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/Photoviewer.owl#exit_move -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/Photoviewer.owl#exit_move">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Move"/>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SET(activation_state=0)</p1:variableOperator>
+        <p1:grammar rdf:resource="http://localhost:8080/Atraco/Photoviewer.owl#exit_grammar"/>
+        <p1:semantic rdf:resource="http://localhost:8080/Atraco/Photoviewer.owl#exit_semantic"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/Atraco/Photoviewer.owl#start_semantic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/Photoviewer.owl#exit_semantic -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/Photoviewer.owl#exit_semantic">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Semantic"/>
+        <p1:semanticString xml:lang="en">stop;</p1:semanticString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/Photoviewer.owl#nextPic_grammar -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/Photoviewer.owl#nextPic_grammar">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Grammar"/>
+        <p1:grammarString xml:lang="de">[weiter (naechstes bild)]</p1:grammarString>
+        <p1:grammarString xml:lang="en">[next (next photo)]</p1:grammarString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/Photoviewer.owl#next_move -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/Photoviewer.owl#next_move">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Move"/>
+        <p1:grammar rdf:resource="http://localhost:8080/Atraco/Photoviewer.owl#nextPic_grammar"/>
+        <p1:semantic rdf:resource="http://localhost:8080/Atraco/Photoviewer.owl#next_semantic"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/Atraco/Photoviewer.owl#prev_semantic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/Photoviewer.owl#next_semantic -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/Photoviewer.owl#next_semantic">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Semantic"/>
+        <p1:semanticString xml:lang="en">next_photo;</p1:semanticString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/Photoviewer.owl#pause_grammar -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/Photoviewer.owl#pause_grammar">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Grammar"/>
+        <p1:grammarString xml:lang="de">[pause]</p1:grammarString>
+        <p1:grammarString xml:lang="en">[pause]</p1:grammarString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/Photoviewer.owl#pause_move -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/Photoviewer.owl#pause_move">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Move"/>
+        <p1:grammar rdf:resource="http://localhost:8080/Atraco/Photoviewer.owl#pause_grammar"/>
+        <p1:semantic rdf:resource="http://localhost:8080/Atraco/Photoviewer.owl#pause_semantic"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/Atraco/Photoviewer.owl#play_semantic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/Photoviewer.owl#pause_semantic -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/Photoviewer.owl#pause_semantic">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Semantic"/>
+        <p1:semanticString xml:lang="en">pause;</p1:semanticString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/Photoviewer.owl#play_grammar -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/Photoviewer.owl#play_grammar">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Grammar"/>
+        <p1:grammarString xml:lang="de">[bilder abspielen]</p1:grammarString>
+        <p1:grammarString xml:lang="en">[play]</p1:grammarString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/Photoviewer.owl#play_move -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/Photoviewer.owl#play_move">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Move"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/Atraco/Photoviewer.owl#pause_semantic"/>
+        <p1:grammar rdf:resource="http://localhost:8080/Atraco/Photoviewer.owl#play_grammar"/>
+        <p1:semantic rdf:resource="http://localhost:8080/Atraco/Photoviewer.owl#play_semantic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/Photoviewer.owl#play_semantic -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/Photoviewer.owl#play_semantic">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Semantic"/>
+        <p1:semanticString xml:lang="en">play;</p1:semanticString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/Photoviewer.owl#prevPiv_grammar -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/Photoviewer.owl#prevPiv_grammar">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Grammar"/>
+        <p1:grammarString xml:lang="de">[zurueck(ein bild zurueck)]</p1:grammarString>
+        <p1:grammarString xml:lang="en">[back(one photo back)]</p1:grammarString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/Photoviewer.owl#prev_move -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/Photoviewer.owl#prev_move">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Move"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/Atraco/Photoviewer.owl#next_semantic"/>
+        <p1:grammar rdf:resource="http://localhost:8080/Atraco/Photoviewer.owl#prevPiv_grammar"/>
+        <p1:semantic rdf:resource="http://localhost:8080/Atraco/Photoviewer.owl#prev_semantic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/Photoviewer.owl#prev_semantic -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/Photoviewer.owl#prev_semantic">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Semantic"/>
+        <p1:semanticString xml:lang="en">previous_photo;</p1:semanticString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/Photoviewer.owl#selectFra_move -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/Photoviewer.owl#selectFra_move">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Move"/>
+        <p1:semantic rdf:resource="http://localhost:8080/Atraco/Photoviewer.owl#selectFra_semantic"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/Atraco/Photoviewer.owl#selectItaly_semantic"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/Atraco/Photoviewer.owl#selectSlov_semantic"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/Atraco/Photoviewer.owl#selectSwi_semantic"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/Atraco/Photoviewer.owl#selectVen_semantic"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/Atraco/Photoviewer.owl#selectWed_semantic"/>
+        <p1:grammar rdf:resource="http://localhost:8080/Atraco/Photoviewer.owl#showFra_grammar"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/Photoviewer.owl#selectFra_semantic -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/Photoviewer.owl#selectFra_semantic">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Semantic"/>
+        <p1:semanticString xml:lang="en">select_slideshow;France</p1:semanticString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/Photoviewer.owl#selectItaly_move -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/Photoviewer.owl#selectItaly_move">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Move"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/Atraco/Photoviewer.owl#selectFra_semantic"/>
+        <p1:semantic rdf:resource="http://localhost:8080/Atraco/Photoviewer.owl#selectItaly_semantic"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/Atraco/Photoviewer.owl#selectSlov_semantic"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/Atraco/Photoviewer.owl#selectSwi_semantic"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/Atraco/Photoviewer.owl#selectVen_semantic"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/Atraco/Photoviewer.owl#selectWed_semantic"/>
+        <p1:grammar rdf:resource="http://localhost:8080/Atraco/Photoviewer.owl#showItaly_grammar"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/Photoviewer.owl#selectItaly_semantic -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/Photoviewer.owl#selectItaly_semantic">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Semantic"/>
+        <p1:semanticString xml:lang="en">select_slideshow;Italy</p1:semanticString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/Photoviewer.owl#selectSlo_move -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/Photoviewer.owl#selectSlo_move">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Move"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/Atraco/Photoviewer.owl#selectFra_semantic"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/Atraco/Photoviewer.owl#selectItaly_semantic"/>
+        <p1:semantic rdf:resource="http://localhost:8080/Atraco/Photoviewer.owl#selectSlov_semantic"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/Atraco/Photoviewer.owl#selectSwi_semantic"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/Atraco/Photoviewer.owl#selectVen_semantic"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/Atraco/Photoviewer.owl#selectWed_semantic"/>
+        <p1:grammar rdf:resource="http://localhost:8080/Atraco/Photoviewer.owl#showSlo_grammar"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/Photoviewer.owl#selectSlov_semantic -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/Photoviewer.owl#selectSlov_semantic">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Semantic"/>
+        <p1:semanticString xml:lang="en">select_slideshow;Slovenia</p1:semanticString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/Photoviewer.owl#selectSwi_move -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/Photoviewer.owl#selectSwi_move">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Move"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/Atraco/Photoviewer.owl#selectFra_semantic"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/Atraco/Photoviewer.owl#selectItaly_semantic"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/Atraco/Photoviewer.owl#selectSlov_semantic"/>
+        <p1:semantic rdf:resource="http://localhost:8080/Atraco/Photoviewer.owl#selectSwi_semantic"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/Atraco/Photoviewer.owl#selectVen_semantic"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/Atraco/Photoviewer.owl#selectWed_semantic"/>
+        <p1:grammar rdf:resource="http://localhost:8080/Atraco/Photoviewer.owl#showSwi_grammar"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/Photoviewer.owl#selectSwi_semantic -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/Photoviewer.owl#selectSwi_semantic">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Semantic"/>
+        <p1:semanticString xml:lang="en">select_slideshow;Switzerland </p1:semanticString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/Photoviewer.owl#selectVen_move -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/Photoviewer.owl#selectVen_move">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Move"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/Atraco/Photoviewer.owl#selectFra_semantic"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/Atraco/Photoviewer.owl#selectItaly_semantic"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/Atraco/Photoviewer.owl#selectSlov_semantic"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/Atraco/Photoviewer.owl#selectSwi_semantic"/>
+        <p1:semantic rdf:resource="http://localhost:8080/Atraco/Photoviewer.owl#selectVen_semantic"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/Atraco/Photoviewer.owl#selectWed_semantic"/>
+        <p1:grammar rdf:resource="http://localhost:8080/Atraco/Photoviewer.owl#showVen_grammar"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/Photoviewer.owl#selectVen_semantic -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/Photoviewer.owl#selectVen_semantic">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Semantic"/>
+        <p1:semanticString xml:lang="en">select_slideshow;Venice</p1:semanticString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/Photoviewer.owl#selectWed_move -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/Photoviewer.owl#selectWed_move">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Move"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/Atraco/Photoviewer.owl#selectFra_semantic"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/Atraco/Photoviewer.owl#selectItaly_semantic"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/Atraco/Photoviewer.owl#selectSlov_semantic"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/Atraco/Photoviewer.owl#selectSwi_semantic"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/Atraco/Photoviewer.owl#selectVen_semantic"/>
+        <p1:semantic rdf:resource="http://localhost:8080/Atraco/Photoviewer.owl#selectWed_semantic"/>
+        <p1:grammar rdf:resource="http://localhost:8080/Atraco/Photoviewer.owl#showWed_grammar"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/Photoviewer.owl#selectWed_semantic -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/Photoviewer.owl#selectWed_semantic">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Semantic"/>
+        <p1:semanticString xml:lang="en">select_slideshow;Wedding</p1:semanticString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/Photoviewer.owl#showFra_grammar -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/Photoviewer.owl#showFra_grammar">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Grammar"/>
+        <p1:grammarString xml:lang="de">[frankreich]</p1:grammarString>
+        <p1:grammarString xml:lang="en">[france]</p1:grammarString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/Photoviewer.owl#showItaly_grammar -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/Photoviewer.owl#showItaly_grammar">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Grammar"/>
+        <p1:grammarString xml:lang="de">[italien]</p1:grammarString>
+        <p1:grammarString xml:lang="en">[italy]</p1:grammarString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/Photoviewer.owl#showSlo_grammar -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/Photoviewer.owl#showSlo_grammar">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Grammar"/>
+        <p1:grammarString xml:lang="de">[slovenien]</p1:grammarString>
+        <p1:grammarString xml:lang="en">[slovenia]</p1:grammarString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/Photoviewer.owl#showSwi_grammar -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/Photoviewer.owl#showSwi_grammar">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Grammar"/>
+        <p1:grammarString xml:lang="de">[schweiz]</p1:grammarString>
+        <p1:grammarString xml:lang="en">[switzerland]</p1:grammarString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/Photoviewer.owl#showVen_grammar -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/Photoviewer.owl#showVen_grammar">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Grammar"/>
+        <p1:grammarString xml:lang="de">[venedig]</p1:grammarString>
+        <p1:grammarString xml:lang="en">[venice]</p1:grammarString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/Photoviewer.owl#showWed_grammar -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/Photoviewer.owl#showWed_grammar">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Grammar"/>
+        <p1:grammarString xml:lang="de">[hochzeit]</p1:grammarString>
+        <p1:grammarString xml:lang="en">[wedding]</p1:grammarString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/Photoviewer.owl#start_Agenda -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/Photoviewer.owl#start_Agenda">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Agenda"/>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">REQUIRES(%activation_state%==0)</p1:variableOperator>
+        <p1:respawn rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</p1:respawn>
+        <p1:has rdf:resource="http://localhost:8080/Atraco/Photoviewer.owl#start_move"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/Photoviewer.owl#start_grammar -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/Photoviewer.owl#start_grammar">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Grammar"/>
+        <p1:grammarString xml:lang="de">(bilder starten)</p1:grammarString>
+        <p1:grammarString xml:lang="en">[(start photos)photos]</p1:grammarString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/Photoviewer.owl#start_move -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/Photoviewer.owl#start_move">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Move"/>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SET(activation_state=1)</p1:variableOperator>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/Atraco/Photoviewer.owl#exit_semantic"/>
+        <p1:grammar rdf:resource="http://localhost:8080/Atraco/Photoviewer.owl#start_grammar"/>
+        <p1:semantic rdf:resource="http://localhost:8080/Atraco/Photoviewer.owl#start_semantic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/Photoviewer.owl#start_semantic -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/Photoviewer.owl#start_semantic">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Semantic"/>
+        <p1:semanticString xml:lang="en">start;</p1:semanticString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/Photoviewer.owl#thisIs_move -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/Photoviewer.owl#thisIs_move">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Move"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/Atraco/Photoviewer.owl#currentPic_semantic"/>
+        <p1:utterance rdf:resource="http://localhost:8080/Atraco/Photoviewer.owl#whichPhoto_utterance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/Photoviewer.owl#userBeliefspace -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/Photoviewer.owl#userBeliefspace">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#BeliefSpace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/Photoviewer.owl#userWorkspace -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/Photoviewer.owl#userWorkspace">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#WorkSpace"/>
+        <p1:next rdf:resource="http://localhost:8080/Atraco/Photoviewer.owl#whichPic_agenda"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/Photoviewer.owl#whichPhoto_grammar -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/Photoviewer.owl#whichPhoto_grammar">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Grammar"/>
+        <p1:grammarString xml:lang="de">(bildtitel)</p1:grammarString>
+        <p1:grammarString xml:lang="en">(photo details)</p1:grammarString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/Photoviewer.owl#whichPhoto_utterance -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/Photoviewer.owl#whichPhoto_utterance">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Utterance"/>
+        <p1:utteranceString xml:lang="de">das ist %currentPhotoName%.</p1:utteranceString>
+        <p1:utteranceString xml:lang="en">this is %currentPhotoName%.</p1:utteranceString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Atraco/Photoviewer.owl#whichPic_agenda -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Atraco/Photoviewer.owl#whichPic_agenda">
+        <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Agenda"/>
+        <p1:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">38</p1:priority>
+        <p1:requires rdf:resource="http://localhost:8080/Atraco/Photoviewer.owl#currentPic_semantic"/>
+        <p1:has rdf:resource="http://localhost:8080/Atraco/Photoviewer.owl#thisIs_move"/>
+        <p1:next rdf:resource="http://localhost:8080/Atraco/Photoviewer.owl#whichPic_agenda"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.2.0.1502) http://owlapi.sourceforge.net -->
+

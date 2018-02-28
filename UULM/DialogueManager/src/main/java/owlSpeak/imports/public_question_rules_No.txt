@@ -1,0 +1,10 @@
+public <No> = no [<MOD>] | <_emphatic> no | absolutely not | nope | nah | no way | i don't think so | i don't like that | never mind | nevermind | not really | nowhere | negative;
+<MOD> = thanks | thank you | not really | i [really] don't want to | i [really] don't want <_that> | it's not | i'm not | <_that_is> not what i want | [<_that_is>] <NO> [<GOOD>];
+<NO> = no | not;
+<GOOD> = right | correct | good | okay;/*End of Slot*/
+
+public <No> = no [<MOD>] | <_emphatic> no | absolutely not | nope | nah | no way | i don't think so | i don't like that | never mind | nevermind | not really | nowhere | negative;
+<MOD> = thanks | thank you | not really | i [really] don't want to | i [really] don't want <_that> | it's not | i'm not | <_that_is> not what i want | [<_that_is>] <NO> [<GOOD>];
+<NO> = no | not;
+<GOOD> = right | correct | good | okay;/*End of Slot*/
+

@@ -1,0 +1,2180 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<interaction>
+
+<!-- GREET -->
+
+<!-- Acknowledge+PersonalGreet 1 -->
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_Acknowledge+agenda_PersonalGreet</value>
+</variable>
+</systemTurn>
+
+<!-- PersonalGreet+AskMood 35 -->
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet+agenda_AskMood</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet+agenda_AskMood</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet+agenda_AskMood</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet+agenda_AskMood</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet+agenda_AskMood</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet+agenda_AskMood</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet+agenda_AskMood</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet+agenda_AskMood</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet+agenda_AskMood</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet+agenda_AskMood</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet+agenda_AskMood</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet+agenda_AskMood</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet+agenda_AskMood</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet+agenda_AskMood</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet+agenda_AskMood</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet+agenda_AskMood</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet+agenda_AskMood</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet+agenda_AskMood</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet+agenda_AskMood</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet+agenda_AskMood</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet+agenda_AskMood</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet+agenda_AskMood</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet+agenda_AskMood</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet+agenda_AskMood</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet+agenda_AskMood</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet+agenda_AskMood</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet+agenda_AskMood</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet+agenda_AskMood</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet+agenda_AskMood</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet+agenda_AskMood</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet+agenda_AskMood</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet+agenda_AskMood</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet+agenda_AskMood</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet+agenda_AskMood</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet+agenda_AskMood</value>
+</variable>
+</systemTurn>
+
+<!-- PersonalGreet+AskTask 22 -->
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet+agenda_AskTask</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet+agenda_AskTask</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet+agenda_AskTask</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet+agenda_AskTask</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet+agenda_AskTask</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet+agenda_AskTask</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet+agenda_AskTask</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet+agenda_AskTask</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet+agenda_AskTask</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet+agenda_AskTask</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet+agenda_AskTask</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet+agenda_AskTask</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet+agenda_AskTask</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet+agenda_AskTask</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet+agenda_AskTask</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet+agenda_AskTask</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet+agenda_AskTask</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet+agenda_AskTask</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet+agenda_AskTask</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet+agenda_AskTask</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet+agenda_AskTask</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet+agenda_AskTask</value>
+</variable>
+</systemTurn>
+
+<!-- EveningGreet 1 -->
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_EveningGreet</value>
+</variable>
+</systemTurn>
+
+<!-- MorningGreet 2 -->
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_MorningGreet</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_MorningGreet</value>
+</variable>
+</systemTurn>
+
+<!-- PersonalGreet 64 -->
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalGreet</value>
+</variable>
+</systemTurn>
+
+<!-- SimpleGreet 7 -->
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_SimpleGreet</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_SimpleGreet</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_SimpleGreet</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_SimpleGreet</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_SimpleGreet</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_SimpleGreet</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>Greet</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_SimpleGreet</value>
+</variable>
+</systemTurn>
+
+
+
+<!-- SAYGOODBYE -->
+
+<!-- MeetAgainSayGoodbye 6 -->
+<userTurn>
+<variable id="a_u">
+<value>SayGoodbye</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_MeetAgainSayGoodbye</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>SayGoodbye</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_MeetAgainSayGoodbye</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>SayGoodbye</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_MeetAgainSayGoodbye</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>SayGoodbye</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_MeetAgainSayGoodbye</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>SayGoodbye</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_MeetAgainSayGoodbye</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>SayGoodbye</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_MeetAgainSayGoodbye</value>
+</variable>
+</systemTurn>
+
+<!-- PersonalSayGoodbye 14 -->
+<userTurn>
+<variable id="a_u">
+<value>SayGoodbye</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalSayGoodbye</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>SayGoodbye</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalSayGoodbye</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>SayGoodbye</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalSayGoodbye</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>SayGoodbye</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalSayGoodbye</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>SayGoodbye</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalSayGoodbye</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>SayGoodbye</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalSayGoodbye</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>SayGoodbye</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalSayGoodbye</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>SayGoodbye</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalSayGoodbye</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>SayGoodbye</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalSayGoodbye</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>SayGoodbye</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalSayGoodbye</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>SayGoodbye</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalSayGoodbye</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>SayGoodbye</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalSayGoodbye</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>SayGoodbye</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalSayGoodbye</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>SayGoodbye</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_PersonalSayGoodbye</value>
+</variable>
+</systemTurn>
+
+<!-- SimpleSayGoodbye 63 -->
+<userTurn>
+<variable id="a_u">
+<value>SayGoodbye</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_SimpleSayGoodbye</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>SayGoodbye</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_SimpleSayGoodbye</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>SayGoodbye</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_SimpleSayGoodbye</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>SayGoodbye</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_SimpleSayGoodbye</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>SayGoodbye</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_SimpleSayGoodbye</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>SayGoodbye</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_SimpleSayGoodbye</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>SayGoodbye</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_SimpleSayGoodbye</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>SayGoodbye</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_SimpleSayGoodbye</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>SayGoodbye</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_SimpleSayGoodbye</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>SayGoodbye</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_SimpleSayGoodbye</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>SayGoodbye</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_SimpleSayGoodbye</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>SayGoodbye</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_SimpleSayGoodbye</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>SayGoodbye</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_SimpleSayGoodbye</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>SayGoodbye</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_SimpleSayGoodbye</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>SayGoodbye</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_SimpleSayGoodbye</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>SayGoodbye</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_SimpleSayGoodbye</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>SayGoodbye</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_SimpleSayGoodbye</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>SayGoodbye</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_SimpleSayGoodbye</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>SayGoodbye</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_SimpleSayGoodbye</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>SayGoodbye</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_SimpleSayGoodbye</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>SayGoodbye</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_SimpleSayGoodbye</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>SayGoodbye</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_SimpleSayGoodbye</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>SayGoodbye</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_SimpleSayGoodbye</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>SayGoodbye</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_SimpleSayGoodbye</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>SayGoodbye</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_SimpleSayGoodbye</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>SayGoodbye</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_SimpleSayGoodbye</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>SayGoodbye</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_SimpleSayGoodbye</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>SayGoodbye</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_SimpleSayGoodbye</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>SayGoodbye</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_SimpleSayGoodbye</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>SayGoodbye</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_SimpleSayGoodbye</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>SayGoodbye</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_SimpleSayGoodbye</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>SayGoodbye</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_SimpleSayGoodbye</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>SayGoodbye</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_SimpleSayGoodbye</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>SayGoodbye</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_SimpleSayGoodbye</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>SayGoodbye</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_SimpleSayGoodbye</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>SayGoodbye</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_SimpleSayGoodbye</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>SayGoodbye</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_SimpleSayGoodbye</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>SayGoodbye</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_SimpleSayGoodbye</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>SayGoodbye</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_SimpleSayGoodbye</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>SayGoodbye</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_SimpleSayGoodbye</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>SayGoodbye</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_SimpleSayGoodbye</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>SayGoodbye</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_SimpleSayGoodbye</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>SayGoodbye</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_SimpleSayGoodbye</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>SayGoodbye</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_SimpleSayGoodbye</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>SayGoodbye</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_SimpleSayGoodbye</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>SayGoodbye</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_SimpleSayGoodbye</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>SayGoodbye</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_SimpleSayGoodbye</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>SayGoodbye</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_SimpleSayGoodbye</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>SayGoodbye</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_SimpleSayGoodbye</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>SayGoodbye</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_SimpleSayGoodbye</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>SayGoodbye</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_SimpleSayGoodbye</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>SayGoodbye</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_SimpleSayGoodbye</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>SayGoodbye</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_SimpleSayGoodbye</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>SayGoodbye</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_SimpleSayGoodbye</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>SayGoodbye</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_SimpleSayGoodbye</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>SayGoodbye</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_SimpleSayGoodbye</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>SayGoodbye</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_SimpleSayGoodbye</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>SayGoodbye</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_SimpleSayGoodbye</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>SayGoodbye</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_SimpleSayGoodbye</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>SayGoodbye</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_SimpleSayGoodbye</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>SayGoodbye</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_SimpleSayGoodbye</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>SayGoodbye</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_SimpleSayGoodbye</value>
+</variable>
+</systemTurn>
+<userTurn>
+<variable id="a_u">
+<value>SayGoodbye</value>
+</variable>
+</userTurn>
+<systemTurn>
+<variable id="a_m">
+<value>agenda_SimpleSayGoodbye</value>
+</variable>
+</systemTurn>
+
+</interaction>

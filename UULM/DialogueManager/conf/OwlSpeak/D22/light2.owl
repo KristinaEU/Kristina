@@ -1,0 +1,182 @@
+<rdf:RDF
+    xmlns="http://localhost:8080/Atraco/light2.owl#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+    xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:p1="http://localhost:8080/Atraco/OwlSpeakOnto.owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+    xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" > 
+  <rdf:Description rdf:about="http://localhost:8080/Atraco/light2.owl#LightsOff_grammar">
+    <p1:grammarString xml:lang="en">[(light off) (lights off)]</p1:grammarString>
+    <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Grammar"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/Atraco/light2.owl#medium_move">
+    <p1:semantic rdf:resource="http://localhost:8080/Atraco/light2.owl#medium_semantic"/>
+    <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Move"/>
+    <p1:grammar rdf:resource="http://localhost:8080/Atraco/light2.owl#medium_grammar"/>
+    <p1:contrarySemantic rdf:resource="http://localhost:8080/Atraco/light2.owl#high_semantic"/>
+    <p1:contrarySemantic rdf:resource="http://localhost:8080/Atraco/light2.owl#LightsOff_semantic"/>
+    <p1:contrarySemantic rdf:resource="http://localhost:8080/Atraco/light2.owl#veryLow_semantic"/>
+    <p1:contrarySemantic rdf:resource="http://localhost:8080/Atraco/light2.owl#veryHigh_semantic"/>
+    <p1:contrarySemantic rdf:resource="http://localhost:8080/Atraco/light2.owl#low_semantic"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/Atraco/light2.owl#LigthsOn_move">
+    <p1:contrarySemantic rdf:resource="http://localhost:8080/Atraco/light2.owl#LightsOff_semantic"/>
+    <p1:semantic rdf:resource="http://localhost:8080/Atraco/light2.owl#LightsOn_Semantic"/>
+    <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Move"/>
+    <p1:grammar rdf:resource="http://localhost:8080/Atraco/light2.owl#LightsOn_grammar"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/Atraco/light2.owl#veryLow_agenda">
+    <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Agenda"/>
+    <p1:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">80</p1:priority>
+    <p1:has rdf:resource="http://localhost:8080/Atraco/light2.owl#veryLow_move"/>
+    <p1:respawn rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</p1:respawn>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/Atraco/light2.owl#low_move">
+    <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Move"/>
+    <p1:contrarySemantic rdf:resource="http://localhost:8080/Atraco/light2.owl#medium_semantic"/>
+    <p1:contrarySemantic rdf:resource="http://localhost:8080/Atraco/light2.owl#high_semantic"/>
+    <p1:contrarySemantic rdf:resource="http://localhost:8080/Atraco/light2.owl#LightsOff_semantic"/>
+    <p1:contrarySemantic rdf:resource="http://localhost:8080/Atraco/light2.owl#veryLow_semantic"/>
+    <p1:contrarySemantic rdf:resource="http://localhost:8080/Atraco/light2.owl#veryHigh_semantic"/>
+    <p1:semantic rdf:resource="http://localhost:8080/Atraco/light2.owl#low_semantic"/>
+    <p1:grammar rdf:resource="http://localhost:8080/Atraco/light2.owl#low_grammar"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/Atraco/light2.owl#veryLow_semantic">
+    <p1:semanticString xml:lang="en">light_level;VeryLow</p1:semanticString>
+    <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Semantic"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/Atraco/light2.owl#low_agenda">
+    <p1:respawn rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</p1:respawn>
+    <p1:has rdf:resource="http://localhost:8080/Atraco/light2.owl#low_move"/>
+    <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Agenda"/>
+    <p1:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">80</p1:priority>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/Atraco/light2.owl#LightsOff_semantic">
+    <p1:semanticString xml:lang="en">light_level;0</p1:semanticString>
+    <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Semantic"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/Atraco/light2.owl#veryHigh_semantic">
+    <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Semantic"/>
+    <p1:semanticString xml:lang="en">light_level;VeryHigh</p1:semanticString>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/Atraco/light2.owl">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <owl:imports rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/Atraco/light2.owl#high_grammar">
+    <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Grammar"/>
+    <p1:grammarString xml:lang="en">[(light high)(lights high)]</p1:grammarString>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/Atraco/light2.owl#userBeliefspace">
+    <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#BeliefSpace"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/Atraco/light2.owl#LightsOn_grammar">
+    <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Grammar"/>
+    <p1:grammarString xml:lang="en">[(light on) (lights on)]</p1:grammarString>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/Atraco/light2.owl#veryHigh_agenda">
+    <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Agenda"/>
+    <p1:respawn rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</p1:respawn>
+    <p1:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">80</p1:priority>
+    <p1:has rdf:resource="http://localhost:8080/Atraco/light2.owl#veryHigh_move"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/Atraco/light2.owl#LightsOff_move">
+    <p1:semantic rdf:resource="http://localhost:8080/Atraco/light2.owl#LightsOff_semantic"/>
+    <p1:contrarySemantic rdf:resource="http://localhost:8080/Atraco/light2.owl#LightsOn_Semantic"/>
+    <p1:grammar rdf:resource="http://localhost:8080/Atraco/light2.owl#LightsOff_grammar"/>
+    <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Move"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/Atraco/light2.owl#medium_grammar">
+    <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Grammar"/>
+    <p1:grammarString xml:lang="en">[(light medium)(lights medium)]</p1:grammarString>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/Atraco/light2.owl#high_semantic">
+    <p1:semanticString xml:lang="en">light_level;High</p1:semanticString>
+    <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Semantic"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/Atraco/light2.owl#Lighting_on_agenda">
+    <p1:respawn rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</p1:respawn>
+    <p1:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">80</p1:priority>
+    <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Agenda"/>
+    <p1:has rdf:resource="http://localhost:8080/Atraco/light2.owl#LigthsOn_move"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/Atraco/light2.owl#veryHigh_move">
+    <p1:contrarySemantic rdf:resource="http://localhost:8080/Atraco/light2.owl#medium_semantic"/>
+    <p1:contrarySemantic rdf:resource="http://localhost:8080/Atraco/light2.owl#high_semantic"/>
+    <p1:contrarySemantic rdf:resource="http://localhost:8080/Atraco/light2.owl#LightsOff_semantic"/>
+    <p1:contrarySemantic rdf:resource="http://localhost:8080/Atraco/light2.owl#veryLow_semantic"/>
+    <p1:contrarySemantic rdf:resource="http://localhost:8080/Atraco/light2.owl#low_semantic"/>
+    <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Move"/>
+    <p1:grammar rdf:resource="http://localhost:8080/Atraco/light2.owl#veryHigh_grammar"/>
+    <p1:semantic rdf:resource="http://localhost:8080/Atraco/light2.owl#veryHigh_semantic"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/Atraco/light2.owl#low_semantic">
+    <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Semantic"/>
+    <p1:semanticString xml:lang="en">light_level;Low</p1:semanticString>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/Atraco/light2.owl#high_move">
+    <p1:semantic rdf:resource="http://localhost:8080/Atraco/light2.owl#high_semantic"/>
+    <p1:grammar rdf:resource="http://localhost:8080/Atraco/light2.owl#high_grammar"/>
+    <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Move"/>
+    <p1:contrarySemantic rdf:resource="http://localhost:8080/Atraco/light2.owl#medium_semantic"/>
+    <p1:contrarySemantic rdf:resource="http://localhost:8080/Atraco/light2.owl#LightsOff_semantic"/>
+    <p1:contrarySemantic rdf:resource="http://localhost:8080/Atraco/light2.owl#veryLow_semantic"/>
+    <p1:contrarySemantic rdf:resource="http://localhost:8080/Atraco/light2.owl#veryHigh_semantic"/>
+    <p1:contrarySemantic rdf:resource="http://localhost:8080/Atraco/light2.owl#low_semantic"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/Atraco/light2.owl#LightsOn_Semantic">
+    <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Semantic"/>
+    <p1:semanticString xml:lang="en">light_level;100</p1:semanticString>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/Atraco/light2.owl#medium_agenda">
+    <p1:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">80</p1:priority>
+    <p1:has rdf:resource="http://localhost:8080/Atraco/light2.owl#medium_move"/>
+    <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Agenda"/>
+    <p1:respawn rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</p1:respawn>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/Atraco/light2.owl#veryLow_grammar">
+    <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Grammar"/>
+    <p1:grammarString xml:lang="en">[(light very low)(lights very low)]</p1:grammarString>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/Atraco/light2.owl#high_agenda">
+    <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Agenda"/>
+    <p1:respawn rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</p1:respawn>
+    <p1:has rdf:resource="http://localhost:8080/Atraco/light2.owl#high_move"/>
+    <p1:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">80</p1:priority>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/Atraco/light2.owl#veryHigh_grammar">
+    <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Grammar"/>
+    <p1:grammarString xml:lang="en">[(light very high)(lights very high)]</p1:grammarString>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/Atraco/light2.owl#userWorkspace">
+    <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#WorkSpace"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/Atraco/light2.owl#veryLow_move">
+    <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Move"/>
+    <p1:contrarySemantic rdf:resource="http://localhost:8080/Atraco/light2.owl#medium_semantic"/>
+    <p1:contrarySemantic rdf:resource="http://localhost:8080/Atraco/light2.owl#high_semantic"/>
+    <p1:contrarySemantic rdf:resource="http://localhost:8080/Atraco/light2.owl#LightsOff_semantic"/>
+    <p1:contrarySemantic rdf:resource="http://localhost:8080/Atraco/light2.owl#veryHigh_semantic"/>
+    <p1:contrarySemantic rdf:resource="http://localhost:8080/Atraco/light2.owl#low_semantic"/>
+    <p1:semantic rdf:resource="http://localhost:8080/Atraco/light2.owl#veryLow_semantic"/>
+    <p1:grammar rdf:resource="http://localhost:8080/Atraco/light2.owl#veryLow_grammar"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/Atraco/light2.owl#Lighting_off_agenda">
+    <p1:has rdf:resource="http://localhost:8080/Atraco/light2.owl#LightsOff_move"/>
+    <p1:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">80</p1:priority>
+    <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Agenda"/>
+    <p1:respawn rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</p1:respawn>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/Atraco/light2.owl#medium_semantic">
+    <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Semantic"/>
+    <p1:semanticString xml:lang="en">light_level;Medium</p1:semanticString>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/Atraco/light2.owl#low_grammar">
+    <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Grammar"/>
+    <p1:grammarString xml:lang="en">[(light low)(lights low)]</p1:grammarString>
+  </rdf:Description>
+</rdf:RDF>

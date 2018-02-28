@@ -1,0 +1,14 @@
+13.10.2011 14:51:22 Command: request 
+INFO: OK
+13.10.2011 14:52:15 Command: request 
+INFO: OK
+13.10.2011 14:52:21 Command: work 
+INFO: Agenda: question_agenda | Move: yesnoquestion_a1n1d_yes_move | Speak: null
+13.10.2011 14:52:30 Command: work 
+INFO: Agenda: question_agenda | Move: yesnoquestion_a1n1d_yes_move | Speak: null
+13.10.2011 14:53:07 Command: reset 
+INFO: OK
+13.10.2011 14:53:08 Command: request 
+INFO: OK
+13.10.2011 14:53:10 Command: request 
+INFO: OK

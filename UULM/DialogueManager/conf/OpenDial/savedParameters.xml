@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<parameters>
+<variable id="theta_gaussian2">
+<distrib type="gaussian">
+<mean>5.05</mean>
+<variance>1</variance>
+</distrib>
+</variable>
+<variable id="theta_gaussian3">
+<distrib type="gaussian">
+<mean>5.1</mean>
+<variance>1</variance>
+</distrib>
+</variable>
+<variable id="theta_gaussian0">
+<distrib type="gaussian">
+<mean>5</mean>
+<variance>1</variance>
+</distrib>
+</variable>
+<variable id="theta_gaussian1">
+<distrib type="gaussian">
+<mean>5.02</mean>
+<variance>1</variance>
+</distrib>
+</variable>
+<variable id="theta_Greet_German">
+<distrib type="gaussian">
+<mean>[0.122,0.1272,0.1308,0.1129,0.1209,0.1294,0.1227,0.1341]</mean>
+<variance>[2.0E-4,3.0E-4,2.0E-4,1.0E-4,2.0E-4,1.0E-4,3.0E-4,2.0E-4]</variance>
+</distrib>
+</variable>
+<variable id="theta_Greet_Turkish">
+<distrib type="gaussian">
+<mean>[0.1256,0.1259,0.1267,0.1246,0.1248,0.1248,0.1227,0.125]</mean>
+<variance>[2.0E-4,3.0E-4,3.0E-4,2.0E-4,3.0E-4,3.0E-4,2.0E-4,3.0E-4]</variance>
+</distrib>
+</variable>
+<variable id="theta_SayGoodbye_Turkish">
+<distrib type="gaussian">
+<mean>[0.2482,0.2525,0.2503,0.249]</mean>
+<variance>[0.001,9.0E-4,0.0012,0.001]</variance>
+</distrib>
+</variable>
+<variable id="theta_SayGoodbye_German">
+<distrib type="gaussian">
+<mean>[0.254,0.2493,0.2548,0.2419]</mean>
+<variance>[6.0E-4,0.001,9.0E-4,9.0E-4]</variance>
+</distrib>
+</variable>
+<variable id="theta_Greet_Spanish">
+<distrib type="gaussian">
+<mean>[0.1254,0.1245,0.1262,0.1257,0.1253,0.1246,0.1224,0.1259]</mean>
+<variance>[3.0E-4,2.0E-4,3.0E-4,3.0E-4,2.0E-4,3.0E-4,2.0E-4,3.0E-4]</variance>
+</distrib>
+</variable>
+<variable id="theta_SayGoodbye_Polish">
+<distrib type="dirichlet">
+<alpha>50.0</alpha>
+<alpha>50.0</alpha>
+<alpha>50.0</alpha>
+<alpha>50.0</alpha>
+</distrib>
+</variable>
+<variable id="theta_SayGoodbye_Spanish">
+<distrib type="gaussian">
+<mean>[0.2499,0.2526,0.2492,0.2483]</mean>
+<variance>[0.001,0.001,0.001,9.0E-4]</variance>
+</distrib>
+</variable>
+<variable id="theta_Greet_Polish">
+<distrib type="gaussian">
+<mean>[0.1275,0.1257,0.1224,0.1266,0.1218,0.1252,0.1247,0.1259]</mean>
+<variance>[3.0E-4,2.0E-4,2.0E-4,3.0E-4,2.0E-4,2.0E-4,3.0E-4,2.0E-4]</variance>
+</distrib>
+</variable>
+</parameters>

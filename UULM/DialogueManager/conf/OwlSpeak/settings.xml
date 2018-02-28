@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE name SYSTEM "http://localhost:8080/settings.dtd">
+
+<owlSetting>
+  <!--The platform that is used to run the SDM [voxeo|tellme] -->
+  <platform>voxeo</platform>
+  <!--Main URL where the root ontology can be found (0=off,1=on) -->
+  <URI>http://localhost:8083/OwlSpeakOnto.owl</URI>
+  <!--Home directory-->
+  <HomePath>./conf/OwlSpeak/</HomePath>
+  <!--plugins-->
+  <plugin>3</plugin>
+  <!--Youpi UPNP Wrapper switch (0=off,1=on) -->
+  <Youpi>0</Youpi>
+  <!--Youpi UPNP Wrapper switch (0=off,1=on) -->
+  <YoupiPath>./conf/OwlSpeak/device.xml</YoupiPath>
+  <!--Youpi ID (long value) -->
+  <YoupiID>66612341</YoupiID>
+  <!--Youpi UPNP Wrapper switch (0=off,1=on) -->
+  <YoupiFriendlyName>SDM Study</YoupiFriendlyName>
+  <!-- Used to set the Controller to different Agenda-Priority calculation modes -->
+  <MatchAgenda>0</MatchAgenda>
+  <!-- Factor used for the dynamic Agenda-Priority calculation -->
+  <PrioFactor>10</PrioFactor>
+  <!-- Duration of Loop -->
+  <LoopDuration>7</LoopDuration>
+  <!-- Maxspeechtimeout -->
+  <MaxSpeechTimeout>10</MaxSpeechTimeout>
+  <!-- Speaking rate -->
+  <speakRate>+0%</speakRate>
+  <ttsCodes>
+    <tts id="1">en-gb</tts>
+    <tts id="2">en-us</tts>
+    <tts id="3">de-de</tts>
+  </ttsCodes>
+  <ttsMode>1</ttsMode>
+  <asrCodes>
+    <asr id="1">en-gb</asr>
+    <asr id="2">en-us</asr>
+    <asr id="3">de-de</asr>
+  </asrCodes>
+  <asrMode>1</asrMode>
+  <deriveQuality>1</deriveQuality>
+  <dbLogging>0</dbLogging>
+  <callRecording>0</callRecording>
+  <kristina>1</kristina>
+  <idaco>0</idaco>
+  <demo>1</demo>
+  <maxNBestListEntries>3</maxNBestListEntries>
+  <SysCommands>
+    <Command name="reset" />
+    <!--to activate set corresponding Agenda in System.owl to respawn=true/-->
+    <!--Command name="reduce" /-->
+    <Command name="reloadSettings" />
+  </SysCommands>
+  
+  <!-- select type of HISvariant (systemStateVariant 1):
+		0: Semantics
+		1: Variables
+	-->
+	
+  <!--  select type of policy variant:
+  		0: heuristic policy (default)
+  		1: trained policy 
+  -->
+  
+  <!--  select type of system state variant:
+  		0: single system state (default)
+  		1: distribution over all system states (HIS)
+  -->
+  <Files>
+    <!-- <ontoFile name="system" path="./conf/OwlSpeak/" file="System.owl">The System's main Ontology</ontoFile> -->             <!-- Passende Zeile auskommentieren, wenn Ontologie kaputt -->
+	<!-- <ontoFile name="travel" path="./conf/OwlSpeak/JAISE/" file="travel.var.jaise.owl" HISvariant="1" policyVariant="0" systemStateVariant="0">Travel JAISE</ontoFile> -->
+	<!-- <ontoFile name="heating" path="./conf/OwlSpeak/JAISE\" file="heating.jaise.owl" HISvariant="1" policyVariant="0" systemStateVariant="0">Heating JAISE</ontoFile> -->
+	<!-- <ontoFile name="lgus" path="./conf/OwlSpeak/" file="letsGoUs.owl" HISvariant="1" policyVariant="4" systemStateVariant="1">Lets Go User Simulator</ontoFile> -->
+	<!-- <ontoFile name="camRestInfo" path="./conf/OwlSpeak/" file="camRestInfo.owl" HISvariant="1" policyVariant="0" systemStateVariant="0">camRestInfo</ontoFile> -->
+  	<ontoFile name="kristina" path="./conf/OwlSpeak/" file="kristina.owl" HISvariant="1" policyVariant="6" systemStateVariant="0">kristina</ontoFile>
+  </Files>
+  
+  <Users>
+      <!-- select type of voice document:
+		1: VoiceDocument - regular vxml doc
+		2: HtmlVoiceDocument - html browsing
+		4: HtmlSaltDocument
+		5: EnhancedVoiceDocument
+		6: VoiceDocumentHIS - HIS implementation with n-best-list etc.
+		7: VoiceDocumentPOMDP - slot mechanism with n-best-list etc.
+		8: KristinaDocument
+		10: User Simulation
+	-->
+	
+	<!-- select type of grammar (docType 1,5,6,7):
+		1: Nuance GSL
+		2: GrXML
+		3: JSGF
+		4: JSGF as file
+	-->
+	
+	<User name="user" docType="2" grammarType="3" sleep="0" AutoSave="1">            <!-- Passende Zeile auskommentieren, wenn Ontologie kaputt -->
+	  <Useronto status="enabled" name="idaco">Userontology</Useronto>	
+	  <!-- <Useronto status="enabled" name="camRestInfo">Userontology</Useronto> --> 
+    </User>
+	<User name="elisabeth" docType="8" grammarType="3" sleep="0" AutoSave="1">
+	  <Useronto status="enabled" name="kristina">Userontology</Useronto>
+    </User>
+	<User name="hans" docType="8" grammarType="3" sleep="0" AutoSave="1">
+	  <Useronto status="enabled" name="kristina">Userontology</Useronto>
+    </User>
+	<User name="iwona" docType="8" grammarType="3" sleep="0" AutoSave="1">
+	  <Useronto status="enabled" name="kristina">Userontology</Useronto>
+    </User>
+	<User name="maria" docType="8" grammarType="3" sleep="0" AutoSave="1">
+	  <Useronto status="enabled" name="kristina">Userontology</Useronto>
+    </User>
+	<User name="juan" docType="8" grammarType="3" sleep="0" AutoSave="1">
+	  <Useronto status="enabled" name="kristina">Userontology</Useronto>
+    </User>
+	<User name="claudia" docType="8" grammarType="3" sleep="0" AutoSave="1">
+	  <Useronto status="enabled" name="kristina">Userontology</Useronto>
+    </User>
+	<User name="jana" docType="8" grammarType="3" sleep="0" AutoSave="1">
+	  <Useronto status="enabled" name="kristina">Userontology</Useronto>
+    </User>
+	<User name="mustafa" docType="8" grammarType="3" sleep="0" AutoSave="1">
+	  <Useronto status="enabled" name="kristina">Userontology</Useronto>
+    </User>
+	<User name="carmen" docType="8" grammarType="3" sleep="0" AutoSave="1">
+	  <Useronto status="enabled" name="kristina">Userontology</Useronto>
+    </User>
+    <User name="carlos" docType="8" grammarType="3" sleep="0" AutoSave="1">
+	  <Useronto status="enabled" name="kristina">Userontology</Useronto>
+    </User>
+  </Users>
+</owlSetting>

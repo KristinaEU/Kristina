@@ -1,0 +1,89 @@
+{
+	"scenario_0": {
+		"constraints": {
+			"Newspaper_Title": ["Hochleistungsscheinwerfer Gefahr im Verkehr","Baufirma soll eine Lehrrohr-Trasse für Stromkabel bis zum Tunnel am Baggersee verlegen","Das Entringer Freibad öffnete am Sonntag erstmals für einen Hundeschwimmtag","Kabinett erschwert EU-Bürgern Zugang zur Sozialhilfe"],
+			"Assessment": ["Like","Dislike","Boring","Interesting"]
+		},
+		"requests": {
+			"RequestNewspaper":[]
+		}
+	},
+	"scenario_1": {
+		"constraints": {
+		
+		},
+		"requests": {
+			"Request":["News","Social_Media","Discussion","Webpage"]
+		}
+	},
+	"scenario_2": {
+		"constraints": {
+			"Temperature": ["Warm","Hot","Cold"],
+			"Weather": ["Temperature","Sun","Rain"],
+			"Motivation": ["Walk","Swim","Outside"]
+		},
+		"requests": {
+			"RequestWeather":[]
+		}
+	},
+	"scenario_3": {
+		"constraints": {
+			"Location": ["City"],
+			"Date": ["Today","Tommorrow"],
+			"Time": ["Morning","Afternoon","Evening"]
+		},
+		"requests": {
+			"Request": ["Location","Event","Date","Time","Webpage"]
+		}
+	},
+	"scenario_4": {
+		"constraints": {
+			"Name": ["Stefan"]
+		},
+		"requests": {
+			"Request": ["Sleeping_Habits","Duration","Interruptions","Hint","Tip","Time","Go_Bed","Awake","Assistance","Help","Drink","Watch_TV","Listen_Music","Toilet","Game"]
+		}
+	},
+	"scenario_5": {
+		"constraints": {
+			"Name": ["Stefan"]
+		},
+		"requests": {
+			"Request": ["Eating_Habits","Like","Dislike","Recipe","Meat","Diet","Allergy","Alcohol","Eat","Drink"]
+		}
+	},
+	"scenario_6": {
+		"constraints": {
+			
+		},
+		"requests": {
+			"Request": ["Tip","Hint","Help","Sleep","Hygiene","Webpage"]
+		}
+	},
+	"scenario_7": {
+		"constraints": {
+		
+		},
+		"requests": {
+			"Request": ["Information","Dementia","Webpage","Indication","Symptom","Therapy","Differences","Communication","Tip","Hint"]
+		}
+	},
+	"scenario_8": {
+		"constraints": {
+		
+		},
+		"requests": {
+			"Request": ["Dementia","Communication","Tip","Hint","Advice"]
+		}
+	},
+	"scenario_9": {
+		"constraints": {
+			
+		},
+		"requests": {
+			"Request": ["Recipe","Diabetes","Nutritional_Advice","Nutrition","Advice","Tip","Hint"]
+		}
+	}
+}
+			
+		

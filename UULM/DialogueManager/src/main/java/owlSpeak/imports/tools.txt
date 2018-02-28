@@ -1,0 +1,18 @@
+(Skalpell | Messer)
+(Backhaus[er] | Klemme)
+(Veress[nadel] | Nadel)
+(Trokar | 5 Millimeter)
+(Optik | Teleskop)
+(Probier[nadel] | Kanuele)
+Taststab
+Fasszange
+PE[Zange]
+Clip
+[Lexer]Schere
+Bergebeutel
+Pean[klemme]
+(Kompresse | Umlage)
+(Alice[klemme] | Elise)
+Saugspuel[Einheit]
+(Handsauger | Elefantenfuss)
+[Robinson]Drainage

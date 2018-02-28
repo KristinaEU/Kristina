@@ -1,0 +1,2696 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="c:/OwlSpeak/empty.owl#"
+     xml:base="c:/OwlSpeak/empty.owl"
+     xmlns:p1="http://localhost:8080/OwlSpeakOnto.owl#"
+     xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:OwlSpeakOnto="http://localhost:8083/OwlSpeakOnto.owl#">
+    <owl:Ontology rdf:about="c:/OwlSpeak/empty.owl">
+        <owl:imports rdf:resource="http://localhost:8080/OwlSpeakOnto.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://localhost:8083/OwlSpeakOnto.owl#belongsToSemantic -->
+
+    <owl:ObjectProperty rdf:about="http://localhost:8083/OwlSpeakOnto.owl#belongsToSemantic"/>
+    
+
+
+    <!-- http://localhost:8083/OwlSpeakOnto.owl#children -->
+
+    <owl:ObjectProperty rdf:about="http://localhost:8083/OwlSpeakOnto.owl#children"/>
+    
+
+
+    <!-- http://localhost:8083/OwlSpeakOnto.owl#containsSemantics -->
+
+    <owl:ObjectProperty rdf:about="http://localhost:8083/OwlSpeakOnto.owl#containsSemantics"/>
+    
+
+
+    <!-- http://localhost:8083/OwlSpeakOnto.owl#contrarySemantic -->
+
+    <owl:ObjectProperty rdf:about="http://localhost:8083/OwlSpeakOnto.owl#contrarySemantic"/>
+    
+
+
+    <!-- http://localhost:8083/OwlSpeakOnto.owl#excludesBelief -->
+
+    <owl:ObjectProperty rdf:about="http://localhost:8083/OwlSpeakOnto.owl#excludesBelief"/>
+    
+
+
+    <!-- http://localhost:8083/OwlSpeakOnto.owl#forAgenda -->
+
+    <owl:ObjectProperty rdf:about="http://localhost:8083/OwlSpeakOnto.owl#forAgenda"/>
+    
+
+
+    <!-- http://localhost:8083/OwlSpeakOnto.owl#grammar -->
+
+    <owl:ObjectProperty rdf:about="http://localhost:8083/OwlSpeakOnto.owl#grammar"/>
+    
+
+
+    <!-- http://localhost:8083/OwlSpeakOnto.owl#has -->
+
+    <owl:ObjectProperty rdf:about="http://localhost:8083/OwlSpeakOnto.owl#has"/>
+    
+
+
+    <!-- http://localhost:8083/OwlSpeakOnto.owl#hasBelief -->
+
+    <owl:ObjectProperty rdf:about="http://localhost:8083/OwlSpeakOnto.owl#hasBelief"/>
+    
+
+
+    <!-- http://localhost:8083/OwlSpeakOnto.owl#hasVariable -->
+
+    <owl:ObjectProperty rdf:about="http://localhost:8083/OwlSpeakOnto.owl#hasVariable"/>
+    
+
+
+    <!-- http://localhost:8083/OwlSpeakOnto.owl#inWorkspace -->
+
+    <owl:ObjectProperty rdf:about="http://localhost:8083/OwlSpeakOnto.owl#inWorkspace"/>
+    
+
+
+    <!-- http://localhost:8083/OwlSpeakOnto.owl#lastGrammarMove -->
+
+    <owl:ObjectProperty rdf:about="http://localhost:8083/OwlSpeakOnto.owl#lastGrammarMove"/>
+    
+
+
+    <!-- http://localhost:8083/OwlSpeakOnto.owl#mustnot -->
+
+    <owl:ObjectProperty rdf:about="http://localhost:8083/OwlSpeakOnto.owl#mustnot"/>
+    
+
+
+    <!-- http://localhost:8083/OwlSpeakOnto.owl#next -->
+
+    <owl:ObjectProperty rdf:about="http://localhost:8083/OwlSpeakOnto.owl#next"/>
+    
+
+
+    <!-- http://localhost:8083/OwlSpeakOnto.owl#parent -->
+
+    <owl:ObjectProperty rdf:about="http://localhost:8083/OwlSpeakOnto.owl#parent"/>
+    
+
+
+    <!-- http://localhost:8083/OwlSpeakOnto.owl#requires -->
+
+    <owl:ObjectProperty rdf:about="http://localhost:8083/OwlSpeakOnto.owl#requires"/>
+    
+
+
+    <!-- http://localhost:8083/OwlSpeakOnto.owl#semantic -->
+
+    <owl:ObjectProperty rdf:about="http://localhost:8083/OwlSpeakOnto.owl#semantic"/>
+    
+
+
+    <!-- http://localhost:8083/OwlSpeakOnto.owl#semanticGroup -->
+
+    <owl:ObjectProperty rdf:about="http://localhost:8083/OwlSpeakOnto.owl#semanticGroup"/>
+    
+
+
+    <!-- http://localhost:8083/OwlSpeakOnto.owl#summarizesAgendas -->
+
+    <owl:ObjectProperty rdf:about="http://localhost:8083/OwlSpeakOnto.owl#summarizesAgendas"/>
+    
+
+
+    <!-- http://localhost:8083/OwlSpeakOnto.owl#summaryAgenda -->
+
+    <owl:ObjectProperty rdf:about="http://localhost:8083/OwlSpeakOnto.owl#summaryAgenda"/>
+    
+
+
+    <!-- http://localhost:8083/OwlSpeakOnto.owl#summaryBeliefAgenda -->
+
+    <owl:ObjectProperty rdf:about="http://localhost:8083/OwlSpeakOnto.owl#summaryBeliefAgenda"/>
+    
+
+
+    <!-- http://localhost:8083/OwlSpeakOnto.owl#utterance -->
+
+    <owl:ObjectProperty rdf:about="http://localhost:8083/OwlSpeakOnto.owl#utterance"/>
+    
+
+
+    <!-- http://localhost:8083/OwlSpeakOnto.owl#variabledefault -->
+
+    <owl:ObjectProperty rdf:about="http://localhost:8083/OwlSpeakOnto.owl#variabledefault"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://localhost:8083/OwlSpeakOnto.owl#addTime -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost:8083/OwlSpeakOnto.owl#addTime"/>
+    
+
+
+    <!-- http://localhost:8083/OwlSpeakOnto.owl#agendaPriority -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost:8083/OwlSpeakOnto.owl#agendaPriority"/>
+    
+
+
+    <!-- http://localhost:8083/OwlSpeakOnto.owl#beliefValue -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost:8083/OwlSpeakOnto.owl#beliefValue"/>
+    
+
+
+    <!-- http://localhost:8083/OwlSpeakOnto.owl#confirmationInfo -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost:8083/OwlSpeakOnto.owl#confirmationInfo"/>
+    
+
+
+    <!-- http://localhost:8083/OwlSpeakOnto.owl#extractFieldValuesFromInput -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost:8083/OwlSpeakOnto.owl#extractFieldValuesFromInput"/>
+    
+
+
+    <!-- http://localhost:8083/OwlSpeakOnto.owl#fieldTotals -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost:8083/OwlSpeakOnto.owl#fieldTotals"/>
+    
+
+
+    <!-- http://localhost:8083/OwlSpeakOnto.owl#historyState -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost:8083/OwlSpeakOnto.owl#historyState"/>
+    
+
+
+    <!-- http://localhost:8083/OwlSpeakOnto.owl#isMasterBool -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost:8083/OwlSpeakOnto.owl#isMasterBool"/>
+    
+
+
+    <!-- http://localhost:8083/OwlSpeakOnto.owl#lastInteractionQuality -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost:8083/OwlSpeakOnto.owl#lastInteractionQuality"/>
+    
+
+
+    <!-- http://localhost:8083/OwlSpeakOnto.owl#partitionNumFields -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost:8083/OwlSpeakOnto.owl#partitionNumFields"/>
+    
+
+
+    <!-- http://localhost:8083/OwlSpeakOnto.owl#partitionState -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost:8083/OwlSpeakOnto.owl#partitionState"/>
+    
+
+
+    <!-- http://localhost:8083/OwlSpeakOnto.owl#prior -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost:8083/OwlSpeakOnto.owl#prior"/>
+    
+
+
+    <!-- http://localhost:8083/OwlSpeakOnto.owl#procTime -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost:8083/OwlSpeakOnto.owl#procTime"/>
+    
+
+
+    <!-- http://localhost:8083/OwlSpeakOnto.owl#rewardValue -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost:8083/OwlSpeakOnto.owl#rewardValue"/>
+    
+
+
+    <!-- http://localhost:8083/OwlSpeakOnto.owl#role -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost:8083/OwlSpeakOnto.owl#role"/>
+    
+
+
+    <!-- http://localhost:8083/OwlSpeakOnto.owl#secondTopBeliefValue -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost:8083/OwlSpeakOnto.owl#secondTopBeliefValue"/>
+    
+
+
+    <!-- http://localhost:8083/OwlSpeakOnto.owl#specialReward -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost:8083/OwlSpeakOnto.owl#specialReward"/>
+    
+
+
+    <!-- http://localhost:8083/OwlSpeakOnto.owl#summaryAgendaType -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost:8083/OwlSpeakOnto.owl#summaryAgendaType"/>
+    
+
+
+    <!-- http://localhost:8083/OwlSpeakOnto.owl#topBeliefValue -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost:8083/OwlSpeakOnto.owl#topBeliefValue"/>
+    
+
+
+    <!-- http://localhost:8083/OwlSpeakOnto.owl#utteranceString -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost:8083/OwlSpeakOnto.owl#utteranceString"/>
+    
+
+
+    <!-- http://localhost:8083/OwlSpeakOnto.owl#variableOperator -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost:8083/OwlSpeakOnto.owl#variableOperator"/>
+    
+
+
+    <!-- http://localhost:8083/OwlSpeakOnto.owl#variableValue -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost:8083/OwlSpeakOnto.owl#variableValue"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://localhost:8083/OwlSpeakOnto.owl#Agenda -->
+
+    <owl:Class rdf:about="http://localhost:8083/OwlSpeakOnto.owl#Agenda"/>
+    
+
+
+    <!-- http://localhost:8083/OwlSpeakOnto.owl#Belief -->
+
+    <owl:Class rdf:about="http://localhost:8083/OwlSpeakOnto.owl#Belief"/>
+    
+
+
+    <!-- http://localhost:8083/OwlSpeakOnto.owl#BeliefSpace -->
+
+    <owl:Class rdf:about="http://localhost:8083/OwlSpeakOnto.owl#BeliefSpace"/>
+    
+
+
+    <!-- http://localhost:8083/OwlSpeakOnto.owl#Grammar -->
+
+    <owl:Class rdf:about="http://localhost:8083/OwlSpeakOnto.owl#Grammar"/>
+    
+
+
+    <!-- http://localhost:8083/OwlSpeakOnto.owl#History -->
+
+    <owl:Class rdf:about="http://localhost:8083/OwlSpeakOnto.owl#History"/>
+    
+
+
+    <!-- http://localhost:8083/OwlSpeakOnto.owl#Move -->
+
+    <owl:Class rdf:about="http://localhost:8083/OwlSpeakOnto.owl#Move"/>
+    
+
+
+    <!-- http://localhost:8083/OwlSpeakOnto.owl#Reward -->
+
+    <owl:Class rdf:about="http://localhost:8083/OwlSpeakOnto.owl#Reward"/>
+    
+
+
+    <!-- http://localhost:8083/OwlSpeakOnto.owl#Semantic -->
+
+    <owl:Class rdf:about="http://localhost:8083/OwlSpeakOnto.owl#Semantic"/>
+    
+
+
+    <!-- http://localhost:8083/OwlSpeakOnto.owl#SemanticGroup -->
+
+    <owl:Class rdf:about="http://localhost:8083/OwlSpeakOnto.owl#SemanticGroup"/>
+    
+
+
+    <!-- http://localhost:8083/OwlSpeakOnto.owl#SummaryAgenda -->
+
+    <owl:Class rdf:about="http://localhost:8083/OwlSpeakOnto.owl#SummaryAgenda"/>
+    
+
+
+    <!-- http://localhost:8083/OwlSpeakOnto.owl#SummaryBelief -->
+
+    <owl:Class rdf:about="http://localhost:8083/OwlSpeakOnto.owl#SummaryBelief"/>
+    
+
+
+    <!-- http://localhost:8083/OwlSpeakOnto.owl#Utterance -->
+
+    <owl:Class rdf:about="http://localhost:8083/OwlSpeakOnto.owl#Utterance"/>
+    
+
+
+    <!-- http://localhost:8083/OwlSpeakOnto.owl#Variable -->
+
+    <owl:Class rdf:about="http://localhost:8083/OwlSpeakOnto.owl#Variable"/>
+    
+
+
+    <!-- http://localhost:8083/OwlSpeakOnto.owl#WorkSpace -->
+
+    <owl:Class rdf:about="http://localhost:8083/OwlSpeakOnto.owl#WorkSpace"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#Bus_route_agenda -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#Bus_route_agenda">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#Agenda"/>
+        <OwlSpeakOnto:role rdf:datatype="http://www.w3.org/2001/XMLSchema#string">collection</OwlSpeakOnto:role>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Bus_route_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Bus_route_sem"/>
+        <OwlSpeakOnto:summaryAgenda rdf:resource="c:/OwlSpeak/empty.owl#RequestSystemInitiative_Bus_route_SumAgenda"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#external_busnumber_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#sysmov_Request_Bus_number"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#Bus_route_sem -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#Bus_route_sem">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#SemanticGroup"/>
+        <OwlSpeakOnto:fieldTotals rdf:datatype="http://www.w3.org/2001/XMLSchema#int">100</OwlSpeakOnto:fieldTotals>
+        <OwlSpeakOnto:hasVariable rdf:resource="c:/OwlSpeak/empty.owl#Bus_route_var"/>
+        <OwlSpeakOnto:containsSemantics rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Bus_route_sem"/>
+        <OwlSpeakOnto:containsSemantics rdf:resource="c:/OwlSpeak/empty.owl#Reject_Bus_route_sem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#Bus_route_var -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#Bus_route_var">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#Variable"/>
+        <OwlSpeakOnto:belongsToSemantic rdf:resource="c:/OwlSpeak/empty.owl#Bus_route_sem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#Confirm_Bus_route_Agenda -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#Confirm_Bus_route_Agenda">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#Agenda"/>
+        <OwlSpeakOnto:role rdf:datatype="http://www.w3.org/2001/XMLSchema#string">confirmation</OwlSpeakOnto:role>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Bus_route_sem"/>
+        <OwlSpeakOnto:summaryAgenda rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Bus_route_SummaryAgenda"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Bus_route_sem"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#sysmov_Confirm_Bus_number"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#usermov_affirm_bus_number"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#usermov_deny_bus_number"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#Confirm_Bus_route_SummaryAgenda -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#Confirm_Bus_route_SummaryAgenda">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#SummaryAgenda"/>
+        <OwlSpeakOnto:summaryAgendaType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">confirmation</OwlSpeakOnto:summaryAgendaType>
+        <OwlSpeakOnto:role rdf:datatype="http://www.w3.org/2001/XMLSchema#string">confirmation</OwlSpeakOnto:role>
+        <OwlSpeakOnto:summarizesAgendas rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Bus_route_Agenda"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#Confirm_Bus_route_sem -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#Confirm_Bus_route_sem">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#Semantic"/>
+        <OwlSpeakOnto:confirmationInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">confirmation</OwlSpeakOnto:confirmationInfo>
+        <OwlSpeakOnto:semanticGroup rdf:resource="c:/OwlSpeak/empty.owl#Bus_route_sem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#Confirm_Departure_place_Agenda -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#Confirm_Departure_place_Agenda">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#Agenda"/>
+        <OwlSpeakOnto:role rdf:datatype="http://www.w3.org/2001/XMLSchema#string">confirmation</OwlSpeakOnto:role>
+        <OwlSpeakOnto:summaryAgenda rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Departure_place_SummaryAgenda"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Departure_place_sem"/>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Departure_place_sem"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#sysmov_Confirm_Departure_place"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#usermov_affirm_departure_place"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#usermov_deny_departure_place"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#Confirm_Departure_place_SummaryAgenda -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#Confirm_Departure_place_SummaryAgenda">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#SummaryAgenda"/>
+        <OwlSpeakOnto:summaryAgendaType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">confirmation</OwlSpeakOnto:summaryAgendaType>
+        <OwlSpeakOnto:role rdf:datatype="http://www.w3.org/2001/XMLSchema#string">confirmation</OwlSpeakOnto:role>
+        <OwlSpeakOnto:summarizesAgendas rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Departure_place_Agenda"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#Confirm_Departure_place_sem -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#Confirm_Departure_place_sem">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#Semantic"/>
+        <OwlSpeakOnto:confirmationInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">confirmation</OwlSpeakOnto:confirmationInfo>
+        <OwlSpeakOnto:semanticGroup rdf:resource="c:/OwlSpeak/empty.owl#Departure_place_sem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#Confirm_Destination_Agenda -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#Confirm_Destination_Agenda">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#Agenda"/>
+        <OwlSpeakOnto:role rdf:datatype="http://www.w3.org/2001/XMLSchema#string">confirmation</OwlSpeakOnto:role>
+        <OwlSpeakOnto:summaryAgenda rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Destination_SummaryAgenda"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Destination_sem"/>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Destination_sem"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#sysmov_Confirm_Arrival_place"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#usermov_affirm_arrival_place"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#usermov_deny_arrival_place"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#Confirm_Destination_SummaryAgenda -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#Confirm_Destination_SummaryAgenda">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#SummaryAgenda"/>
+        <OwlSpeakOnto:role rdf:datatype="http://www.w3.org/2001/XMLSchema#string">confirmation</OwlSpeakOnto:role>
+        <OwlSpeakOnto:summaryAgendaType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">confirmation</OwlSpeakOnto:summaryAgendaType>
+        <OwlSpeakOnto:summarizesAgendas rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Destination_Agenda"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#Confirm_Destination_sem -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#Confirm_Destination_sem">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#Semantic"/>
+        <OwlSpeakOnto:confirmationInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">confirmation</OwlSpeakOnto:confirmationInfo>
+        <OwlSpeakOnto:semanticGroup rdf:resource="c:/OwlSpeak/empty.owl#Destination_sem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#Confirm_Time_Agenda -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#Confirm_Time_Agenda">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#Agenda"/>
+        <OwlSpeakOnto:role rdf:datatype="http://www.w3.org/2001/XMLSchema#string">confirmation</OwlSpeakOnto:role>
+        <OwlSpeakOnto:summaryAgenda rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Time_SummaryAgenda"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Time_sem"/>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Time_sem"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#sysmov_Confirm_Travel_time"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#usermov_affirm_travel_time"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#usermov_deny_travel_time"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#Confirm_Time_SummaryAgenda -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#Confirm_Time_SummaryAgenda">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#SummaryAgenda"/>
+        <OwlSpeakOnto:role rdf:datatype="http://www.w3.org/2001/XMLSchema#string">confirmation</OwlSpeakOnto:role>
+        <OwlSpeakOnto:summaryAgendaType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">confirmation</OwlSpeakOnto:summaryAgendaType>
+        <OwlSpeakOnto:summarizesAgendas rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Time_Agenda"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#Confirm_Time_sem -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#Confirm_Time_sem">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#Semantic"/>
+        <OwlSpeakOnto:confirmationInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">confirmation</OwlSpeakOnto:confirmationInfo>
+        <OwlSpeakOnto:semanticGroup rdf:resource="c:/OwlSpeak/empty.owl#Time_sem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#Departure_place_agenda -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#Departure_place_agenda">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#Agenda"/>
+        <OwlSpeakOnto:role rdf:datatype="http://www.w3.org/2001/XMLSchema#string">collection</OwlSpeakOnto:role>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Departure_place_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Departure_place_sem"/>
+        <OwlSpeakOnto:summaryAgenda rdf:resource="c:/OwlSpeak/empty.owl#RequestSystemInitiative_Departure_place_SumAgenda"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#external_depplace_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#sysmov_Request_Departure_place"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#Departure_place_sem -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#Departure_place_sem">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#SemanticGroup"/>
+        <OwlSpeakOnto:fieldTotals rdf:datatype="http://www.w3.org/2001/XMLSchema#int">100</OwlSpeakOnto:fieldTotals>
+        <OwlSpeakOnto:containsSemantics rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Departure_place_sem"/>
+        <OwlSpeakOnto:hasVariable rdf:resource="c:/OwlSpeak/empty.owl#Departure_place_var"/>
+        <OwlSpeakOnto:containsSemantics rdf:resource="c:/OwlSpeak/empty.owl#Reject_Departure_place_sem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#Departure_place_var -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#Departure_place_var">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#Variable"/>
+        <OwlSpeakOnto:belongsToSemantic rdf:resource="c:/OwlSpeak/empty.owl#Departure_place_sem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#DepplaceAll_agenda -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#DepplaceAll_agenda">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#Agenda"/>
+        <OwlSpeakOnto:role rdf:datatype="http://www.w3.org/2001/XMLSchema#string">collection</OwlSpeakOnto:role>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Bus_route_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Bus_route_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Departure_place_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Destination_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Time_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Departure_place_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Destination_sem"/>
+        <OwlSpeakOnto:summaryAgenda rdf:resource="c:/OwlSpeak/empty.owl#RequestMixedInitiative_Depplace_SumAgenda"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Time_sem"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#external_busnumber_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#external_depplace_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#external_destination_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#external_time_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#multi_slot2a_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#multi_slot2b_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#multi_slot2c_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#multi_slot2d_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#multi_slot2e_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#multi_slot2f_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#multi_slot3b_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#multi_slot3c_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#multi_slot3d_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#multi_slot4_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#sysmov_Request_Departure_place"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#Depplace_withoutBusDest_agenda -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#Depplace_withoutBusDest_agenda">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#Agenda"/>
+        <OwlSpeakOnto:role rdf:datatype="http://www.w3.org/2001/XMLSchema#string">collection</OwlSpeakOnto:role>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Bus_route_sem"/>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Bus_route_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Departure_place_sem"/>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Destination_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Time_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Departure_place_sem"/>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Destination_sem"/>
+        <OwlSpeakOnto:summaryAgenda rdf:resource="c:/OwlSpeak/empty.owl#RequestMixedInitiative_Depplace_SumAgenda"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Time_sem"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#external_depplace_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#external_time_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#multi_slot2e_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#sysmov_Request_Departure_place"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#Depplace_withoutBusTimeDest_agenda -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#Depplace_withoutBusTimeDest_agenda">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#Agenda"/>
+        <OwlSpeakOnto:role rdf:datatype="http://www.w3.org/2001/XMLSchema#string">collection</OwlSpeakOnto:role>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Bus_route_sem"/>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Bus_route_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Departure_place_sem"/>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Destination_sem"/>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Time_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Departure_place_sem"/>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Destination_sem"/>
+        <OwlSpeakOnto:summaryAgenda rdf:resource="c:/OwlSpeak/empty.owl#RequestMixedInitiative_Depplace_SumAgenda"/>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Time_sem"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#external_depplace_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#sysmov_Request_Departure_place"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#Depplace_withoutBusTime_agenda -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#Depplace_withoutBusTime_agenda">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#Agenda"/>
+        <OwlSpeakOnto:role rdf:datatype="http://www.w3.org/2001/XMLSchema#string">collection</OwlSpeakOnto:role>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Bus_route_sem"/>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Bus_route_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Departure_place_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Destination_sem"/>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Time_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Departure_place_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Destination_sem"/>
+        <OwlSpeakOnto:summaryAgenda rdf:resource="c:/OwlSpeak/empty.owl#RequestMixedInitiative_Depplace_SumAgenda"/>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Time_sem"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#external_depplace_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#external_destination_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#multi_slot2b_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#sysmov_Request_Departure_place"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#Depplace_withoutBus_agenda -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#Depplace_withoutBus_agenda">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#Agenda"/>
+        <OwlSpeakOnto:role rdf:datatype="http://www.w3.org/2001/XMLSchema#string">collection</OwlSpeakOnto:role>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Bus_route_sem"/>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Bus_route_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Departure_place_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Destination_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Time_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Departure_place_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Destination_sem"/>
+        <OwlSpeakOnto:summaryAgenda rdf:resource="c:/OwlSpeak/empty.owl#RequestMixedInitiative_Depplace_SumAgenda"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Time_sem"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#external_depplace_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#external_destination_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#external_time_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#multi_slot2b_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#multi_slot2c_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#multi_slot2e_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#multi_slot3b_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#sysmov_Request_Departure_place"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#Depplace_withoutDest_agenda -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#Depplace_withoutDest_agenda">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#Agenda"/>
+        <OwlSpeakOnto:role rdf:datatype="http://www.w3.org/2001/XMLSchema#string">collection</OwlSpeakOnto:role>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Bus_route_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Bus_route_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Departure_place_sem"/>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Destination_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Time_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Departure_place_sem"/>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Destination_sem"/>
+        <OwlSpeakOnto:summaryAgenda rdf:resource="c:/OwlSpeak/empty.owl#RequestMixedInitiative_Depplace_SumAgenda"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Time_sem"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#external_busnumber_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#external_depplace_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#external_time_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#multi_slot2a_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#multi_slot2e_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#multi_slot2f_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#multi_slot3c_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#sysmov_Request_Departure_place"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#Depplace_withoutTimeDest_agenda -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#Depplace_withoutTimeDest_agenda">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#Agenda"/>
+        <OwlSpeakOnto:role rdf:datatype="http://www.w3.org/2001/XMLSchema#string">collection</OwlSpeakOnto:role>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Bus_route_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Bus_route_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Departure_place_sem"/>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Destination_sem"/>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Time_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Departure_place_sem"/>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Destination_sem"/>
+        <OwlSpeakOnto:summaryAgenda rdf:resource="c:/OwlSpeak/empty.owl#RequestMixedInitiative_Depplace_SumAgenda"/>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Time_sem"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#external_busnumber_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#external_depplace_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#multi_slot2a_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#sysmov_Request_Departure_place"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#Depplace_withoutTime_agenda -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#Depplace_withoutTime_agenda">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#Agenda"/>
+        <OwlSpeakOnto:role rdf:datatype="http://www.w3.org/2001/XMLSchema#string">collection</OwlSpeakOnto:role>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Bus_route_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Bus_route_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Departure_place_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Destination_sem"/>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Time_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Departure_place_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Destination_sem"/>
+        <OwlSpeakOnto:summaryAgenda rdf:resource="c:/OwlSpeak/empty.owl#RequestMixedInitiative_Depplace_SumAgenda"/>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Time_sem"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#external_busnumber_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#external_depplace_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#external_destination_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#multi_slot2a_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#multi_slot2b_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#multi_slot2d_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#multi_slot3a_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#sysmov_Request_Departure_place"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#DestinationAll_agenda -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#DestinationAll_agenda">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#Agenda"/>
+        <OwlSpeakOnto:role rdf:datatype="http://www.w3.org/2001/XMLSchema#string">collection</OwlSpeakOnto:role>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Bus_route_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Bus_route_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Departure_place_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Destination_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Time_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Departure_place_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Destination_sem"/>
+        <OwlSpeakOnto:summaryAgenda rdf:resource="c:/OwlSpeak/empty.owl#RequestMixedInitiative_Destination_SumAgenda"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Time_sem"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#external_busnumber_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#external_depplace_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#external_destination_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#external_time_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#multi_slot2a_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#multi_slot2b_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#multi_slot2c_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#multi_slot2d_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#multi_slot2e_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#multi_slot2f_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#multi_slot3b_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#multi_slot3c_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#multi_slot3d_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#multi_slot4_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#sysmov_Request_Arrival_place"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#Destination_agenda -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#Destination_agenda">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#Agenda"/>
+        <OwlSpeakOnto:role rdf:datatype="http://www.w3.org/2001/XMLSchema#string">collection</OwlSpeakOnto:role>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Destination_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Destination_sem"/>
+        <OwlSpeakOnto:summaryAgenda rdf:resource="c:/OwlSpeak/empty.owl#RequestSystemInitiative_Destination_SumAgenda"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#external_destination_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#sysmov_Request_Arrival_place"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#Destination_sem -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#Destination_sem">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#SemanticGroup"/>
+        <OwlSpeakOnto:fieldTotals rdf:datatype="http://www.w3.org/2001/XMLSchema#int">100</OwlSpeakOnto:fieldTotals>
+        <OwlSpeakOnto:containsSemantics rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Destination_sem"/>
+        <OwlSpeakOnto:hasVariable rdf:resource="c:/OwlSpeak/empty.owl#Destination_var"/>
+        <OwlSpeakOnto:containsSemantics rdf:resource="c:/OwlSpeak/empty.owl#Reject_Destination_sem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#Destination_var -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#Destination_var">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#Variable"/>
+        <OwlSpeakOnto:belongsToSemantic rdf:resource="c:/OwlSpeak/empty.owl#Destination_sem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#Destination_withoutBusDep_agenda -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#Destination_withoutBusDep_agenda">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#Agenda"/>
+        <OwlSpeakOnto:role rdf:datatype="http://www.w3.org/2001/XMLSchema#string">collection</OwlSpeakOnto:role>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Bus_route_sem"/>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Bus_route_sem"/>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Departure_place_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Destination_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Time_sem"/>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Departure_place_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Destination_sem"/>
+        <OwlSpeakOnto:summaryAgenda rdf:resource="c:/OwlSpeak/empty.owl#RequestMixedInitiative_Destination_SumAgenda"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Time_sem"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#external_destination_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#external_time_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#multi_slot2c_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#sysmov_Request_Arrival_place"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#Destination_withoutBusTimeDep_agenda -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#Destination_withoutBusTimeDep_agenda">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#Agenda"/>
+        <OwlSpeakOnto:role rdf:datatype="http://www.w3.org/2001/XMLSchema#string">collection</OwlSpeakOnto:role>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Bus_route_sem"/>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Bus_route_sem"/>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Departure_place_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Destination_sem"/>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Time_sem"/>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Departure_place_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Destination_sem"/>
+        <OwlSpeakOnto:summaryAgenda rdf:resource="c:/OwlSpeak/empty.owl#RequestMixedInitiative_Destination_SumAgenda"/>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Time_sem"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#external_destination_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#sysmov_Request_Arrival_place"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#Destination_withoutBusTime_agenda -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#Destination_withoutBusTime_agenda">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#Agenda"/>
+        <OwlSpeakOnto:role rdf:datatype="http://www.w3.org/2001/XMLSchema#string">collection</OwlSpeakOnto:role>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Bus_route_sem"/>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Bus_route_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Departure_place_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Destination_sem"/>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Time_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Departure_place_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Destination_sem"/>
+        <OwlSpeakOnto:summaryAgenda rdf:resource="c:/OwlSpeak/empty.owl#RequestMixedInitiative_Destination_SumAgenda"/>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Time_sem"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#external_depplace_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#external_destination_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#multi_slot2b_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#sysmov_Request_Arrival_place"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#Destination_withoutBus_agenda -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#Destination_withoutBus_agenda">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#Agenda"/>
+        <OwlSpeakOnto:role rdf:datatype="http://www.w3.org/2001/XMLSchema#string">collection</OwlSpeakOnto:role>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Bus_route_sem"/>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Bus_route_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Departure_place_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Destination_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Time_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Departure_place_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Destination_sem"/>
+        <OwlSpeakOnto:summaryAgenda rdf:resource="c:/OwlSpeak/empty.owl#RequestMixedInitiative_Destination_SumAgenda"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Time_sem"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#external_depplace_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#external_destination_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#external_time_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#multi_slot2b_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#multi_slot2c_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#multi_slot2e_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#multi_slot3b_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#sysmov_Request_Arrival_place"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#Destination_withoutDep_agenda -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#Destination_withoutDep_agenda">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#Agenda"/>
+        <OwlSpeakOnto:role rdf:datatype="http://www.w3.org/2001/XMLSchema#string">collection</OwlSpeakOnto:role>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Bus_route_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Bus_route_sem"/>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Departure_place_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Destination_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Time_sem"/>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Departure_place_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Destination_sem"/>
+        <OwlSpeakOnto:summaryAgenda rdf:resource="c:/OwlSpeak/empty.owl#RequestMixedInitiative_Destination_SumAgenda"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Time_sem"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#external_busnumber_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#external_destination_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#external_time_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#multi_slot2c_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#multi_slot2d_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#multi_slot2f_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#multi_slot3d_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#sysmov_Request_Arrival_place"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#Destination_withoutTimeDep_agenda -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#Destination_withoutTimeDep_agenda">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#Agenda"/>
+        <OwlSpeakOnto:role rdf:datatype="http://www.w3.org/2001/XMLSchema#string">collection</OwlSpeakOnto:role>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Bus_route_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Bus_route_sem"/>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Departure_place_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Destination_sem"/>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Time_sem"/>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Departure_place_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Destination_sem"/>
+        <OwlSpeakOnto:summaryAgenda rdf:resource="c:/OwlSpeak/empty.owl#RequestMixedInitiative_Destination_SumAgenda"/>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Time_sem"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#external_busnumber_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#external_destination_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#multi_slot2d_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#sysmov_Request_Arrival_place"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#Destination_withoutTime_agenda -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#Destination_withoutTime_agenda">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#Agenda"/>
+        <OwlSpeakOnto:role rdf:datatype="http://www.w3.org/2001/XMLSchema#string">collection</OwlSpeakOnto:role>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Bus_route_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Bus_route_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Departure_place_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Destination_sem"/>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Time_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Departure_place_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Destination_sem"/>
+        <OwlSpeakOnto:summaryAgenda rdf:resource="c:/OwlSpeak/empty.owl#RequestMixedInitiative_Destination_SumAgenda"/>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Time_sem"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#external_busnumber_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#external_depplace_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#external_destination_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#multi_slot2a_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#multi_slot2b_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#multi_slot2d_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#multi_slot3a_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#sysmov_Request_Arrival_place"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#Exit_Agenda -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#Exit_Agenda">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#Agenda"/>
+        <OwlSpeakOnto:role rdf:datatype="http://www.w3.org/2001/XMLSchema#string">collection</OwlSpeakOnto:role>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Departure_place_sem"/>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Destination_sem"/>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Time_sem"/>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Departure_place_sem"/>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Destination_sem"/>
+        <OwlSpeakOnto:summaryAgenda rdf:resource="c:/OwlSpeak/empty.owl#Exit_SummaryAgenda"/>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Time_sem"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#sysmov_Exit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#Exit_SummaryAgenda -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#Exit_SummaryAgenda">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#SummaryAgenda"/>
+        <OwlSpeakOnto:summaryAgendaType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">announcement</OwlSpeakOnto:summaryAgendaType>
+        <OwlSpeakOnto:role rdf:datatype="http://www.w3.org/2001/XMLSchema#string">collection</OwlSpeakOnto:role>
+        <OwlSpeakOnto:summarizesAgendas rdf:resource="c:/OwlSpeak/empty.owl#Exit_Agenda"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#History-1837544105 -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#History-1837544105">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#History"/>
+        <OwlSpeakOnto:addTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</OwlSpeakOnto:addTime>
+        <OwlSpeakOnto:agendaPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">42</OwlSpeakOnto:agendaPriority>
+        <OwlSpeakOnto:forAgenda rdf:resource="c:/OwlSpeak/empty.owl#Open_agenda"/>
+        <OwlSpeakOnto:inWorkspace rdf:resource="c:/OwlSpeak/empty.owl#hansWorkspace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#History-1881294213 -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#History-1881294213">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#History"/>
+        <OwlSpeakOnto:addTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</OwlSpeakOnto:addTime>
+        <OwlSpeakOnto:agendaPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">42</OwlSpeakOnto:agendaPriority>
+        <OwlSpeakOnto:forAgenda rdf:resource="c:/OwlSpeak/empty.owl#Open_agenda"/>
+        <OwlSpeakOnto:inWorkspace rdf:resource="c:/OwlSpeak/empty.owl#mariaWorkspace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#History-218810815 -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#History-218810815">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#History"/>
+        <OwlSpeakOnto:addTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</OwlSpeakOnto:addTime>
+        <OwlSpeakOnto:agendaPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">42</OwlSpeakOnto:agendaPriority>
+        <OwlSpeakOnto:forAgenda rdf:resource="c:/OwlSpeak/empty.owl#Open_agenda"/>
+        <OwlSpeakOnto:inWorkspace rdf:resource="c:/OwlSpeak/empty.owl#elisabethWorkspace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#History-318450540 -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#History-318450540">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#History"/>
+        <OwlSpeakOnto:addTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</OwlSpeakOnto:addTime>
+        <OwlSpeakOnto:agendaPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">42</OwlSpeakOnto:agendaPriority>
+        <OwlSpeakOnto:forAgenda rdf:resource="c:/OwlSpeak/empty.owl#Open_agenda"/>
+        <OwlSpeakOnto:inWorkspace rdf:resource="c:/OwlSpeak/empty.owl#userWorkspace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#History1907374466 -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#History1907374466">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#History"/>
+        <OwlSpeakOnto:addTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</OwlSpeakOnto:addTime>
+        <OwlSpeakOnto:agendaPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">42</OwlSpeakOnto:agendaPriority>
+        <OwlSpeakOnto:forAgenda rdf:resource="c:/OwlSpeak/empty.owl#Open_agenda"/>
+        <OwlSpeakOnto:inWorkspace rdf:resource="c:/OwlSpeak/empty.owl#iwonaWorkspace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#History656810010 -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#History656810010">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#History"/>
+        <OwlSpeakOnto:addTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</OwlSpeakOnto:addTime>
+        <OwlSpeakOnto:agendaPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">42</OwlSpeakOnto:agendaPriority>
+        <OwlSpeakOnto:forAgenda rdf:resource="c:/OwlSpeak/empty.owl#Open_agenda"/>
+        <OwlSpeakOnto:inWorkspace rdf:resource="c:/OwlSpeak/empty.owl#juanWorkspace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#InteractionQuality -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#InteractionQuality">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#Variable"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#Masteragenda -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#Masteragenda">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#Agenda"/>
+        <OwlSpeakOnto:isMasterBool rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</OwlSpeakOnto:isMasterBool>
+        <OwlSpeakOnto:next rdf:resource="c:/OwlSpeak/empty.owl#Open_agenda"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#Open_SummaryAgenda -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#Open_SummaryAgenda">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#SummaryAgenda"/>
+        <OwlSpeakOnto:role rdf:datatype="http://www.w3.org/2001/XMLSchema#string">collection</OwlSpeakOnto:role>
+        <OwlSpeakOnto:summaryAgendaType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">request</OwlSpeakOnto:summaryAgendaType>
+        <OwlSpeakOnto:summarizesAgendas rdf:resource="c:/OwlSpeak/empty.owl#Open_agenda"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#Open_agenda -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#Open_agenda">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#Agenda"/>
+        <OwlSpeakOnto:role rdf:datatype="http://www.w3.org/2001/XMLSchema#string">collection</OwlSpeakOnto:role>
+        <OwlSpeakOnto:next rdf:resource="c:/OwlSpeak/empty.owl#Bus_route_agenda"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Bus_route_sem"/>
+        <OwlSpeakOnto:next rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Bus_route_Agenda"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Bus_route_sem"/>
+        <OwlSpeakOnto:next rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Departure_place_Agenda"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Departure_place_sem"/>
+        <OwlSpeakOnto:next rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Destination_Agenda"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Destination_sem"/>
+        <OwlSpeakOnto:next rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Time_Agenda"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Time_sem"/>
+        <OwlSpeakOnto:next rdf:resource="c:/OwlSpeak/empty.owl#Departure_place_agenda"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Departure_place_sem"/>
+        <OwlSpeakOnto:next rdf:resource="c:/OwlSpeak/empty.owl#DepplaceAll_agenda"/>
+        <OwlSpeakOnto:next rdf:resource="c:/OwlSpeak/empty.owl#Depplace_withoutBusDest_agenda"/>
+        <OwlSpeakOnto:next rdf:resource="c:/OwlSpeak/empty.owl#Depplace_withoutBusTimeDest_agenda"/>
+        <OwlSpeakOnto:next rdf:resource="c:/OwlSpeak/empty.owl#Depplace_withoutBusTime_agenda"/>
+        <OwlSpeakOnto:next rdf:resource="c:/OwlSpeak/empty.owl#Depplace_withoutBus_agenda"/>
+        <OwlSpeakOnto:next rdf:resource="c:/OwlSpeak/empty.owl#Depplace_withoutDest_agenda"/>
+        <OwlSpeakOnto:next rdf:resource="c:/OwlSpeak/empty.owl#Depplace_withoutTimeDest_agenda"/>
+        <OwlSpeakOnto:next rdf:resource="c:/OwlSpeak/empty.owl#Depplace_withoutTime_agenda"/>
+        <OwlSpeakOnto:next rdf:resource="c:/OwlSpeak/empty.owl#DestinationAll_agenda"/>
+        <OwlSpeakOnto:next rdf:resource="c:/OwlSpeak/empty.owl#Destination_agenda"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Destination_sem"/>
+        <OwlSpeakOnto:next rdf:resource="c:/OwlSpeak/empty.owl#Destination_withoutBusDep_agenda"/>
+        <OwlSpeakOnto:next rdf:resource="c:/OwlSpeak/empty.owl#Destination_withoutBusTimeDep_agenda"/>
+        <OwlSpeakOnto:next rdf:resource="c:/OwlSpeak/empty.owl#Destination_withoutBusTime_agenda"/>
+        <OwlSpeakOnto:next rdf:resource="c:/OwlSpeak/empty.owl#Destination_withoutBus_agenda"/>
+        <OwlSpeakOnto:next rdf:resource="c:/OwlSpeak/empty.owl#Destination_withoutDep_agenda"/>
+        <OwlSpeakOnto:next rdf:resource="c:/OwlSpeak/empty.owl#Destination_withoutTimeDep_agenda"/>
+        <OwlSpeakOnto:next rdf:resource="c:/OwlSpeak/empty.owl#Destination_withoutTime_agenda"/>
+        <OwlSpeakOnto:next rdf:resource="c:/OwlSpeak/empty.owl#Exit_Agenda"/>
+        <OwlSpeakOnto:summaryAgenda rdf:resource="c:/OwlSpeak/empty.owl#Open_SummaryAgenda"/>
+        <OwlSpeakOnto:next rdf:resource="c:/OwlSpeak/empty.owl#Open_agenda"/>
+        <OwlSpeakOnto:next rdf:resource="c:/OwlSpeak/empty.owl#TimeAll_agenda"/>
+        <OwlSpeakOnto:next rdf:resource="c:/OwlSpeak/empty.owl#Time_agenda"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Time_sem"/>
+        <OwlSpeakOnto:next rdf:resource="c:/OwlSpeak/empty.owl#Time_withoutBusDepDest_agenda"/>
+        <OwlSpeakOnto:next rdf:resource="c:/OwlSpeak/empty.owl#Time_withoutBusDep_agenda"/>
+        <OwlSpeakOnto:next rdf:resource="c:/OwlSpeak/empty.owl#Time_withoutBusDest_agenda"/>
+        <OwlSpeakOnto:next rdf:resource="c:/OwlSpeak/empty.owl#Time_withoutBus_agenda"/>
+        <OwlSpeakOnto:next rdf:resource="c:/OwlSpeak/empty.owl#Time_withoutDepDest_agenda"/>
+        <OwlSpeakOnto:next rdf:resource="c:/OwlSpeak/empty.owl#Time_withoutDep_agenda"/>
+        <OwlSpeakOnto:next rdf:resource="c:/OwlSpeak/empty.owl#Time_withoutDest_agenda"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#external_busnumber_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#external_depplace_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#external_destination_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#external_time_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#multi_slot2a_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#multi_slot2b_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#multi_slot2c_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#multi_slot2d_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#multi_slot2e_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#multi_slot2f_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#multi_slot3a_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#multi_slot3b_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#multi_slot3c_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#multi_slot3d_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#multi_slot4_mv"/>
+        <OwlSpeakOnto:next rdf:resource="c:/OwlSpeak/empty.owl#open_afterBusDepDest_agenda"/>
+        <OwlSpeakOnto:next rdf:resource="c:/OwlSpeak/empty.owl#open_afterBusDep_agenda"/>
+        <OwlSpeakOnto:next rdf:resource="c:/OwlSpeak/empty.owl#open_afterBusDest_agenda"/>
+        <OwlSpeakOnto:next rdf:resource="c:/OwlSpeak/empty.owl#open_afterBusTimeDep_agenda"/>
+        <OwlSpeakOnto:next rdf:resource="c:/OwlSpeak/empty.owl#open_afterBusTimeDest_agenda"/>
+        <OwlSpeakOnto:next rdf:resource="c:/OwlSpeak/empty.owl#open_afterBusTime_agenda"/>
+        <OwlSpeakOnto:next rdf:resource="c:/OwlSpeak/empty.owl#open_afterBus_agenda"/>
+        <OwlSpeakOnto:next rdf:resource="c:/OwlSpeak/empty.owl#open_afterDepDest_agenda"/>
+        <OwlSpeakOnto:next rdf:resource="c:/OwlSpeak/empty.owl#open_afterDep_agenda"/>
+        <OwlSpeakOnto:next rdf:resource="c:/OwlSpeak/empty.owl#open_afterDest_agenda"/>
+        <OwlSpeakOnto:next rdf:resource="c:/OwlSpeak/empty.owl#open_afterTimeDep_agenda"/>
+        <OwlSpeakOnto:next rdf:resource="c:/OwlSpeak/empty.owl#open_afterTimeDest_agenda"/>
+        <OwlSpeakOnto:next rdf:resource="c:/OwlSpeak/empty.owl#open_afterTime_agenda"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#sysmov_Request_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#Reject_Bus_route_sem -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#Reject_Bus_route_sem">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#Semantic"/>
+        <OwlSpeakOnto:confirmationInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rejection</OwlSpeakOnto:confirmationInfo>
+        <OwlSpeakOnto:semanticGroup rdf:resource="c:/OwlSpeak/empty.owl#Bus_route_sem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#Reject_Departure_place_sem -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#Reject_Departure_place_sem">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#Semantic"/>
+        <OwlSpeakOnto:confirmationInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rejection</OwlSpeakOnto:confirmationInfo>
+        <OwlSpeakOnto:semanticGroup rdf:resource="c:/OwlSpeak/empty.owl#Departure_place_sem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#Reject_Destination_sem -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#Reject_Destination_sem">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#Semantic"/>
+        <OwlSpeakOnto:confirmationInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rejection</OwlSpeakOnto:confirmationInfo>
+        <OwlSpeakOnto:semanticGroup rdf:resource="c:/OwlSpeak/empty.owl#Destination_sem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#Reject_Time_sem -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#Reject_Time_sem">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#Semantic"/>
+        <OwlSpeakOnto:confirmationInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rejection</OwlSpeakOnto:confirmationInfo>
+        <OwlSpeakOnto:semanticGroup rdf:resource="c:/OwlSpeak/empty.owl#Time_sem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#RequestMixedInitiative_Depplace_SumAgenda -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#RequestMixedInitiative_Depplace_SumAgenda">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#SummaryAgenda"/>
+        <OwlSpeakOnto:role rdf:datatype="http://www.w3.org/2001/XMLSchema#string">collection</OwlSpeakOnto:role>
+        <OwlSpeakOnto:summaryAgendaType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">request</OwlSpeakOnto:summaryAgendaType>
+        <OwlSpeakOnto:summarizesAgendas rdf:resource="c:/OwlSpeak/empty.owl#DepplaceAll_agenda"/>
+        <OwlSpeakOnto:summarizesAgendas rdf:resource="c:/OwlSpeak/empty.owl#Depplace_withoutBusDest_agenda"/>
+        <OwlSpeakOnto:summarizesAgendas rdf:resource="c:/OwlSpeak/empty.owl#Depplace_withoutBusTimeDest_agenda"/>
+        <OwlSpeakOnto:summarizesAgendas rdf:resource="c:/OwlSpeak/empty.owl#Depplace_withoutBusTime_agenda"/>
+        <OwlSpeakOnto:summarizesAgendas rdf:resource="c:/OwlSpeak/empty.owl#Depplace_withoutBus_agenda"/>
+        <OwlSpeakOnto:summarizesAgendas rdf:resource="c:/OwlSpeak/empty.owl#Depplace_withoutDest_agenda"/>
+        <OwlSpeakOnto:summarizesAgendas rdf:resource="c:/OwlSpeak/empty.owl#Depplace_withoutTimeDest_agenda"/>
+        <OwlSpeakOnto:summarizesAgendas rdf:resource="c:/OwlSpeak/empty.owl#Depplace_withoutTime_agenda"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#RequestMixedInitiative_Destination_SumAgenda -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#RequestMixedInitiative_Destination_SumAgenda">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#SummaryAgenda"/>
+        <OwlSpeakOnto:role rdf:datatype="http://www.w3.org/2001/XMLSchema#string">collection</OwlSpeakOnto:role>
+        <OwlSpeakOnto:summaryAgendaType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">request</OwlSpeakOnto:summaryAgendaType>
+        <OwlSpeakOnto:summarizesAgendas rdf:resource="c:/OwlSpeak/empty.owl#DestinationAll_agenda"/>
+        <OwlSpeakOnto:summarizesAgendas rdf:resource="c:/OwlSpeak/empty.owl#Destination_withoutBusDep_agenda"/>
+        <OwlSpeakOnto:summarizesAgendas rdf:resource="c:/OwlSpeak/empty.owl#Destination_withoutBusTimeDep_agenda"/>
+        <OwlSpeakOnto:summarizesAgendas rdf:resource="c:/OwlSpeak/empty.owl#Destination_withoutBusTime_agenda"/>
+        <OwlSpeakOnto:summarizesAgendas rdf:resource="c:/OwlSpeak/empty.owl#Destination_withoutBus_agenda"/>
+        <OwlSpeakOnto:summarizesAgendas rdf:resource="c:/OwlSpeak/empty.owl#Destination_withoutDep_agenda"/>
+        <OwlSpeakOnto:summarizesAgendas rdf:resource="c:/OwlSpeak/empty.owl#Destination_withoutTimeDep_agenda"/>
+        <OwlSpeakOnto:summarizesAgendas rdf:resource="c:/OwlSpeak/empty.owl#Destination_withoutTime_agenda"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#RequestMixedInitiative_Time_SumAgenda -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#RequestMixedInitiative_Time_SumAgenda">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#SummaryAgenda"/>
+        <OwlSpeakOnto:role rdf:datatype="http://www.w3.org/2001/XMLSchema#string">collection</OwlSpeakOnto:role>
+        <OwlSpeakOnto:summaryAgendaType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">request</OwlSpeakOnto:summaryAgendaType>
+        <OwlSpeakOnto:summarizesAgendas rdf:resource="c:/OwlSpeak/empty.owl#TimeAll_agenda"/>
+        <OwlSpeakOnto:summarizesAgendas rdf:resource="c:/OwlSpeak/empty.owl#Time_withoutBusDepDest_agenda"/>
+        <OwlSpeakOnto:summarizesAgendas rdf:resource="c:/OwlSpeak/empty.owl#Time_withoutBusDep_agenda"/>
+        <OwlSpeakOnto:summarizesAgendas rdf:resource="c:/OwlSpeak/empty.owl#Time_withoutBusDest_agenda"/>
+        <OwlSpeakOnto:summarizesAgendas rdf:resource="c:/OwlSpeak/empty.owl#Time_withoutBus_agenda"/>
+        <OwlSpeakOnto:summarizesAgendas rdf:resource="c:/OwlSpeak/empty.owl#Time_withoutDepDest_agenda"/>
+        <OwlSpeakOnto:summarizesAgendas rdf:resource="c:/OwlSpeak/empty.owl#Time_withoutDep_agenda"/>
+        <OwlSpeakOnto:summarizesAgendas rdf:resource="c:/OwlSpeak/empty.owl#Time_withoutDest_agenda"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#RequestSystemInitiative_Bus_route_SumAgenda -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#RequestSystemInitiative_Bus_route_SumAgenda">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#SummaryAgenda"/>
+        <OwlSpeakOnto:role rdf:datatype="http://www.w3.org/2001/XMLSchema#string">collection</OwlSpeakOnto:role>
+        <OwlSpeakOnto:summaryAgendaType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">request</OwlSpeakOnto:summaryAgendaType>
+        <OwlSpeakOnto:summarizesAgendas rdf:resource="c:/OwlSpeak/empty.owl#Bus_route_agenda"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#RequestSystemInitiative_Departure_place_SumAgenda -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#RequestSystemInitiative_Departure_place_SumAgenda">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#SummaryAgenda"/>
+        <OwlSpeakOnto:role rdf:datatype="http://www.w3.org/2001/XMLSchema#string">collection</OwlSpeakOnto:role>
+        <OwlSpeakOnto:summaryAgendaType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">request</OwlSpeakOnto:summaryAgendaType>
+        <OwlSpeakOnto:summarizesAgendas rdf:resource="c:/OwlSpeak/empty.owl#Departure_place_agenda"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#RequestSystemInitiative_Destination_SumAgenda -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#RequestSystemInitiative_Destination_SumAgenda">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#SummaryAgenda"/>
+        <OwlSpeakOnto:role rdf:datatype="http://www.w3.org/2001/XMLSchema#string">collection</OwlSpeakOnto:role>
+        <OwlSpeakOnto:summaryAgendaType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">request</OwlSpeakOnto:summaryAgendaType>
+        <OwlSpeakOnto:summarizesAgendas rdf:resource="c:/OwlSpeak/empty.owl#Destination_agenda"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#RequestSystemInitiative_Time_SumAgenda -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#RequestSystemInitiative_Time_SumAgenda">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#SummaryAgenda"/>
+        <OwlSpeakOnto:role rdf:datatype="http://www.w3.org/2001/XMLSchema#string">collection</OwlSpeakOnto:role>
+        <OwlSpeakOnto:summaryAgendaType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">request</OwlSpeakOnto:summaryAgendaType>
+        <OwlSpeakOnto:summarizesAgendas rdf:resource="c:/OwlSpeak/empty.owl#Time_agenda"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#RequestUserInitiative_Open_SumAgenda -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#RequestUserInitiative_Open_SumAgenda">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#SummaryAgenda"/>
+        <OwlSpeakOnto:role rdf:datatype="http://www.w3.org/2001/XMLSchema#string">collection</OwlSpeakOnto:role>
+        <OwlSpeakOnto:summaryAgendaType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">request</OwlSpeakOnto:summaryAgendaType>
+        <OwlSpeakOnto:summarizesAgendas rdf:resource="c:/OwlSpeak/empty.owl#open_afterBusDepDest_agenda"/>
+        <OwlSpeakOnto:summarizesAgendas rdf:resource="c:/OwlSpeak/empty.owl#open_afterBusDep_agenda"/>
+        <OwlSpeakOnto:summarizesAgendas rdf:resource="c:/OwlSpeak/empty.owl#open_afterBusDest_agenda"/>
+        <OwlSpeakOnto:summarizesAgendas rdf:resource="c:/OwlSpeak/empty.owl#open_afterBusTimeDep_agenda"/>
+        <OwlSpeakOnto:summarizesAgendas rdf:resource="c:/OwlSpeak/empty.owl#open_afterBusTimeDest_agenda"/>
+        <OwlSpeakOnto:summarizesAgendas rdf:resource="c:/OwlSpeak/empty.owl#open_afterBusTime_agenda"/>
+        <OwlSpeakOnto:summarizesAgendas rdf:resource="c:/OwlSpeak/empty.owl#open_afterBus_agenda"/>
+        <OwlSpeakOnto:summarizesAgendas rdf:resource="c:/OwlSpeak/empty.owl#open_afterDepDest_agenda"/>
+        <OwlSpeakOnto:summarizesAgendas rdf:resource="c:/OwlSpeak/empty.owl#open_afterDep_agenda"/>
+        <OwlSpeakOnto:summarizesAgendas rdf:resource="c:/OwlSpeak/empty.owl#open_afterDest_agenda"/>
+        <OwlSpeakOnto:summarizesAgendas rdf:resource="c:/OwlSpeak/empty.owl#open_afterTimeDep_agenda"/>
+        <OwlSpeakOnto:summarizesAgendas rdf:resource="c:/OwlSpeak/empty.owl#open_afterTimeDest_agenda"/>
+        <OwlSpeakOnto:summarizesAgendas rdf:resource="c:/OwlSpeak/empty.owl#open_afterTime_agenda"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#TimeAll_agenda -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#TimeAll_agenda">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#Agenda"/>
+        <OwlSpeakOnto:role rdf:datatype="http://www.w3.org/2001/XMLSchema#string">collection</OwlSpeakOnto:role>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Bus_route_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Bus_route_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Departure_place_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Destination_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Time_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Departure_place_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Destination_sem"/>
+        <OwlSpeakOnto:summaryAgenda rdf:resource="c:/OwlSpeak/empty.owl#RequestMixedInitiative_Time_SumAgenda"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Time_sem"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#external_busnumber_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#external_depplace_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#external_destination_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#external_time_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#multi_slot2a_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#multi_slot2b_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#multi_slot2c_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#multi_slot2d_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#multi_slot2e_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#multi_slot2f_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#multi_slot3b_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#multi_slot3c_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#multi_slot3d_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#multi_slot4_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#sysmov_Request_Travel_time"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#Time_agenda -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#Time_agenda">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#Agenda"/>
+        <OwlSpeakOnto:role rdf:datatype="http://www.w3.org/2001/XMLSchema#string">collection</OwlSpeakOnto:role>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Time_sem"/>
+        <OwlSpeakOnto:summaryAgenda rdf:resource="c:/OwlSpeak/empty.owl#RequestSystemInitiative_Time_SumAgenda"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Time_sem"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#external_time_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#sysmov_Request_Travel_time"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#Time_sem -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#Time_sem">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#SemanticGroup"/>
+        <OwlSpeakOnto:fieldTotals rdf:datatype="http://www.w3.org/2001/XMLSchema#int">100</OwlSpeakOnto:fieldTotals>
+        <OwlSpeakOnto:containsSemantics rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Time_sem"/>
+        <OwlSpeakOnto:containsSemantics rdf:resource="c:/OwlSpeak/empty.owl#Reject_Time_sem"/>
+        <OwlSpeakOnto:hasVariable rdf:resource="c:/OwlSpeak/empty.owl#Time_var"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#Time_var -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#Time_var">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#Variable"/>
+        <OwlSpeakOnto:belongsToSemantic rdf:resource="c:/OwlSpeak/empty.owl#Time_sem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#Time_withoutBusDepDest_agenda -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#Time_withoutBusDepDest_agenda">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#Agenda"/>
+        <OwlSpeakOnto:role rdf:datatype="http://www.w3.org/2001/XMLSchema#string">collection</OwlSpeakOnto:role>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Bus_route_sem"/>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Bus_route_sem"/>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Departure_place_sem"/>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Destination_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Time_sem"/>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Departure_place_sem"/>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Destination_sem"/>
+        <OwlSpeakOnto:summaryAgenda rdf:resource="c:/OwlSpeak/empty.owl#RequestMixedInitiative_Time_SumAgenda"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Time_sem"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#external_time_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#sysmov_Request_Travel_time"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#Time_withoutBusDep_agenda -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#Time_withoutBusDep_agenda">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#Agenda"/>
+        <OwlSpeakOnto:role rdf:datatype="http://www.w3.org/2001/XMLSchema#string">collection</OwlSpeakOnto:role>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Bus_route_sem"/>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Bus_route_sem"/>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Departure_place_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Destination_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Time_sem"/>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Departure_place_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Destination_sem"/>
+        <OwlSpeakOnto:summaryAgenda rdf:resource="c:/OwlSpeak/empty.owl#RequestMixedInitiative_Time_SumAgenda"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Time_sem"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#external_destination_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#external_time_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#multi_slot2c_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#sysmov_Request_Travel_time"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#Time_withoutBusDest_agenda -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#Time_withoutBusDest_agenda">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#Agenda"/>
+        <OwlSpeakOnto:role rdf:datatype="http://www.w3.org/2001/XMLSchema#string">collection</OwlSpeakOnto:role>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Bus_route_sem"/>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Bus_route_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Departure_place_sem"/>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Destination_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Time_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Departure_place_sem"/>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Destination_sem"/>
+        <OwlSpeakOnto:summaryAgenda rdf:resource="c:/OwlSpeak/empty.owl#RequestMixedInitiative_Time_SumAgenda"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Time_sem"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#external_depplace_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#external_time_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#multi_slot2e_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#sysmov_Request_Travel_time"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#Time_withoutBus_agenda -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#Time_withoutBus_agenda">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#Agenda"/>
+        <OwlSpeakOnto:role rdf:datatype="http://www.w3.org/2001/XMLSchema#string">collection</OwlSpeakOnto:role>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Bus_route_sem"/>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Bus_route_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Departure_place_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Destination_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Time_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Departure_place_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Destination_sem"/>
+        <OwlSpeakOnto:summaryAgenda rdf:resource="c:/OwlSpeak/empty.owl#RequestMixedInitiative_Time_SumAgenda"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Time_sem"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#external_depplace_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#external_destination_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#external_time_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#multi_slot2b_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#multi_slot2c_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#multi_slot2e_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#multi_slot3b_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#sysmov_Request_Travel_time"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#Time_withoutDepDest_agenda -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#Time_withoutDepDest_agenda">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#Agenda"/>
+        <OwlSpeakOnto:role rdf:datatype="http://www.w3.org/2001/XMLSchema#string">collection</OwlSpeakOnto:role>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Bus_route_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Bus_route_sem"/>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Departure_place_sem"/>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Destination_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Time_sem"/>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Departure_place_sem"/>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Destination_sem"/>
+        <OwlSpeakOnto:summaryAgenda rdf:resource="c:/OwlSpeak/empty.owl#RequestMixedInitiative_Time_SumAgenda"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Time_sem"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#external_busnumber_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#external_time_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#multi_slot2f_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#sysmov_Request_Travel_time"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#Time_withoutDep_agenda -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#Time_withoutDep_agenda">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#Agenda"/>
+        <OwlSpeakOnto:role rdf:datatype="http://www.w3.org/2001/XMLSchema#string">collection</OwlSpeakOnto:role>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Bus_route_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Bus_route_sem"/>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Departure_place_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Destination_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Time_sem"/>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Departure_place_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Destination_sem"/>
+        <OwlSpeakOnto:summaryAgenda rdf:resource="c:/OwlSpeak/empty.owl#RequestMixedInitiative_Time_SumAgenda"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Time_sem"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#external_busnumber_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#external_destination_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#external_time_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#multi_slot2c_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#multi_slot2d_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#multi_slot2f_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#multi_slot3d_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#sysmov_Request_Travel_time"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#Time_withoutDest_agenda -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#Time_withoutDest_agenda">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#Agenda"/>
+        <OwlSpeakOnto:role rdf:datatype="http://www.w3.org/2001/XMLSchema#string">collection</OwlSpeakOnto:role>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Bus_route_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Bus_route_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Departure_place_sem"/>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Destination_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Time_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Departure_place_sem"/>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Destination_sem"/>
+        <OwlSpeakOnto:summaryAgenda rdf:resource="c:/OwlSpeak/empty.owl#RequestMixedInitiative_Time_SumAgenda"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Time_sem"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#external_busnumber_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#external_depplace_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#external_time_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#multi_slot2a_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#multi_slot2e_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#multi_slot2f_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#multi_slot3c_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#sysmov_Request_Travel_time"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#busnumberUtterance -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#busnumberUtterance">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#Utterance"/>
+        <OwlSpeakOnto:utteranceString xml:lang="en">%Bus_route_var%</OwlSpeakOnto:utteranceString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#departureplaceUtterance -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#departureplaceUtterance">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#Utterance"/>
+        <OwlSpeakOnto:utteranceString xml:lang="en">%Departure_place_var%</OwlSpeakOnto:utteranceString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#destinationUtterance -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#destinationUtterance">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#Utterance"/>
+        <OwlSpeakOnto:utteranceString xml:lang="en">%Destination_var%</OwlSpeakOnto:utteranceString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#dummyUtterance -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#dummyUtterance">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#Utterance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#dummygrammar -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#dummygrammar">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#Grammar"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#elisabethBeliefspace -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#elisabethBeliefspace">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#BeliefSpace"/>
+        <OwlSpeakOnto:prior rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</OwlSpeakOnto:prior>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#elisabethWorkspace -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#elisabethWorkspace">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#WorkSpace"/>
+        <OwlSpeakOnto:next rdf:resource="c:/OwlSpeak/empty.owl#Open_agenda"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#external_busnumber_mv -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#external_busnumber_mv">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#Move"/>
+        <OwlSpeakOnto:extractFieldValuesFromInput rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PSEUDO</OwlSpeakOnto:extractFieldValuesFromInput>
+        <OwlSpeakOnto:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SET(Bus_route_var=:external_busnumber_mv:)</OwlSpeakOnto:variableOperator>
+        <OwlSpeakOnto:semantic rdf:resource="c:/OwlSpeak/empty.owl#Bus_route_sem"/>
+        <OwlSpeakOnto:grammar rdf:resource="c:/OwlSpeak/empty.owl#dummygrammar"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#external_depplace_mv -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#external_depplace_mv">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#Move"/>
+        <OwlSpeakOnto:extractFieldValuesFromInput rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PSEUDO</OwlSpeakOnto:extractFieldValuesFromInput>
+        <OwlSpeakOnto:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SET(Departure_place_var=:external_depplace_mv:)</OwlSpeakOnto:variableOperator>
+        <OwlSpeakOnto:semantic rdf:resource="c:/OwlSpeak/empty.owl#Departure_place_sem"/>
+        <OwlSpeakOnto:grammar rdf:resource="c:/OwlSpeak/empty.owl#dummygrammar"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#external_destination_mv -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#external_destination_mv">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#Move"/>
+        <OwlSpeakOnto:extractFieldValuesFromInput rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PSEUDO</OwlSpeakOnto:extractFieldValuesFromInput>
+        <OwlSpeakOnto:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SET(Destination_var=:external_destination_mv:)</OwlSpeakOnto:variableOperator>
+        <OwlSpeakOnto:semantic rdf:resource="c:/OwlSpeak/empty.owl#Destination_sem"/>
+        <OwlSpeakOnto:grammar rdf:resource="c:/OwlSpeak/empty.owl#dummygrammar"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#external_time_mv -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#external_time_mv">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#Move"/>
+        <OwlSpeakOnto:extractFieldValuesFromInput rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PSEUDO</OwlSpeakOnto:extractFieldValuesFromInput>
+        <OwlSpeakOnto:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SET(Time_var=:external_time_mv:)</OwlSpeakOnto:variableOperator>
+        <OwlSpeakOnto:semantic rdf:resource="c:/OwlSpeak/empty.owl#Time_sem"/>
+        <OwlSpeakOnto:grammar rdf:resource="c:/OwlSpeak/empty.owl#dummygrammar"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#hansBeliefspace -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#hansBeliefspace">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#BeliefSpace"/>
+        <OwlSpeakOnto:prior rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</OwlSpeakOnto:prior>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#hansWorkspace -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#hansWorkspace">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#WorkSpace"/>
+        <OwlSpeakOnto:next rdf:resource="c:/OwlSpeak/empty.owl#Open_agenda"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#infoUtterance -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#infoUtterance">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#Utterance"/>
+        <OwlSpeakOnto:utteranceString xml:lang="en">%Bus_route_var%</OwlSpeakOnto:utteranceString>
+        <OwlSpeakOnto:utteranceString xml:lang="en">%Departure_place_var%</OwlSpeakOnto:utteranceString>
+        <OwlSpeakOnto:utteranceString xml:lang="en">%Destination_var%</OwlSpeakOnto:utteranceString>
+        <OwlSpeakOnto:utteranceString xml:lang="en">%Time_var%</OwlSpeakOnto:utteranceString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#iwonaBeliefspace -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#iwonaBeliefspace">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#BeliefSpace"/>
+        <OwlSpeakOnto:prior rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</OwlSpeakOnto:prior>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#iwonaWorkspace -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#iwonaWorkspace">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#WorkSpace"/>
+        <OwlSpeakOnto:next rdf:resource="c:/OwlSpeak/empty.owl#Open_agenda"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#juanBeliefspace -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#juanBeliefspace">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#BeliefSpace"/>
+        <OwlSpeakOnto:prior rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</OwlSpeakOnto:prior>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#juanWorkspace -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#juanWorkspace">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#WorkSpace"/>
+        <OwlSpeakOnto:next rdf:resource="c:/OwlSpeak/empty.owl#Open_agenda"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#mariaBeliefspace -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#mariaBeliefspace">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#BeliefSpace"/>
+        <OwlSpeakOnto:prior rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</OwlSpeakOnto:prior>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#mariaWorkspace -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#mariaWorkspace">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#WorkSpace"/>
+        <OwlSpeakOnto:next rdf:resource="c:/OwlSpeak/empty.owl#Open_agenda"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#multi_slot2a_mv -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#multi_slot2a_mv">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#Move"/>
+        <OwlSpeakOnto:extractFieldValuesFromInput rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PSEUDO</OwlSpeakOnto:extractFieldValuesFromInput>
+        <OwlSpeakOnto:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SET(Bus_route_var=:external_busnumber_mv:;Departure_place_var=:external_depplace_mv:)</OwlSpeakOnto:variableOperator>
+        <OwlSpeakOnto:semantic rdf:resource="c:/OwlSpeak/empty.owl#Bus_route_sem"/>
+        <OwlSpeakOnto:semantic rdf:resource="c:/OwlSpeak/empty.owl#Departure_place_sem"/>
+        <OwlSpeakOnto:grammar rdf:resource="c:/OwlSpeak/empty.owl#dummygrammar"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#multi_slot2b_mv -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#multi_slot2b_mv">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#Move"/>
+        <OwlSpeakOnto:extractFieldValuesFromInput rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PSEUDO</OwlSpeakOnto:extractFieldValuesFromInput>
+        <OwlSpeakOnto:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SET(Departure_place_var=:external_depplace_mv:;Destination_var=:external_destination_mv:)</OwlSpeakOnto:variableOperator>
+        <OwlSpeakOnto:semantic rdf:resource="c:/OwlSpeak/empty.owl#Departure_place_sem"/>
+        <OwlSpeakOnto:semantic rdf:resource="c:/OwlSpeak/empty.owl#Destination_sem"/>
+        <OwlSpeakOnto:grammar rdf:resource="c:/OwlSpeak/empty.owl#dummygrammar"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#multi_slot2c_mv -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#multi_slot2c_mv">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#Move"/>
+        <OwlSpeakOnto:extractFieldValuesFromInput rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PSEUDO</OwlSpeakOnto:extractFieldValuesFromInput>
+        <OwlSpeakOnto:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SET(Destination_var=:external_destination_mv:;Time_var=:external_time_mv:)</OwlSpeakOnto:variableOperator>
+        <OwlSpeakOnto:semantic rdf:resource="c:/OwlSpeak/empty.owl#Destination_sem"/>
+        <OwlSpeakOnto:semantic rdf:resource="c:/OwlSpeak/empty.owl#Time_sem"/>
+        <OwlSpeakOnto:grammar rdf:resource="c:/OwlSpeak/empty.owl#dummygrammar"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#multi_slot2d_mv -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#multi_slot2d_mv">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#Move"/>
+        <OwlSpeakOnto:extractFieldValuesFromInput rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PSEUDO</OwlSpeakOnto:extractFieldValuesFromInput>
+        <OwlSpeakOnto:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SET(Destination_var=:external_destination_mv:;Bus_route_var=:external_busnumber_mv:)</OwlSpeakOnto:variableOperator>
+        <OwlSpeakOnto:semantic rdf:resource="c:/OwlSpeak/empty.owl#Bus_route_sem"/>
+        <OwlSpeakOnto:semantic rdf:resource="c:/OwlSpeak/empty.owl#Destination_sem"/>
+        <OwlSpeakOnto:grammar rdf:resource="c:/OwlSpeak/empty.owl#dummygrammar"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#multi_slot2e_mv -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#multi_slot2e_mv">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#Move"/>
+        <OwlSpeakOnto:extractFieldValuesFromInput rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PSEUDO</OwlSpeakOnto:extractFieldValuesFromInput>
+        <OwlSpeakOnto:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SET(Departure_place_var=:external_depplace_mv:;Time_var=:external_time_mv:)</OwlSpeakOnto:variableOperator>
+        <OwlSpeakOnto:semantic rdf:resource="c:/OwlSpeak/empty.owl#Departure_place_sem"/>
+        <OwlSpeakOnto:semantic rdf:resource="c:/OwlSpeak/empty.owl#Time_sem"/>
+        <OwlSpeakOnto:grammar rdf:resource="c:/OwlSpeak/empty.owl#dummygrammar"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#multi_slot2f_mv -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#multi_slot2f_mv">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#Move"/>
+        <OwlSpeakOnto:extractFieldValuesFromInput rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PSEUDO</OwlSpeakOnto:extractFieldValuesFromInput>
+        <OwlSpeakOnto:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SET(Bus_route_var=:external_busnumber_mv:;Time_var=:external_time_mv:)</OwlSpeakOnto:variableOperator>
+        <OwlSpeakOnto:semantic rdf:resource="c:/OwlSpeak/empty.owl#Bus_route_sem"/>
+        <OwlSpeakOnto:semantic rdf:resource="c:/OwlSpeak/empty.owl#Time_sem"/>
+        <OwlSpeakOnto:grammar rdf:resource="c:/OwlSpeak/empty.owl#dummygrammar"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#multi_slot3a_mv -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#multi_slot3a_mv">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#Move"/>
+        <OwlSpeakOnto:extractFieldValuesFromInput rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PSEUDO</OwlSpeakOnto:extractFieldValuesFromInput>
+        <OwlSpeakOnto:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SET(Bus_route_var=:external_busnumber_mv:;Departure_place_var=:external_depplace_mv:;Destination_var=:external_destination_mv:)</OwlSpeakOnto:variableOperator>
+        <OwlSpeakOnto:semantic rdf:resource="c:/OwlSpeak/empty.owl#Bus_route_sem"/>
+        <OwlSpeakOnto:semantic rdf:resource="c:/OwlSpeak/empty.owl#Departure_place_sem"/>
+        <OwlSpeakOnto:semantic rdf:resource="c:/OwlSpeak/empty.owl#Destination_sem"/>
+        <OwlSpeakOnto:grammar rdf:resource="c:/OwlSpeak/empty.owl#dummygrammar"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#multi_slot3b_mv -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#multi_slot3b_mv">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#Move"/>
+        <OwlSpeakOnto:extractFieldValuesFromInput rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PSEUDO</OwlSpeakOnto:extractFieldValuesFromInput>
+        <OwlSpeakOnto:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SET(Departure_place_var=:external_depplace_mv:;Destination_var=:external_destination_mv:;Time_var=:external_time_mv:)</OwlSpeakOnto:variableOperator>
+        <OwlSpeakOnto:semantic rdf:resource="c:/OwlSpeak/empty.owl#Departure_place_sem"/>
+        <OwlSpeakOnto:semantic rdf:resource="c:/OwlSpeak/empty.owl#Destination_sem"/>
+        <OwlSpeakOnto:semantic rdf:resource="c:/OwlSpeak/empty.owl#Time_sem"/>
+        <OwlSpeakOnto:grammar rdf:resource="c:/OwlSpeak/empty.owl#dummygrammar"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#multi_slot3c_mv -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#multi_slot3c_mv">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#Move"/>
+        <OwlSpeakOnto:extractFieldValuesFromInput rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PSEUDO</OwlSpeakOnto:extractFieldValuesFromInput>
+        <OwlSpeakOnto:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SET(Departure_place_var=:external_depplace_mv:;Bus_route_var=:external_busnumber_mv:;Time_var=:external_time_mv:)</OwlSpeakOnto:variableOperator>
+        <OwlSpeakOnto:semantic rdf:resource="c:/OwlSpeak/empty.owl#Bus_route_sem"/>
+        <OwlSpeakOnto:semantic rdf:resource="c:/OwlSpeak/empty.owl#Departure_place_sem"/>
+        <OwlSpeakOnto:semantic rdf:resource="c:/OwlSpeak/empty.owl#Time_sem"/>
+        <OwlSpeakOnto:grammar rdf:resource="c:/OwlSpeak/empty.owl#dummygrammar"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#multi_slot3d_mv -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#multi_slot3d_mv">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#Move"/>
+        <OwlSpeakOnto:extractFieldValuesFromInput rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PSEUDO</OwlSpeakOnto:extractFieldValuesFromInput>
+        <OwlSpeakOnto:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SET(Destination_var=:external_destination_mv:;Bus_route_var=:external_busnumber_mv:;Time_var=:external_time_mv:)</OwlSpeakOnto:variableOperator>
+        <OwlSpeakOnto:semantic rdf:resource="c:/OwlSpeak/empty.owl#Bus_route_sem"/>
+        <OwlSpeakOnto:semantic rdf:resource="c:/OwlSpeak/empty.owl#Destination_sem"/>
+        <OwlSpeakOnto:semantic rdf:resource="c:/OwlSpeak/empty.owl#Time_sem"/>
+        <OwlSpeakOnto:grammar rdf:resource="c:/OwlSpeak/empty.owl#dummygrammar"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#multi_slot4_mv -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#multi_slot4_mv">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#Move"/>
+        <OwlSpeakOnto:extractFieldValuesFromInput rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PSEUDO</OwlSpeakOnto:extractFieldValuesFromInput>
+        <OwlSpeakOnto:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SET(Bus_route_var=:external_busnumber_mv:;Departure_place_var=:external_depplace_mv:;Destination_var=:external_destination_mv:;Time_var=:external_time_mv:)</OwlSpeakOnto:variableOperator>
+        <OwlSpeakOnto:semantic rdf:resource="c:/OwlSpeak/empty.owl#Bus_route_sem"/>
+        <OwlSpeakOnto:semantic rdf:resource="c:/OwlSpeak/empty.owl#Departure_place_sem"/>
+        <OwlSpeakOnto:semantic rdf:resource="c:/OwlSpeak/empty.owl#Destination_sem"/>
+        <OwlSpeakOnto:semantic rdf:resource="c:/OwlSpeak/empty.owl#Time_sem"/>
+        <OwlSpeakOnto:grammar rdf:resource="c:/OwlSpeak/empty.owl#dummygrammar"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#open_afterBusDepDest_agenda -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#open_afterBusDepDest_agenda">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#Agenda"/>
+        <OwlSpeakOnto:role rdf:datatype="http://www.w3.org/2001/XMLSchema#string">collection</OwlSpeakOnto:role>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Bus_route_sem"/>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Bus_route_sem"/>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Departure_place_sem"/>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Destination_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Time_sem"/>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Departure_place_sem"/>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Destination_sem"/>
+        <OwlSpeakOnto:summaryAgenda rdf:resource="c:/OwlSpeak/empty.owl#RequestUserInitiative_Open_SumAgenda"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Time_sem"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#external_time_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#sysmov_Request_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#open_afterBusDep_agenda -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#open_afterBusDep_agenda">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#Agenda"/>
+        <OwlSpeakOnto:role rdf:datatype="http://www.w3.org/2001/XMLSchema#string">collection</OwlSpeakOnto:role>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Bus_route_sem"/>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Bus_route_sem"/>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Departure_place_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Destination_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Time_sem"/>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Departure_place_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Destination_sem"/>
+        <OwlSpeakOnto:summaryAgenda rdf:resource="c:/OwlSpeak/empty.owl#RequestUserInitiative_Open_SumAgenda"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Time_sem"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#external_destination_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#external_time_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#multi_slot2c_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#sysmov_Request_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#open_afterBusDest_agenda -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#open_afterBusDest_agenda">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#Agenda"/>
+        <OwlSpeakOnto:role rdf:datatype="http://www.w3.org/2001/XMLSchema#string">collection</OwlSpeakOnto:role>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Bus_route_sem"/>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Bus_route_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Departure_place_sem"/>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Destination_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Time_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Departure_place_sem"/>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Destination_sem"/>
+        <OwlSpeakOnto:summaryAgenda rdf:resource="c:/OwlSpeak/empty.owl#RequestUserInitiative_Open_SumAgenda"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Time_sem"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#external_depplace_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#external_time_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#multi_slot2e_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#sysmov_Request_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#open_afterBusTimeDep_agenda -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#open_afterBusTimeDep_agenda">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#Agenda"/>
+        <OwlSpeakOnto:role rdf:datatype="http://www.w3.org/2001/XMLSchema#string">collection</OwlSpeakOnto:role>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Bus_route_sem"/>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Bus_route_sem"/>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Departure_place_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Destination_sem"/>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Time_sem"/>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Departure_place_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Destination_sem"/>
+        <OwlSpeakOnto:summaryAgenda rdf:resource="c:/OwlSpeak/empty.owl#RequestUserInitiative_Open_SumAgenda"/>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Time_sem"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#external_destination_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#sysmov_Request_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#open_afterBusTimeDest_agenda -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#open_afterBusTimeDest_agenda">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#Agenda"/>
+        <OwlSpeakOnto:role rdf:datatype="http://www.w3.org/2001/XMLSchema#string">collection</OwlSpeakOnto:role>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Bus_route_sem"/>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Bus_route_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Departure_place_sem"/>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Destination_sem"/>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Time_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Departure_place_sem"/>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Destination_sem"/>
+        <OwlSpeakOnto:summaryAgenda rdf:resource="c:/OwlSpeak/empty.owl#RequestUserInitiative_Open_SumAgenda"/>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Time_sem"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#external_depplace_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#sysmov_Request_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#open_afterBusTime_agenda -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#open_afterBusTime_agenda">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#Agenda"/>
+        <OwlSpeakOnto:role rdf:datatype="http://www.w3.org/2001/XMLSchema#string">collection</OwlSpeakOnto:role>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Bus_route_sem"/>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Bus_route_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Departure_place_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Destination_sem"/>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Time_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Departure_place_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Destination_sem"/>
+        <OwlSpeakOnto:summaryAgenda rdf:resource="c:/OwlSpeak/empty.owl#RequestUserInitiative_Open_SumAgenda"/>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Time_sem"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#external_depplace_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#external_destination_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#multi_slot2b_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#sysmov_Request_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#open_afterBus_agenda -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#open_afterBus_agenda">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#Agenda"/>
+        <OwlSpeakOnto:role rdf:datatype="http://www.w3.org/2001/XMLSchema#string">collection</OwlSpeakOnto:role>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Bus_route_sem"/>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Bus_route_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Departure_place_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Destination_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Time_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Departure_place_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Destination_sem"/>
+        <OwlSpeakOnto:summaryAgenda rdf:resource="c:/OwlSpeak/empty.owl#RequestUserInitiative_Open_SumAgenda"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Time_sem"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#external_depplace_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#external_destination_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#external_time_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#multi_slot2b_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#multi_slot2c_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#multi_slot2e_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#multi_slot3b_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#sysmov_Request_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#open_afterDepDest_agenda -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#open_afterDepDest_agenda">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#Agenda"/>
+        <OwlSpeakOnto:role rdf:datatype="http://www.w3.org/2001/XMLSchema#string">collection</OwlSpeakOnto:role>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Bus_route_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Bus_route_sem"/>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Departure_place_sem"/>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Destination_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Time_sem"/>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Departure_place_sem"/>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Destination_sem"/>
+        <OwlSpeakOnto:summaryAgenda rdf:resource="c:/OwlSpeak/empty.owl#RequestUserInitiative_Open_SumAgenda"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Time_sem"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#external_busnumber_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#external_time_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#multi_slot2f_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#sysmov_Request_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#open_afterDep_agenda -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#open_afterDep_agenda">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#Agenda"/>
+        <OwlSpeakOnto:role rdf:datatype="http://www.w3.org/2001/XMLSchema#string">collection</OwlSpeakOnto:role>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Bus_route_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Bus_route_sem"/>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Departure_place_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Destination_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Time_sem"/>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Departure_place_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Destination_sem"/>
+        <OwlSpeakOnto:summaryAgenda rdf:resource="c:/OwlSpeak/empty.owl#RequestUserInitiative_Open_SumAgenda"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Time_sem"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#external_busnumber_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#external_destination_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#external_time_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#multi_slot2c_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#multi_slot2d_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#multi_slot2f_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#multi_slot3d_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#sysmov_Request_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#open_afterDest_agenda -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#open_afterDest_agenda">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#Agenda"/>
+        <OwlSpeakOnto:role rdf:datatype="http://www.w3.org/2001/XMLSchema#string">collection</OwlSpeakOnto:role>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Bus_route_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Bus_route_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Departure_place_sem"/>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Destination_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Time_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Departure_place_sem"/>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Destination_sem"/>
+        <OwlSpeakOnto:summaryAgenda rdf:resource="c:/OwlSpeak/empty.owl#RequestUserInitiative_Open_SumAgenda"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Time_sem"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#external_busnumber_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#external_depplace_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#external_time_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#multi_slot2a_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#multi_slot2e_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#multi_slot2f_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#multi_slot3c_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#sysmov_Request_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#open_afterTimeDep_agenda -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#open_afterTimeDep_agenda">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#Agenda"/>
+        <OwlSpeakOnto:role rdf:datatype="http://www.w3.org/2001/XMLSchema#string">collection</OwlSpeakOnto:role>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Bus_route_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Bus_route_sem"/>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Departure_place_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Destination_sem"/>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Time_sem"/>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Departure_place_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Destination_sem"/>
+        <OwlSpeakOnto:summaryAgenda rdf:resource="c:/OwlSpeak/empty.owl#RequestUserInitiative_Open_SumAgenda"/>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Time_sem"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#external_busnumber_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#external_destination_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#multi_slot2c_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#multi_slot2d_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#sysmov_Request_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#open_afterTimeDest_agenda -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#open_afterTimeDest_agenda">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#Agenda"/>
+        <OwlSpeakOnto:role rdf:datatype="http://www.w3.org/2001/XMLSchema#string">collection</OwlSpeakOnto:role>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Bus_route_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Bus_route_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Departure_place_sem"/>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Destination_sem"/>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Time_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Departure_place_sem"/>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Destination_sem"/>
+        <OwlSpeakOnto:summaryAgenda rdf:resource="c:/OwlSpeak/empty.owl#RequestUserInitiative_Open_SumAgenda"/>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Time_sem"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#external_busnumber_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#external_depplace_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#multi_slot2a_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#sysmov_Request_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#open_afterTime_agenda -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#open_afterTime_agenda">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#Agenda"/>
+        <OwlSpeakOnto:role rdf:datatype="http://www.w3.org/2001/XMLSchema#string">collection</OwlSpeakOnto:role>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Bus_route_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Bus_route_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Departure_place_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Destination_sem"/>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Time_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Departure_place_sem"/>
+        <OwlSpeakOnto:mustnot rdf:resource="c:/OwlSpeak/empty.owl#Destination_sem"/>
+        <OwlSpeakOnto:summaryAgenda rdf:resource="c:/OwlSpeak/empty.owl#RequestUserInitiative_Open_SumAgenda"/>
+        <OwlSpeakOnto:requires rdf:resource="c:/OwlSpeak/empty.owl#Time_sem"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#external_busnumber_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#external_depplace_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#external_destination_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#multi_slot2a_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#multi_slot2b_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#multi_slot2d_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#multi_slot3a_mv"/>
+        <OwlSpeakOnto:has rdf:resource="c:/OwlSpeak/empty.owl#sysmov_Request_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#rew_default -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#rew_default">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#Reward"/>
+        <OwlSpeakOnto:rewardValue rdf:datatype="http://www.w3.org/2001/XMLSchema#int">-6</OwlSpeakOnto:rewardValue>
+        <OwlSpeakOnto:specialReward rdf:datatype="http://www.w3.org/2001/XMLSchema#string">default_reward</OwlSpeakOnto:specialReward>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#sbp00001 -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#sbp00001">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#SummaryBelief"/>
+        <OwlSpeakOnto:partitionNumFields rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</OwlSpeakOnto:partitionNumFields>
+        <OwlSpeakOnto:secondTopBeliefValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</OwlSpeakOnto:secondTopBeliefValue>
+        <OwlSpeakOnto:topBeliefValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</OwlSpeakOnto:topBeliefValue>
+        <OwlSpeakOnto:lastInteractionQuality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">5</OwlSpeakOnto:lastInteractionQuality>
+        <OwlSpeakOnto:historyState rdf:datatype="http://www.w3.org/2001/XMLSchema#string">INIT</OwlSpeakOnto:historyState>
+        <OwlSpeakOnto:partitionState rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UNIQUE</OwlSpeakOnto:partitionState>
+        <OwlSpeakOnto:summaryBeliefAgenda rdf:resource="c:/OwlSpeak/empty.owl#Open_SummaryAgenda"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#sbp00002 -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#sbp00002">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#SummaryBelief"/>
+        <OwlSpeakOnto:partitionNumFields rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</OwlSpeakOnto:partitionNumFields>
+        <OwlSpeakOnto:secondTopBeliefValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</OwlSpeakOnto:secondTopBeliefValue>
+        <OwlSpeakOnto:lastInteractionQuality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</OwlSpeakOnto:lastInteractionQuality>
+        <OwlSpeakOnto:topBeliefValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</OwlSpeakOnto:topBeliefValue>
+        <OwlSpeakOnto:historyState rdf:datatype="http://www.w3.org/2001/XMLSchema#string">INIT</OwlSpeakOnto:historyState>
+        <OwlSpeakOnto:partitionState rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UNIQUE</OwlSpeakOnto:partitionState>
+        <OwlSpeakOnto:summaryBeliefAgenda rdf:resource="c:/OwlSpeak/empty.owl#RequestSystemInitiative_Time_SumAgenda"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#sbp00003 -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#sbp00003">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#SummaryBelief"/>
+        <OwlSpeakOnto:secondTopBeliefValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.28125</OwlSpeakOnto:secondTopBeliefValue>
+        <OwlSpeakOnto:topBeliefValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.71875</OwlSpeakOnto:topBeliefValue>
+        <OwlSpeakOnto:partitionNumFields rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</OwlSpeakOnto:partitionNumFields>
+        <OwlSpeakOnto:lastInteractionQuality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">5</OwlSpeakOnto:lastInteractionQuality>
+        <OwlSpeakOnto:historyState rdf:datatype="http://www.w3.org/2001/XMLSchema#string">INIT</OwlSpeakOnto:historyState>
+        <OwlSpeakOnto:partitionState rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UNIQUE</OwlSpeakOnto:partitionState>
+        <OwlSpeakOnto:summaryBeliefAgenda rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Time_SummaryAgenda"/>
+        <OwlSpeakOnto:lastGrammarMove rdf:resource="c:/OwlSpeak/empty.owl#external_time_mv"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#sbp00004 -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#sbp00004">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#SummaryBelief"/>
+        <OwlSpeakOnto:secondTopBeliefValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0013369835</OwlSpeakOnto:secondTopBeliefValue>
+        <OwlSpeakOnto:topBeliefValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.998663</OwlSpeakOnto:topBeliefValue>
+        <OwlSpeakOnto:partitionNumFields rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</OwlSpeakOnto:partitionNumFields>
+        <OwlSpeakOnto:lastInteractionQuality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3</OwlSpeakOnto:lastInteractionQuality>
+        <OwlSpeakOnto:historyState rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CONFIRMED</OwlSpeakOnto:historyState>
+        <OwlSpeakOnto:partitionState rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UNIQUE</OwlSpeakOnto:partitionState>
+        <OwlSpeakOnto:summaryBeliefAgenda rdf:resource="c:/OwlSpeak/empty.owl#RequestSystemInitiative_Destination_SumAgenda"/>
+        <OwlSpeakOnto:lastGrammarMove rdf:resource="c:/OwlSpeak/empty.owl#usermov_affirm_travel_time"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#sbp00005 -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#sbp00005">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#SummaryBelief"/>
+        <OwlSpeakOnto:secondTopBeliefValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4222535</OwlSpeakOnto:secondTopBeliefValue>
+        <OwlSpeakOnto:topBeliefValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.5764095</OwlSpeakOnto:topBeliefValue>
+        <OwlSpeakOnto:partitionNumFields rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</OwlSpeakOnto:partitionNumFields>
+        <OwlSpeakOnto:lastInteractionQuality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">5</OwlSpeakOnto:lastInteractionQuality>
+        <OwlSpeakOnto:historyState rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CONFIRMED</OwlSpeakOnto:historyState>
+        <OwlSpeakOnto:partitionState rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UNIQUE</OwlSpeakOnto:partitionState>
+        <OwlSpeakOnto:summaryBeliefAgenda rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Destination_SummaryAgenda"/>
+        <OwlSpeakOnto:lastGrammarMove rdf:resource="c:/OwlSpeak/empty.owl#external_destination_mv"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#sbp00006 -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#sbp00006">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#SummaryBelief"/>
+        <OwlSpeakOnto:secondTopBeliefValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0028832671</OwlSpeakOnto:secondTopBeliefValue>
+        <OwlSpeakOnto:topBeliefValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.99577975</OwlSpeakOnto:topBeliefValue>
+        <OwlSpeakOnto:lastInteractionQuality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</OwlSpeakOnto:lastInteractionQuality>
+        <OwlSpeakOnto:partitionNumFields rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</OwlSpeakOnto:partitionNumFields>
+        <OwlSpeakOnto:historyState rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CONFIRMED</OwlSpeakOnto:historyState>
+        <OwlSpeakOnto:partitionState rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UNIQUE</OwlSpeakOnto:partitionState>
+        <OwlSpeakOnto:summaryBeliefAgenda rdf:resource="c:/OwlSpeak/empty.owl#RequestMixedInitiative_Depplace_SumAgenda"/>
+        <OwlSpeakOnto:lastGrammarMove rdf:resource="c:/OwlSpeak/empty.owl#usermov_affirm_arrival_place"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#sbp00007 -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#sbp00007">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#SummaryBelief"/>
+        <OwlSpeakOnto:secondTopBeliefValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.26497144</OwlSpeakOnto:secondTopBeliefValue>
+        <OwlSpeakOnto:topBeliefValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7308083</OwlSpeakOnto:topBeliefValue>
+        <OwlSpeakOnto:lastInteractionQuality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</OwlSpeakOnto:lastInteractionQuality>
+        <OwlSpeakOnto:partitionNumFields rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3</OwlSpeakOnto:partitionNumFields>
+        <OwlSpeakOnto:historyState rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CONFIRMED</OwlSpeakOnto:historyState>
+        <OwlSpeakOnto:partitionState rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GROUP</OwlSpeakOnto:partitionState>
+        <OwlSpeakOnto:summaryBeliefAgenda rdf:resource="c:/OwlSpeak/empty.owl#RequestSystemInitiative_Bus_route_SumAgenda"/>
+        <OwlSpeakOnto:lastGrammarMove rdf:resource="c:/OwlSpeak/empty.owl#external_depplace_mv"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#sbp00008 -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#sbp00008">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#SummaryBelief"/>
+        <OwlSpeakOnto:secondTopBeliefValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.26497144</OwlSpeakOnto:secondTopBeliefValue>
+        <OwlSpeakOnto:topBeliefValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7308083</OwlSpeakOnto:topBeliefValue>
+        <OwlSpeakOnto:lastInteractionQuality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</OwlSpeakOnto:lastInteractionQuality>
+        <OwlSpeakOnto:partitionNumFields rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3</OwlSpeakOnto:partitionNumFields>
+        <OwlSpeakOnto:historyState rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CONFIRMED</OwlSpeakOnto:historyState>
+        <OwlSpeakOnto:partitionState rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GROUP</OwlSpeakOnto:partitionState>
+        <OwlSpeakOnto:summaryBeliefAgenda rdf:resource="c:/OwlSpeak/empty.owl#RequestUserInitiative_Open_SumAgenda"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#sbp00009 -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#sbp00009">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#SummaryBelief"/>
+        <OwlSpeakOnto:secondTopBeliefValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.21187697</OwlSpeakOnto:secondTopBeliefValue>
+        <OwlSpeakOnto:topBeliefValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.5843704</OwlSpeakOnto:topBeliefValue>
+        <OwlSpeakOnto:partitionNumFields rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4</OwlSpeakOnto:partitionNumFields>
+        <OwlSpeakOnto:lastInteractionQuality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">5</OwlSpeakOnto:lastInteractionQuality>
+        <OwlSpeakOnto:historyState rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CONFIRMED</OwlSpeakOnto:historyState>
+        <OwlSpeakOnto:partitionState rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GROUP</OwlSpeakOnto:partitionState>
+        <OwlSpeakOnto:summaryBeliefAgenda rdf:resource="c:/OwlSpeak/empty.owl#RequestSystemInitiative_Bus_route_SumAgenda"/>
+        <OwlSpeakOnto:lastGrammarMove rdf:resource="c:/OwlSpeak/empty.owl#external_busnumber_mv"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#sbp00010 -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#sbp00010">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#SummaryBelief"/>
+        <OwlSpeakOnto:secondTopBeliefValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.21187697</OwlSpeakOnto:secondTopBeliefValue>
+        <OwlSpeakOnto:topBeliefValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.5843704</OwlSpeakOnto:topBeliefValue>
+        <OwlSpeakOnto:partitionNumFields rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4</OwlSpeakOnto:partitionNumFields>
+        <OwlSpeakOnto:lastInteractionQuality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">5</OwlSpeakOnto:lastInteractionQuality>
+        <OwlSpeakOnto:historyState rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CONFIRMED</OwlSpeakOnto:historyState>
+        <OwlSpeakOnto:partitionState rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GROUP</OwlSpeakOnto:partitionState>
+        <OwlSpeakOnto:summaryBeliefAgenda rdf:resource="c:/OwlSpeak/empty.owl#RequestSystemInitiative_Departure_place_SumAgenda"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#sbp00011 -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#sbp00011">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#SummaryBelief"/>
+        <OwlSpeakOnto:secondTopBeliefValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.18529482</OwlSpeakOnto:secondTopBeliefValue>
+        <OwlSpeakOnto:topBeliefValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7394312</OwlSpeakOnto:topBeliefValue>
+        <OwlSpeakOnto:lastInteractionQuality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3</OwlSpeakOnto:lastInteractionQuality>
+        <OwlSpeakOnto:partitionNumFields rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4</OwlSpeakOnto:partitionNumFields>
+        <OwlSpeakOnto:historyState rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CONFIRMED</OwlSpeakOnto:historyState>
+        <OwlSpeakOnto:partitionState rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GROUP</OwlSpeakOnto:partitionState>
+        <OwlSpeakOnto:summaryBeliefAgenda rdf:resource="c:/OwlSpeak/empty.owl#RequestSystemInitiative_Bus_route_SumAgenda"/>
+        <OwlSpeakOnto:lastGrammarMove rdf:resource="c:/OwlSpeak/empty.owl#external_depplace_mv"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#sysmov_Confirm_Arrival_place -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#sysmov_Confirm_Arrival_place">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#Move"/>
+        <OwlSpeakOnto:utterance rdf:resource="c:/OwlSpeak/empty.owl#destinationUtterance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#sysmov_Confirm_Bus_number -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#sysmov_Confirm_Bus_number">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#Move"/>
+        <OwlSpeakOnto:utterance rdf:resource="c:/OwlSpeak/empty.owl#busnumberUtterance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#sysmov_Confirm_Departure_place -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#sysmov_Confirm_Departure_place">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#Move"/>
+        <OwlSpeakOnto:utterance rdf:resource="c:/OwlSpeak/empty.owl#departureplaceUtterance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#sysmov_Confirm_Travel_time -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#sysmov_Confirm_Travel_time">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#Move"/>
+        <OwlSpeakOnto:utterance rdf:resource="c:/OwlSpeak/empty.owl#timeUtterance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#sysmov_Exit -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#sysmov_Exit">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#Move"/>
+        <OwlSpeakOnto:utterance rdf:resource="c:/OwlSpeak/empty.owl#infoUtterance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#sysmov_Request_Arrival_place -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#sysmov_Request_Arrival_place">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#Move"/>
+        <OwlSpeakOnto:utterance rdf:resource="c:/OwlSpeak/empty.owl#dummyUtterance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#sysmov_Request_Bus_number -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#sysmov_Request_Bus_number">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#Move"/>
+        <OwlSpeakOnto:utterance rdf:resource="c:/OwlSpeak/empty.owl#dummyUtterance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#sysmov_Request_Departure_place -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#sysmov_Request_Departure_place">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#Move"/>
+        <OwlSpeakOnto:utterance rdf:resource="c:/OwlSpeak/empty.owl#dummyUtterance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#sysmov_Request_Open -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#sysmov_Request_Open">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#Move"/>
+        <OwlSpeakOnto:utterance rdf:resource="c:/OwlSpeak/empty.owl#dummyUtterance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#sysmov_Request_Travel_time -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#sysmov_Request_Travel_time">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#Move"/>
+        <OwlSpeakOnto:utterance rdf:resource="c:/OwlSpeak/empty.owl#dummyUtterance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#timeUtterance -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#timeUtterance">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#Utterance"/>
+        <OwlSpeakOnto:utteranceString xml:lang="en">%Time_var%</OwlSpeakOnto:utteranceString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#userBeliefspace -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#userBeliefspace">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#BeliefSpace"/>
+        <OwlSpeakOnto:prior rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</OwlSpeakOnto:prior>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#userWorkspace -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#userWorkspace">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#WorkSpace"/>
+        <OwlSpeakOnto:next rdf:resource="c:/OwlSpeak/empty.owl#Open_agenda"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#usermov_affirm_arrival_place -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#usermov_affirm_arrival_place">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#Move"/>
+        <OwlSpeakOnto:semantic rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Destination_sem"/>
+        <OwlSpeakOnto:contrarySemantic rdf:resource="c:/OwlSpeak/empty.owl#Reject_Destination_sem"/>
+        <OwlSpeakOnto:grammar rdf:resource="c:/OwlSpeak/empty.owl#dummygrammar"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#usermov_affirm_bus_number -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#usermov_affirm_bus_number">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#Move"/>
+        <OwlSpeakOnto:semantic rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Bus_route_sem"/>
+        <OwlSpeakOnto:contrarySemantic rdf:resource="c:/OwlSpeak/empty.owl#Reject_Bus_route_sem"/>
+        <OwlSpeakOnto:grammar rdf:resource="c:/OwlSpeak/empty.owl#dummygrammar"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#usermov_affirm_departure_place -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#usermov_affirm_departure_place">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#Move"/>
+        <OwlSpeakOnto:semantic rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Departure_place_sem"/>
+        <OwlSpeakOnto:contrarySemantic rdf:resource="c:/OwlSpeak/empty.owl#Reject_Departure_place_sem"/>
+        <OwlSpeakOnto:grammar rdf:resource="c:/OwlSpeak/empty.owl#dummygrammar"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#usermov_affirm_travel_time -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#usermov_affirm_travel_time">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#Move"/>
+        <OwlSpeakOnto:semantic rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Time_sem"/>
+        <OwlSpeakOnto:contrarySemantic rdf:resource="c:/OwlSpeak/empty.owl#Reject_Time_sem"/>
+        <OwlSpeakOnto:grammar rdf:resource="c:/OwlSpeak/empty.owl#dummygrammar"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#usermov_deny_arrival_place -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#usermov_deny_arrival_place">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#Move"/>
+        <OwlSpeakOnto:contrarySemantic rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Destination_sem"/>
+        <OwlSpeakOnto:contrarySemantic rdf:resource="c:/OwlSpeak/empty.owl#Destination_sem"/>
+        <OwlSpeakOnto:semantic rdf:resource="c:/OwlSpeak/empty.owl#Reject_Destination_sem"/>
+        <OwlSpeakOnto:grammar rdf:resource="c:/OwlSpeak/empty.owl#dummygrammar"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#usermov_deny_bus_number -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#usermov_deny_bus_number">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#Move"/>
+        <OwlSpeakOnto:contrarySemantic rdf:resource="c:/OwlSpeak/empty.owl#Bus_route_sem"/>
+        <OwlSpeakOnto:contrarySemantic rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Bus_route_sem"/>
+        <OwlSpeakOnto:semantic rdf:resource="c:/OwlSpeak/empty.owl#Reject_Bus_route_sem"/>
+        <OwlSpeakOnto:grammar rdf:resource="c:/OwlSpeak/empty.owl#dummygrammar"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#usermov_deny_departure_place -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#usermov_deny_departure_place">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#Move"/>
+        <OwlSpeakOnto:contrarySemantic rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Departure_place_sem"/>
+        <OwlSpeakOnto:contrarySemantic rdf:resource="c:/OwlSpeak/empty.owl#Departure_place_sem"/>
+        <OwlSpeakOnto:semantic rdf:resource="c:/OwlSpeak/empty.owl#Reject_Departure_place_sem"/>
+        <OwlSpeakOnto:grammar rdf:resource="c:/OwlSpeak/empty.owl#dummygrammar"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- c:/OwlSpeak/empty.owl#usermov_deny_travel_time -->
+
+    <owl:NamedIndividual rdf:about="c:/OwlSpeak/empty.owl#usermov_deny_travel_time">
+        <rdf:type rdf:resource="http://localhost:8083/OwlSpeakOnto.owl#Move"/>
+        <OwlSpeakOnto:contrarySemantic rdf:resource="c:/OwlSpeak/empty.owl#Confirm_Time_sem"/>
+        <OwlSpeakOnto:semantic rdf:resource="c:/OwlSpeak/empty.owl#Reject_Time_sem"/>
+        <OwlSpeakOnto:contrarySemantic rdf:resource="c:/OwlSpeak/empty.owl#Time_sem"/>
+        <OwlSpeakOnto:grammar rdf:resource="c:/OwlSpeak/empty.owl#dummygrammar"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.1) http://owlapi.sourceforge.net -->
+

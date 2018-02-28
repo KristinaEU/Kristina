@@ -1,0 +1,54 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+    xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:p1="http://localhost:8080/Atraco/OwlSpeakOnto.owl#"
+    xmlns="http://localhost:8080/Atraco/heating.owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+    xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" > 
+  <rdf:Description rdf:about="http://localhost:8080/Atraco/heating.owl#respawns_agenda">
+    <p1:respawn rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</p1:respawn>
+    <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Agenda"/>
+    <p1:has rdf:resource="http://localhost:8080/Atraco/heating.owl#on_move"/>
+    <p1:has rdf:resource="http://localhost:8080/Atraco/heating.owl#off_move"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/Atraco/heating.owl#on_move">
+    <p1:grammar rdf:resource="http://localhost:8080/Atraco/heating.owl#on_grammar"/>
+    <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Move"/>
+    <p1:semantic rdf:resource="http://localhost:8080/Atraco/heating.owl#off_semantic"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/Atraco/heating.owl#userWorkspace">
+    <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#WorkSpace"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/Atraco/heating.owl#userBeliefspace">
+    <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#BeliefSpace"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/Atraco/heating.owl#on_semantic">
+    <p1:semanticString xml:lang="en">heating_on;</p1:semanticString>
+    <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Semantic"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/Atraco/heating.owl#on_grammar">
+    <p1:grammarString xml:lang="en">(heating on)</p1:grammarString>
+    <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Grammar"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/Atraco/heating.owl#off_semantic">
+    <p1:semanticString xml:lang="en">heating_off;</p1:semanticString>
+    <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Semantic"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/Atraco/heating.owl">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <owl:imports rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/Atraco/heating.owl#off_grammar">
+    <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Grammar"/>
+    <p1:grammarString xml:lang="en">(heating off)</p1:grammarString>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/Atraco/heating.owl#off_move">
+    <p1:grammar rdf:resource="http://localhost:8080/Atraco/heating.owl#off_grammar"/>
+    <p1:semantic rdf:resource="http://localhost:8080/Atraco/heating.owl#on_semantic"/>
+    <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Move"/>
+  </rdf:Description>
+</rdf:RDF>

@@ -1,0 +1,12 @@
+public <Repeat> = [sorry] <REPEAT> [<_courtesy>] | excuse me | [i] [beg] [your] pardon | pardon me | [sorry] what was that | [sorry] <WHATD> you [just] say | [say] what | [sorry] i didn't <HEAR> <YOU> | come again | sorry;
+<WHATD> = what did | what'd;
+<REPEAT> = repeat [<_it>] | say [<_it>] [again];
+<HEAR> = hear | understand | catch;
+<YOU> = you | that | it | what you said;/*End of Slot*/
+
+public <Repeat> = [sorry] <REPEAT> [<_courtesy>] | excuse me | [i] [beg] [your] pardon | pardon me | [sorry] what was that | [sorry] <WHATD> you [just] say | [say] what | [sorry] i didn't <HEAR> <YOU> | come again | sorry;
+<WHATD> = what did | what'd;
+<REPEAT> = repeat [<_it>] | say [<_it>] [again];
+<HEAR> = hear | understand | catch;
+<YOU> = you | that | it | what you said;/*End of Slot*/
+

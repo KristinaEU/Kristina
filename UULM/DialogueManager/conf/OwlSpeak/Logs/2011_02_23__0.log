@@ -1,0 +1,22 @@
+23.02.2011 11:31:17 Command: reset 
+INFO: OK
+23.02.2011 11:31:18 Command: request 
+INFO: OK
+23.02.2011 11:32:44 Command: reset 
+INFO: OK
+23.02.2011 11:32:45 Command: request 
+INFO: OK
+23.02.2011 11:33:49 Command: request 
+INFO: OK
+23.02.2011 11:36:04 Command: request 
+INFO: OK
+23.02.2011 11:58:16 Command: request 
+INFO: OK
+23.02.2011 11:58:16 Command: work 
+INFO: Agenda: intro_agenda | Move: null | Speak: null
+23.02.2011 11:58:34 Command: request 
+INFO: nomatch
+23.02.2011 11:58:44 Command: request 
+INFO: noinput
+23.02.2011 11:58:55 Command: request 
+INFO: noinput

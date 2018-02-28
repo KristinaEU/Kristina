@@ -1,0 +1,2310 @@
+16.02.2011 07:53:20 Command: request 
+INFO: OK
+16.02.2011 07:53:30 Command: reset 
+INFO: OK
+16.02.2011 07:53:32 Command: request 
+INFO: OK
+16.02.2011 07:53:36 Command: work 
+INFO: Agenda: question_agenda | Move: light_a1n1d_medium_move | Speak: null
+16.02.2011 07:53:38 Command: work 
+INFO: Agenda: question_agenda | Move: light_a1n1d_LightsOff_move | Speak: null
+16.02.2011 07:53:40 Command: work 
+INFO: Agenda: question_agenda | Move: photos_a1n1d_start_move | Speak: null
+16.02.2011 07:53:44 Command: work 
+INFO: Agenda: question_agenda | Move: music_a1n1d_start_move | Speak: null
+16.02.2011 07:53:47 Command: work 
+INFO: Agenda: question_agenda | Move: yesnoquestion_a1n1d_no_move | Speak: null
+16.02.2011 07:53:55 Command: reset 
+INFO: OK
+16.02.2011 07:53:56 Command: request 
+INFO: OK
+16.02.2011 07:54:00 Command: work 
+INFO: Agenda: question_agenda | Move: yesnoquestion_a1n1d_exit_move | Speak: null
+16.02.2011 07:54:02 Command: work 
+INFO: Agenda: fault | Move: heating_a1n1d_off_move | Speak: null
+16.02.2011 07:54:03 Command: work 
+INFO: Agenda: fault | Move: alarm_a1n1d_off_move | Speak: null
+16.02.2011 07:54:03 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_veryHigh_move | Speak: null
+16.02.2011 07:54:04 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_LightsOff_move | Speak: null
+16.02.2011 07:54:06 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_start_move | Speak: null
+16.02.2011 07:54:07 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_currentPic_move | Speak: null
+16.02.2011 07:54:09 Command: work 
+INFO: Agenda: whichPic_agenda | Move: null | Speak: null
+16.02.2011 07:54:11 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_prev_move | Speak: null
+16.02.2011 07:57:48 Command: request 
+INFO: OK
+16.02.2011 07:57:54 Command: request 
+INFO: OK
+16.02.2011 07:57:55 Command: request 
+INFO: OK
+16.02.2011 07:57:56 Command: request 
+INFO: OK
+16.02.2011 07:59:06 Command: request 
+INFO: OK
+16.02.2011 07:59:07 Command: request 
+INFO: OK
+16.02.2011 07:59:07 Command: request 
+INFO: OK
+16.02.2011 07:59:08 Command: request 
+INFO: OK
+16.02.2011 07:59:09 Command: request 
+INFO: OK
+16.02.2011 07:59:10 Command: reset 
+INFO: OK
+16.02.2011 08:00:04 Command: request 
+INFO: OK
+16.02.2011 08:00:04 Command: request 
+INFO: OK
+16.02.2011 08:00:05 Command: request 
+INFO: OK
+16.02.2011 08:00:05 Command: request 
+INFO: OK
+16.02.2011 08:00:07 Command: reset 
+INFO: OK
+16.02.2011 08:00:11 Command: reset 
+INFO: OK
+16.02.2011 08:00:22 Command: request 
+INFO: OK
+16.02.2011 08:05:05 Command: request 
+INFO: OK
+16.02.2011 08:06:08 Command: request 
+INFO: OK
+16.02.2011 08:07:42 Command: request 
+INFO: OK
+16.02.2011 08:07:48 Command: work 
+INFO: Agenda: question_agenda | Move: yesnoquestion_a1n1d_no_move | Speak: null
+16.02.2011 08:07:52 Command: request 
+INFO: OK
+16.02.2011 08:07:53 Command: request 
+INFO: OK
+16.02.2011 08:07:54 Command: request 
+INFO: OK
+16.02.2011 08:07:54 Command: request 
+INFO: OK
+16.02.2011 08:07:55 Command: request 
+INFO: OK
+16.02.2011 08:07:55 Command: request 
+INFO: OK
+16.02.2011 08:07:56 Command: request 
+INFO: OK
+16.02.2011 08:08:38 Command: request 
+INFO: OK
+16.02.2011 08:08:47 Command: request 
+INFO: OK
+16.02.2011 08:08:48 Command: request 
+INFO: OK
+16.02.2011 08:08:49 Command: request 
+INFO: OK
+16.02.2011 08:08:53 Command: request 
+INFO: OK
+16.02.2011 08:09:00 Command: request 
+INFO: OK
+16.02.2011 08:09:01 Command: request 
+INFO: OK
+16.02.2011 08:09:01 Command: request 
+INFO: OK
+16.02.2011 08:09:02 Command: request 
+INFO: OK
+16.02.2011 08:09:09 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_low_move | Speak: null
+16.02.2011 08:09:10 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_high_move | Speak: null
+16.02.2011 08:09:11 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_veryLow_move | Speak: null
+16.02.2011 08:09:12 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_currentPic_move | Speak: null
+16.02.2011 08:09:14 Command: work 
+INFO: Agenda: whichPic_agenda | Move: null | Speak: null
+16.02.2011 08:09:17 Command: work 
+INFO: Agenda: fault | Move: music_a1n1d_musicUp_move | Speak: null
+16.02.2011 08:09:18 Command: work 
+INFO: Agenda: fault | Move: music_a1n1d_musicUp_move | Speak: null
+16.02.2011 08:09:19 Command: work 
+INFO: Agenda: fault | Move: music_a1n1d_musicUp_move | Speak: null
+16.02.2011 08:09:20 Command: work 
+INFO: Agenda: fault | Move: music_a1n1d_selectRock_move | Speak: null
+16.02.2011 08:09:21 Command: work 
+INFO: Agenda: fault | Move: music_a1n1d_selectClassic_move | Speak: null
+16.02.2011 08:09:21 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_selectVen_move | Speak: null
+16.02.2011 08:09:22 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_play_move | Speak: null
+16.02.2011 08:09:23 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_LigthsOn_move | Speak: null
+16.02.2011 08:09:24 Command: work 
+INFO: Agenda: fault | Move: heating_a1n1d_on_move | Speak: null
+16.02.2011 08:09:24 Command: work 
+INFO: Agenda: fault | Move: alarm_a1n1d_on_move | Speak: null
+16.02.2011 08:09:25 Command: work 
+INFO: Agenda: fault | Move: alarm_a1n1d_on_move | Speak: null
+16.02.2011 08:09:26 Command: work 
+INFO: Agenda: fault | Move: alarm_a1n1d_on_move | Speak: null
+16.02.2011 08:13:04 Command: reset 
+INFO: OK
+16.02.2011 08:13:06 Command: request 
+INFO: OK
+16.02.2011 08:13:07 Command: work 
+INFO: Agenda: question_agenda | Move: light_a1n1d_high_move | Speak: null
+16.02.2011 08:13:08 Command: work 
+INFO: Agenda: question_agenda | Move: heating_a1n1d_on_move | Speak: null
+16.02.2011 08:13:08 Command: work 
+INFO: Agenda: question_agenda | Move: alarm_a1n1d_on_move | Speak: null
+16.02.2011 08:13:09 Command: work 
+INFO: Agenda: question_agenda | Move: light_a1n1d_medium_move | Speak: null
+16.02.2011 08:13:10 Command: work 
+INFO: Agenda: question_agenda | Move: alarm_a1n1d_on_move | Speak: null
+16.02.2011 08:13:12 Command: work 
+INFO: Agenda: question_agenda | Move: photos_a1n1d_start_move | Speak: null
+16.02.2011 08:13:13 Command: work 
+INFO: Agenda: question_agenda | Move: photos_a1n1d_currentPic_move | Speak: null
+16.02.2011 08:13:13 Command: work 
+INFO: Agenda: question_agenda | Move: heating_a1n1d_on_move | Speak: null
+16.02.2011 08:13:14 Command: work 
+INFO: Agenda: question_agenda | Move: light_a1n1d_medium_move | Speak: null
+16.02.2011 08:13:17 Command: work 
+INFO: Agenda: question_agenda | Move: photos_a1n1d_exit_move | Speak: null
+16.02.2011 08:13:18 Command: work 
+INFO: Agenda: question_agenda | Move: light_a1n1d_veryHigh_move | Speak: null
+16.02.2011 08:13:19 Command: work 
+INFO: Agenda: question_agenda | Move: light_a1n1d_veryLow_move | Speak: null
+16.02.2011 08:28:09 Command: reset 
+INFO: OK
+16.02.2011 08:28:10 Command: request 
+INFO: OK
+16.02.2011 08:28:10 Command: request 
+INFO: OK
+16.02.2011 08:28:11 Command: request 
+INFO: OK
+16.02.2011 08:28:11 Command: request 
+INFO: OK
+16.02.2011 08:28:11 Command: request 
+INFO: OK
+16.02.2011 08:28:12 Command: work 
+INFO: Agenda: question_agenda | Move: light_a1n1d_veryLow_move | Speak: null
+16.02.2011 08:28:14 Command: work 
+INFO: Agenda: question_agenda | Move: system_a1n1d_reset | Speak: null
+16.02.2011 08:28:14 Command: work 
+INFO: Agenda: question_agenda | Move: system_a1n1d_reloadsets | Speak: null
+16.02.2011 08:28:16 Command: work 
+INFO: Agenda: question_agenda | Move: light_a1n1d_LigthsOn_move | Speak: null
+16.02.2011 08:28:16 Command: work 
+INFO: Agenda: question_agenda | Move: light_a1n1d_medium_move | Speak: null
+16.02.2011 08:28:17 Command: work 
+INFO: Agenda: question_agenda | Move: light_a1n1d_veryLow_move | Speak: null
+16.02.2011 08:28:17 Command: work 
+INFO: Agenda: question_agenda | Move: heating_a1n1d_on_move | Speak: null
+16.02.2011 08:28:18 Command: work 
+INFO: Agenda: question_agenda | Move: alarm_a1n1d_off_move | Speak: null
+16.02.2011 08:28:18 Command: work 
+INFO: Agenda: question_agenda | Move: photos_a1n1d_start_move | Speak: null
+16.02.2011 08:28:19 Command: work 
+INFO: Agenda: question_agenda | Move: photos_a1n1d_currentPic_move | Speak: null
+16.02.2011 08:28:20 Command: work 
+INFO: Agenda: question_agenda | Move: photos_a1n1d_selectSwi_move | Speak: null
+16.02.2011 08:28:21 Command: work 
+INFO: Agenda: question_agenda | Move: photos_a1n1d_selectWed_move | Speak: null
+16.02.2011 08:28:22 Command: work 
+INFO: Agenda: question_agenda | Move: photos_a1n1d_currentPic_move | Speak: null
+16.02.2011 08:28:24 Command: work 
+INFO: Agenda: question_agenda | Move: photos_a1n1d_currentPic_move | Speak: null
+16.02.2011 08:28:25 Command: work 
+INFO: Agenda: question_agenda | Move: photos_a1n1d_currentPic_move | Speak: null
+16.02.2011 08:28:29 Command: work 
+INFO: Agenda: question_agenda | Move: photos_a1n1d_currentPic_move | Speak: null
+16.02.2011 08:28:35 Command: work 
+INFO: Agenda: question_agenda | Move: yesnoquestion_a1n1d_no_move | Speak: null
+16.02.2011 08:28:37 Command: work 
+INFO: Agenda: whichPic_agenda | Move: null | Speak: null
+16.02.2011 08:28:39 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_currentPic_move | Speak: null
+16.02.2011 08:28:40 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_currentPic_move | Speak: null
+16.02.2011 08:28:41 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_currentPic_move | Speak: null
+16.02.2011 08:32:13 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_currentPic_move | Speak: null
+16.02.2011 08:32:15 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_currentPic_move | Speak: null
+16.02.2011 08:32:16 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_currentPic_move | Speak: null
+16.02.2011 08:32:17 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_currentPic_move | Speak: null
+16.02.2011 08:32:24 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_selectItaly_move | Speak: null
+16.02.2011 08:32:31 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_selectItaly_move | Speak: null
+16.02.2011 08:32:32 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_selectItaly_move | Speak: null
+16.02.2011 08:33:57 Command: reset 
+INFO: OK
+16.02.2011 08:33:59 Command: request 
+INFO: OK
+16.02.2011 08:34:25 Command: work 
+INFO: Agenda: question_agenda | Move: yesnoquestion_a1n1d_no_move | Speak: null
+16.02.2011 08:34:27 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_start_move | Speak: null
+16.02.2011 08:34:29 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_currentPic_move | Speak: null
+16.02.2011 08:34:30 Command: work 
+INFO: Agenda: whichPic_agenda | Move: null | Speak: null
+16.02.2011 08:34:33 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_next_move | Speak: null
+16.02.2011 08:34:44 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_exit_move | Speak: null
+16.02.2011 08:35:59 Command: request 
+INFO: OK
+16.02.2011 08:36:56 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_start_move | Speak: null
+16.02.2011 08:37:01 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_currentPic_move | Speak: null
+16.02.2011 08:37:02 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_currentPic_move | Speak: null
+16.02.2011 08:37:03 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_currentPic_move | Speak: null
+16.02.2011 08:37:03 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_currentPic_move | Speak: null
+16.02.2011 08:37:04 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_currentPic_move | Speak: null
+16.02.2011 08:47:14 Command: request 
+INFO: OK
+16.02.2011 09:23:00 Command: reset 
+INFO: OK
+16.02.2011 09:23:02 Command: request 
+INFO: OK
+16.02.2011 09:23:05 Command: request 
+INFO: OK
+16.02.2011 09:23:08 Command: work 
+INFO: Agenda: question_agenda | Move: yesnoquestion_a1n1d_no_move | Speak: null
+16.02.2011 09:23:12 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_start_move | Speak: null
+16.02.2011 09:23:16 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_exit_move | Speak: null
+16.02.2011 09:24:01 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_start_move | Speak: null
+16.02.2011 09:24:04 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_next_move | Speak: null
+16.02.2011 09:24:39 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_currentPic_move | Speak: null
+16.02.2011 09:24:41 Command: work 
+INFO: Agenda: whichPic_agenda | Move: null | Speak: null
+16.02.2011 09:24:45 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_currentPic_move | Speak: null
+16.02.2011 09:24:46 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_currentPic_move | Speak: null
+16.02.2011 09:28:25 Command: reset 
+INFO: OK
+16.02.2011 09:29:03 Command: request 
+INFO: OK
+16.02.2011 09:29:08 Command: work 
+INFO: Agenda: question_agenda | Move: yesnoquestion_a1n1d_no_move | Speak: null
+16.02.2011 09:29:14 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_start_move | Speak: null
+16.02.2011 09:29:29 Command: request 
+INFO: OK
+16.02.2011 09:35:22 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_currentPic_move | Speak: null
+16.02.2011 09:50:19 Command: request 
+INFO: OK
+16.02.2011 09:50:20 Command: reset 
+INFO: OK
+16.02.2011 09:50:21 Command: request 
+INFO: OK
+16.02.2011 09:50:24 Command: work 
+INFO: Agenda: question_agenda | Move: yesnoquestion_a1n1d_no_move | Speak: null
+16.02.2011 09:50:29 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_start_move | Speak: null
+16.02.2011 09:50:34 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_currentPic_move | Speak: null
+16.02.2011 09:50:40 Command: work 
+INFO: Agenda: whichPic_agenda | Move: null | Speak: null
+16.02.2011 09:51:22 Command: reset 
+INFO: OK
+16.02.2011 09:51:23 Command: request 
+INFO: OK
+16.02.2011 09:51:24 Command: work 
+INFO: Agenda: question_agenda | Move: yesnoquestion_a1n1d_no_move | Speak: null
+16.02.2011 09:51:27 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_start_move | Speak: null
+16.02.2011 09:51:29 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_currentPic_move | Speak: null
+16.02.2011 09:51:59 Command: work 
+INFO: Agenda: whichPic_agenda | Move: null | Speak: null
+16.02.2011 09:52:03 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_currentPic_move | Speak: null
+16.02.2011 09:52:04 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_currentPic_move | Speak: null
+16.02.2011 09:52:05 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_currentPic_move | Speak: null
+16.02.2011 09:52:06 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_currentPic_move | Speak: null
+16.02.2011 09:52:07 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_currentPic_move | Speak: null
+16.02.2011 09:53:04 Command: reset 
+INFO: OK
+16.02.2011 09:53:06 Command: request 
+INFO: OK
+16.02.2011 09:53:24 Command: work 
+INFO: Agenda: question_agenda | Move: yesnoquestion_a1n1d_no_move | Speak: null
+16.02.2011 09:53:27 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_start_move | Speak: null
+16.02.2011 09:53:33 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_currentPic_move | Speak: null
+16.02.2011 09:53:36 Command: work 
+INFO: Agenda: whichPic_agenda | Move: null | Speak: null
+16.02.2011 09:53:41 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_currentPic_move | Speak: null
+16.02.2011 09:53:42 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_currentPic_move | Speak: null
+16.02.2011 09:53:43 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_currentPic_move | Speak: null
+16.02.2011 09:53:44 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_currentPic_move | Speak: null
+16.02.2011 09:53:45 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_currentPic_move | Speak: null
+16.02.2011 09:53:46 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_currentPic_move | Speak: null
+16.02.2011 09:55:04 Command: reset 
+INFO: OK
+16.02.2011 09:55:07 Command: request 
+INFO: OK
+16.02.2011 09:55:43 Command: request 
+INFO: OK
+16.02.2011 09:55:55 Command: work 
+INFO: Agenda: question_agenda | Move: yesnoquestion_a1n1d_no_move | Speak: null
+16.02.2011 09:56:01 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_start_move | Speak: null
+16.02.2011 09:56:06 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_currentPic_move | Speak: null
+16.02.2011 09:56:08 Command: work 
+INFO: Agenda: whichPic_agenda | Move: null | Speak: null
+16.02.2011 09:56:11 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_currentPic_move | Speak: null
+16.02.2011 09:56:13 Command: work 
+INFO: Agenda: whichPic_agenda | Move: null | Speak: null
+16.02.2011 09:56:15 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_currentPic_move | Speak: null
+16.02.2011 09:56:17 Command: work 
+INFO: Agenda: whichPic_agenda | Move: null | Speak: null
+16.02.2011 09:56:31 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_currentPic_move | Speak: null
+16.02.2011 09:56:35 Command: work 
+INFO: Agenda: whichPic_agenda | Move: null | Speak: null
+16.02.2011 09:58:19 Command: reset 
+INFO: OK
+16.02.2011 09:58:21 Command: request 
+INFO: OK
+16.02.2011 09:58:24 Command: work 
+INFO: Agenda: question_agenda | Move: yesnoquestion_a1n1d_yes_move | Speak: null
+16.02.2011 09:58:29 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_start_move | Speak: null
+16.02.2011 09:58:34 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_currentPic_move | Speak: null
+16.02.2011 09:58:37 Command: work 
+INFO: Agenda: whichPic_agenda | Move: null | Speak: null
+16.02.2011 09:58:42 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_currentPic_move | Speak: null
+16.02.2011 09:58:45 Command: work 
+INFO: Agenda: whichPic_agenda | Move: null | Speak: null
+16.02.2011 10:08:38 Command: reset 
+INFO: OK
+16.02.2011 10:08:40 Command: request 
+INFO: OK
+16.02.2011 10:08:43 Command: work 
+INFO: Agenda: question_agenda | Move: yesnoquestion_a1n1d_no_move | Speak: null
+16.02.2011 10:08:47 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_low_move | Speak: null
+16.02.2011 10:08:50 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_low_move | Speak: null
+16.02.2011 10:08:51 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_low_move | Speak: null
+16.02.2011 10:08:52 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_low_move | Speak: null
+16.02.2011 10:08:53 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_low_move | Speak: null
+16.02.2011 10:08:56 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_start_move | Speak: null
+16.02.2011 10:09:00 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_currentPic_move | Speak: null
+16.02.2011 10:09:03 Command: work 
+INFO: Agenda: whichPic_agenda | Move: null | Speak: null
+16.02.2011 10:09:11 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_currentPic_move | Speak: null
+16.02.2011 10:22:28 Command: reset 
+INFO: OK
+16.02.2011 10:22:30 Command: request 
+INFO: OK
+16.02.2011 10:22:37 Command: request 
+INFO: OK
+16.02.2011 10:22:38 Command: request 
+INFO: OK
+16.02.2011 10:22:39 Command: request 
+INFO: OK
+16.02.2011 10:22:40 Command: request 
+INFO: OK
+16.02.2011 10:22:44 Command: work 
+INFO: Agenda: question_agenda | Move: yesnoquestion_a1n1d_no_move | Speak: null
+16.02.2011 10:22:49 Command: work 
+INFO: Agenda: question_agenda | Move: yesnoquestion_a1n1d_no_move | Speak: null
+16.02.2011 10:23:02 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_low_move | Speak: null
+16.02.2011 10:23:06 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_low_move | Speak: null
+16.02.2011 10:23:08 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_low_move | Speak: null
+16.02.2011 10:23:31 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_start_move | Speak: null
+16.02.2011 10:23:34 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_currentPic_move | Speak: null
+16.02.2011 10:23:35 Command: work 
+INFO: Agenda: whichPic_agenda | Move: null | Speak: null
+16.02.2011 10:23:37 Command: work 
+INFO: Agenda: whichPic_agenda | Move: null | Speak: null
+16.02.2011 10:23:40 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_currentPic_move | Speak: null
+16.02.2011 10:23:41 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_currentPic_move | Speak: null
+16.02.2011 10:23:42 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_currentPic_move | Speak: null
+16.02.2011 10:24:01 Command: reset 
+INFO: OK
+16.02.2011 10:24:03 Command: request 
+INFO: OK
+16.02.2011 10:24:05 Command: work 
+INFO: Agenda: question_agenda | Move: yesnoquestion_a1n1d_no_move | Speak: null
+16.02.2011 10:24:11 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_low_move | Speak: null
+16.02.2011 10:24:11 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_high_move | Speak: null
+16.02.2011 10:24:12 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_veryLow_move | Speak: null
+16.02.2011 10:24:15 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_start_move | Speak: null
+16.02.2011 10:24:17 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_currentPic_move | Speak: null
+16.02.2011 10:24:19 Command: work 
+INFO: Agenda: whichPic_agenda | Move: null | Speak: null
+16.02.2011 10:24:39 Command: reset 
+INFO: OK
+16.02.2011 10:24:41 Command: request 
+INFO: OK
+16.02.2011 10:24:43 Command: work 
+INFO: Agenda: question_agenda | Move: yesnoquestion_a1n1d_no_move | Speak: null
+16.02.2011 10:24:45 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_start_move | Speak: null
+16.02.2011 10:24:47 Command: request 
+INFO: OK
+16.02.2011 10:25:30 Command: request 
+INFO: OK
+16.02.2011 10:31:00 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_currentPic_move | Speak: null
+16.02.2011 10:33:00 Command: reset 
+INFO: OK
+16.02.2011 10:33:01 Command: request 
+INFO: OK
+16.02.2011 10:33:02 Command: work 
+INFO: Agenda: question_agenda | Move: yesnoquestion_a1n1d_no_move | Speak: null
+16.02.2011 10:33:04 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_start_move | Speak: null
+16.02.2011 10:33:24 Command: request 
+INFO: OK
+16.02.2011 10:33:41 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_currentPic_move | Speak: null
+16.02.2011 10:40:15 Command: work 
+INFO: Agenda: whichPic_agenda | Move: null | Speak: null
+16.02.2011 10:45:03 Command: reset 
+INFO: OK
+16.02.2011 10:45:04 Command: request 
+INFO: OK
+16.02.2011 10:45:05 Command: work 
+INFO: Agenda: question_agenda | Move: yesnoquestion_a1n1d_no_move | Speak: null
+16.02.2011 10:45:10 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_start_move | Speak: null
+16.02.2011 10:45:13 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_currentPic_move | Speak: null
+16.02.2011 10:45:17 Command: work 
+INFO: Agenda: whichPic_agenda | Move: null | Speak: null
+16.02.2011 10:45:22 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_currentPic_move | Speak: null
+16.02.2011 10:46:18 Command: reset 
+INFO: OK
+16.02.2011 10:46:19 Command: request 
+INFO: OK
+16.02.2011 10:46:23 Command: work 
+INFO: Agenda: question_agenda | Move: photos_a1n1d_start_move | Speak: null
+16.02.2011 10:46:25 Command: work 
+INFO: Agenda: question_agenda | Move: photos_a1n1d_currentPic_move | Speak: null
+16.02.2011 10:46:31 Command: work 
+INFO: Agenda: question_agenda | Move: yesnoquestion_a1n1d_no_move | Speak: null
+16.02.2011 10:46:32 Command: work 
+INFO: Agenda: whichPic_agenda | Move: null | Speak: null
+16.02.2011 10:46:37 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_currentPic_move | Speak: null
+16.02.2011 10:46:38 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_currentPic_move | Speak: null
+16.02.2011 10:47:31 Command: reset 
+INFO: OK
+16.02.2011 10:47:32 Command: request 
+INFO: OK
+16.02.2011 10:47:33 Command: work 
+INFO: Agenda: question_agenda | Move: yesnoquestion_a1n1d_no_move | Speak: null
+16.02.2011 10:47:38 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_start_move | Speak: null
+16.02.2011 10:47:41 Command: request 
+INFO: OK
+16.02.2011 10:49:13 Command: request 
+INFO: OK
+16.02.2011 10:51:46 Command: reset 
+INFO: OK
+16.02.2011 10:51:47 Command: request 
+INFO: OK
+16.02.2011 10:51:48 Command: work 
+INFO: Agenda: question_agenda | Move: yesnoquestion_a1n1d_no_move | Speak: null
+16.02.2011 10:51:50 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_start_move | Speak: null
+16.02.2011 10:51:52 Command: request 
+INFO: OK
+16.02.2011 10:51:52 Command: request 
+INFO: OK
+16.02.2011 10:52:08 Command: request 
+INFO: OK
+16.02.2011 10:54:15 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_currentPic_move | Speak: null
+16.02.2011 10:54:59 Command: reset 
+INFO: OK
+16.02.2011 10:55:00 Command: request 
+INFO: OK
+16.02.2011 10:55:02 Command: work 
+INFO: Agenda: question_agenda | Move: yesnoquestion_a1n1d_no_move | Speak: null
+16.02.2011 10:55:04 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_start_move | Speak: null
+16.02.2011 10:55:06 Command: request 
+INFO: OK
+16.02.2011 10:55:22 Command: request 
+INFO: OK
+16.02.2011 10:55:41 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_currentPic_move | Speak: null
+16.02.2011 11:01:23 Command: work 
+INFO: Agenda: whichPic_agenda | Move: null | Speak: null
+16.02.2011 11:01:31 Command: work 
+INFO: Agenda: whichPic_agenda | Move: null | Speak: null
+16.02.2011 11:02:35 Command: reset 
+INFO: OK
+16.02.2011 11:02:36 Command: request 
+INFO: OK
+16.02.2011 11:03:45 Command: reset 
+INFO: OK
+16.02.2011 11:03:46 Command: request 
+INFO: OK
+16.02.2011 11:03:47 Command: work 
+INFO: Agenda: question_agenda | Move: yesnoquestion_a1n1d_no_move | Speak: null
+16.02.2011 11:03:58 Command: work 
+INFO: Agenda: question_agenda | Move: yesnoquestion_a1n1d_no_move | Speak: null
+16.02.2011 11:03:59 Command: work 
+INFO: Agenda: question_agenda | Move: yesnoquestion_a1n1d_no_move | Speak: null
+16.02.2011 11:10:38 Command: reset 
+INFO: OK
+16.02.2011 11:10:39 Command: request 
+INFO: OK
+16.02.2011 11:10:41 Command: work 
+INFO: Agenda: question_agenda | Move: yesnoquestion_a1n1d_no_move | Speak: null
+16.02.2011 11:10:45 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_veryHigh_move | Speak: null
+16.02.2011 11:10:47 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_medium_move | Speak: null
+16.02.2011 11:10:48 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_medium_move | Speak: null
+16.02.2011 11:10:50 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_start_move | Speak: null
+16.02.2011 11:10:53 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_currentPic_move | Speak: null
+16.02.2011 11:10:54 Command: work 
+INFO: Agenda: whichPic_agenda | Move: null | Speak: null
+16.02.2011 11:10:56 Command: work 
+INFO: Agenda: whichPic_agenda | Move: null | Speak: null
+16.02.2011 11:10:57 Command: work 
+INFO: Agenda: whichPic_agenda | Move: null | Speak: null
+16.02.2011 11:10:58 Command: work 
+INFO: Agenda: whichPic_agenda | Move: null | Speak: null
+16.02.2011 11:10:59 Command: work 
+INFO: Agenda: whichPic_agenda | Move: null | Speak: null
+16.02.2011 11:11:42 Command: work 
+INFO: Agenda: whichPic_agenda | Move: null | Speak: null
+16.02.2011 11:11:42 Command: work 
+INFO: Agenda: whichPic_agenda | Move: null | Speak: null
+16.02.2011 11:13:03 Command: reset 
+INFO: OK
+16.02.2011 11:13:04 Command: request 
+INFO: OK
+16.02.2011 11:13:06 Command: work 
+INFO: Agenda: question_agenda | Move: yesnoquestion_a1n1d_no_move | Speak: null
+16.02.2011 11:13:08 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_start_move | Speak: null
+16.02.2011 11:13:09 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_currentPic_move | Speak: null
+16.02.2011 11:13:10 Command: work 
+INFO: Agenda: whichPic_agenda | Move: null | Speak: null
+16.02.2011 11:13:11 Command: work 
+INFO: Agenda: whichPic_agenda | Move: null | Speak: null
+16.02.2011 11:13:12 Command: work 
+INFO: Agenda: whichPic_agenda | Move: null | Speak: null
+16.02.2011 11:21:22 Command: request 
+INFO: OK
+16.02.2011 11:21:25 Command: request 
+INFO: OK
+16.02.2011 11:21:26 Command: request 
+INFO: OK
+16.02.2011 11:21:34 Command: work 
+INFO: Agenda: whichPic_agenda | Move: null | Speak: null
+16.02.2011 11:23:19 Command: request 
+INFO: OK
+16.02.2011 11:23:21 Command: work 
+INFO: Agenda: whichPic_agenda | Move: null | Speak: null
+16.02.2011 11:23:27 Command: work 
+INFO: Agenda: whichPic_agenda | Move: null | Speak: null
+16.02.2011 11:23:28 Command: work 
+INFO: Agenda: whichPic_agenda | Move: null | Speak: null
+16.02.2011 11:23:29 Command: reset 
+INFO: OK
+16.02.2011 11:23:30 Command: request 
+INFO: OK
+16.02.2011 11:23:32 Command: work 
+INFO: Agenda: question_agenda | Move: yesnoquestion_a1n1d_no_move | Speak: null
+16.02.2011 11:23:33 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_start_move | Speak: null
+16.02.2011 11:23:34 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_currentPic_move | Speak: null
+16.02.2011 11:23:35 Command: work 
+INFO: Agenda: whichPic_agenda | Move: null | Speak: null
+16.02.2011 11:23:36 Command: work 
+INFO: Agenda: whichPic_agenda | Move: null | Speak: null
+16.02.2011 11:23:37 Command: work 
+INFO: Agenda: whichPic_agenda | Move: null | Speak: null
+16.02.2011 11:26:08 Command: reset 
+INFO: OK
+16.02.2011 11:26:09 Command: request 
+INFO: OK
+16.02.2011 11:26:11 Command: work 
+INFO: Agenda: question_agenda | Move: yesnoquestion_a1n1d_no_move | Speak: null
+16.02.2011 11:26:13 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_start_move | Speak: null
+16.02.2011 11:26:21 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_currentPic_move | Speak: null
+16.02.2011 11:26:29 Command: work 
+INFO: Agenda: whichPic_agenda | Move: null | Speak: null
+16.02.2011 11:29:00 Command: reset 
+INFO: OK
+16.02.2011 11:29:01 Command: request 
+INFO: OK
+16.02.2011 11:29:04 Command: work 
+INFO: Agenda: question_agenda | Move: yesnoquestion_a1n1d_no_move | Speak: null
+16.02.2011 11:29:05 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_start_move | Speak: null
+16.02.2011 11:29:07 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_currentPic_move | Speak: null
+16.02.2011 11:29:09 Command: work 
+INFO: Agenda: whichPic_agenda | Move: null | Speak: null
+16.02.2011 11:32:22 Command: reset 
+INFO: OK
+16.02.2011 11:32:23 Command: request 
+INFO: OK
+16.02.2011 11:32:24 Command: work 
+INFO: Agenda: question_agenda | Move: yesnoquestion_a1n1d_no_move | Speak: null
+16.02.2011 11:32:26 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_start_move | Speak: null
+16.02.2011 11:32:27 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_currentPic_move | Speak: null
+16.02.2011 11:36:28 Command: reset 
+INFO: OK
+16.02.2011 11:36:29 Command: request 
+INFO: OK
+16.02.2011 11:36:30 Command: work 
+INFO: Agenda: question_agenda | Move: yesnoquestion_a1n1d_no_move | Speak: null
+16.02.2011 11:36:34 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_start_move | Speak: null
+16.02.2011 11:36:37 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_currentPic_move | Speak: null
+16.02.2011 11:36:38 Command: work 
+INFO: Agenda: whichPic_agenda | Move: null | Speak: null
+16.02.2011 11:36:40 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_currentPic_move | Speak: null
+16.02.2011 11:36:41 Command: work 
+INFO: Agenda: whichPic_agenda | Move: null | Speak: null
+16.02.2011 11:36:43 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_currentPic_move | Speak: null
+16.02.2011 11:36:44 Command: work 
+INFO: Agenda: whichPic_agenda | Move: null | Speak: null
+16.02.2011 11:36:45 Command: work 
+INFO: Agenda: fault | Move: heating_a1n1d_off_move | Speak: null
+16.02.2011 11:36:46 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_medium_move | Speak: null
+16.02.2011 11:36:47 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_veryHigh_move | Speak: null
+16.02.2011 11:36:48 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_high_move | Speak: null
+16.02.2011 11:36:51 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_next_move | Speak: null
+16.02.2011 11:36:52 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_selectSlo_move | Speak: null
+16.02.2011 11:36:53 Command: work 
+INFO: Agenda: fault | Move: music_a1n1d_start_move | Speak: null
+16.02.2011 11:36:54 Command: work 
+INFO: Agenda: fault | Move: music_a1n1d_musicDown_move | Speak: null
+16.02.2011 11:36:55 Command: work 
+INFO: Agenda: fault | Move: music_a1n1d_play_move | Speak: null
+16.02.2011 11:36:58 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_currentPic_move | Speak: null
+16.02.2011 11:36:59 Command: work 
+INFO: Agenda: whichPic_agenda | Move: null | Speak: null
+16.02.2011 11:37:00 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_low_move | Speak: null
+16.02.2011 11:37:00 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_LightsOff_move | Speak: null
+16.02.2011 11:37:02 Command: reset 
+INFO: OK
+16.02.2011 11:37:03 Command: request 
+INFO: OK
+16.02.2011 11:37:04 Command: work 
+INFO: Agenda: question_agenda | Move: yesnoquestion_a1n1d_no_move | Speak: null
+16.02.2011 11:37:05 Command: work 
+INFO: Agenda: fault | Move: heating_a1n1d_on_move | Speak: null
+16.02.2011 11:37:05 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_start_move | Speak: null
+16.02.2011 11:37:07 Command: reset 
+INFO: OK
+16.02.2011 11:37:08 Command: request 
+INFO: OK
+16.02.2011 11:37:09 Command: work 
+INFO: Agenda: question_agenda | Move: light_a1n1d_veryHigh_move | Speak: null
+16.02.2011 11:37:09 Command: work 
+INFO: Agenda: question_agenda | Move: light_a1n1d_veryLow_move | Speak: null
+16.02.2011 11:37:10 Command: work 
+INFO: Agenda: question_agenda | Move: light_a1n1d_medium_move | Speak: null
+16.02.2011 11:37:12 Command: work 
+INFO: Agenda: question_agenda | Move: photos_a1n1d_start_move | Speak: null
+16.02.2011 11:37:13 Command: work 
+INFO: Agenda: question_agenda | Move: photos_a1n1d_currentPic_move | Speak: null
+16.02.2011 11:37:15 Command: work 
+INFO: Agenda: question_agenda | Move: yesnoquestion_a1n1d_no_move | Speak: null
+16.02.2011 11:37:17 Command: work 
+INFO: Agenda: whichPic_agenda | Move: null | Speak: null
+16.02.2011 11:37:18 Command: work 
+INFO: Agenda: fault | Move: heating_a1n1d_off_move | Speak: null
+16.02.2011 11:37:18 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_veryHigh_move | Speak: null
+16.02.2011 11:37:19 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_currentPic_move | Speak: null
+16.02.2011 11:37:21 Command: work 
+INFO: Agenda: whichPic_agenda | Move: null | Speak: null
+16.02.2011 11:38:48 Command: reset 
+INFO: OK
+16.02.2011 11:38:49 Command: request 
+INFO: OK
+16.02.2011 11:38:51 Command: work 
+INFO: Agenda: question_agenda | Move: yesnoquestion_a1n1d_no_move | Speak: null
+16.02.2011 11:38:52 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_start_move | Speak: null
+16.02.2011 11:38:54 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_prev_move | Speak: null
+16.02.2011 11:38:55 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_next_move | Speak: null
+16.02.2011 11:38:56 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_selectVen_move | Speak: null
+16.02.2011 11:38:57 Command: work 
+INFO: Agenda: fault | Move: music_a1n1d_start_move | Speak: null
+16.02.2011 11:38:59 Command: work 
+INFO: Agenda: fault | Move: music_a1n1d_musicDown_move | Speak: null
+16.02.2011 11:39:00 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_currentPic_move | Speak: null
+16.02.2011 11:39:01 Command: work 
+INFO: Agenda: whichPic_agenda | Move: null | Speak: null
+16.02.2011 11:42:55 Command: reset 
+INFO: OK
+16.02.2011 11:42:56 Command: request 
+INFO: OK
+16.02.2011 11:42:58 Command: work 
+INFO: Agenda: question_agenda | Move: yesnoquestion_a1n1d_yes_move | Speak: null
+16.02.2011 11:42:58 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_medium_move | Speak: null
+16.02.2011 11:42:59 Command: work 
+INFO: Agenda: fault | Move: heating_a1n1d_off_move | Speak: null
+16.02.2011 11:42:59 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_start_move | Speak: null
+16.02.2011 11:43:00 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_currentPic_move | Speak: null
+16.02.2011 11:43:02 Command: work 
+INFO: Agenda: whichPic_agenda | Move: null | Speak: null
+16.02.2011 11:43:03 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_high_move | Speak: null
+16.02.2011 11:43:03 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_LightsOff_move | Speak: null
+16.02.2011 11:43:04 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_LightsOff_move | Speak: null
+16.02.2011 11:43:04 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_veryHigh_move | Speak: null
+16.02.2011 11:43:04 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_medium_move | Speak: null
+16.02.2011 11:43:05 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_veryLow_move | Speak: null
+16.02.2011 11:43:05 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_low_move | Speak: null
+16.02.2011 11:43:05 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_LightsOff_move | Speak: null
+16.02.2011 11:43:06 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_veryHigh_move | Speak: null
+16.02.2011 11:43:07 Command: work 
+INFO: Agenda: fault | Move: system_a1n1d_reset | Speak: null
+16.02.2011 11:43:07 Command: work 
+INFO: Agenda: fault | Move: system_a1n1d_reloadsets | Speak: null
+16.02.2011 11:43:08 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_veryHigh_move | Speak: null
+16.02.2011 11:43:08 Command: work 
+INFO: Agenda: fault | Move: alarm_a1n1d_off_move | Speak: null
+16.02.2011 11:43:09 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_currentPic_move | Speak: null
+16.02.2011 11:43:10 Command: work 
+INFO: Agenda: whichPic_agenda | Move: null | Speak: null
+16.02.2011 11:43:11 Command: work 
+INFO: Agenda: fault | Move: music_a1n1d_start_move | Speak: null
+16.02.2011 11:43:12 Command: work 
+INFO: Agenda: fault | Move: music_a1n1d_pause_move | Speak: null
+16.02.2011 11:43:13 Command: work 
+INFO: Agenda: fault | Move: music_a1n1d_selectChill_move | Speak: null
+16.02.2011 11:43:13 Command: work 
+INFO: Agenda: fault | Move: music_a1n1d_prev_move | Speak: null
+16.02.2011 11:43:14 Command: work 
+INFO: Agenda: fault | Move: music_a1n1d_selectLat_move | Speak: null
+16.02.2011 11:43:15 Command: work 
+INFO: Agenda: fault | Move: music_a1n1d_musicUp_move | Speak: null
+16.02.2011 11:43:15 Command: work 
+INFO: Agenda: fault | Move: music_a1n1d_exit_move | Speak: null
+16.02.2011 11:43:16 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_selectWed_move | Speak: null
+16.02.2011 11:43:16 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_selectSwi_move | Speak: null
+16.02.2011 11:43:17 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_LigthsOn_move | Speak: null
+16.02.2011 11:43:17 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_veryLow_move | Speak: null
+16.02.2011 11:43:19 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_selectFra_move | Speak: null
+16.02.2011 11:43:20 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_selectSwi_move | Speak: null
+16.02.2011 11:44:15 Command: reset 
+INFO: OK
+16.02.2011 11:44:16 Command: request 
+INFO: OK
+16.02.2011 11:45:45 Command: reset 
+INFO: OK
+16.02.2011 11:45:46 Command: request 
+INFO: OK
+16.02.2011 11:45:48 Command: work 
+INFO: Agenda: question_agenda | Move: heating_a1n1d_on_move | Speak: null
+16.02.2011 11:45:48 Command: work 
+INFO: Agenda: question_agenda | Move: light_a1n1d_veryHigh_move | Speak: null
+16.02.2011 11:45:48 Command: work 
+INFO: Agenda: question_agenda | Move: light_a1n1d_LightsOff_move | Speak: null
+16.02.2011 11:45:49 Command: work 
+INFO: Agenda: question_agenda | Move: light_a1n1d_veryHigh_move | Speak: null
+16.02.2011 11:45:49 Command: work 
+INFO: Agenda: question_agenda | Move: light_a1n1d_LightsOff_move | Speak: null
+16.02.2011 11:45:49 Command: work 
+INFO: Agenda: question_agenda | Move: light_a1n1d_medium_move | Speak: null
+16.02.2011 11:45:50 Command: work 
+INFO: Agenda: question_agenda | Move: light_a1n1d_medium_move | Speak: null
+16.02.2011 12:14:55 Command: reset 
+INFO: OK
+16.02.2011 12:14:56 Command: request 
+INFO: OK
+16.02.2011 12:14:57 Command: work 
+INFO: Agenda: question_agenda | Move: yesnoquestion_a1n1d_no_move | Speak: null
+16.02.2011 12:14:58 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_medium_move | Speak: null
+16.02.2011 12:14:59 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_LigthsOn_move | Speak: null
+16.02.2011 12:14:59 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_medium_move | Speak: null
+16.02.2011 12:15:00 Command: work 
+INFO: Agenda: fault | Move: heating_a1n1d_on_move | Speak: null
+16.02.2011 12:15:00 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_start_move | Speak: null
+16.02.2011 12:15:02 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_currentPic_move | Speak: null
+16.02.2011 12:15:03 Command: work 
+INFO: Agenda: whichPic_agenda | Move: null | Speak: null
+16.02.2011 12:15:04 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_medium_move | Speak: null
+16.02.2011 12:15:04 Command: work 
+INFO: Agenda: fault | Move: heating_a1n1d_off_move | Speak: null
+16.02.2011 12:15:04 Command: work 
+INFO: Agenda: fault | Move: alarm_a1n1d_on_move | Speak: null
+16.02.2011 12:15:05 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_LightsOff_move | Speak: null
+16.02.2011 12:22:29 Command: reset 
+INFO: OK
+16.02.2011 12:22:30 Command: request 
+INFO: OK
+16.02.2011 12:22:31 Command: work 
+INFO: Agenda: question_agenda | Move: yesnoquestion_a1n1d_yes_move | Speak: null
+16.02.2011 12:22:32 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_LigthsOn_move | Speak: null
+16.02.2011 12:22:32 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_LightsOff_move | Speak: null
+16.02.2011 12:22:32 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_low_move | Speak: null
+16.02.2011 12:22:33 Command: work 
+INFO: Agenda: fault | Move: heating_a1n1d_off_move | Speak: null
+16.02.2011 12:22:34 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_start_move | Speak: null
+16.02.2011 12:22:34 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_prev_move | Speak: null
+16.02.2011 12:22:35 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_exit_move | Speak: null
+16.02.2011 12:22:36 Command: work 
+INFO: Agenda: fault | Move: heating_a1n1d_on_move | Speak: null
+16.02.2011 12:22:36 Command: work 
+INFO: Agenda: fault | Move: heating_a1n1d_off_move | Speak: null
+16.02.2011 12:22:37 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_start_move | Speak: null
+16.02.2011 12:22:39 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_currentPic_move | Speak: null
+16.02.2011 12:22:40 Command: work 
+INFO: Agenda: whichPic_agenda | Move: null | Speak: null
+16.02.2011 12:22:41 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_LigthsOn_move | Speak: null
+16.02.2011 12:22:41 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_veryLow_move | Speak: null
+16.02.2011 12:22:42 Command: work 
+INFO: Agenda: fault | Move: heating_a1n1d_on_move | Speak: null
+16.02.2011 12:22:42 Command: work 
+INFO: Agenda: fault | Move: alarm_a1n1d_on_move | Speak: null
+16.02.2011 12:22:46 Command: reset 
+INFO: OK
+16.02.2011 12:22:48 Command: request 
+INFO: OK
+16.02.2011 12:25:54 Command: reset 
+INFO: OK
+16.02.2011 12:25:55 Command: request 
+INFO: OK
+16.02.2011 12:25:55 Command: request 
+INFO: OK
+16.02.2011 12:25:56 Command: request 
+INFO: OK
+16.02.2011 12:25:56 Command: request 
+INFO: OK
+16.02.2011 12:25:56 Command: request 
+INFO: OK
+16.02.2011 12:25:56 Command: request 
+INFO: OK
+16.02.2011 12:25:56 Command: request 
+INFO: OK
+16.02.2011 12:25:57 Command: request 
+INFO: OK
+16.02.2011 12:25:57 Command: request 
+INFO: OK
+16.02.2011 12:25:57 Command: request 
+INFO: OK
+16.02.2011 12:25:57 Command: request 
+INFO: OK
+16.02.2011 12:25:57 Command: request 
+INFO: OK
+16.02.2011 12:25:57 Command: request 
+INFO: OK
+16.02.2011 12:25:58 Command: request 
+INFO: OK
+16.02.2011 12:25:58 Command: request 
+INFO: OK
+16.02.2011 12:26:00 Command: work 
+INFO: Agenda: question_agenda | Move: light_a1n1d_veryLow_move | Speak: null
+16.02.2011 12:26:00 Command: work 
+INFO: Agenda: question_agenda | Move: light_a1n1d_LigthsOn_move | Speak: null
+16.02.2011 12:26:01 Command: work 
+INFO: Agenda: question_agenda | Move: light_a1n1d_LightsOff_move | Speak: null
+16.02.2011 12:26:01 Command: work 
+INFO: Agenda: question_agenda | Move: light_a1n1d_medium_move | Speak: null
+16.02.2011 12:26:02 Command: work 
+INFO: Agenda: question_agenda | Move: light_a1n1d_LightsOff_move | Speak: null
+16.02.2011 12:26:03 Command: work 
+INFO: Agenda: question_agenda | Move: photos_a1n1d_start_move | Speak: null
+16.02.2011 12:26:06 Command: work 
+INFO: Agenda: question_agenda | Move: photos_a1n1d_currentPic_move | Speak: null
+16.02.2011 12:26:08 Command: work 
+INFO: Agenda: question_agenda | Move: photos_a1n1d_currentPic_move | Speak: null
+16.02.2011 12:26:37 Command: reset 
+INFO: OK
+16.02.2011 12:26:38 Command: request 
+INFO: OK
+16.02.2011 12:26:40 Command: work 
+INFO: Agenda: question_agenda | Move: yesnoquestion_a1n1d_no_move | Speak: null
+16.02.2011 12:26:41 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_start_move | Speak: null
+16.02.2011 12:26:44 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_currentPic_move | Speak: null
+16.02.2011 12:26:45 Command: work 
+INFO: Agenda: whichPic_agenda | Move: null | Speak: null
+16.02.2011 12:26:46 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_currentPic_move | Speak: null
+16.02.2011 12:26:47 Command: work 
+INFO: Agenda: whichPic_agenda | Move: null | Speak: null
+16.02.2011 12:26:48 Command: work 
+INFO: Agenda: fault | Move: heating_a1n1d_on_move | Speak: null
+16.02.2011 12:26:49 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_medium_move | Speak: null
+16.02.2011 12:26:50 Command: work 
+INFO: Agenda: fault | Move: heating_a1n1d_on_move | Speak: null
+16.02.2011 12:26:50 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_LightsOff_move | Speak: null
+16.02.2011 12:26:50 Command: work 
+INFO: Agenda: fault | Move: alarm_a1n1d_off_move | Speak: null
+16.02.2011 12:26:51 Command: work 
+INFO: Agenda: fault | Move: heating_a1n1d_on_move | Speak: null
+16.02.2011 12:26:51 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_medium_move | Speak: null
+16.02.2011 12:26:51 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_medium_move | Speak: null
+16.02.2011 12:26:53 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_currentPic_move | Speak: null
+16.02.2011 12:26:53 Command: work 
+INFO: Agenda: whichPic_agenda | Move: null | Speak: null
+16.02.2011 12:26:55 Command: request 
+INFO: OK
+16.02.2011 12:26:55 Command: request 
+INFO: OK
+16.02.2011 12:26:55 Command: request 
+INFO: OK
+16.02.2011 12:26:55 Command: request 
+INFO: OK
+16.02.2011 12:26:55 Command: request 
+INFO: OK
+16.02.2011 12:26:56 Command: request 
+INFO: OK
+16.02.2011 12:26:56 Command: request 
+INFO: OK
+16.02.2011 12:26:56 Command: request 
+INFO: OK
+16.02.2011 12:26:56 Command: request 
+INFO: OK
+16.02.2011 12:26:56 Command: request 
+INFO: OK
+16.02.2011 12:26:56 Command: request 
+INFO: OK
+16.02.2011 12:26:58 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_currentPic_move | Speak: null
+16.02.2011 12:26:59 Command: work 
+INFO: Agenda: whichPic_agenda | Move: null | Speak: null
+16.02.2011 12:27:00 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_LightsOff_move | Speak: null
+16.02.2011 12:27:00 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_LigthsOn_move | Speak: null
+16.02.2011 12:27:01 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_selectSwi_move | Speak: null
+16.02.2011 12:27:01 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_medium_move | Speak: null
+16.02.2011 12:27:02 Command: work 
+INFO: Agenda: fault | Move: alarm_a1n1d_off_move | Speak: null
+16.02.2011 12:27:02 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_LightsOff_move | Speak: null
+16.02.2011 12:27:03 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_high_move | Speak: null
+16.02.2011 12:27:03 Command: work 
+INFO: Agenda: fault | Move: heating_a1n1d_on_move | Speak: null
+16.02.2011 12:27:04 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_selectSwi_move | Speak: null
+16.02.2011 12:27:05 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_next_move | Speak: null
+16.02.2011 12:27:05 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_selectFra_move | Speak: null
+16.02.2011 12:27:06 Command: work 
+INFO: Agenda: fault | Move: music_a1n1d_start_move | Speak: null
+16.02.2011 12:27:07 Command: work 
+INFO: Agenda: fault | Move: music_a1n1d_selectChill_move | Speak: null
+16.02.2011 12:27:08 Command: work 
+INFO: Agenda: fault | Move: music_a1n1d_selectRock_move | Speak: null
+16.02.2011 12:27:08 Command: work 
+INFO: Agenda: fault | Move: music_a1n1d_musicUp_move | Speak: null
+16.02.2011 12:27:09 Command: work 
+INFO: Agenda: fault | Move: music_a1n1d_selectChill_move | Speak: null
+16.02.2011 12:27:09 Command: work 
+INFO: Agenda: fault | Move: music_a1n1d_selectClassic_move | Speak: null
+16.02.2011 12:27:09 Command: work 
+INFO: Agenda: fault | Move: music_a1n1d_selectClassic_move | Speak: null
+16.02.2011 12:27:10 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_selectFra_move | Speak: null
+16.02.2011 12:27:12 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_medium_move | Speak: null
+16.02.2011 12:27:12 Command: work 
+INFO: Agenda: fault | Move: alarm_a1n1d_on_move | Speak: null
+16.02.2011 12:27:12 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_currentPic_move | Speak: null
+16.02.2011 12:27:13 Command: work 
+INFO: Agenda: whichPic_agenda | Move: null | Speak: null
+16.02.2011 12:27:14 Command: work 
+INFO: Agenda: fault | Move: heating_a1n1d_on_move | Speak: null
+16.02.2011 12:27:15 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_LightsOff_move | Speak: null
+16.02.2011 12:27:15 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_veryHigh_move | Speak: null
+16.02.2011 12:30:35 Command: request 
+INFO: OK
+16.02.2011 12:30:36 Command: request 
+INFO: OK
+16.02.2011 12:30:37 Command: request 
+INFO: OK
+16.02.2011 12:30:37 Command: request 
+INFO: OK
+16.02.2011 12:30:38 Command: request 
+INFO: OK
+16.02.2011 12:30:38 Command: request 
+INFO: OK
+16.02.2011 12:30:38 Command: request 
+INFO: OK
+16.02.2011 12:30:38 Command: request 
+INFO: OK
+16.02.2011 12:30:38 Command: request 
+INFO: OK
+16.02.2011 12:30:38 Command: request 
+INFO: OK
+16.02.2011 12:30:38 Command: request 
+INFO: OK
+16.02.2011 12:30:39 Command: request 
+INFO: OK
+16.02.2011 12:30:39 Command: request 
+INFO: OK
+16.02.2011 12:30:39 Command: request 
+INFO: OK
+16.02.2011 12:30:39 Command: request 
+INFO: OK
+16.02.2011 12:30:41 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_LigthsOn_move | Speak: null
+16.02.2011 12:30:41 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_LightsOff_move | Speak: null
+16.02.2011 12:30:42 Command: work 
+INFO: Agenda: fault | Move: heating_a1n1d_off_move | Speak: null
+16.02.2011 12:30:42 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_selectSwi_move | Speak: null
+16.02.2011 12:30:43 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_LightsOff_move | Speak: null
+16.02.2011 12:30:44 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_LigthsOn_move | Speak: null
+16.02.2011 12:30:44 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_medium_move | Speak: null
+16.02.2011 12:30:45 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_LigthsOn_move | Speak: null
+16.02.2011 12:30:45 Command: work 
+INFO: Agenda: fault | Move: alarm_a1n1d_on_move | Speak: null
+16.02.2011 12:31:12 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_currentPic_move | Speak: null
+16.02.2011 12:31:14 Command: work 
+INFO: Agenda: whichPic_agenda | Move: null | Speak: null
+16.02.2011 12:31:43 Command: request 
+INFO: OK
+16.02.2011 12:32:19 Command: request 
+INFO: OK
+16.02.2011 12:32:24 Command: request 
+INFO: OK
+16.02.2011 12:32:32 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_LigthsOn_move | Speak: lights on
+16.02.2011 12:32:39 Command: request 
+INFO: noinput
+16.02.2011 12:32:47 Command: request 
+INFO: noinput
+16.02.2011 12:32:54 Command: request 
+INFO: noinput
+16.02.2011 12:33:01 Command: request 
+INFO: noinput
+16.02.2011 12:33:09 Command: request 
+INFO: noinput
+16.02.2011 12:33:16 Command: request 
+INFO: noinput
+16.02.2011 12:33:23 Command: request 
+INFO: noinput
+16.02.2011 12:33:30 Command: request 
+INFO: noinput
+16.02.2011 12:33:38 Command: request 
+INFO: noinput
+16.02.2011 12:33:45 Command: request 
+INFO: noinput
+16.02.2011 12:33:52 Command: request 
+INFO: noinput
+16.02.2011 12:33:59 Command: request 
+INFO: noinput
+16.02.2011 12:34:07 Command: request 
+INFO: noinput
+16.02.2011 12:34:14 Command: request 
+INFO: noinput
+16.02.2011 12:34:21 Command: request 
+INFO: noinput
+16.02.2011 12:34:28 Command: request 
+INFO: noinput
+16.02.2011 12:34:36 Command: request 
+INFO: noinput
+16.02.2011 12:34:43 Command: request 
+INFO: noinput
+16.02.2011 12:34:50 Command: request 
+INFO: noinput
+16.02.2011 12:34:57 Command: request 
+INFO: noinput
+16.02.2011 12:35:05 Command: request 
+INFO: noinput
+16.02.2011 12:35:12 Command: request 
+INFO: noinput
+16.02.2011 12:35:19 Command: request 
+INFO: noinput
+16.02.2011 12:35:27 Command: request 
+INFO: noinput
+16.02.2011 12:35:34 Command: request 
+INFO: noinput
+16.02.2011 12:35:41 Command: request 
+INFO: noinput
+16.02.2011 12:35:48 Command: request 
+INFO: noinput
+16.02.2011 12:35:56 Command: request 
+INFO: noinput
+16.02.2011 12:36:03 Command: request 
+INFO: noinput
+16.02.2011 12:36:10 Command: request 
+INFO: noinput
+16.02.2011 12:36:17 Command: request 
+INFO: noinput
+16.02.2011 12:36:25 Command: request 
+INFO: noinput
+16.02.2011 12:36:32 Command: request 
+INFO: noinput
+16.02.2011 12:36:39 Command: request 
+INFO: noinput
+16.02.2011 12:36:46 Command: request 
+INFO: noinput
+16.02.2011 12:36:54 Command: request 
+INFO: noinput
+16.02.2011 12:37:01 Command: request 
+INFO: noinput
+16.02.2011 12:37:08 Command: request 
+INFO: noinput
+16.02.2011 12:37:15 Command: request 
+INFO: noinput
+16.02.2011 12:37:23 Command: request 
+INFO: noinput
+16.02.2011 12:37:30 Command: request 
+INFO: noinput
+16.02.2011 12:37:37 Command: request 
+INFO: noinput
+16.02.2011 12:37:44 Command: request 
+INFO: noinput
+16.02.2011 12:37:52 Command: request 
+INFO: noinput
+16.02.2011 12:37:59 Command: request 
+INFO: noinput
+16.02.2011 12:38:06 Command: request 
+INFO: noinput
+16.02.2011 12:38:14 Command: request 
+INFO: noinput
+16.02.2011 12:38:21 Command: request 
+INFO: noinput
+16.02.2011 12:38:28 Command: request 
+INFO: noinput
+16.02.2011 12:38:35 Command: request 
+INFO: noinput
+16.02.2011 12:38:43 Command: request 
+INFO: noinput
+16.02.2011 12:38:50 Command: request 
+INFO: noinput
+16.02.2011 12:38:57 Command: request 
+INFO: noinput
+16.02.2011 12:39:04 Command: request 
+INFO: noinput
+16.02.2011 12:39:12 Command: request 
+INFO: noinput
+16.02.2011 12:39:19 Command: request 
+INFO: noinput
+16.02.2011 12:39:26 Command: request 
+INFO: noinput
+16.02.2011 12:39:33 Command: request 
+INFO: noinput
+16.02.2011 12:39:41 Command: request 
+INFO: noinput
+16.02.2011 12:39:48 Command: request 
+INFO: noinput
+16.02.2011 12:39:55 Command: request 
+INFO: noinput
+16.02.2011 12:40:02 Command: request 
+INFO: noinput
+16.02.2011 12:40:10 Command: request 
+INFO: noinput
+16.02.2011 12:40:17 Command: request 
+INFO: noinput
+16.02.2011 12:40:24 Command: request 
+INFO: noinput
+16.02.2011 12:40:32 Command: request 
+INFO: noinput
+16.02.2011 12:40:39 Command: request 
+INFO: noinput
+16.02.2011 12:40:46 Command: request 
+INFO: noinput
+16.02.2011 12:40:53 Command: request 
+INFO: noinput
+16.02.2011 12:41:01 Command: request 
+INFO: noinput
+16.02.2011 12:41:08 Command: request 
+INFO: noinput
+16.02.2011 12:41:15 Command: request 
+INFO: noinput
+16.02.2011 12:41:22 Command: request 
+INFO: noinput
+16.02.2011 12:41:30 Command: request 
+INFO: noinput
+16.02.2011 12:41:37 Command: request 
+INFO: noinput
+16.02.2011 12:41:44 Command: request 
+INFO: noinput
+16.02.2011 12:41:51 Command: request 
+INFO: noinput
+16.02.2011 12:41:59 Command: request 
+INFO: noinput
+16.02.2011 12:42:06 Command: request 
+INFO: noinput
+16.02.2011 12:42:13 Command: request 
+INFO: noinput
+16.02.2011 12:42:20 Command: request 
+INFO: noinput
+16.02.2011 12:42:28 Command: request 
+INFO: noinput
+16.02.2011 12:42:35 Command: request 
+INFO: noinput
+16.02.2011 12:42:42 Command: request 
+INFO: noinput
+16.02.2011 12:42:49 Command: request 
+INFO: noinput
+16.02.2011 12:42:57 Command: request 
+INFO: noinput
+16.02.2011 12:43:04 Command: request 
+INFO: noinput
+16.02.2011 12:43:11 Command: request 
+INFO: noinput
+16.02.2011 12:43:19 Command: request 
+INFO: noinput
+16.02.2011 12:43:26 Command: request 
+INFO: noinput
+16.02.2011 12:43:33 Command: request 
+INFO: noinput
+16.02.2011 12:43:40 Command: request 
+INFO: noinput
+16.02.2011 12:43:48 Command: request 
+INFO: noinput
+16.02.2011 12:43:55 Command: request 
+INFO: noinput
+16.02.2011 12:44:02 Command: request 
+INFO: noinput
+16.02.2011 12:44:09 Command: request 
+INFO: noinput
+16.02.2011 12:44:17 Command: request 
+INFO: noinput
+16.02.2011 12:44:24 Command: request 
+INFO: noinput
+16.02.2011 12:44:31 Command: request 
+INFO: noinput
+16.02.2011 12:44:38 Command: request 
+INFO: noinput
+16.02.2011 12:44:46 Command: request 
+INFO: noinput
+16.02.2011 12:44:53 Command: request 
+INFO: noinput
+16.02.2011 12:45:00 Command: request 
+INFO: noinput
+16.02.2011 12:45:07 Command: request 
+INFO: noinput
+16.02.2011 12:45:15 Command: request 
+INFO: noinput
+16.02.2011 12:45:22 Command: request 
+INFO: noinput
+16.02.2011 12:45:29 Command: request 
+INFO: noinput
+16.02.2011 12:45:36 Command: request 
+INFO: noinput
+16.02.2011 12:45:44 Command: request 
+INFO: noinput
+16.02.2011 12:45:51 Command: request 
+INFO: noinput
+16.02.2011 12:45:58 Command: request 
+INFO: noinput
+16.02.2011 12:46:06 Command: request 
+INFO: noinput
+16.02.2011 12:46:13 Command: request 
+INFO: noinput
+16.02.2011 12:46:20 Command: request 
+INFO: noinput
+16.02.2011 12:46:27 Command: request 
+INFO: noinput
+16.02.2011 12:46:35 Command: request 
+INFO: noinput
+16.02.2011 12:46:42 Command: request 
+INFO: noinput
+16.02.2011 12:46:49 Command: request 
+INFO: noinput
+16.02.2011 12:46:56 Command: request 
+INFO: noinput
+16.02.2011 12:47:04 Command: request 
+INFO: noinput
+16.02.2011 12:47:11 Command: request 
+INFO: noinput
+16.02.2011 12:47:18 Command: request 
+INFO: noinput
+16.02.2011 12:47:25 Command: request 
+INFO: noinput
+16.02.2011 12:47:33 Command: request 
+INFO: noinput
+16.02.2011 12:47:40 Command: request 
+INFO: noinput
+16.02.2011 12:47:47 Command: request 
+INFO: noinput
+16.02.2011 12:47:54 Command: request 
+INFO: noinput
+16.02.2011 12:48:02 Command: request 
+INFO: noinput
+16.02.2011 12:48:09 Command: request 
+INFO: noinput
+16.02.2011 12:48:16 Command: request 
+INFO: noinput
+16.02.2011 12:48:23 Command: request 
+INFO: noinput
+16.02.2011 12:48:31 Command: request 
+INFO: noinput
+16.02.2011 12:48:38 Command: request 
+INFO: noinput
+16.02.2011 12:48:45 Command: request 
+INFO: noinput
+16.02.2011 12:48:53 Command: request 
+INFO: noinput
+16.02.2011 12:49:00 Command: request 
+INFO: noinput
+16.02.2011 12:49:07 Command: request 
+INFO: noinput
+16.02.2011 12:49:14 Command: request 
+INFO: noinput
+16.02.2011 12:49:22 Command: request 
+INFO: noinput
+16.02.2011 12:49:29 Command: request 
+INFO: noinput
+16.02.2011 12:49:36 Command: request 
+INFO: noinput
+16.02.2011 12:49:43 Command: request 
+INFO: noinput
+16.02.2011 12:49:51 Command: request 
+INFO: noinput
+16.02.2011 12:49:58 Command: request 
+INFO: noinput
+16.02.2011 12:50:05 Command: request 
+INFO: noinput
+16.02.2011 12:50:12 Command: request 
+INFO: noinput
+16.02.2011 12:50:20 Command: request 
+INFO: noinput
+16.02.2011 12:50:27 Command: request 
+INFO: noinput
+16.02.2011 12:50:34 Command: request 
+INFO: noinput
+16.02.2011 12:50:41 Command: request 
+INFO: noinput
+16.02.2011 12:50:49 Command: request 
+INFO: noinput
+16.02.2011 12:50:56 Command: request 
+INFO: noinput
+16.02.2011 12:51:03 Command: request 
+INFO: noinput
+16.02.2011 12:51:10 Command: request 
+INFO: noinput
+16.02.2011 12:51:18 Command: request 
+INFO: noinput
+16.02.2011 12:51:25 Command: request 
+INFO: noinput
+16.02.2011 12:51:32 Command: request 
+INFO: noinput
+16.02.2011 12:51:39 Command: request 
+INFO: noinput
+16.02.2011 12:51:47 Command: request 
+INFO: noinput
+16.02.2011 12:51:54 Command: request 
+INFO: noinput
+16.02.2011 12:52:01 Command: request 
+INFO: noinput
+16.02.2011 12:52:09 Command: request 
+INFO: noinput
+16.02.2011 12:52:16 Command: request 
+INFO: noinput
+16.02.2011 12:52:23 Command: request 
+INFO: noinput
+16.02.2011 12:52:30 Command: request 
+INFO: noinput
+16.02.2011 12:52:38 Command: request 
+INFO: noinput
+16.02.2011 12:52:45 Command: request 
+INFO: noinput
+16.02.2011 12:52:52 Command: request 
+INFO: noinput
+16.02.2011 12:52:59 Command: request 
+INFO: noinput
+16.02.2011 12:53:07 Command: request 
+INFO: noinput
+16.02.2011 12:53:14 Command: request 
+INFO: noinput
+16.02.2011 12:53:21 Command: request 
+INFO: noinput
+16.02.2011 12:53:28 Command: request 
+INFO: noinput
+16.02.2011 12:53:36 Command: request 
+INFO: noinput
+16.02.2011 12:53:43 Command: request 
+INFO: noinput
+16.02.2011 12:53:50 Command: request 
+INFO: noinput
+16.02.2011 12:53:57 Command: request 
+INFO: noinput
+16.02.2011 12:54:05 Command: request 
+INFO: noinput
+16.02.2011 12:54:12 Command: request 
+INFO: noinput
+16.02.2011 12:54:19 Command: request 
+INFO: noinput
+16.02.2011 12:54:26 Command: request 
+INFO: noinput
+16.02.2011 12:54:34 Command: request 
+INFO: noinput
+16.02.2011 12:54:41 Command: request 
+INFO: noinput
+16.02.2011 12:54:48 Command: request 
+INFO: noinput
+16.02.2011 12:54:56 Command: request 
+INFO: noinput
+16.02.2011 12:55:03 Command: request 
+INFO: noinput
+16.02.2011 12:55:10 Command: request 
+INFO: noinput
+16.02.2011 12:55:17 Command: request 
+INFO: noinput
+16.02.2011 12:55:25 Command: request 
+INFO: noinput
+16.02.2011 12:55:32 Command: request 
+INFO: noinput
+16.02.2011 12:55:39 Command: request 
+INFO: noinput
+16.02.2011 12:55:46 Command: request 
+INFO: noinput
+16.02.2011 12:55:54 Command: request 
+INFO: noinput
+16.02.2011 12:56:01 Command: request 
+INFO: noinput
+16.02.2011 12:56:08 Command: request 
+INFO: noinput
+16.02.2011 12:56:15 Command: request 
+INFO: noinput
+16.02.2011 12:56:23 Command: request 
+INFO: noinput
+16.02.2011 12:56:30 Command: request 
+INFO: noinput
+16.02.2011 12:56:37 Command: request 
+INFO: noinput
+16.02.2011 12:56:44 Command: request 
+INFO: noinput
+16.02.2011 12:56:52 Command: request 
+INFO: noinput
+16.02.2011 12:56:59 Command: request 
+INFO: noinput
+16.02.2011 12:57:06 Command: request 
+INFO: noinput
+16.02.2011 12:57:13 Command: request 
+INFO: noinput
+16.02.2011 12:57:21 Command: request 
+INFO: noinput
+16.02.2011 12:57:28 Command: request 
+INFO: noinput
+16.02.2011 12:57:35 Command: request 
+INFO: noinput
+16.02.2011 12:57:43 Command: request 
+INFO: noinput
+16.02.2011 12:57:50 Command: request 
+INFO: noinput
+16.02.2011 12:57:57 Command: request 
+INFO: noinput
+16.02.2011 12:58:04 Command: request 
+INFO: noinput
+16.02.2011 12:58:12 Command: request 
+INFO: noinput
+16.02.2011 12:58:19 Command: request 
+INFO: noinput
+16.02.2011 12:58:26 Command: request 
+INFO: noinput
+16.02.2011 12:58:33 Command: request 
+INFO: noinput
+16.02.2011 12:58:41 Command: request 
+INFO: noinput
+16.02.2011 12:58:48 Command: request 
+INFO: noinput
+16.02.2011 12:58:55 Command: request 
+INFO: noinput
+16.02.2011 12:59:03 Command: request 
+INFO: noinput
+16.02.2011 12:59:10 Command: request 
+INFO: noinput
+16.02.2011 12:59:17 Command: request 
+INFO: noinput
+16.02.2011 12:59:24 Command: request 
+INFO: noinput
+16.02.2011 12:59:32 Command: request 
+INFO: noinput
+16.02.2011 12:59:39 Command: request 
+INFO: noinput
+16.02.2011 12:59:46 Command: request 
+INFO: noinput
+16.02.2011 12:59:53 Command: request 
+INFO: noinput
+16.02.2011 13:00:01 Command: request 
+INFO: noinput
+16.02.2011 13:00:08 Command: request 
+INFO: noinput
+16.02.2011 13:00:15 Command: request 
+INFO: noinput
+16.02.2011 13:00:22 Command: request 
+INFO: noinput
+16.02.2011 13:00:30 Command: request 
+INFO: noinput
+16.02.2011 13:00:37 Command: request 
+INFO: noinput
+16.02.2011 13:00:44 Command: request 
+INFO: noinput
+16.02.2011 13:00:51 Command: request 
+INFO: noinput
+16.02.2011 13:00:59 Command: request 
+INFO: noinput
+16.02.2011 13:01:06 Command: request 
+INFO: noinput
+16.02.2011 13:01:13 Command: request 
+INFO: noinput
+16.02.2011 13:01:20 Command: request 
+INFO: noinput
+16.02.2011 13:01:28 Command: request 
+INFO: noinput
+16.02.2011 13:01:35 Command: request 
+INFO: noinput
+16.02.2011 13:01:42 Command: request 
+INFO: noinput
+16.02.2011 13:01:49 Command: request 
+INFO: noinput
+16.02.2011 13:01:57 Command: request 
+INFO: noinput
+16.02.2011 13:02:04 Command: request 
+INFO: noinput
+16.02.2011 13:02:11 Command: request 
+INFO: noinput
+16.02.2011 13:02:18 Command: request 
+INFO: noinput
+16.02.2011 13:02:26 Command: request 
+INFO: noinput
+16.02.2011 13:02:33 Command: request 
+INFO: noinput
+16.02.2011 13:02:40 Command: request 
+INFO: noinput
+16.02.2011 13:02:47 Command: request 
+INFO: noinput
+16.02.2011 13:02:55 Command: request 
+INFO: noinput
+16.02.2011 13:03:02 Command: request 
+INFO: noinput
+16.02.2011 13:03:09 Command: request 
+INFO: noinput
+16.02.2011 13:03:16 Command: request 
+INFO: noinput
+16.02.2011 13:03:24 Command: request 
+INFO: noinput
+16.02.2011 13:03:31 Command: request 
+INFO: noinput
+16.02.2011 13:03:38 Command: request 
+INFO: noinput
+16.02.2011 13:03:46 Command: request 
+INFO: noinput
+16.02.2011 13:03:53 Command: request 
+INFO: noinput
+16.02.2011 13:04:00 Command: request 
+INFO: noinput
+16.02.2011 13:04:07 Command: request 
+INFO: noinput
+16.02.2011 13:04:15 Command: request 
+INFO: noinput
+16.02.2011 13:04:22 Command: request 
+INFO: noinput
+16.02.2011 13:04:29 Command: request 
+INFO: noinput
+16.02.2011 13:04:36 Command: request 
+INFO: noinput
+16.02.2011 13:04:44 Command: request 
+INFO: noinput
+16.02.2011 13:04:51 Command: request 
+INFO: noinput
+16.02.2011 13:04:58 Command: request 
+INFO: noinput
+16.02.2011 13:05:05 Command: request 
+INFO: noinput
+16.02.2011 13:05:13 Command: request 
+INFO: noinput
+16.02.2011 13:05:20 Command: request 
+INFO: noinput
+16.02.2011 13:05:27 Command: request 
+INFO: noinput
+16.02.2011 13:05:34 Command: request 
+INFO: noinput
+16.02.2011 13:05:42 Command: request 
+INFO: noinput
+16.02.2011 13:05:49 Command: request 
+INFO: noinput
+16.02.2011 13:05:56 Command: request 
+INFO: noinput
+16.02.2011 13:06:03 Command: request 
+INFO: noinput
+16.02.2011 13:06:11 Command: request 
+INFO: noinput
+16.02.2011 13:06:18 Command: request 
+INFO: noinput
+16.02.2011 13:06:25 Command: request 
+INFO: noinput
+16.02.2011 13:06:33 Command: request 
+INFO: noinput
+16.02.2011 13:06:40 Command: request 
+INFO: noinput
+16.02.2011 13:06:47 Command: request 
+INFO: noinput
+16.02.2011 13:06:54 Command: request 
+INFO: noinput
+16.02.2011 13:07:02 Command: request 
+INFO: noinput
+16.02.2011 13:07:09 Command: request 
+INFO: noinput
+16.02.2011 13:07:16 Command: request 
+INFO: noinput
+16.02.2011 13:07:23 Command: request 
+INFO: noinput
+16.02.2011 13:07:31 Command: request 
+INFO: noinput
+16.02.2011 13:07:38 Command: request 
+INFO: noinput
+16.02.2011 13:07:45 Command: request 
+INFO: noinput
+16.02.2011 13:07:52 Command: request 
+INFO: noinput
+16.02.2011 13:08:00 Command: request 
+INFO: noinput
+16.02.2011 13:08:07 Command: request 
+INFO: noinput
+16.02.2011 13:08:14 Command: request 
+INFO: noinput
+16.02.2011 13:08:21 Command: request 
+INFO: noinput
+16.02.2011 13:08:29 Command: request 
+INFO: noinput
+16.02.2011 13:08:36 Command: request 
+INFO: noinput
+16.02.2011 13:08:43 Command: request 
+INFO: noinput
+16.02.2011 13:08:50 Command: request 
+INFO: noinput
+16.02.2011 13:08:58 Command: request 
+INFO: noinput
+16.02.2011 13:09:05 Command: request 
+INFO: noinput
+16.02.2011 13:09:12 Command: request 
+INFO: noinput
+16.02.2011 13:09:20 Command: request 
+INFO: noinput
+16.02.2011 13:09:27 Command: request 
+INFO: noinput
+16.02.2011 13:09:34 Command: request 
+INFO: noinput
+16.02.2011 13:09:41 Command: request 
+INFO: noinput
+16.02.2011 13:09:49 Command: request 
+INFO: noinput
+16.02.2011 13:09:56 Command: request 
+INFO: noinput
+16.02.2011 13:10:03 Command: request 
+INFO: noinput
+16.02.2011 13:10:10 Command: request 
+INFO: noinput
+16.02.2011 13:10:18 Command: request 
+INFO: noinput
+16.02.2011 13:10:25 Command: request 
+INFO: noinput
+16.02.2011 13:10:32 Command: request 
+INFO: noinput
+16.02.2011 13:10:39 Command: request 
+INFO: noinput
+16.02.2011 13:10:47 Command: request 
+INFO: noinput
+16.02.2011 13:10:54 Command: request 
+INFO: noinput
+16.02.2011 13:11:01 Command: request 
+INFO: noinput
+16.02.2011 13:11:08 Command: request 
+INFO: noinput
+16.02.2011 13:11:16 Command: request 
+INFO: noinput
+16.02.2011 13:11:23 Command: request 
+INFO: noinput
+16.02.2011 13:11:30 Command: request 
+INFO: noinput
+16.02.2011 13:11:37 Command: request 
+INFO: noinput
+16.02.2011 13:11:45 Command: request 
+INFO: noinput
+16.02.2011 13:11:52 Command: request 
+INFO: noinput
+16.02.2011 13:11:59 Command: request 
+INFO: noinput
+16.02.2011 13:12:07 Command: request 
+INFO: noinput
+16.02.2011 13:12:14 Command: request 
+INFO: noinput
+16.02.2011 13:12:21 Command: request 
+INFO: noinput
+16.02.2011 13:12:28 Command: request 
+INFO: noinput
+16.02.2011 13:12:36 Command: request 
+INFO: noinput
+16.02.2011 13:12:43 Command: request 
+INFO: noinput
+16.02.2011 13:12:50 Command: request 
+INFO: noinput
+16.02.2011 13:12:57 Command: request 
+INFO: noinput
+16.02.2011 13:13:05 Command: request 
+INFO: noinput
+16.02.2011 13:13:12 Command: request 
+INFO: noinput
+16.02.2011 13:13:19 Command: request 
+INFO: noinput
+16.02.2011 13:13:26 Command: request 
+INFO: noinput
+16.02.2011 13:13:34 Command: request 
+INFO: noinput
+16.02.2011 13:13:41 Command: request 
+INFO: noinput
+16.02.2011 13:13:48 Command: request 
+INFO: noinput
+16.02.2011 13:13:56 Command: request 
+INFO: noinput
+16.02.2011 13:14:03 Command: request 
+INFO: noinput
+16.02.2011 13:14:10 Command: request 
+INFO: noinput
+16.02.2011 13:14:17 Command: request 
+INFO: noinput
+16.02.2011 13:14:25 Command: request 
+INFO: noinput
+16.02.2011 13:14:32 Command: request 
+INFO: noinput
+16.02.2011 13:14:39 Command: request 
+INFO: noinput
+16.02.2011 13:14:46 Command: request 
+INFO: noinput
+16.02.2011 13:14:54 Command: request 
+INFO: noinput
+16.02.2011 13:15:01 Command: request 
+INFO: noinput
+16.02.2011 13:15:08 Command: request 
+INFO: noinput
+16.02.2011 13:15:15 Command: request 
+INFO: noinput
+16.02.2011 13:15:23 Command: request 
+INFO: noinput
+16.02.2011 13:15:30 Command: request 
+INFO: noinput
+16.02.2011 13:15:37 Command: request 
+INFO: noinput
+16.02.2011 13:15:44 Command: request 
+INFO: noinput
+16.02.2011 13:15:52 Command: request 
+INFO: noinput
+16.02.2011 13:15:59 Command: request 
+INFO: noinput
+16.02.2011 13:16:06 Command: request 
+INFO: noinput
+16.02.2011 13:16:14 Command: request 
+INFO: noinput
+16.02.2011 13:16:21 Command: request 
+INFO: noinput
+16.02.2011 13:16:28 Command: request 
+INFO: noinput
+16.02.2011 13:16:35 Command: request 
+INFO: noinput
+16.02.2011 13:16:43 Command: request 
+INFO: noinput
+16.02.2011 13:16:50 Command: request 
+INFO: noinput
+16.02.2011 13:16:57 Command: request 
+INFO: noinput
+16.02.2011 13:17:04 Command: request 
+INFO: noinput
+16.02.2011 13:17:12 Command: request 
+INFO: noinput
+16.02.2011 13:17:19 Command: request 
+INFO: noinput
+16.02.2011 13:17:26 Command: request 
+INFO: noinput
+16.02.2011 13:17:33 Command: request 
+INFO: noinput
+16.02.2011 13:17:41 Command: request 
+INFO: noinput
+16.02.2011 13:17:48 Command: request 
+INFO: noinput
+16.02.2011 13:17:55 Command: request 
+INFO: noinput
+16.02.2011 13:18:02 Command: request 
+INFO: noinput
+16.02.2011 13:18:10 Command: request 
+INFO: noinput
+16.02.2011 13:18:17 Command: request 
+INFO: noinput
+16.02.2011 13:18:24 Command: request 
+INFO: noinput
+16.02.2011 13:18:31 Command: request 
+INFO: noinput
+16.02.2011 13:18:39 Command: request 
+INFO: noinput
+16.02.2011 13:18:46 Command: request 
+INFO: noinput
+16.02.2011 13:18:53 Command: request 
+INFO: noinput
+16.02.2011 13:19:00 Command: request 
+INFO: noinput
+16.02.2011 13:19:08 Command: request 
+INFO: noinput
+16.02.2011 13:19:15 Command: request 
+INFO: noinput
+16.02.2011 13:19:22 Command: request 
+INFO: noinput
+16.02.2011 13:19:30 Command: request 
+INFO: noinput
+16.02.2011 13:19:37 Command: request 
+INFO: noinput
+16.02.2011 13:19:44 Command: request 
+INFO: noinput
+16.02.2011 13:19:51 Command: request 
+INFO: noinput
+16.02.2011 13:19:59 Command: request 
+INFO: noinput
+16.02.2011 13:20:06 Command: request 
+INFO: noinput
+16.02.2011 13:20:13 Command: request 
+INFO: noinput
+16.02.2011 13:20:20 Command: request 
+INFO: noinput
+16.02.2011 13:20:28 Command: request 
+INFO: noinput
+16.02.2011 13:20:35 Command: request 
+INFO: noinput
+16.02.2011 13:20:42 Command: request 
+INFO: noinput
+16.02.2011 13:20:49 Command: request 
+INFO: noinput
+16.02.2011 13:20:57 Command: request 
+INFO: noinput
+16.02.2011 13:21:04 Command: request 
+INFO: noinput
+16.02.2011 13:21:11 Command: request 
+INFO: noinput
+16.02.2011 13:21:18 Command: request 
+INFO: noinput
+16.02.2011 13:21:26 Command: request 
+INFO: noinput
+16.02.2011 13:21:33 Command: request 
+INFO: noinput
+16.02.2011 13:21:40 Command: request 
+INFO: noinput
+16.02.2011 13:21:47 Command: request 
+INFO: noinput
+16.02.2011 13:21:55 Command: request 
+INFO: noinput
+16.02.2011 13:22:02 Command: request 
+INFO: noinput
+16.02.2011 13:22:09 Command: request 
+INFO: noinput
+16.02.2011 13:22:17 Command: request 
+INFO: noinput
+16.02.2011 13:22:24 Command: request 
+INFO: noinput
+16.02.2011 13:22:31 Command: request 
+INFO: noinput
+16.02.2011 13:22:38 Command: request 
+INFO: noinput
+16.02.2011 13:22:46 Command: request 
+INFO: noinput
+16.02.2011 13:22:53 Command: request 
+INFO: noinput
+16.02.2011 13:23:00 Command: request 
+INFO: noinput
+16.02.2011 13:23:07 Command: request 
+INFO: noinput
+16.02.2011 13:23:15 Command: request 
+INFO: noinput
+16.02.2011 13:23:22 Command: request 
+INFO: noinput
+16.02.2011 13:23:29 Command: request 
+INFO: noinput
+16.02.2011 13:23:36 Command: request 
+INFO: noinput
+16.02.2011 13:23:44 Command: request 
+INFO: noinput
+16.02.2011 13:23:51 Command: request 
+INFO: noinput
+16.02.2011 13:23:58 Command: request 
+INFO: noinput
+16.02.2011 13:24:05 Command: request 
+INFO: noinput
+16.02.2011 13:24:13 Command: request 
+INFO: noinput
+16.02.2011 13:24:20 Command: request 
+INFO: noinput
+16.02.2011 13:24:27 Command: request 
+INFO: noinput
+16.02.2011 13:24:34 Command: request 
+INFO: noinput
+16.02.2011 13:24:42 Command: request 
+INFO: noinput
+16.02.2011 13:24:49 Command: request 
+INFO: noinput
+16.02.2011 13:24:56 Command: request 
+INFO: noinput
+16.02.2011 13:25:03 Command: request 
+INFO: noinput
+16.02.2011 13:25:11 Command: request 
+INFO: noinput
+16.02.2011 13:25:18 Command: request 
+INFO: noinput
+16.02.2011 13:25:25 Command: request 
+INFO: noinput
+16.02.2011 13:25:33 Command: request 
+INFO: noinput
+16.02.2011 13:25:40 Command: request 
+INFO: noinput
+16.02.2011 13:25:47 Command: request 
+INFO: noinput
+16.02.2011 13:25:54 Command: request 
+INFO: noinput
+16.02.2011 13:26:02 Command: request 
+INFO: noinput
+16.02.2011 13:26:09 Command: request 
+INFO: noinput
+16.02.2011 13:26:16 Command: request 
+INFO: noinput
+16.02.2011 13:26:23 Command: request 
+INFO: noinput
+16.02.2011 13:26:31 Command: request 
+INFO: noinput
+16.02.2011 13:26:38 Command: request 
+INFO: noinput
+16.02.2011 13:26:45 Command: request 
+INFO: noinput
+16.02.2011 13:26:52 Command: request 
+INFO: noinput
+16.02.2011 13:27:00 Command: request 
+INFO: noinput
+16.02.2011 13:27:07 Command: request 
+INFO: noinput
+16.02.2011 13:27:14 Command: request 
+INFO: noinput
+16.02.2011 13:27:21 Command: request 
+INFO: noinput
+16.02.2011 13:27:29 Command: request 
+INFO: noinput
+16.02.2011 13:27:36 Command: request 
+INFO: noinput
+16.02.2011 13:27:43 Command: request 
+INFO: noinput
+16.02.2011 13:27:51 Command: request 
+INFO: noinput
+16.02.2011 13:27:58 Command: request 
+INFO: noinput
+16.02.2011 13:28:05 Command: request 
+INFO: noinput
+16.02.2011 13:28:12 Command: request 
+INFO: noinput
+16.02.2011 13:28:20 Command: request 
+INFO: noinput
+16.02.2011 13:28:27 Command: request 
+INFO: noinput
+16.02.2011 13:28:34 Command: request 
+INFO: noinput
+16.02.2011 13:28:41 Command: request 
+INFO: noinput
+16.02.2011 13:28:49 Command: request 
+INFO: noinput
+16.02.2011 13:28:56 Command: request 
+INFO: noinput
+16.02.2011 13:29:03 Command: request 
+INFO: noinput
+16.02.2011 13:29:10 Command: request 
+INFO: noinput
+16.02.2011 13:29:18 Command: request 
+INFO: noinput
+16.02.2011 13:29:25 Command: request 
+INFO: noinput
+16.02.2011 13:29:32 Command: request 
+INFO: noinput
+16.02.2011 13:29:39 Command: request 
+INFO: noinput
+16.02.2011 13:29:47 Command: request 
+INFO: noinput
+16.02.2011 13:29:54 Command: request 
+INFO: noinput
+16.02.2011 13:30:01 Command: request 
+INFO: noinput
+16.02.2011 13:30:09 Command: request 
+INFO: noinput
+16.02.2011 13:30:13 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_currentPic_move | Speak: photo details
+16.02.2011 13:30:13 Command: work 
+INFO: Agenda: whichPic_agenda | Move: null | Speak: null
+16.02.2011 13:30:23 Command: request 
+INFO: noinput
+16.02.2011 13:30:30 Command: request 
+INFO: noinput
+16.02.2011 13:30:36 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_selectSwi_move | Speak: switzerland
+16.02.2011 13:30:44 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_LigthsOn_move | Speak: lights on
+16.02.2011 13:30:48 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_selectSwi_move | Speak: switzerland
+16.02.2011 13:30:53 Command: work 
+INFO: Agenda: fault | Move: alarm_a1n1d_on_move | Speak: alarm on
+16.02.2011 13:30:58 Command: work 
+INFO: Agenda: fault | Move: alarm_a1n1d_off_move | Speak: alarm off
+16.02.2011 13:31:05 Command: request 
+INFO: noinput
+16.02.2011 13:31:13 Command: request 
+INFO: noinput
+16.02.2011 13:31:20 Command: request 
+INFO: noinput
+16.02.2011 13:31:27 Command: request 
+INFO: noinput
+16.02.2011 13:31:35 Command: request 
+INFO: noinput
+16.02.2011 13:31:42 Command: request 
+INFO: noinput
+16.02.2011 13:31:50 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_currentPic_move | Speak: photo details
+16.02.2011 13:31:50 Command: work 
+INFO: Agenda: whichPic_agenda | Move: null | Speak: null
+16.02.2011 13:31:56 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_currentPic_move | Speak: photo details
+16.02.2011 13:31:56 Command: work 
+INFO: Agenda: whichPic_agenda | Move: null | Speak: null
+16.02.2011 13:32:02 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_exit_move | Speak: end
+16.02.2011 13:32:08 Command: work 
+INFO: Agenda: fault | Move: music_a1n1d_exit_move | Speak: music
+16.02.2011 13:32:13 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_currentPic_move | Speak: photo details
+16.02.2011 13:32:13 Command: work 
+INFO: Agenda: whichPic_agenda | Move: null | Speak: null
+16.02.2011 13:32:19 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_LigthsOn_move | Speak: lights on
+16.02.2011 13:32:23 Command: request 
+INFO: nomatch
+16.02.2011 13:32:26 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_medium_move | Speak: lights medium
+16.02.2011 13:32:34 Command: request 
+INFO: nomatch
+16.02.2011 13:32:38 Command: request 
+INFO: nomatch
+16.02.2011 13:32:45 Command: request 
+INFO: nomatch
+16.02.2011 13:32:49 Command: request 
+INFO: nomatch
+16.02.2011 13:32:52 Command: work 
+INFO: Agenda: fault | Move: music_a1n1d_start_move | Speak: music
+16.02.2011 13:32:56 Command: work 
+INFO: Agenda: fault | Move: music_a1n1d_musicUp_move | Speak: crank up the volume
+16.02.2011 13:33:02 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_next_move | Speak: next
+16.02.2011 13:33:07 Command: work 
+INFO: Agenda: fault | Move: music_a1n1d_next_move | Speak: music
+16.02.2011 13:33:14 Command: request 
+INFO: noinput
+16.02.2011 13:33:17 Command: request 
+INFO: nomatch
+16.02.2011 13:33:20 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_selectSlo_move | Speak: slovenia
+16.02.2011 16:30:50 Command: reset 
+INFO: OK
+16.02.2011 16:30:52 Command: request 
+INFO: OK
+16.02.2011 16:30:53 Command: request 
+INFO: OK
+16.02.2011 16:30:54 Command: request 
+INFO: OK
+16.02.2011 16:31:22 Command: reset 
+INFO: OK
+16.02.2011 16:31:22 Command: request 
+INFO: OK
+16.02.2011 16:31:24 Command: work 
+INFO: Agenda: question_agenda | Move: yesnoquestion_a1n1d_no_move | Speak: null
+16.02.2011 16:31:26 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_veryHigh_move | Speak: null
+16.02.2011 16:31:27 Command: work 
+INFO: Agenda: fault | Move: heating_a1n1d_on_move | Speak: null
+16.02.2011 16:31:27 Command: work 
+INFO: Agenda: fault | Move: heating_a1n1d_off_move | Speak: null
+16.02.2011 16:31:28 Command: work 
+INFO: Agenda: fault | Move: alarm_a1n1d_on_move | Speak: null
+16.02.2011 16:31:28 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_LightsOff_move | Speak: null
+16.02.2011 16:31:30 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_start_move | Speak: null
+16.02.2011 16:31:31 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_LigthsOn_move | Speak: null
+16.02.2011 16:31:31 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_veryLow_move | Speak: null
+16.02.2011 16:31:32 Command: work 
+INFO: Agenda: fault | Move: alarm_a1n1d_off_move | Speak: null
+16.02.2011 16:31:32 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_currentPic_move | Speak: null
+16.02.2011 16:31:34 Command: work 
+INFO: Agenda: whichPic_agenda | Move: null | Speak: null
+16.02.2011 16:31:34 Command: work 
+INFO: Agenda: fault | Move: heating_a1n1d_on_move | Speak: null
+16.02.2011 16:31:35 Command: work 
+INFO: Agenda: fault | Move: alarm_a1n1d_on_move | Speak: null
+16.02.2011 16:31:36 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_prev_move | Speak: null
+16.02.2011 16:31:36 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_pause_move | Speak: null
+16.02.2011 16:31:37 Command: work 
+INFO: Agenda: fault | Move: music_a1n1d_start_move | Speak: null
+16.02.2011 16:31:38 Command: work 
+INFO: Agenda: fault | Move: music_a1n1d_exit_move | Speak: null
+16.02.2011 16:31:39 Command: work 
+INFO: Agenda: fault | Move: music_a1n1d_start_move | Speak: null
+16.02.2011 16:31:40 Command: work 
+INFO: Agenda: fault | Move: music_a1n1d_musicUp_move | Speak: null
+16.02.2011 16:31:41 Command: work 
+INFO: Agenda: fault | Move: music_a1n1d_selectJazz_move | Speak: null
+16.02.2011 16:31:43 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_currentPic_move | Speak: null
+16.02.2011 16:31:44 Command: work 
+INFO: Agenda: whichPic_agenda | Move: null | Speak: null
+16.02.2011 16:31:46 Command: reset 
+INFO: OK
+16.02.2011 16:31:47 Command: request 
+INFO: OK
+16.02.2011 16:31:49 Command: work 
+INFO: Agenda: question_agenda | Move: yesnoquestion_a1n1d_exit_move | Speak: null
+16.02.2011 16:31:50 Command: work 
+INFO: Agenda: fault | Move: heating_a1n1d_off_move | Speak: null
+16.02.2011 16:31:50 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_veryHigh_move | Speak: null
+16.02.2011 16:31:52 Command: work 
+INFO: Agenda: fault | Move: system_a1n1d_reset | Speak: null
+16.02.2011 16:31:52 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_veryLow_move | Speak: null
+16.02.2011 16:31:53 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_LigthsOn_move | Speak: null

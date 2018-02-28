@@ -1,0 +1,2053 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://localhost:8080/D22/hotel.owl#"
+     xml:base="http://localhost:8080/D22/hotel.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+     xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
+     xmlns:p1="http://localhost:8080/OwlSpeakOnto.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://localhost:8080/D22/hotel.owl">
+        <owl:imports rdf:resource="http://localhost:8080/OwlSpeakOnto.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#Country_utt -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#Country_utt">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Utterance"/>
+        <p1:utteranceString xml:lang="de">In welchem Land liegt das gewuenschte hotel?</p1:utteranceString>
+        <p1:utteranceString xml:lang="en">In which country should the hotel be?</p1:utteranceString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#History-128086765 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#History-128086765">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#History"/>
+        <p1:addTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</p1:addTime>
+        <p1:agendaPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">80</p1:agendaPriority>
+        <p1:inWorkspace rdf:resource="http://localhost:8080/D22/hotel.owl#userWorkspace"/>
+        <p1:forAgenda rdf:resource="http://localhost:8080/D22/hotel.owl#what_country_agenda"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#History-699887096 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#History-699887096">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#History"/>
+        <p1:addTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</p1:addTime>
+        <p1:agendaPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">100</p1:agendaPriority>
+        <p1:forAgenda rdf:resource="http://localhost:8080/D22/hotel.owl#say_options_towns_egypt"/>
+        <p1:inWorkspace rdf:resource="http://localhost:8080/D22/hotel.owl#userWorkspace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#History-834747901 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#History-834747901">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#History"/>
+        <p1:addTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</p1:addTime>
+        <p1:agendaPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">52</p1:agendaPriority>
+        <p1:forAgenda rdf:resource="http://localhost:8080/D22/hotel.owl#say_options_hotel"/>
+        <p1:inWorkspace rdf:resource="http://localhost:8080/D22/hotel.owl#userWorkspace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#History1013973329 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#History1013973329">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#History"/>
+        <p1:addTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</p1:addTime>
+        <p1:agendaPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">100</p1:agendaPriority>
+        <p1:forAgenda rdf:resource="http://localhost:8080/D22/hotel.owl#say_options_towns_england"/>
+        <p1:inWorkspace rdf:resource="http://localhost:8080/D22/hotel.owl#userWorkspace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#History1915838431 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#History1915838431">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#History"/>
+        <p1:addTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</p1:addTime>
+        <p1:agendaPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">100</p1:agendaPriority>
+        <p1:forAgenda rdf:resource="http://localhost:8080/D22/hotel.owl#say_options_what_day"/>
+        <p1:inWorkspace rdf:resource="http://localhost:8080/D22/hotel.owl#userWorkspace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#History363254025 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#History363254025">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#History"/>
+        <p1:addTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</p1:addTime>
+        <p1:agendaPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">100</p1:agendaPriority>
+        <p1:forAgenda rdf:resource="http://localhost:8080/D22/hotel.owl#say_options_towns_america"/>
+        <p1:inWorkspace rdf:resource="http://localhost:8080/D22/hotel.owl#userWorkspace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#History873648894 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#History873648894">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#History"/>
+        <p1:addTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</p1:addTime>
+        <p1:agendaPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">100</p1:agendaPriority>
+        <p1:forAgenda rdf:resource="http://localhost:8080/D22/hotel.owl#say_options_duration"/>
+        <p1:inWorkspace rdf:resource="http://localhost:8080/D22/hotel.owl#userWorkspace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#History973726292 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#History973726292">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#History"/>
+        <p1:addTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</p1:addTime>
+        <p1:agendaPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">100</p1:agendaPriority>
+        <p1:forAgenda rdf:resource="http://localhost:8080/D22/hotel.owl#say_options_countries"/>
+        <p1:inWorkspace rdf:resource="http://localhost:8080/D22/hotel.owl#userWorkspace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#On_which_day_begin_stay_utt -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#On_which_day_begin_stay_utt">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Utterance"/>
+        <p1:utteranceString xml:lang="de">Wann wollen sie anreisen?</p1:utteranceString>
+        <p1:utteranceString xml:lang="en">On what day do you want to begin your stay?</p1:utteranceString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#There_are_hotels_utt -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#There_are_hotels_utt">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Utterance"/>
+        <p1:utteranceString xml:lang="de">In %town_de% gibt es drei hotels zur auswahl: Sie koennen das %hotel1_name% hotel fuer %hotel1_price% euro oder das %hotel2_name%  hotel fuer %hotel2_price% euro oder das %hotel3_name% hotel fuer %hotel3_price% euro buchen.</p1:utteranceString>
+        <p1:utteranceString xml:lang="en">In %town% there are three hotels. You can stay in the %hotel1_name% for %hotel1_price% euro or in the %hotel2_name% for %hotel2_price% or in the %hotel3_name% for %hotel3_price% euro.</p1:utteranceString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#There_are_no_free_rooms_utt -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#There_are_no_free_rooms_utt">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Utterance"/>
+        <p1:utteranceString xml:lang="de">Am fuenfzehnten sind keine zimmer mehr frei. Bitte waehlen sie einen anderen tag.</p1:utteranceString>
+        <p1:utteranceString xml:lang="en">There are no free rooms on the fifteenth. Please choose another day.</p1:utteranceString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#Town_utt -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#Town_utt">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Utterance"/>
+        <p1:utteranceString xml:lang="de">In welche stadt in %country_de% liegt das gewuenschte hotel?</p1:utteranceString>
+        <p1:utteranceString xml:lang="en">In which town in %country% should the hotel be?</p1:utteranceString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#abusimbel_gram -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#abusimbel_gram">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Grammar"/>
+        <p1:grammarString xml:lang="de">(abu simbel)</p1:grammarString>
+        <p1:grammarString xml:lang="en">(abu simbel)</p1:grammarString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#abusimbel_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#abusimbel_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SET(town=abusimbel);(town_de=abusimbel);(hotel1_name=NobalehRamses);(hotel1_price=30);(hotel2_name=Nefertari);(hotel2_price=70);(hotel3_name=SetiAbuSimbel);(hotel3_price=100)</p1:variableOperator>
+        <p1:grammar rdf:resource="http://localhost:8080/D22/hotel.owl#abusimbel_gram"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#abusimbel_nefertari_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#abusimbel_nefertari_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SET(hotel=nefertari)</p1:variableOperator>
+        <p1:grammar rdf:resource="http://localhost:8080/D22/hotel.owl#nefertari_gram"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#abusimbel_nobaleh_ramses -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#abusimbel_nobaleh_ramses">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SET(hotel=nobalehramses)</p1:variableOperator>
+        <p1:grammar rdf:resource="http://localhost:8080/D22/hotel.owl#nobaleh_ramses_gram"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#abusimbel_sem -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#abusimbel_sem">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Semantic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#abusimbel_seti_abusimbel_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#abusimbel_seti_abusimbel_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SET(hotel=setiabusimbel)</p1:variableOperator>
+        <p1:grammar rdf:resource="http://localhost:8080/D22/hotel.owl#seti_abusimbel_gram"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#america_gram -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#america_gram">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Grammar"/>
+        <p1:grammarString xml:lang="de">[amerika (vereinigte staaten) (u s a)]</p1:grammarString>
+        <p1:grammarString xml:lang="en">[america (united states) (u s a)]</p1:grammarString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#america_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#america_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SET(country=america);(dialog_progress=america);(country_de=amerika)</p1:variableOperator>
+        <p1:grammar rdf:resource="http://localhost:8080/D22/hotel.owl#america_gram"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#america_sem -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#america_sem">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Semantic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#ask_board_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#ask_board_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:utterance rdf:resource="http://localhost:8080/D22/hotel.owl#full_board_or_half_board_utt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#ask_what_town_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#ask_what_town_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:utterance rdf:resource="http://localhost:8080/D22/hotel.owl#Town_utt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#beaufort_house_gram -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#beaufort_house_gram">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Grammar"/>
+        <p1:grammarString xml:lang="de">(beaufort house ?hotel)</p1:grammarString>
+        <p1:grammarString xml:lang="en">(beaufort house ?hotel)</p1:grammarString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#best_western_gram -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#best_western_gram">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Grammar"/>
+        <p1:grammarString xml:lang="de">(best western ?hotel)</p1:grammarString>
+        <p1:grammarString xml:lang="en">(best western ?hotel)</p1:grammarString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#board -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#board">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Variable"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#board_agenda -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#board_agenda">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <p1:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">46</p1:priority>
+        <p1:has rdf:resource="http://localhost:8080/D22/hotel.owl#ask_board_mv"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/hotel.owl#correct_agenda"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/hotel.owl#full_board_mv"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/hotel.owl#half_board_mv"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#board_de -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#board_de">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Variable"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#britannia_gram -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#britannia_gram">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Grammar"/>
+        <p1:grammarString xml:lang="de">(britannia ?hotel)</p1:grammarString>
+        <p1:grammarString xml:lang="en">(britannia ?hotel)</p1:grammarString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#chicago_best_western_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#chicago_best_western_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SET(hotel=bestwestern)</p1:variableOperator>
+        <p1:grammar rdf:resource="http://localhost:8080/D22/hotel.owl#best_western_gram"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#chicago_gram -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#chicago_gram">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Grammar"/>
+        <p1:grammarString xml:lang="de">(chicago)</p1:grammarString>
+        <p1:grammarString xml:lang="en">(chicago)</p1:grammarString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#chicago_hilton_ohare_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#chicago_hilton_ohare_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SET(hotel=hiltonohare)</p1:variableOperator>
+        <p1:grammar rdf:resource="http://localhost:8080/D22/hotel.owl#hilton_ohare_gram"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#chicago_james_chic_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#chicago_james_chic_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SET(hotel=jameschicago)</p1:variableOperator>
+        <p1:grammar rdf:resource="http://localhost:8080/D22/hotel.owl#james_chicago_gram"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#chicago_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#chicago_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SET(town=chicago);(town_de=chicago);(hotel1_name=BestWestern);(hotel1_price=100);(hotel2_name=HiltonOhare);(hotel2_price=120);(hotel3_name=JamesChicago);(hotel3_price=150)</p1:variableOperator>
+        <p1:grammar rdf:resource="http://localhost:8080/D22/hotel.owl#chicago_gram"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#chicago_sem -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#chicago_sem">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Semantic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#correct_agenda -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#correct_agenda">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <p1:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">46</p1:priority>
+        <p1:has rdf:resource="http://localhost:8080/D22/hotel.owl#correct_mv"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/hotel.owl#no_mv"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/hotel.owl#what_country_agenda"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/hotel.owl#yes_mv"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#correct_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#correct_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:utterance rdf:resource="http://localhost:8080/D22/hotel.owl#correct_utt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#correct_sem -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#correct_sem">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Semantic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#correct_utt -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#correct_utt">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Utterance"/>
+        <p1:utteranceString xml:lang="de">Sie wollen das %hotel% hotel in %town_de% fuer %duration_de% wochen mit %board_de%pension. Ihr aufenthalt beginnt am %date_de% und endet am %return_day_de%. Ist das richtig?</p1:utteranceString>
+        <p1:utteranceString xml:lang="en">You want to stay in the %hotel% hotel in %town% for %duration% weeks with %board% board. Your stay will begin on the %date% and end on the %return_day% . Is this correct?</p1:utteranceString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#country -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#country">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Variable"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#country_de -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#country_de">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Variable"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#date -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#date">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Variable"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#date_de -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#date_de">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Variable"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#dialog_progress -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#dialog_progress">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Variable"/>
+        <p1:defaultValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">country</p1:defaultValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#done -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#done">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Variable"/>
+        <p1:defaultValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</p1:defaultValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#duration -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#duration">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Variable"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#duration_de -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#duration_de">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Variable"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#egypt_gram -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#egypt_gram">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Grammar"/>
+        <p1:grammarString xml:lang="de">(aegypten)</p1:grammarString>
+        <p1:grammarString xml:lang="en">(egypt)</p1:grammarString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#egypt_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#egypt_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SET(country=egypt);(dialog_progress=egypt);(country_de=aegypten)</p1:variableOperator>
+        <p1:grammar rdf:resource="http://localhost:8080/D22/hotel.owl#egypt_gram"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#egypt_sem -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#egypt_sem">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Semantic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#england_gram -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#england_gram">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Grammar"/>
+        <p1:grammarString xml:lang="de">(england)</p1:grammarString>
+        <p1:grammarString xml:lang="en">(england)</p1:grammarString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#england_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#england_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SET(country=england);(dialog_progress=england);(country_de=england)</p1:variableOperator>
+        <p1:grammar rdf:resource="http://localhost:8080/D22/hotel.owl#england_gram"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#england_sem -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#england_sem">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Semantic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#fifteenth -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#fifteenth">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Semantic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#fifteenth_agenda -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#fifteenth_agenda">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <p1:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">100</p1:priority>
+        <p1:requires rdf:resource="http://localhost:8080/D22/hotel.owl#fifteenth"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/hotel.owl#there_are_no_free_rooms_mv"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/hotel.owl#what_day_to_stay_agenda"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#fifteenth_gram -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#fifteenth_gram">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Grammar"/>
+        <p1:grammarString xml:lang="de">(?(ich moechte) am fuenfzehnten ?(anreisen))</p1:grammarString>
+        <p1:grammarString xml:lang="en">(?(i want to stay) ?on the fifteenth)</p1:grammarString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#fifteenth_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#fifteenth_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:semantic rdf:resource="http://localhost:8080/D22/hotel.owl#fifteenth"/>
+        <p1:grammar rdf:resource="http://localhost:8080/D22/hotel.owl#fifteenth_gram"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#fourth_gram -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#fourth_gram">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Grammar"/>
+        <p1:grammarString xml:lang="de">(?(ich moechte) am vierten ?anreisen)</p1:grammarString>
+        <p1:grammarString xml:lang="en">(?(i want to stay) ?on the fourth)</p1:grammarString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#fourth_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#fourth_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SET(date=fourth);(dialog_progress=duration);(date_de=fuenften)</p1:variableOperator>
+        <p1:grammar rdf:resource="http://localhost:8080/D22/hotel.owl#fourth_gram"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#full_board_gram -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#full_board_gram">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Grammar"/>
+        <p1:grammarString xml:lang="de">(vollpension)</p1:grammarString>
+        <p1:grammarString xml:lang="en">(full ?board)</p1:grammarString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#full_board_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#full_board_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SET(board=full);(board_de=voll)</p1:variableOperator>
+        <p1:grammar rdf:resource="http://localhost:8080/D22/hotel.owl#full_board_gram"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#full_board_or_half_board_utt -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#full_board_or_half_board_utt">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Utterance"/>
+        <p1:utteranceString xml:lang="de">Wuenschen sie halbpension oder vollpension</p1:utteranceString>
+        <p1:utteranceString xml:lang="en">Do you want full board or half board?</p1:utteranceString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#grand_hyatt_gram -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#grand_hyatt_gram">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Grammar"/>
+        <p1:grammarString xml:lang="de">(grand hyatt ?hotel)</p1:grammarString>
+        <p1:grammarString xml:lang="en">(grand hyatt ?hotel)</p1:grammarString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#half_board_gram -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#half_board_gram">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Grammar"/>
+        <p1:grammarString xml:lang="de">(halbpension)</p1:grammarString>
+        <p1:grammarString xml:lang="en">(half ?board)</p1:grammarString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#half_board_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#half_board_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SET(board=half);(board_de=halb)</p1:variableOperator>
+        <p1:grammar rdf:resource="http://localhost:8080/D22/hotel.owl#half_board_gram"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#hilton_airpiort_gram -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#hilton_airpiort_gram">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Grammar"/>
+        <p1:grammarString xml:lang="de">(hilton airport ?hotel)</p1:grammarString>
+        <p1:grammarString xml:lang="en">(hilton airport ?hotel)</p1:grammarString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#hilton_chekers_gram -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#hilton_chekers_gram">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Grammar"/>
+        <p1:grammarString xml:lang="de">(hilton checkers ?hotel)</p1:grammarString>
+        <p1:grammarString xml:lang="en">(hilton checkers ?hotel)</p1:grammarString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#hilton_garden_inn_gram -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#hilton_garden_inn_gram">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Grammar"/>
+        <p1:grammarString xml:lang="de">(hilton garden inn ?hotel)</p1:grammarString>
+        <p1:grammarString xml:lang="en">(hilton garden inn ?hotel)</p1:grammarString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#hilton_luxor_gram -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#hilton_luxor_gram">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Grammar"/>
+        <p1:grammarString xml:lang="de">(hilton luxor ?hotel)</p1:grammarString>
+        <p1:grammarString xml:lang="en">(hilton luxor ?hotel)</p1:grammarString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#hilton_ohare_gram -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#hilton_ohare_gram">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Grammar"/>
+        <p1:grammarString xml:lang="de">(hilton ohare ?hotel)</p1:grammarString>
+        <p1:grammarString xml:lang="en">(hilton ohare ?hotel)</p1:grammarString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#holiday_inn_gram -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#holiday_inn_gram">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Grammar"/>
+        <p1:grammarString xml:lang="de">(holiday inn ?hotel)</p1:grammarString>
+        <p1:grammarString xml:lang="en">(holiday inn ?hotel)</p1:grammarString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#hotel -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#hotel">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Variable"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#hotel1_name -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#hotel1_name">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Variable"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#hotel1_price -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#hotel1_price">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Variable"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#hotel2_name -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#hotel2_name">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Variable"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#hotel2_price -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#hotel2_price">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Variable"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#hotel3_name -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#hotel3_name">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Variable"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#hotel3_price -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#hotel3_price">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Variable"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#hotels_list_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#hotels_list_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SET(dialog_progress=hotel)</p1:variableOperator>
+        <p1:utterance rdf:resource="http://localhost:8080/D22/hotel.owl#There_are_hotels_utt"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/D22/hotel.owl#say_options_sem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#hotelsintown -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#hotelsintown">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Variable"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#how_long_fourth_agenda -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#how_long_fourth_agenda">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <p1:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">100</p1:priority>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">REQUIRES(%date%==fourth)</p1:variableOperator>
+        <p1:next rdf:resource="http://localhost:8080/D22/hotel.owl#board_agenda"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/hotel.owl#how_long_mv"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/hotel.owl#one_week_fourth_mv"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/hotel.owl#two_weeks_fourth_mv"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#how_long_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#how_long_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:utterance rdf:resource="http://localhost:8080/D22/hotel.owl#how_long_to_stay_utt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#how_long_seventeenth_agenda -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#how_long_seventeenth_agenda">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <p1:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">100</p1:priority>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">REQUIRES(%date%==seventeenth)</p1:variableOperator>
+        <p1:next rdf:resource="http://localhost:8080/D22/hotel.owl#board_agenda"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/hotel.owl#how_long_mv"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/hotel.owl#one_week_seventeenth_mv"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/hotel.owl#two_weeks_seventeenth_mv"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#how_long_to_stay_utt -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#how_long_to_stay_utt">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Utterance"/>
+        <p1:utteranceString xml:lang="de">Wie lange wollen sie bleiben?</p1:utteranceString>
+        <p1:utteranceString xml:lang="en">How long do you want to stay?</p1:utteranceString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#in_which_hotel_utt -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#in_which_hotel_utt">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Utterance"/>
+        <p1:utteranceString xml:lang="de">In welchem hotel wollen sie absteigen?</p1:utteranceString>
+        <p1:utteranceString xml:lang="en">In which hotel do you want to stay?</p1:utteranceString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#james_chicago_gram -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#james_chicago_gram">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Grammar"/>
+        <p1:grammarString xml:lang="de">(james chicago ?hotel)</p1:grammarString>
+        <p1:grammarString xml:lang="en">(james chicago ?hotel)</p1:grammarString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#kairo_gram -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#kairo_gram">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Grammar"/>
+        <p1:grammarString xml:lang="de">(kairo)</p1:grammarString>
+        <p1:grammarString xml:lang="en">(kairo)</p1:grammarString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#kairo_holiday_inn_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#kairo_holiday_inn_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SET(hotel=holidayinn)</p1:variableOperator>
+        <p1:grammar rdf:resource="http://localhost:8080/D22/hotel.owl#holiday_inn_gram"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#kairo_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#kairo_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SET(town=kairo);(town_de=kairo);(hotel1_name=PyramisaSuites);(hotel1_price=62);(hotel2_name=grandHyatt);(hotel2_price=130);(hotel3_name=HolidayInn);(hotel3_price=146)</p1:variableOperator>
+        <p1:grammar rdf:resource="http://localhost:8080/D22/hotel.owl#kairo_gram"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#kairo_pyramisa_suites_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#kairo_pyramisa_suites_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SET(hotel=pyramisasuites)</p1:variableOperator>
+        <p1:grammar rdf:resource="http://localhost:8080/D22/hotel.owl#pyramisa_suites_gram"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#kairo_sem -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#kairo_sem">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Semantic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#kario_grand_hyatt_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#kario_grand_hyatt_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SET(hotel=grandhyatt)</p1:variableOperator>
+        <p1:grammar rdf:resource="http://localhost:8080/D22/hotel.owl#grand_hyatt_gram"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#knightsbridge_gram -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#knightsbridge_gram">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Grammar"/>
+        <p1:grammarString xml:lang="de">(knightsbridge ?hotel)</p1:grammarString>
+        <p1:grammarString xml:lang="en">(knightsbridge ?hotel)</p1:grammarString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#london_beaufort_house_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#london_beaufort_house_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SET(hotel=beauforthouse)</p1:variableOperator>
+        <p1:grammar rdf:resource="http://localhost:8080/D22/hotel.owl#beaufort_house_gram"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#london_gram -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#london_gram">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Grammar"/>
+        <p1:grammarString xml:lang="de">(london)</p1:grammarString>
+        <p1:grammarString xml:lang="en">(london)</p1:grammarString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#london_knightsbridge_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#london_knightsbridge_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SET(hotel=knightsbridge)</p1:variableOperator>
+        <p1:grammar rdf:resource="http://localhost:8080/D22/hotel.owl#knightsbridge_gram"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#london_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#london_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SET(town=london);(town_de=london);(hotel1_name=PremierInn);(hotel1_price=150);(hotel2_name=Knightsbridge);(hotel2_price=280);(hotel3_name=BeaufortHouse);(hotel3_price=400)</p1:variableOperator>
+        <p1:grammar rdf:resource="http://localhost:8080/D22/hotel.owl#london_gram"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#london_premierinn_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#london_premierinn_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SET(hotel=premierinn)</p1:variableOperator>
+        <p1:grammar rdf:resource="http://localhost:8080/D22/hotel.owl#premier_inn_gram"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#london_sem -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#london_sem">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Semantic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#losangeles_gram -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#losangeles_gram">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Grammar"/>
+        <p1:grammarString xml:lang="de">(los angeles)</p1:grammarString>
+        <p1:grammarString xml:lang="en">(los angeles)</p1:grammarString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#losangeles_hilton_checkers_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#losangeles_hilton_checkers_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SET(hotel=hiltoncheckers)</p1:variableOperator>
+        <p1:grammar rdf:resource="http://localhost:8080/D22/hotel.owl#hilton_chekers_gram"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#losangeles_holidayin_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#losangeles_holidayin_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SET(hotel=holidayinn)</p1:variableOperator>
+        <p1:grammar rdf:resource="http://localhost:8080/D22/hotel.owl#holiday_inn_gram"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#losangeles_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#losangeles_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SET(town=losangeles);(town_de=losangeles);(hotel1_name=HolidayInn);(hotel1_price=140);(hotel2_name=Sofitel);(hotel2_price=170);(hotel3_name=HiltonCheckers);(hotel3_price=180)</p1:variableOperator>
+        <p1:grammar rdf:resource="http://localhost:8080/D22/hotel.owl#losangeles_gram"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#losangeles_sem -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#losangeles_sem">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Semantic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#losangeles_sofitel_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#losangeles_sofitel_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SET(hotel=sofitel)</p1:variableOperator>
+        <p1:grammar rdf:resource="http://localhost:8080/D22/hotel.owl#sofitel_gram"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#luxor_gram -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#luxor_gram">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Grammar"/>
+        <p1:grammarString xml:lang="de">(luxor)</p1:grammarString>
+        <p1:grammarString xml:lang="en">(luxor)</p1:grammarString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#luxor_hilton_luxor_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#luxor_hilton_luxor_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SET(hotel=hilton)</p1:variableOperator>
+        <p1:grammar rdf:resource="http://localhost:8080/D22/hotel.owl#hilton_luxor_gram"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#luxor_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#luxor_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SET(town=luxor);(town_de=luxor);(hotel1_name=PyramisaIsis);(hotel1_price=25);(hotel2_name=Sofitel);(hotel2_price=79);(hotel3_name=HiltonLuxor);(hotel3_price=230)</p1:variableOperator>
+        <p1:grammar rdf:resource="http://localhost:8080/D22/hotel.owl#luxor_gram"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#luxor_pyramisa_isis_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#luxor_pyramisa_isis_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SET(hotel=pyramisaisis)</p1:variableOperator>
+        <p1:grammar rdf:resource="http://localhost:8080/D22/hotel.owl#pyramisa_isis_gram"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#luxor_sem -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#luxor_sem">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Semantic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#luxor_sofitel_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#luxor_sofitel_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SET(hotel=sofitel)</p1:variableOperator>
+        <p1:grammar rdf:resource="http://localhost:8080/D22/hotel.owl#sofitel_gram"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#manchester_britannia_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#manchester_britannia_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SET(hotel=britannia)</p1:variableOperator>
+        <p1:grammar rdf:resource="http://localhost:8080/D22/hotel.owl#britannia_gram"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#manchester_gram -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#manchester_gram">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Grammar"/>
+        <p1:grammarString xml:lang="de">(manchester)</p1:grammarString>
+        <p1:grammarString xml:lang="en">(manchester)</p1:grammarString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#manchester_hilton_airport_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#manchester_hilton_airport_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SET(hotel=hiltonairport)</p1:variableOperator>
+        <p1:grammar rdf:resource="http://localhost:8080/D22/hotel.owl#hilton_airpiort_gram"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#manchester_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#manchester_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SET(town=manchester);(town_de=manchester);(hotel1_name=Britannia);(hotel1_price=40);(hotel2_name=HiltonAirport);(hotel2_price=90);(hotel3_name=PalaceHotel);(hotel3_price=100)</p1:variableOperator>
+        <p1:grammar rdf:resource="http://localhost:8080/D22/hotel.owl#manchester_gram"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#manchester_palace_hotel_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#manchester_palace_hotel_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SET(hotel=palacehotel)</p1:variableOperator>
+        <p1:grammar rdf:resource="http://localhost:8080/D22/hotel.owl#palace_hotel_gram"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#manchester_sem -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#manchester_sem">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Semantic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#masteragenda -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#masteragenda">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <p1:isMasterBool rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</p1:isMasterBool>
+        <p1:next rdf:resource="http://localhost:8080/D22/hotel.owl#say_options_countries"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/hotel.owl#say_options_duration"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/hotel.owl#say_options_hotel"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/hotel.owl#say_options_towns_america"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/hotel.owl#say_options_towns_egypt"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/hotel.owl#say_options_towns_england"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/hotel.owl#say_options_what_day"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/hotel.owl#what_country_agenda"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#nefertari_gram -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#nefertari_gram">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Grammar"/>
+        <p1:grammarString xml:lang="de">(nefertari ?hotel)</p1:grammarString>
+        <p1:grammarString xml:lang="en">(nefertari ?hotel)</p1:grammarString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#new_york_gram -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#new_york_gram">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Grammar"/>
+        <p1:grammarString xml:lang="de">(new york)</p1:grammarString>
+        <p1:grammarString xml:lang="en">(new york)</p1:grammarString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#new_york_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#new_york_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SET(town=newyork);(town_de=newyork);(hotel1_name=HolidayInn);(hotel1_price=130);(hotel2_name=HiltonGardenInn);(hotel2_price=170);(hotel3_name=Sofitel);(hotel3_price=200)</p1:variableOperator>
+        <p1:grammar rdf:resource="http://localhost:8080/D22/hotel.owl#new_york_gram"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#newyork_hilton_gardens_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#newyork_hilton_gardens_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SET(hotel=hiltongardens)</p1:variableOperator>
+        <p1:grammar rdf:resource="http://localhost:8080/D22/hotel.owl#hilton_garden_inn_gram"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#newyork_holidayinn_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#newyork_holidayinn_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SET(hotel=hiltongardens)</p1:variableOperator>
+        <p1:grammar rdf:resource="http://localhost:8080/D22/hotel.owl#holiday_inn_gram"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#newyork_sem -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#newyork_sem">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Semantic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#newyork_sofitel_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#newyork_sofitel_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SET(hotel=sofitel)</p1:variableOperator>
+        <p1:grammar rdf:resource="http://localhost:8080/D22/hotel.owl#sofitel_gram"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#no_gram -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#no_gram">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Grammar"/>
+        <p1:grammarString xml:lang="de">(nein)</p1:grammarString>
+        <p1:grammarString xml:lang="en">(no)</p1:grammarString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#no_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#no_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SET(dialog_progress=country)</p1:variableOperator>
+        <p1:grammar rdf:resource="http://localhost:8080/D22/hotel.owl#no_gram"/>
+        <p1:semantic rdf:resource="http://localhost:8080/D22/hotel.owl#redo_sem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#nobaleh_ramses_gram -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#nobaleh_ramses_gram">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Grammar"/>
+        <p1:grammarString xml:lang="de">(nobaleh ramses ?hotel)</p1:grammarString>
+        <p1:grammarString xml:lang="en">(nobaleh ramses ?hotel)</p1:grammarString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#one_week_fourth_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#one_week_fourth_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SET(duration=one);(return_day=eleventh);(duration_de=eine);(return_day_de=elften)</p1:variableOperator>
+        <p1:grammar rdf:resource="http://localhost:8080/D22/hotel.owl#one_week_gram"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#one_week_gram -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#one_week_gram">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Grammar"/>
+        <p1:grammarString xml:lang="de">(?(ich moechte) eine woche [bleiben buchen])</p1:grammarString>
+        <p1:grammarString xml:lang="en">(?(i want to stay) one ?week)</p1:grammarString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#one_week_seventeenth_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#one_week_seventeenth_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SET(duration=one);(return_day=twentyfourth);(duration_de=eine);(return_day_de=vierundzwanzigsten)</p1:variableOperator>
+        <p1:grammar rdf:resource="http://localhost:8080/D22/hotel.owl#one_week_gram"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#options_america_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#options_america_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:utterance rdf:resource="http://localhost:8080/D22/hotel.owl#options_america_towns"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/D22/hotel.owl#say_options_sem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#options_america_towns -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#options_america_towns">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Utterance"/>
+        <p1:utteranceString xml:lang="de">Sie koennen ein hotel in new york, chicago oder los angeles waehlen.</p1:utteranceString>
+        <p1:utteranceString xml:lang="en">you can choose between new york, chicago or los angeles</p1:utteranceString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#options_countries_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#options_countries_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:utterance rdf:resource="http://localhost:8080/D22/hotel.owl#options_countries_ut"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/D22/hotel.owl#say_options_sem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#options_countries_ut -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#options_countries_ut">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Utterance"/>
+        <p1:utteranceString xml:lang="de">Sie koennen ein hotel in Amerika, Aegypten oder England waehlen.</p1:utteranceString>
+        <p1:utteranceString xml:lang="en">You can chose between America, Egypt, or England</p1:utteranceString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#options_day -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#options_day">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:utterance rdf:resource="http://localhost:8080/D22/hotel.owl#options_day_utt"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/D22/hotel.owl#say_options_sem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#options_day_utt -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#options_day_utt">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Utterance"/>
+        <p1:utteranceString xml:lang="de">Sie koennen am fuenften oder am siebzehnten anreisen.</p1:utteranceString>
+        <p1:utteranceString xml:lang="en">You can begin your stay at either the fourth or the seventeenth</p1:utteranceString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#options_duration_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#options_duration_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:utterance rdf:resource="http://localhost:8080/D22/hotel.owl#options_duration_utt"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/D22/hotel.owl#say_options_sem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#options_duration_utt -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#options_duration_utt">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Utterance"/>
+        <p1:utteranceString xml:lang="de">Sie koennen eine oder zwei Wochen bleiben</p1:utteranceString>
+        <p1:utteranceString xml:lang="en">You can stay one week or two weeks</p1:utteranceString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#options_egypt_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#options_egypt_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:utterance rdf:resource="http://localhost:8080/D22/hotel.owl#options_egypt_towns"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/D22/hotel.owl#say_options_sem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#options_egypt_towns -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#options_egypt_towns">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Utterance"/>
+        <p1:utteranceString xml:lang="de">Sie koennen ein hotel in kairo, luxor oder abu simbel waehlen.</p1:utteranceString>
+        <p1:utteranceString xml:lang="en">you can choose between kairo, luxor or abu simbel.</p1:utteranceString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#options_england_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#options_england_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:utterance rdf:resource="http://localhost:8080/D22/hotel.owl#options_egypt_towns"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/D22/hotel.owl#say_options_sem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#options_england_towns -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#options_england_towns">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Utterance"/>
+        <p1:utteranceString xml:lang="de">Sie koennen ein hotel in london oder manchester waehlen.</p1:utteranceString>
+        <p1:utteranceString xml:lang="en">you can choose between london or manchester</p1:utteranceString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#palace_hotel_gram -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#palace_hotel_gram">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Grammar"/>
+        <p1:grammarString xml:lang="de">(palace ?hotel)</p1:grammarString>
+        <p1:grammarString xml:lang="en">(palace ?hotel)</p1:grammarString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#premier_inn_gram -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#premier_inn_gram">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Grammar"/>
+        <p1:grammarString xml:lang="de">(premier inn ?hotel)</p1:grammarString>
+        <p1:grammarString xml:lang="en">(premier inn ?hotel)</p1:grammarString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#present -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#present">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Variable"/>
+        <p1:defaultValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</p1:defaultValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#price -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#price">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Variable"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#pyramisa_isis_gram -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#pyramisa_isis_gram">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Grammar"/>
+        <p1:grammarString xml:lang="de">(pyramisa isis ?hotel)</p1:grammarString>
+        <p1:grammarString xml:lang="en">(pyramisa isis ?hotel)</p1:grammarString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#pyramisa_suites_gram -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#pyramisa_suites_gram">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Grammar"/>
+        <p1:grammarString xml:lang="de">(pyramisa suites ?hotel)</p1:grammarString>
+        <p1:grammarString xml:lang="en">(pyramisa suites ?hotel)</p1:grammarString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#redo_sem -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#redo_sem">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Semantic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#return_day -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#return_day">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Variable"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#return_day_de -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#return_day_de">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Variable"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#say_options_countries -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#say_options_countries">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <p1:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">100</p1:priority>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">REQUIRES(%dialog_progress%==country)</p1:variableOperator>
+        <p1:has rdf:resource="http://localhost:8080/D22/hotel.owl#options_countries_mv"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/hotel.owl#say_options_countries"/>
+        <p1:requires rdf:resource="http://localhost:8080/D22/hotel.owl#say_options_sem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#say_options_duration -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#say_options_duration">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <p1:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">100</p1:priority>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">REQUIRES(%dialog_progress%==duration)</p1:variableOperator>
+        <p1:has rdf:resource="http://localhost:8080/D22/hotel.owl#options_duration_mv"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/hotel.owl#say_options_duration"/>
+        <p1:requires rdf:resource="http://localhost:8080/D22/hotel.owl#say_options_sem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#say_options_hotel -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#say_options_hotel">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <p1:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">52</p1:priority>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">REQUIRES(%dialog_progress%==hotel)</p1:variableOperator>
+        <p1:has rdf:resource="http://localhost:8080/D22/hotel.owl#hotels_list_mv"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/hotel.owl#say_options_hotel"/>
+        <p1:requires rdf:resource="http://localhost:8080/D22/hotel.owl#say_options_sem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#say_options_sem -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#say_options_sem">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Semantic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#say_options_towns_america -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#say_options_towns_america">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <p1:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">100</p1:priority>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">REQUIRES(%dialog_progress%==america)</p1:variableOperator>
+        <p1:has rdf:resource="http://localhost:8080/D22/hotel.owl#options_america_mv"/>
+        <p1:requires rdf:resource="http://localhost:8080/D22/hotel.owl#say_options_sem"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/hotel.owl#say_options_towns_america"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#say_options_towns_egypt -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#say_options_towns_egypt">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <p1:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">100</p1:priority>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">REQUIRES(%dialog_progress%==egypt)</p1:variableOperator>
+        <p1:has rdf:resource="http://localhost:8080/D22/hotel.owl#options_egypt_mv"/>
+        <p1:requires rdf:resource="http://localhost:8080/D22/hotel.owl#say_options_sem"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/hotel.owl#say_options_towns_egypt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#say_options_towns_england -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#say_options_towns_england">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <p1:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">100</p1:priority>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">REQUIRES(%dialog_progress%==england)</p1:variableOperator>
+        <p1:has rdf:resource="http://localhost:8080/D22/hotel.owl#options_england_mv"/>
+        <p1:requires rdf:resource="http://localhost:8080/D22/hotel.owl#say_options_sem"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/hotel.owl#say_options_towns_england"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#say_options_what_day -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#say_options_what_day">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <p1:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">100</p1:priority>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">REQUIRES(%dialog_progress%==date)</p1:variableOperator>
+        <p1:has rdf:resource="http://localhost:8080/D22/hotel.owl#options_day"/>
+        <p1:requires rdf:resource="http://localhost:8080/D22/hotel.owl#say_options_sem"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/hotel.owl#say_options_what_day"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#seti_abusimbel_gram -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#seti_abusimbel_gram">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Grammar"/>
+        <p1:grammarString xml:lang="de">(seti abu simbel ?hotel)</p1:grammarString>
+        <p1:grammarString xml:lang="en">(seti abu simbel ?hotel)</p1:grammarString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#seventeenth_gram -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#seventeenth_gram">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Grammar"/>
+        <p1:grammarString xml:lang="de">(?(ich moechte) am siebzehnten ?anreisen)</p1:grammarString>
+        <p1:grammarString xml:lang="en">(?(i want to stay) ?on the seventeenth)</p1:grammarString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#seventeenth_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#seventeenth_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SET(date=seventeenth);(dialog_progress=duration);(date_de=siebzehnten)</p1:variableOperator>
+        <p1:grammar rdf:resource="http://localhost:8080/D22/hotel.owl#seventeenth_gram"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#sofitel_gram -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#sofitel_gram">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Grammar"/>
+        <p1:grammarString xml:lang="de">(sofitel ?hotel)</p1:grammarString>
+        <p1:grammarString xml:lang="en">(sofitel ?hotel)</p1:grammarString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#there_are_hotels_agenda -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#there_are_hotels_agenda">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <p1:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">59</p1:priority>
+        <p1:has rdf:resource="http://localhost:8080/D22/hotel.owl#hotels_list_mv"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#there_are_no_free_rooms_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#there_are_no_free_rooms_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:utterance rdf:resource="http://localhost:8080/D22/hotel.owl#There_are_no_free_rooms_utt"/>
+        <p1:contrarySemantic rdf:resource="http://localhost:8080/D22/hotel.owl#fifteenth"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#town -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#town">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Variable"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#town_de -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#town_de">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Variable"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#two_weeks_fourth_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#two_weeks_fourth_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SET(duration=two);(return_day=eightteenth);(duration_de=zwei);(return_day_de=achtzehnten)</p1:variableOperator>
+        <p1:grammar rdf:resource="http://localhost:8080/D22/hotel.owl#two_weeks_gram"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#two_weeks_gram -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#two_weeks_gram">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Grammar"/>
+        <p1:grammarString xml:lang="de">(?(ich moechte) zwei wochen [bleiben buchen])</p1:grammarString>
+        <p1:grammarString xml:lang="en">(?(i want to stay) two ?weeks)</p1:grammarString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#two_weeks_seventeenth_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#two_weeks_seventeenth_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SET(duration=two);(return_day=thirtyfirst);(duration_de=zwei);(return_day_de=einunddreissigsten)</p1:variableOperator>
+        <p1:grammar rdf:resource="http://localhost:8080/D22/hotel.owl#two_weeks_gram"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#userBeliefspace -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#userBeliefspace">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#BeliefSpace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#userWorkspace -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#userWorkspace">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#WorkSpace"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/hotel.owl#say_options_countries"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/hotel.owl#say_options_duration"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/hotel.owl#say_options_hotel"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/hotel.owl#say_options_towns_america"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/hotel.owl#say_options_towns_egypt"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/hotel.owl#say_options_towns_england"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/hotel.owl#say_options_what_day"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/hotel.owl#what_country_agenda"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#what_are_my_options_gram -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#what_are_my_options_gram">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Grammar"/>
+        <p1:grammarString xml:lang="de">(hilfe)</p1:grammarString>
+        <p1:grammarString xml:lang="en">[(what are my options) help]</p1:grammarString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#what_are_my_options_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#what_are_my_options_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:semantic rdf:resource="http://localhost:8080/D22/hotel.owl#say_options_sem"/>
+        <p1:grammar rdf:resource="http://localhost:8080/D22/hotel.owl#what_are_my_options_gram"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#what_are_my_options_respawn -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#what_are_my_options_respawn">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <p1:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">52</p1:priority>
+        <p1:respawn rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</p1:respawn>
+        <p1:has rdf:resource="http://localhost:8080/D22/hotel.owl#what_are_my_options_mv"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#what_country_agenda -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#what_country_agenda">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <p1:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">80</p1:priority>
+        <p1:has rdf:resource="http://localhost:8080/D22/hotel.owl#america_mv"/>
+        <p1:mustnot rdf:resource="http://localhost:8080/D22/hotel.owl#correct_sem"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/hotel.owl#egypt_mv"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/hotel.owl#england_mv"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/hotel.owl#what_country_mv"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/hotel.owl#what_town_america_agenda"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/hotel.owl#what_town_egypt_agenda"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/hotel.owl#what_town_england_agenda"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#what_country_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#what_country_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:utterance rdf:resource="http://localhost:8080/D22/hotel.owl#Country_utt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#what_day_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#what_day_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:utterance rdf:resource="http://localhost:8080/D22/hotel.owl#On_which_day_begin_stay_utt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#what_day_to_stay_agenda -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#what_day_to_stay_agenda">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <p1:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">51</p1:priority>
+        <p1:next rdf:resource="http://localhost:8080/D22/hotel.owl#fifteenth_agenda"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/hotel.owl#fifteenth_mv"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/hotel.owl#fourth_mv"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/hotel.owl#how_long_fourth_agenda"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/hotel.owl#how_long_seventeenth_agenda"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/hotel.owl#seventeenth_mv"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/hotel.owl#what_day_mv"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#what_hotel_abusimbel_agenda -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#what_hotel_abusimbel_agenda">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <p1:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">51</p1:priority>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">REQUIRES(%town%==abusimbel)</p1:variableOperator>
+        <p1:has rdf:resource="http://localhost:8080/D22/hotel.owl#abusimbel_nefertari_mv"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/hotel.owl#abusimbel_nobaleh_ramses"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/hotel.owl#abusimbel_seti_abusimbel_mv"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/hotel.owl#what_day_to_stay_agenda"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/hotel.owl#which_hotel_mv"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#what_hotel_chicago_agenda -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#what_hotel_chicago_agenda">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <p1:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">51</p1:priority>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">REQUIRES(%town%==chicago)</p1:variableOperator>
+        <p1:has rdf:resource="http://localhost:8080/D22/hotel.owl#chicago_best_western_mv"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/hotel.owl#chicago_hilton_ohare_mv"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/hotel.owl#chicago_james_chic_mv"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/hotel.owl#what_day_to_stay_agenda"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/hotel.owl#which_hotel_mv"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#what_hotel_kairo_agenda -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#what_hotel_kairo_agenda">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <p1:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">51</p1:priority>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">REQUIRES(%town%==kairo)</p1:variableOperator>
+        <p1:has rdf:resource="http://localhost:8080/D22/hotel.owl#kairo_holiday_inn_mv"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/hotel.owl#kairo_pyramisa_suites_mv"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/hotel.owl#kario_grand_hyatt_mv"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/hotel.owl#what_day_to_stay_agenda"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/hotel.owl#which_hotel_mv"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#what_hotel_london_agenda -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#what_hotel_london_agenda">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <p1:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">51</p1:priority>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">REQUIRES(%town%==london)</p1:variableOperator>
+        <p1:has rdf:resource="http://localhost:8080/D22/hotel.owl#london_beaufort_house_mv"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/hotel.owl#london_knightsbridge_mv"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/hotel.owl#london_premierinn_mv"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/hotel.owl#what_day_to_stay_agenda"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/hotel.owl#which_hotel_mv"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#what_hotel_losangeles_agenda -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#what_hotel_losangeles_agenda">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <p1:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">51</p1:priority>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">REQUIRES(%town%==losangeles)</p1:variableOperator>
+        <p1:has rdf:resource="http://localhost:8080/D22/hotel.owl#losangeles_hilton_checkers_mv"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/hotel.owl#losangeles_holidayin_mv"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/hotel.owl#losangeles_sofitel_mv"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/hotel.owl#what_day_to_stay_agenda"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/hotel.owl#which_hotel_mv"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#what_hotel_luxor_agenda -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#what_hotel_luxor_agenda">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <p1:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">51</p1:priority>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">REQUIRES(%town%==luxor)</p1:variableOperator>
+        <p1:has rdf:resource="http://localhost:8080/D22/hotel.owl#luxor_hilton_luxor_mv"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/hotel.owl#luxor_pyramisa_isis_mv"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/hotel.owl#luxor_sofitel_mv"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/hotel.owl#what_day_to_stay_agenda"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/hotel.owl#which_hotel_mv"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#what_hotel_manchester_agenda -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#what_hotel_manchester_agenda">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <p1:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">51</p1:priority>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">REQUIRES(%town%==manchester)</p1:variableOperator>
+        <p1:has rdf:resource="http://localhost:8080/D22/hotel.owl#manchester_britannia_mv"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/hotel.owl#manchester_hilton_airport_mv"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/hotel.owl#manchester_palace_hotel_mv"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/hotel.owl#what_day_to_stay_agenda"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/hotel.owl#which_hotel_mv"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#what_hotel_newyork_agenda -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#what_hotel_newyork_agenda">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <p1:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">51</p1:priority>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">REQUIRES(%town%==newyork)</p1:variableOperator>
+        <p1:has rdf:resource="http://localhost:8080/D22/hotel.owl#newyork_hilton_gardens_mv"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/hotel.owl#newyork_holidayinn_mv"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/hotel.owl#newyork_sofitel_mv"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/hotel.owl#what_day_to_stay_agenda"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/hotel.owl#which_hotel_mv"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#what_town_america_agenda -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#what_town_america_agenda">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <p1:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">80</p1:priority>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">REQUIRES(%country%==america)</p1:variableOperator>
+        <p1:has rdf:resource="http://localhost:8080/D22/hotel.owl#chicago_mv"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/hotel.owl#losangeles_mv"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/hotel.owl#new_york_mv"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/hotel.owl#there_are_hotels_agenda"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/hotel.owl#what_hotel_chicago_agenda"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/hotel.owl#what_hotel_losangeles_agenda"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/hotel.owl#what_hotel_newyork_agenda"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/hotel.owl#what_town_mv"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#what_town_egypt_agenda -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#what_town_egypt_agenda">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <p1:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">80</p1:priority>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">REQUIRES(%country%==egypt)</p1:variableOperator>
+        <p1:has rdf:resource="http://localhost:8080/D22/hotel.owl#abusimbel_mv"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/hotel.owl#kairo_mv"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/hotel.owl#luxor_mv"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/hotel.owl#there_are_hotels_agenda"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/hotel.owl#what_hotel_abusimbel_agenda"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/hotel.owl#what_hotel_kairo_agenda"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/hotel.owl#what_hotel_luxor_agenda"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/hotel.owl#what_town_mv"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#what_town_england_agenda -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#what_town_england_agenda">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <p1:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">80</p1:priority>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">REQUIRES(%country%==england)</p1:variableOperator>
+        <p1:has rdf:resource="http://localhost:8080/D22/hotel.owl#london_mv"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/hotel.owl#manchester_mv"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/hotel.owl#there_are_hotels_agenda"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/hotel.owl#what_hotel_london_agenda"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/hotel.owl#what_hotel_manchester_agenda"/>
+        <p1:has rdf:resource="http://localhost:8080/D22/hotel.owl#what_town_mv"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#what_town_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#what_town_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:utterance rdf:resource="http://localhost:8080/D22/hotel.owl#Town_utt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#which_hotel_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#which_hotel_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SET(dialog_progress=date)</p1:variableOperator>
+        <p1:utterance rdf:resource="http://localhost:8080/D22/hotel.owl#in_which_hotel_utt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#yes_gram -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#yes_gram">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Grammar"/>
+        <p1:grammarString xml:lang="de">(ja)</p1:grammarString>
+        <p1:grammarString xml:lang="en">(yes)</p1:grammarString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/hotel.owl#yes_mv -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/hotel.owl#yes_mv">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SET(done=1)</p1:variableOperator>
+        <p1:semantic rdf:resource="http://localhost:8080/D22/hotel.owl#correct_sem"/>
+        <p1:grammar rdf:resource="http://localhost:8080/D22/hotel.owl#yes_gram"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.2.0.1502) http://owlapi.sourceforge.net -->
+

@@ -1,0 +1,12 @@
+public <4_BusBeforeThatRequest> = [<pre_question>] [<WHEN_DOES>] [the] previous [<BUS>] [<RUN>] | [<pre_question>] [<WHEN_DOES>] [the] [<BUS>] before that [<BUS>] [<RUN>] | [<pre_question>] [<IS_THERE>] [a] [bus] before that [<BUS>];
+<WHEN_DOES> = when <DOES> | when's | at what time <DOES> | what time <DOES>;
+<DOES> = will | does | is;
+<BUS> = bus | trip | one;
+<RUN> = go | goes | run | runs | leave | leaves | depart | departs;
+<IS_THERE> = is there | i'd like | i would like | i want | i need | i'm looking for;/*End of Slot*/
+public <4_BusBeforeThatRequest> = [<pre_question>] [<WHEN_DOES>] [the] previous [<BUS>] [<RUN>] | [<pre_question>] [<WHEN_DOES>] [the] [<BUS>] before that [<BUS>] [<RUN>] | [<pre_question>] [<IS_THERE>] [a] [bus] before that [<BUS>];
+<WHEN_DOES> = when <DOES> | when's | at what time <DOES> | what time <DOES>;
+<DOES> = will | does | is;
+<BUS> = bus | trip | one;
+<RUN> = go | goes | run | runs | leave | leaves | depart | departs;
+<IS_THERE> = is there | i'd like | i would like | i want | i need | i'm looking for;/*End of Slot*/

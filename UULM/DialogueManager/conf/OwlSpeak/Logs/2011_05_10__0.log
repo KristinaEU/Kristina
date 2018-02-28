@@ -1,0 +1,36 @@
+10.05.2011 11:53:14 Command: request 
+INFO: OK
+10.05.2011 11:54:06 Command: request 
+INFO: OK
+10.05.2011 11:54:08 Command: work 
+INFO: Agenda: question_agenda | Move: yesnoquestion_a1n1d_yes_move | Speak: null
+10.05.2011 11:54:11 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_start_move | Speak: null
+10.05.2011 11:54:30 Command: reset 
+INFO: OK
+10.05.2011 11:54:32 Command: request 
+INFO: OK
+10.05.2011 11:54:34 Command: work 
+INFO: Agenda: question_agenda | Move: yesnoquestion_a1n1d_yes_move | Speak: null
+10.05.2011 11:54:36 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_LigthsOn_move | Speak: null
+10.05.2011 11:54:37 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_start_move | Speak: null
+10.05.2011 11:55:26 Command: request 
+INFO: OK
+10.05.2011 11:55:28 Command: request 
+INFO: OK
+10.05.2011 11:55:46 Command: request 
+INFO: OK
+10.05.2011 11:56:01 Command: request 
+INFO: OK
+10.05.2011 11:56:03 Command: work 
+INFO: Agenda: question_agenda | Move: music_a1n1d_start_move | Speak: null
+10.05.2011 11:56:04 Command: work 
+INFO: Agenda: question_agenda | Move: photos_a1n1d_start_move | Speak: null
+10.05.2011 11:56:39 Command: request 
+INFO: OK
+10.05.2011 11:58:04 Command: work 
+INFO: Agenda: question_agenda | Move: music_a1n1d_next_move | Speak: weiter
+10.05.2011 11:58:19 Command: work 
+INFO: Agenda: question_agenda | Move: music_a1n1d_next_move | Speak: weiter

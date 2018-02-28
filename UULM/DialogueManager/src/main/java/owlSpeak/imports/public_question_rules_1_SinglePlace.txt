@@ -1,0 +1,2 @@
+public <1_SinglePlace> = <stop_name>;
+public <1_SinglePlace> = <stop_name>;

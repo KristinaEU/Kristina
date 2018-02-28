@@ -1,0 +1,456 @@
+14.10.2011 13:32:36 Command: reset 
+INFO: OK
+14.10.2011 13:32:40 Command: request 
+INFO: OK
+14.10.2011 13:32:44 Command: work 
+INFO: Agenda: fault | Move: light2_a1n1d_LightsOff_move | Speak: null
+14.10.2011 13:32:45 Command: work 
+INFO: Agenda: fault | Move: light2_a1n1d_veryLow_move | Speak: null
+14.10.2011 13:32:46 Command: work 
+INFO: Agenda: fault | Move: light2_a1n1d_high_move | Speak: null
+14.10.2011 13:32:47 Command: work 
+INFO: Agenda: fault | Move: light2_a1n1d_veryHigh_move | Speak: null
+14.10.2011 13:32:49 Command: work 
+INFO: Agenda: fault | Move: light1_a1n1d_veryLow_move | Speak: null
+14.10.2011 13:32:50 Command: work 
+INFO: Agenda: fault | Move: light1_a1n1d_medium_move | Speak: null
+14.10.2011 13:42:24 Command: reset 
+INFO: OK
+14.10.2011 13:42:27 Command: request 
+INFO: OK
+14.10.2011 13:42:37 Command: work 
+INFO: Agenda: fault | Move: light3_a1n1d_medium_move | Speak: null
+14.10.2011 13:42:39 Command: work 
+INFO: Agenda: fault | Move: light4_a1n1d_high_move | Speak: null
+14.10.2011 13:42:52 Command: work 
+INFO: Agenda: fault | Move: light3_a1n1d_veryLow_move | Speak: null
+14.10.2011 13:42:55 Command: work 
+INFO: Agenda: fault | Move: light5_a1n1d_medium_move | Speak: null
+14.10.2011 13:42:57 Command: work 
+INFO: Agenda: fault | Move: light7_a1n1d_low_move | Speak: null
+14.10.2011 13:43:00 Command: work 
+INFO: Agenda: fault | Move: light7_a1n1d_veryHigh_move | Speak: null
+14.10.2011 14:00:57 Command: reset 
+INFO: OK
+14.10.2011 14:01:20 Command: request 
+INFO: OK
+14.10.2011 14:01:44 Command: work 
+INFO: Agenda: fault | Move: light5_a1n1d_low_move | Speak: null
+14.10.2011 14:04:06 Command: reset 
+INFO: OK
+14.10.2011 14:04:29 Command: request 
+INFO: OK
+14.10.2011 14:05:19 Command: request 
+INFO: OK
+14.10.2011 14:05:48 Command: request 
+INFO: noinput
+14.10.2011 14:06:13 Command: work 
+INFO: Agenda: fault | Move: light1_a1n1d_LigthsOn_move | Speak: licht an
+14.10.2011 14:16:11 Command: request 
+INFO: OK
+14.10.2011 14:27:38 Command: request 
+INFO: OK
+14.10.2011 14:32:44 Command: request 
+INFO: OK
+14.10.2011 14:33:23 Command: request 
+INFO: OK
+14.10.2011 14:38:01 Command: request 
+INFO: OK
+14.10.2011 14:38:13 Command: request 
+INFO: OK
+14.10.2011 14:38:18 Command: work 
+INFO: Agenda: fault | Move: light1_a1n1d_LigthsOn_move | Speak: licht an
+14.10.2011 14:38:26 Command: work 
+INFO: Agenda: fault | Move: light1_a1n1d_LigthsOn_move | Speak: licht an
+14.10.2011 14:38:30 Command: work 
+INFO: Agenda: fault | Move: light1_a1n1d_LightsOff_move | Speak: licht aus
+14.10.2011 14:40:21 Command: request 
+INFO: OK
+14.10.2011 14:40:28 Command: request 
+INFO: OK
+14.10.2011 14:40:33 Command: work 
+INFO: Agenda: fault | Move: light1_a1n1d_LigthsOn_move | Speak: licht an
+14.10.2011 14:40:48 Command: work 
+INFO: Agenda: fault | Move: light1_a1n1d_LigthsOn_move | Speak: licht
+14.10.2011 14:40:55 Command: request 
+INFO: noinput
+14.10.2011 14:41:03 Command: request 
+INFO: noinput
+14.10.2011 14:41:07 Command: request 
+INFO: error.unsupported.language
+14.10.2011 14:41:15 Command: request 
+INFO: error.unsupported.language
+14.10.2011 14:41:22 Command: request 
+INFO: noinput
+14.10.2011 14:41:30 Command: request 
+INFO: noinput
+14.10.2011 14:41:37 Command: request 
+INFO: noinput
+14.10.2011 14:41:45 Command: request 
+INFO: noinput
+14.10.2011 14:41:52 Command: request 
+INFO: noinput
+14.10.2011 14:44:41 Command: request 
+INFO: OK
+14.10.2011 14:44:46 Command: request 
+INFO: error.unsupported.language
+14.10.2011 14:44:50 Command: work 
+INFO: Agenda: fault | Move: light4_a1n1d_LigthsOn_move | Speak: licht an
+14.10.2011 14:44:58 Command: request 
+INFO: noinput
+14.10.2011 14:45:03 Command: work 
+INFO: Agenda: fault | Move: light4_a1n1d_LigthsOn_move | Speak: licht an
+14.10.2011 14:46:09 Command: request 
+INFO: OK
+14.10.2011 14:46:13 Command: work 
+INFO: Agenda: fault | Move: light1_a1n1d_LigthsOn_move | Speak: licht an
+14.10.2011 14:46:20 Command: work 
+INFO: Agenda: fault | Move: light1_a1n1d_LigthsOn_move | Speak: licht
+14.10.2011 14:52:15 Command: request 
+INFO: OK
+14.10.2011 14:52:20 Command: request 
+INFO: error.unsupported.language
+14.10.2011 14:52:23 Command: work 
+INFO: Agenda: fault | Move: light1_a1n1d_LigthsOn_move | Speak: licht an
+14.10.2011 14:52:55 Command: request 
+INFO: OK
+14.10.2011 14:53:00 Command: request 
+INFO: error.unsupported.language
+14.10.2011 14:53:04 Command: request 
+INFO: error.unsupported.language
+14.10.2011 14:53:08 Command: request 
+INFO: nomatch
+14.10.2011 14:53:15 Command: request 
+INFO: noinput
+14.10.2011 14:53:25 Command: request 
+INFO: error.unsupported.language
+14.10.2011 14:53:29 Command: request 
+INFO: error.unsupported.language
+14.10.2011 14:53:34 Command: request 
+INFO: error.unsupported.language
+14.10.2011 14:53:39 Command: request 
+INFO: error.unsupported.language
+14.10.2011 14:53:46 Command: request 
+INFO: error.unsupported.language
+14.10.2011 14:53:50 Command: request 
+INFO: error.unsupported.language
+14.10.2011 14:53:57 Command: work 
+INFO: Agenda: fault | Move: light1_a1n1d_LigthsOn_move | Speak: licht an
+14.10.2011 16:25:58 Command: request 
+INFO: OK
+14.10.2011 16:42:27 Command: request 
+INFO: OK
+14.10.2011 16:42:54 Command: request 
+INFO: OK
+14.10.2011 16:42:55 Command: request 
+INFO: OK
+14.10.2011 16:42:55 Command: request 
+INFO: OK
+14.10.2011 16:42:56 Command: request 
+INFO: OK
+14.10.2011 16:42:57 Command: reset 
+INFO: OK
+14.10.2011 16:42:58 Command: request 
+INFO: OK
+14.10.2011 16:43:00 Command: request 
+INFO: OK
+14.10.2011 16:43:00 Command: request 
+INFO: OK
+14.10.2011 16:43:01 Command: request 
+INFO: OK
+14.10.2011 16:44:31 Command: reset 
+INFO: OK
+14.10.2011 16:44:33 Command: request 
+INFO: OK
+14.10.2011 16:44:37 Command: request 
+INFO: OK
+14.10.2011 16:44:42 Command: request 
+INFO: error.unsupported.language
+14.10.2011 16:44:45 Command: work 
+INFO: Agenda: fault | Move: light1_a1n1d_LigthsOn_move | Speak: licht an
+14.10.2011 16:44:54 Command: work 
+INFO: Agenda: fault | Move: light3_a1n1d_LigthsOn_move | Speak: alle lichter
+14.10.2011 16:45:01 Command: request 
+INFO: noinput
+14.10.2011 16:45:09 Command: request 
+INFO: noinput
+14.10.2011 16:46:01 Command: request 
+INFO: OK
+14.10.2011 16:46:05 Command: request 
+INFO: OK
+14.10.2011 16:46:06 Command: request 
+INFO: OK
+14.10.2011 16:46:08 Command: request 
+INFO: OK
+14.10.2011 16:46:13 Command: request 
+INFO: error.unsupported.language
+14.10.2011 16:46:46 Command: work 
+INFO: Agenda: fault | Move: light1_a1n1d_LigthsOn_move | Speak: licht an
+14.10.2011 16:48:33 Command: work 
+INFO: Agenda: fault | Move: light1_a1n1d_LigthsOn_move | Speak: deckenleuchte
+14.10.2011 16:48:41 Command: request 
+INFO: error.unsupported.language
+14.10.2011 17:01:06 Command: request 
+INFO: OK
+14.10.2011 17:01:07 Command: request 
+INFO: OK
+14.10.2011 17:01:08 Command: request 
+INFO: OK
+14.10.2011 17:01:09 Command: request 
+INFO: OK
+14.10.2011 17:01:09 Command: request 
+INFO: OK
+14.10.2011 17:01:10 Command: request 
+INFO: OK
+14.10.2011 17:01:11 Command: request 
+INFO: OK
+14.10.2011 17:01:12 Command: request 
+INFO: OK
+14.10.2011 17:01:13 Command: request 
+INFO: OK
+14.10.2011 17:01:14 Command: request 
+INFO: OK
+14.10.2011 17:01:15 Command: request 
+INFO: OK
+14.10.2011 17:04:47 Command: request 
+INFO: OK
+14.10.2011 17:05:17 Command: request 
+INFO: OK
+14.10.2011 17:05:25 Command: request 
+INFO: OK
+14.10.2011 17:05:26 Command: request 
+INFO: OK
+14.10.2011 17:05:27 Command: request 
+INFO: OK
+14.10.2011 17:05:27 Command: request 
+INFO: OK
+14.10.2011 17:05:28 Command: request 
+INFO: OK
+14.10.2011 17:05:28 Command: request 
+INFO: OK
+14.10.2011 17:05:29 Command: request 
+INFO: OK
+14.10.2011 17:05:30 Command: request 
+INFO: OK
+14.10.2011 17:05:30 Command: request 
+INFO: OK
+14.10.2011 17:05:31 Command: request 
+INFO: OK
+14.10.2011 17:05:32 Command: request 
+INFO: OK
+14.10.2011 17:05:32 Command: request 
+INFO: OK
+14.10.2011 17:05:34 Command: request 
+INFO: OK
+14.10.2011 17:17:08 Command: request 
+INFO: OK
+14.10.2011 17:17:09 Command: request 
+INFO: OK
+14.10.2011 17:17:10 Command: request 
+INFO: OK
+14.10.2011 17:17:11 Command: request 
+INFO: OK
+14.10.2011 17:17:11 Command: request 
+INFO: OK
+14.10.2011 17:17:12 Command: request 
+INFO: OK
+14.10.2011 17:17:12 Command: request 
+INFO: OK
+14.10.2011 17:17:13 Command: request 
+INFO: OK
+14.10.2011 17:17:14 Command: request 
+INFO: OK
+14.10.2011 17:17:14 Command: request 
+INFO: OK
+14.10.2011 17:17:14 Command: request 
+INFO: OK
+14.10.2011 17:17:15 Command: request 
+INFO: OK
+14.10.2011 17:17:15 Command: request 
+INFO: OK
+14.10.2011 17:17:16 Command: request 
+INFO: OK
+14.10.2011 17:24:32 Command: request 
+INFO: OK
+14.10.2011 17:24:33 Command: request 
+INFO: OK
+14.10.2011 17:24:33 Command: request 
+INFO: OK
+14.10.2011 17:24:34 Command: request 
+INFO: OK
+14.10.2011 17:24:35 Command: request 
+INFO: OK
+14.10.2011 17:24:36 Command: request 
+INFO: OK
+14.10.2011 17:24:36 Command: request 
+INFO: OK
+14.10.2011 17:24:37 Command: request 
+INFO: OK
+14.10.2011 17:24:37 Command: request 
+INFO: OK
+14.10.2011 17:24:38 Command: request 
+INFO: OK
+14.10.2011 17:24:38 Command: request 
+INFO: OK
+14.10.2011 17:24:38 Command: request 
+INFO: OK
+14.10.2011 17:24:38 Command: request 
+INFO: OK
+14.10.2011 17:24:39 Command: request 
+INFO: OK
+14.10.2011 17:24:39 Command: request 
+INFO: OK
+14.10.2011 17:24:40 Command: request 
+INFO: OK
+14.10.2011 17:24:40 Command: request 
+INFO: OK
+14.10.2011 17:24:40 Command: request 
+INFO: OK
+14.10.2011 17:24:41 Command: request 
+INFO: OK
+14.10.2011 17:32:30 Command: request 
+INFO: OK
+14.10.2011 17:33:03 Command: request 
+INFO: OK
+14.10.2011 17:33:04 Command: request 
+INFO: OK
+14.10.2011 17:33:05 Command: request 
+INFO: OK
+14.10.2011 17:33:06 Command: request 
+INFO: OK
+14.10.2011 17:33:06 Command: request 
+INFO: OK
+14.10.2011 17:33:07 Command: request 
+INFO: OK
+14.10.2011 17:33:08 Command: request 
+INFO: OK
+14.10.2011 17:33:09 Command: request 
+INFO: OK
+14.10.2011 17:33:09 Command: request 
+INFO: OK
+14.10.2011 17:33:10 Command: request 
+INFO: OK
+14.10.2011 17:33:11 Command: request 
+INFO: OK
+14.10.2011 17:33:11 Command: request 
+INFO: OK
+14.10.2011 17:33:11 Command: request 
+INFO: OK
+14.10.2011 17:33:12 Command: request 
+INFO: OK
+14.10.2011 17:33:12 Command: request 
+INFO: OK
+14.10.2011 17:33:12 Command: request 
+INFO: OK
+14.10.2011 17:33:13 Command: request 
+INFO: OK
+14.10.2011 17:33:13 Command: request 
+INFO: OK
+14.10.2011 17:33:13 Command: request 
+INFO: OK
+14.10.2011 17:33:14 Command: request 
+INFO: OK
+14.10.2011 17:33:14 Command: request 
+INFO: OK
+14.10.2011 17:33:14 Command: request 
+INFO: OK
+14.10.2011 17:33:14 Command: request 
+INFO: OK
+14.10.2011 17:33:15 Command: request 
+INFO: OK
+14.10.2011 17:33:15 Command: request 
+INFO: OK
+14.10.2011 17:33:15 Command: request 
+INFO: OK
+14.10.2011 17:33:16 Command: request 
+INFO: OK
+14.10.2011 17:33:18 Command: request 
+INFO: OK
+14.10.2011 17:33:19 Command: request 
+INFO: OK
+14.10.2011 17:34:18 Command: request 
+INFO: OK
+14.10.2011 17:34:48 Command: work 
+INFO: Agenda: fault | Move: light1_a1n1d_high_move | Speak: null
+14.10.2011 18:09:10 Command: request 
+INFO: OK
+14.10.2011 18:09:44 Command: request 
+INFO: OK
+14.10.2011 18:10:41 Command: request 
+INFO: OK
+14.10.2011 18:10:42 Command: request 
+INFO: OK
+14.10.2011 18:10:42 Command: request 
+INFO: OK
+14.10.2011 18:10:43 Command: request 
+INFO: OK
+14.10.2011 18:10:43 Command: request 
+INFO: OK
+14.10.2011 18:10:43 Command: request 
+INFO: OK
+14.10.2011 18:10:43 Command: request 
+INFO: OK
+14.10.2011 18:10:43 Command: request 
+INFO: OK
+14.10.2011 18:10:44 Command: request 
+INFO: OK
+14.10.2011 18:10:44 Command: request 
+INFO: OK
+14.10.2011 18:10:44 Command: request 
+INFO: OK
+14.10.2011 18:10:44 Command: request 
+INFO: OK
+14.10.2011 18:10:45 Command: request 
+INFO: OK
+14.10.2011 18:10:45 Command: request 
+INFO: OK
+14.10.2011 18:10:45 Command: request 
+INFO: OK
+14.10.2011 18:10:45 Command: request 
+INFO: OK
+14.10.2011 18:10:46 Command: request 
+INFO: OK
+14.10.2011 18:10:46 Command: request 
+INFO: OK
+14.10.2011 18:10:46 Command: request 
+INFO: OK
+14.10.2011 18:10:46 Command: request 
+INFO: OK
+14.10.2011 18:10:47 Command: request 
+INFO: OK
+14.10.2011 18:10:47 Command: request 
+INFO: OK
+14.10.2011 18:10:47 Command: request 
+INFO: OK
+14.10.2011 18:10:47 Command: request 
+INFO: OK
+14.10.2011 18:10:47 Command: request 
+INFO: OK
+14.10.2011 18:10:48 Command: request 
+INFO: OK
+14.10.2011 18:10:48 Command: request 
+INFO: OK
+14.10.2011 18:10:48 Command: request 
+INFO: OK
+14.10.2011 18:10:48 Command: request 
+INFO: OK
+14.10.2011 18:10:48 Command: request 
+INFO: OK
+14.10.2011 18:10:49 Command: request 
+INFO: OK
+14.10.2011 18:10:49 Command: request 
+INFO: OK
+14.10.2011 18:10:49 Command: request 
+INFO: OK
+14.10.2011 18:10:49 Command: request 
+INFO: OK
+14.10.2011 18:10:49 Command: request 
+INFO: OK
+14.10.2011 18:10:50 Command: request 
+INFO: OK
+14.10.2011 18:10:50 Command: request 
+INFO: OK
+14.10.2011 18:11:39 Command: request 
+INFO: OK
+14.10.2011 18:11:40 Command: work 
+INFO: Agenda: fault | Move: light1_a1n1d_low_move | Speak: null

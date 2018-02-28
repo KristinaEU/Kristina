@@ -1,0 +1,114 @@
+08.02.2011 11:59:32 Command: request 
+INFO: OK
+08.02.2011 11:59:44 Command: request 
+INFO: noinput
+08.02.2011 11:59:53 Command: request 
+INFO: noinput
+08.02.2011 12:00:03 Command: request 
+INFO: noinput
+08.02.2011 12:00:12 Command: request 
+INFO: noinput
+08.02.2011 12:00:22 Command: request 
+INFO: noinput
+08.02.2011 12:00:31 Command: request 
+INFO: noinput
+08.02.2011 12:00:41 Command: request 
+INFO: noinput
+08.02.2011 12:00:50 Command: request 
+INFO: noinput
+08.02.2011 12:01:00 Command: request 
+INFO: noinput
+08.02.2011 12:01:09 Command: request 
+INFO: noinput
+08.02.2011 12:01:18 Command: request 
+INFO: noinput
+08.02.2011 12:01:28 Command: request 
+INFO: noinput
+08.02.2011 12:01:37 Command: request 
+INFO: nomatch
+08.02.2011 12:01:47 Command: request 
+INFO: noinput
+08.02.2011 12:01:47 Command: request 
+INFO: OK
+08.02.2011 12:01:56 Command: request 
+INFO: noinput
+08.02.2011 12:02:06 Command: request 
+INFO: noinput
+08.02.2011 12:02:12 Command: work 
+INFO: Agenda: question_agenda | Move: yesnoquestion_a1n1d_yes_move | Speak: yes
+08.02.2011 12:02:19 Command: request 
+INFO: noinput
+08.02.2011 12:02:19 Command: request 
+INFO: OK
+08.02.2011 12:02:24 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_LigthsOn_move | Speak: light on
+08.02.2011 12:02:28 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_LightsOff_move | Speak: lights off
+08.02.2011 12:02:33 Command: request 
+INFO: nomatch
+08.02.2011 12:02:36 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_medium_move | Speak: light medium
+08.02.2011 12:02:40 Command: work 
+INFO: Agenda: fault | Move: music_a1n1d_start_move | Speak: start music
+08.02.2011 12:02:45 Command: work 
+INFO: Agenda: fault | Move: music_a1n1d_play_move | Speak: play
+08.02.2011 12:05:47 Command: request 
+INFO: OK
+08.02.2011 12:05:55 Command: request 
+INFO: noinput
+08.02.2011 12:06:02 Command: request 
+INFO: noinput
+08.02.2011 12:06:09 Command: request 
+INFO: noinput
+08.02.2011 12:06:17 Command: request 
+INFO: noinput
+08.02.2011 12:06:24 Command: request 
+INFO: noinput
+08.02.2011 12:06:31 Command: request 
+INFO: noinput
+08.02.2011 12:06:38 Command: request 
+INFO: noinput
+08.02.2011 12:06:46 Command: request 
+INFO: noinput
+08.02.2011 12:06:53 Command: request 
+INFO: noinput
+08.02.2011 12:07:00 Command: request 
+INFO: noinput
+08.02.2011 12:07:07 Command: request 
+INFO: noinput
+08.02.2011 12:07:15 Command: request 
+INFO: noinput
+08.02.2011 12:07:22 Command: request 
+INFO: noinput
+08.02.2011 12:07:29 Command: request 
+INFO: noinput
+08.02.2011 12:07:36 Command: request 
+INFO: noinput
+08.02.2011 12:07:41 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_LigthsOn_move | Speak: lights on
+08.02.2011 12:07:48 Command: request 
+INFO: noinput
+08.02.2011 12:08:18 Command: request 
+INFO: OK
+08.02.2011 12:08:26 Command: request 
+INFO: noinput
+08.02.2011 12:08:33 Command: request 
+INFO: noinput
+08.02.2011 12:08:40 Command: request 
+INFO: noinput
+08.02.2011 12:08:48 Command: request 
+INFO: noinput
+08.02.2011 12:08:55 Command: request 
+INFO: noinput
+08.02.2011 12:09:02 Command: request 
+INFO: noinput
+08.02.2011 12:09:09 Command: request 
+INFO: noinput
+08.02.2011 12:09:17 Command: request 
+INFO: noinput
+08.02.2011 12:09:24 Command: request 
+INFO: noinput
+08.02.2011 12:09:31 Command: request 
+INFO: noinput
+08.02.2011 12:09:38 Command: request 
+INFO: noinput

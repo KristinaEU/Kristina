@@ -1,0 +1,201 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://localhost:8080/D22/greeting.owl#"
+     xml:base="http://localhost:8080/D22/greeting.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+     xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
+     xmlns:p1="http://localhost:8080/OwlSpeakOnto.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://localhost:8080/D22/greeting.owl">
+        <owl:imports rdf:resource="http://localhost:8080/OwlSpeakOnto.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://localhost:8080/D22/greeting.owl#History-49510580 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/greeting.owl#History-49510580">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#History"/>
+        <p1:addTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</p1:addTime>
+        <p1:agendaPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">42</p1:agendaPriority>
+        <p1:forAgenda rdf:resource="http://localhost:8080/D22/greeting.owl#helloSys_agenda"/>
+        <p1:inWorkspace rdf:resource="http://localhost:8080/D22/greeting.owl#userWorkspace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/greeting.owl#History654231264 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/greeting.owl#History654231264">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#History"/>
+        <p1:addTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</p1:addTime>
+        <p1:agendaPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">42</p1:agendaPriority>
+        <p1:forAgenda rdf:resource="http://localhost:8080/D22/greeting.owl#helloUser_agenda"/>
+        <p1:inWorkspace rdf:resource="http://localhost:8080/D22/greeting.owl#userWorkspace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/greeting.owl#helloSys_agenda -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/greeting.owl#helloSys_agenda">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">REQUIRES(%userEntered%==true&amp;&amp;%userInit%==false)</p1:variableOperator>
+        <p1:has rdf:resource="http://localhost:8080/D22/greeting.owl#helloSys_move"/>
+        <p1:mustnot rdf:resource="http://localhost:8080/D22/greeting.owl#helloUser_semantic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/greeting.owl#helloSys_grammar -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/greeting.owl#helloSys_grammar">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Grammar"/>
+        <p1:grammarString xml:lang="de">(hallo %sysVar%)</p1:grammarString>
+        <p1:grammarString xml:lang="en">(hello %sysVar%)</p1:grammarString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/greeting.owl#helloSys_move -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/greeting.owl#helloSys_move">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SET(%userInit%=true)</p1:variableOperator>
+        <p1:grammar rdf:resource="http://localhost:8080/D22/greeting.owl#helloSys_grammar"/>
+        <p1:semantic rdf:resource="http://localhost:8080/D22/greeting.owl#helloSys_semantic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/greeting.owl#helloSys_semantic -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/greeting.owl#helloSys_semantic">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Semantic"/>
+        <p1:semanticString xml:lang="en">hello sys done</p1:semanticString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/greeting.owl#helloUser_agenda -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/greeting.owl#helloUser_agenda">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">REQUIRES(%userInit%==true)</p1:variableOperator>
+        <p1:has rdf:resource="http://localhost:8080/D22/greeting.owl#helloUser_move"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/greeting.owl#helloUser_move -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/greeting.owl#helloUser_move">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+        <p1:semantic rdf:resource="http://localhost:8080/D22/greeting.owl#helloUser_semantic"/>
+        <p1:utterance rdf:resource="http://localhost:8080/D22/greeting.owl#helloUser_utterance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/greeting.owl#helloUser_semantic -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/greeting.owl#helloUser_semantic">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Semantic"/>
+        <p1:semanticString xml:lang="en">hello user done</p1:semanticString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/greeting.owl#helloUser_utterance -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/greeting.owl#helloUser_utterance">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Utterance"/>
+        <p1:utteranceString xml:lang="de">hallo %userVar%!</p1:utteranceString>
+        <p1:utteranceString xml:lang="en">hello %userVar%!</p1:utteranceString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/greeting.owl#master_agenda -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/greeting.owl#master_agenda">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+        <p1:isMasterBool rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</p1:isMasterBool>
+        <p1:next rdf:resource="http://localhost:8080/D22/greeting.owl#helloSys_agenda"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/greeting.owl#helloUser_agenda"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/greeting.owl#sysVar -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/greeting.owl#sysVar">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Variable"/>
+        <p1:defaultValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">julia</p1:defaultValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/greeting.owl#userBeliefspace -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/greeting.owl#userBeliefspace">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#BeliefSpace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/greeting.owl#userEntered -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/greeting.owl#userEntered">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Variable"/>
+        <p1:defaultValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">false</p1:defaultValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/greeting.owl#userInit -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/greeting.owl#userInit">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Variable"/>
+        <p1:defaultValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">false</p1:defaultValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/greeting.owl#userVar -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/greeting.owl#userVar">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Variable"/>
+        <p1:defaultValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">suki</p1:defaultValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/D22/greeting.owl#userWorkspace -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/D22/greeting.owl#userWorkspace">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#WorkSpace"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/greeting.owl#helloSys_agenda"/>
+        <p1:next rdf:resource="http://localhost:8080/D22/greeting.owl#helloUser_agenda"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.2.0.1502) http://owlapi.sourceforge.net -->
+

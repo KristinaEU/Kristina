@@ -1,0 +1,97 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns="http://localhost:8080/Atraco/AskYesNoQuestion.owl#"
+    xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+    xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:p1="http://localhost:8080/Atraco/OwlSpeakOnto.owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+    xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" > 
+  <rdf:Description rdf:about="http://localhost:8080/Atraco/AskYesNoQuestion.owl#exit_grammar">
+    <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Grammar"/>
+    <p1:grammarString xml:lang="en">(leave it)</p1:grammarString>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/Atraco/AskYesNoQuestion.owl">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <owl:imports rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/Atraco/AskYesNoQuestion.owl#exit_semantic">
+    <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Semantic"/>
+    <p1:semanticString xml:lang="en">answer;exit</p1:semanticString>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/Atraco/AskYesNoQuestion.owl#exit_move">
+    <p1:contrarySemantic rdf:resource="http://localhost:8080/Atraco/AskYesNoQuestion.owl#yes_semantic"/>
+    <p1:contrarySemantic rdf:resource="http://localhost:8080/Atraco/AskYesNoQuestion.owl#no_semantic"/>
+    <p1:grammar rdf:resource="http://localhost:8080/Atraco/AskYesNoQuestion.owl#exit_grammar"/>
+    <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Move"/>
+    <p1:semantic rdf:resource="http://localhost:8080/Atraco/AskYesNoQuestion.owl#exit_semantic"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/Atraco/AskYesNoQuestion.owl#no_grammar">
+    <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Grammar"/>
+    <p1:grammarString xml:lang="en">[no nope incorrect (no way) ]</p1:grammarString>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/Atraco/AskYesNoQuestion.owl#yes_move">
+    <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Move"/>
+    <p1:grammar rdf:resource="http://localhost:8080/Atraco/AskYesNoQuestion.owl#yes_grammar"/>
+    <p1:semantic rdf:resource="http://localhost:8080/Atraco/AskYesNoQuestion.owl#yes_semantic"/>
+    <p1:contrarySemantic rdf:resource="http://localhost:8080/Atraco/AskYesNoQuestion.owl#no_semantic"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/Atraco/AskYesNoQuestion.owl#question_agenda">
+    <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Agenda"/>
+    <p1:has rdf:resource="http://localhost:8080/Atraco/AskYesNoQuestion.owl#question_move"/>
+    <p1:has rdf:resource="http://localhost:8080/Atraco/AskYesNoQuestion.owl#yes_move"/>
+    <p1:has rdf:resource="http://localhost:8080/Atraco/AskYesNoQuestion.owl#no_move"/>
+    <p1:has rdf:resource="http://localhost:8080/Atraco/AskYesNoQuestion.owl#exit_move"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/Atraco/AskYesNoQuestion.owl#no_move">
+    <p1:semantic rdf:resource="http://localhost:8080/Atraco/AskYesNoQuestion.owl#no_semantic"/>
+    <p1:grammar rdf:resource="http://localhost:8080/Atraco/AskYesNoQuestion.owl#no_grammar"/>
+    <p1:contrarySemantic rdf:resource="http://localhost:8080/Atraco/AskYesNoQuestion.owl#yes_semantic"/>
+    <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Move"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/Atraco/AskYesNoQuestion.owl#Masteragenda">
+    <p1:isMasterBool rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</p1:isMasterBool>
+    <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Agenda"/>
+    <p1:next rdf:resource="http://localhost:8080/Atraco/AskYesNoQuestion.owl#question_agenda"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/Atraco/AskYesNoQuestion.owl#userWorkspace">
+    <p1:next rdf:resource="http://localhost:8080/Atraco/AskYesNoQuestion.owl#question_agenda"/>
+    <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#WorkSpace"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/Atraco/AskYesNoQuestion.owl#userBeliefspace">
+    <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#BeliefSpace"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/Atraco/AskYesNoQuestion.owl#question_utterance">
+    <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Utterance"/>
+    <p1:utteranceString xml:lang="en">%yesNoQuestion%</p1:utteranceString>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/Atraco/AskYesNoQuestion.owl#yes_semantic">
+    <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Semantic"/>
+    <p1:semanticString xml:lang="en">answer;true</p1:semanticString>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/Atraco/AskYesNoQuestion.owl#question_move">
+    <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Move"/>
+    <p1:utterance rdf:resource="http://localhost:8080/Atraco/AskYesNoQuestion.owl#question_utterance"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/Atraco/AskYesNoQuestion.owl#yesNoQuestion">
+    <p1:defaultValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">would you like to talk to me?</p1:defaultValue>
+    <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/Atraco/AskYesNoQuestion.owl#yes_grammar">
+    <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Grammar"/>
+    <p1:grammarString xml:lang="en">[yes yeah yup sure okay correct right]</p1:grammarString>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/Atraco/AskYesNoQuestion.owl#no_semantic">
+    <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#Semantic"/>
+    <p1:semanticString xml:lang="en">answer;false</p1:semanticString>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/Atraco/AskYesNoQuestion.owl#History1820486179">
+    <p1:inWorkspace rdf:resource="http://localhost:8080/Atraco/AskYesNoQuestion.owl#userWorkspace"/>
+    <p1:addTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</p1:addTime>
+    <p1:forAgenda rdf:resource="http://localhost:8080/Atraco/AskYesNoQuestion.owl#question_agenda"/>
+    <rdf:type rdf:resource="http://localhost:8080/Atraco/OwlSpeakOnto.owl#History"/>
+    <p1:agendaPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">42</p1:agendaPriority>
+  </rdf:Description>
+</rdf:RDF>

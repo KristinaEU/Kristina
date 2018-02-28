@@ -1,0 +1,16 @@
+public <4_BusAfterThatRequest> = [<pre_question>] [<WHEN_DOES>] [the] next [<BUS>] [<RUN>] | [<pre_question>] [<WHAT_IS>] [the] next <BUS> | [<pre_question>] <i_want> [the] next <BUS> | [<pre_question>] [<WHEN_DOES>] [the] [<BUS>] after that [<BUS>] [<RUN>] | [<pre_assertion>] [<IS_THERE>] [a] [bus] after that [<BUS>];
+<WHEN_DOES> = when <DOES> | when's | at what time <DOES> | what time <DOES>;
+<WHAT_IS> = what <DOES> | what's;
+<DOES> = will | do | does | is;
+<BUS> = bus | trip | one | <route>;
+<RUN> = go | goes | run | runs | leave | leaves | depart | departs | come | comes | arrive | arrives;
+<LEAVING> = that leave | that leaves | leaving | that go | that goes | going;
+<IS_THERE> = is there | i'd like | i would like | i want | i need | i'm looking for;/*End of Slot*/
+public <4_BusAfterThatRequest> = [<pre_question>] [<WHEN_DOES>] [the] next [<BUS>] [<RUN>] | [<pre_question>] [<WHAT_IS>] [the] next <BUS> | [<pre_question>] <i_want> [the] next <BUS> | [<pre_question>] [<WHEN_DOES>] [the] [<BUS>] after that [<BUS>] [<RUN>] | [<pre_assertion>] [<IS_THERE>] [a] [bus] after that [<BUS>];
+<WHEN_DOES> = when <DOES> | when's | at what time <DOES> | what time <DOES>;
+<WHAT_IS> = what <DOES> | what's;
+<DOES> = will | do | does | is;
+<BUS> = bus | trip | one | <route>;
+<RUN> = go | goes | run | runs | leave | leaves | depart | departs | come | comes | arrive | arrives;
+<LEAVING> = that leave | that leaves | leaving | that go | that goes | going;
+<IS_THERE> = is there | i'd like | i would like | i want | i need | i'm looking for;/*End of Slot*/

@@ -1,0 +1,907 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+    xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
+    xmlns:p1="http://localhost:8080/OwlSpeakOnto.owl#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+    xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns="http://localhost:8080/POMDP/travel.var.jaise.owl#"
+  xml:base="http://localhost:8080/POMDP/travel.var.jaise.owl">
+  <owl:Ontology rdf:about="">
+    <owl:imports rdf:resource="http://localhost:8080/OwlSpeakOnto.owl"/>
+  </owl:Ontology>
+  <owl:DatatypeProperty rdf:about="http://localhost:8080/OwlSpeakOnto.owl#partitionNumFields"/>
+  <owl:NamedIndividual rdf:ID="sbp6">
+    <p1:partitionState rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >UNIQUE</p1:partitionState>
+    <p1:partitionNumFields rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >2</p1:partitionNumFields>
+    <p1:secondTopBeliefValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+    >0.03408134</p1:secondTopBeliefValue>
+    <p1:summaryBeliefAgenda>
+      <owl:NamedIndividual rdf:ID="confirm_summary_agenda">
+        <p1:summarizesAgendas>
+          <owl:NamedIndividual rdf:ID="conf_dest_agenda">
+            <p1:summaryAgenda rdf:resource="#confirm_summary_agenda"/>
+            <p1:requires>
+              <owl:NamedIndividual rdf:ID="dest_sem">
+                <p1:containsSemantics>
+                  <owl:NamedIndividual rdf:ID="dest_conf_sem">
+                    <p1:semanticGroup rdf:resource="#dest_sem"/>
+                    <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Semantic"/>
+                    <p1:confirmationInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >confirmation</p1:confirmationInfo>
+                    <p1:masterSemantic rdf:resource="#dest_sem"/>
+                  </owl:NamedIndividual>
+                </p1:containsSemantics>
+                <p1:containsSemantics>
+                  <owl:NamedIndividual rdf:ID="dest_rej_sem">
+                    <p1:masterSemantic rdf:resource="#dest_sem"/>
+                    <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Semantic"/>
+                    <p1:semanticGroup rdf:resource="#dest_sem"/>
+                    <p1:confirmationInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >rejection</p1:confirmationInfo>
+                  </owl:NamedIndividual>
+                </p1:containsSemantics>
+                <p1:hasVariable>
+                  <owl:NamedIndividual rdf:ID="dest_var">
+                    <p1:belongsToSemantic rdf:resource="#dest_sem"/>
+                    <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Variable"/>
+                  </owl:NamedIndividual>
+                </p1:hasVariable>
+                <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#SemanticGroup"/>
+              </owl:NamedIndividual>
+            </p1:requires>
+            <p1:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+            >60</p1:priority>
+            <p1:role rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >confirmation</p1:role>
+            <p1:has>
+              <owl:NamedIndividual rdf:ID="conf_dest_mv">
+                <p1:semantic rdf:resource="#dest_conf_sem"/>
+                <p1:contrarySemantic rdf:resource="#dest_rej_sem"/>
+                <p1:confirmationInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >confirmation</p1:confirmationInfo>
+                <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+                <p1:grammar>
+                  <owl:NamedIndividual rdf:ID="yes_grammar">
+                    <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Grammar"/>
+                    <p1:grammarString xml:lang="de">ja | [das] stimmt | [stimmt] genau | [das ist] richtig</p1:grammarString>
+                    <p1:grammarString xml:lang="en">yes | right | exactly | true</p1:grammarString>
+                  </owl:NamedIndividual>
+                </p1:grammar>
+              </owl:NamedIndividual>
+            </p1:has>
+            <p1:has>
+              <owl:NamedIndividual rdf:ID="ask_conf_dest_mv">
+                <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+                <p1:utterance>
+                  <owl:NamedIndividual rdf:ID="conf_dest_utt">
+                    <p1:utteranceString xml:lang="de">Du willst also nach %dest_var%?</p1:utteranceString>
+                    <p1:utteranceString xml:lang="en">So you want to go to %dest_var%?</p1:utteranceString>
+                    <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Utterance"/>
+                  </owl:NamedIndividual>
+                </p1:utterance>
+              </owl:NamedIndividual>
+            </p1:has>
+            <p1:has>
+              <owl:NamedIndividual rdf:ID="reject_dest_mv">
+                <p1:grammar>
+                  <owl:NamedIndividual rdf:ID="no_grammar">
+                    <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Grammar"/>
+                    <p1:grammarString xml:lang="de">nein | falsch | [das] stimmt nicht | ich möchte nicht nach #dest_sem#</p1:grammarString>
+                    <p1:grammarString xml:lang="en">no | wrong</p1:grammarString>
+                  </owl:NamedIndividual>
+                </p1:grammar>
+                <p1:contrarySemantic rdf:resource="#dest_conf_sem"/>
+                <p1:contrarySemantic rdf:resource="#dest_sem"/>
+                <p1:confirmationInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >rejection</p1:confirmationInfo>
+                <p1:semantic rdf:resource="#dest_rej_sem"/>
+                <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+              </owl:NamedIndividual>
+            </p1:has>
+            <p1:mustnot rdf:resource="#dest_conf_sem"/>
+            <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+          </owl:NamedIndividual>
+        </p1:summarizesAgendas>
+        <p1:summarizesAgendas>
+          <p1:Agenda rdf:ID="conf_dur_agenda">
+            <p1:has>
+              <owl:NamedIndividual rdf:ID="conf_dur_mv">
+                <p1:contrarySemantic>
+                  <owl:NamedIndividual rdf:ID="dur_rej_sem">
+                    <p1:confirmationInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >rejection</p1:confirmationInfo>
+                    <p1:semanticGroup>
+                      <owl:NamedIndividual rdf:ID="dur_sem">
+                        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#SemanticGroup"/>
+                        <p1:hasVariable>
+                          <owl:NamedIndividual rdf:ID="dur_var">
+                            <p1:belongsToSemantic rdf:resource="#dur_sem"/>
+                            <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Variable"/>
+                          </owl:NamedIndividual>
+                        </p1:hasVariable>
+                        <p1:containsSemantics>
+                          <owl:NamedIndividual rdf:ID="dur_conf_sem">
+                            <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Semantic"/>
+                            <p1:masterSemantic rdf:resource="#dur_sem"/>
+                            <p1:confirmationInfo rdf:datatype=
+                            "http://www.w3.org/2001/XMLSchema#string"
+                            >confirmation</p1:confirmationInfo>
+                            <p1:semanticGroup rdf:resource="#dur_sem"/>
+                          </owl:NamedIndividual>
+                        </p1:containsSemantics>
+                        <p1:containsSemantics rdf:resource="#dur_rej_sem"/>
+                      </owl:NamedIndividual>
+                    </p1:semanticGroup>
+                    <p1:masterSemantic rdf:resource="#dur_sem"/>
+                    <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Semantic"/>
+                  </owl:NamedIndividual>
+                </p1:contrarySemantic>
+                <p1:semantic rdf:resource="#dur_conf_sem"/>
+                <p1:grammar rdf:resource="#yes_grammar"/>
+                <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+                <p1:confirmationInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >confirmation</p1:confirmationInfo>
+              </owl:NamedIndividual>
+            </p1:has>
+            <p1:mustnot rdf:resource="#dur_conf_sem"/>
+            <p1:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+            >45</p1:priority>
+            <p1:has>
+              <owl:NamedIndividual rdf:ID="reject_dur_mv">
+                <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+                <p1:semantic rdf:resource="#dur_rej_sem"/>
+                <p1:contrarySemantic rdf:resource="#dur_conf_sem"/>
+                <p1:contrarySemantic rdf:resource="#dur_sem"/>
+                <p1:grammar rdf:resource="#no_grammar"/>
+                <p1:confirmationInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >rejection</p1:confirmationInfo>
+              </owl:NamedIndividual>
+            </p1:has>
+            <p1:role rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >confirmation</p1:role>
+            <p1:requires rdf:resource="#dur_sem"/>
+            <p1:summaryAgenda rdf:resource="#confirm_summary_agenda"/>
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+            <p1:has>
+              <owl:NamedIndividual rdf:ID="ask_conf_dur_mv">
+                <p1:utterance>
+                  <owl:NamedIndividual rdf:ID="conf_dur_utt">
+                    <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Utterance"/>
+                    <p1:utteranceString xml:lang="de">Willst du %dur_var% bleiben?</p1:utteranceString>
+                    <p1:utteranceString xml:lang="en">Do you want to stay for %dur_var% weeks?</p1:utteranceString>
+                  </owl:NamedIndividual>
+                </p1:utterance>
+                <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+              </owl:NamedIndividual>
+            </p1:has>
+          </p1:Agenda>
+        </p1:summarizesAgendas>
+        <p1:summarizesAgendas>
+          <p1:Agenda rdf:ID="conf_iss_agenda">
+            <p1:summaryAgenda rdf:resource="#confirm_summary_agenda"/>
+            <p1:requires>
+              <owl:NamedIndividual rdf:ID="iss_sem">
+                <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#SemanticGroup"/>
+                <p1:hasVariable>
+                  <owl:NamedIndividual rdf:ID="iss_var">
+                    <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Variable"/>
+                    <p1:belongsToSemantic rdf:resource="#iss_sem"/>
+                  </owl:NamedIndividual>
+                </p1:hasVariable>
+                <p1:containsSemantics>
+                  <owl:NamedIndividual rdf:ID="iss_conf_sem">
+                    <p1:masterSemantic rdf:resource="#iss_sem"/>
+                    <p1:semanticGroup rdf:resource="#iss_sem"/>
+                    <p1:confirmationInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >confirmation</p1:confirmationInfo>
+                    <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Semantic"/>
+                  </owl:NamedIndividual>
+                </p1:containsSemantics>
+                <p1:containsSemantics>
+                  <owl:NamedIndividual rdf:ID="iss_rej_sem">
+                    <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Semantic"/>
+                    <p1:semanticGroup rdf:resource="#iss_sem"/>
+                    <p1:masterSemantic rdf:resource="#iss_sem"/>
+                    <p1:confirmationInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >rejection</p1:confirmationInfo>
+                  </owl:NamedIndividual>
+                </p1:containsSemantics>
+              </owl:NamedIndividual>
+            </p1:requires>
+            <p1:has>
+              <owl:NamedIndividual rdf:ID="reject_iss_mv">
+                <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+                <p1:contrarySemantic rdf:resource="#iss_conf_sem"/>
+                <p1:contrarySemantic rdf:resource="#iss_sem"/>
+                <p1:semantic rdf:resource="#iss_rej_sem"/>
+                <p1:confirmationInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >rejection</p1:confirmationInfo>
+                <p1:grammar rdf:resource="#no_grammar"/>
+              </owl:NamedIndividual>
+            </p1:has>
+            <p1:has>
+              <owl:NamedIndividual rdf:ID="ask_conf_iss_mv">
+                <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+                <p1:utterance>
+                  <owl:NamedIndividual rdf:ID="conf_iss_utt">
+                    <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Utterance"/>
+                    <p1:utteranceString xml:lang="de">Der Grund der Reise ist %iss_var%, richtig?</p1:utteranceString>
+                    <p1:utteranceString xml:lang="en">You want to travel for %iss_var%, right?</p1:utteranceString>
+                  </owl:NamedIndividual>
+                </p1:utterance>
+              </owl:NamedIndividual>
+            </p1:has>
+            <p1:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+            >50</p1:priority>
+            <p1:has>
+              <owl:NamedIndividual rdf:ID="conf_iss_mv">
+                <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+                <p1:grammar rdf:resource="#yes_grammar"/>
+                <p1:confirmationInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >confirmation</p1:confirmationInfo>
+                <p1:contrarySemantic rdf:resource="#iss_rej_sem"/>
+                <p1:semantic rdf:resource="#iss_conf_sem"/>
+              </owl:NamedIndividual>
+            </p1:has>
+            <p1:mustnot rdf:resource="#iss_conf_sem"/>
+            <p1:role rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >confirmation</p1:role>
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+          </p1:Agenda>
+        </p1:summarizesAgendas>
+        <p1:summaryAgendaType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >confirmation</p1:summaryAgendaType>
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#SummaryAgenda"/>
+      </owl:NamedIndividual>
+    </p1:summaryBeliefAgenda>
+    <p1:summaryBeliefAgenda>
+      <owl:NamedIndividual rdf:ID="request_summary_agenda">
+        <p1:summarizesAgendas>
+          <p1:Agenda rdf:ID="ask_dest_agenda">
+            <p1:has>
+              <owl:NamedIndividual rdf:ID="dest_paris_mv">
+                <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >SET(dest_var=paris)</p1:variableOperator>
+                <p1:semantic rdf:resource="#dest_sem"/>
+                <p1:grammar>
+                  <owl:NamedIndividual rdf:ID="Paris_grammar">
+                    <p1:grammarString xml:lang="de">[&lt;dest_prefix_grammar&gt;] paris</p1:grammarString>
+                    <p1:grammarString xml:lang="en">[&lt;dest_prefix_grammar&gt;] paris</p1:grammarString>
+                    <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Grammar"/>
+                    <p1:generalGrammar>
+                      <owl:NamedIndividual rdf:ID="dest_prefix_grammar">
+                        <p1:grammarString xml:lang="de">([ich (will | möchte)] nach) | richtung</p1:grammarString>
+                        <p1:grammarString xml:lang="en">[i want] to</p1:grammarString>
+                        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Grammar"/>
+                      </owl:NamedIndividual>
+                    </p1:generalGrammar>
+                  </owl:NamedIndividual>
+                </p1:grammar>
+                <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+              </owl:NamedIndividual>
+            </p1:has>
+            <p1:summaryAgenda rdf:resource="#request_summary_agenda"/>
+            <p1:mustnot rdf:resource="#dest_sem"/>
+            <p1:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+            >60</p1:priority>
+            <p1:role rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >collection</p1:role>
+            <p1:next rdf:resource="#conf_dest_agenda"/>
+            <p1:has>
+              <owl:NamedIndividual rdf:ID="ask_dest_mv">
+                <p1:utterance>
+                  <owl:NamedIndividual rdf:ID="ask_dest_utt">
+                    <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Utterance"/>
+                    <p1:utteranceString xml:lang="de">Welche Stadt willst du besuchen?</p1:utteranceString>
+                    <p1:utteranceString xml:lang="en">Which city do you want to visit?</p1:utteranceString>
+                  </owl:NamedIndividual>
+                </p1:utterance>
+                <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+              </owl:NamedIndividual>
+            </p1:has>
+            <p1:has>
+              <owl:NamedIndividual rdf:ID="dest_miami_mv">
+                <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >SET(dest_var=miami)</p1:variableOperator>
+                <p1:semantic rdf:resource="#dest_sem"/>
+                <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+                <p1:grammar>
+                  <owl:NamedIndividual rdf:ID="Miami_grammar">
+                    <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Grammar"/>
+                    <p1:generalGrammar rdf:resource="#dest_prefix_grammar"/>
+                    <p1:grammarString xml:lang="de">[&lt;dest_prefix_grammar&gt;] miami</p1:grammarString>
+                    <p1:grammarString xml:lang="en">[&lt;dest_prefix_grammar&gt;] miami</p1:grammarString>
+                  </owl:NamedIndividual>
+                </p1:grammar>
+              </owl:NamedIndividual>
+            </p1:has>
+            <p1:has>
+              <owl:NamedIndividual rdf:ID="dest_london_mv">
+                <p1:semantic rdf:resource="#dest_sem"/>
+                <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >SET(dest_var=london)</p1:variableOperator>
+                <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+                <p1:grammar>
+                  <owl:NamedIndividual rdf:ID="London_grammar">
+                    <p1:generalGrammar rdf:resource="#dest_prefix_grammar"/>
+                    <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Grammar"/>
+                    <p1:grammarString xml:lang="de">[&lt;dest_prefix_grammar&gt;] london</p1:grammarString>
+                    <p1:grammarString xml:lang="en">[&lt;dest_prefix_grammar&gt;] london</p1:grammarString>
+                  </owl:NamedIndividual>
+                </p1:grammar>
+              </owl:NamedIndividual>
+            </p1:has>
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+          </p1:Agenda>
+        </p1:summarizesAgendas>
+        <p1:summarizesAgendas>
+          <owl:NamedIndividual rdf:ID="ask_dur_agenda">
+            <p1:role rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >collection</p1:role>
+            <p1:summaryAgenda rdf:resource="#request_summary_agenda"/>
+            <p1:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+            >50</p1:priority>
+            <p1:mustnot rdf:resource="#dur_sem"/>
+            <p1:has>
+              <owl:NamedIndividual rdf:ID="ask_dur_mv">
+                <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+                <p1:utterance>
+                  <owl:NamedIndividual rdf:ID="ask_dur_utt">
+                    <p1:utteranceString xml:lang="de">Wie lange willst du bleiben?</p1:utteranceString>
+                    <p1:utteranceString xml:lang="en">How long do you want to stay?</p1:utteranceString>
+                    <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Utterance"/>
+                  </owl:NamedIndividual>
+                </p1:utterance>
+              </owl:NamedIndividual>
+            </p1:has>
+            <p1:has>
+              <owl:NamedIndividual rdf:ID="dur_four_weeks_mv">
+                <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+                <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >SET(dur_var=vier_wochen)</p1:variableOperator>
+                <p1:grammar>
+                  <owl:NamedIndividual rdf:ID="Four_weeks_grammar">
+                    <p1:grammarString xml:lang="de">(vier wochen)</p1:grammarString>
+                    <p1:grammarString xml:lang="en">(four weeks)</p1:grammarString>
+                    <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Grammar"/>
+                  </owl:NamedIndividual>
+                </p1:grammar>
+                <p1:semantic rdf:resource="#dur_sem"/>
+              </owl:NamedIndividual>
+            </p1:has>
+            <p1:has>
+              <owl:NamedIndividual rdf:ID="dur_two_weeks_mv">
+                <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+                <p1:grammar>
+                  <owl:NamedIndividual rdf:ID="Two_weeks_grammar">
+                    <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Grammar"/>
+                    <p1:grammarString xml:lang="de">(zwei wochen)</p1:grammarString>
+                    <p1:grammarString xml:lang="en">(two weeks)</p1:grammarString>
+                  </owl:NamedIndividual>
+                </p1:grammar>
+                <p1:semantic rdf:resource="#dur_sem"/>
+                <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >SET(dur_var=zwei_wochen)</p1:variableOperator>
+              </owl:NamedIndividual>
+            </p1:has>
+            <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+          </owl:NamedIndividual>
+        </p1:summarizesAgendas>
+        <p1:summarizesAgendas>
+          <owl:NamedIndividual rdf:ID="ask_iss_agenda">
+            <p1:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+            >55</p1:priority>
+            <p1:has>
+              <owl:NamedIndividual rdf:ID="iss_work_mv">
+                <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >SET(iss_var=arbeit)</p1:variableOperator>
+                <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+                <p1:semantic rdf:resource="#iss_sem"/>
+                <p1:grammar>
+                  <owl:NamedIndividual rdf:ID="Work_grammar">
+                    <p1:grammarString xml:lang="de">(arbeit)</p1:grammarString>
+                    <p1:grammarString xml:lang="en">(work)</p1:grammarString>
+                    <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Grammar"/>
+                  </owl:NamedIndividual>
+                </p1:grammar>
+              </owl:NamedIndividual>
+            </p1:has>
+            <p1:has>
+              <owl:NamedIndividual rdf:ID="iss_shopping_mv">
+                <p1:semantic rdf:resource="#iss_sem"/>
+                <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >SET(iss_var=einkaufen)</p1:variableOperator>
+                <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+                <p1:grammar>
+                  <owl:NamedIndividual rdf:ID="Shopping_grammar">
+                    <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Grammar"/>
+                    <p1:grammarString xml:lang="de">(einkaufen)</p1:grammarString>
+                    <p1:grammarString xml:lang="en">(shopping)</p1:grammarString>
+                  </owl:NamedIndividual>
+                </p1:grammar>
+              </owl:NamedIndividual>
+            </p1:has>
+            <p1:has>
+              <owl:NamedIndividual rdf:ID="iss_party_mv">
+                <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >SET(iss_var=party)</p1:variableOperator>
+                <p1:grammar>
+                  <owl:NamedIndividual rdf:ID="Party_grammar">
+                    <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Grammar"/>
+                    <p1:grammarString xml:lang="de">(party)</p1:grammarString>
+                    <p1:grammarString xml:lang="en">(party)</p1:grammarString>
+                  </owl:NamedIndividual>
+                </p1:grammar>
+                <p1:semantic rdf:resource="#iss_sem"/>
+                <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+              </owl:NamedIndividual>
+            </p1:has>
+            <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+            <p1:mustnot rdf:resource="#iss_sem"/>
+            <p1:role rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >collection</p1:role>
+            <p1:summaryAgenda rdf:resource="#request_summary_agenda"/>
+            <p1:has>
+              <owl:NamedIndividual rdf:ID="ask_iss_mv">
+                <p1:utterance>
+                  <owl:NamedIndividual rdf:ID="ask_iss_utt">
+                    <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Utterance"/>
+                    <p1:utteranceString xml:lang="de">Was ist der Grund der Reise?</p1:utteranceString>
+                    <p1:utteranceString xml:lang="en">What is the issue of travel?</p1:utteranceString>
+                  </owl:NamedIndividual>
+                </p1:utterance>
+                <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+              </owl:NamedIndividual>
+            </p1:has>
+          </owl:NamedIndividual>
+        </p1:summarizesAgendas>
+        <p1:summaryAgendaType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >request</p1:summaryAgendaType>
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#SummaryAgenda"/>
+      </owl:NamedIndividual>
+    </p1:summaryBeliefAgenda>
+    <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#SummaryBelief"/>
+    <p1:topBeliefValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+    >0.96512157</p1:topBeliefValue>
+    <p1:historyState rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >INIT</p1:historyState>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:ID="History-1059473877">
+    <p1:addTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >3</p1:addTime>
+    <p1:inWorkspace>
+      <owl:NamedIndividual rdf:ID="userWorkspace">
+        <p1:next rdf:resource="#ask_iss_agenda"/>
+        <p1:next>
+          <owl:NamedIndividual rdf:ID="end_agenda">
+            <p1:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+            >40</p1:priority>
+            <p1:reward>
+              <owl:NamedIndividual rdf:ID="RewardSuccess">
+                <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Reward"/>
+                <p1:rewardingAgendas rdf:resource="#end_agenda"/>
+                <p1:rewardValue rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                >20</p1:rewardValue>
+              </owl:NamedIndividual>
+            </p1:reward>
+            <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+            <p1:summaryAgenda>
+              <owl:NamedIndividual rdf:ID="bye_summary_agenda">
+                <p1:summarizesAgendas rdf:resource="#end_agenda"/>
+                <p1:summaryAgendaType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >announcement</p1:summaryAgendaType>
+                <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#SummaryAgenda"/>
+              </owl:NamedIndividual>
+            </p1:summaryAgenda>
+            <p1:role rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >collection</p1:role>
+            <p1:has>
+              <owl:NamedIndividual rdf:ID="end_mv">
+                <p1:isExitMove rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+                >true</p1:isExitMove>
+                <p1:utterance>
+                  <owl:NamedIndividual rdf:ID="end_utt">
+                    <p1:utteranceString xml:lang="de">Tschuess.</p1:utteranceString>
+                    <p1:utteranceString xml:lang="en">Goodbye</p1:utteranceString>
+                    <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Utterance"/>
+                  </owl:NamedIndividual>
+                </p1:utterance>
+                <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+              </owl:NamedIndividual>
+            </p1:has>
+          </owl:NamedIndividual>
+        </p1:next>
+        <p1:next>
+          <owl:NamedIndividual rdf:ID="summarize_impl_dur_agenda">
+            <p1:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+            >45</p1:priority>
+            <p1:next rdf:resource="#ask_dur_agenda"/>
+            <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+            <p1:has>
+              <owl:NamedIndividual rdf:ID="impl_conf_dur_mv">
+                <p1:semantic rdf:resource="#dur_conf_sem"/>
+                <p1:isRequestMove rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+                >true</p1:isRequestMove>
+                <p1:contrarySemantic rdf:resource="#dur_rej_sem"/>
+                <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+              </owl:NamedIndividual>
+            </p1:has>
+            <p1:has rdf:resource="#reject_dur_mv"/>
+            <p1:summaryAgenda>
+              <owl:NamedIndividual rdf:ID="implicit_summary_agenda">
+                <p1:summarizesAgendas>
+                  <owl:NamedIndividual rdf:ID="ask_dur_impl_iss_agenda">
+                    <p1:role rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >collection</p1:role>
+                    <p1:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                    >50</p1:priority>
+                    <p1:mustnot rdf:resource="#dur_sem"/>
+                    <p1:has>
+                      <owl:NamedIndividual rdf:ID="ask_dur_impl_conf_iss">
+                        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+                        <p1:utterance>
+                          <owl:NamedIndividual rdf:ID="ask_dur_imp_iss_utt">
+                            <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Utterance"/>
+                            <p1:utteranceString xml:lang="de"
+                            >Also %iss_var%. Wie lange willst du bleiben?</p1:utteranceString>
+                            <p1:utteranceString xml:lang="en"
+                            >So %iss_var%. For how long do you want to stay?</p1:utteranceString>
+                          </owl:NamedIndividual>
+                        </p1:utterance>
+                      </owl:NamedIndividual>
+                    </p1:has>
+                    <p1:has rdf:resource="#dur_two_weeks_mv"/>
+                    <p1:next rdf:resource="#ask_iss_agenda"/>
+                    <p1:has rdf:resource="#dur_four_weeks_mv"/>
+                    <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+                    <p1:has rdf:resource="#reject_iss_mv"/>
+                    <p1:has>
+                      <owl:NamedIndividual rdf:ID="impl_conf_iss_mv">
+                        <p1:processConditions rdf:resource="#dur_four_weeks_mv"/>
+                        <p1:processConditions rdf:resource="#dur_two_weeks_mv"/>
+                        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+                        <p1:semantic rdf:resource="#iss_conf_sem"/>
+                        <p1:contrarySemantic rdf:resource="#iss_rej_sem"/>
+                      </owl:NamedIndividual>
+                    </p1:has>
+                    <p1:summaryAgenda rdf:resource="#implicit_summary_agenda"/>
+                  </owl:NamedIndividual>
+                </p1:summarizesAgendas>
+                <p1:summarizesAgendas rdf:resource="#summarize_impl_dur_agenda"/>
+                <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#SummaryAgenda"/>
+                <p1:summaryAgendaType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >implicit</p1:summaryAgendaType>
+              </owl:NamedIndividual>
+            </p1:summaryAgenda>
+          </owl:NamedIndividual>
+        </p1:next>
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#WorkSpace"/>
+      </owl:NamedIndividual>
+    </p1:inWorkspace>
+    <p1:forAgenda rdf:resource="#end_agenda"/>
+    <p1:agendaPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >40</p1:agendaPriority>
+    <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#History"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:ID="History-568658862">
+    <p1:agendaPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >45</p1:agendaPriority>
+    <p1:addTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >3</p1:addTime>
+    <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#History"/>
+    <p1:forAgenda rdf:resource="#summarize_impl_dur_agenda"/>
+    <p1:inWorkspace rdf:resource="#userWorkspace"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:ID="sbp5">
+    <p1:topBeliefValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+    >0.9992029</p1:topBeliefValue>
+    <p1:historyState rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >INIT</p1:historyState>
+    <p1:summaryBeliefAgenda rdf:resource="#confirm_summary_agenda"/>
+    <p1:summaryBeliefAgenda rdf:resource="#request_summary_agenda"/>
+    <p1:secondTopBeliefValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+    >4.6876803E-4</p1:secondTopBeliefValue>
+    <p1:partitionNumFields rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >1</p1:partitionNumFields>
+    <p1:partitionState rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >UNIQUE</p1:partitionState>
+    <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#SummaryBelief"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:ID="submit_dur_utt">
+    <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Utterance"/>
+    <p1:utteranceString xml:lang="de">Du willst %dur_var% bleiben.</p1:utteranceString>
+    <p1:utteranceString xml:lang="en">You want to stay %dur_var%.</p1:utteranceString>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:ID="masteragenda">
+    <p1:role rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >collection</p1:role>
+    <p1:isMasterBool rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</p1:isMasterBool>
+    <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Agenda"/>
+    <p1:next>
+      <p1:Agenda rdf:ID="greet_agenda">
+        <p1:next rdf:resource="#summarize_impl_dur_agenda"/>
+        <p1:next rdf:resource="#ask_dest_agenda"/>
+        <p1:next rdf:resource="#ask_iss_agenda"/>
+        <p1:next rdf:resource="#end_agenda"/>
+        <p1:role rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >collection</p1:role>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <p1:has>
+          <owl:NamedIndividual rdf:ID="greet_mv">
+            <p1:utterance>
+              <owl:NamedIndividual rdf:ID="greet_utt">
+                <p1:utteranceString xml:lang="de">Hallo.</p1:utteranceString>
+                <p1:utteranceString xml:lang="en">Welcome.</p1:utteranceString>
+                <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Utterance"/>
+              </owl:NamedIndividual>
+            </p1:utterance>
+            <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Move"/>
+          </owl:NamedIndividual>
+        </p1:has>
+        <p1:summaryAgenda>
+          <owl:NamedIndividual rdf:ID="greet_summary_agenda">
+            <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#SummaryAgenda"/>
+            <p1:summarizesAgendas rdf:resource="#greet_agenda"/>
+            <p1:summaryAgendaType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >announcement</p1:summaryAgendaType>
+          </owl:NamedIndividual>
+        </p1:summaryAgenda>
+        <p1:next rdf:resource="#ask_dur_impl_iss_agenda"/>
+      </p1:Agenda>
+    </p1:next>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:ID="History-905892070">
+    <p1:addTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >7</p1:addTime>
+    <p1:forAgenda rdf:resource="#conf_dest_agenda"/>
+    <p1:agendaPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >60</p1:agendaPriority>
+    <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#History"/>
+    <p1:procTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >5</p1:procTime>
+    <p1:inWorkspace rdf:resource="#userWorkspace"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:ID="light_agenda">
+    <p1:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >80</p1:priority>
+    <p1:respawn rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</p1:respawn>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:ID="submit_iss_utt">
+    <p1:utteranceString xml:lang="de">Der Grund der Reise ist %iss_var%.</p1:utteranceString>
+    <p1:utteranceString xml:lang="en">The issue of travel is %iss_var%.</p1:utteranceString>
+    <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Utterance"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="#"/>
+  <owl:NamedIndividual rdf:ID="History113828614">
+    <p1:inWorkspace rdf:resource="#userWorkspace"/>
+    <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#History"/>
+    <p1:agendaPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >50</p1:agendaPriority>
+    <p1:forAgenda rdf:resource="#ask_dur_impl_iss_agenda"/>
+    <p1:addTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >3</p1:addTime>
+    <p1:procTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >15</p1:procTime>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:ID="sbp8">
+    <p1:topBeliefValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+    >0.9852821</p1:topBeliefValue>
+    <p1:partitionNumFields rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >3</p1:partitionNumFields>
+    <p1:partitionState rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >UNIQUE</p1:partitionState>
+    <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#SummaryBelief"/>
+    <p1:secondTopBeliefValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+    >0.013920784</p1:secondTopBeliefValue>
+    <p1:summaryBeliefAgenda rdf:resource="#confirm_summary_agenda"/>
+    <p1:historyState rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >INIT</p1:historyState>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:ID="summary_utt">
+    <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Utterance"/>
+    <p1:utteranceString xml:lang="de">Du willst fuer %dur_var% nach %dest_var% wegen %dur_var%.</p1:utteranceString>
+    <p1:utteranceString xml:lang="en">You want to go to %dest_var% for %dur_var% for %iss_var%.</p1:utteranceString>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:ID="Belief_-312342445"/>
+  <owl:NamedIndividual rdf:ID="History-854712296">
+    <p1:forAgenda rdf:resource="#greet_agenda"/>
+    <p1:procTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >3</p1:procTime>
+    <p1:inWorkspace rdf:resource="#userWorkspace"/>
+    <p1:agendaPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >42</p1:agendaPriority>
+    <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#History"/>
+    <p1:addTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >0</p1:addTime>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:ID="sbp7">
+    <p1:partitionNumFields rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >2</p1:partitionNumFields>
+    <p1:secondTopBeliefValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+    >4.6876806E-4</p1:secondTopBeliefValue>
+    <p1:partitionState rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >UNIQUE</p1:partitionState>
+    <p1:topBeliefValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+    >0.9992029</p1:topBeliefValue>
+    <p1:historyState rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >INIT</p1:historyState>
+    <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#SummaryBelief"/>
+    <p1:summaryBeliefAgenda rdf:resource="#confirm_summary_agenda"/>
+    <p1:summaryBeliefAgenda rdf:resource="#request_summary_agenda"/>
+  </owl:NamedIndividual>
+  <owl:AnnotationProperty rdf:about="http://localhost:8080/OwlSpeakOnto.owl#subSemantics"/>
+  <owl:NamedIndividual rdf:ID="sbp2">
+    <p1:secondTopBeliefValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+    >0.034108527</p1:secondTopBeliefValue>
+    <p1:summaryBeliefAgenda rdf:resource="#confirm_summary_agenda"/>
+    <p1:summaryBeliefAgenda rdf:resource="#request_summary_agenda"/>
+    <p1:topBeliefValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+    >0.9658915</p1:topBeliefValue>
+    <p1:partitionState rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >UNIQUE</p1:partitionState>
+    <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#SummaryBelief"/>
+    <p1:partitionNumFields rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >1</p1:partitionNumFields>
+    <p1:historyState rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >INIT</p1:historyState>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:ID="submit_dest_utt">
+    <p1:utteranceString xml:lang="de">Du willst %dest_var% besuchen.</p1:utteranceString>
+    <p1:utteranceString xml:lang="en">You want to visit %dest_var%.</p1:utteranceString>
+    <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Utterance"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:ID="sbp22">
+    <p1:partitionNumFields rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >0</p1:partitionNumFields>
+    <p1:summaryBeliefAgenda rdf:resource="#request_summary_agenda"/>
+    <p1:topBeliefValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+    >1.0</p1:topBeliefValue>
+    <p1:secondTopBeliefValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+    >0.0</p1:secondTopBeliefValue>
+    <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#SummaryBelief"/>
+    <p1:partitionState rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >UNIQUE</p1:partitionState>
+    <p1:historyState rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >INIT</p1:historyState>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:ID="History-300515533">
+    <p1:agendaPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >60</p1:agendaPriority>
+    <p1:procTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >7</p1:procTime>
+    <p1:inWorkspace rdf:resource="#userWorkspace"/>
+    <p1:forAgenda rdf:resource="#ask_dest_agenda"/>
+    <p1:addTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >3</p1:addTime>
+    <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#History"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:ID="RewardDefault">
+    <p1:rewardValue rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >-1</p1:rewardValue>
+    <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Reward"/>
+    <p1:specialReward rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >default_reward</p1:specialReward>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:ID="submit_four_weeks_utt">
+    <p1:utteranceString xml:lang="de">Du willst vier wochen bleiben</p1:utteranceString>
+    <p1:utteranceString xml:lang="en">You want to stay four weeks</p1:utteranceString>
+    <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Utterance"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:ID="History-414142975">
+    <p1:addTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >3</p1:addTime>
+    <p1:forAgenda rdf:resource="#ask_iss_agenda"/>
+    <p1:inWorkspace rdf:resource="#userWorkspace"/>
+    <p1:procTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >11</p1:procTime>
+    <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#History"/>
+    <p1:agendaPriority rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >55</p1:agendaPriority>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:ID="sbp1">
+    <p1:topBeliefValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+    >1.0</p1:topBeliefValue>
+    <p1:partitionNumFields rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >0</p1:partitionNumFields>
+    <p1:partitionState rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >UNIQUE</p1:partitionState>
+    <p1:secondTopBeliefValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+    >0.0</p1:secondTopBeliefValue>
+    <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#SummaryBelief"/>
+    <p1:historyState rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >INIT</p1:historyState>
+    <p1:summaryBeliefAgenda rdf:resource="#request_summary_agenda"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:ID="userBeliefspace">
+    <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#BeliefSpace"/>
+    <p1:hasBelief>
+      <owl:NamedIndividual rdf:ID="Belief_1479943644">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Belief"/>
+        <p1:variabledefault rdf:resource="#dest_var"/>
+        <p1:variableValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >london</p1:variableValue>
+      </owl:NamedIndividual>
+    </p1:hasBelief>
+    <p1:hasBelief>
+      <owl:NamedIndividual rdf:ID="Belief_1882276437">
+        <p1:variabledefault rdf:resource="#iss_var"/>
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Belief"/>
+        <p1:variableValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >arbeit</p1:variableValue>
+      </owl:NamedIndividual>
+    </p1:hasBelief>
+    <p1:hasBelief>
+      <owl:NamedIndividual rdf:ID="Belief_25282315">
+        <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Belief"/>
+        <p1:semantic rdf:resource="#dest_conf_sem"/>
+      </owl:NamedIndividual>
+    </p1:hasBelief>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:ID="InteractionQuality">
+    <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Variable"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:ID="sbp4">
+    <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#SummaryBelief"/>
+    <p1:summaryBeliefAgenda rdf:resource="#confirm_summary_agenda"/>
+    <p1:summaryBeliefAgenda rdf:resource="#request_summary_agenda"/>
+    <p1:historyState rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >INIT</p1:historyState>
+    <p1:partitionNumFields rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >1</p1:partitionNumFields>
+    <p1:topBeliefValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+    >0.9465568</p1:topBeliefValue>
+    <p1:partitionState rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >UNIQUE</p1:partitionState>
+    <p1:secondTopBeliefValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+    >0.031430256</p1:secondTopBeliefValue>
+  </owl:NamedIndividual>
+  <owl:AnnotationProperty rdf:about="http://localhost:8080/OwlSpeakOnto.owl#masterSemantic"/>
+  <owl:NamedIndividual rdf:ID="test_sem">
+    <p1:semanticString xml:lang="de">test</p1:semanticString>
+    <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#Semantic"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:ID="sbp3">
+    <p1:partitionNumFields rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >1</p1:partitionNumFields>
+    <p1:partitionState rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >GENERIC</p1:partitionState>
+    <p1:secondTopBeliefValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+    >0.41653666</p1:secondTopBeliefValue>
+    <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#SummaryBelief"/>
+    <p1:summaryBeliefAgenda rdf:resource="#confirm_summary_agenda"/>
+    <p1:summaryBeliefAgenda rdf:resource="#request_summary_agenda"/>
+    <p1:historyState rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >INIT</p1:historyState>
+    <p1:topBeliefValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+    >0.5834633</p1:topBeliefValue>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:ID="ask_dur_impl_conf_iss_utt">
+    <p1:utteranceString xml:lang="de">Also %iss_var%. Wie lange willst du bleiben?</p1:utteranceString>
+  </owl:NamedIndividual>
+  <owl:AnnotationProperty rdf:about="http://localhost:8080/OwlSpeakOnto.owl#userWorkspace"/>
+  <owl:NamedIndividual rdf:ID="sbp23">
+    <p1:summaryBeliefAgenda rdf:resource="#confirm_summary_agenda"/>
+    <p1:topBeliefValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+    >0.9893617</p1:topBeliefValue>
+    <p1:secondTopBeliefValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+    >0.010638298</p1:secondTopBeliefValue>
+    <p1:historyState rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >INIT</p1:historyState>
+    <p1:partitionNumFields rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >1</p1:partitionNumFields>
+    <p1:partitionState rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >UNIQUE</p1:partitionState>
+    <rdf:type rdf:resource="http://localhost:8080/OwlSpeakOnto.owl#SummaryBelief"/>
+  </owl:NamedIndividual>
+</rdf:RDF>
+
+<!-- Created with Protege (with OWL Plugin 3.4.8, Build 629)  http://protege.stanford.edu -->

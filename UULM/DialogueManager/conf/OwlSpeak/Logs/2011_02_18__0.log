@@ -1,0 +1,594 @@
+18.02.2011 10:02:34 Command: request 
+INFO: OK
+18.02.2011 10:02:50 Command: request 
+INFO: OK
+18.02.2011 10:02:58 Command: request 
+INFO: noinput
+18.02.2011 10:03:05 Command: request 
+INFO: noinput
+18.02.2011 10:03:07 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_LigthsOn_move | Speak: lights on
+18.02.2011 10:03:13 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_start_move | Speak: start photos
+18.02.2011 10:03:18 Command: work 
+INFO: Agenda: fault | Move: music_a1n1d_start_move | Speak: start music
+18.02.2011 10:03:22 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_next_move | Speak: next
+18.02.2011 10:03:28 Command: work 
+INFO: Agenda: fault | Move: music_a1n1d_next_move | Speak: music
+18.02.2011 10:03:35 Command: request 
+INFO: noinput
+18.02.2011 10:03:42 Command: request 
+INFO: noinput
+18.02.2011 10:03:50 Command: request 
+INFO: noinput
+18.02.2011 10:03:55 Command: request 
+INFO: nomatch
+18.02.2011 10:03:58 Command: request 
+INFO: nomatch
+18.02.2011 10:04:03 Command: request 
+INFO: nomatch
+18.02.2011 10:04:10 Command: request 
+INFO: noinput
+18.02.2011 10:04:13 Command: request 
+INFO: nomatch
+18.02.2011 10:04:19 Command: request 
+INFO: nomatch
+18.02.2011 10:04:24 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_LigthsOn_move | Speak: lights on
+18.02.2011 10:04:31 Command: request 
+INFO: noinput
+18.02.2011 10:04:36 Command: request 
+INFO: nomatch
+18.02.2011 10:04:43 Command: request 
+INFO: noinput
+18.02.2011 10:04:46 Command: work 
+INFO: Agenda: fault | Move: music_a1n1d_selectRock_move | Speak: rock
+18.02.2011 10:04:51 Command: work 
+INFO: Agenda: fault | Move: music_a1n1d_selectPop_move | Speak: pop
+18.02.2011 10:04:54 Command: work 
+INFO: Agenda: fault | Move: music_a1n1d_selectPop_move | Speak: pop
+18.02.2011 10:04:58 Command: work 
+INFO: Agenda: fault | Move: music_a1n1d_selectRock_move | Speak: rock
+18.02.2011 10:05:05 Command: request 
+INFO: noinput
+18.02.2011 10:05:08 Command: work 
+INFO: Agenda: fault | Move: music_a1n1d_exit_move | Speak: end music
+18.02.2011 10:05:12 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_next_move | Speak: next
+18.02.2011 10:05:19 Command: work 
+INFO: Agenda: fault | Move: photos_a1n1d_exit_move | Speak: end photos
+18.02.2011 10:05:26 Command: request 
+INFO: noinput
+18.02.2011 10:05:33 Command: request 
+INFO: noinput
+18.02.2011 10:05:41 Command: request 
+INFO: noinput
+18.02.2011 10:05:48 Command: request 
+INFO: noinput
+18.02.2011 10:05:55 Command: request 
+INFO: noinput
+18.02.2011 10:06:02 Command: request 
+INFO: noinput
+18.02.2011 10:06:09 Command: request 
+INFO: noinput
+18.02.2011 10:06:17 Command: request 
+INFO: noinput
+18.02.2011 10:06:24 Command: request 
+INFO: noinput
+18.02.2011 10:06:27 Command: request 
+INFO: error.unsupported.language
+18.02.2011 10:06:31 Command: request 
+INFO: nomatch
+18.02.2011 10:06:38 Command: request 
+INFO: noinput
+18.02.2011 10:06:45 Command: request 
+INFO: noinput
+18.02.2011 10:06:52 Command: request 
+INFO: noinput
+18.02.2011 10:07:00 Command: request 
+INFO: noinput
+18.02.2011 10:07:05 Command: request 
+INFO: nomatch
+18.02.2011 10:07:12 Command: request 
+INFO: noinput
+18.02.2011 10:07:20 Command: request 
+INFO: nomatch
+18.02.2011 10:07:28 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_LigthsOn_move | Speak: lights on
+18.02.2011 10:07:35 Command: request 
+INFO: noinput
+18.02.2011 10:07:42 Command: request 
+INFO: noinput
+18.02.2011 13:09:21 Command: reset 
+INFO: OK
+18.02.2011 13:23:56 Command: reset 
+INFO: OK
+18.02.2011 13:28:30 Command: reset 
+INFO: OK
+18.02.2011 13:35:20 Command: reset 
+INFO: OK
+18.02.2011 13:37:21 Command: reset 
+INFO: OK
+18.02.2011 13:37:21 Command: request 
+INFO: OK
+18.02.2011 13:37:23 Command: request 
+INFO: OK
+18.02.2011 13:37:24 Command: request 
+INFO: OK
+18.02.2011 13:37:25 Command: request 
+INFO: OK
+18.02.2011 13:37:26 Command: request 
+INFO: OK
+18.02.2011 13:37:26 Command: request 
+INFO: OK
+18.02.2011 13:37:27 Command: request 
+INFO: OK
+18.02.2011 13:37:28 Command: request 
+INFO: OK
+18.02.2011 13:37:28 Command: request 
+INFO: OK
+18.02.2011 13:37:29 Command: request 
+INFO: OK
+18.02.2011 13:38:47 Command: request 
+INFO: OK
+18.02.2011 13:39:32 Command: request 
+INFO: OK
+18.02.2011 13:39:33 Command: request 
+INFO: OK
+18.02.2011 13:39:34 Command: request 
+INFO: OK
+18.02.2011 13:39:35 Command: request 
+INFO: OK
+18.02.2011 13:39:36 Command: request 
+INFO: OK
+18.02.2011 13:39:37 Command: request 
+INFO: OK
+18.02.2011 13:39:37 Command: request 
+INFO: OK
+18.02.2011 13:39:39 Command: request 
+INFO: OK
+18.02.2011 13:39:42 Command: request 
+INFO: OK
+18.02.2011 13:39:42 Command: request 
+INFO: OK
+18.02.2011 13:39:43 Command: request 
+INFO: OK
+18.02.2011 13:39:44 Command: request 
+INFO: OK
+18.02.2011 13:40:01 Command: request 
+INFO: OK
+18.02.2011 13:40:05 Command: work 
+INFO: Agenda: helloSys_agenda | Move: greeting_a1n1d_helloSys_move | Speak: hello julia
+18.02.2011 13:40:05 Command: work 
+INFO: Agenda: helloUser_agenda | Move: null | Speak: null
+18.02.2011 13:40:12 Command: request 
+INFO: OK
+18.02.2011 13:40:14 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_LigthsOn_move | Speak: light on
+18.02.2011 13:40:14 Command: request 
+INFO: OK
+18.02.2011 13:40:15 Command: request 
+INFO: OK
+18.02.2011 13:40:19 Command: work 
+INFO: Agenda: fault | Move: light_a1n1d_LightsOff_move | Speak: lights off
+18.02.2011 13:40:27 Command: request 
+INFO: noinput
+18.02.2011 13:40:34 Command: request 
+INFO: noinput
+18.02.2011 13:40:41 Command: request 
+INFO: noinput
+18.02.2011 13:40:43 Command: reset 
+INFO: OK
+18.02.2011 13:40:44 Command: request 
+INFO: OK
+18.02.2011 13:40:45 Command: request 
+INFO: OK
+18.02.2011 13:40:48 Command: request 
+INFO: noinput
+18.02.2011 13:40:51 Command: work 
+INFO: Agenda: helloSys_agenda | Move: greeting_a1n1d_helloSys_move | Speak: hello julia
+18.02.2011 13:40:51 Command: work 
+INFO: Agenda: helloUser_agenda | Move: null | Speak: null
+18.02.2011 13:47:55 Command: reset 
+INFO: OK
+18.02.2011 13:47:57 Command: request 
+INFO: OK
+18.02.2011 13:48:13 Command: request 
+INFO: OK
+18.02.2011 13:48:13 Command: work 
+INFO: Agenda: Hello_ag | Move: null | Speak: null
+18.02.2011 13:48:24 Command: work 
+INFO: Agenda: what_time_ag | Move: flug_a1n1d_options_what_time_mv | Speak: what are my options
+18.02.2011 13:48:24 Command: work 
+INFO: Agenda: can_fly_at | Move: null | Speak: null
+18.02.2011 13:48:37 Command: request 
+INFO: nomatch
+18.02.2011 13:48:44 Command: request 
+INFO: OK
+18.02.2011 13:48:47 Command: request 
+INFO: noinput
+18.02.2011 13:48:56 Command: request 
+INFO: nomatch
+18.02.2011 13:49:03 Command: request 
+INFO: nomatch
+18.02.2011 13:49:10 Command: work 
+INFO: Agenda: what_time_ag | Move: flug_a1n1d_fly_at_ten_mv | Speak: i want to fly at
+18.02.2011 13:49:19 Command: work 
+INFO: Agenda: where_to_ag | Move: flug_a1n1d_options_where_to_mv | Speak: what are my options
+18.02.2011 13:49:19 Command: work 
+INFO: Agenda: can_fly_to_ag | Move: null | Speak: null
+18.02.2011 13:49:26 Command: request 
+INFO: OK
+18.02.2011 13:49:32 Command: request 
+INFO: nomatch
+18.02.2011 13:49:38 Command: work 
+INFO: Agenda: where_to_ag | Move: flug_a1n1d_to_Newyork_mv | Speak: york
+18.02.2011 13:49:47 Command: work 
+INFO: Agenda: what_day_ag | Move: flug_a1n1d_options_what_day_mv | Speak: what are my options
+18.02.2011 13:49:47 Command: work 
+INFO: Agenda: can_fly_on_ag | Move: null | Speak: null
+18.02.2011 13:49:53 Command: request 
+INFO: OK
+18.02.2011 13:50:00 Command: request 
+INFO: nomatch
+18.02.2011 13:50:06 Command: work 
+INFO: Agenda: what_day_ag | Move: flug_a1n1d_fly_on_fifth_mv | Speak: fifth
+18.02.2011 13:50:10 Command: request 
+INFO: OK
+18.02.2011 13:50:13 Command: work 
+INFO: Agenda: where_from_ag | Move: flug_a1n1d_options_where_from_mv | Speak: what are my options
+18.02.2011 13:50:13 Command: work 
+INFO: Agenda: can_fly_where_from_ag | Move: null | Speak: null
+18.02.2011 13:50:28 Command: request 
+INFO: noinput
+18.02.2011 13:50:33 Command: work 
+INFO: Agenda: where_from_ag | Move: flug_a1n1d_from_munic_mv | Speak: munic
+18.02.2011 13:50:41 Command: request 
+INFO: noinput
+18.02.2011 13:50:43 Command: request 
+INFO: OK
+18.02.2011 13:50:48 Command: request 
+INFO: noinput
+18.02.2011 13:50:55 Command: request 
+INFO: noinput
+18.02.2011 14:24:18 Command: reset 
+INFO: OK
+18.02.2011 14:24:20 Command: request 
+INFO: OK
+18.02.2011 14:24:28 Command: request 
+INFO: OK
+18.02.2011 14:24:28 Command: work 
+INFO: Agenda: Hello_ag | Move: null | Speak: null
+18.02.2011 14:24:41 Command: request 
+INFO: error.noresource
+18.02.2011 14:24:47 Command: work 
+INFO: Agenda: what_time_ag | Move: flug_a1n1d_options_what_time_mv | Speak: hilfe
+18.02.2011 14:24:47 Command: work 
+INFO: Agenda: can_fly_at | Move: null | Speak: null
+18.02.2011 14:24:57 Command: request 
+INFO: nomatch
+18.02.2011 14:25:03 Command: request 
+INFO: OK
+18.02.2011 14:25:07 Command: request 
+INFO: noinput
+18.02.2011 14:25:33 Command: request 
+INFO: OK
+18.02.2011 14:25:43 Command: request 
+INFO: noinput
+18.02.2011 14:27:47 Command: reset 
+INFO: OK
+18.02.2011 14:27:51 Command: request 
+INFO: OK
+18.02.2011 14:27:51 Command: work 
+INFO: Agenda: Hello_ag | Move: null | Speak: null
+18.02.2011 14:28:01 Command: work 
+INFO: Agenda: what_time_ag | Move: flug_a1n1d_fly_at_two_mv | Speak: um zwei
+18.02.2011 14:28:07 Command: work 
+INFO: Agenda: where_to_ag | Move: flug_a1n1d_options_where_to_mv | Speak: hilfe
+18.02.2011 14:28:07 Command: work 
+INFO: Agenda: can_fly_to_ag | Move: null | Speak: null
+18.02.2011 14:28:19 Command: work 
+INFO: Agenda: where_to_ag | Move: flug_a1n1d_to_Newyork_mv | Speak: new york
+18.02.2011 14:28:28 Command: request 
+INFO: nomatch
+18.02.2011 14:28:34 Command: work 
+INFO: Agenda: what_day_ag | Move: flug_a1n1d_options_what_day_mv | Speak: hilfe
+18.02.2011 14:28:34 Command: work 
+INFO: Agenda: can_fly_on_ag | Move: null | Speak: null
+18.02.2011 14:28:46 Command: work 
+INFO: Agenda: what_day_ag | Move: flug_a1n1d_fly_on_nineneenth_mv | Speak: am siebzehnten
+18.02.2011 14:28:53 Command: work 
+INFO: Agenda: where_from_ag | Move: flug_a1n1d_from_stuttgart_mv | Speak: stuttgart
+18.02.2011 14:29:04 Command: request 
+INFO: noinput
+18.02.2011 14:29:13 Command: request 
+INFO: OK
+18.02.2011 14:29:15 Command: request 
+INFO: noinput
+18.02.2011 14:39:47 Command: request 
+INFO: OK
+18.02.2011 14:42:27 Command: request 
+INFO: OK
+18.02.2011 14:43:35 Command: reset 
+INFO: OK
+18.02.2011 14:43:37 Command: request 
+INFO: OK
+18.02.2011 14:43:49 Command: request 
+INFO: OK
+18.02.2011 14:43:49 Command: work 
+INFO: Agenda: Hello_ag | Move: null | Speak: null
+18.02.2011 14:43:59 Command: work 
+INFO: Agenda: what_time_ag | Move: flug_a1n1d_fly_at_two_mv | Speak: um zwei
+18.02.2011 14:44:07 Command: work 
+INFO: Agenda: where_to_ag | Move: flug_a1n1d_to_Newyork_mv | Speak: new york
+18.02.2011 14:44:14 Command: request 
+INFO: nomatch
+18.02.2011 14:44:19 Command: work 
+INFO: Agenda: what_day_ag | Move: flug_a1n1d_fly_on_nineneenth_mv | Speak: am siebzehnten
+18.02.2011 14:44:26 Command: work 
+INFO: Agenda: where_from_ag | Move: flug_a1n1d_from_munic_mv | Speak: muenchen
+18.02.2011 14:44:39 Command: request 
+INFO: noinput
+18.02.2011 14:44:41 Command: request 
+INFO: OK
+18.02.2011 14:44:52 Command: request 
+INFO: noinput
+18.02.2011 14:45:05 Command: work 
+INFO: Agenda: confirmation_ag | Move: flug_a1n1d_yes_fine_mv | Speak: ja
+18.02.2011 14:45:05 Command: work 
+INFO: Agenda: hello_ag_found | Move: null | Speak: null
+18.02.2011 14:45:05 Command: work 
+INFO: Agenda: hello_ag | Move: null | Speak: null
+18.02.2011 14:45:05 Command: request 
+INFO: error.noresource
+18.02.2011 14:45:05 Command: request 
+INFO: error.noresource
+18.02.2011 14:45:05 Command: request 
+INFO: error.noresource
+18.02.2011 14:45:05 Command: request 
+INFO: error.noresource
+18.02.2011 14:45:05 Command: request 
+INFO: error.noresource
+18.02.2011 14:45:05 Command: request 
+INFO: error.noresource
+18.02.2011 14:45:05 Command: request 
+INFO: error.noresource
+18.02.2011 14:45:05 Command: request 
+INFO: error.noresource
+18.02.2011 14:45:06 Command: request 
+INFO: error.noresource
+18.02.2011 14:45:06 Command: request 
+INFO: error.noresource
+18.02.2011 14:45:06 Command: request 
+INFO: error.noresource
+18.02.2011 14:45:06 Command: request 
+INFO: error.noresource
+18.02.2011 14:45:06 Command: request 
+INFO: error.noresource
+18.02.2011 14:45:06 Command: request 
+INFO: error.noresource
+18.02.2011 14:45:06 Command: request 
+INFO: error.noresource
+18.02.2011 14:45:06 Command: request 
+INFO: error.noresource
+18.02.2011 14:45:06 Command: request 
+INFO: error.noresource
+18.02.2011 14:45:06 Command: request 
+INFO: error.noresource
+18.02.2011 14:45:06 Command: request 
+INFO: error.noresource
+18.02.2011 14:45:06 Command: request 
+INFO: error.noresource
+18.02.2011 14:45:07 Command: request 
+INFO: error.noresource
+18.02.2011 14:45:07 Command: request 
+INFO: error.noresource
+18.02.2011 14:45:07 Command: request 
+INFO: error.noresource
+18.02.2011 14:45:07 Command: request 
+INFO: error.noresource
+18.02.2011 14:45:07 Command: request 
+INFO: error.noresource
+18.02.2011 14:45:07 Command: request 
+INFO: error.noresource
+18.02.2011 14:45:07 Command: request 
+INFO: error.noresource
+18.02.2011 14:45:07 Command: request 
+INFO: error.noresource
+18.02.2011 14:45:07 Command: request 
+INFO: error.noresource
+18.02.2011 14:45:07 Command: request 
+INFO: error.noresource
+18.02.2011 14:45:07 Command: request 
+INFO: error.noresource
+18.02.2011 14:45:07 Command: request 
+INFO: error.noresource
+18.02.2011 14:45:08 Command: request 
+INFO: error.noresource
+18.02.2011 14:45:08 Command: request 
+INFO: error.noresource
+18.02.2011 14:45:08 Command: request 
+INFO: error.noresource
+18.02.2011 14:45:08 Command: request 
+INFO: error.noresource
+18.02.2011 14:45:08 Command: request 
+INFO: error.noresource
+18.02.2011 14:45:08 Command: request 
+INFO: error.noresource
+18.02.2011 14:45:08 Command: request 
+INFO: error.noresource
+18.02.2011 14:45:08 Command: request 
+INFO: error.noresource
+18.02.2011 14:45:08 Command: request 
+INFO: error.noresource
+18.02.2011 14:45:08 Command: request 
+INFO: error.noresource
+18.02.2011 14:45:08 Command: request 
+INFO: error.noresource
+18.02.2011 14:45:08 Command: request 
+INFO: error.noresource
+18.02.2011 14:45:09 Command: request 
+INFO: error.noresource
+18.02.2011 14:45:09 Command: request 
+INFO: error.noresource
+18.02.2011 14:45:09 Command: request 
+INFO: error.noresource
+18.02.2011 14:45:09 Command: request 
+INFO: error.noresource
+18.02.2011 14:45:09 Command: request 
+INFO: error.noresource
+18.02.2011 14:45:09 Command: request 
+INFO: error.noresource
+18.02.2011 14:45:09 Command: request 
+INFO: error.noresource
+18.02.2011 14:45:13 Command: request 
+INFO: OK
+18.02.2011 14:47:59 Command: reset 
+INFO: OK
+18.02.2011 14:48:05 Command: request 
+INFO: OK
+18.02.2011 14:48:06 Command: work 
+INFO: Agenda: Hello_ag | Move: null | Speak: null
+18.02.2011 14:48:15 Command: work 
+INFO: Agenda: what_time_ag | Move: flug_a1n1d_fly_at_two_mv | Speak: um zwei
+18.02.2011 14:48:21 Command: work 
+INFO: Agenda: where_to_ag | Move: flug_a1n1d_to_Newyork_mv | Speak: new york
+18.02.2011 14:48:27 Command: work 
+INFO: Agenda: what_day_ag | Move: flug_a1n1d_fly_on_nineneenth_mv | Speak: am siebzehnten
+18.02.2011 14:48:33 Command: work 
+INFO: Agenda: where_from_ag | Move: flug_a1n1d_from_munic_mv | Speak: muenchen
+18.02.2011 14:48:40 Command: request 
+INFO: OK
+18.02.2011 14:48:46 Command: request 
+INFO: noinput
+18.02.2011 14:51:54 Command: reset 
+INFO: OK
+18.02.2011 14:51:55 Command: request 
+INFO: OK
+18.02.2011 14:52:01 Command: request 
+INFO: OK
+18.02.2011 14:52:02 Command: work 
+INFO: Agenda: Hello_ag | Move: null | Speak: null
+18.02.2011 14:52:11 Command: work 
+INFO: Agenda: what_time_ag | Move: flug_a1n1d_fly_at_two_mv | Speak: um zwei
+18.02.2011 14:52:17 Command: work 
+INFO: Agenda: where_to_ag | Move: flug_a1n1d_to_Newyork_mv | Speak: new york
+18.02.2011 14:52:25 Command: request 
+INFO: error.unsupported.language
+18.02.2011 14:52:34 Command: request 
+INFO: noinput
+18.02.2011 14:52:44 Command: request 
+INFO: noinput
+18.02.2011 14:52:53 Command: request 
+INFO: noinput
+18.02.2011 14:53:03 Command: request 
+INFO: noinput
+18.02.2011 14:53:12 Command: request 
+INFO: nomatch
+18.02.2011 14:53:22 Command: request 
+INFO: noinput
+18.02.2011 14:53:27 Command: request 
+INFO: nomatch
+18.02.2011 14:53:36 Command: request 
+INFO: noinput
+18.02.2011 14:53:48 Command: request 
+INFO: error.unsupported.language
+18.02.2011 14:53:57 Command: request 
+INFO: noinput
+18.02.2011 14:54:07 Command: request 
+INFO: noinput
+18.02.2011 14:54:16 Command: request 
+INFO: noinput
+18.02.2011 14:54:26 Command: request 
+INFO: noinput
+18.02.2011 14:54:35 Command: request 
+INFO: noinput
+18.02.2011 14:54:45 Command: request 
+INFO: noinput
+18.02.2011 14:54:54 Command: request 
+INFO: noinput
+18.02.2011 14:55:04 Command: request 
+INFO: noinput
+18.02.2011 14:55:13 Command: request 
+INFO: noinput
+18.02.2011 14:55:23 Command: request 
+INFO: noinput
+18.02.2011 14:55:32 Command: request 
+INFO: noinput
+18.02.2011 14:55:42 Command: request 
+INFO: error.unsupported.language
+18.02.2011 14:55:52 Command: request 
+INFO: noinput
+18.02.2011 14:56:01 Command: request 
+INFO: noinput
+18.02.2011 14:56:11 Command: request 
+INFO: noinput
+18.02.2011 14:56:20 Command: request 
+INFO: noinput
+18.02.2011 14:56:30 Command: request 
+INFO: noinput
+18.02.2011 14:56:39 Command: request 
+INFO: noinput
+18.02.2011 14:56:49 Command: request 
+INFO: noinput
+18.02.2011 14:56:58 Command: request 
+INFO: noinput
+18.02.2011 14:57:08 Command: request 
+INFO: noinput
+18.02.2011 14:57:17 Command: request 
+INFO: noinput
+18.02.2011 14:57:23 Command: work 
+INFO: Agenda: what_day_ag | Move: flug_a1n1d_options_what_day_mv | Speak: hilfe
+18.02.2011 14:57:23 Command: work 
+INFO: Agenda: can_fly_on_ag | Move: null | Speak: null
+18.02.2011 14:57:33 Command: work 
+INFO: Agenda: what_day_ag | Move: flug_a1n1d_fly_on_fifth_mv | Speak: am fuenften
+18.02.2011 14:57:38 Command: work 
+INFO: Agenda: where_from_ag | Move: flug_a1n1d_from_munic_mv | Speak: muenchen
+18.02.2011 14:57:49 Command: request 
+INFO: OK
+18.02.2011 15:00:01 Command: request 
+INFO: OK
+18.02.2011 15:23:45 Command: reset 
+INFO: OK
+18.02.2011 15:23:45 Command: request 
+INFO: OK
+18.02.2011 15:23:55 Command: request 
+INFO: OK
+18.02.2011 15:23:56 Command: work 
+INFO: Agenda: Hello_ag | Move: null | Speak: null
+18.02.2011 15:24:05 Command: work 
+INFO: Agenda: what_time_ag | Move: flug_a1n1d_fly_at_two_mv | Speak: um zwei
+18.02.2011 15:24:11 Command: work 
+INFO: Agenda: where_to_ag | Move: flug_a1n1d_to_Newyork_mv | Speak: new york
+18.02.2011 15:24:17 Command: work 
+INFO: Agenda: what_day_ag | Move: flug_a1n1d_fly_on_nineneenth_mv | Speak: am siebzehnten
+18.02.2011 15:24:22 Command: work 
+INFO: Agenda: where_from_ag | Move: flug_a1n1d_from_munic_mv | Speak: muenchen
+18.02.2011 15:24:31 Command: work 
+INFO: Agenda: confirmation_ag | Move: flug_a1n1d_yes_fine_mv | Speak: ja
+18.02.2011 15:24:31 Command: work 
+INFO: Agenda: hello_ag_found | Move: null | Speak: null
+18.02.2011 15:24:37 Command: work 
+INFO: Agenda: hello_ag | Move: null | Speak: null
+18.02.2011 15:24:50 Command: request 
+INFO: nomatch
+18.02.2011 15:24:59 Command: request 
+INFO: nomatch
+18.02.2011 15:25:03 Command: request 
+INFO: OK
+18.02.2011 15:25:09 Command: work 
+INFO: Agenda: what_day_ag | Move: hotel_a1n1d_nineteenth_mv | Speak: am neunzehnten
+18.02.2011 15:25:16 Command: request 
+INFO: error.unsupported.language
+18.02.2011 15:25:19 Command: request 
+INFO: OK
+18.02.2011 15:25:25 Command: work 
+INFO: Agenda: how_long_ag | Move: hotel_a1n1d_stay_one_mv | Speak: ich moechte einen tag bleiben
+18.02.2011 15:25:25 Command: work 
+INFO: Agenda: confirmation | Move: null | Speak: null
+18.02.2011 15:25:40 Command: request 
+INFO: noinput
+18.02.2011 15:25:47 Command: request 
+INFO: noinput

@@ -1,0 +1,623 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+    xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
+    xmlns="file:/C:/OwlSpeak/shrief.owl#"
+    xmlns:p1="http://localhost:8080/OwlSpeakOnto.owl#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+    xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xml:base="file:/C:/OwlSpeak/shrief2.owl">
+  <owl:Ontology rdf:about="file:/C:/OwlSpeak/shrief2.owl">
+    <owl:imports rdf:resource="http://localhost:8080/OwlSpeakOnto.owl"/>
+  </owl:Ontology>
+  <p1:Move rdf:about="file:/C:/OwlSpeak/shrief.owl#not_covered_sysmov">
+    <p1:utterance>
+      <p1:Utterance rdf:about="file:/C:/OwlSpeak/shrief.owl#not_covered">
+        <p1:utteranceString xml:lang="en">Not covered or supported</p1:utteranceString>
+      </p1:Utterance>
+    </p1:utterance>
+  </p1:Move>
+  <p1:Agenda rdf:about="file:/C:/OwlSpeak/shrief.owl#Agenda_departure">
+    <p1:has>
+      <p1:Move rdf:about="file:/C:/OwlSpeak/shrief.owl#dep_BLOOMFIELD_usermov">
+        <p1:semantic>
+          <p1:SemanticGroup rdf:about="file:/C:/OwlSpeak/shrief.owl#Departure_place_sem">
+            <p1:containsSemantics>
+              <p1:Semantic rdf:about="file:/C:/OwlSpeak/shrief.owl#THE_WATERFRONT">
+                <p1:semanticGroup rdf:resource="file:/C:/OwlSpeak/shrief.owl#Departure_place_sem"/>
+              </p1:Semantic>
+            </p1:containsSemantics>
+            <p1:containsSemantics>
+              <p1:Semantic rdf:about="file:/C:/OwlSpeak/shrief.owl#LIBERTY_AVENUE">
+                <p1:semanticGroup rdf:resource="file:/C:/OwlSpeak/shrief.owl#Departure_place_sem"/>
+              </p1:Semantic>
+            </p1:containsSemantics>
+            <p1:containsSemantics>
+              <p1:Semantic rdf:about="file:/C:/OwlSpeak/shrief.owl#EIGHTEENTH_AND_ARLINGTON_AVENUE">
+                <p1:semanticGroup rdf:resource="file:/C:/OwlSpeak/shrief.owl#Departure_place_sem"/>
+              </p1:Semantic>
+            </p1:containsSemantics>
+            <p1:containsSemantics>
+              <p1:Semantic rdf:about="file:/C:/OwlSpeak/shrief.owl#SHERADEN">
+                <p1:semanticGroup rdf:resource="file:/C:/OwlSpeak/shrief.owl#Departure_place_sem"/>
+              </p1:Semantic>
+            </p1:containsSemantics>
+            <p1:containsSemantics>
+              <p1:Semantic rdf:about="file:/C:/OwlSpeak/shrief.owl#NEGLEY">
+                <p1:semanticGroup rdf:resource="file:/C:/OwlSpeak/shrief.owl#Departure_place_sem"/>
+              </p1:Semantic>
+            </p1:containsSemantics>
+            <p1:containsSemantics>
+              <p1:Semantic rdf:about="file:/C:/OwlSpeak/shrief.owl#CENTRE_AVENUE_AND_EWART">
+                <p1:semanticGroup rdf:resource="file:/C:/OwlSpeak/shrief.owl#Departure_place_sem"/>
+              </p1:Semantic>
+            </p1:containsSemantics>
+            <p1:containsSemantics>
+              <p1:Semantic rdf:about="file:/C:/OwlSpeak/shrief.owl#SOUTH_HILLS_JUNCTION">
+                <p1:semanticGroup rdf:resource="file:/C:/OwlSpeak/shrief.owl#Departure_place_sem"/>
+              </p1:Semantic>
+            </p1:containsSemantics>
+            <p1:containsSemantics>
+              <p1:Semantic rdf:about="file:/C:/OwlSpeak/shrief.owl#CARNEGIE">
+                <p1:semanticGroup rdf:resource="file:/C:/OwlSpeak/shrief.owl#Departure_place_sem"/>
+              </p1:Semantic>
+            </p1:containsSemantics>
+            <p1:containsSemantics>
+              <p1:Semantic rdf:about="file:/C:/OwlSpeak/shrief.owl#DOWNTOWN_PITTSBURGH">
+                <p1:semanticGroup rdf:resource="file:/C:/OwlSpeak/shrief.owl#Departure_place_sem"/>
+              </p1:Semantic>
+            </p1:containsSemantics>
+            <p1:containsSemantics>
+              <p1:Semantic rdf:about="file:/C:/OwlSpeak/shrief.owl#SPRING_HILL">
+                <p1:semanticGroup rdf:resource="file:/C:/OwlSpeak/shrief.owl#Departure_place_sem"/>
+              </p1:Semantic>
+            </p1:containsSemantics>
+            <p1:containsSemantics>
+              <p1:Semantic rdf:about="file:/C:/OwlSpeak/shrief.owl#CRAIG_AND_FIFTH">
+                <p1:semanticGroup rdf:resource="file:/C:/OwlSpeak/shrief.owl#Departure_place_sem"/>
+              </p1:Semantic>
+            </p1:containsSemantics>
+            <p1:containsSemantics>
+              <p1:Semantic rdf:about="file:/C:/OwlSpeak/shrief.owl#COAL">
+                <p1:semanticGroup rdf:resource="file:/C:/OwlSpeak/shrief.owl#Departure_place_sem"/>
+              </p1:Semantic>
+            </p1:containsSemantics>
+            <p1:containsSemantics>
+              <p1:Semantic rdf:about="file:/C:/OwlSpeak/shrief.owl#DUQUESNE">
+                <p1:semanticGroup rdf:resource="file:/C:/OwlSpeak/shrief.owl#Departure_place_sem"/>
+              </p1:Semantic>
+            </p1:containsSemantics>
+            <p1:containsSemantics>
+              <p1:Semantic rdf:about="file:/C:/OwlSpeak/shrief.owl#LAWRENCEVILLE">
+                <p1:semanticGroup rdf:resource="file:/C:/OwlSpeak/shrief.owl#Departure_place_sem"/>
+              </p1:Semantic>
+            </p1:containsSemantics>
+            <p1:containsSemantics>
+              <p1:Semantic rdf:about="file:/C:/OwlSpeak/shrief.owl#NORTH_BRADDOCK">
+                <p1:semanticGroup rdf:resource="file:/C:/OwlSpeak/shrief.owl#Departure_place_sem"/>
+              </p1:Semantic>
+            </p1:containsSemantics>
+            <p1:containsSemantics>
+              <p1:Semantic rdf:about="file:/C:/OwlSpeak/shrief.owl#BLOOMFIELD">
+                <p1:semanticGroup rdf:resource="file:/C:/OwlSpeak/shrief.owl#Departure_place_sem"/>
+              </p1:Semantic>
+            </p1:containsSemantics>
+            <p1:containsSemantics>
+              <p1:Semantic rdf:about="file:/C:/OwlSpeak/shrief.owl#HIGHLAND_AVENUE_AND_PENN">
+                <p1:semanticGroup rdf:resource="file:/C:/OwlSpeak/shrief.owl#Departure_place_sem"/>
+              </p1:Semantic>
+            </p1:containsSemantics>
+            <p1:containsSemantics>
+              <p1:Semantic rdf:about="file:/C:/OwlSpeak/shrief.owl#SQUIRREL_HILL">
+                <p1:semanticGroup rdf:resource="file:/C:/OwlSpeak/shrief.owl#Departure_place_sem"/>
+              </p1:Semantic>
+            </p1:containsSemantics>
+            <p1:containsSemantics>
+              <p1:Semantic rdf:about="file:/C:/OwlSpeak/shrief.owl#BELL_AND_ANN">
+                <p1:semanticGroup rdf:resource="file:/C:/OwlSpeak/shrief.owl#Departure_place_sem"/>
+              </p1:Semantic>
+            </p1:containsSemantics>
+            <p1:containsSemantics>
+              <p1:Semantic rdf:about="file:/C:/OwlSpeak/shrief.owl#ELLSWORTH_AND_NEGLEY">
+                <p1:semanticGroup rdf:resource="file:/C:/OwlSpeak/shrief.owl#Departure_place_sem"/>
+              </p1:Semantic>
+            </p1:containsSemantics>
+            <p1:containsSemantics>
+              <p1:Semantic rdf:about="file:/C:/OwlSpeak/shrief.owl#FRANKSTOWN">
+                <p1:semanticGroup rdf:resource="file:/C:/OwlSpeak/shrief.owl#Departure_place_sem"/>
+              </p1:Semantic>
+            </p1:containsSemantics>
+            <p1:containsSemantics>
+              <p1:Semantic rdf:about="file:/C:/OwlSpeak/shrief.owl#EIGHTH">
+                <p1:semanticGroup rdf:resource="file:/C:/OwlSpeak/shrief.owl#Departure_place_sem"/>
+              </p1:Semantic>
+            </p1:containsSemantics>
+            <p1:containsSemantics>
+              <p1:Semantic rdf:about="file:/C:/OwlSpeak/shrief.owl#MONROEVILLE">
+                <p1:semanticGroup rdf:resource="file:/C:/OwlSpeak/shrief.owl#Departure_place_sem"/>
+              </p1:Semantic>
+            </p1:containsSemantics>
+            <p1:containsSemantics>
+              <p1:Semantic rdf:about="file:/C:/OwlSpeak/shrief.owl#DYNAMO_WAY">
+                <p1:semanticGroup rdf:resource="file:/C:/OwlSpeak/shrief.owl#Departure_place_sem"/>
+              </p1:Semantic>
+            </p1:containsSemantics>
+            <p1:containsSemantics>
+              <p1:Semantic rdf:about="file:/C:/OwlSpeak/shrief.owl#TURTLE_CREEK">
+                <p1:semanticGroup rdf:resource="file:/C:/OwlSpeak/shrief.owl#Departure_place_sem"/>
+              </p1:Semantic>
+            </p1:containsSemantics>
+            <p1:containsSemantics>
+              <p1:Semantic rdf:about="file:/C:/OwlSpeak/shrief.owl#WALLACE">
+                <p1:semanticGroup rdf:resource="file:/C:/OwlSpeak/shrief.owl#Departure_place_sem"/>
+              </p1:Semantic>
+            </p1:containsSemantics>
+            <p1:containsSemantics>
+              <p1:Semantic rdf:about="file:/C:/OwlSpeak/shrief.owl#BELL">
+                <p1:semanticGroup rdf:resource="file:/C:/OwlSpeak/shrief.owl#Departure_place_sem"/>
+              </p1:Semantic>
+            </p1:containsSemantics>
+            <p1:containsSemantics>
+              <p1:Semantic rdf:about="file:/C:/OwlSpeak/shrief.owl#GIANT_EAGLE">
+                <p1:semanticGroup rdf:resource="file:/C:/OwlSpeak/shrief.owl#Departure_place_sem"/>
+              </p1:Semantic>
+            </p1:containsSemantics>
+            <p1:containsSemantics>
+              <p1:Semantic rdf:about="file:/C:/OwlSpeak/shrief.owl#EAST_PITTSBURGH">
+                <p1:semanticGroup rdf:resource="file:/C:/OwlSpeak/shrief.owl#Departure_place_sem"/>
+              </p1:Semantic>
+            </p1:containsSemantics>
+            <p1:containsSemantics>
+              <p1:Semantic rdf:about="file:/C:/OwlSpeak/shrief.owl#MCKEESPORT_TRANSPORTATION_CENTER">
+                <p1:semanticGroup rdf:resource="file:/C:/OwlSpeak/shrief.owl#Departure_place_sem"/>
+              </p1:Semantic>
+            </p1:containsSemantics>
+            <p1:containsSemantics>
+              <p1:Semantic rdf:about="file:/C:/OwlSpeak/shrief.owl#SOUTH_SIDE_WORKS">
+                <p1:semanticGroup rdf:resource="file:/C:/OwlSpeak/shrief.owl#Departure_place_sem"/>
+              </p1:Semantic>
+            </p1:containsSemantics>
+            <p1:containsSemantics>
+              <p1:Semantic rdf:about="file:/C:/OwlSpeak/shrief.owl#EAST_CARSON_STREET">
+                <p1:semanticGroup rdf:resource="file:/C:/OwlSpeak/shrief.owl#Departure_place_sem"/>
+              </p1:Semantic>
+            </p1:containsSemantics>
+            <p1:containsSemantics>
+              <p1:Semantic rdf:about="file:/C:/OwlSpeak/shrief.owl#Mall">
+                <p1:semanticGroup rdf:resource="file:/C:/OwlSpeak/shrief.owl#Departure_place_sem"/>
+              </p1:Semantic>
+            </p1:containsSemantics>
+            <p1:containsSemantics>
+              <p1:Semantic rdf:about="file:/C:/OwlSpeak/shrief.owl#SWISSVALE">
+                <p1:semanticGroup rdf:resource="file:/C:/OwlSpeak/shrief.owl#Departure_place_sem"/>
+              </p1:Semantic>
+            </p1:containsSemantics>
+          </p1:SemanticGroup>
+        </p1:semantic>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >SET(dep_var=BLOOMFIELD)</p1:variableOperator>
+      </p1:Move>
+    </p1:has>
+    <p1:has>
+      <p1:Move rdf:about="file:/C:/OwlSpeak/shrief.owl#dep_Bell_and_Ann_usermov">
+        <p1:semantic rdf:resource="file:/C:/OwlSpeak/shrief.owl#Departure_place_sem"/>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >SET(dep_var=BELL_AND_ANN)</p1:variableOperator>
+      </p1:Move>
+    </p1:has>
+    <p1:has>
+      <p1:Move rdf:about="file:/C:/OwlSpeak/shrief.owl#dep_CARNEGIE_usermov">
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >SET(dep_var=CARNEGIE)</p1:variableOperator>
+        <p1:semantic rdf:resource="file:/C:/OwlSpeak/shrief.owl#Departure_place_sem"/>
+      </p1:Move>
+    </p1:has>
+    <p1:has>
+      <p1:Move rdf:about="file:/C:/OwlSpeak/shrief.owl#dep_BELL_usermov">
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >SET(dep_var=BELL)</p1:variableOperator>
+        <p1:semantic rdf:resource="file:/C:/OwlSpeak/shrief.owl#Departure_place_sem"/>
+      </p1:Move>
+    </p1:has>
+    <p1:has>
+      <p1:Move rdf:about="file:/C:/OwlSpeak/shrief.owl#dep_CRAIG_AND_FIFTH_usermov">
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >SET(dep_var=CRAIG_AND_FIFTH)</p1:variableOperator>
+        <p1:semantic rdf:resource="file:/C:/OwlSpeak/shrief.owl#Departure_place_sem"/>
+      </p1:Move>
+    </p1:has>
+    <p1:has>
+      <p1:Move rdf:about="file:/C:/OwlSpeak/shrief.owl#dep_CENTER_AVENUE_AND_EWART_usermov">
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >SET(dep_var=CENTRE_AVENUE_AND_EWART)</p1:variableOperator>
+        <p1:semantic rdf:resource="file:/C:/OwlSpeak/shrief.owl#Departure_place_sem"/>
+      </p1:Move>
+    </p1:has>
+    <p1:has>
+      <p1:Move rdf:about="file:/C:/OwlSpeak/shrief.owl#dep_COAL_usermov">
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >SET(dep_var=COAL)</p1:variableOperator>
+        <p1:semantic rdf:resource="file:/C:/OwlSpeak/shrief.owl#Departure_place_sem"/>
+      </p1:Move>
+    </p1:has>
+    <p1:has>
+      <p1:Move rdf:about="file:/C:/OwlSpeak/shrief.owl#departure_place_sysmov">
+        <p1:utterance>
+          <p1:Utterance rdf:about="file:/C:/OwlSpeak/shrief.owl#departure_place">
+            <p1:utteranceString xml:lang="en">Where do you want to leave from?</p1:utteranceString>
+          </p1:Utterance>
+        </p1:utterance>
+      </p1:Move>
+    </p1:has>
+  </p1:Agenda>
+  <p1:Variable rdf:about="file:/C:/OwlSpeak/shrief.owl#time_var"/>
+  <p1:Semantic rdf:about="file:/C:/OwlSpeak/shrief.owl#Bus_61C"/>
+  <p1:Agenda rdf:about="file:/C:/OwlSpeak/shrief.owl#Agenda_confirm_departure">
+    <p1:has>
+      <p1:Move rdf:about="file:/C:/OwlSpeak/shrief.owl#Confirm_departure_place_sysmov">
+        <p1:utterance>
+          <p1:Utterance rdf:about="file:/C:/OwlSpeak/shrief.owl#Confirm_departure_place">
+            <p1:utteranceString xml:lang="en">#Departure_place_sem#. Did I get that right ?</p1:utteranceString>
+            <p1:includesSemantic rdf:resource="file:/C:/OwlSpeak/shrief.owl#Departure_place_sem"/>
+          </p1:Utterance>
+        </p1:utterance>
+      </p1:Move>
+    </p1:has>
+    <p1:has>
+      <p1:Move rdf:about="file:/C:/OwlSpeak/shrief.owl#Confirm_departure_place_usermov"/>
+    </p1:has>
+  </p1:Agenda>
+  <p1:Move rdf:about="file:/C:/OwlSpeak/shrief.owl#Greeting_sysmov">
+    <p1:utterance>
+      <p1:Utterance rdf:about="file:/C:/OwlSpeak/shrief.owl#What_can_I_do_for_you">
+        <p1:utteranceString xml:lang="en">What can I do for you?</p1:utteranceString>
+      </p1:Utterance>
+    </p1:utterance>
+  </p1:Move>
+  <p1:Agenda rdf:about="file:/C:/OwlSpeak/shrief.owl#Agenda_destination">
+    <p1:has>
+      <p1:Move rdf:about="file:/C:/OwlSpeak/shrief.owl#dest_CARSON_usermov">
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >SET(dest_var=CARSON)</p1:variableOperator>
+        <p1:semantic>
+          <p1:SemanticGroup rdf:about="file:/C:/OwlSpeak/shrief.owl#Destination_sem">
+            <p1:containsSemantics>
+              <p1:Semantic rdf:about="file:/C:/OwlSpeak/shrief.owl#MCKEE">
+                <p1:semanticGroup rdf:resource="file:/C:/OwlSpeak/shrief.owl#Destination_sem"/>
+              </p1:Semantic>
+            </p1:containsSemantics>
+            <p1:containsSemantics>
+              <p1:Semantic rdf:about="file:/C:/OwlSpeak/shrief.owl#CENTURY_THREE_MALL">
+                <p1:semanticGroup rdf:resource="file:/C:/OwlSpeak/shrief.owl#Destination_sem"/>
+              </p1:Semantic>
+            </p1:containsSemantics>
+            <p1:containsSemantics>
+              <p1:Semantic rdf:about="file:/C:/OwlSpeak/shrief.owl#PENN_AND_NEGLEY">
+                <p1:semanticGroup rdf:resource="file:/C:/OwlSpeak/shrief.owl#Destination_sem"/>
+              </p1:Semantic>
+            </p1:containsSemantics>
+            <p1:containsSemantics>
+              <p1:Semantic rdf:about="file:/C:/OwlSpeak/shrief.owl#DOWNTOWN">
+                <p1:semanticGroup rdf:resource="file:/C:/OwlSpeak/shrief.owl#Destination_sem"/>
+              </p1:Semantic>
+            </p1:containsSemantics>
+            <p1:containsSemantics>
+              <p1:Semantic rdf:about="file:/C:/OwlSpeak/shrief.owl#FOREST_HILLS">
+                <p1:semanticGroup rdf:resource="file:/C:/OwlSpeak/shrief.owl#Destination_sem"/>
+              </p1:Semantic>
+            </p1:containsSemantics>
+            <p1:containsSemantics>
+              <p1:Semantic rdf:about="file:/C:/OwlSpeak/shrief.owl#OAKLAND">
+                <p1:semanticGroup rdf:resource="file:/C:/OwlSpeak/shrief.owl#Destination_sem"/>
+              </p1:Semantic>
+            </p1:containsSemantics>
+            <p1:containsSemantics>
+              <p1:Semantic rdf:about="file:/C:/OwlSpeak/shrief.owl#CARNEGIE_MELLON">
+                <p1:semanticGroup rdf:resource="file:/C:/OwlSpeak/shrief.owl#Destination_sem"/>
+              </p1:Semantic>
+            </p1:containsSemantics>
+            <p1:containsSemantics>
+              <p1:Semantic rdf:about="file:/C:/OwlSpeak/shrief.owl#NORTH_AND_BOYLE">
+                <p1:semanticGroup rdf:resource="file:/C:/OwlSpeak/shrief.owl#Destination_sem"/>
+              </p1:Semantic>
+            </p1:containsSemantics>
+            <p1:containsSemantics>
+              <p1:Semantic rdf:about="file:/C:/OwlSpeak/shrief.owl#_HULTON_AND_PENNSYLVANIA">
+                <p1:semanticGroup rdf:resource="file:/C:/OwlSpeak/shrief.owl#Destination_sem"/>
+              </p1:Semantic>
+            </p1:containsSemantics>
+            <p1:containsSemantics>
+              <p1:Semantic rdf:about="file:/C:/OwlSpeak/shrief.owl#TRAFFORD">
+                <p1:semanticGroup rdf:resource="file:/C:/OwlSpeak/shrief.owl#Destination_sem"/>
+              </p1:Semantic>
+            </p1:containsSemantics>
+            <p1:containsSemantics>
+              <p1:Semantic rdf:about="file:/C:/OwlSpeak/shrief.owl#WILKINSBURG">
+                <p1:semanticGroup rdf:resource="file:/C:/OwlSpeak/shrief.owl#Destination_sem"/>
+              </p1:Semantic>
+            </p1:containsSemantics>
+            <p1:containsSemantics>
+              <p1:Semantic rdf:about="file:/C:/OwlSpeak/shrief.owl#MOUNT_OLIVER">
+                <p1:semanticGroup rdf:resource="file:/C:/OwlSpeak/shrief.owl#Destination_sem"/>
+              </p1:Semantic>
+            </p1:containsSemantics>
+            <p1:containsSemantics>
+              <p1:Semantic rdf:about="file:/C:/OwlSpeak/shrief.owl#CENTER">
+                <p1:semanticGroup rdf:resource="file:/C:/OwlSpeak/shrief.owl#Destination_sem"/>
+              </p1:Semantic>
+            </p1:containsSemantics>
+            <p1:containsSemantics>
+              <p1:Semantic rdf:about="file:/C:/OwlSpeak/shrief.owl#WATERFRONT">
+                <p1:semanticGroup rdf:resource="file:/C:/OwlSpeak/shrief.owl#Destination_sem"/>
+              </p1:Semantic>
+            </p1:containsSemantics>
+            <p1:containsSemantics>
+              <p1:Semantic rdf:about="file:/C:/OwlSpeak/shrief.owl#MAIN">
+                <p1:semanticGroup rdf:resource="file:/C:/OwlSpeak/shrief.owl#Destination_sem"/>
+              </p1:Semantic>
+            </p1:containsSemantics>
+            <p1:containsSemantics>
+              <p1:Semantic rdf:about="file:/C:/OwlSpeak/shrief.owl#PITTSBURGH">
+                <p1:semanticGroup rdf:resource="file:/C:/OwlSpeak/shrief.owl#Destination_sem"/>
+              </p1:Semantic>
+            </p1:containsSemantics>
+            <p1:containsSemantics>
+              <p1:Semantic rdf:about="file:/C:/OwlSpeak/shrief.owl#LINCOLN">
+                <p1:semanticGroup rdf:resource="file:/C:/OwlSpeak/shrief.owl#Destination_sem"/>
+              </p1:Semantic>
+            </p1:containsSemantics>
+            <p1:containsSemantics>
+              <p1:Semantic rdf:about="file:/C:/OwlSpeak/shrief.owl#CARSON">
+                <p1:semanticGroup rdf:resource="file:/C:/OwlSpeak/shrief.owl#Destination_sem"/>
+              </p1:Semantic>
+            </p1:containsSemantics>
+            <p1:containsSemantics>
+              <p1:Semantic rdf:about="file:/C:/OwlSpeak/shrief.owl#SEVENTH">
+                <p1:semanticGroup rdf:resource="file:/C:/OwlSpeak/shrief.owl#Destination_sem"/>
+              </p1:Semantic>
+            </p1:containsSemantics>
+            <p1:containsSemantics>
+              <p1:Semantic rdf:about="file:/C:/OwlSpeak/shrief.owl#PENN">
+                <p1:semanticGroup rdf:resource="file:/C:/OwlSpeak/shrief.owl#Destination_sem"/>
+              </p1:Semantic>
+            </p1:containsSemantics>
+            <p1:containsSemantics>
+              <p1:Semantic rdf:about="file:/C:/OwlSpeak/shrief.owl#SOUTH">
+                <p1:semanticGroup rdf:resource="file:/C:/OwlSpeak/shrief.owl#Destination_sem"/>
+              </p1:Semantic>
+            </p1:containsSemantics>
+            <p1:containsSemantics>
+              <p1:Semantic rdf:about="file:/C:/OwlSpeak/shrief.owl#PERRYSVILLE">
+                <p1:semanticGroup rdf:resource="file:/C:/OwlSpeak/shrief.owl#Destination_sem"/>
+              </p1:Semantic>
+            </p1:containsSemantics>
+            <p1:containsSemantics>
+              <p1:Semantic rdf:about="file:/C:/OwlSpeak/shrief.owl#FORBES_AND_MURRAY">
+                <p1:semanticGroup rdf:resource="file:/C:/OwlSpeak/shrief.owl#Destination_sem"/>
+              </p1:Semantic>
+            </p1:containsSemantics>
+            <p1:containsSemantics>
+              <p1:Semantic rdf:about="file:/C:/OwlSpeak/shrief.owl#HOMESTEAD">
+                <p1:semanticGroup rdf:resource="file:/C:/OwlSpeak/shrief.owl#Destination_sem"/>
+              </p1:Semantic>
+            </p1:containsSemantics>
+            <p1:containsSemantics>
+              <p1:Semantic rdf:about="file:/C:/OwlSpeak/shrief.owl#SWISSVALE_STATION">
+                <p1:semanticGroup rdf:resource="file:/C:/OwlSpeak/shrief.owl#Destination_sem"/>
+              </p1:Semantic>
+            </p1:containsSemantics>
+            <p1:containsSemantics>
+              <p1:Semantic rdf:about="file:/C:/OwlSpeak/shrief.owl#PENN_AVENUE_AND_FORTIETH_STREET">
+                <p1:semanticGroup rdf:resource="file:/C:/OwlSpeak/shrief.owl#Destination_sem"/>
+              </p1:Semantic>
+            </p1:containsSemantics>
+            <p1:containsSemantics>
+              <p1:Semantic rdf:about="file:/C:/OwlSpeak/shrief.owl#EAST_LIBERTY">
+                <p1:semanticGroup rdf:resource="file:/C:/OwlSpeak/shrief.owl#Destination_sem"/>
+              </p1:Semantic>
+            </p1:containsSemantics>
+            <p1:containsSemantics>
+              <p1:Semantic rdf:about="file:/C:/OwlSpeak/shrief.owl#FORBES">
+                <p1:semanticGroup rdf:resource="file:/C:/OwlSpeak/shrief.owl#Destination_sem"/>
+              </p1:Semantic>
+            </p1:containsSemantics>
+            <p1:containsSemantics>
+              <p1:Semantic rdf:about="file:/C:/OwlSpeak/shrief.owl#AIRPORT">
+                <p1:semanticGroup rdf:resource="file:/C:/OwlSpeak/shrief.owl#Destination_sem"/>
+              </p1:Semantic>
+            </p1:containsSemantics>
+          </p1:SemanticGroup>
+        </p1:semantic>
+      </p1:Move>
+    </p1:has>
+    <p1:has>
+      <p1:Move rdf:about="file:/C:/OwlSpeak/shrief.owl#dest_CENTURY_THREE_MALL_usermov">
+        <p1:semantic rdf:resource="file:/C:/OwlSpeak/shrief.owl#Destination_sem"/>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >SET(dest_var=CENTURY_THREE_MALL)</p1:variableOperator>
+      </p1:Move>
+    </p1:has>
+    <p1:has>
+      <p1:Move rdf:about="file:/C:/OwlSpeak/shrief.owl#dest_CARNEGIE_MELLON_usermov">
+        <p1:semantic rdf:resource="file:/C:/OwlSpeak/shrief.owl#Destination_sem"/>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >SET(dest_var=CARNEGIE_MELLON)</p1:variableOperator>
+      </p1:Move>
+    </p1:has>
+    <p1:has>
+      <p1:Move rdf:about="file:/C:/OwlSpeak/shrief.owl#dest_CENTER_usermov">
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >SET(dest_var=CENTER)</p1:variableOperator>
+        <p1:semantic rdf:resource="file:/C:/OwlSpeak/shrief.owl#Destination_sem"/>
+      </p1:Move>
+    </p1:has>
+    <p1:has>
+      <p1:Move rdf:about="file:/C:/OwlSpeak/shrief.owl#Dest_Airport_usermov">
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >SET(dest_var=Airport)</p1:variableOperator>
+        <p1:semantic rdf:resource="file:/C:/OwlSpeak/shrief.owl#Destination_sem"/>
+      </p1:Move>
+    </p1:has>
+    <p1:has>
+      <p1:Move rdf:about="file:/C:/OwlSpeak/shrief.owl#destination_sysmov">
+        <p1:utterance>
+          <p1:Utterance rdf:about="file:/C:/OwlSpeak/shrief.owl#destination">
+            <p1:utteranceString xml:lang="en">Where do you want to go ?</p1:utteranceString>
+          </p1:Utterance>
+        </p1:utterance>
+      </p1:Move>
+    </p1:has>
+  </p1:Agenda>
+  <p1:Semantic rdf:about="file:/C:/OwlSpeak/shrief.owl#MURRAY"/>
+  <p1:Move rdf:about="file:/C:/OwlSpeak/shrief.owl#bus_information_sysmov">
+    <p1:utterance>
+      <p1:Utterance rdf:about="file:/C:/OwlSpeak/shrief.owl#bus_information">
+        <p1:utteranceString xml:lang="en">Here is your bus information</p1:utteranceString>
+      </p1:Utterance>
+    </p1:utterance>
+  </p1:Move>
+  <p1:Agenda rdf:about="file:/C:/OwlSpeak/shrief.owl#Agenda_confirm_bus_route">
+    <p1:has>
+      <p1:Move rdf:about="file:/C:/OwlSpeak/shrief.owl#Confirm_bus_route_usermov"/>
+    </p1:has>
+    <p1:has>
+      <p1:Move rdf:about="file:/C:/OwlSpeak/shrief.owl#Confirm_bus_route_sysmov">
+        <p1:utterance>
+          <p1:Utterance rdf:about="file:/C:/OwlSpeak/shrief.owl#Confirm_bus_route">
+            <p1:includesSemantic>
+              <p1:SemanticGroup rdf:about="file:/C:/OwlSpeak/shrief.owl#Bus_routes_sem">
+                <p1:containsSemantics>
+                  <p1:Semantic rdf:about="file:/C:/OwlSpeak/shrief.owl#Bus_71A">
+                    <p1:semanticGroup rdf:resource="file:/C:/OwlSpeak/shrief.owl#Bus_routes_sem"/>
+                  </p1:Semantic>
+                </p1:containsSemantics>
+                <p1:containsSemantics>
+                  <p1:Semantic rdf:about="file:/C:/OwlSpeak/shrief.owl#Bus_61A">
+                    <p1:semanticGroup rdf:resource="file:/C:/OwlSpeak/shrief.owl#Bus_routes_sem"/>
+                  </p1:Semantic>
+                </p1:containsSemantics>
+                <p1:containsSemantics>
+                  <p1:Semantic rdf:about="file:/C:/OwlSpeak/shrief.owl#Bus_64">
+                    <p1:semanticGroup rdf:resource="file:/C:/OwlSpeak/shrief.owl#Bus_routes_sem"/>
+                  </p1:Semantic>
+                </p1:containsSemantics>
+              </p1:SemanticGroup>
+            </p1:includesSemantic>
+            <p1:utteranceString xml:lang="en">#Bus_routes_sem# . Did I get that right ?</p1:utteranceString>
+          </p1:Utterance>
+        </p1:utterance>
+      </p1:Move>
+    </p1:has>
+  </p1:Agenda>
+  <p1:Agenda rdf:about="file:/C:/OwlSpeak/shrief.owl#Agenda_time">
+    <p1:has>
+      <p1:Move rdf:about="file:/C:/OwlSpeak/shrief.owl#time_now_usermov">
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >SET(time_var=now)</p1:variableOperator>
+        <p1:semantic>
+          <p1:SemanticGroup rdf:about="file:/C:/OwlSpeak/shrief.owl#Time_sem">
+            <p1:containsSemantics>
+              <p1:Semantic rdf:about="file:/C:/OwlSpeak/shrief.owl#now">
+                <p1:semanticGroup rdf:resource="file:/C:/OwlSpeak/shrief.owl#Time_sem"/>
+              </p1:Semantic>
+            </p1:containsSemantics>
+          </p1:SemanticGroup>
+        </p1:semantic>
+      </p1:Move>
+    </p1:has>
+    <p1:has>
+      <p1:Move rdf:about="file:/C:/OwlSpeak/shrief.owl#departure_time_sysmov">
+        <p1:utterance>
+          <p1:Utterance rdf:about="file:/C:/OwlSpeak/shrief.owl#departure_time">
+            <p1:utteranceString xml:lang="en">When do you want to travel ?</p1:utteranceString>
+          </p1:Utterance>
+        </p1:utterance>
+      </p1:Move>
+    </p1:has>
+  </p1:Agenda>
+  <p1:Semantic rdf:about="file:/C:/OwlSpeak/shrief.owl#Bus_28X"/>
+  <p1:Variable rdf:about="file:/C:/OwlSpeak/shrief.owl#dest_var"/>
+  <p1:Variable rdf:about="file:/C:/OwlSpeak/shrief.owl#bus_route_var"/>
+  <p1:Variable rdf:about="file:/C:/OwlSpeak/shrief.owl#dep_var"/>
+  <p1:Agenda rdf:about="file:/C:/OwlSpeak/shrief.owl#Agenda_confirm_time">
+    <p1:has>
+      <p1:Move rdf:about="file:/C:/OwlSpeak/shrief.owl#Confirm_time_usermov"/>
+    </p1:has>
+    <p1:has>
+      <p1:Move rdf:about="file:/C:/OwlSpeak/shrief.owl#Bus_28X_usermov">
+        <p1:semantic rdf:resource="file:/C:/OwlSpeak/shrief.owl#Bus_routes_sem"/>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >SET(bus_route_var=Bus_28X)</p1:variableOperator>
+      </p1:Move>
+    </p1:has>
+    <p1:has>
+      <p1:Move rdf:about="file:/C:/OwlSpeak/shrief.owl#Confirm_time_sysmov">
+        <p1:utterance>
+          <p1:Utterance rdf:about="file:/C:/OwlSpeak/shrief.owl#Confirm_time">
+            <p1:utteranceString xml:lang="en">#Time+sem#. Did I get that right ?</p1:utteranceString>
+            <p1:includesSemantic rdf:resource="file:/C:/OwlSpeak/shrief.owl#Time_sem"/>
+          </p1:Utterance>
+        </p1:utterance>
+      </p1:Move>
+    </p1:has>
+  </p1:Agenda>
+  <p1:Agenda rdf:about="file:/C:/OwlSpeak/shrief.owl#Agenda_Bus_routes">
+    <p1:has rdf:resource="file:/C:/OwlSpeak/shrief.owl#Bus_28X_usermov"/>
+    <p1:has>
+      <p1:Move rdf:about="file:/C:/OwlSpeak/shrief.owl#Bus_64_usermov">
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >SET(dest_var=Airport)</p1:variableOperator>
+        <p1:semantic rdf:resource="file:/C:/OwlSpeak/shrief.owl#Bus_64"/>
+      </p1:Move>
+    </p1:has>
+    <p1:has>
+      <p1:Move rdf:about="file:/C:/OwlSpeak/shrief.owl#Bus_71A_usermov">
+        <p1:semantic rdf:resource="file:/C:/OwlSpeak/shrief.owl#Bus_71A"/>
+      </p1:Move>
+    </p1:has>
+    <p1:has>
+      <p1:Move rdf:about="file:/C:/OwlSpeak/shrief.owl#Bus_61C_usermov">
+        <p1:semantic rdf:resource="file:/C:/OwlSpeak/shrief.owl#Bus_routes_sem"/>
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >SET(bus_route_var=Bus_61C)</p1:variableOperator>
+      </p1:Move>
+    </p1:has>
+    <p1:has>
+      <p1:Move rdf:about="file:/C:/OwlSpeak/shrief.owl#Bus_61A_usermov">
+        <p1:variableOperator rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >SET(bus_route_var=Bus_61A)</p1:variableOperator>
+        <p1:semantic rdf:resource="file:/C:/OwlSpeak/shrief.owl#Bus_routes_sem"/>
+      </p1:Move>
+    </p1:has>
+    <p1:has>
+      <p1:Move rdf:about="file:/C:/OwlSpeak/shrief.owl#Bus_route_sysmov">
+        <p1:utterance>
+          <p1:Utterance rdf:about="file:/C:/OwlSpeak/shrief.owl#bus_route">
+            <p1:utteranceString xml:lang="en">Which bus route do you want ?</p1:utteranceString>
+          </p1:Utterance>
+        </p1:utterance>
+      </p1:Move>
+    </p1:has>
+  </p1:Agenda>
+  <p1:Agenda rdf:about="file:/C:/OwlSpeak/shrief.owl#Agenda_confirm_destination">
+    <p1:has>
+      <p1:Move rdf:about="file:/C:/OwlSpeak/shrief.owl#Confirm_destination_sysmov">
+        <p1:utterance>
+          <p1:Utterance rdf:about="file:/C:/OwlSpeak/shrief.owl#Confirm_destination">
+            <p1:includesSemantic rdf:resource="file:/C:/OwlSpeak/shrief.owl#Destination_sem"/>
+            <p1:utteranceString xml:lang="en">#Destination_sem#. Did I get that right ?</p1:utteranceString>
+          </p1:Utterance>
+        </p1:utterance>
+      </p1:Move>
+    </p1:has>
+    <p1:has>
+      <p1:Move rdf:about="file:/C:/OwlSpeak/shrief.owl#Confirm_destination_usermov"/>
+    </p1:has>
+  </p1:Agenda>
+</rdf:RDF>
+
+<!-- Created with Protege (with OWL Plugin 3.4.4, Build 579)  http://protege.stanford.edu -->
